@@ -77,21 +77,7 @@ let filePath = URL(fileURLWithPath: arguments[0])
 let sourceFile = try! SourceFileSyntax.parse(filePath)
 let visitor = TokenVisitor()
 visitor.visit(sourceFile)
-let html = """
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="utf-8">
-    <title>
-    Swift AST Explorer
-    </title>
-    <link rel="stylesheet" href="css/default.css" type="text/css" />
-    </head>
-    <body>
-    \(visitor.list.joined())
-    </body>
-    </html>
-    """
+let html = visitor.list.joined()
 
 let htmlPath = filePath.deletingPathExtension().appendingPathExtension("html")
 let fileSystem = Basic.localFileSystem
