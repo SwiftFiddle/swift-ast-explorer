@@ -4,34 +4,60 @@ import SwiftSyntax
 
 class TokenVisitor : SyntaxVisitor {
     var list = [String]()
-    var types = [ImportDeclSyntax.self, StructDeclSyntax.self, ClassDeclSyntax.self, UnknownDeclSyntax.self, FunctionDeclSyntax.self, VariableDeclSyntax.self,
-                 IfStmtSyntax.self, SwitchStmtSyntax.self, ForInStmtSyntax.self, WhileStmtSyntax.self, RepeatWhileStmtSyntax.self,
-                 DoStmtSyntax.self, CatchClauseSyntax.self, FunctionCallExprSyntax.self] as [Any.Type]
+    var tree = [Node]()
+    var current: Node!
+
+    var row = 0
+    var column = 0
 
     override func visitPre(_ node: Syntax) {
-        for t in types {
-            if type(of: node) == t {
-                list.append("<div class=\"box \(type(of: node))\" data-tooltip=\"\(type(of: node))\">")
-            }
+        var syntax = "\(type(of: node))"
+        if syntax.hasSuffix("Syntax") {
+            syntax = String(syntax.dropLast(6))
         }
+        list.append("<span class='\(syntax)' data-toggle='tooltip' title='\(syntax)'>")
+
+        let node = Node(text: syntax)
+        node.range.startRow = row
+        node.range.startColumn = column
+        node.range.endRow = row
+        node.range.endColumn = column
+        if current == nil {
+            tree.append(node)
+        } else {
+            current.add(node: node)
+        }
+        current = node
     }
 
     override func visit(_ token: TokenSyntax) {
+        current.text = token.text
+        current.token = Node.Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
+
+        current.range.startRow = row
+        current.range.startColumn = column
+
         token.leadingTrivia.forEach { (piece) in
-            processTriviaPiece(piece)
+            let trivia = processTriviaPiece(piece)
+            list.append(trivia)
+            current.token?.leadingTrivia += replaceSymbols(text: trivia)
         }
         processToken(token)
         token.trailingTrivia.forEach { (piece) in
-            processTriviaPiece(piece)
+            let trivia = processTriviaPiece(piece)
+            list.append(trivia)
+            current.token?.trailingTrivia += replaceSymbols(text: trivia)
         }
+
+        current.range.endRow = row
+        current.range.endColumn = column
     }
 
     override func visitPost(_ node: Syntax) {
-        for t in types {
-            if type(of: node) == t {
-                list.append("</div>")
-            }
-        }
+        list.append("</span>")
+        current.range.endRow = row
+        current.range.endColumn = column
+        current = current.parent
     }
 
     private func processToken(_ token: TokenSyntax) {
@@ -42,32 +68,99 @@ class TokenVisitor : SyntaxVisitor {
         if kind.hasSuffix("Keyword") {
             kind = "keyword"
         }
-        list.append(withSpanTag(class: kind, text: token.text))
+
+        list.append("<span class='token \(kind)' data-toggle='tooltip' title='\(token.tokenKind)'>" + token.text + "</span>")
+        column += token.text.count
     }
 
-    private func processTriviaPiece(_ piece: TriviaPiece) {
+    private func processTriviaPiece(_ piece: TriviaPiece) -> String {
+        var trivia = ""
         switch piece {
         case .spaces(let count):
-            list.append(String(repeating: "&nbsp;", count: count))
+            trivia += String(repeating: "&nbsp;", count: count)
+            column += count
         case .newlines(let count), .carriageReturns(let count), .carriageReturnLineFeeds(let count):
-            var count = count
-            if let last = list.last, last.hasPrefix("<div") {
-                count -= 1
-            }
-            for _ in 0..<count {
-                list.append("<br>\n")
-            }
+            trivia += String(repeating: "<br>\n", count: count)
+            row += count
+            column = 0
         case .backticks(let count):
-            list.append(String(repeating: "`", count: count))
-        case .lineComment(let text), .blockComment(let text), .docLineComment(let text), .docBlockComment(let text):
-            list.append(withSpanTag(class: "comment", text: text))
+            trivia += String(repeating: "`", count: count)
+            column += count
+        case .lineComment(let text):
+            trivia += withSpanTag(class: "lineComment", text: text)
+            processComment(text: text)
+        case .blockComment(let text):
+            trivia += withSpanTag(class: "blockComment", text: text)
+            processComment(text: text)
+        case .docLineComment(let text):
+            trivia += withSpanTag(class: "docLineComment", text: text)
+            processComment(text: text)
+        case .docBlockComment(let text):
+            trivia += withSpanTag(class: "docBlockComment", text: text)
+            processComment(text: text)
         default:
             break
         }
+        return trivia
     }
 
     private func withSpanTag(class c: String, text: String) -> String {
         return "<span class='\(c)'>" + text + "</span>"
+    }
+
+    private func replaceSymbols(text: String) -> String {
+        return text.replacingOccurrences(of: "&nbsp;", with: "␣").replacingOccurrences(of: "<br>", with: "<br>↲")
+    }
+
+    private func processComment(text: String) {
+        let comments = text.split(separator: "\n", omittingEmptySubsequences: false)
+        row += comments.count - 1
+        column += comments.last!.count
+    }
+}
+
+class Node : Encodable {
+    var text: String
+    var children = [Node]()
+    weak var parent: Node?
+    var range = Range(startRow: 0, startColumn: 0, endRow: 0, endColumn: 0)
+    var token: Token?
+
+    struct Range : Encodable {
+        var startRow: Int
+        var startColumn: Int
+        var endRow: Int
+        var endColumn: Int
+    }
+
+    struct Token : Encodable {
+        var kind: String
+        var leadingTrivia: String
+        var trailingTrivia: String
+    }
+
+    enum CodingKeys : CodingKey {
+        case text
+        case children
+        case range
+        case token
+    }
+
+    init(text: String) {
+        self.text = text
+    }
+
+    func add(node: Node) {
+        node.parent = self
+        children.append(node)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(text, forKey: .text)
+        try container.encode(children, forKey: .children)
+        try container.encode(range, forKey: .range)
+        try container.encode(token, forKey: .token)
     }
 }
 
@@ -77,22 +170,16 @@ let filePath = URL(fileURLWithPath: arguments[0])
 let sourceFile = try! SourceFileSyntax.parse(filePath)
 let visitor = TokenVisitor()
 visitor.visit(sourceFile)
-let html = """
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="utf-8">
-    <title>
-    Swift AST Explorer
-    </title>
-    <link rel="stylesheet" href="css/default.css" type="text/css" />
-    </head>
-    <body>
-    \(visitor.list.joined())
-    </body>
-    </html>
-    """
+let html = "\(visitor.list.joined())"
+
+let tree = visitor.tree
+let encoder = JSONEncoder()
+let json = String(data: try! encoder.encode(tree), encoding: .utf8)!
+
+let fileSystem = Basic.localFileSystem
 
 let htmlPath = filePath.deletingPathExtension().appendingPathExtension("html")
-let fileSystem = Basic.localFileSystem
 try! fileSystem.writeFileContents(AbsolutePath(htmlPath.path), bytes: ByteString(encodingAsUTF8: html))
+
+let jsonPath = filePath.deletingPathExtension().appendingPathExtension("json")
+try! fileSystem.writeFileContents(AbsolutePath(jsonPath.path), bytes: ByteString(encodingAsUTF8: json))
