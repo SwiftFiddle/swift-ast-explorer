@@ -31,7 +31,7 @@ class TokenVisitor : SyntaxVisitor {
     }
 
     override func visit(_ token: TokenSyntax) {
-        current.text = token.text
+        current.text = escapeHtmlSpecialCharacters(token.text)
         current.token = Node.Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
 
         current.range.startRow = row
@@ -69,7 +69,7 @@ class TokenVisitor : SyntaxVisitor {
             kind = "keyword"
         }
 
-        list.append("<span class='token \(kind)' data-toggle='tooltip' title='\(token.tokenKind)'>" + token.text + "</span>")
+        list.append("<span class='token \(kind)' data-toggle='tooltip' title='\(token.tokenKind)'>" + escapeHtmlSpecialCharacters(token.text) + "</span>")
         column += token.text.count
     }
 
@@ -105,7 +105,7 @@ class TokenVisitor : SyntaxVisitor {
     }
 
     private func withSpanTag(class c: String, text: String) -> String {
-        return "<span class='\(c)'>" + text + "</span>"
+        return "<span class='\(c)'>" + escapeHtmlSpecialCharacters(text) + "</span>"
     }
 
     private func replaceSymbols(text: String) -> String {
@@ -116,6 +116,21 @@ class TokenVisitor : SyntaxVisitor {
         let comments = text.split(separator: "\n", omittingEmptySubsequences: false)
         row += comments.count - 1
         column += comments.last!.count
+    }
+
+    private func escapeHtmlSpecialCharacters(_ string: String) -> String {
+        var newString = string
+        let specialCharacters = [
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            "\"": "&quot;",
+            "'": "&apos;"
+        ];
+        for (escaped, unescaped) in specialCharacters {
+            newString = newString.replacingOccurrences(of: escaped, with: unescaped, options: .literal, range: nil)
+        }
+        return newString
     }
 }
 
