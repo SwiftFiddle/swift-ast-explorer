@@ -79,6 +79,9 @@ class TokenVisitor : SyntaxVisitor {
         case .spaces(let count):
             trivia += String(repeating: "&nbsp;", count: count)
             column += count
+        case .tabs(let count):
+            trivia += String(repeating: "&nbsp;", count: count * 2)
+            column += count * 2
         case .newlines(let count), .carriageReturns(let count), .carriageReturnLineFeeds(let count):
             trivia += String(repeating: "<br>\n", count: count)
             row += count
@@ -182,7 +185,7 @@ class Node : Encodable {
 let arguments = Array(CommandLine.arguments.dropFirst())
 let filePath = URL(fileURLWithPath: arguments[0])
 
-let sourceFile = try! SourceFileSyntax.parse(filePath)
+let sourceFile = try! SyntaxTreeParser.parse(filePath)
 let visitor = TokenVisitor()
 visitor.visit(sourceFile)
 let html = "\(visitor.list.joined())"
