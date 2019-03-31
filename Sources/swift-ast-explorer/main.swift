@@ -30,7 +30,7 @@ class TokenVisitor : SyntaxVisitor {
         current = node
     }
 
-    override func visit(_ token: TokenSyntax) {
+    override func visit(_ token: TokenSyntax) -> SyntaxVisitorContinueKind {
         current.text = escapeHtmlSpecialCharacters(token.text)
         current.token = Node.Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
 
@@ -51,6 +51,8 @@ class TokenVisitor : SyntaxVisitor {
 
         current.range.endRow = row
         current.range.endColumn = column
+
+        return .visitChildren
     }
 
     override func visitPost(_ node: Syntax) {
@@ -187,7 +189,7 @@ let filePath = URL(fileURLWithPath: arguments[0])
 
 let sourceFile = try! SyntaxTreeParser.parse(filePath)
 let visitor = TokenVisitor()
-visitor.visit(sourceFile)
+sourceFile.walk(visitor)
 let html = "\(visitor.list.joined())"
 
 let tree = visitor.tree
