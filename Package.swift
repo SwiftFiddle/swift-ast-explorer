@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "swift-ast-explorer",
     dependencies: [
-        .package(url: "https://github.com/apple/swift-package-manager.git", from: "0.1.0"),
+        .package(url: "https://github.com/apple/swift-package-manager.git", from: "0.3.0"),
         .package(url: "https://github.com/apple/swift-syntax.git", .exact("0.50000.0")),
     ],
     targets: [
