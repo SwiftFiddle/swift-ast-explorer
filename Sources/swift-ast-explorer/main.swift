@@ -2,7 +2,7 @@ import Foundation
 import Basic
 import SwiftSyntax
 
-class TokenVisitor : SyntaxVisitor {
+struct TokenVisitor : SyntaxAnyVisitor {
     var list = [String]()
     var tree = [Node]()
     var current: Node!
@@ -10,7 +10,7 @@ class TokenVisitor : SyntaxVisitor {
     var row = 0
     var column = 0
 
-    override func visitPre(_ node: Syntax) {
+    mutating func visitAny(_ node: Syntax) -> SyntaxVisitorContinueKind {
         var syntax = "\(type(of: node))"
         if syntax.hasSuffix("Syntax") {
             syntax = String(syntax.dropLast(6))
@@ -28,9 +28,11 @@ class TokenVisitor : SyntaxVisitor {
             current.add(node: node)
         }
         current = node
+
+        return .visitChildren
     }
 
-    override func visit(_ token: TokenSyntax) -> SyntaxVisitorContinueKind {
+    mutating func visitPost(_ token: TokenSyntax) {
         current.text = escapeHtmlSpecialCharacters(token.text)
         current.token = Node.Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
 
@@ -52,17 +54,17 @@ class TokenVisitor : SyntaxVisitor {
         current.range.endRow = row
         current.range.endColumn = column
 
-        return .visitChildren
+        visitAnyPost(token) // NOTE: This is a required call.
     }
 
-    override func visitPost(_ node: Syntax) {
+    mutating func visitAnyPost(_ node: Syntax) {
         list.append("</span>")
         current.range.endRow = row
         current.range.endColumn = column
         current = current.parent
     }
 
-    private func processToken(_ token: TokenSyntax) {
+    private mutating func processToken(_ token: TokenSyntax) {
         var kind = "\(token.tokenKind)"
         if let index = kind.index(of: "(") {
             kind = String(kind.prefix(upTo: index))
@@ -75,7 +77,7 @@ class TokenVisitor : SyntaxVisitor {
         column += token.text.count
     }
 
-    private func processTriviaPiece(_ piece: TriviaPiece) -> String {
+    private mutating func processTriviaPiece(_ piece: TriviaPiece) -> String {
         var trivia = ""
         switch piece {
         case .spaces(let count):
@@ -117,7 +119,7 @@ class TokenVisitor : SyntaxVisitor {
         return text.replacingOccurrences(of: "&nbsp;", with: "␣").replacingOccurrences(of: "<br>", with: "<br>↲")
     }
 
-    private func processComment(text: String) {
+    private mutating func processComment(text: String) {
         let comments = text.split(separator: "\n", omittingEmptySubsequences: false)
         row += comments.count - 1
         column += comments.last!.count
@@ -187,9 +189,9 @@ class Node : Encodable {
 let arguments = Array(CommandLine.arguments.dropFirst())
 let filePath = URL(fileURLWithPath: arguments[0])
 
-let sourceFile = try! SyntaxTreeParser.parse(filePath)
-let visitor = TokenVisitor()
-sourceFile.walk(visitor)
+let sourceFile = try! SyntaxParser.parse(filePath)
+var visitor = TokenVisitor()
+sourceFile.walk(&visitor)
 let html = "\(visitor.list.joined())"
 
 let tree = visitor.tree
