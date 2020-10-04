@@ -26,5 +26,12 @@ services:
     ports:
       - "3000:3000"
     command:
-      ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
-    restart: always
+      [
+        "serve",
+        "--env",
+        "production",
+        "--hostname",
+        "0.0.0.0",
+        "--port",
+        "3000",
+      ]

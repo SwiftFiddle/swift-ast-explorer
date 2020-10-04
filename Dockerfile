@@ -57,8 +57,8 @@ COPY --from=build --chown=vapor:vapor /staging /app
 USER vapor:vapor
 
 # Let Docker bind to port 3000
-EXPOSE 80
+EXPOSE 3000
 
 # Start the Vapor service when the image is run, default to listening on 3000 in production environment
 ENTRYPOINT ["./Run"]
-CMD ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
+CMD ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "3000"]
