@@ -35,16 +35,14 @@ services:
         "--port",
         "3000",
       ]
-  https-portal:
-    image: steveltn/https-portal:1
+    restart: always
+  reverse-proxy:
+    image: nginx
     container_name: reverse-proxy
     ports:
-      - "80:80"
-      - "443:443"
+      - 80:80
+    volumes:
+      - ./reverse-proxy/conf.d:/etc/nginx/conf.d
     links:
       - app
     restart: always
-    environment:
-      DOMAINS: "staging.swift-ast-explorer.kishikawakatsumi.com -> http://app:3000"
-      STAGE: "production" # Don't use production until staging works
-      # FORCE_RENEW: 'true'
