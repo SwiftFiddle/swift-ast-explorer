@@ -1,7 +1,5 @@
 import Foundation
 import SwiftSyntax
-import TSCBasic
-import ArgumentParser
 
 class TokenVisitor: SyntaxRewriter {
     var list = [String]()
@@ -136,80 +134,3 @@ class TokenVisitor: SyntaxRewriter {
         return newString
     }
 }
-
-class Node: Encodable {
-    var text: String
-    var children = [Node]()
-    weak var parent: Node?
-    var range = Range(startRow: 0, startColumn: 0, endRow: 0, endColumn: 0)
-    var token: Token?
-
-    struct Range: Encodable {
-        var startRow: Int
-        var startColumn: Int
-        var endRow: Int
-        var endColumn: Int
-    }
-
-    struct Token: Encodable {
-        var kind: String
-        var leadingTrivia: String
-        var trailingTrivia: String
-    }
-
-    enum CodingKeys: CodingKey {
-        case text
-        case children
-        case range
-        case token
-    }
-
-    init(text: String) {
-        self.text = text
-    }
-
-    func add(node: Node) {
-        node.parent = self
-        children.append(node)
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(text, forKey: .text)
-        try container.encode(children, forKey: .children)
-        try container.encode(range, forKey: .range)
-        try container.encode(token, forKey: .token)
-    }
-}
-
-struct Explorer: ParsableCommand {
-    @Argument
-    var filePath: String
-
-    mutating func run() throws {
-        let arguments = Array(CommandLine.arguments.dropFirst())
-        let filePath = URL(fileURLWithPath: arguments[0])
-
-        let sourceFile = try SyntaxParser.parse(filePath)
-
-        let visitor = TokenVisitor()
-        visitor.visitPre(sourceFile._syntaxNode)
-        _ = visitor.visit(sourceFile)
-
-        let html = "\(visitor.list.joined())"
-
-        let tree = visitor.tree
-        let encoder = JSONEncoder()
-        let json = String(data: try encoder.encode(tree), encoding: .utf8)!
-
-        let fileSystem = TSCBasic.localFileSystem
-
-        let htmlPath = filePath.deletingPathExtension().appendingPathExtension("html")
-        try fileSystem.writeFileContents(AbsolutePath(htmlPath.path), bytes: ByteString(encodingAsUTF8: html))
-
-        let jsonPath = filePath.deletingPathExtension().appendingPathExtension("json")
-        try fileSystem.writeFileContents(AbsolutePath(jsonPath.path), bytes: ByteString(encodingAsUTF8: json))
-    }
-}
-
-Explorer.main()

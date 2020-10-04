@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "swift-ast-explorer"
-               BuildableName = "swift-ast-explorer"
-               BlueprintName = "swift-ast-explorer"
+               BlueprintIdentifier = "Run"
+               BuildableName = "Run"
+               BlueprintName = "Run"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "swift-ast-explorerTests"
-               BuildableName = "swift-ast-explorerTests"
-               BlueprintName = "swift-ast-explorerTests"
+               BlueprintIdentifier = "AppTests"
+               BuildableName = "AppTests"
+               BlueprintName = "AppTests"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "App"
+               BuildableName = "App"
+               BlueprintName = "App"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +60,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "swift-ast-explorerTests"
-               BuildableName = "swift-ast-explorerTests"
-               BlueprintName = "swift-ast-explorerTests"
+               BlueprintIdentifier = "AppTests"
+               BuildableName = "AppTests"
+               BlueprintName = "AppTests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
@@ -68,18 +82,12 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "swift-ast-explorer"
-            BuildableName = "swift-ast-explorer"
-            BlueprintName = "swift-ast-explorer"
+            BlueprintIdentifier = "Run"
+            BuildableName = "Run"
+            BlueprintName = "Run"
             ReferencedContainer = "container:">
          </BuildableReference>
       </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "/Users/katsumi.kishikawa/Desktop/test.swift"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -91,9 +99,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "swift-ast-explorer"
-            BuildableName = "swift-ast-explorer"
-            BlueprintName = "swift-ast-explorer"
+            BlueprintIdentifier = "Run"
+            BuildableName = "Run"
+            BlueprintName = "Run"
             ReferencedContainer = "container:">
          </BuildableReference>
       </BuildableProductRunnable>
