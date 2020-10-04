@@ -20,6 +20,7 @@ x-shared_environment: &shared_environment
 services:
   app:
     image: kishikawakatsumi/swift-ast-explorer:latest
+    container_name: swift-ast-explorer
     environment:
       <<: *shared_environment
     ports:
@@ -45,5 +46,5 @@ services:
     restart: always
     environment:
       DOMAINS: "staging.swift-ast-explorer.kishikawakatsumi.com -> http://app:3000"
-      STAGE: "local" # Don't use production until staging works
+      STAGE: "production" # Don't use production until staging works
       # FORCE_RENEW: 'true'
