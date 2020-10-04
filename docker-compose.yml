@@ -12,7 +12,7 @@
 #      Start app: docker-compose up app
 #       Stop all: docker-compose down
 #
-version: "3"
+version: "3.7"
 
 x-shared_environment: &shared_environment
   LOG_LEVEL: ${LOG_LEVEL:-info}
@@ -38,7 +38,7 @@ services:
       ]
   https-portal:
     image: steveltn/https-portal:1
-    container_name: https-portal
+    container_name: reverse-proxy
     ports:
       - "80:80"
       - "443:443"
