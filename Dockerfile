@@ -33,12 +33,12 @@ RUN cp "$(swift build --package-path /build -c release --show-bin-path)/Run" ./
 
 # Uncomment the next line if you need to load resources from the `Public` directory.
 # Ensure that by default, neither the directory nor any of its contents are writable.
-#RUN mv /build/Public ./Public && chmod -R a-w ./Public
+RUN mv /build/Public ./Public && chmod -R a-w ./Public
 
 # ================================
 # Run image
 # ================================
-FROM swift:5.3-focal-slim
+FROM swift:5.3-focal
 
 # Make sure all system packages are up to date.
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && \
@@ -56,9 +56,9 @@ COPY --from=build --chown=vapor:vapor /staging /app
 # Ensure all further commands run as the vapor user
 USER vapor:vapor
 
-# Let Docker bind to port 8080
-EXPOSE 8080
+# Let Docker bind to port 3000
+EXPOSE 3000
 
-# Start the Vapor service when the image is run, default to listening on 8080 in production environment
+# Start the Vapor service when the image is run, default to listening on 3000 in production environment
 ENTRYPOINT ["./Run"]
-CMD ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "8080"]
+CMD ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "3000"]

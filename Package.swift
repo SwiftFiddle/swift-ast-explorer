@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "swift-ast-explorer",
     platforms: [
-       .macOS(.v10_15)
+        .macOS(.v10_15)
     ],
     dependencies: [
         .package(name: "SwiftSyntax", url: "https://github.com/apple/swift-syntax.git", .exact("0.50300.0")),
