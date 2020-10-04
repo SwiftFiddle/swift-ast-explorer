@@ -1,8 +1,9 @@
 import Foundation
-import Basic
 import SwiftSyntax
+import TSCBasic
+import ArgumentParser
 
-struct TokenVisitor : SyntaxAnyVisitor {
+class TokenVisitor: SyntaxRewriter {
     var list = [String]()
     var tree = [Node]()
     var current: Node!
@@ -10,8 +11,8 @@ struct TokenVisitor : SyntaxAnyVisitor {
     var row = 0
     var column = 0
 
-    mutating func visitAny(_ node: Syntax) -> SyntaxVisitorContinueKind {
-        var syntax = "\(type(of: node))"
+    override func visitPre(_ node: Syntax) {
+        var syntax = "\(node.syntaxNodeType)"
         if syntax.hasSuffix("Syntax") {
             syntax = String(syntax.dropLast(6))
         }
@@ -28,12 +29,10 @@ struct TokenVisitor : SyntaxAnyVisitor {
             current.add(node: node)
         }
         current = node
-
-        return .visitChildren
     }
 
-    mutating func visitPost(_ token: TokenSyntax) {
-        current.text = escapeHtmlSpecialCharacters(token.text)
+    override func visit(_ token: TokenSyntax) -> Syntax {
+        current.text = token.text
         current.token = Node.Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
 
         current.range.startRow = row
@@ -54,19 +53,19 @@ struct TokenVisitor : SyntaxAnyVisitor {
         current.range.endRow = row
         current.range.endColumn = column
 
-        visitAnyPost(token) // NOTE: This is a required call.
+        return token._syntaxNode
     }
 
-    mutating func visitAnyPost(_ node: Syntax) {
+    override func visitPost(_ node: Syntax) {
         list.append("</span>")
         current.range.endRow = row
         current.range.endColumn = column
         current = current.parent
     }
 
-    private mutating func processToken(_ token: TokenSyntax) {
+    private func processToken(_ token: TokenSyntax) {
         var kind = "\(token.tokenKind)"
-        if let index = kind.index(of: "(") {
+        if let index = kind.firstIndex(of: "(") {
             kind = String(kind.prefix(upTo: index))
         }
         if kind.hasSuffix("Keyword") {
@@ -77,7 +76,7 @@ struct TokenVisitor : SyntaxAnyVisitor {
         column += token.text.count
     }
 
-    private mutating func processTriviaPiece(_ piece: TriviaPiece) -> String {
+    private func processTriviaPiece(_ piece: TriviaPiece) -> String {
         var trivia = ""
         switch piece {
         case .spaces(let count):
@@ -90,9 +89,6 @@ struct TokenVisitor : SyntaxAnyVisitor {
             trivia += String(repeating: "<br>\n", count: count)
             row += count
             column = 0
-        case .backticks(let count):
-            trivia += String(repeating: "`", count: count)
-            column += count
         case .lineComment(let text):
             trivia += withSpanTag(class: "lineComment", text: text)
             processComment(text: text)
@@ -105,7 +101,7 @@ struct TokenVisitor : SyntaxAnyVisitor {
         case .docBlockComment(let text):
             trivia += withSpanTag(class: "docBlockComment", text: text)
             processComment(text: text)
-        default:
+        case .verticalTabs, .formfeeds, .garbageText:
             break
         }
         return trivia
@@ -119,7 +115,7 @@ struct TokenVisitor : SyntaxAnyVisitor {
         return text.replacingOccurrences(of: "&nbsp;", with: "␣").replacingOccurrences(of: "<br>", with: "<br>↲")
     }
 
-    private mutating func processComment(text: String) {
+    private func processComment(text: String) {
         let comments = text.split(separator: "\n", omittingEmptySubsequences: false)
         row += comments.count - 1
         column += comments.last!.count
@@ -132,36 +128,36 @@ struct TokenVisitor : SyntaxAnyVisitor {
             "<": "&lt;",
             ">": "&gt;",
             "\"": "&quot;",
-            "'": "&apos;"
+            "'": "&apos;",
         ];
-        for (escaped, unescaped) in specialCharacters {
-            newString = newString.replacingOccurrences(of: escaped, with: unescaped, options: .literal, range: nil)
+        for (unescaped, escaped) in specialCharacters {
+            newString = newString.replacingOccurrences(of: unescaped, with: escaped, options: .literal, range: nil)
         }
         return newString
     }
 }
 
-class Node : Encodable {
+class Node: Encodable {
     var text: String
     var children = [Node]()
     weak var parent: Node?
     var range = Range(startRow: 0, startColumn: 0, endRow: 0, endColumn: 0)
     var token: Token?
 
-    struct Range : Encodable {
+    struct Range: Encodable {
         var startRow: Int
         var startColumn: Int
         var endRow: Int
         var endColumn: Int
     }
 
-    struct Token : Encodable {
+    struct Token: Encodable {
         var kind: String
         var leadingTrivia: String
         var trailingTrivia: String
     }
 
-    enum CodingKeys : CodingKey {
+    enum CodingKeys: CodingKey {
         case text
         case children
         case range
@@ -186,22 +182,34 @@ class Node : Encodable {
     }
 }
 
-let arguments = Array(CommandLine.arguments.dropFirst())
-let filePath = URL(fileURLWithPath: arguments[0])
+struct Explorer: ParsableCommand {
+    @Argument
+    var filePath: String
 
-let sourceFile = try! SyntaxParser.parse(filePath)
-var visitor = TokenVisitor()
-sourceFile.walk(&visitor)
-let html = "\(visitor.list.joined())"
+    mutating func run() throws {
+        let arguments = Array(CommandLine.arguments.dropFirst())
+        let filePath = URL(fileURLWithPath: arguments[0])
 
-let tree = visitor.tree
-let encoder = JSONEncoder()
-let json = String(data: try! encoder.encode(tree), encoding: .utf8)!
+        let sourceFile = try SyntaxParser.parse(filePath)
 
-let fileSystem = Basic.localFileSystem
+        let visitor = TokenVisitor()
+        visitor.visitPre(sourceFile._syntaxNode)
+        _ = visitor.visit(sourceFile)
 
-let htmlPath = filePath.deletingPathExtension().appendingPathExtension("html")
-try! fileSystem.writeFileContents(AbsolutePath(htmlPath.path), bytes: ByteString(encodingAsUTF8: html))
+        let html = "\(visitor.list.joined())"
 
-let jsonPath = filePath.deletingPathExtension().appendingPathExtension("json")
-try! fileSystem.writeFileContents(AbsolutePath(jsonPath.path), bytes: ByteString(encodingAsUTF8: json))
+        let tree = visitor.tree
+        let encoder = JSONEncoder()
+        let json = String(data: try encoder.encode(tree), encoding: .utf8)!
+
+        let fileSystem = TSCBasic.localFileSystem
+
+        let htmlPath = filePath.deletingPathExtension().appendingPathExtension("html")
+        try fileSystem.writeFileContents(AbsolutePath(htmlPath.path), bytes: ByteString(encodingAsUTF8: html))
+
+        let jsonPath = filePath.deletingPathExtension().appendingPathExtension("json")
+        try fileSystem.writeFileContents(AbsolutePath(jsonPath.path), bytes: ByteString(encodingAsUTF8: json))
+    }
+}
+
+Explorer.main()
