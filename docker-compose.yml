@@ -35,3 +35,16 @@ services:
         "--port",
         "3000",
       ]
+  https-portal:
+    image: steveltn/https-portal:1
+    container_name: reverse-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - app
+    restart: always
+    environment:
+      DOMAINS: "swift-ast-explorer-staging.kishikawakatsumi.com -> http://app:3000"
+      STAGE: "production" # Don't use production until staging works
+      # FORCE_RENEW: 'true'
