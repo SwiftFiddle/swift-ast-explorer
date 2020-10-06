@@ -1,9 +1,9 @@
 # Swift AST Explorer
 
-AST visualizer for Swift source code
+AST visualizer for Swift source code. https://swift-ast-explorer.com/
 
 <img width="1024" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95231625-56ab6600-083e-11eb-8fb7-e6ebb236d052.png">
-https://swift-ast-explorer.com/
+
 
 ## Features
 
