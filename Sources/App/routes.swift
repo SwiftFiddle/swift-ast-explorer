@@ -27,37 +27,40 @@ func routes(_ app: Application) throws {
         let gistId = NSString(string: req.url.path).substring(with: matches[0].range(at: 1))
 
         let promise = req.eventLoop.makePromise(of: View.self)
+        req.client.get(
+            URI(string: "https://api.github.com/gists/\(gistId)"), headers: HTTPHeaders([("User-Agent", "Swift AST Explorer")])
+        ).whenComplete {
+            switch $0 {
+            case .success(let response):
+                guard let body = response.body else {
+                    promise.fail(Abort(.notFound))
+                    return
+                }
+                guard let data = body.getData(at: 0, length: body.readableBytes) else {
+                    promise.fail(Abort(.notFound))
+                    return
+                }
+                guard
+                    let contents = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                   let files = contents["files"] as? [String: Any],
+                   let filename = files.keys.first, let file = files[filename] as? [String: Any],
+                   let content = file["content"] as? String else {
+                    promise.fail(Abort(.notFound))
+                    return
+                }
 
-        let session = URLSession(configuration: .default)
-        let request = URLRequest(url: URL(string: "https://api.github.com/gists/\(gistId)")!)
-        session.dataTask(with: request) { (data, response, error) in
-            if let error = error {
+                return req.view.render(
+                    "index", [
+                        "title": "Swift AST Explorer",
+                        "defaultSampleCode": content,
+                        "swiftVersion": swiftVersion,
+                    ]
+                )
+                .cascade(to: promise)
+            case .failure(let error):
                 promise.fail(error)
-                return
             }
-            guard let data = data else {
-                promise.fail(Abort(.notFound))
-                return
-            }
-            guard
-                let contents = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-               let files = contents["files"] as? [String: Any],
-               let filename = files.keys.first, let file = files[filename] as? [String: Any],
-               let content = file["content"] as? String else {
-                promise.fail(Abort(.notFound))
-                return
-            }
-
-            req.view.render(
-                "index", [
-                    "title": "Swift AST Explorer",
-                    "defaultSampleCode": content,
-                    "swiftVersion": swiftVersion,
-                ]
-            )
-            .cascade(to: promise)
         }
-        .resume()
 
         return promise.futureResult
     }

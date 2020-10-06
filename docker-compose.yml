@@ -4,6 +4,8 @@ services:
   app:
     image: kishikawakatsumi/swift-ast-explorer:latest
     container_name: swift-ast-explorer
+    depends_on:
+      - letsencrypt
     environment:
       LOG_LEVEL: ${LOG_LEVEL:-info}
       VIRTUAL_HOST: swift-ast-explorer.com
@@ -22,13 +24,12 @@ services:
         "--port",
         "3000",
       ]
-    depends_on:
-      - letsencrypt
     network_mode: bridge
+    restart: always
 
   nginx-proxy:
     image: jwilder/nginx-proxy
-    restart: on-failure
+    container_name: nginx-proxy
     labels:
       - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy=jwilder/nginx-proxy
     ports:
@@ -40,10 +41,11 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./certs:/etc/nginx/certs:ro
     network_mode: bridge
+    restart: always
 
   letsencrypt:
     image: jrcs/letsencrypt-nginx-proxy-companion
-    restart: on-failure
+    container_name: letsencrypt
     depends_on:
       - nginx-proxy
     volumes:
@@ -52,6 +54,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./certs:/etc/nginx/certs:rw
     network_mode: bridge
+    restart: always
 
 volumes:
   proxy:
