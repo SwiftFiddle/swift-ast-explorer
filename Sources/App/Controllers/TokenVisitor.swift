@@ -122,11 +122,11 @@ class TokenVisitor: SyntaxRewriter {
     private func escapeHtmlSpecialCharacters(_ string: String) -> String {
         var newString = string
         let specialCharacters = [
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            "\"": "&quot;",
-            "'": "&apos;",
+            ("&", "&amp;"),
+            ("<", "&lt;"),
+            (">", "&gt;"),
+            ("\"", "&quot;"),
+            ("'", "&apos;"),
         ];
         for (unescaped, escaped) in specialCharacters {
             newString = newString.replacingOccurrences(of: unescaped, with: escaped, options: .literal, range: nil)

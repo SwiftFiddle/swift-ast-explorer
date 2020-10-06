@@ -60,10 +60,4 @@ final class AppTests: XCTestCase {
 
         waitForExpectations(timeout: 5)
     }
-
-    func testParser() {
-        let response = try! Parser.parse(code: defaultSampleCode)
-        try! response.syntaxHTML.data(using: .utf8)?.write(to: URL(fileURLWithPath: "/Users/katsumi.kishikawa/Desktop/syntaxHTML.html"))
-        try! response.syntaxJSON.data(using: .utf8)?.write(to: URL(fileURLWithPath: "/Users/katsumi.kishikawa/Desktop/syntaxJSON.json"))
-    }
 }
