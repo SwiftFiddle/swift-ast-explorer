@@ -2,6 +2,16 @@
 import XCTVapor
 
 final class AppTests: XCTestCase {
+    func testRootPath() throws {
+        let app = Application(.testing)
+        defer { app.shutdown() }
+        try configure(app)
+
+        try app.test(.GET, "/", afterResponse: { res in
+            XCTAssertEqual(res.status, .ok)
+        })
+    }
+
     func testGistPath() throws {
         let path = "/b4f866efb1c1dc63b0a9cce000cf5688"
 
@@ -50,14 +60,10 @@ final class AppTests: XCTestCase {
 
         waitForExpectations(timeout: 5)
     }
-    func testHelloWorld() throws {
-        let app = Application(.testing)
-        defer { app.shutdown() }
-        try configure(app)
 
-        try app.test(.GET, "hello", afterResponse: { res in
-            XCTAssertEqual(res.status, .ok)
-            XCTAssertEqual(res.body.string, "Hello, world!")
-        })
+    func testParser() {
+        let response = try! Parser.parse(code: defaultSampleCode)
+        try! response.syntaxHTML.data(using: .utf8)?.write(to: URL(fileURLWithPath: "/Users/katsumi.kishikawa/Desktop/syntaxHTML.html"))
+        try! response.syntaxJSON.data(using: .utf8)?.write(to: URL(fileURLWithPath: "/Users/katsumi.kishikawa/Desktop/syntaxJSON.json"))
     }
 }

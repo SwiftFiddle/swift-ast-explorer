@@ -14,7 +14,16 @@ services:
       LETSENCRYPT_EMAIL: kishikawakatsumi@mac.com
     ports:
       - "3000:3000"
-    command: ["serve", "--env", "production", "--port", "3000"]
+    command:
+      [
+        "serve",
+        "--env",
+        "production",
+        "--hostname",
+        "0.0.0.0",
+        "--port",
+        "3000",
+      ]
     network_mode: bridge
     restart: always
 

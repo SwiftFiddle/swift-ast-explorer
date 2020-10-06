@@ -42,9 +42,9 @@ func routes(_ app: Application) throws {
                 }
                 guard
                     let contents = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                   let files = contents["files"] as? [String: Any],
-                   let filename = files.keys.first, let file = files[filename] as? [String: Any],
-                   let content = file["content"] as? String else {
+                    let files = contents["files"] as? [String: Any],
+                    let filename = files.keys.first, let file = files[filename] as? [String: Any],
+                    let content = file["content"] as? String else {
                     promise.fail(Abort(.notFound))
                     return
                 }

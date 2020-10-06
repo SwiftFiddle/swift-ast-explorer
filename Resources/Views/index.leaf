@@ -111,7 +111,7 @@
       </div>
       <div class="col-md-6" style="margin-top: -4px;">
         <div class="p-1">
-          <ul class="nav nav-tabs lined with-arrow text-center">
+          <ul class="nav nav-tabs lined text-center">
             <li class="nav-item" style="width: 140px;">
               <a href="\#tab1" class="nav-link py-1 active" data-toggle="tab">
                 <h6 style="font-size: large;"><i class="far fa-folder-tree"></i> Structure</h6>
