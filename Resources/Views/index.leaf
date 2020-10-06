@@ -7,7 +7,7 @@
 
   <meta property="og:title" content="Swift AST Explorer">
   <meta property="og:description" content="Swift AST Explorer - AST visualizer for Swift source code" />
-  <meta property="og:site_name" content="Swift AST Explore - AST visualizer for Swift source code" />
+  <meta property="og:site_name" content="Swift AST Explorer - AST visualizer for Swift source code" />
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -107,7 +107,7 @@
   <div class="container-fluid" style="margin-top: 10px;">
     <div class="row">
       <div class="col" style="margin-bottom: 0;">
-        <h4><i class="fab fa-swift fa-lg" style="color: \#F05138;"></i> Swift AST Explorer</h4>
+        <a href="/" class="text-reset text-decoration-none"><h4><i class="fab fa-swift fa-lg" style="color: \#F05138;"></i> Swift AST Explorer</h4></a>
       </div>
       <div class="col-md-6" style="margin-top: -4px;">
         <div class="p-1">
