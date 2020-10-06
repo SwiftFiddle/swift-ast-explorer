@@ -6,9 +6,9 @@ services:
     container_name: swift-ast-explorer
     environment:
       LOG_LEVEL: ${LOG_LEVEL:-info}
-      VIRTUAL_HOST: swift-ast-explorer-staging2.kishikawakatsumi.com
+      VIRTUAL_HOST: swift-ast-explorer.com
       VIRTUAL_PORT: 3000
-      LETSENCRYPT_HOST: swift-ast-explorer-staging2.kishikawakatsumi.com
+      LETSENCRYPT_HOST: swift-ast-explorer.com
       LETSENCRYPT_EMAIL: kishikawakatsumi@mac.com
     ports:
       - "3000:3000"
