@@ -1,0 +1,38 @@
+.keyword,
+.atSign {
+  color: #aa0d91;
+}
+
+.importKeyword {
+  color: #1c00cf;
+}
+
+.stringLiteral {
+  color: #c41a16;
+}
+
+.lineComment,
+.blockComment,
+.docLineComment,
+.docBlockComment {
+  color: #006a00;
+}
+
+.gj-button-md,
+ul.gj-list-md li {
+  font-family: menlo;
+  font-size: 10pt;
+}
+
+.tooltip-inner {
+  max-width: 100%;
+  text-align: left;
+  font-family: menlo;
+  font-size: 10pt;
+}
+
+.tooltip-inner>span {
+  font-family: menlo;
+  font-size: 10pt;
+  color: white;
+}

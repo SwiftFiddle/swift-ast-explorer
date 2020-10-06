@@ -2,7 +2,7 @@ import Foundation
 import SwiftSyntax
 
 struct Parser {
-    static func parse(code: String) throws -> Response {
+    static func parse(code: String) throws -> SyntaxResponse {
         let sourceFile = try SyntaxParser.parse(source: code)
 
         let visitor = TokenVisitor()
@@ -15,6 +15,6 @@ struct Parser {
         let encoder = JSONEncoder()
         let json = String(data: try encoder.encode(tree), encoding: .utf8)!
 
-        return Response(syntaxHTML: html, syntaxJSON: json, swiftVersion: swiftVersion)
+        return SyntaxResponse(syntaxHTML: html, syntaxJSON: json, swiftVersion: swiftVersion)
     }
 }

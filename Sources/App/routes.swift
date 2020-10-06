@@ -36,12 +36,8 @@ func routes(_ app: Application) throws {
                     promise.fail(Abort(.notFound))
                     return
                 }
-                guard let data = body.getData(at: 0, length: body.readableBytes) else {
-                    promise.fail(Abort(.notFound))
-                    return
-                }
                 guard
-                    let contents = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                    let contents = try? JSONSerialization.jsonObject(with: Data(body.readableBytesView), options: []) as? [String: Any],
                     let files = contents["files"] as? [String: Any],
                     let filename = files.keys.first, let file = files[filename] as? [String: Any],
                     let content = file["content"] as? String else {
@@ -65,10 +61,10 @@ func routes(_ app: Application) throws {
         return promise.futureResult
     }
 
-    app.post("update") { req -> EventLoopFuture<Response> in
+    app.post("update") { req -> EventLoopFuture<SyntaxResponse> in
         let parameter = try req.content.decode(RequestParameter.self)
 
-        let promise = req.eventLoop.makePromise(of: Response.self)
+        let promise = req.eventLoop.makePromise(of: SyntaxResponse.self)
         DispatchQueue.global().async {
             do {
                 promise.succeed(try Parser.parse(code: parameter.code))
@@ -85,7 +81,7 @@ struct RequestParameter: Decodable {
     let code: String
 }
 
-struct Response: Content {
+struct SyntaxResponse: Content {
     let syntaxHTML: String
     let syntaxJSON: String
     let swiftVersion: String

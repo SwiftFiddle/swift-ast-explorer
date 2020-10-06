@@ -14,7 +14,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.9.13/combined/css/gijgo.min.css"
     integrity="sha512-oCuecFHHGu/Y4zKF8IoSoj5hQq1dLNIiUCwN08ChNW1VoMcjIIirAJT2JmKlYde6DeLN6JRSgntz6EDYDdFhCg=="
     crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/default.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/syntax.css" type="text/css" />
+  <link rel="stylesheet" href="css/ui.css" type="text/css" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
@@ -107,7 +109,9 @@
   <div class="container-fluid" style="margin-top: 10px;">
     <div class="row">
       <div class="col" style="margin-bottom: 0;">
-        <a href="/" class="text-reset text-decoration-none"><h4><i class="fab fa-swift fa-lg" style="color: \#F05138;"></i> Swift AST Explorer</h4></a>
+        <a href="/" class="text-reset text-decoration-none">
+          <h4><i class="fab fa-swift fa-lg" style="color: \#F05138;"></i> Swift AST Explorer</h4>
+        </a>
       </div>
       <div class="col-md-6" style="margin-top: -4px;">
         <div class="p-1">
