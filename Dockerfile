@@ -15,7 +15,7 @@ RUN swift build --enable-test-discovery -c release
 WORKDIR /staging
 
 RUN cp "$(swift build --package-path /build -c release --show-bin-path)/Run" ./
-RUN mv /build/Public ./Public && chmod -R a-w ./Public
+RUN mv /build/Public ./Public && chmod -R a-w ./Public && mv /build/Resources ./Resources && chmod -R a-w ./Resources
 
 FROM swift:5.3-focal-slim
 
