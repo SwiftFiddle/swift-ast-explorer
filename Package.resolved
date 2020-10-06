@@ -29,6 +29,24 @@
         }
       },
       {
+        "package": "leaf",
+        "repositoryURL": "https://github.com/vapor/leaf.git",
+        "state": {
+          "branch": null,
+          "revision": "6fc9ec82f5098ab93933e19ceb4ef030f52d646c",
+          "version": "4.0.0-rc.1.4"
+        }
+      },
+      {
+        "package": "leaf-kit",
+        "repositoryURL": "https://github.com/vapor/leaf-kit.git",
+        "state": {
+          "branch": null,
+          "revision": "a3623bd217d1c0327839afbc0bdc2351f7d06c1a",
+          "version": "1.0.0-rc.1.17"
+        }
+      },
+      {
         "package": "routing-kit",
         "repositoryURL": "https://github.com/vapor/routing-kit.git",
         "state": {

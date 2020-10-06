@@ -9,6 +9,7 @@ let package = Package(
     dependencies: [
         .package(name: "SwiftSyntax", url: "https://github.com/apple/swift-syntax.git", .exact("0.50300.0")),
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
+        .package(url: "https://github.com/vapor/leaf.git", from: "4.0.0-rc"),
     ],
     targets: [
         .target(
@@ -16,6 +17,7 @@ let package = Package(
             dependencies: [
                 "SwiftSyntax",
                 .product(name: "Vapor", package: "vapor"),
+                .product(name: "Leaf", package: "leaf"),
             ],
             swiftSettings: [
                 .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))

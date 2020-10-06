@@ -1,19 +1,28 @@
 import Vapor
 
+let swiftVersion = Environment.get("SWIFT_VERSION") ?? ""
+
 func routes(_ app: Application) throws {
     app.get { req in
-        req.eventLoop.makeSucceededFuture(
-            req.fileio.streamFile(at: "Public/index.html")
-        )
+        req.view.render("index", [
+            "title": "Swift AST Explorer",
+            "swiftVersion": swiftVersion
+        ])
+    }
+    app.get("index.html") { req in
+        req.view.render("index", [
+            "title": "Swift AST Explorer",
+            "swiftVersion": swiftVersion
+        ])
     }
 
-    app.post("update") { req -> EventLoopFuture<[String: [String: String]]> in
+    app.post("update") { req -> EventLoopFuture<Response> in
         let parameter = try req.content.decode(RequestParameter.self)
 
-        let promise = req.eventLoop.makePromise(of: [String: [String: String]].self)
+        let promise = req.eventLoop.makePromise(of: Response.self)
         DispatchQueue.global().async {
             do {
-                promise.succeed(["output": try Parser.parse(code: parameter.code)])
+                promise.succeed(try Parser.parse(code: parameter.code))
             } catch {
                 promise.fail(error)
             }
@@ -25,4 +34,10 @@ func routes(_ app: Application) throws {
 
 struct RequestParameter: Decodable {
     let code: String
+}
+
+struct Response: Content {
+    let syntaxHTML: String
+    let syntaxJSON: String
+    let swiftVersion: String
 }
