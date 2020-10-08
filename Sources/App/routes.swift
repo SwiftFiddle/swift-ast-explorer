@@ -61,7 +61,7 @@ func routes(_ app: Application) throws {
         return promise.futureResult
     }
 
-    app.post("update") { req -> EventLoopFuture<SyntaxResponse> in
+    app.on(.POST, "update", body: .collect(maxSize: "10mb")) { req -> EventLoopFuture<SyntaxResponse> in
         let parameter = try req.content.decode(RequestParameter.self)
 
         let promise = req.eventLoop.makePromise(of: SyntaxResponse.self)

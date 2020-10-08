@@ -197,6 +197,10 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
   </script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"
+    integrity="sha512-JZSo0h5TONFYmyLMqp8k4oPhuo6yNk9mHM+FY50aBjpypfofqtEWsAgRDQm94ImLCzSaHeqNvYuD9382CEn2zw=="
+    crossorigin="anonymous"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"
     integrity="sha512-GoORoNnxst42zE3rYPj4bNBm0Q6ZRXKNH2D9nEmNvVF/z24ywVnijAWVi/09iBiVDQVf3UlZHpzhAJIdd9BXqw=="
     crossorigin="anonymous"></script>
@@ -215,20 +219,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.9.13/combined/js/gijgo.min.js"
     integrity="sha512-T62eI76S3z2X8q+QaoTTn7FdKOVGjzKPjKNHw+vdAGQdcDMbxZUAKwRcGCPt0vtSbRuxNWr/BccUKYJo634ygQ=="
     crossorigin="anonymous"></script>
-
-  <script type="text/javascript">
-    function showLoading() {
-      $("\#run-button").addClass("disabled");
-      $("\#run-button-text").hide();
-      $("\#run-button-spinner").show();
-    }
-
-    function hideLoading() {
-      $("\#run-button").removeClass("disabled");
-      $("\#run-button-text").show();
-      $("\#run-button-spinner").hide();
-    }
-  </script>
 
   <script type="text/javascript">
     ace.require("ace/ext/language_tools");
@@ -259,9 +249,18 @@
     const results = $("\#results");
     let tree = null;
 
+    update(editor);
+
+    const updateOnTextChange = $.debounce(400, (editor) => {
+      update(editor);
+    });
+    editor.on('change', (change, editor) => {
+      updateOnTextChange(editor);
+    });
+
     $("\#run-button").click(function (e) {
       e.preventDefault();
-      update(editor)
+      update(editor);
     });
 
     function update(editor) {
@@ -271,158 +270,176 @@
       const json = {
         code: code
       };
-      $.post('/update', json, function (data, xhr) {
-        function unescapeHTML(str) {
-          let div = document.createElement("div");
-          div.innerHTML = str.replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;");
-          return div.textContent || div.innerText;
-        }
-        results.html(unescapeHTML(data.syntaxHTML));
+      $.post('/update', json).done(function (data, xhr) {
+          results.html(unescapeHTML(data.syntaxHTML));
 
-        if (tree) {
-          tree.destroy();
-        }
-        tree = $('\#structure').tree({
-          dataSource: JSON.parse(data.syntaxJSON)
-        });
+          if (tree) {
+            tree.destroy();
+          }
+          tree = $('\#structure').tree({
+            dataSource: JSON.parse(data.syntaxJSON)
+          });
 
-        const children = tree.getChildren(tree)
-        for (let i = 0, len = children.length; i < Math.min(len, 100); i++) {
-          tree.expand(tree.getNodeById(children[i]));
-        }
-
-        hideLoading();
-
-        $('\#structure').find('li').each(function (i, e) {
-          const id = $(e).attr('data-id');
-          const data = tree.getDataById(id);
-          if (data.token) {
-            e.style.fontWeight = 'bold';
+          const children = tree.getChildren(tree)
+          for (let i = 0, len = children.length; i < Math.min(len, 100); i++) {
+            tree.expand(tree.getNodeById(children[i]));
           }
 
-          $(this).mouseover(function (e) {
-            const id = $(this).attr('data-id');
+          hideLoading();
 
-            const node = tree.getNodeById(id);
-            tree.select(node);
+          $('\#structure').find('li').each(function (i, e) {
+            const id = $(e).attr('data-id');
+            const data = tree.getDataById(id);
             if (data.token) {
-              const target = $(this).find("[data-role='display']");
-              if (!target.attr('__tippy')) {
-                tippy($(this).find("[data-role='display']")[0], {
-                  content: `<span class='tooltip-text'>kind:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.token.kind}</span><br><span class='tooltip-text'>leadingTrivia:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.token.leadingTrivia}</span><br><span class='tooltip-text'>text:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.text}</span><br><span class='tooltip-text'>trailingTrivia:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.token.trailingTrivia}</span>`,
-                  allowHTML: true,
-                  placement: 'auto',
-                  theme: 'light-border',
-                });
-                target.attr('__tippy', true);
+              e.style.fontWeight = 'bold';
+            }
+
+            $(this).mouseover(function (e) {
+              const id = $(this).attr('data-id');
+
+              const node = tree.getNodeById(id);
+              tree.select(node);
+              if (data.token) {
+                const target = $(this).find("[data-role='display']");
+                if (!target.attr('__tippy')) {
+                  tippy($(this).find("[data-role='display']")[0], {
+                    content: `<span class='tooltip-text'>kind:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.token.kind}</span><br><span class='tooltip-text'>leadingTrivia:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.token.leadingTrivia}</span><br><span class='tooltip-text'>text:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.text}</span><br><span class='tooltip-text'>trailingTrivia:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.token.trailingTrivia}</span>`,
+                    allowHTML: true,
+                    placement: 'auto',
+                    theme: 'light-border',
+                  });
+                  target.attr('__tippy', true);
+                }
               }
-            }
 
-            const Range = ace.require("ace/range").Range;
-            editor.selection.setRange(new Range(data.range.startRow, data.range.startColumn,
-              data.range
-              .endRow, data.range.endColumn));
+              const Range = ace.require("ace/range").Range;
+              editor.selection.setRange(new Range(data.range.startRow, data.range.startColumn,
+                data.range
+                .endRow, data.range.endColumn));
 
-            e.stopPropagation();
+              e.stopPropagation();
+            });
+            $(this).mouseout(function (e) {
+              tree.unselectAll();
+            });
           });
-          $(this).mouseout(function (e) {
-            tree.unselectAll();
-          });
-        });
 
-        let visibleTooltips = []
-        $('\#results').find('span').each(function (i, e) {
-          $(this).mouseover(function (e) {
-            let element = e.target;
-            element.style.backgroundColor = 'rgba(81, 101, 255, 0.5)';
+          let visibleTooltips = []
+          $('\#results').find('span').each(function (i, e) {
+            $(this).mouseover(function (e) {
+              let element = e.target;
+              element.style.backgroundColor = 'rgba(81, 101, 255, 0.5)';
 
-            if (!element.getAttribute('__tippy')) {
-              const tooltip = tippy(element, {
-                content: `<span style='font-family: "Menlo", sans-serif, monospace;'>${element.dataset.tooltipContent}</span>`,
-                allowHTML: true,
-                placement: 'left',
-                theme: 'light-border',
-                onShow(instance) {
-                  visibleTooltips.push(instance);
-                },
-                onHidden(instance) {
-                  visibleTooltips = visibleTooltips.filter(e => e !== instance);
-                },
-              });
-              element.setAttribute('__tippy', true);
-            }
-
-            $(this).parents('span').each(function (i, e) {
-              if (!e.getAttribute('__tippy')) {
+              if (!element.getAttribute('__tippy')) {
                 const tooltip = tippy(element, {
-                  content: `<span style='font-family: "Menlo", sans-serif, monospace;'>${e.dataset.tooltipContent}</span>`,
+                  content: `<span style='font-family: "Menlo", sans-serif, monospace;'>${element.dataset.tooltipContent}</span>`,
                   allowHTML: true,
                   placement: 'left',
                   theme: 'light-border',
                   onShow(instance) {
                     visibleTooltips.push(instance);
-                    const placements = ['left', 'bottom', 'right'];
-                    visibleTooltips.forEach((tooltip, i) => {
-                      tooltip.setProps({
-                        placement: placements[i % placements.length],
-                        offset: [0 + (20 * ((i / placements.length) ^ 0)), 20],
-                      });
-                    })
                   },
                   onHidden(instance) {
                     visibleTooltips = visibleTooltips.filter(e => e !== instance);
                   },
                 });
-                e.setAttribute('__tippy', true);
-                tooltip.show();
+                element.setAttribute('__tippy', true);
               }
 
-              createDOMRectElement(e.getBoundingClientRect())
-              if (i > 0) {
-                return false
-              }
-
-              function createDOMRectElement(domRect) {
-                let rectElements = document.getElementsByClassName('dom-rect');
-                for (let i = 0, l = rectElements.length; l > i; i++) {
-                  rectElements[0].parentNode.removeChild(rectElements[0]);
+              $(this).parents('span').each(function (i, e) {
+                if (!e.getAttribute('__tippy')) {
+                  const tooltip = tippy(element, {
+                    content: `<span style='font-family: "Menlo", sans-serif, monospace;'>${e.dataset.tooltipContent}</span>`,
+                    allowHTML: true,
+                    placement: 'left',
+                    theme: 'light-border',
+                    onShow(instance) {
+                      visibleTooltips.push(instance);
+                      const placements = ['left', 'bottom', 'right'];
+                      visibleTooltips.forEach((tooltip, i) => {
+                        tooltip.setProps({
+                          placement: placements[i % placements.length],
+                          offset: [0 + (20 * ((i / placements.length) ^ 0)), 20],
+                        });
+                      })
+                    },
+                    onHidden(instance) {
+                      visibleTooltips = visibleTooltips.filter(e => e !== instance);
+                    },
+                  });
+                  e.setAttribute('__tippy', true);
+                  tooltip.show();
                 }
 
-                let rectElement = document.createElement('div');
-                rectElement.className = 'dom-rect';
-                rectElement.style.left = (domRect.x - 1) + 'px';
-                rectElement.style.top = (domRect.y - 1) + 'px';
-                rectElement.style.width = domRect.width + 'px';
-                rectElement.style.height = domRect.height + 'px';
-                rectElement.style.pointerEvents = 'none';
-                rectElement.style.position = 'absolute';
-                rectElement.style.border = '1px solid rgb(81, 101, 255)';
-                rectElement.style.backgroundColor = 'rgba(81, 101, 255, 0.25)';
-                document.body.appendChild(rectElement);
+                createDOMRectElement(e.getBoundingClientRect())
+                if (i > 0) {
+                  return false
+                }
+
+                function createDOMRectElement(domRect) {
+                  let rectElements = document.getElementsByClassName('dom-rect');
+                  for (let i = 0, l = rectElements.length; l > i; i++) {
+                    rectElements[0].parentNode.removeChild(rectElements[0]);
+                  }
+
+                  let rectElement = document.createElement('div');
+                  rectElement.className = 'dom-rect';
+                  rectElement.style.left = (domRect.x - 1) + 'px';
+                  rectElement.style.top = (domRect.y - 1) + 'px';
+                  rectElement.style.width = domRect.width + 'px';
+                  rectElement.style.height = domRect.height + 'px';
+                  rectElement.style.pointerEvents = 'none';
+                  rectElement.style.position = 'absolute';
+                  rectElement.style.border = '1px solid rgb(81, 101, 255)';
+                  rectElement.style.backgroundColor = 'rgba(81, 101, 255, 0.25)';
+                  document.body.appendChild(rectElement);
+                }
+              });
+
+              e.stopPropagation();
+            });
+            $(this).mouseout(function (e) {
+              let element = e.target;
+              element.style.backgroundColor = '';
+
+              let rectElements = document.getElementsByClassName('dom-rect');
+              for (let i = 0, l = rectElements.length; l > i; i++) {
+                rectElements[0].parentNode.removeChild(rectElements[0]);
               }
             });
-
-            e.stopPropagation();
           });
-          $(this).mouseout(function (e) {
-            let element = e.target;
-            element.style.backgroundColor = '';
 
-            let rectElements = document.getElementsByClassName('dom-rect');
-            for (let i = 0, l = rectElements.length; l > i; i++) {
-              rectElements[0].parentNode.removeChild(rectElements[0]);
-            }
-          });
+          editor.focus();
+        })
+        .fail(function (response) {
+          hideLoading();
+          if (response.status == 413) {
+            alert("Payload Too Large")
+          } else {
+            alert("Something went wrong")
+          }
         });
-
-        editor.focus();
-      });
     }
 
-    update(editor)
-  </script>
-  <script>
+    function unescapeHTML(str) {
+      let div = document.createElement("div");
+      div.innerHTML = str.replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+      return div.textContent || div.innerText;
+    }
+
+    function showLoading() {
+      $("\#run-button").addClass("disabled");
+      $("\#run-button-text").hide();
+      $("\#run-button-spinner").show();
+    }
+
+    function hideLoading() {
+      $("\#run-button").removeClass("disabled");
+      $("\#run-button-text").show();
+      $("\#run-button-spinner").hide();
+    }
+
     function handleFileSelect(event) {
       event.stopPropagation();
       event.preventDefault();
