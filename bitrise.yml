@@ -22,7 +22,8 @@ workflows:
             docker login --username kishikawakatsumi --password
             $DOCKER_HUB_ACCESS_TOKEN
 
-            docker build --rm -t kishikawakatsumi/swift-ast-explorer .
+            docker build --rm --no-cache --tag
+            kishikawakatsumi/swift-ast-explorer .
 
             docker push kishikawakatsumi/swift-ast-explorer
 
