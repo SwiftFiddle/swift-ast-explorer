@@ -20,19 +20,10 @@
 
 .gj-button-md,
 ul.gj-list-md li {
-  font-family: menlo;
+  font-family: "Menlo", sans-serif, monospace;
   font-size: 10pt;
 }
 
-.tooltip-inner {
-  max-width: 100%;
-  text-align: left;
-  font-family: menlo;
-  font-size: 10pt;
-}
-
-.tooltip-inner>span {
-  font-family: menlo;
-  font-size: 10pt;
-  color: white;
+.tooltip-text {
+  color: gray;
 }
