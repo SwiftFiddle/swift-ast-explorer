@@ -359,7 +359,6 @@
                 theme: 'light-border',
                 onShow(instance) {
                   visibleTooltips.push(instance);
-                  visibleTooltips.forEach((tooltip) => {})
                 },
                 onHidden(instance) {
                   visibleTooltips = visibleTooltips.filter(e => e !== instance);
@@ -370,35 +369,20 @@
 
             $(this).parents('span').each(function (i, e) {
               if (!e.getAttribute('__tippy')) {
-                const placements = ['right', 'bottom', 'left'];
-                const placement = placements[i % placements.length];
                 const tooltip = tippy(element, {
                   content: `<span style='font-family: "Menlo", sans-serif, monospace;'>${e.dataset.tooltipContent}</span>`,
                   allowHTML: true,
-                  placement: placement,
+                  placement: 'left',
                   theme: 'light-border',
                   onShow(instance) {
                     visibleTooltips.push(instance);
-                    placements.forEach((placement) => {
-                      const tooltips = visibleTooltips.filter(tooltip => tooltip.props.placement == placement);
-                      tooltips.forEach((tooltip, i) => {
-                        let offset = null;
-                        switch (placement) {
-                          case 'left':
-                            offset = [40 * i, 10];
-                            break;
-                          case 'right':
-                            offset = [-40 * i, 10];
-                            break;
-                          case 'bottom':
-                            offset = [0, 10 + 40 * i];
-                            break;
-                        }
-                        tooltip.setProps({
-                          offset: offset,
-                        });
-                      })
-                    });
+                    const placements = ['left', 'bottom', 'right'];
+                    visibleTooltips.forEach((tooltip, i) => {
+                      tooltip.setProps({
+                        placement: placements[i % placements.length],
+                        offset: [0 + (20 * ((i / placements.length)^0)), 20],
+                      });
+                    })
                   },
                   onHidden(instance) {
                     visibleTooltips = visibleTooltips.filter(e => e !== instance);
