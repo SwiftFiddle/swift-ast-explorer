@@ -58,7 +58,7 @@
 
     \#results {
       font-family: menlo;
-      font-size: 10pt;
+      font-size: 11pt;
     }
 
     /* Sticky footer styles */
@@ -241,7 +241,7 @@
       useSoftTabs: true,
       autoScrollEditorIntoView: true,
       fontFamily: "menlo",
-      fontSize: "10pt",
+      fontSize: "11pt",
       showInvisibles: false,
       enableBasicAutocompletion: true,
       enableSnippets: true,
@@ -251,6 +251,7 @@
       showFoldWidgets: false,
       showPrintMargin: false,
     });
+    editor.container.style.lineHeight = 1.5;
     const row = editor.session.getLength() - 1
     const column = editor.session.getLine(row).length
     editor.gotoLine(row + 1, column)

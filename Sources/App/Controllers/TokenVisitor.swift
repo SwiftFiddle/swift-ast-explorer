@@ -84,7 +84,7 @@ class TokenVisitor: SyntaxRewriter {
             trivia += String(repeating: "&nbsp;", count: count * 2)
             column += count * 2
         case .newlines(let count), .carriageReturns(let count), .carriageReturnLineFeeds(let count):
-            trivia += String(repeating: "<br>\n", count: count)
+            trivia += String(repeating: "<br>", count: count)
             row += count
             column = 0
         case .lineComment(let text):
