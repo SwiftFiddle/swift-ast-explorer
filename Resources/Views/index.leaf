@@ -101,17 +101,17 @@
         <div class="p-1">
           <ul class="nav nav-tabs lined text-center">
             <li class="nav-item" style="width: 140px;">
-              <a href="\#tab1" class="nav-link py-1 text-secondary active" data-toggle="tab">
+              <a href="\#tab1" class="nav-link py-1 active" data-toggle="tab">
                 <h6 style="font-size: large;"><i class="far fa-folder-tree"></i> Structure</h6>
               </a>
             </li>
             <li class="nav-item" style="width: 140px;">
-              <a href="\#tab2" class="nav-link py-1 text-secondary" data-toggle="tab">
+              <a href="\#tab2" class="nav-link py-1" data-toggle="tab">
                 <h6 style="font-size: large;"><i class="fal fa-file-code"></i> Syntax</h6>
               </a>
             </li>
             <li class="nav-item" style="width: 140px;">
-              <a href="\#tab3" class="nav-link py-1 text-secondary" data-toggle="tab">
+              <a href="\#tab3" class="nav-link py-1" data-toggle="tab">
                 <h6 style="font-size: large;"><i class="fas fa-question-circle"></i> Help</i></h6>
               </a>
             </li>
