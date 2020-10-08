@@ -82,25 +82,6 @@
       /* Vertically center the text there */
       background-color: \#F7F7F7;
     }
-
-    \#loading {
-      display: table;
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: \#000000;
-      opacity: 0.2;
-    }
-
-    \#loading .loadingIndicator {
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
-      padding-top: 140px;
-      background: url('images/Spinner-1s-100px.gif') center center no-repeat;
-    }
   </style>
 
   <script src="https://kit.fontawesome.com/e4cc3576fb.js" crossorigin="anonymous"></script>
@@ -185,8 +166,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3 mx-auto" style="margin-top: 20px; margin-bottom: 20px;">
-        <button id="run-button" type="button" class="btn btn-secondary btn-block btn-lg">Update&nbsp;&nbsp;<i
-            class="fas fa-sync-alt" aria-hidden="true"></i></button>
+        <button id="run-button" type="button" class="btn btn-secondary btn-block btn-lg">
+          <span id="run-button-text">Update <i class="fas fa-chevron-right align-baseline"></i></span> <span
+            id="run-button-spinner" class="spinner-border spinner-border-sm"
+            style="width: 1.5rem; height: 1.5rem; display: none;" role="status" aria-hidden="true"></span></button>
       </div>
     </div>
   </div>
@@ -235,13 +218,15 @@
 
   <script type="text/javascript">
     function showLoading() {
-      if ($('\#loading').length == 0) {
-        $('body').append("<div id='loading'><div class='loadingIndicator'></div></div>");
-      }
+      $("\#run-button").addClass("disabled");
+      $("\#run-button-text").hide();
+      $("\#run-button-spinner").show();
     }
 
     function hideLoading() {
-      $("\#loading").remove();
+      $("\#run-button").removeClass("disabled");
+      $("\#run-button-text").show();
+      $("\#run-button-spinner").hide();
     }
   </script>
 
@@ -380,7 +365,7 @@
                     visibleTooltips.forEach((tooltip, i) => {
                       tooltip.setProps({
                         placement: placements[i % placements.length],
-                        offset: [0 + (20 * ((i / placements.length)^0)), 20],
+                        offset: [0 + (20 * ((i / placements.length) ^ 0)), 20],
                       });
                     })
                   },
