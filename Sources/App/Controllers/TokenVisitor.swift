@@ -14,7 +14,7 @@ class TokenVisitor: SyntaxRewriter {
         if syntax.hasSuffix("Syntax") {
             syntax = String(syntax.dropLast(6))
         }
-        list.append("<span class='\(syntax)' data-tippy-content='\(syntax)'>")
+        list.append("<span class='\(syntax)' data-tooltip-content='\(syntax)'>")
 
         let node = Node(text: syntax)
         node.range.startRow = row
@@ -70,7 +70,7 @@ class TokenVisitor: SyntaxRewriter {
             kind = "keyword"
         }
 
-        list.append("<span class='token \(kind)' data-tippy-content='\(token.tokenKind)'>" + escapeHtmlSpecialCharacters(token.text) + "</span>")
+        list.append("<span class='token \(kind)' data-tooltip-content='\(token.tokenKind)'>" + escapeHtmlSpecialCharacters(token.text) + "</span>")
         column += token.text.count
     }
 
@@ -106,7 +106,7 @@ class TokenVisitor: SyntaxRewriter {
     }
 
     private func withSpanTag(class c: String, text: String) -> String {
-        return "<span class='\(c)' data-tippy-content='\(c)'>" + escapeHtmlSpecialCharacters(text) + "</span>"
+        return "<span class='\(c)' data-tooltip-content='\(c)'>" + escapeHtmlSpecialCharacters(text) + "</span>"
     }
 
     private func replaceSymbols(text: String) -> String {

@@ -353,7 +353,7 @@
 
             if (!element.getAttribute('__tippy')) {
               const tooltip = tippy(element, {
-                content: `<span style='font-family: "Menlo", sans-serif, monospace;'>${element.dataset.tippyContent}</span>`,
+                content: `<span style='font-family: "Menlo", sans-serif, monospace;'>${element.dataset.tooltipContent}</span>`,
                 allowHTML: true,
                 placement: 'left',
                 theme: 'light-border',
@@ -372,8 +372,8 @@
               if (!e.getAttribute('__tippy')) {
                 const placements = ['right', 'bottom', 'left'];
                 const placement = placements[i % placements.length];
-                const tooltip = tippy(e, {
-                  content: `<span style='font-family: "Menlo", sans-serif, monospace;'>${e.dataset.tippyContent}</span>`,
+                const tooltip = tippy(element, {
+                  content: `<span style='font-family: "Menlo", sans-serif, monospace;'>${e.dataset.tooltipContent}</span>`,
                   allowHTML: true,
                   placement: placement,
                   theme: 'light-border',
