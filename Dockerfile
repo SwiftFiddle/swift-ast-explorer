@@ -20,7 +20,9 @@ RUN mv /build/Public ./Public && chmod -R a-w ./Public && mv /build/Resources ./
 FROM swift:5.3-focal-slim
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && \
-    apt-get -q update && apt-get -q dist-upgrade -y && apt-get install -y libz3-4 && rm -r /var/lib/apt/lists/*
+    apt-get -q update && apt-get -q dist-upgrade -y && \
+    apt-get install -y --no-install-recommends libz3-4 && \
+    rm -r /var/lib/apt/lists/*
 RUN useradd --user-group --create-home --system --skel /dev/null --home-dir /app vapor
 
 WORKDIR /app
