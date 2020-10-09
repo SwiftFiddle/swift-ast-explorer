@@ -1,6 +1,6 @@
 import Vapor
 
-final class ErrorMiddleware: Middleware {
+final class CommonErrorMiddleware: Middleware {
     func respond(to request: Request, chainingTo next: Responder) -> EventLoopFuture<Response> {
         return next.respond(to: request).flatMapError { (error) in
             let headers: HTTPHeaders

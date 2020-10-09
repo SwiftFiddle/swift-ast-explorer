@@ -7,7 +7,7 @@ class TokenVisitor: SyntaxRewriter {
     var tree = [Node]()
     var current: Node!
 
-    var statistics = [String: [Node]]()
+    var statistics = SyntaxStatistics()
 
     var row = 0
     var column = 0
@@ -28,7 +28,7 @@ class TokenVisitor: SyntaxRewriter {
             tree.append(n)
         } else {
             current.add(node: n)
-            statistics[n.text] = statistics[n.text, default: []] + [n]
+            statistics.append(node: n)
         }
         current = n
     }

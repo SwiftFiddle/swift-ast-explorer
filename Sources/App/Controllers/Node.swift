@@ -7,7 +7,7 @@ class Node: Encodable {
     var range = Range(startRow: 0, startColumn: 0, endRow: 0, endColumn: 0)
     var token: Token?
 
-    struct Range: Encodable {
+    struct Range: Codable {
         var startRow: Int
         var startColumn: Int
         var endRow: Int

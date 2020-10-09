@@ -237,13 +237,14 @@ function updateStatisticsTable(statistics) {
   $("#statistics > tbody").empty();
 
   statistics.forEach((row) => {
+    const ranges = JSON.stringify(row.ranges);
     $("#statistics > tbody").append(
-      `<tr data-ranges='${row.ranges}'><td style="font-family: 'Menlo', sans-serif, monospace;">${row.syntax}</td><td><div>${row.count}</div></td></tr>`
+      `<tr data-ranges='${ranges}'><td style="font-family: 'Menlo', sans-serif, monospace;">${row.syntax}</td><td><div>${row.ranges.length}</div></td></tr>`
     );
   });
 
   $("#statistics > tbody tr").mouseover(function () {
-    const ranges = JSON.parse($(this).attr("data-ranges"));
+    const ranges = $(this).data("ranges");
     ranges.forEach((range) => {
       editor.session.addMarker(
         new Range(

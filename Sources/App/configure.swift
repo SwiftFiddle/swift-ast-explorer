@@ -3,7 +3,7 @@ import Leaf
 
 public func configure(_ app: Application) throws {
     app.middleware = .init()
-    app.middleware.use(ErrorMiddleware())
+    app.middleware.use(CommonErrorMiddleware())
     app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
 
     app.http.server.configuration.supportPipelining = true

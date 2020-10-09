@@ -82,13 +82,6 @@ struct RequestParameter: Decodable {
     let code: String
 }
 
-struct SyntaxResponse: Content {
-    let syntaxHTML: String
-    let syntaxJSON: String
-    let statistics: [[String: String]]
-    let swiftVersion: String
-}
-
 let defaultSampleCode = #"""
 import Foundation
 
