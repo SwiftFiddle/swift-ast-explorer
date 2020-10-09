@@ -49,3 +49,9 @@ ul.gj-list-md li {
 .tooltip-title {
   color: gray;
 }
+
+.editor-marker {
+  position: absolute;
+  border: 1px solid rgb(81, 101, 255);
+  background-color: rgba(81, 101, 255, 0.25);
+}

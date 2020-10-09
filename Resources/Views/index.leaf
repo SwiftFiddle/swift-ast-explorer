@@ -9,14 +9,19 @@
   <meta property="og:description" content="Swift AST Explorer - AST visualizer for Swift source code" />
   <meta property="og:site_name" content="Swift AST Explorer - AST visualizer for Swift source code" />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.2.6/themes/light-border.css"
+    integrity="sha256-Fev9TKDfIZRihMeo+VloYBQ6vG1Pehn17SF0wQE1w/0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.9.13/combined/css/gijgo.min.css"
     integrity="sha512-oCuecFHHGu/Y4zKF8IoSoj5hQq1dLNIiUCwN08ChNW1VoMcjIIirAJT2JmKlYde6DeLN6JRSgntz6EDYDdFhCg=="
     crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.2.6/themes/light-border.css"
-    integrity="sha256-Fev9TKDfIZRihMeo+VloYBQ6vG1Pehn17SF0wQE1w/0=" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/theme.bootstrap_4.min.css"
+    integrity="sha512-2C6AmJKgt4B+bQc08/TwUeFKkq8CsBNlTaNcNgUmsDJSU1Fg+R6azDbho+ZzuxEkJnCjLZQMozSq3y97ZmgwjA=="
+    crossorigin="anonymous" />
 
   <link rel="stylesheet" href="css/ui.css" type="text/css" />
   <link rel="stylesheet" href="css/editor.css" type="text/css" />
@@ -65,6 +70,11 @@
             </li>
             <li class="nav-item" style="width: 140px;">
               <a href="\#tab3" class="nav-link py-1" data-toggle="tab">
+                <h6 style="font-size: large;"><i class="far fa-table"></i> Statistics</h6>
+              </a>
+            </li>
+            <li class="nav-item" style="width: 140px;">
+              <a href="\#tab4" class="nav-link py-1" data-toggle="tab">
                 <h6 style="font-size: large;"><i class="fas fa-question-circle"></i> Help</i></h6>
               </a>
             </li>
@@ -91,6 +101,25 @@
           </div>
 
           <div id="tab3" class="tab-pane" style="background: \#F5F5F5;">
+            <div class="my-4 mx-2" role="document">
+              <div class="col-12">
+                <div>
+                  <table id="statistics" class="table table-borderless table-hover table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="width: 60%;">Syntax</th>
+                        <th scope="col">Count</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab4" class="tab-pane" style="background: \#F5F5F5;">
             <div class="my-4 mx-2" role="document">
               <div class="col-12">
                 <div style="font-size: large;">
@@ -174,6 +203,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.9.13/combined/js/gijgo.min.js"
     integrity="sha512-T62eI76S3z2X8q+QaoTTn7FdKOVGjzKPjKNHw+vdAGQdcDMbxZUAKwRcGCPt0vtSbRuxNWr/BccUKYJo634ygQ=="
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
+    integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg=="
     crossorigin="anonymous"></script>
 
   <script src="js/editor.js"></script>

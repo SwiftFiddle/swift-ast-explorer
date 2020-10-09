@@ -3,8 +3,11 @@ import SwiftSyntax
 
 class TokenVisitor: SyntaxRewriter {
     var list = [String]()
+
     var tree = [Node]()
     var current: Node!
+
+    var statistics = [String: [Node]]()
 
     var row = 0
     var column = 0
@@ -16,17 +19,18 @@ class TokenVisitor: SyntaxRewriter {
         }
         list.append("<span class='\(syntax)' data-tooltip-title='Syntax' data-tooltip-content='\(syntax)'>")
 
-        let node = Node(text: syntax)
-        node.range.startRow = row
-        node.range.startColumn = column
-        node.range.endRow = row
-        node.range.endColumn = column
+        let n = Node(text: syntax)
+        n.range.startRow = row
+        n.range.startColumn = column
+        n.range.endRow = row
+        n.range.endColumn = column
         if current == nil {
-            tree.append(node)
+            tree.append(n)
         } else {
-            current.add(node: node)
+            current.add(node: n)
+            statistics[n.text] = statistics[n.text, default: []] + [n]
         }
-        current = node
+        current = n
     }
 
     override func visit(_ token: TokenSyntax) -> Syntax {

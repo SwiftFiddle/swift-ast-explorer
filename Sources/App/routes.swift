@@ -10,6 +10,7 @@ func routes(_ app: Application) throws {
             "swiftVersion": swiftVersion,
         ])
     }
+
     app.get("index.html") { req -> EventLoopFuture<View> in
         req.view.render("index", [
             "title": "Swift AST Explorer",
@@ -84,6 +85,7 @@ struct RequestParameter: Decodable {
 struct SyntaxResponse: Content {
     let syntaxHTML: String
     let syntaxJSON: String
+    let statistics: [[String: String]]
     let swiftVersion: String
 }
 
