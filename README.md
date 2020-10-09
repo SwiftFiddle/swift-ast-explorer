@@ -2,22 +2,22 @@
 
 AST visualizer for Swift source code. https://swift-ast-explorer.com/
 
-<img width="1024" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95581274-afb00f80-0a73-11eb-941f-5f0fe055c0b3.png">
+<img width="1024" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95597813-14766480-0a8a-11eb-8116-56dbb5a55020.png">
 
 
 ## Features
 
 ### Show Swift syntax in a tree structure.
 
-<img width="600" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95581417-faca2280-0a73-11eb-9cd9-feacd3245195.png">
+<img width="600" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95597584-cbbeab80-0a89-11eb-918f-03cb50a46b22.png">
 
 ### Visualize which syntax each token in the source code corresponds to.
 
-<img width="600" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95581564-2cdb8480-0a74-11eb-868a-3ceae1aff8f7.png">
+<img width="600" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95597956-47b8f380-0a8a-11eb-9d2a-9f12f7ebc25b.png">
 
 ### Display an overview and inspect where each syntax is used.
 
-<img width="600" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95581918-c86cf500-0a74-11eb-9a16-a3c9a3939840.png">
+<img width="600" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95598041-64edc200-0a8a-11eb-818d-0c940d40ffd2.png">
 
 ## Run the app
 
