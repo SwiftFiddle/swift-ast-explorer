@@ -1,3 +1,25 @@
+.ace_editor {
+  height: 750px;
+  padding: 0;
+  margin: 0;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  >.col,
+  >[class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+#results {
+  font-family: 'Menlo', sans-serif, monospace;
+  font-size: 11pt;
+}
+
 .keyword,
 .atSign {
   color: #aa0d91;
@@ -24,6 +46,6 @@ ul.gj-list-md li {
   font-size: 11pt;
 }
 
-.tooltip-text {
+.tooltip-title {
   color: gray;
 }

@@ -14,7 +14,7 @@ class TokenVisitor: SyntaxRewriter {
         if syntax.hasSuffix("Syntax") {
             syntax = String(syntax.dropLast(6))
         }
-        list.append("<span class='\(syntax)' data-tooltip-content='\(syntax)'>")
+        list.append("<span class='\(syntax)' data-tooltip-title='Syntax' data-tooltip-content='\(syntax)'>")
 
         let node = Node(text: syntax)
         node.range.startRow = row
@@ -70,11 +70,15 @@ class TokenVisitor: SyntaxRewriter {
             kind = "keyword"
         }
 
-        list.append("<span class='token \(kind)' data-tooltip-content='\(token.tokenKind)'>" + escapeHtmlSpecialCharacters(token.text) + "</span>")
+        list.append("<span class='token \(kind)' data-tooltip-title='Token' data-tooltip-content='\(token.tokenKind)'>" + escapeHtmlSpecialCharacters(token.text) + "</span>")
         column += token.text.count
     }
 
     private func processTriviaPiece(_ piece: TriviaPiece) -> String {
+        func wrapWithSpanTag(class c: String, text: String) -> String {
+            return "<span class='\(c)' data-tooltip-title='Trivia' data-tooltip-content='\(c)'>" + escapeHtmlSpecialCharacters(text) + "</span>"
+        }
+
         var trivia = ""
         switch piece {
         case .spaces(let count):
@@ -88,25 +92,21 @@ class TokenVisitor: SyntaxRewriter {
             row += count
             column = 0
         case .lineComment(let text):
-            trivia += withSpanTag(class: "lineComment", text: text)
+            trivia += wrapWithSpanTag(class: "lineComment", text: text)
             processComment(text: text)
         case .blockComment(let text):
-            trivia += withSpanTag(class: "blockComment", text: text)
+            trivia += wrapWithSpanTag(class: "blockComment", text: text)
             processComment(text: text)
         case .docLineComment(let text):
-            trivia += withSpanTag(class: "docLineComment", text: text)
+            trivia += wrapWithSpanTag(class: "docLineComment", text: text)
             processComment(text: text)
         case .docBlockComment(let text):
-            trivia += withSpanTag(class: "docBlockComment", text: text)
+            trivia += wrapWithSpanTag(class: "docBlockComment", text: text)
             processComment(text: text)
         case .verticalTabs, .formfeeds, .garbageText:
             break
         }
         return trivia
-    }
-
-    private func withSpanTag(class c: String, text: String) -> String {
-        return "<span class='\(c)' data-tooltip-content='\(c)'>" + escapeHtmlSpecialCharacters(text) + "</span>"
     }
 
     private func replaceSymbols(text: String) -> String {
