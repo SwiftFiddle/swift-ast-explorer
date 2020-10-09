@@ -234,6 +234,8 @@ function updateSyntaxSourceMap() {
 }
 
 function updateStatisticsTable(statistics) {
+  $("#statistics > tbody").empty();
+
   statistics.forEach((row) => {
     $("#statistics > tbody").append(
       `<tr data-ranges='${row.ranges}'><td style="font-family: 'Menlo', sans-serif, monospace;">${row.syntax}</td><td><div>${row.count}</div></td></tr>`
@@ -264,6 +266,7 @@ function updateStatisticsTable(statistics) {
   });
 
   $("#statistics").tablesorter({ theme: "bootstrap" });
+  $("#statistics").trigger("update");
 }
 
 function unescapeHTML(str) {
