@@ -33,7 +33,7 @@ workflows:
             chmod 600 ~/.ssh/id_rsa
 
 
-            ssh -t kishikawakatsumi@34.82.92.235 <<EOC
+            ssh -t -t kishikawakatsumi@34.82.92.235 <<EOC
 
             set -ex
 
@@ -56,6 +56,3 @@ workflows:
             docker image prune --force
 
             EOC
-trigger_map:
-- push_branch: master
-  workflow: deploy

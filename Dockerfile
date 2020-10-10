@@ -32,4 +32,4 @@ USER vapor:vapor
 EXPOSE 3000
 
 ENTRYPOINT ["./Run"]
-CMD ["serve", "--env", "production", "--port", "3000"]
+CMD ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "3000"]
