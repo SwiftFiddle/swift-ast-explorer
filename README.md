@@ -1,3 +1,14 @@
+<p>
+<img src="https://github.com/kishikawakatsumi/swift-ast-explorer/workflows/CI/badge.svg">
+<img src="https://img.shields.io/badge/os-macOS/Linux-green.svg?style=flat" alt="macOS/Linux">
+<a href="http://swift.org">
+<img src="https://img.shields.io/badge/swift-5.3-orange.svg?style=flat" alt="Swift 5.3 Compatible">
+</a>
+<a href="https://github.com/kishikawakatsumi/swift-ast-explorer/blob/master/LICENSE">
+<img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
+</a>
+</p>
+
 # Swift AST Explorer
 
 AST visualizer for Swift source code. https://swift-ast-explorer.com/
