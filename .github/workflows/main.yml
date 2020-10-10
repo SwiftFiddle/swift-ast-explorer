@@ -13,14 +13,14 @@ jobs:
           set -ex
           export NSUnbufferedIO=YES
 
-          docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_ACCESS_TOKEN
+          docker login --username ${{ secrets.DOCKER_HUB_USERNAME }} --password ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
           docker build --rm --no-cache --tag kishikawakatsumi/swift-ast-explorer .
           docker push kishikawakatsumi/swift-ast-explorer
 
-          echo "${SSH_PRIVATE_KEY}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
-          ssh -t "$SSH_LOGIN_USER@swift-ast-explorer.com" <<EOC
+          ssh -t "${{ secrets.SSH_LOGIN_USER }}@swift-ast-explorer.com" <<EOC
           set -ex
           hostname
 
