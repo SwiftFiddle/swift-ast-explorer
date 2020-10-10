@@ -33,4 +33,5 @@ jobs:
           eval \$dc up --detach
 
           docker image prune --force
+          exit 0
           EOC
