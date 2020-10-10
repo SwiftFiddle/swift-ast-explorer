@@ -1,0 +1,35 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a multi-line script
+        run: |
+          set -ex
+          export NSUnbufferedIO=YES
+
+          docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_ACCESS_TOKEN
+          docker build --rm --no-cache --tag kishikawakatsumi/swift-ast-explorer .
+          docker push kishikawakatsumi/swift-ast-explorer
+
+          echo "${SSH_PRIVATE_KEY}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          ssh -t "$SSH_LOGIN_USER@swift-ast-explorer.com" <<EOC
+          set -ex
+          hostname
+
+          cd "\$HOME/app"
+          git pull --rebase origin master
+
+          dc='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "\$PWD:\$PWD" -w="\$PWD" docker/compose:1.27.4'
+          eval \$dc pull
+          eval \$dc up --detach
+
+          docker image prune --force
+          EOC
