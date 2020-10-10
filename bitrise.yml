@@ -33,7 +33,7 @@ workflows:
             chmod 600 ~/.ssh/id_rsa
 
 
-            ssh -t -t kishikawakatsumi@34.82.92.235 <<EOC
+            ssh -t -t "$SSH_LOGIN_USER@$SSH_HOST" <<EOC
 
             set -ex
 
