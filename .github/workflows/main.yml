@@ -13,7 +13,7 @@ jobs:
           set -ex
           export NSUnbufferedIO=YES
 
-          docker login --username $DOCKER_HUB_USERNAME --password $DOCKER_HUB_ACCESS_TOKEN
+          docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_ACCESS_TOKEN
           docker build --rm --no-cache --tag kishikawakatsumi/swift-ast-explorer .
           docker push kishikawakatsumi/swift-ast-explorer
 
