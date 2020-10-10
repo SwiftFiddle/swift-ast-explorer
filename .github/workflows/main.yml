@@ -17,6 +17,7 @@ jobs:
           docker build --rm --no-cache --tag kishikawakatsumi/swift-ast-explorer .
           docker push kishikawakatsumi/swift-ast-explorer
 
+          mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
