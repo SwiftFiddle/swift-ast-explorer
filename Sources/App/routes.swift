@@ -1,7 +1,5 @@
 import Vapor
 
-let swiftVersion = Environment.get("SWIFT_VERSION") ?? ""
-
 func routes(_ app: Application) throws {
     app.get { req in
         req.view.render("index", [
@@ -81,6 +79,8 @@ func routes(_ app: Application) throws {
 struct RequestParameter: Decodable {
     let code: String
 }
+
+let swiftVersion = Environment.get("SWIFT_VERSION") ?? ""
 
 let defaultSampleCode = #"""
 import Foundation

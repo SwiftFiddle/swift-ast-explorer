@@ -9,11 +9,11 @@ services:
     environment:
       LOG_LEVEL: ${LOG_LEVEL:-info}
       VIRTUAL_HOST: swift-ast-explorer.com
-      VIRTUAL_PORT: 3000
+      VIRTUAL_PORT: 8080
       LETSENCRYPT_HOST: swift-ast-explorer.com
       LETSENCRYPT_EMAIL: kishikawakatsumi@mac.com
     ports:
-      - 3000:3000
+      - 8080:8080
     command:
       [
         "serve",
@@ -22,7 +22,7 @@ services:
         "--hostname",
         "0.0.0.0",
         "--port",
-        "3000",
+        "8080",
       ]
     network_mode: bridge
     restart: always

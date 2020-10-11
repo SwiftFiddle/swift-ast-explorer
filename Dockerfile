@@ -29,7 +29,7 @@ WORKDIR /app
 COPY --from=build --chown=vapor:vapor /staging /app
 
 USER vapor:vapor
-EXPOSE 3000
+EXPOSE 8080
 
 ENTRYPOINT ["./Run"]
-CMD ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "3000"]
+CMD ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "8080"]
