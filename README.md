@@ -35,3 +35,21 @@ AST visualizer for Swift source code. https://swift-ast-explorer.com/
 ```shell
 SWIFT_VERSION=`swift --version` swift run
 ```
+
+Open `http://0.0.0.0:3000`
+
+## Run using Docker
+
+### Build image
+
+```shell
+docker build --rm --tag kishikawakatsumi/swift-ast-explorer .
+```
+
+### Run the container
+
+```shell
+docker run --rm --publish 3000:3000 kishikawakatsumi/swift-ast-explorer
+```
+
+Open `http://0.0.0.0:3000`

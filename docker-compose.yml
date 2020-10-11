@@ -13,7 +13,7 @@ services:
       LETSENCRYPT_HOST: swift-ast-explorer.com
       LETSENCRYPT_EMAIL: kishikawakatsumi@mac.com
     ports:
-      - "3000:3000"
+      - 3000:3000
     command:
       [
         "serve",
