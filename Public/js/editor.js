@@ -22,6 +22,7 @@ editor.renderer.setOptions({
   showPrintMargin: false,
 });
 editor.container.style.lineHeight = 1.5;
+
 const row = editor.session.getLength() - 1;
 const column = editor.session.getLine(row).length;
 editor.gotoLine(row + 1, column);
