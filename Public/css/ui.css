@@ -25,6 +25,11 @@ body {
   background-color: #F5F5F5;
 }
 
+/* GitHub Icon */
+.fa-github {
+  color: #999999;
+}
+
 /* lined tabs */
 
 .lined .nav-link {

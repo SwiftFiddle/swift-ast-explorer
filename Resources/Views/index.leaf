@@ -172,8 +172,7 @@
     <div class="container">
       <div class="row">
         <div class="mx-auto">
-          <a href="https://github.com/kishikawakatsumi/swift-ast-explorer" style="color: \#999999;"><i
-              class="fa fa-github fa-2x"></i></a>
+          <a href="https://github.com/kishikawakatsumi/swift-ast-explorer"><i class="fa fa-github fa-2x"></i></a>
         </div>
       </div>
     </div>

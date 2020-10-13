@@ -10,7 +10,7 @@ editor.$blockScrolling = Infinity;
 editor.setOptions({
   useSoftTabs: true,
   autoScrollEditorIntoView: true,
-  fontFamily: "menlo",
+  fontFamily: "Menlo,sans-serif,monospace",
   fontSize: "11pt",
   showInvisibles: false,
   enableBasicAutocompletion: true,
