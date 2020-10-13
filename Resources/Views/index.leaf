@@ -48,12 +48,12 @@
   <title>Swift AST Explorer</title>
 </head>
 
-<body style="background-color: \#F5F5F5; color: \#333333;">
+<body>
   <div class="container-fluid" style="margin-top: 10px;">
     <div class="row">
       <div class="col" style="margin-bottom: 0;">
-        <h4><a href="/" class="text-reset text-decoration-none"><i class="fab fa-swift fa-lg"
-              style="color: \#F05138;"></i> Swift AST Explorer</a></h4>
+        <h4><a href="/" class="text-reset text-decoration-none"><i class="fab fa-swift fa-lg"></i> Swift AST
+            Explorer</a></h4>
       </div>
       <div class="col-md-6" style="margin-top: -4px;">
         <div class="p-1">
