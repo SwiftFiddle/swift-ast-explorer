@@ -33,5 +33,12 @@ jobs:
           eval \$dc up --detach
 
           docker image prune --force
+
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "X-Auth-Email: ${{ secrets.CLOUDFLARE_EMAIL }}" \
+            -H "X-Auth-Key: ${{ secrets.CLOUDFLARE_API_KEY }}" \
+            -H "Content-Type:application/json" \
+            --data '{"purge_everything":true}'
+
           exit 0
           EOC
