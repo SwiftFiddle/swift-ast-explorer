@@ -16,6 +16,7 @@ editor.setOptions({
   enableBasicAutocompletion: true,
   enableSnippets: true,
   enableLiveAutocompletion: true,
+  scrollPastEnd: 0.5, // Overscroll
 });
 editor.renderer.setOptions({
   showFoldWidgets: false,
