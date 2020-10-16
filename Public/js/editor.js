@@ -17,12 +17,12 @@ editor.setOptions({
   enableSnippets: true,
   enableLiveAutocompletion: true,
   scrollPastEnd: 0.5, // Overscroll
+  wrap: "free",
 });
 editor.renderer.setOptions({
   showFoldWidgets: false,
   showPrintMargin: false,
 });
-editor.container.style.lineHeight = 1.5;
 
 const row = editor.session.getLength() - 1;
 const column = editor.session.getLine(row).length;
