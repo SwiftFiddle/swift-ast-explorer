@@ -13,11 +13,13 @@ editor.setOptions({
   fontFamily: "Menlo,sans-serif,monospace",
   fontSize: "11pt",
   showInvisibles: false,
+  enableAutoIndent: true,
   enableBasicAutocompletion: true,
   enableSnippets: true,
   enableLiveAutocompletion: true,
   scrollPastEnd: 0.5, // Overscroll
   wrap: "free",
+  displayIndentGuides: true,
 });
 editor.renderer.setOptions({
   showFoldWidgets: false,
