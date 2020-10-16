@@ -161,7 +161,7 @@
     <div class="row">
       <div class="col-md-3 mx-auto" style="margin-top: 20px; margin-bottom: 20px;">
         <button id="run-button" type="button" class="btn btn-secondary btn-block btn-lg">
-          <span id="run-button-text">Update <i class="fas fa-chevron-right align-baseline"></i></span> <span
+          <span id="run-button-text">Update <i class="fas fa-chevron-right align-baseline"></i></span><span
             id="run-button-spinner" class="spinner-border spinner-border-sm"
             style="width: 1.5rem; height: 1.5rem; display: none;" role="status" aria-hidden="true"></span></button>
       </div>
