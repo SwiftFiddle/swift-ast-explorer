@@ -215,7 +215,7 @@
     integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg=="
     crossorigin="anonymous"></script>
 
-  <script src="js/editor.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

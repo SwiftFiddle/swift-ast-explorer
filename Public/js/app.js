@@ -28,7 +28,6 @@ editor.renderer.setOptions({
 
 const row = editor.session.getLength() - 1;
 const column = editor.session.getLine(row).length;
-editor.gotoLine(row + 1, column);
 
 const results = $("#results");
 let tree = null;
