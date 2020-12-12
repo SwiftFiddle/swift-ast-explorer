@@ -92,7 +92,7 @@ jobs:
             --header "Authorization: Bearer $GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN" \
             --header 'Accept: application/json' \
             --compressed \
-            | jq  -r '.[].networkInterfaces[].accessConfigs[].natIP')
+            | jq  -r '.[].networkInterfaces[0].accessConfigs[0].natIP')
 
 
           docker login --username ${{ secrets.DOCKER_HUB_USERNAME }} --password ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
