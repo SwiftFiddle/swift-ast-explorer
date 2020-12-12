@@ -87,7 +87,7 @@ jobs:
             --compressed \
             --data "$data"
 
-          ip_address=$(curl --silent --fail -X GET \
+          ip_address=$(curl --silent -X GET \
             "https://compute.googleapis.com/compute/v1/projects/${{ secrets.GOOGLE_CLOUD_PLATFORM_PROJECT_ID }}/zones/$VM_ZONE/instances/$VM_NAME?key=${{ secrets.GOOGLE_CLOUD_PLATFORM_API_KEY }}" \
             --header "Authorization: Bearer $GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN" \
             --header 'Accept: application/json' \
