@@ -1,0 +1,43 @@
+name: Run
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run
+        run: |
+          set -ex
+
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          TERM=xterm ssh -t -t -o 'StrictHostKeyChecking no' "${{ secrets.SSH_LOGIN_USER }}@${{ secrets.SSH_HOST }}" <<EOS
+          set -ex
+
+          [ -d app ] || git clone https://github.com/kishikawakatsumi/swift-ast-explorer.git app
+
+          cd app
+          git pull --rebase origin master
+
+          docker_compose='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "\$PWD:\$PWD" -w="\$PWD" docker/compose:latest'
+          eval \$docker_compose pull
+          eval \$docker_compose up --detach
+
+          docker image prune --force
+
+          exit 0
+          EOS
+
+      - name: Purge Cache
+        run: |
+          set -ex
+
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "X-Auth-Email: ${{ secrets.CLOUDFLARE_EMAIL }}" \
+            -H "X-Auth-Key: ${{ secrets.CLOUDFLARE_API_KEY }}" \
+            -H "Content-Type:application/json" \
+            --data '{"purge_everything":true}'
