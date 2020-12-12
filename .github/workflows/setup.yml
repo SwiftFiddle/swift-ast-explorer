@@ -10,7 +10,7 @@ jobs:
         run: |
           set -ex
 
-          export GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN=$(curl --silent -X POST \
+          GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN=$(curl --silent -X POST \
             'https://www.googleapis.com/oauth2/v4/token' \
             --data "refresh_token=${{ secrets.GOOGLE_CLOUD_PLATFORM_REFRESH_TOKEN }}" \
             --data "client_id=${{ secrets.GOOGLE_CLOUD_PLATFORM_CLIENT_ID }}" \
@@ -18,11 +18,11 @@ jobs:
             --data "grant_type=refresh_token" \
             | jq '.access_token' -r)
 
-          export VM_NAME=swift-ast-explorer-$(date +%Y%m%d-%H%M%S)
-          export VM_ZONE=us-west1-b
-          export VM_MACHINE_TYPE=g1-small
-          export VM_DISK_SIZE=30
-          export VM_SWAP_SIZE=2G
+          VM_NAME=swift-ast-explorer-$(date +%Y%m%d-%H%M%S)
+          VM_ZONE=us-west1-b
+          VM_MACHINE_TYPE=g1-small
+          VM_DISK_SIZE=30
+          VM_SWAP_SIZE=2G
 
           data=$(cat <<EOF
           {
@@ -79,10 +79,17 @@ jobs:
           EOF
           )
 
-          curl --silent --fail -X POST \
+          http_code=$(curl --silent --fail -X POST \
             'https://compute.googleapis.com/compute/v1/projects/${{ secrets.GOOGLE_CLOUD_PLATFORM_PROJECT_ID }}/zones/us-central1-a/instances?key=${{ secrets.GOOGLE_CLOUD_PLATFORM_API_KEY }}' \
+            -w '%{http_code}' \
             --header "Authorization: Bearer $GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN" \
             --header 'Accept: application/json' \
             --header 'Content-Type: application/json' \
             --compressed \
-            --data "$data"
+            --data "$data")
+
+          if [[ $http_code -eq 200 ]]; then
+            exit 0
+          fi
+
+          exit $http_code
