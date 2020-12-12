@@ -100,7 +100,7 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
-          TERM=xterm ssh -t -t -o 'StrictHostKeyChecking no' "${{ secrets.SSH_LOGIN_USER }}@$ip_address" <<EOS
+          TERM=xterm ssh -t -t -o 'StrictHostKeyChecking no' "${{ secrets.SSH_LOGIN_USER }}@$ip_address" <<EOF
           set -ex
 
           [ -d app ] || git clone https://github.com/kishikawakatsumi/swift-ast-explorer.git app
@@ -113,4 +113,4 @@ jobs:
           docker image prune --force
 
           exit 0
-          EOS
+          EOF
