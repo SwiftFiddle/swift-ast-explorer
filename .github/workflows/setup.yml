@@ -87,7 +87,7 @@ jobs:
             --compressed \
             --data "$data"
 
-          sleep 60s
+          sleep 10s
 
           ip_address=$(curl --silent --fail -X GET \
             "https://compute.googleapis.com/compute/v1/projects/${{ secrets.GOOGLE_CLOUD_PLATFORM_PROJECT_ID }}/zones/$VM_ZONE/instances/$VM_NAME?key=${{ secrets.GOOGLE_CLOUD_PLATFORM_API_KEY }}" \
@@ -95,10 +95,6 @@ jobs:
             --header 'Accept: application/json' \
             --compressed \
             | jq  -r '.networkInterfaces[].accessConfigs[].natIP')
-
-          docker login --username ${{ secrets.DOCKER_HUB_USERNAME }} --password ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-          docker build --rm --no-cache --tag kishikawakatsumi/swift-ast-explorer .
-          docker push kishikawakatsumi/swift-ast-explorer
 
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
