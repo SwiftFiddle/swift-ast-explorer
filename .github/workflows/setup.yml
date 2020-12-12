@@ -24,13 +24,13 @@ jobs:
           export VM_DISK_SIZE=30
           export VM_SWAP_SIZE=2G
 
-          curl --silent -X POST \
+          curl --silent --fail -X POST \
             'https://compute.googleapis.com/compute/v1/projects/${{ secrets.GOOGLE_CLOUD_PLATFORM_PROJECT_ID }}/zones/us-central1-a/instances?key=${{ secrets.GOOGLE_CLOUD_PLATFORM_API_KEY }}' \
             --header "Authorization: Bearer $GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN" \
             --header 'Accept: application/json' \
             --header 'Content-Type: application/json' \
             --compressed \
-            --data @- <<EOS
+            --data @- << EOF
             {
               "name": "$VM_NAME",
               "machineType": "projects/${{ secrets.GOOGLE_CLOUD_PLATFORM_PROJECT_ID }}/zones/$VM_ZONE/machineTypes/$VM_MACHINE_TYPE",
@@ -82,4 +82,4 @@ jobs:
                 ]
               }
             }
-            EOS
+            EOF
