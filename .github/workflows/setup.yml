@@ -81,7 +81,6 @@ jobs:
 
           curl --silent --fail -X POST \
             "https://compute.googleapis.com/compute/v1/projects/${{ secrets.GOOGLE_CLOUD_PLATFORM_PROJECT_ID }}/zones/$VM_ZONE/instances?key=${{ secrets.GOOGLE_CLOUD_PLATFORM_API_KEY }}" \
-            -w '%{http_code}' \
             --header "Authorization: Bearer $GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN" \
             --header 'Accept: application/json' \
             --header 'Content-Type: application/json' \
