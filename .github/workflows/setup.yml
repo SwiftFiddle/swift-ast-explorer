@@ -1,0 +1,85 @@
+name: Setup
+on: workflow_dispatch
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup
+        run: |
+          set -ex
+
+          GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN=$(curl  --request POST \
+            'https://www.googleapis.com/oauth2/v4/token' \
+            --data "refresh_token=${{ secrets.GOOGLE_CLOUD_PLATFORM_REFRESH_TOKEN }}" \
+            --data "client_id=${{ secrets.GOOGLE_CLOUD_PLATFORM_CLIENT_ID }}" \
+            --data "client_secret=${{ secrets.GOOGLE_CLOUD_PLATFORM_CLIENT_SECRET }}" \
+            --data "grant_type=refresh_token" \
+            | jq '.access_token' -r)
+
+          VM_NAME=swift-ast-explorer-$(date +%Y%m%d-%H%M%S)
+          VM_ZONE=us-west1-b
+          VM_MACHINE_TYPE=g1-small
+          VM_DISK_SIZE=30
+          VM_SWAP_SIZE=2G
+
+          curl --request POST \
+            'https://compute.googleapis.com/compute/v1/projects/${{ secrets.GOOGLE_CLOUD_PLATFORM_PROJECT_ID }}/zones/us-central1-a/instances?key=${{ secrets.GOOGLE_CLOUD_PLATFORM_API_KEY }}' \
+            --header "Authorization: Bearer $GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN" \
+            --header 'Accept: application/json' \
+            --header 'Content-Type: application/json' \
+            --compressed \
+            --data @- <<EOS
+            {
+              "name": "$VM_NAME",
+              "machineType": "projects/${{ secrets.GOOGLE_CLOUD_PLATFORM_PROJECT_ID }}/zones/$VM_ZONE/machineTypes/$VM_MACHINE_TYPE",
+              "disks": [
+                {
+                  "diskSizeGb": $VM_DISK_SIZE,
+                  "type": "PERSISTENT",
+                  "autoDelete": true,
+                  "boot": true,
+                  "initializeParams": {
+                    "sourceImage": "projects/cos-cloud/global/images/family/cos-stable"
+                  }
+                }
+              ],
+              "networkInterfaces": [
+                {
+                  "accessConfigs": [
+                    {
+                      "type": "ONE_TO_ONE_NAT",
+                      "name": "External NAT"
+                    }
+                  ],
+                  "network": "global/networks/default"
+                }
+              ],
+              "tags": {
+                "items": [
+                  "http-server",
+                  "https-server"
+                ]
+              },
+              "displayDevice": {
+                "enableDisplay": false
+              },
+              "metadata": {
+                "items": [
+                  {
+                    "key": "startup-script",
+                    "value": "sysctl vm.disk_based_swap=1\n\nfallocate -l $VM_SWAP_SIZE /var/swapfile\nchmod 600 /var/swapfile\nmkswap /var/swapfile\nswapon /var/swapfile\necho \"/var/swapfile none swap sw,nofail 0 0\" >> /etc/fstab"
+                  },
+                  {
+                    "key": "block-project-ssh-keys",
+                    "value": "true"
+                  },
+                  {
+                    "key": "ssh-keys",
+                    "value": "${{ secrets.SSH_PUBLIC_KEY }}"
+                  }
+                ]
+              }
+            }
+            EOS
