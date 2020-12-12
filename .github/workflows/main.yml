@@ -24,7 +24,9 @@ jobs:
           TERM=xterm ssh -t -t -o 'StrictHostKeyChecking no' "${{ secrets.SSH_LOGIN_USER }}@${{ secrets.SSH_HOST }}" <<EOS
           set -ex
 
-          cd "\$HOME/app"
+          [ -d app ] || git clone https://github.com/kishikawakatsumi/swift-ast-explorer.git app
+
+          cd app
           git pull --rebase origin master
 
           docker_compose='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "\$PWD:\$PWD" -w="\$PWD" docker/compose:latest'
