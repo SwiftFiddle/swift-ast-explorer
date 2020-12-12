@@ -10,7 +10,7 @@ jobs:
         run: |
           set -ex
 
-          GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN=$(curl --silent -X POST \
+          GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN=$(curl --silent --fail -X POST \
             'https://www.googleapis.com/oauth2/v4/token' \
             --data "refresh_token=${{ secrets.GOOGLE_CLOUD_PLATFORM_REFRESH_TOKEN }}" \
             --data "client_id=${{ secrets.GOOGLE_CLOUD_PLATFORM_CLIENT_ID }}" \
@@ -79,17 +79,11 @@ jobs:
           EOF
           )
 
-          http_code=$(curl --silent -X POST \
+          curl --silent --fail -X POST \
             "https://compute.googleapis.com/compute/v1/projects/${{ secrets.GOOGLE_CLOUD_PLATFORM_PROJECT_ID }}/zones/$VM_ZONE/instances?key=${{ secrets.GOOGLE_CLOUD_PLATFORM_API_KEY }}" \
             -w '%{http_code}' \
             --header "Authorization: Bearer $GOOGLE_CLOUD_PLATFORM_ACCESS_TOKEN" \
             --header 'Accept: application/json' \
             --header 'Content-Type: application/json' \
             --compressed \
-            --data "$data")
-
-          if [[ $http_code -eq 200 ]]; then
-            exit 0
-          fi
-
-          exit $http_code
+            --data "$data"
