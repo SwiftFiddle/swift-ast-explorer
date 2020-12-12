@@ -1,7 +1,8 @@
-name: CI
+name: Deploy
 on:
   push:
     branches: [master]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -20,21 +21,20 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
 
-          TERM=xterm ssh -t -t -o 'StrictHostKeyChecking no' "${{ secrets.SSH_LOGIN_USER }}@${{ secrets.SSH_HOST }}" <<EOC
+          TERM=xterm ssh -t -t -o 'StrictHostKeyChecking no' "${{ secrets.SSH_LOGIN_USER }}@${{ secrets.SSH_HOST }}" <<EOS
           set -ex
-          hostname
 
           cd "\$HOME/app"
           git pull --rebase origin master
 
-          dc='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "\$PWD:\$PWD" -w="\$PWD" docker/compose:latest'
-          eval \$dc pull
-          eval \$dc up --detach
+          docker-compose='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "\$PWD:\$PWD" -w="\$PWD" docker/compose:latest'
+          eval \$docker-compose pull
+          eval \$docker-compose up --detach
 
           docker image prune --force
 
           exit 0
-          EOC
+          EOS
 
       - name: Purge Cache
         run: |
