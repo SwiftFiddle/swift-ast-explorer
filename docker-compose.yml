@@ -32,6 +32,8 @@ services:
     container_name: nginx-proxy
     labels:
       - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy=jwilder/nginx-proxy
+    environment:
+      DEFAULT_EMAIL: kishikawakatsumi@mac.com
     ports:
       - 80:80
       - 443:443
@@ -52,6 +54,7 @@ services:
       - proxy:/etc/nginx/vhost.d
       - proxy:/usr/share/nginx/html
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /etc/acme.sh
       - ./certs:/etc/nginx/certs:rw
     network_mode: bridge
     restart: always
