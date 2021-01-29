@@ -47,6 +47,15 @@
         }
       },
       {
+        "package": "multipart-kit",
+        "repositoryURL": "https://github.com/vapor/multipart-kit.git",
+        "state": {
+          "branch": null,
+          "revision": "73706f1883f2ba950d41f18aec7e3a53766d4a6d",
+          "version": "4.0.0"
+        }
+      },
+      {
         "package": "routing-kit",
         "repositoryURL": "https://github.com/vapor/routing-kit.git",
         "state": {
@@ -150,8 +159,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "53d15b27ad59b4c91f6ea5fa401b891bd998e202",
-          "version": "4.37.1"
+          "revision": "1a1bd69eab970190d4b4ded7c3553221b8abf0f3",
+          "version": "4.39.1"
         }
       },
       {
