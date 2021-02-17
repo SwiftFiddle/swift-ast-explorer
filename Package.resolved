@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/vapor/leaf-kit.git",
         "state": {
           "branch": null,
-          "revision": "0f0866e0709c685262dc4b6e726f2d424e37b12c",
-          "version": "1.0.0"
+          "revision": "a9b2f07574568e459496e4d3069ca59828e8e7e5",
+          "version": "1.1.0"
         }
       },
       {
@@ -78,8 +78,8 @@
         "repositoryURL": "https://github.com/apple/swift-crypto.git",
         "state": {
           "branch": null,
-          "revision": "8f4bfa5bc1951440c15710e9e893721aa4b2765c",
-          "version": "1.1.3"
+          "revision": "296d3308b4b2fa355cfe0de4ca411bf7a1cd8cf8",
+          "version": "1.1.4"
         }
       },
       {
@@ -159,8 +159,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "1a1bd69eab970190d4b4ded7c3553221b8abf0f3",
-          "version": "4.39.1"
+          "revision": "e3fe4fdae3aea4c5638bddbea9d038f8d13792ca",
+          "version": "4.40.0"
         }
       },
       {
