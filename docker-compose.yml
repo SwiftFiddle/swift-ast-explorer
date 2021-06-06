@@ -43,21 +43,21 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     restart: always
 
-    acme-companion:
-      image: nginxproxy/acme-companion
-      container_name: nginx-proxy-acme
-      depends_on:
-        - nginx-proxy
-      volumes:
-        - vhost:/etc/nginx/vhost.d
-        - html:/usr/share/nginx/html
-        - dhparam:/etc/nginx/dhparam:ro
-        - certs:/etc/nginx/certs
-        - acme:/etc/acme.sh
-        - /var/run/docker.sock:/var/run/docker.sock:ro
-      environment:
-        - NGINX_PROXY_CONTAINER=nginx-proxy
-      restart: always
+  acme-companion:
+    image: nginxproxy/acme-companion
+    container_name: nginx-proxy-acme
+    depends_on:
+      - nginx-proxy
+    volumes:
+      - vhost:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - dhparam:/etc/nginx/dhparam:ro
+      - certs:/etc/nginx/certs
+      - acme:/etc/acme.sh
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+    restart: always
 
 volumes:
   conf:
