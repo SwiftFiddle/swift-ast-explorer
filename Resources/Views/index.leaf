@@ -90,7 +90,7 @@
         <pre id="editor">#(defaultSampleCode)</pre>
       </div>
 
-      <div class="col-md-6" style="height: 750px; overflow: scroll; font-size: 11pt;">
+      <div class="col-md-6" style="height: 70vh; overflow: scroll; font-size: 11pt;">
         <div class="tab-content" style="background: \#FAFAFA;">
           <div id="tab1" class="tab-pane active">
             <div id="structure" style="font-family: 'Menlo', sans-serif, monospace; font-size: 11pt;"></div>

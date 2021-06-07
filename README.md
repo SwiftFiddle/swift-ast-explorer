@@ -13,8 +13,7 @@
 
 AST visualizer for Swift source code. https://swift-ast-explorer.com/
 
-<img width="1024" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95597813-14766480-0a8a-11eb-8116-56dbb5a55020.png">
-
+<a href="https://swift-ast-explorer.com/"><img width="1024" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95597813-14766480-0a8a-11eb-8116-56dbb5a55020.png"></a>
 
 ## Features
 
