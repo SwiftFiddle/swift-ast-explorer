@@ -72,10 +72,6 @@ jobs:
                 {
                   "key": "ssh-keys",
                   "value": "${{ secrets.SSH_LOGIN_USER }}:${{ secrets.SSH_PUBLIC_KEY }}"
-                },
-                {
-                  "key": "google-monitoring-enabled",
-                  "value": "true"
                 }
               ]
             }
