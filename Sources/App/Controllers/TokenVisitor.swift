@@ -1,7 +1,7 @@
 import Foundation
 import SwiftSyntax
 
-class TokenVisitor: SyntaxRewriter {
+final class TokenVisitor: SyntaxRewriter {
     var list = [String]()
 
     var tree = [Node]()

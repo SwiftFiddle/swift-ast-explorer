@@ -1,6 +1,6 @@
 import Foundation
 
-class Node: Encodable {
+final class Node: Encodable {
     var text: String
     var children = [Node]()
     weak var parent: Node?
