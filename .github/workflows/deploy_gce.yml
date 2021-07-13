@@ -1,4 +1,4 @@
-name: Deploy
+name: Build and Deploy to GCE
 on:
   push:
     branches: [master]
