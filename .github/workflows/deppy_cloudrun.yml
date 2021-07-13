@@ -7,7 +7,7 @@ on:
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT }}
   GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-  SERVICE_NAME: swiftfiddle-lsp
+  SERVICE_NAME: swift-ast-explorer
   DEPLOY_REGION: us-central1
   GCR_HOSTNAME: us.gcr.io
 
