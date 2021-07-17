@@ -52,3 +52,11 @@ docker run --rm --publish 8080:8080 kishikawakatsumi/swift-ast-explorer
 ```
 
 Open `http://0.0.0.0:8080`
+
+## Run using Docker Compose
+
+```shell
+docker compose up
+```
+
+Open `http://0.0.0.0:8080`

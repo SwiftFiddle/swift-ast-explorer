@@ -1,17 +1,13 @@
 version: "3.7"
 
 services:
+services:
   app:
-    image: kishikawakatsumi/swift-ast-explorer:latest
+    build:
+      context: .
     container_name: swift-ast-explorer
-    depends_on:
-      - nginx-proxy
     environment:
       LOG_LEVEL: ${LOG_LEVEL:-info}
-      VIRTUAL_HOST: swift-ast-explorer.com
-      VIRTUAL_PORT: "8080"
-      LETSENCRYPT_HOST: swift-ast-explorer.com
-      LETSENCRYPT_EMAIL: kishikawakatsumi@mac.com
     ports:
       - 8080:8080
     command:
@@ -24,45 +20,3 @@ services:
         "--port",
         "8080",
       ]
-    restart: always
-
-  nginx-proxy:
-    image: nginxproxy/nginx-proxy
-    container_name: nginx-proxy
-    environment:
-      DEFAULT_EMAIL: kishikawakatsumi@mac.com
-    ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - conf:/etc/nginx/conf.d
-      - vhost:/etc/nginx/vhost.d
-      - html:/usr/share/nginx/html
-      - dhparam:/etc/nginx/dhparam
-      - certs:/etc/nginx/certs:ro
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-    restart: always
-
-  acme-companion:
-    image: nginxproxy/acme-companion
-    container_name: nginx-proxy-acme
-    depends_on:
-      - nginx-proxy
-    volumes:
-      - vhost:/etc/nginx/vhost.d
-      - html:/usr/share/nginx/html
-      - dhparam:/etc/nginx/dhparam:ro
-      - certs:/etc/nginx/certs
-      - acme:/etc/acme.sh
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    environment:
-      - NGINX_PROXY_CONTAINER=nginx-proxy
-    restart: always
-
-volumes:
-  conf:
-  vhost:
-  html:
-  dhparam:
-  certs:
-  acme:
