@@ -32,7 +32,7 @@ final class CommonErrorMiddleware: Middleware {
                 503: "We&#39;ve got some trouble with our backend upstream cluster.<br />Our service team has been dispatched to bring it back online.",
             ]
 
-            if request.headers.accept.contains(where: { $0.mediaType == .json }) {
+            if request.headers[.accept].map({ $0.lowercased() }).contains("application/json") {
                 return request.eventLoop.makeSucceededFuture(["error": status.code])
                     .encodeResponse(status: status, headers: headers, for: request)
             } else {
