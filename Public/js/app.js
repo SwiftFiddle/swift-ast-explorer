@@ -1,13 +1,16 @@
 "use strict";
 
+import { SwiftFormat } from "./swift_format.js";
+
 ace.require("ace/ext/language_tools");
 const Range = ace.require("ace/range").Range;
 
-const editor = ace.edit("editor");
+const editor = ace.edit("editor-container");
 editor.setTheme("ace/theme/xcode");
 editor.session.setMode("ace/mode/swift");
 editor.$blockScrolling = Infinity;
 editor.setOptions({
+  tabSize: 2,
   useSoftTabs: true,
   autoScrollEditorIntoView: true,
   fontFamily: "Menlo,sans-serif,monospace",
@@ -26,13 +29,12 @@ editor.renderer.setOptions({
   showPrintMargin: false,
 });
 
-const row = editor.session.getLength() - 1;
-const column = editor.session.getLine(row).length;
-
 const results = $("#results");
 let tree = null;
 
-update(editor);
+setTimeout(() => {
+  update(editor);
+}, 400);
 
 const updateOnTextChange = $.debounce(400, (editor) => {
   update(editor);
@@ -41,7 +43,7 @@ editor.on("change", (change, editor) => {
   updateOnTextChange(editor);
 });
 
-$("#run-button").click(function (e) {
+$("#run-button").on("click", (e) => {
   e.preventDefault();
   update(editor);
 });
@@ -281,13 +283,13 @@ function unescapeHTML(str) {
 
 function showLoading() {
   $("#run-button").addClass("disabled");
-  $("#run-button-text").hide();
+  $("#run-button-icon").hide();
   $("#run-button-spinner").show();
 }
 
 function hideLoading() {
   $("#run-button").removeClass("disabled");
-  $("#run-button-text").show();
+  $("#run-button-icon").show();
   $("#run-button-spinner").hide();
 }
 
@@ -298,7 +300,7 @@ function handleFileSelect(event) {
   const files = event.dataTransfer.files;
   const reader = new FileReader();
   reader.onload = (event) => {
-    const editor = ace.edit("editor");
+    const editor = ace.edit("editor-container");
     editor.setValue(event.target.result);
     editor.clearSelection();
   };
@@ -311,6 +313,24 @@ function handleDragOver(event) {
   event.dataTransfer.dropEffect = "copy";
 }
 
-const dropZone = document.getElementById("editor");
+const dropZone = document.getElementById("editor-container");
 dropZone.addEventListener("dragover", handleDragOver, false);
 dropZone.addEventListener("drop", handleFileSelect, false);
+
+const formatterService = new SwiftFormat("wss://formatter.swiftfiddle.com");
+formatterService.onresponse = (response) => {
+  editor.setValue(response);
+  editor.clearSelection();
+};
+
+[].slice
+  .call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  .map((trigger) => {
+    return new bootstrap.Tooltip(trigger);
+  });
+
+$("#format-button").removeClass("disabled");
+$("#format-button").on("click", (e) => {
+  e.preventDefault();
+  formatterService.format(editor.getValue());
+});

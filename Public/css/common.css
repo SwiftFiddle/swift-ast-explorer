@@ -1,0 +1,67 @@
+.btn.rounded-circle {
+  width: 2rem;
+  height: 2rem;
+}
+
+#editor {
+  line-height: 1.5;
+}
+
+.editor-marker {
+  position: absolute;
+  border: 1px solid rgb(81, 101, 255);
+  background-color: rgba(81, 101, 255, 0.25);
+}
+
+#results {
+  font-family: "Menlo", sans-serif, monospace;
+  font-size: 11pt;
+}
+
+.gj-button-md,
+ul.gj-list-md li {
+  font-family: "Menlo", sans-serif, monospace;
+  font-size: 11pt;
+}
+
+.keyword,
+.atSign {
+  color: #aa0d91;
+}
+
+.importKeyword {
+  color: #1c00cf;
+}
+
+.stringLiteral {
+  color: #c41a16;
+}
+
+.lineComment,
+.blockComment,
+.docLineComment,
+.docBlockComment {
+  color: #006a00;
+}
+
+.tooltip-title {
+  color: gray;
+}
+
+.lined .nav-link {
+  border: none;
+  color: #868e96;
+  border-bottom: 3px solid transparent;
+}
+
+.lined .nav-link:hover {
+  border: none;
+  color: #0d6efd;
+  border-bottom: 3px solid transparent;
+}
+
+.lined .nav-link.active {
+  background: none;
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
