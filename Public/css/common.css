@@ -65,3 +65,19 @@ ul.gj-list-md li {
   color: #0d6efd;
   border-color: #0d6efd;
 }
+
+#right-pane {
+  height: 90vh;
+  overflow: scroll;
+  font-size: 11pt;
+}
+
+@media (max-width: 767.98px) {
+  #left-pane {
+    height: 40vh;
+  }
+
+  #right-pane {
+    height: 90vh;
+  }
+}

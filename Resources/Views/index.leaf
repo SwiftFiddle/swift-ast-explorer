@@ -95,10 +95,10 @@
     </header>
 
     <main class="row bg-light flex-fill fill d-flex g-0">
-      <div class="col-md-6">
+      <div id="left-pane" class="col-md-6">
         <pre id="editor-container" class="h-100">#(defaultSampleCode)</pre>
       </div>
-      <div class="col-md-6" style="height: 90vh; overflow: scroll; font-size: 11pt;">
+      <div id="right-pane" class="col-md-6">
         <div id="tab-content" class="tab-content">
           <div id="structure-content" class="tab-pane active mx-3 my-1" role="tabpanel" aria-labelledby="structure-tab">
             <div id="structure" role="document" style="font-family: 'Menlo', sans-serif, monospace; font-size: 11pt;">
@@ -173,7 +173,8 @@
               Report
             </dt>
             <dd>
-              <a href="https://github.com/swiftfiddle/swift-ast-explorer/issues/new">github.com/swiftfiddle/swift-ast-explorer
+              <a href="https://github.com/swiftfiddle/swift-ast-explorer/issues/new" target="_blank"
+                rel="nofollow noopener noreferrer">github.com/swiftfiddle/swift-ast-explorer
               </a>
             </dd>
           </dl>
