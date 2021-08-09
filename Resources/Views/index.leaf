@@ -163,7 +163,7 @@
           </dl>
           <ul>
             <li>Drop a file onto the editor</li>
-            <li>Append a GitHub gist ID to the URL<br>(e.g. <code>/swift-ast-explorer.com/<code
+            <li>Append a GitHub gist ID to the URL<br>(e.g. <code>swift-ast-explorer.com/<code
                   style="background-color: #F0F0F0; padding: 2px;">&lt;gist_id_goes_here&gt;</code></code>)</li>
             <li>Or just start typing!</li>
           </ul>
