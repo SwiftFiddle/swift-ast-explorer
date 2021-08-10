@@ -317,9 +317,7 @@ const dropZone = document.getElementById("editor-container");
 dropZone.addEventListener("dragover", handleDragOver, false);
 dropZone.addEventListener("drop", handleFileSelect, false);
 
-const formatterService = new SwiftFormat(
-  "wss://formatter.swiftfiddle.com/api/ws"
-);
+const formatterService = new SwiftFormat("wss://swift-format.com//api/ws");
 formatterService.onresponse = (response) => {
   if (!response) {
     return;
