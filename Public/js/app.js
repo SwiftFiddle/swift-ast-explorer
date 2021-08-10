@@ -317,10 +317,17 @@ const dropZone = document.getElementById("editor-container");
 dropZone.addEventListener("dragover", handleDragOver, false);
 dropZone.addEventListener("drop", handleFileSelect, false);
 
-const formatterService = new SwiftFormat("wss://formatter.swiftfiddle.com");
+const formatterService = new SwiftFormat(
+  "wss://formatter.swiftfiddle.com/api/ws"
+);
 formatterService.onresponse = (response) => {
-  editor.setValue(response);
-  editor.clearSelection();
+  if (!response) {
+    return;
+  }
+  if (response.output) {
+    editor.setValue(response.output);
+    editor.clearSelection();
+  }
 };
 
 [].slice

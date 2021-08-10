@@ -13,8 +13,9 @@ export class SwiftFormat {
     return this.connection.readyState === 1;
   }
 
-  format(source) {
-    this.connection.send(source);
+  format(code) {
+    const encoder = new TextEncoder();
+    this.connection.send(encoder.encode(JSON.stringify({ code: code })));
   }
 
   createConnection(endpoint) {
@@ -27,6 +28,7 @@ export class SwiftFormat {
 
     console.log(`Connecting to ${endpoint}`);
     const connection = new WebSocket(endpoint);
+    connection.bufferType = "arraybuffer";
 
     connection.onopen = () => {
       console.log(`SwiftFormat service connected (${connection.readyState}).`);
@@ -54,13 +56,12 @@ export class SwiftFormat {
     };
 
     connection.onerror = (event) => {
-      console.error(`SwiftFormat service error: ${event.message}`);
+      console.error(`SwiftFormat service error: ${event}`);
       connection.close();
     };
 
     connection.onmessage = (event) => {
-      const output = event.data;
-      this.onresponse(output);
+      this.onresponse(JSON.parse(event.data));
     };
     return connection;
   }
