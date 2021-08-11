@@ -57,10 +57,10 @@
             </button>
             <button type="button" id="format-button"
               class="btn btn-outline-primary btn-sm rounded-circle p-0 ms-1 disabled" data-bs-toggle="tooltip"
-              data-bs-placement="bottom" title="Format" aria-label="Format">
+              data-bs-placement="bottom" data-bs-container="\#format-button" title="Format" aria-label="Format">
               <span class="fas fa-align-left fa-fw"></span>
             </button>
-            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Help">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-container="\#help-button" title="Help">
               <button type="button" id="help-button" class="btn btn-outline-primary btn-sm rounded-circle p-0 ms-1"
                 data-bs-toggle="modal" data-bs-target="#help-modal" aria-label="Help">
                 <span class="fas fa-question fa-fw"></span>
