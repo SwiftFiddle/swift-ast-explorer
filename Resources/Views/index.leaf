@@ -142,8 +142,6 @@
     </footer>
   </div>
 
-
-
   <!-- Help Mocdal -->
   <div id="help-modal" class="modal fade" tabindex="-1" aria-labelledby="help-modal-label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-lg">
@@ -186,6 +184,10 @@
     </div>
   </div>
 
+  <script src="https://browser.sentry-cdn.com/6.11.0/bundle.tracing.min.js"
+    integrity="sha384-XuDodOP4mgLWA8eRlqZJWs+mtmznHF6ES/nOotK0fE7SHjj0Ec3YMVIzjh5ytsKH" crossorigin="anonymous">
+  </script>
+
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
 
@@ -208,9 +210,6 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/theme-xcode.min.js"
     integrity="sha512-S3wipD42Bs0Dthj5mI3YkgHBB60mCkmID1qcxv4GZXV/bVivb9PIvEEBwTeIQTcZXUHo4aj7CktRhA/c2k7ftQ=="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/theme-terminal.min.js"
-    integrity="sha512-Tw4o9yJl67xiLPUU5do1oSzDGys0tLrb8NMcVP25Pn6VWRfJART2nZ/X2p9ocWpNcs3jbO2fnnBJmFJzlZ1k1Q=="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-swift.min.js"
     integrity="sha512-5NanghFVFTJf0tjHV2hWFuF/r9LuNKq9c0Pcs+TF7vWuD0AavR6az6X/vLW1AvLCo/AZg6EIBtm2WzLKNleDAQ=="
