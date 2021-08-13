@@ -28,7 +28,7 @@ ul.gj-list-md li {
 
 .keyword,
 .atSign {
-  color: #aa0d91;
+  color: #c800a4;
 }
 
 .importKeyword {
@@ -36,14 +36,28 @@ ul.gj-list-md li {
 }
 
 .stringLiteral {
-  color: #c41a16;
+  color: #df0002;
+}
+
+.StringLiteralExpr {
+  color: #df0002;
+}
+
+.IntegerLiteralExpr,
+.FloatLiteralExpr {
+  color: #3a00dc;
+}
+
+.integerLiteral,
+.floatingLiteral {
+  color: #3a00dc;
 }
 
 .lineComment,
 .blockComment,
 .docLineComment,
 .docBlockComment {
-  color: #006a00;
+  color: #008e00;
 }
 
 .tooltip-title {
