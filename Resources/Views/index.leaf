@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:image" content="https://swift-ast-explorer.com/images/ogp_image.png" />
+  <meta property="og:image" content="https://swift-ast-explorer.com/images/ogp_image.png" />
   <meta property="og:title" content="Swift AST Explorer">
   <meta property="og:description" content="Swift AST Explorer - AST visualizer for Swift source code" />
   <meta property="og:site_name" content="Swift AST Explorer - AST visualizer for Swift source code" />
