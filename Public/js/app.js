@@ -58,13 +58,19 @@ function update(editor) {
   };
   $.post("/update", json)
     .done(function (data, xhr) {
-      results.html(unescapeHTML(data.syntaxHTML));
+      results.html(data.syntaxHTML);
 
       if (tree) {
         tree.destroy();
       }
       tree = $("#structure").tree({
-        dataSource: JSON.parse(data.syntaxJSON),
+        dataSource: JSON.parse(
+          data.syntaxJSON
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/'/g, "&#039;")
+        ),
       });
 
       const children = tree.getChildren(tree);
@@ -274,12 +280,6 @@ function updateStatisticsTable(statistics) {
 
   $("#statistics").tablesorter({ theme: "bootstrap" });
   $("#statistics").trigger("update");
-}
-
-function unescapeHTML(str) {
-  let div = document.createElement("div");
-  div.innerHTML = str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  return div.textContent || div.innerText;
 }
 
 function showLoading() {
