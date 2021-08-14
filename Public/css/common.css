@@ -97,3 +97,15 @@ ul.gj-list-md li {
     height: 90vh;
   }
 }
+
+a .card-body {
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a .card-body:hover {
+  background-color: #f8f9fa;
+}
