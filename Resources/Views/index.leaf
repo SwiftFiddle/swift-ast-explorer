@@ -49,23 +49,28 @@
       <div class="col-md-6 m-2">
         <div class="row">
           <div class="col-md-auto">
-            <span class="fab fa-swift fa-2x text-primary d-inline-block align-middle"></span>
+            <span class="fab fa-swift fa-2x text-primary d-inline-block align-middle"
+              style="min-width: 2rem; min-height: 2rem;"></span>
             <span class="h4 text-dark d-inline-block align-middle m-0">Swift AST Explorer</span>
           </div>
           <div class="col-md-auto">
             <button type="button" id="run-button" class="btn btn-primary btn-sm rounded-pill disabled">
-              <span id="run-button-icon" class="fas fa-play fa-fw ms-2"></span>
-              <span id="run-button-spinner" class="fas fa-circle-notch fa-spin fa-fw ms-2"></span>
+              <span id="run-button-icon" class="fas fa-play fa-fw ms-2"
+                style="display: inline-block; min-width: 1em; min-height: 1em;"></span>
+              <span id="run-button-spinner" class="fas fa-circle-notch fa-spin fa-fw ms-2"
+                style="display: none;"></span>
               <span class="mx-2">Update</span>
             </button>
             <button type="button" id="format-button"
               class="btn btn-outline-primary btn-sm rounded-circle p-0 ms-1 disabled" data-bs-toggle="tooltip"
-              data-bs-placement="bottom" data-bs-container="\#format-button" title="Format" aria-label="Format">
+              data-bs-placement="bottom" data-bs-container="\#format-button" title="Format" aria-label="Format"
+              style="min-width: 2rem; min-height: 2rem;">
               <span class="fas fa-align-left fa-fw"></span>
             </button>
             <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-container="\#help-button" title="Help">
               <button type="button" id="help-button" class="btn btn-outline-primary btn-sm rounded-circle p-0 ms-1"
-                data-bs-toggle="modal" data-bs-target="#help-modal" aria-label="Help">
+                data-bs-toggle="modal" data-bs-target="#help-modal" aria-label="Help"
+                style="min-width: 2rem; min-height: 2rem;">
                 <span class="fas fa-question fa-fw"></span>
               </button>
             </span>
@@ -78,19 +83,22 @@
             <button id="structure-tab" class="nav-link  px-4 active" data-bs-toggle="tab"
               data-bs-target="#structure-content" type="button" role="tab" aria-controls="structure-content"
               aria-selected="true">
-              <span class="far fa-folder-tree me-2"></span><span>Structure</span>
+              <span class="far fa-folder-tree me-2"
+                style="display: inline-block; min-width: 1em; min-height: 1em;"></span><span>Structure</span>
             </button>
           </li>
           <li class="nav-item lined" role="presentation">
             <button id="syntax-tab" class="nav-link px-4" data-bs-toggle="tab" data-bs-target="#syntax-content"
               type="button" role="tab" aria-controls="syntax-content" aria-selected="false">
-              <span class="fal fa-file-code me-2"></span><span>Syntax</span>
+              <span class="fal fa-file-code me-2"
+                style="display: inline-block; min-width: 1em; min-height: 1em;"></span><span>Syntax</span>
             </button>
           </li>
           <li class="nav-item lined" role="presentation">
             <button id="statistics-tab" class="nav-link px-4" data-bs-toggle="tab" data-bs-target="#statistics-content"
               type="button" role="tab" aria-controls="statistics-content" aria-selected="false">
-              <span class="far fa-table me-2"></span><span>Statistics</span>
+              <span class="far fa-table me-2"
+                style="display: inline-block; min-width: 1em; min-height: 1em;"></span><span>Statistics</span>
             </button>
           </li>
         </ul>
@@ -133,13 +141,16 @@
         <div class="col-md-12 mx-1 text-center text-dark">
           <a class="text-reset small" href="https://status.swift-ast-explorer.com/" target="_blank"
             rel="nofollow noopener noreferrer">
-            <span class="fal fa-monitor-heart-rate mx-1"></span>System Status</a>
+            <span class="fal fa-monitor-heart-rate mx-1"
+              style="display: inline-block; min-width: 1em; min-height: 1em;"></span>System Status</a>
           <a class="text-reset small ms-1" href="https://github.com/swiftfiddle/swift-ast-explorer" target="_blank"
             rel="nofollow noopener noreferrer">
-            <span class="fab fa-github mx-1"></span>Source Code</a>
+            <span class="fab fa-github mx-1"
+              style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Source Code</a>
           <a class="text-reset small ms-1" href="https://twitter.com/k_katsumi" target="_blank"
             rel="nofollow noopener noreferrer">
-            <span class="far fa-at mx-1"></span>Creator</a>
+            <span class="far fa-at mx-1"
+              style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Creator</a>
         </div>
       </div>
     </footer>
