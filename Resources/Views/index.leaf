@@ -35,11 +35,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
   <link rel="manifest" href="/favicons/site.webmanifest">
-  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="\#5bbad5">
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="shortcut icon" href="/favicons/favicon.ico">
-  <meta name="msapplication-TileColor" content="\#da532c">
+  <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-  <meta name="theme-color" content="\#ffffff">
+  <meta name="theme-color" content="#ffffff">
 
   <title>Swift AST Explorer</title>
 </head>
@@ -69,11 +69,11 @@
             </button>
             <button type="button" id="format-button"
               class="btn btn-outline-primary btn-sm rounded-circle p-0 ms-1 disabled" data-bs-toggle="tooltip"
-              data-bs-placement="bottom" data-bs-container="\#format-button" title="Format" aria-label="Format"
+              data-bs-placement="bottom" data-bs-container="#format-button" title="Format" aria-label="Format"
               style="min-width: 2rem; min-height: 2rem;">
               <span class="fas fa-align-left fa-fw"></span>
             </button>
-            <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-container="\#help-button" title="Help">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-container="#help-button" title="Help">
               <button type="button" id="help-button" class="btn btn-outline-primary btn-sm rounded-circle p-0 ms-1"
                 data-bs-toggle="modal" data-bs-target="#help-modal" aria-label="Help"
                 style="min-width: 2rem; min-height: 2rem;">
