@@ -149,6 +149,10 @@
             rel="nofollow noopener noreferrer">
             <span class="fal fa-monitor-heart-rate mx-1"
               style="display: inline-block; min-width: 1em; min-height: 1em;"></span>System Status</a>
+          <a class="text-reset small ms-1" href="https://github.com/swiftfiddle/swift-ast-explorer/issues/new"
+            target="_blank" rel="nofollow noopener noreferrer">
+            <span class="far fa-comment-alt-smile mx-1"
+              style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Feedback</a>
           <a class="text-reset small ms-1" href="https://github.com/swiftfiddle/swift-ast-explorer" target="_blank"
             rel="nofollow noopener noreferrer">
             <span class="fab fa-github mx-1"
