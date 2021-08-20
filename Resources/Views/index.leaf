@@ -145,22 +145,27 @@
     <footer class="row p-1 mb-1 bg-light">
       <div class="row">
         <div class="col-md-12 mx-1 text-center text-dark">
-          <a class="text-reset small" href="https://status.swift-ast-explorer.com/" target="_blank"
+          <a class="text-reset text-decoration-none small" href="https://status.swift-ast-explorer.com/" target="_blank"
             rel="nofollow noopener noreferrer">
             <span class="fal fa-monitor-heart-rate mx-1"
               style="display: inline-block; min-width: 1em; min-height: 1em;"></span>System Status</a>
-          <a class="text-reset small ms-1" href="https://github.com/swiftfiddle/swift-ast-explorer/issues/new"
-            target="_blank" rel="nofollow noopener noreferrer">
+          <a class="text-reset text-decoration-none small ms-1"
+            href="https://github.com/swiftfiddle/swift-ast-explorer/issues/new" target="_blank"
+            rel="nofollow noopener noreferrer">
             <span class="far fa-comment-alt-smile mx-1"
               style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Feedback</a>
-          <a class="text-reset small ms-1" href="https://github.com/swiftfiddle/swift-ast-explorer" target="_blank"
-            rel="nofollow noopener noreferrer">
+          <a class="text-reset text-decoration-none small ms-1" href="https://github.com/swiftfiddle/swift-ast-explorer"
+            target="_blank" rel="nofollow noopener noreferrer">
             <span class="fab fa-github mx-1"
               style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Source Code</a>
-          <a class="text-reset small ms-1" href="https://twitter.com/k_katsumi" target="_blank"
+          <a class="text-reset text-decoration-none small ms-1" href="https://twitter.com/k_katsumi" target="_blank"
             rel="nofollow noopener noreferrer">
             <span class="far fa-at mx-1"
               style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Creator</a>
+          <a id="donate-button" class="text-reset text-decoration-none small ms-1" href="#" data-bs-toggle="modal"
+            data-bs-target="#donation-modal" aria-label="Donate">
+            <span class="far fa-donate mx-1"
+              style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Donate</a>
         </div>
       </div>
     </footer>
@@ -168,10 +173,11 @@
 
   <!-- Help Mocdal -->
   <div id="help-modal" class="modal fade" tabindex="-1" aria-labelledby="help-modal-label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="help-modal-label">Help</h5>
+          <h5 class="modal-title" id="help-modal-label"><span class="far fa-question-circle me-2"
+              style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Help</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -203,6 +209,73 @@
               </a>
             </dd>
           </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Donation Modal -->
+  <div id="donation-modal" class="modal fade" tabindex="-1" aria-labelledby="donation-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="donation-modal-label"><span class="far fa-donate me-2"
+              style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Donate</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="smart-button-container">
+            <div style="text-align: center;">
+              <div id="paypal-button-container"></div>
+            </div>
+          </div>
+          <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD"
+            data-sdk-integration-source="button-factory"></script>
+          <script>
+            function initPayPalButton() {
+              paypal.Buttons({
+                style: {
+                  shape: 'pill',
+                  color: 'blue',
+                  layout: 'vertical',
+                  label: 'paypal',
+
+                },
+
+                createOrder: function (data, actions) {
+                  return actions.order.create({
+                    purchase_units: [{
+                      "amount": {
+                        "currency_code": "USD",
+                        "value": 40
+                      }
+                    }]
+                  });
+                },
+
+                onApprove: function (data, actions) {
+                  return actions.order.capture().then(function (orderData) {
+
+                    // Full available details
+                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+                    // Show a success message within this page, e.g.
+                    const element = document.getElementById('paypal-button-container');
+                    element.innerHTML = '';
+                    element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+                    // Or go to another URL:  actions.redirect('thank_you.html');
+
+                  });
+                },
+
+                onError: function (err) {
+                  console.log(err);
+                }
+              }).render('#paypal-button-container');
+            }
+            initPayPalButton();
+          </script>
         </div>
       </div>
     </div>
