@@ -13,7 +13,7 @@
 
 AST visualizer for Swift source code. https://swift-ast-explorer.com/
 
-<a href="https://swift-ast-explorer.com/"><img width="1024" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95597813-14766480-0a8a-11eb-8116-56dbb5a55020.png"></a>
+<a href="https://swift-ast-explorer.com/"><img width="1024" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/130250442-3d026d08-423c-4e82-9902-1df4369f572a.png"></a>
 
 ## Features
 
@@ -28,35 +28,3 @@ AST visualizer for Swift source code. https://swift-ast-explorer.com/
 ### Display an overview and inspect where each syntax is used.
 
 <img width="600" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95598041-64edc200-0a8a-11eb-818d-0c940d40ffd2.png">
-
-## Run the app
-
-```shell
-SWIFT_VERSION=`swift --version` swift run
-```
-
-Open `http://0.0.0.0:8080`
-
-## Run using Docker
-
-### Build image
-
-```shell
-docker build --rm --tag kishikawakatsumi/swift-ast-explorer .
-```
-
-### Run the container
-
-```shell
-docker run --rm --publish 8080:8080 kishikawakatsumi/swift-ast-explorer
-```
-
-Open `http://0.0.0.0:8080`
-
-## Run using Docker Compose
-
-```shell
-docker compose up
-```
-
-Open `http://0.0.0.0:8080`
