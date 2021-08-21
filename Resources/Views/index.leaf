@@ -49,6 +49,7 @@
       DD_LOGS.init({
         clientToken: 'puba66370e70f384cdff37bf9efa6d5bb7f',
         site: 'datadoghq.com',
+        service: "swift-ast-explorer-browser",
         forwardErrorsToLogs: true,
         sampleRate: 100,
       })
