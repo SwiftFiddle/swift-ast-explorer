@@ -42,6 +42,17 @@
   <meta name="theme-color" content="#ffffff">
 
   <title>Swift AST Explorer</title>
+
+  <script type="text/javascript" src="https://www.datadoghq-browser-agent.com/datadog-logs-v3.js"></script>
+  <script>
+    window.DD_LOGS &&
+      DD_LOGS.init({
+        clientToken: 'puba66370e70f384cdff37bf9efa6d5bb7f',
+        site: 'datadoghq.com',
+        forwardErrorsToLogs: true,
+        sampleRate: 100,
+      })
+  </script>
 </head>
 
 <body>

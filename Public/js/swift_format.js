@@ -26,12 +26,10 @@ export class SwiftFormat {
       return this.connection;
     }
 
-    console.log(`Connecting to ${endpoint}`);
     const connection = new WebSocket(endpoint);
     connection.bufferType = "arraybuffer";
 
     connection.onopen = () => {
-      console.log(`SwiftFormat service connected (${connection.readyState}).`);
       this.onconnect();
 
       document.addEventListener("visibilitychange", () => {
@@ -46,7 +44,6 @@ export class SwiftFormat {
     };
 
     connection.onclose = (event) => {
-      console.log(`SwiftFormat service disconnected (${event.code}).`);
       if (event.code !== 1006) {
         return;
       }
@@ -56,7 +53,8 @@ export class SwiftFormat {
     };
 
     connection.onerror = (event) => {
-      console.error(`SwiftFormat service error: ${event}`);
+      window.DD_LOGS &&
+        DD_LOGS.logger.error("swift-format websocket error", event);
       connection.close();
     };
 

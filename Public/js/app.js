@@ -1,6 +1,5 @@
 "use strict";
 
-import "./logger.js";
 import { SwiftFormat } from "./swift_format.js";
 
 ace.require("ace/ext/language_tools");
