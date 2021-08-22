@@ -5,7 +5,6 @@ export class SwiftFormat {
     this.connection = this.createConnection(endpoint);
 
     this.onconnect = () => {};
-    this.onready = () => {};
     this.onresponse = () => {};
   }
 
@@ -26,30 +25,18 @@ export class SwiftFormat {
       return this.connection;
     }
 
-    const connection = new WebSocket(endpoint);
+    const connection = new ReconnectingWebSocket(endpoint, [], {
+      maxReconnectionDelay: 10000,
+      minReconnectionDelay: 1000,
+      reconnectionDelayGrowFactor: 1.3,
+      connectionTimeout: 10000,
+      maxRetries: Infinity,
+      debug: false,
+    });
     connection.bufferType = "arraybuffer";
 
     connection.onopen = () => {
       this.onconnect();
-
-      document.addEventListener("visibilitychange", () => {
-        switch (document.visibilityState) {
-          case "hidden":
-            break;
-          case "visible":
-            this.connection = this.createConnection(connection.url);
-            break;
-        }
-      });
-    };
-
-    connection.onclose = (event) => {
-      if (event.code !== 1006) {
-        return;
-      }
-      setTimeout(() => {
-        this.connection = this.createConnection(connection.url);
-      }, 1000);
     };
 
     connection.onerror = (event) => {
@@ -61,6 +48,7 @@ export class SwiftFormat {
     connection.onmessage = (event) => {
       this.onresponse(JSON.parse(event.data));
     };
+
     return connection;
   }
 }

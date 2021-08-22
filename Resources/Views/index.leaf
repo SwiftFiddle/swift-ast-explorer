@@ -328,6 +328,8 @@
     integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg=="
     crossorigin="anonymous"></script>
 
+  <script src="https://unpkg.com/reconnecting-websocket@4.4.0/dist/reconnecting-websocket-iife.js"></script>
+
   <script src="https://kit.fontawesome.com/e4cc3576fb.js" crossorigin="anonymous"></script>
   <script src="js/app.js" type="module"></script>
 </body>
