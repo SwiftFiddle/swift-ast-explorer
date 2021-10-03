@@ -9,7 +9,7 @@ func routes(_ app: Application) throws {
         ])
     }
 
-    app.get("index.html") { req -> EventLoopFuture<View> in
+    app.get("index.html") { (req) -> EventLoopFuture<View> in
         req.view.render("index", [
             "title": "Swift AST Explorer",
             "defaultSampleCode": defaultSampleCode,
@@ -17,7 +17,7 @@ func routes(_ app: Application) throws {
         ])
     }
 
-    app.get("*") { req -> EventLoopFuture<View> in
+    app.get("*") { (req) -> EventLoopFuture<View> in
         let pattern = try! NSRegularExpression(pattern: #"^\/([a-f0-9]{32})$"#, options: [.caseInsensitive])
         let matches = pattern.matches(in: req.url.path, options: [], range: NSRange(location: 0, length: NSString(string: req.url.path).length))
         guard matches.count == 1 && matches[0].numberOfRanges == 2 else {
@@ -60,7 +60,7 @@ func routes(_ app: Application) throws {
         return promise.futureResult
     }
 
-    app.on(.POST, "update", body: .collect(maxSize: "10mb")) { req -> EventLoopFuture<SyntaxResponse> in
+    app.on(.POST, "update", body: .collect(maxSize: "10mb")) { (req) -> EventLoopFuture<SyntaxResponse> in
         let parameter = try req.content.decode(RequestParameter.self)
 
         let promise = req.eventLoop.makePromise(of: SyntaxResponse.self)
