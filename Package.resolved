@@ -78,8 +78,8 @@
         "repositoryURL": "https://github.com/apple/swift-crypto.git",
         "state": {
           "branch": null,
-          "revision": "3bea268b223651c4ab7b7b9ad62ef9b2d4143eb6",
-          "version": "1.1.6"
+          "revision": "127d3745c37b5705e4bc8d16c7951c48dcc3332c",
+          "version": "2.0.0"
         }
       },
       {
@@ -159,8 +159,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "f9f68e5f417ef1de56222a80079a72605fbfde8d",
-          "version": "4.48.8"
+          "revision": "8ee22de2845af389b9ed0e24f63983a0b5da6ab9",
+          "version": "4.49.0"
         }
       },
       {
