@@ -1,11 +1,12 @@
 {
-  "extends": [
-    "config:base"
-  ],
+  "extends": ["config:base"],
   "html": {
-    "fileMatch": [
-      "\\.html?$",
-      "\\.leaf?$"
-    ]
-  }
+    "fileMatch": ["\\.html?$", "\\.leaf?$"]
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
 }
