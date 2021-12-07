@@ -17,6 +17,8 @@ func routes(_ app: Application) throws {
         ])
     }
 
+    app.get("healthz") { _ in ["status": "pass"] }
+
     app.get("*") { (req) -> EventLoopFuture<View> in
         let pattern = try! NSRegularExpression(pattern: #"^\/([a-f0-9]{32})$"#, options: [.caseInsensitive])
         let matches = pattern.matches(in: req.url.path, options: [], range: NSRange(location: 0, length: NSString(string: req.url.path).length))
