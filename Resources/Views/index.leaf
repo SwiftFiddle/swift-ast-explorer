@@ -289,8 +289,10 @@
     </div>
   </div>
 
-  <script src="https://browser.sentry-cdn.com/6.11.0/bundle.tracing.min.js"
-    integrity="sha384-XuDodOP4mgLWA8eRlqZJWs+mtmznHF6ES/nOotK0fE7SHjj0Ec3YMVIzjh5ytsKH" crossorigin="anonymous">
+  <script src="https://getinsights.io/js/insights.js"></script>
+  <script>
+    insights.init('hYhV3aQXN4pUL12Z');
+    insights.trackPages();
   </script>
 
   <script src="https://unpkg.com/@popperjs/core@2"></script>
