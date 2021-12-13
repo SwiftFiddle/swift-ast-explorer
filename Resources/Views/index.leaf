@@ -43,6 +43,8 @@
 
   <title>Swift AST Explorer</title>
 
+  <script defer data-domain="swift-ast-explorer.com" src="https://plausible.io/js/plausible.js"></script>
+
   <script type="text/javascript" src="https://www.datadoghq-browser-agent.com/datadog-logs-v3.js"></script>
   <script>
     window.DD_LOGS &&
@@ -288,12 +290,6 @@
       </div>
     </div>
   </div>
-
-  <script src="https://getinsights.io/js/insights.js"></script>
-  <script>
-    insights.init('hYhV3aQXN4pUL12Z');
-    insights.trackPages();
-  </script>
 
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
