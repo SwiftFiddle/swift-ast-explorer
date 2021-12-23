@@ -28,8 +28,8 @@ final class CommonErrorMiddleware: Middleware {
                 401: "The requested resource requires an authentication.",
                 403: "The requested resource requires an authentication.",
                 404: "The requested resource could not be found but may be available again in the future.",
-                500: "An unexpected condition was encountered.<br />Our service team has been dispatched to bring it back online.",
-                503: "We&#39;ve got some trouble with our backend upstream cluster.<br />Our service team has been dispatched to bring it back online.",
+                500: "An unexpected condition was encountered. Our service team has been dispatched to bring it back online.",
+                503: "We&#39;ve got some trouble with our backend upstream cluster. Our service team has been dispatched to bring it back online.",
             ]
 
             if request.headers[.accept].map({ $0.lowercased() }).contains("application/json") {
