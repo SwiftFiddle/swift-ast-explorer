@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug Run",
+      "program": "${workspaceFolder}/.build/debug/Run",
+      "args": [],
+      "cwd": "${workspaceFolder:swift-ast-explorer}",
+      "preLaunchTask": "swift: Build Debug Run"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Release Run",
+      "program": "${workspaceFolder}/.build/release/Run",
+      "args": [],
+      "cwd": "${workspaceFolder:swift-ast-explorer}",
+      "preLaunchTask": "swift: Build Release Run"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Test swift-ast-explorer",
+      "program": "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest",
+      "args": [".build/debug/swift-ast-explorerPackageTests.xctest"],
+      "cwd": "${workspaceFolder:swift-ast-explorer}",
+      "preLaunchTask": "swift: Build All"
+    }
+  ]
+}
