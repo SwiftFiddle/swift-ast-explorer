@@ -44,18 +44,6 @@
   <title>Swift AST Explorer</title>
 
   <script defer data-domain="swift-ast-explorer.com" src="https://plausible.io/js/plausible.js"></script>
-
-  <script type="text/javascript" src="https://www.datadoghq-browser-agent.com/datadog-logs-v3.js"></script>
-  <script>
-    window.DD_LOGS &&
-      DD_LOGS.init({
-        clientToken: 'puba66370e70f384cdff37bf9efa6d5bb7f',
-        site: 'datadoghq.com',
-        service: "swift-ast-explorer-browser",
-        forwardErrorsToLogs: true,
-        sampleRate: 100,
-      })
-  </script>
 </head>
 
 <body>
