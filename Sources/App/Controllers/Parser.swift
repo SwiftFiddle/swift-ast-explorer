@@ -1,5 +1,6 @@
 import Foundation
 import SwiftSyntax
+import SwiftSyntaxParser
 
 struct Parser {
     static func parse(code: String) throws -> SyntaxResponse {

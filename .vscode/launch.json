@@ -4,7 +4,7 @@
       "type": "lldb",
       "request": "launch",
       "name": "Debug Run",
-      "program": "${workspaceFolder}/.build/debug/Run",
+      "program": "${workspaceFolder:swift-ast-explorer}/.build/debug/Run",
       "args": [],
       "cwd": "${workspaceFolder:swift-ast-explorer}",
       "preLaunchTask": "swift: Build Debug Run"
@@ -13,7 +13,7 @@
       "type": "lldb",
       "request": "launch",
       "name": "Release Run",
-      "program": "${workspaceFolder}/.build/release/Run",
+      "program": "${workspaceFolder:swift-ast-explorer}/.build/release/Run",
       "args": [],
       "cwd": "${workspaceFolder:swift-ast-explorer}",
       "preLaunchTask": "swift: Build Release Run"
