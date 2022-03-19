@@ -40,8 +40,6 @@ export class SwiftFormat {
     };
 
     connection.onerror = (event) => {
-      window.DD_LOGS &&
-        DD_LOGS.logger.error("swift-format websocket error", event);
       connection.close();
     };
 
