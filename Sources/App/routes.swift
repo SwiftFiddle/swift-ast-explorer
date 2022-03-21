@@ -1,16 +1,14 @@
 import Vapor
 
 func routes(_ app: Application) throws {
-    app.get { req in
-        req.view.render("index", [
-            "title": "Swift AST Explorer",
-            "defaultSampleCode": defaultSampleCode,
-            "swiftVersion": swiftVersion,
-        ])
+    app.get { (req) in
+        return index(request: req)
     }
-
-    app.get("index.html") { (req) -> EventLoopFuture<View> in
-        req.view.render("index", [
+    app.get("index.html") { (req) in
+        return index(request: req)
+    }
+    func index(request req: Request) -> EventLoopFuture<View> {
+        return req.view.render("index", [
             "title": "Swift AST Explorer",
             "defaultSampleCode": defaultSampleCode,
             "swiftVersion": swiftVersion,
