@@ -113,8 +113,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-metrics.git",
       "state" : {
-        "revision" : "1c1408bf8fc21be93713e897d2badf500ea38419",
-        "version" : "2.3.1"
+        "revision" : "53be78637ecd165d1ddedc4e20de69b8f43ec3b7",
+        "version" : "2.3.2"
       }
     },
     {
@@ -149,8 +149,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-ssl.git",
       "state" : {
-        "revision" : "fd5f38b0039148e76c2e863a2fc868cc39bb451b",
-        "version" : "2.20.1"
+        "revision" : "c30c680c78c99afdabf84805a83c8745387c4ac7",
+        "version" : "2.20.2"
       }
     },
     {
@@ -185,8 +185,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "cd91a66c7dd2d8658c9fc43ee9d96d7a259bbc5c",
-        "version" : "4.62.1"
+        "revision" : "d9d83cd3eb09fd7979775082f9247d7d69d55cd2",
+        "version" : "4.63.0"
       }
     },
     {
@@ -194,8 +194,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/websocket-kit.git",
       "state" : {
-        "revision" : "d8230eae70650652661f360f322db0cc22955b2f",
-        "version" : "2.5.0"
+        "revision" : "3af54d0858e9149612c3892a8d0421f4132bb1cd",
+        "version" : "2.5.1"
       }
     }
   ],
