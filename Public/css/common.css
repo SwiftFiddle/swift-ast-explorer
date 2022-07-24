@@ -3,6 +3,11 @@
   height: 2rem;
 }
 
+/* Overide box-sizing to avoid flicker seen in chromium-browsers */
+*, *::before, *::after {
+  box-sizing: content-box;
+}
+
 #editor-container {
   position: relative;
   height: 100%;
