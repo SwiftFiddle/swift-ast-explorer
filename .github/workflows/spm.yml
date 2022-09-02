@@ -9,7 +9,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build
+      - name: Update Package.resolved
         run: |
           set -ex
           swift package update
