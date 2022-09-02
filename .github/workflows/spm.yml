@@ -1,0 +1,19 @@
+name: Update Package.resolved
+on:
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: |
+          set -ex
+          swift package update
+          swift build
+          git add Package.resolved
+          git diff-index --quiet HEAD || git commit -m "Update Package.resolved"
+          git push origin master
