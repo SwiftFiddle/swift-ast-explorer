@@ -4,7 +4,7 @@ import SwiftSyntaxParser
 
 struct Parser {
     static func parse(code: String) throws -> SyntaxResponse {
-        let sourceFile = try SyntaxParser.parse(source: code, enableBareSlashRegexLiteral: true)
+        let sourceFile = try SyntaxParser.parse(source: code)
 
         let visitor = TokenVisitor()
         visitor.visitPre(sourceFile._syntaxNode)
