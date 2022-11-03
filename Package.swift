@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
@@ -7,7 +7,7 @@ let package = Package(
         .macOS(.v10_15)
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-syntax", branch: "0.50600.0"),
+        .package(url: "https://github.com/apple/swift-syntax", branch: "0.50700.1"),
         .package(url: "https://github.com/vapor/vapor.git", from: "4.67.1"),
         .package(url: "https://github.com/vapor/leaf.git", from: "4.2.2"),
     ],
