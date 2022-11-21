@@ -74,13 +74,13 @@ final class TokenVisitor: SyntaxRewriter {
             kind = "keyword"
         }
 
-        list.append("<span class='token \(kind)' data-tooltip-title='Token' data-tooltip-content='\(token.tokenKind)'>" + escapeHtmlSpecialCharacters(token.text) + "</span>")
+        list.append("<span class='token \(kind)' data-tooltip-title='Token' data-tooltip-content='\(token.tokenKind)'>\(escapeHtmlSpecialCharacters(token.text))</span>")
         column += token.text.count
     }
 
     private func processTriviaPiece(_ piece: TriviaPiece) -> String {
         func wrapWithSpanTag(class c: String, text: String) -> String {
-            return "<span class='\(c)' data-tooltip-title='Trivia' data-tooltip-content='\(c)'>" + escapeHtmlSpecialCharacters(text) + "</span>"
+            return "<span class='\(c)' data-tooltip-title='Trivia' data-tooltip-content='\(c)'>\(escapeHtmlSpecialCharacters(text))</span>"
         }
 
         var trivia = ""

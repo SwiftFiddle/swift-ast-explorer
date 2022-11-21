@@ -4,7 +4,9 @@
 }
 
 /* Overide box-sizing to avoid flicker seen in chromium-browsers */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: content-box;
 }
 
@@ -113,4 +115,8 @@ a .card-body {
 
 a .card-body:hover {
   background-color: #f8f9fa;
+}
+
+.tippy-content {
+  word-break: break-all;
 }

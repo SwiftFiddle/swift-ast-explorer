@@ -111,11 +111,16 @@ function updateStructureTree() {
         tree.select(node);
         if (data.token) {
           const target = $(this).find("[data-role='display']");
+          const tokenKind = removeHTMLTag(data.token.kind);
+          const tokenLeadingTrivia = removeHTMLTag(data.token.leadingTrivia);
+          const tokenText = removeHTMLTag(data.text);
+          const tokenTrailingTrivia = removeHTMLTag(data.token.trailingTrivia);
+
           if (!target.attr("__tippy")) {
-            const kind = `<span class='tooltip-title'>kind:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.token.kind}</span>`;
-            const leadingTrivia = `<span class='tooltip-title'>leadingTrivia:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.token.leadingTrivia}</span>`;
-            const text = `<span class='tooltip-title'>text:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.text}</span>`;
-            const trailingTrivia = `<span class='tooltip-title'>trailingTrivia:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${data.token.trailingTrivia}</span>`;
+            const kind = `<span class='tooltip-title'>kind:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${tokenKind}</span>`;
+            const leadingTrivia = `<span class='tooltip-title'>leadingTrivia:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${tokenLeadingTrivia}</span>`;
+            const text = `<span class='tooltip-title'>text:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${tokenText}</span>`;
+            const trailingTrivia = `<span class='tooltip-title'>trailingTrivia:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${tokenTrailingTrivia}</span>`;
             const content = `${kind}<br>${leadingTrivia}<br>${text}<br>${trailingTrivia}`;
             tippy($(this).find("[data-role='display']")[0], {
               content: content,
@@ -339,3 +344,20 @@ $("#format-button").on("click", (e) => {
   e.preventDefault();
   formatterService.format(editor.getValue());
 });
+
+function removeHTMLTag(text) {
+  const div = document.createElement("div");
+  console.log(text);
+  div.innerHTML = text
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&#039;/g, "'")
+    .replace(/&amp;/g, "&");
+  return escapeHTML(div.textContent || div.innerText || "");
+}
+
+function escapeHTML(text) {
+  const div = document.createElement("div");
+  div.appendChild(document.createTextNode(text));
+  return div.innerHTML;
+}
