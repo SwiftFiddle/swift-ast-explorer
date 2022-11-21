@@ -114,7 +114,7 @@ final class TokenVisitor: SyntaxRewriter {
     }
 
     private func replaceSymbols(text: String) -> String {
-        return text.replacingOccurrences(of: "&nbsp;", with: "␣").replacingOccurrences(of: "<br>", with: "<br>↲")
+        return text.replacingOccurrences(of: "&nbsp;", with: "␣").replacingOccurrences(of: "<br>", with: "↲")
     }
 
     private func processComment(text: String) {
