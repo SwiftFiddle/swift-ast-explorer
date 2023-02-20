@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/swift-server/async-http-client.git",
         "state": {
           "branch": null,
-          "revision": "7f05a8da46cc2a4ab43218722298b81ac7a08031",
-          "version": "1.13.2"
+          "revision": "864c8d9e0ead5de7ba70b61c8982f89126710863",
+          "version": "1.15.0"
         }
       },
       {
@@ -150,8 +150,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-http2.git",
         "state": {
           "branch": null,
-          "revision": "22757ac305f3d44d2b99ba541193ff1d64e77d00",
-          "version": "1.24.1"
+          "revision": "8dcda6828844022028025241e4e7d52cbbe250de",
+          "version": "1.25.0"
         }
       },
       {
