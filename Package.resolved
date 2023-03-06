@@ -105,8 +105,8 @@
         "repositoryURL": "https://github.com/apple/swift-crypto.git",
         "state": {
           "branch": null,
-          "revision": "75ec60b8b4cc0f085c3ac414f3dca5625fa3588e",
-          "version": "2.2.4"
+          "revision": "80a6e3edc1fc3a4c6c7d4177c73fa3f74c72d3e1",
+          "version": "2.3.0"
         }
       },
       {
@@ -141,8 +141,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-extras.git",
         "state": {
           "branch": null,
-          "revision": "98378d1fe56527761c180f70b2d66a7b2307fc39",
-          "version": "1.16.0"
+          "revision": "d75ed708d00353acf173ca23018b6bd46f949464",
+          "version": "1.17.0"
         }
       },
       {
@@ -150,8 +150,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-http2.git",
         "state": {
           "branch": null,
-          "revision": "8dcda6828844022028025241e4e7d52cbbe250de",
-          "version": "1.25.0"
+          "revision": "38feec96bcd929028939107684073554bf01abeb",
+          "version": "1.25.2"
         }
       },
       {
