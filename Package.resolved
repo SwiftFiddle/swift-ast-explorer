@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/vapor/leaf-kit.git",
         "state": {
           "branch": null,
-          "revision": "c67a1b06561bfb8a427ed7e50e27792e083f2d3e",
-          "version": "1.8.0"
+          "revision": "62169b44cc79734e11bf44b8d7154865dee5936b",
+          "version": "1.10.1"
         }
       },
       {
@@ -105,8 +105,8 @@
         "repositoryURL": "https://github.com/apple/swift-crypto.git",
         "state": {
           "branch": null,
-          "revision": "80a6e3edc1fc3a4c6c7d4177c73fa3f74c72d3e1",
-          "version": "2.3.0"
+          "revision": "da0fe44138ab86e380f40a2acbd8a611b07d3f64",
+          "version": "2.4.0"
         }
       },
       {
@@ -195,8 +195,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "08397d41d7c7c726dc6667af6b9db13d408201ff",
-          "version": "4.70.0"
+          "revision": "bac0fe31e3b186537eb750d44fae048681e2b773",
+          "version": "4.74.0"
         }
       },
       {
@@ -204,8 +204,8 @@
         "repositoryURL": "https://github.com/vapor/websocket-kit.git",
         "state": {
           "branch": null,
-          "revision": "2d9d2188a08eef4a869d368daab21b3c08510991",
-          "version": "2.6.1"
+          "revision": "2b8885974e8d9f522e787805000553f4f7cce8a0",
+          "version": "2.7.0"
         }
       }
     ]
