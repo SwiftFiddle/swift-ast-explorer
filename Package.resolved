@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/vapor/leaf-kit.git",
         "state": {
           "branch": null,
-          "revision": "62169b44cc79734e11bf44b8d7154865dee5936b",
-          "version": "1.10.1"
+          "revision": "13f2fc4c8479113cd23876d9a434ef4573e368bb",
+          "version": "1.10.2"
         }
       },
       {
@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/vapor/multipart-kit.git",
         "state": {
           "branch": null,
-          "revision": "0d55c35e788451ee27222783c7d363cb88092fab",
-          "version": "4.5.2"
+          "revision": "3a31859efeb054cdcd407fe152802ddc5c58bbce",
+          "version": "4.5.3"
         }
       },
       {
@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/vapor/routing-kit.git",
         "state": {
           "branch": null,
-          "revision": "ffac7b3a127ce1e85fb232f1a6271164628809ad",
-          "version": "4.6.0"
+          "revision": "bdc9c25adbf77ba2b02113077ae8f355d87df83e",
+          "version": "4.7.1"
         }
       },
       {
@@ -132,8 +132,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio.git",
         "state": {
           "branch": null,
-          "revision": "45167b8006448c79dda4b7bd604e07a034c15c49",
-          "version": "2.48.0"
+          "revision": "9b2848d76f5caad08b97e71a04345aa5bdb23a06",
+          "version": "2.49.0"
         }
       },
       {
@@ -141,8 +141,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-extras.git",
         "state": {
           "branch": null,
-          "revision": "d75ed708d00353acf173ca23018b6bd46f949464",
-          "version": "1.17.0"
+          "revision": "cc1e5275079380c859417dbea8588531f1a90ec3",
+          "version": "1.18.0"
         }
       },
       {
@@ -195,8 +195,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "d1a89f8f54c409751a5891a3dd22f78171be5741",
-          "version": "4.74.1"
+          "revision": "f39218ec4998654c59251b282cbf4bb9b2cf2629",
+          "version": "4.74.2"
         }
       },
       {
