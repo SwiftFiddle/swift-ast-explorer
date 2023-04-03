@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/vapor/routing-kit.git",
         "state": {
           "branch": null,
-          "revision": "bdc9c25adbf77ba2b02113077ae8f355d87df83e",
-          "version": "4.7.1"
+          "revision": "611bc45c5dfb1f54b84d99b89d1f72191fb6b71b",
+          "version": "4.7.2"
         }
       },
       {
@@ -195,8 +195,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "f39218ec4998654c59251b282cbf4bb9b2cf2629",
-          "version": "4.74.2"
+          "revision": "ba1a308a58ba9d78c5100588d7d8b6e615a98248",
+          "version": "4.75.0"
         }
       },
       {
