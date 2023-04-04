@@ -1,4 +1,4 @@
-FROM swiftlang/swift:nightly-5.7-focal as build
+FROM swift:5.8.0-focal as build
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update && apt-get -q dist-upgrade -y && rm -r /var/lib/apt/lists/*
 
@@ -13,7 +13,7 @@ RUN cp "$(swift build --package-path /build -c release --show-bin-path)/Run" ./ 
     && mv /build/Public ./Public && chmod -R a-w ./Public \
     && mv /build/Resources ./Resources && chmod -R a-w ./Resources
 
-FROM swiftlang/swift:nightly-5.7-focal
+FROM swift:5.8.0-focal
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update && apt-get -q dist-upgrade -y && rm -r /var/lib/apt/lists/*
 
