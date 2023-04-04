@@ -67,6 +67,11 @@ ul.gj-list-md li {
   color: #008e00;
 }
 
+.unexpectedText,
+.shebang {
+  color: #5D6C79;
+}
+
 .tooltip-title {
   color: gray;
 }

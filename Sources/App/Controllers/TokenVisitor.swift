@@ -33,7 +33,7 @@ final class TokenVisitor: SyntaxRewriter {
         current = n
     }
 
-    override func visit(_ token: TokenSyntax) -> Syntax {
+    override func visit(_ token: TokenSyntax) -> TokenSyntax {
         current.text = token.text
         current.token = Node.Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
 
@@ -55,7 +55,7 @@ final class TokenVisitor: SyntaxRewriter {
         current.range.endRow = row
         current.range.endColumn = column
 
-        return token._syntaxNode
+        return token
     }
 
     override func visitPost(_ node: Syntax) {
@@ -91,6 +91,8 @@ final class TokenVisitor: SyntaxRewriter {
         case .tabs(let count):
             trivia += String(repeating: "&nbsp;", count: count * 2)
             column += count * 2
+        case .verticalTabs, .formfeeds:
+            break
         case .newlines(let count), .carriageReturns(let count), .carriageReturnLineFeeds(let count):
             trivia += String(repeating: "<br>", count: count)
             row += count
@@ -107,8 +109,12 @@ final class TokenVisitor: SyntaxRewriter {
         case .docBlockComment(let text):
             trivia += wrapWithSpanTag(class: "docBlockComment", text: text)
             processComment(text: text)
-        case .verticalTabs, .formfeeds, .garbageText:
-            break
+        case .unexpectedText(let text):
+            trivia += wrapWithSpanTag(class: "unexpectedText", text: text)
+            processComment(text: text)
+        case .shebang(let text):
+            trivia += wrapWithSpanTag(class: "shebang", text: text)
+            processComment(text: text)
         }
         return trivia
     }
