@@ -109,6 +109,42 @@ function updateStructureTree() {
 
         const node = tree.getNodeById(id);
         tree.select(node);
+
+        const structureKeys = Object.keys(data.structure);
+        if (structureKeys.length) {
+          const target = $(this).find("[data-role='display']")[0];
+          if (!$(target).attr("__tippy")) {
+            const contents = [];
+            for (const key of structureKeys) {
+              const name = removeHTMLTag(key);
+              const structureValue = data.structure[key];
+              if (
+                structureValue &&
+                structureValue.text &&
+                structureValue.kind
+              ) {
+                const text = removeHTMLTag(structureValue.text);
+                const kind = removeHTMLTag(structureValue.kind);
+                contents.push(
+                  `<span class='tooltip-title'>${name}:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${text}<span style="color: #5D6C79;"> ${kind}</span></span>`
+                );
+              } else if (structureValue && structureValue.text) {
+                const text = removeHTMLTag(structureValue.text);
+                contents.push(
+                  `<span class='tooltip-title'>${name}:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${text}</span>`
+                );
+              }
+            }
+            tippy(target, {
+              content: contents.join("<br>"),
+              allowHTML: true,
+              placement: "right",
+              theme: "light-border",
+              maxWidth: 600,
+            });
+            $(target).attr("__tippy", true);
+          }
+        }
         if (data.token) {
           const target = $(this).find("[data-role='display']");
           const tokenKind = removeHTMLTag(data.token.kind);
@@ -347,7 +383,6 @@ $("#format-button").on("click", (e) => {
 
 function removeHTMLTag(text) {
   const div = document.createElement("div");
-  console.log(text);
   div.innerHTML = text
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
