@@ -24,6 +24,21 @@ final class TokenVisitor: SyntaxRewriter {
         n.range.startColumn = column
         n.range.endRow = row
         n.range.endColumn = column
+
+        switch node.syntaxNodeType.structure {
+        case .layout(let keyPaths):
+            if let syntaxNode = node.as(node.syntaxNodeType) {
+                for keyPath in keyPaths {
+                    if let value = syntaxNode[keyPath: keyPath] {
+                        let key = "\(keyPath)".replacingOccurrences(of: #"\\#(node.syntaxNodeType)."#, with: "")
+                        n.structure[key] = "\(value)"
+                    }
+                }
+            }
+        case .collection, .choices:
+            break
+        }
+
         if current == nil {
             tree.append(n)
         } else {

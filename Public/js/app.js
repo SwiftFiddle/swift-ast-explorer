@@ -109,6 +109,28 @@ function updateStructureTree() {
 
         const node = tree.getNodeById(id);
         tree.select(node);
+
+        const structureKeys = Object.keys(data.structure);
+        if (structureKeys.length) {
+          const target = $(this).find("[data-role='display']");
+          if (!target.attr("__tippy")) {
+            const contents = [];
+            for (const key of structureKeys) {
+              const name = removeHTMLTag(key);
+              const value = removeHTMLTag(data.structure[key]);
+              contents.push(
+                `<span class='tooltip-title'>${name}:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${value}</span>`
+              );
+            }
+            tippy($(this).find("[data-role='display']")[0], {
+              content: contents.join("<br>"),
+              allowHTML: true,
+              placement: "right",
+              theme: "light-border",
+              maxWidth: 600,
+            });
+          }
+        }
         if (data.token) {
           const target = $(this).find("[data-role='display']");
           const tokenKind = removeHTMLTag(data.token.kind);
@@ -347,7 +369,6 @@ $("#format-button").on("click", (e) => {
 
 function removeHTMLTag(text) {
   const div = document.createElement("div");
-  console.log(text);
   div.innerHTML = text
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
