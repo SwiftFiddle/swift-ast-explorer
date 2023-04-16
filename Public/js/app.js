@@ -110,26 +110,21 @@ function updateStructureTree() {
         const node = tree.getNodeById(id);
         tree.select(node);
 
-        const structureKeys = Object.keys(data.structure);
-        if (structureKeys.length) {
+        if (data.structure.length) {
           const target = $(this).find("[data-role='display']")[0];
           if (!$(target).attr("__tippy")) {
             const contents = [];
-            for (const key of structureKeys) {
-              const name = removeHTMLTag(key);
-              const structureValue = data.structure[key];
-              if (
-                structureValue &&
-                structureValue.text &&
-                structureValue.kind
-              ) {
-                const text = removeHTMLTag(structureValue.text);
-                const kind = removeHTMLTag(structureValue.kind);
+            for (const property of data.structure) {
+              const name = removeHTMLTag(property.name);
+              const value = property.value;
+              if (value && value.text && value.kind) {
+                const text = removeHTMLTag(value.text);
+                const kind = removeHTMLTag(value.kind);
                 contents.push(
                   `<span class='tooltip-title'>${name}:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${text}<span style="color: #5D6C79;"> ${kind}</span></span>`
                 );
-              } else if (structureValue && structureValue.text) {
-                const text = removeHTMLTag(structureValue.text);
+              } else if (value && value.text) {
+                const text = removeHTMLTag(value.text);
                 contents.push(
                   `<span class='tooltip-title'>${name}:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${text}</span>`
                 );

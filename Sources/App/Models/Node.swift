@@ -5,7 +5,7 @@ final class Node: Encodable {
     var children = [Node]()
     weak var parent: Node?
     var range = Range(startRow: 0, startColumn: 0, endRow: 0, endColumn: 0)
-    var structure = [String: StructureValue]()
+    var structure = [StructureProperty]()
     var token: Token?
 
     struct Range: Codable {
@@ -48,7 +48,17 @@ final class Node: Encodable {
     }
 }
 
-class StructureValue: Encodable {
+final class StructureProperty: Encodable {
+  let name: String
+  let value: StructureValue?
+
+  init(name: String, value: StructureValue? = nil) {
+    self.name = name
+    self.value = value
+  }
+}
+
+final class StructureValue: Encodable {
     let text: String
     let kind: String?
 
