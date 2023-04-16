@@ -29,9 +29,12 @@ final class TokenVisitor: SyntaxRewriter {
         case .layout(let keyPaths):
             if let syntaxNode = node.as(node.syntaxNodeType) {
                 for keyPath in keyPaths {
-                    if let value = syntaxNode[keyPath: keyPath] {
+                    if let value = syntaxNode[keyPath: keyPath] as? TokenSyntax {
                         let key = "\(keyPath)".replacingOccurrences(of: #"\\#(node.syntaxNodeType)."#, with: "")
-                        n.structure[key] = "\(value)"
+                        n.structure[key] = StructureValue(text: "\(value)", kind: "\(value.tokenKind)")
+                    } else if let value = syntaxNode[keyPath: keyPath] {
+                        let key = "\(keyPath)".replacingOccurrences(of: #"\\#(node.syntaxNodeType)."#, with: "")
+                        n.structure[key] = StructureValue(text: "\(value)")
                     }
                 }
             }

@@ -112,23 +112,37 @@ function updateStructureTree() {
 
         const structureKeys = Object.keys(data.structure);
         if (structureKeys.length) {
-          const target = $(this).find("[data-role='display']");
-          if (!target.attr("__tippy")) {
+          const target = $(this).find("[data-role='display']")[0];
+          if (!$(target).attr("__tippy")) {
             const contents = [];
             for (const key of structureKeys) {
               const name = removeHTMLTag(key);
-              const value = removeHTMLTag(data.structure[key]);
-              contents.push(
-                `<span class='tooltip-title'>${name}:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${value}</span>`
-              );
+              const structureValue = data.structure[key];
+              if (
+                structureValue &&
+                structureValue.text &&
+                structureValue.kind
+              ) {
+                const text = removeHTMLTag(structureValue.text);
+                const kind = removeHTMLTag(structureValue.kind);
+                contents.push(
+                  `<span class='tooltip-title'>${name}:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${text}<span style="color: #5D6C79;"> ${kind}</span></span>`
+                );
+              } else if (structureValue && structureValue.text) {
+                const text = removeHTMLTag(structureValue.text);
+                contents.push(
+                  `<span class='tooltip-title'>${name}:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${text}</span>`
+                );
+              }
             }
-            tippy($(this).find("[data-role='display']")[0], {
+            tippy(target, {
               content: contents.join("<br>"),
               allowHTML: true,
               placement: "right",
               theme: "light-border",
               maxWidth: 600,
             });
+            $(target).attr("__tippy", true);
           }
         }
         if (data.token) {
