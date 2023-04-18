@@ -69,7 +69,7 @@ ul.gj-list-md li {
 
 .unexpectedText,
 .shebang {
-  color: #5D6C79;
+  color: #5d6c79;
 }
 
 .tooltip-title {
@@ -124,4 +124,22 @@ a .card-body:hover {
 
 .tippy-content {
   word-break: break-all;
+}
+
+.dropdown-menu {
+  min-width: 260px;
+}
+
+.active-tick .checkable::after {
+  font-family: "Font Awesome 6 Pro";
+  content: "\f00c";
+  color: #0d6efd;
+  float: right;
+  /* display: none; */
+}
+.active-tick svg {
+  color: #0d6efd;
+  float: right;
+  margin-top: 4px;
+  margin-left: 12px;
 }

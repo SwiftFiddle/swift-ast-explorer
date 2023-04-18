@@ -51,9 +51,12 @@ $("#run-button").on("click", (e) => {
 function update(editor) {
   showLoading();
 
+  const options = configurations();
+
   const code = editor.getValue();
   const json = {
-    code: code,
+    code,
+    options,
   };
   $.post("/update", json)
     .done(function (data, xhr) {
@@ -315,6 +318,25 @@ function updateStatisticsTable(statistics) {
 
   $("#statistics").tablesorter({ theme: "bootstrap" });
   $("#statistics").trigger("update");
+}
+
+$("#config-button").removeClass("disabled");
+document.querySelectorAll(".options-item").forEach((listItem) => {
+  listItem.addEventListener("click", (event) => {
+    event.preventDefault();
+    listItem.classList.toggle("active-tick");
+    update(editor);
+  });
+});
+
+function configurations() {
+  const options = [];
+  document.querySelectorAll(".options-item").forEach((listItem) => {
+    if (listItem.classList.contains("active-tick")) {
+      options.push(listItem.dataset.value);
+    }
+  });
+  return options;
 }
 
 function showLoading() {

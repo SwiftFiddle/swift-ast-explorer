@@ -66,7 +66,7 @@ func routes(_ app: Application) throws {
         let promise = req.eventLoop.makePromise(of: SyntaxResponse.self)
         DispatchQueue.global().async {
             do {
-                promise.succeed(try Parser.parse(code: parameter.code))
+                promise.succeed(try Parser.parse(code: parameter.code, options: parameter.options ?? []))
             } catch {
                 promise.fail(error)
             }
@@ -80,6 +80,7 @@ let swiftVersion = Environment.get("SWIFT_VERSION") ?? ""
 
 private struct RequestParameter: Decodable {
     let code: String
+    let options: [String]?
 }
 
 private let defaultSampleCode = #"""

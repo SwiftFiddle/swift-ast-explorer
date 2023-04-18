@@ -69,6 +69,23 @@
                 style="display: none;"></span>
               <span class="mx-2">Update</span>
             </button>
+            <div class="btn-group">
+              <button type="button" id="config-button"
+                class="btn btn-outline-primary btn-sm rounded-circle p-0 ms-1 disabled" aria-label="Config"
+                style="min-width: 2rem; min-height: 2rem;" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                aria-expanded="false">
+                <span class="fas fa-cog fa-fw"></span>
+              </button>
+              <ul class="dropdown-menu" style="padding-left: 0; padding-right: 0;">
+                <li class="options-item" data-value="fold">
+                  <a class="dropdown-item" href="#" style="padding-left: 0; padding-right: 0;">
+                    <div class="checkable px-2">
+                      <span>Fold all sequence expressions</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <button type="button" id="format-button"
               class="btn btn-outline-primary btn-sm rounded-circle p-0 ms-1 disabled" data-bs-toggle="tooltip"
               data-bs-placement="bottom" data-bs-container="#format-button" title="Format" aria-label="Format"
@@ -164,8 +181,8 @@
             target="_blank" rel="nofollow noopener noreferrer">
             <span class="far fa-at me-1"
               style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Creator</a>
-          <a class="text-reset text-decoration-none small ms-4 me-1 d-inline-block" href="https://github.com/sponsors/kishikawakatsumi"
-            target="_blank" rel="nofollow noopener noreferrer">
+          <a class="text-reset text-decoration-none small ms-4 me-1 d-inline-block"
+            href="https://github.com/sponsors/kishikawakatsumi" target="_blank" rel="nofollow noopener noreferrer">
             <span class="far fa-heart me-1"
               style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Donate</a>
         </div>
