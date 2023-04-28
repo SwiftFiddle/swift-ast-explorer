@@ -27,6 +27,7 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
+    container: swift:5.7.3-focal
     permissions:
       actions: read
       contents: read
@@ -58,6 +59,7 @@ jobs:
       # If this step fails, then you should remove it and run the build manually (see below)
       - name: Autobuild
         uses: github/codeql-action/autobuild@v2
+        if: matrix.language == 'javascript'
 
       # ℹ️ Command-line programs to run using the OS shell.
       # 📚 https://git.io/JvXDl
@@ -66,9 +68,10 @@ jobs:
       #    and modify them (or add more) to build your code if your project
       #    uses a compiled language
 
-      #- run: |
-      #   make bootstrap
-      #   make release
+      - run: swift build
+        if: matrix.language == 'swift'
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:${{matrix.language}}"
