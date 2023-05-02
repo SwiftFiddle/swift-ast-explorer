@@ -28,3 +28,17 @@ AST visualizer for Swift source code. https://swift-ast-explorer.com/
 ### Display an overview and inspect where each syntax is used.
 
 <img width="600" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95598041-64edc200-0a8a-11eb-818d-0c940d40ffd2.png">
+
+## Author
+
+[Kishikawa Katsumi](https://github.com/kishikawakatsumi)
+
+## Supporters & Sponsors
+
+Open source projects thrive on the generosity and support of people like you. If you find this project valuable, please consider extending your support. Contributing to the project not only sustains its growth, but also helps drive innovation and improve its features.
+
+To support this project, you can become a sponsor through [GitHub Sponsors](https://github.com/sponsors/kishikawakatsumi). Your contribution will be greatly appreciated and will help keep the project alive and thriving. Thanks for your consideration! :heart:
+
+## License
+
+The project is released under the [MIT License](https://github.com/kishikawakatsumi/swift-ast-explorer/blob/main/LICENSE)
