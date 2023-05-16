@@ -313,16 +313,16 @@
     integrity="sha512-JZSo0h5TONFYmyLMqp8k4oPhuo6yNk9mHM+FY50aBjpypfofqtEWsAgRDQm94ImLCzSaHeqNvYuD9382CEn2zw=="
     crossorigin="anonymous"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.21.0/ace.min.js"
-    integrity="sha512-hY0Xf5AP5BOmICsr5tmBOeTAboPDMZiF0gDL7L2SIzrLnyXg6lFMefY4+1J/Ci9dz6hSSJCt8kf9WURpXrGG4Q=="
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.21.1/ace.min.js"
+    integrity="sha512-H60Yu4KnSh67oGH1pce43pNggEdD299VVjBTUKOroudV5W0Tl7NhDy8M7Oglgm9m/RySBo7RJ7d5IIKFfSMSSg=="
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.21.0/ext-language_tools.min.js"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.21.1/ext-language_tools.min.js"
     integrity="sha512-6g6cvocV7eT/J8L44lL8gJKqq9onqQeYGgJO0DmrsYFcCfRl6wYkYA/KHS768r4QVTB4JxsCcMQ9gIezxpTCZw=="
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.21.0/theme-xcode.min.js"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.21.1/theme-xcode.min.js"
     integrity="sha512-bo2Y39IrrkTHpXjRo1kVhkpcW8/eusqqAF/KA3GxwxImB3qF9o7larxdStIVhvOcR2XvqBjmaJ2Fas/G/DVMTg=="
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.21.0/mode-swift.min.js"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.21.1/mode-swift.min.js"
     integrity="sha512-jNiXCrKrXFDtXBx/V7Oj/0ovYyZLXA8qs5gEt8z9bFwvUc3GrYOX29VPIoYoj2VN6chqkbRRmSvjtP747zIfOg=="
     crossorigin="anonymous"></script>
 
