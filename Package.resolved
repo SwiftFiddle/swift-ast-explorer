@@ -195,8 +195,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "f4b00a5350238fe896d865d96d64f12fcbbeda95",
-          "version": "4.76.0"
+          "revision": "b42287f2c3909930be6329922906a6a8092943d2",
+          "version": "4.76.2"
         }
       },
       {
@@ -204,8 +204,8 @@
         "repositoryURL": "https://github.com/vapor/websocket-kit.git",
         "state": {
           "branch": null,
-          "revision": "2166cbe932b29b6419f9cd751e8b27c647e1238e",
-          "version": "2.8.0"
+          "revision": "17c0afbf24f4e288e183bc34317dc97b5cd084bd",
+          "version": "2.9.0"
         }
       }
     ]
