@@ -3,29 +3,22 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug Run",
-      "program": "${workspaceFolder:swift-ast-explorer}/.build/debug/Run",
+      "sourceLanguages": ["swift"],
+      "name": "Debug App",
+      "program": "${workspaceFolder:swift-ast-explorer}/.build/debug/App",
       "args": [],
       "cwd": "${workspaceFolder:swift-ast-explorer}",
-      "preLaunchTask": "swift: Build Debug Run"
+      "preLaunchTask": "swift: Build Debug App"
     },
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Release Run",
-      "program": "${workspaceFolder:swift-ast-explorer}/.build/release/Run",
+      "sourceLanguages": ["swift"],
+      "name": "Release App",
+      "program": "${workspaceFolder:swift-ast-explorer}/.build/release/App",
       "args": [],
       "cwd": "${workspaceFolder:swift-ast-explorer}",
-      "preLaunchTask": "swift: Build Release Run"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "Test swift-ast-explorer",
-      "program": "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest",
-      "args": [".build/debug/swift-ast-explorerPackageTests.xctest"],
-      "cwd": "${workspaceFolder:swift-ast-explorer}",
-      "preLaunchTask": "swift: Build All"
+      "preLaunchTask": "swift: Build Release App"
     }
   ]
 }

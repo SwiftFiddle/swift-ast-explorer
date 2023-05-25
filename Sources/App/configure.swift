@@ -1,18 +1,24 @@
 import Vapor
 import Leaf
 
-public func configure(_ app: Application) throws {
-    app.middleware = Middlewares()
-    app.middleware.use(CommonErrorMiddleware())
-    app.middleware.use(CustomHeaderMiddleware())
-    app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
+public func configure(_ app: Application) async throws {
+  app.middleware = Middlewares()
+  app.middleware.use(CommonErrorMiddleware())
+  app.middleware.use(CustomHeaderMiddleware())
 
-    app.http.server.configuration.supportPipelining = true
-    app.http.server.configuration.requestDecompression = .enabled
-    app.http.server.configuration.responseCompression = .enabled
+  let publicDirectory = "\(app.directory.publicDirectory)/dist"
+  app.middleware.use(FileMiddleware(publicDirectory: publicDirectory))
 
-    app.views.use(.leaf)
-    app.leaf.cache.isEnabled = app.environment.isRelease
+  app.http.server.configuration.port = Environment.process.PORT.flatMap { Int($0) } ?? 8080
+  app.http.server.configuration.requestDecompression = .enabled
+  app.http.server.configuration.responseCompression = .enabled
+  app.http.server.configuration.supportPipelining = true
 
-    try routes(app)
+  app.caches.use(.memory)
+
+  app.views.use(.leaf)
+  app.leaf.configuration.rootDirectory = publicDirectory
+  app.leaf.cache.isEnabled = app.environment.isRelease
+
+  try routes(app)
 }

@@ -1,0 +1,51 @@
+.tree-view {
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
+  font-size: 11pt;
+  overflow: scroll;
+}
+
+.tree-view ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tree-view li.entry {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 5px 5px 0 5px;
+  cursor: pointer;
+}
+
+.tree-view li.entry.hover {
+  background-color: rgb(100, 149, 237, 0.25);
+}
+
+.tree-view li .caret {
+  position: absolute;
+  left: -20px;
+  color: #a9a9a9;
+}
+
+.tree-view .decl-syntax {
+  color: #007aff;
+}
+.tree-view .expr-syntax {
+  color: #ff8c00;
+}
+.tree-view .pattern-syntax {
+  color: #008b8b;
+}
+.tree-view .type-syntax {
+  color: #8b0000;
+}
+
+.tree-view .token {
+  font-weight: bold;
+  cursor: auto;
+}
+
+.tree-view .token .badge {
+  color: #696969;
+  background-color: #dcdcdc;
+}

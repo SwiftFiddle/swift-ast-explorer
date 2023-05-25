@@ -1,333 +1,523 @@
 "use strict";
 
-import { SwiftFormat } from "./swift_format.js";
+import { Tooltip } from "bootstrap";
+import { TreeView } from "./tree_view.js";
+import { Popover } from "./popover.js";
+import { WebSocketClient } from "./websocket.js";
+import { debounce } from "./debounce.js";
 
-ace.require("ace/ext/language_tools");
+import "../css/editor.css";
+import "../css/syntax.css";
+
+import DataTable from "datatables.net";
+import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
+
+import "ace-builds/src-min-noconflict/ace";
+import "ace-builds/src-min-noconflict/ext-language_tools";
+import "ace-builds/src-min-noconflict/mode-swift";
+import "ace-builds/src-min-noconflict/theme-xcode";
 const Range = ace.require("ace/range").Range;
 
-const editor = ace.edit("editor-container");
-editor.setTheme("ace/theme/xcode");
-editor.session.setMode("ace/mode/swift");
-editor.$blockScrolling = Infinity;
-editor.setOptions({
-  tabSize: 2,
-  useSoftTabs: true,
-  autoScrollEditorIntoView: true,
-  fontFamily: "Menlo,sans-serif,monospace",
-  fontSize: "11pt",
-  showInvisibles: false,
-  enableAutoIndent: true,
-  enableBasicAutocompletion: true,
-  enableSnippets: true,
-  enableLiveAutocompletion: true,
-  scrollPastEnd: 0.5, // Overscroll
-  wrap: "free",
-  displayIndentGuides: true,
-});
-editor.renderer.setOptions({
-  showFoldWidgets: false,
-  showPrintMargin: false,
-});
+export class App {
+  get contentMaxHeight() {
+    const headerHeight = document.querySelector("header").clientHeight;
+    const footerHeight = document.querySelector("footer").clientHeight;
+    return `calc(100vh - ${headerHeight}px - ${footerHeight}px)`;
+  }
 
-const results = $("#results");
-let tree = null;
+  constructor() {
+    this.editor = ace.edit("editor-container");
+    this.editor.setTheme("ace/theme/xcode");
+    this.editor.session.setMode("ace/mode/swift");
+    this.editor.$blockScrolling = Infinity;
+    this.editor.setOptions({
+      tabSize: 2,
+      useSoftTabs: true,
+      autoScrollEditorIntoView: true,
+      fontFamily:
+        "Menlo, Consolas, 'DejaVu Sans Mono', 'Ubuntu Mono', monospace",
+      fontSize: "11pt",
+      showInvisibles: false,
+      enableAutoIndent: true,
+      enableBasicAutocompletion: true,
+      enableSnippets: true,
+      enableLiveAutocompletion: true,
+      scrollPastEnd: 0.5, // Overscroll
+      wrap: "free",
+      displayIndentGuides: true,
+    });
+    this.editor.renderer.setOptions({
+      showFoldWidgets: false,
+      showPrintMargin: false,
+    });
 
-setTimeout(() => {
-  update(editor);
-}, 400);
+    this.treeViewContainer = document.getElementById("structure");
+    this.popover = new Popover();
 
-const updateOnTextChange = $.debounce(400, (editor) => {
-  update(editor);
-});
-editor.on("change", (change, editor) => {
-  updateOnTextChange(editor);
-});
+    this.syntaxMapContainer = document.getElementById("syntax-map");
+    this.statisticsContainer = document.getElementById("statistics");
 
-$("#run-button").on("click", (e) => {
-  e.preventDefault();
-  update(editor);
-});
+    this.init();
+  }
 
-function update(editor) {
-  showLoading();
+  init() {
+    [].slice
+      .call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      .map((trigger) => {
+        return new Tooltip(trigger);
+      });
 
-  const options = configurations();
+    const updateOnTextChange = debounce(() => {
+      this.update();
+    }, 400);
+    this.editor.on("change", (change) => {
+      updateOnTextChange();
+    });
 
-  const code = editor.getValue();
-  const json = {
-    code,
-    options,
-  };
-  $.post("/update", json)
-    .done(function (data, xhr) {
-      results.html(data.syntaxHTML);
+    document.getElementById("run-button").addEventListener("click", (event) => {
+      event.preventDefault();
+      this.update();
+    });
 
-      if (tree) {
-        tree.destroy();
+    document.getElementById("config-button").classList.remove("disabled");
+    document.querySelectorAll(".options-item").forEach((listItem) => {
+      listItem.addEventListener("click", (event) => {
+        event.preventDefault();
+        listItem.classList.toggle("active-tick");
+        this.update();
+      });
+    });
+
+    const formatter = new WebSocketClient("wss://swift-format.com/api/ws");
+    formatter.onresponse = (response) => {
+      if (!response) {
+        return;
       }
-      tree = $("#structure").tree({
-        dataSource: JSON.parse(
+      if (response.output) {
+        this.editor.setValue(response.output);
+        this.editor.clearSelection();
+      }
+    };
+    const formatButton = document.getElementById("format-button");
+    formatButton.classList.remove("disabled");
+    formatButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      formatter.send({ code: this.editor.getValue() });
+    });
+
+    const dropZone = document.getElementById("editor-container");
+    dropZone.addEventListener(
+      "dragover",
+      (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        event.dataTransfer.dropEffect = "copy";
+      },
+      false
+    );
+    dropZone.addEventListener(
+      "drop",
+      (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+
+        const files = event.dataTransfer.files;
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          this.editor.setValue(event.target.result);
+          this.editor.clearSelection();
+        };
+        reader.readAsText(files[0], "UTF-8");
+      },
+      false
+    );
+
+    this.update();
+  }
+
+  update() {
+    showLoading();
+
+    const options = configurations();
+
+    const code = this.editor.getValue();
+    const json = {
+      code,
+      options,
+    };
+    fetch("/update", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(json),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const structureData = JSON.parse(
           data.syntaxJSON
             .replace(/&/g, "&amp;")
             .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;")
             .replace(/'/g, "&#039;")
-        ),
-      });
-
-      const children = tree.getChildren(tree);
-      for (let i = 0, len = children.length; i < Math.min(len, 100); i++) {
-        tree.expand(tree.getNodeById(children[i]));
-      }
-
-      updateStructureTree();
-      updateSyntaxSourceMap();
-      updateStatisticsTable(data.statistics);
-    })
-    .fail(function (response) {
-      if (response.status == 413) {
-        alert("Payload Too Large");
-      } else {
-        alert("Something went wrong");
-      }
-    })
-    .always(function () {
-      hideLoading();
-      editor.focus();
-    });
-}
-
-function updateStructureTree() {
-  $("#structure")
-    .find("li")
-    .each(function (i, element) {
-      const id = $(element).attr("data-id");
-      const data = tree.getDataById(id);
-      if (data.token) {
-        element.style.fontWeight = "bold";
-      }
-
-      $(this).mouseover(function (event) {
-        const id = $(this).attr("data-id");
-
-        const node = tree.getNodeById(id);
-        tree.select(node);
-
-        if (data.structure.length) {
-          const target = $(this).find("[data-role='display']")[0];
-          if (!$(target).attr("__tippy")) {
-            const contents = [];
-            for (const property of data.structure) {
-              const name = removeHTMLTag(property.name);
-              const value = property.value;
-              if (value && value.text && value.kind) {
-                const text = removeHTMLTag(value.text);
-                const kind = removeHTMLTag(value.kind);
-                contents.push(
-                  `<span class='tooltip-title'>${name}:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${text}<span style="color: #5D6C79;"> ${kind}</span></span>`
-                );
-              } else if (value && value.text) {
-                const text = removeHTMLTag(value.text);
-                contents.push(
-                  `<span class='tooltip-title'>${name}:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${text}</span>`
-                );
-              }
-            }
-            tippy(target, {
-              content: contents.join("<br>"),
-              allowHTML: true,
-              placement: "right",
-              theme: "light-border",
-              maxWidth: 600,
-            });
-            $(target).attr("__tippy", true);
-          }
-        }
-        if (data.token) {
-          const target = $(this).find("[data-role='display']");
-          const tokenKind = removeHTMLTag(data.token.kind);
-          const tokenLeadingTrivia = removeHTMLTag(data.token.leadingTrivia);
-          const tokenText = removeHTMLTag(data.text);
-          const tokenTrailingTrivia = removeHTMLTag(data.token.trailingTrivia);
-
-          if (!target.attr("__tippy")) {
-            const kind = `<span class='tooltip-title'>kind:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${tokenKind}</span>`;
-            const leadingTrivia = `<span class='tooltip-title'>leadingTrivia:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${tokenLeadingTrivia}</span>`;
-            const text = `<span class='tooltip-title'>text:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${tokenText}</span>`;
-            const trailingTrivia = `<span class='tooltip-title'>trailingTrivia:</span><span style='font-family: "Menlo", sans-serif, monospace;'> ${tokenTrailingTrivia}</span>`;
-            const content = `${kind}<br>${leadingTrivia}<br>${text}<br>${trailingTrivia}`;
-            tippy($(this).find("[data-role='display']")[0], {
-              content: content,
-              allowHTML: true,
-              placement: "auto",
-              theme: "light-border",
-            });
-            target.attr("__tippy", true);
-          }
-        }
-
-        editor.selection.setRange(
-          new Range(
-            data.range.startRow,
-            data.range.startColumn,
-            data.range.endRow,
-            data.range.endColumn
-          )
         );
 
-        event.stopPropagation();
-      });
+        this.updateStructure(structureData);
 
-      $(this).mouseout(function (e) {
-        tree.unselectAll();
-      });
-    });
-}
+        this.syntaxMapContainer.innerHTML = data.syntaxHTML;
+        this.updateSyntaxMap();
 
-function updateSyntaxSourceMap() {
-  let visibleTooltips = [];
+        const statistics = structureData
+          .filter((node) => node.token === undefined)
+          .reduce((acc, item) => {
+            const existingItem = acc.find((a) => a.text === item.text);
 
-  $("#results")
-    .find("span")
-    .each(function (i, e) {
-      $(this).mouseover(function (e) {
-        let element = e.target;
-        element.style.backgroundColor = "rgba(81, 101, 255, 0.5)";
+            if (existingItem) {
+              existingItem.ranges.push(item.range);
+            } else {
+              acc.push({ text: item.text, ranges: [item.range] });
+            }
 
-        if (!element.getAttribute("__tippy")) {
-          const title = `<span class='tooltip-title'>${element.dataset.tooltipTitle}</span>`;
-          const content = `<span style='font-family: "Menlo", sans-serif, monospace;'>${element.dataset.tooltipContent}</span>`;
-          tippy(element, {
-            content: `${title}: ${content}`,
-            allowHTML: true,
-            placement: "left",
-            theme: "light-border",
-            onShow(instance) {
-              visibleTooltips.push(instance);
-            },
-            onHidden(instance) {
-              visibleTooltips = visibleTooltips.filter((e) => e !== instance);
-            },
-          });
-          element.setAttribute("__tippy", true);
+            return acc;
+          }, []);
+        this.updateStatistics(statistics);
+      })
+      .catch((error) => {
+        console.log(error);
+        if (error.status == 413) {
+          alert("Payload Too Large");
+        } else {
+          alert("Something went wrong");
         }
-
-        $(this)
-          .parents("span")
-          .each(function (i, e) {
-            if (!e.getAttribute("__tippy")) {
-              const title = `<span class='tooltip-title'>${e.dataset.tooltipTitle}</span>`;
-              const content = `<span style='font-family: "Menlo", sans-serif, monospace;'>${e.dataset.tooltipContent}</span>`;
-              const tooltip = tippy(element, {
-                content: `${title}: ${content}`,
-                allowHTML: true,
-                placement: "left",
-                theme: "light-border",
-                onShow(instance) {
-                  visibleTooltips.push(instance);
-                  const placements = ["left", "bottom", "right"];
-                  visibleTooltips.forEach((tooltip, i) => {
-                    tooltip.setProps({
-                      placement: placements[i % placements.length],
-                      offset: [0 + 20 * ((i / placements.length) ^ 0), 20],
-                    });
-                  });
-                },
-                onHidden(instance) {
-                  visibleTooltips = visibleTooltips.filter(
-                    (e) => e !== instance
-                  );
-                },
-              });
-              e.setAttribute("__tippy", true);
-              tooltip.show();
-            }
-
-            createDOMRectElement(e.getBoundingClientRect());
-            if (i > 0) {
-              return false;
-            }
-
-            function createDOMRectElement(domRect) {
-              let rectElements = document.getElementsByClassName("dom-rect");
-              for (let i = 0, l = rectElements.length; l > i; i++) {
-                rectElements[0].parentNode.removeChild(rectElements[0]);
-              }
-
-              let rectElement = document.createElement("div");
-              rectElement.className = "dom-rect";
-              rectElement.style.left = domRect.x - 1 + "px";
-              rectElement.style.top = domRect.y - 1 + "px";
-              rectElement.style.width = domRect.width + "px";
-              rectElement.style.height = domRect.height + "px";
-              rectElement.style.pointerEvents = "none";
-              rectElement.style.position = "absolute";
-              rectElement.style.border = "1px solid rgb(81, 101, 255)";
-              rectElement.style.backgroundColor = "rgba(81, 101, 255, 0.25)";
-              document.body.appendChild(rectElement);
-            }
-          });
-
-        e.stopPropagation();
+      })
+      .finally(() => {
+        hideLoading();
+        this.editor.focus();
       });
+  }
 
-      $(this).mouseout(function (e) {
-        let element = e.target;
-        element.style.backgroundColor = "";
+  updateStructure(structureData) {
+    this.treeViewContainer.innerHTML = "";
+    this.treeViewContainer.style.maxHeight = this.contentMaxHeight;
+    this.treeView = new TreeView(this.treeViewContainer, structureData);
 
-        let rectElements = document.getElementsByClassName("dom-rect");
-        for (let i = 0, l = rectElements.length; l > i; i++) {
-          rectElements[0].parentNode.removeChild(rectElements[0]);
-        }
-      });
-    });
-}
+    const tabContainerRect = document
+      .querySelector(".tab-content")
+      .getBoundingClientRect();
 
-function updateStatisticsTable(statistics) {
-  $("#statistics > tbody").empty();
-
-  statistics.forEach((row) => {
-    const ranges = JSON.stringify(row.ranges);
-    $("#statistics > tbody").append(
-      `<tr data-ranges='${ranges}'><td style="font-family: 'Menlo', sans-serif, monospace;">${row.syntax}</td><td><div>${row.ranges.length}</div></td></tr>`
-    );
-  });
-
-  $("#statistics > tbody tr").mouseover(function () {
-    const ranges = $(this).data("ranges");
-    ranges.forEach((range) => {
-      editor.session.addMarker(
+    let mouseoverCancel = undefined;
+    this.treeView.onmouseover = (event, target, data) => {
+      this.editor.selection.setRange(
         new Range(
-          range.startRow,
-          range.startColumn,
-          range.endRow,
-          range.endColumn
-        ),
-        "editor-marker",
-        "text"
+          data.range.startRow,
+          data.range.startColumn,
+          data.range.endRow,
+          data.range.endColumn
+        )
       );
-    });
-  });
 
-  $("#statistics > tbody tr").mouseout(function () {
-    const markers = editor.session.getMarkers();
-    Object.entries(markers).forEach(([key, value]) => {
-      editor.session.removeMarker(value.id);
-    });
-  });
+      if (mouseoverCancel) {
+        cancelAnimationFrame(mouseoverCancel);
+      }
+      mouseoverCancel = requestAnimationFrame(() => {
+        if (!data.structure.length && !data.token) {
+          return;
+        }
+        if (data.structure.length > 0) {
+          const container = document.createElement("div");
 
-  $("#statistics").tablesorter({ theme: "bootstrap" });
-  $("#statistics").trigger("update");
+          const title = document.createElement("div");
+          title.classList.add("title");
+          title.innerText = `${data.text}Syntax`;
+          container.appendChild(title);
+
+          switch (data.type) {
+            case "decl": {
+              const label = document.createElement("span");
+              label.classList.add("badge", "text-bg-light");
+              label.innerText = "DeclSyntax";
+              title.appendChild(label);
+              break;
+            }
+            case "expr": {
+              const label = document.createElement("span");
+              label.classList.add("badge", "text-bg-light");
+              label.innerText = "ExprSyntax";
+              title.appendChild(label);
+              break;
+            }
+            case "pattern": {
+              const label = document.createElement("span");
+              label.classList.add("badge", "text-bg-light");
+              label.innerText = "PatternSyntax";
+              title.appendChild(label);
+              break;
+            }
+            case "type": {
+              const label = document.createElement("span");
+              label.classList.add("badge", "text-bg-light");
+              label.innerText = "TypeSyntax";
+              title.appendChild(label);
+              break;
+            }
+            default:
+              break;
+          }
+
+          const dl = document.createElement("dl");
+
+          const dt = document.createElement("dt");
+          const dd = document.createElement("dd");
+
+          dt.innerHTML = "Source Range";
+          const range = data.range;
+          // prettier-ignore
+          dd.innerHTML = `Ln ${range.startRow + 1}, Col ${range.startColumn + 1} - Ln ${range.endRow + 1}, Col ${range.endColumn + 1}`;
+
+          dl.appendChild(dt);
+          dl.appendChild(dd);
+
+          for (const property of data.structure) {
+            const dt = document.createElement("dt");
+            const dd = document.createElement("dd");
+
+            const name = property.name;
+            const value = property.value;
+            if (value && value.text && value.kind) {
+              const text = stripHTMLTag(value.text);
+              const kind = stripHTMLTag(value.kind);
+              dt.innerHTML = `${name}`;
+              dd.innerHTML = `${text}<span class="badge rounded-pill">${kind}</span>`;
+            } else if (value && value.text) {
+              const text = stripHTMLTag(value.text);
+              dt.innerHTML = `${name}`;
+              dd.innerHTML = `${text}`;
+            }
+            dl.appendChild(dt);
+            dl.appendChild(dd);
+          }
+          container.appendChild(dl);
+
+          this.popover.content = container.innerHTML;
+        }
+        if (data.token) {
+          const container = document.createElement("div");
+
+          const title = document.createElement("div");
+          title.classList.add("title");
+          title.innerText = "TokenSyntax";
+          container.appendChild(title);
+
+          const dl = document.createElement("dl");
+
+          {
+            const dt = document.createElement("dt");
+            const dd = document.createElement("dd");
+
+            dt.innerHTML = "Source Range";
+            const range = data.range;
+            // prettier-ignore
+            dd.innerHTML = `Ln ${range.startRow + 1}, Col ${range.startColumn + 1} - Ln ${range.endRow + 1}, Col ${range.endColumn + 1}`;
+
+            dl.appendChild(dt);
+            dl.appendChild(dd);
+          }
+
+          {
+            const dt = document.createElement("dt");
+            dt.innerHTML = "kind";
+            dl.appendChild(dt);
+
+            const dd = document.createElement("dd");
+            dd.innerHTML = stripHTMLTag(data.token.kind);
+            dl.appendChild(dd);
+          }
+          {
+            const dt = document.createElement("dt");
+            dt.innerHTML = "leadingTrivia";
+            dl.appendChild(dt);
+
+            const dd = document.createElement("dd");
+            dd.innerHTML = stripHTMLTag(data.token.leadingTrivia);
+            dl.appendChild(dd);
+          }
+          {
+            const dt = document.createElement("dt");
+            dt.innerHTML = "text";
+            dl.appendChild(dt);
+
+            const dd = document.createElement("dd");
+            dd.innerHTML = stripHTMLTag(data.text);
+            dl.appendChild(dd);
+          }
+          {
+            const dt = document.createElement("dt");
+            dt.innerHTML = "trailingTrivia";
+            dl.appendChild(dt);
+
+            const dd = document.createElement("dd");
+            dd.innerHTML = stripHTMLTag(data.token.trailingTrivia);
+
+            dl.appendChild(dd);
+          }
+          container.appendChild(dl);
+
+          this.popover.content = container.innerHTML;
+        }
+
+        const parent = target.parentElement;
+        const caret = parent.querySelector(":scope > div > .caret");
+        this.popover.show(caret || target, {
+          lowerLimit: tabContainerRect.top + tabContainerRect.height,
+          offsetX: caret ? 0 : 24,
+        });
+      });
+    };
+
+    let mouseoutCancel = undefined;
+    this.treeView.onmouseout = (event, target, data) => {
+      if (mouseoutCancel) {
+        cancelAnimationFrame(mouseoutCancel);
+      }
+      mouseoutCancel = requestAnimationFrame(() => {
+        if (!event.relatedTarget.classList.contains("popover-content")) {
+          this.popover.hide();
+        }
+      });
+    };
+
+    let mouseoutCancel2 = undefined;
+    this.popover.onmouseout = (event) => {
+      if (mouseoutCancel2) {
+        cancelAnimationFrame(mouseoutCancel2);
+      }
+      mouseoutCancel2 = requestAnimationFrame(() => {
+        this.popover.hide();
+      });
+    };
+  }
+
+  updateSyntaxMap() {
+    const popover = this.popover;
+    const tabContainerRect = document
+      .querySelector(".tab-content")
+      .getBoundingClientRect();
+
+    let mouseoverCancel = undefined;
+    $(this.syntaxMapContainer)
+      .find("span")
+      .each(function () {
+        $(this).mouseover(function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          if (mouseoverCancel) {
+            cancelAnimationFrame(mouseoverCancel);
+          }
+          mouseoverCancel = requestAnimationFrame(() => {
+            const contents = [];
+
+            $(this)
+              .parents("span")
+              .each(function (index, element) {
+                createDOMRectElement(element.getBoundingClientRect());
+                contents.push([element.dataset.title, element.dataset.content]);
+                if (index > 0) {
+                  return false;
+                }
+              });
+
+            let element = event.target;
+            element.style.backgroundColor = "rgba(81, 101, 255, 0.5)";
+
+            contents.reverse();
+            contents.push([element.dataset.title, element.dataset.content]);
+
+            const dl = `<dl>${contents
+              .map((content) => {
+                return `<dt>${content[0]}</dt><dd>${content[1]}</dd>`;
+              })
+              .join("")}</dl>`;
+            popover.content = dl;
+
+            popover.show(element, {
+              lowerLimit: tabContainerRect.top + tabContainerRect.height,
+              offsetX: 40,
+            });
+          });
+        });
+
+        let mouseoutCancel = undefined;
+        $(this).mouseout(function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          if (mouseoutCancel) {
+            cancelAnimationFrame(mouseoutCancel);
+          }
+          mouseoutCancel = requestAnimationFrame(() => {
+            let element = event.target;
+            element.style.backgroundColor = "";
+
+            let rectElements = document.getElementsByClassName("dom-rect");
+            for (let i = 0, l = rectElements.length; l > i; i++) {
+              rectElements[0].parentNode.removeChild(rectElements[0]);
+            }
+
+            popover.hide();
+          });
+        });
+      });
+  }
+
+  updateStatistics(statistics) {
+    const tbody = this.statisticsContainer.querySelector(":scope > tbody");
+    tbody.innerHTML = "";
+
+    for (const row of statistics) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td style="font-family: 'Menlo', sans-serif, monospace;">${row.text}</td><td><div>${row.ranges.length}</div></td>`;
+      tbody.appendChild(tr);
+
+      tr.addEventListener("mouseover", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        for (const range of row.ranges) {
+          this.editor.session.addMarker(
+            new Range(
+              range.startRow,
+              range.startColumn,
+              range.endRow,
+              range.endColumn
+            ),
+            "editor-marker",
+            "text"
+          );
+        }
+      });
+      tr.addEventListener("mouseout", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const markers = this.editor.session.getMarkers();
+        for (const [key, value] of Object.entries(markers)) {
+          this.editor.session.removeMarker(value.id);
+        }
+      });
+    }
+
+    if (this.dataTable) {
+      this.dataTable.destroy();
+    }
+    this.dataTable = new DataTable("#statistics", {
+      autoWidth: false,
+      info: false,
+      paging: false,
+      searching: false,
+    });
+  }
 }
-
-$("#config-button").removeClass("disabled");
-document.querySelectorAll(".options-item").forEach((listItem) => {
-  listItem.addEventListener("click", (event) => {
-    event.preventDefault();
-    listItem.classList.toggle("active-tick");
-    update(editor);
-  });
-});
 
 function configurations() {
   const options = [];
@@ -340,65 +530,37 @@ function configurations() {
 }
 
 function showLoading() {
-  $("#run-button").addClass("disabled");
-  $("#run-button-icon").hide();
-  $("#run-button-spinner").show();
+  document.getElementById("run-button").classList.add("disabled");
+  document.getElementById("run-button-icon").classList.add("d-none");
+  document.getElementById("run-button-spinner").classList.remove("d-none");
 }
 
 function hideLoading() {
-  $("#run-button").removeClass("disabled");
-  $("#run-button-icon").show();
-  $("#run-button-spinner").hide();
+  document.getElementById("run-button").classList.remove("disabled");
+  document.getElementById("run-button-icon").classList.remove("d-none");
+  document.getElementById("run-button-spinner").classList.add("d-none");
 }
 
-function handleFileSelect(event) {
-  event.stopPropagation();
-  event.preventDefault();
-
-  const files = event.dataTransfer.files;
-  const reader = new FileReader();
-  reader.onload = (event) => {
-    const editor = ace.edit("editor-container");
-    editor.setValue(event.target.result);
-    editor.clearSelection();
-  };
-  reader.readAsText(files[0], "UTF-8");
-}
-
-function handleDragOver(event) {
-  event.stopPropagation();
-  event.preventDefault();
-  event.dataTransfer.dropEffect = "copy";
-}
-
-const dropZone = document.getElementById("editor-container");
-dropZone.addEventListener("dragover", handleDragOver, false);
-dropZone.addEventListener("drop", handleFileSelect, false);
-
-const formatterService = new SwiftFormat("wss://swift-format.com/api/ws");
-formatterService.onresponse = (response) => {
-  if (!response) {
-    return;
+function createDOMRectElement(domRect) {
+  let rectElements = document.getElementsByClassName("dom-rect");
+  for (let i = 0, l = rectElements.length; l > i; i++) {
+    rectElements[0].parentNode.removeChild(rectElements[0]);
   }
-  if (response.output) {
-    editor.setValue(response.output);
-    editor.clearSelection();
-  }
-};
 
-[].slice
-  .call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-  .map((trigger) => {
-    return new bootstrap.Tooltip(trigger);
-  });
+  let rectElement = document.createElement("div");
+  rectElement.className = "dom-rect";
+  rectElement.style.left = domRect.x - 1 + "px";
+  rectElement.style.top = domRect.y - 1 + "px";
+  rectElement.style.width = domRect.width + "px";
+  rectElement.style.height = domRect.height + "px";
+  rectElement.style.pointerEvents = "none";
+  rectElement.style.position = "absolute";
+  rectElement.style.border = "1px solid rgb(81, 101, 255)";
+  rectElement.style.backgroundColor = "rgba(81, 101, 255, 0.25)";
+  document.body.appendChild(rectElement);
+}
 
-$("#format-button").removeClass("disabled");
-$("#format-button").on("click", (e) => {
-  e.preventDefault();
-  formatterService.format(editor.getValue());
-});
-
-function removeHTMLTag(text) {
+function stripHTMLTag(text) {
   const div = document.createElement("div");
   div.innerHTML = text
     .replace(/&lt;/g, "<")
