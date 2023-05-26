@@ -5,6 +5,10 @@
   }
 }
 
+.tab-content {
+  overflow: scroll;
+}
+
 #syntax-map {
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
   font-size: 11pt;
