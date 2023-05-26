@@ -1,4 +1,14 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 @media (max-width: 767.98px) {
+  body {
+    overflow-y: auto;
+  }
+
   .column {
     height: 40vh;
   }
