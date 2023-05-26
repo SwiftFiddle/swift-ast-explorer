@@ -1,0 +1,11 @@
+#editor-container {
+  position: relative;
+  height: 100%;
+  line-height: 1.5;
+}
+
+.editor-marker {
+  position: absolute;
+  border: 1px solid rgb(81, 101, 255);
+  background-color: rgba(81, 101, 255, 0.25);
+}

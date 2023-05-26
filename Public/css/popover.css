@@ -1,0 +1,55 @@
+.popover {
+  position: absolute;
+  z-index: 1070;
+  font-size: 10pt;
+}
+
+.popover-content {
+  margin: 0 0 0 0;
+  padding: 8px 8px;
+  min-width: 400px;
+  max-width: 40vw;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.popover-content .title {
+  margin: 0 8px 8px 8px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.popover-content .badge {
+  margin: 0 8px 0 8px;
+  color: #808080;
+  background-color: #f2f2f2;
+}
+
+.popover-content dl {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-height: 60vh;
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
+  overflow: scroll;
+}
+
+.popover-content dt {
+  padding: 0 8px;
+  background-color: #f2f2f2;
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
+}
+
+.popover-content dd {
+  margin-bottom: 2px;
+  margin-left: 0;
+  padding: 0 8px;
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
+  white-space: pre-line;
+}
+
+.popover-content dd .badge {
+  margin: 0 8px 0 8px;
+}

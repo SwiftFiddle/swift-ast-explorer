@@ -4,6 +4,9 @@ on:
     branches: [master]
   workflow_dispatch:
 
+env:
+  FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -12,4 +15,4 @@ jobs:
       - name: Build
         run: |
           set -ex
-          docker build --rm --no-cache .
+          docker build --rm --no-cache --build-arg FONTAWESOME_TOKEN=${{ env.FONTAWESOME_TOKEN }} .

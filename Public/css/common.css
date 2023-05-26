@@ -3,77 +3,8 @@
   height: 2rem;
 }
 
-/* Overide box-sizing to avoid flicker seen in chromium-browsers */
-*,
-*::before,
-*::after {
-  box-sizing: content-box;
-}
-
-#editor-container {
-  position: relative;
-  height: 100%;
-  line-height: 1.5;
-}
-
-.editor-marker {
-  position: absolute;
-  border: 1px solid rgb(81, 101, 255);
-  background-color: rgba(81, 101, 255, 0.25);
-}
-
-#results {
-  font-family: "Menlo", sans-serif, monospace;
-  font-size: 11pt;
-}
-
-.gj-button-md,
-ul.gj-list-md li {
-  font-family: "Menlo", sans-serif, monospace;
-  font-size: 11pt;
-}
-
-.keyword,
-.atSign {
-  color: #c800a4;
-}
-
-.importKeyword {
-  color: #1c00cf;
-}
-
-.stringLiteral {
-  color: #df0002;
-}
-
-.StringLiteralExpr {
-  color: #df0002;
-}
-
-.IntegerLiteralExpr,
-.FloatLiteralExpr {
-  color: #3a00dc;
-}
-
-.integerLiteral,
-.floatingLiteral {
-  color: #3a00dc;
-}
-
-.lineComment,
-.blockComment,
-.docLineComment,
-.docBlockComment {
-  color: #008e00;
-}
-
-.unexpectedText,
-.shebang {
-  color: #5d6c79;
-}
-
-.tooltip-title {
-  color: gray;
+.tab-content {
+  overflow: scroll;
 }
 
 .lined .nav-link {
@@ -94,10 +25,10 @@ ul.gj-list-md li {
   border-color: #0d6efd;
 }
 
-#right-pane {
-  height: 90vh;
-  overflow: scroll;
+#syntax-map {
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
   font-size: 11pt;
+  line-height: 1.5;
 }
 
 @media (max-width: 767.98px) {
@@ -122,24 +53,20 @@ a .card-body:hover {
   background-color: #f8f9fa;
 }
 
-.tippy-content {
-  word-break: break-all;
-}
-
 .dropdown-menu {
-  min-width: 260px;
+  min-width: 280px;
+  line-height: 1.2;
 }
 
-.active-tick .checkable::after {
-  font-family: "Font Awesome 6 Pro";
+.active-tick a::after {
+  font-family: "Font Awesome 5 Pro";
   content: "\f00c";
   color: #0d6efd;
   float: right;
-  /* display: none; */
+  display: none;
 }
+
 .active-tick svg {
   color: #0d6efd;
   float: right;
-  margin-top: 4px;
-  margin-left: 12px;
 }

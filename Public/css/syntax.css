@@ -1,0 +1,38 @@
+.keyword,
+.atSign {
+  color: #c800a4;
+}
+
+.importKeyword {
+  color: #1c00cf;
+}
+
+.stringLiteral {
+  color: #df0002;
+}
+
+.StringLiteralExpr {
+  color: #df0002;
+}
+
+.IntegerLiteralExpr,
+.FloatLiteralExpr {
+  color: #3a00dc;
+}
+
+.integerLiteral,
+.floatingLiteral {
+  color: #3a00dc;
+}
+
+.lineComment,
+.blockComment,
+.docLineComment,
+.docBlockComment {
+  color: #008e00;
+}
+
+.unexpectedText,
+.shebang {
+  color: #5d6c79;
+}

@@ -1,86 +1,62 @@
 import Vapor
 
 func routes(_ app: Application) throws {
-    app.get { (req) in
-        return index(request: req)
+  app.get("healthz") { _ in ["status": "pass"] }
+
+  app.get { (req) in try await index(req) }
+  app.get("index.html") { (req) in try await index(req) }
+  func index(_ req: Request) async throws -> View {
+    try await req.view.render(
+      "index", [
+        "title": "Swift AST Explorer",
+        "defaultSampleCode": defaultSampleCode,
+        "swiftVersion": swiftVersion,
+      ]
+    )
+  }
+
+  app.get("*") { (req) -> View in
+    let matches = try #/^/([a-f0-9]{32})$/#
+      .ignoresCase()
+      .wholeMatch(in: req.url.path)
+    guard let matches else { throw Abort(.notFound) }
+    let gistId = matches.output.1
+
+    let response = try await req.client.get(
+      URI(string: "https://api.github.com/gists/\(gistId)"), headers: HTTPHeaders([("User-Agent", "Swift AST Explorer")])
+    )
+
+    guard let body = response.body else {
+      throw Abort(.notFound)
     }
-    app.get("index.html") { (req) in
-        return index(request: req)
-    }
-    func index(request req: Request) -> EventLoopFuture<View> {
-        return req.view.render("index", [
-            "title": "Swift AST Explorer",
-            "defaultSampleCode": defaultSampleCode,
-            "swiftVersion": swiftVersion,
-        ])
-    }
-
-    app.get("healthz") { _ in ["status": "pass"] }
-
-    app.get("*") { (req) -> EventLoopFuture<View> in
-        let pattern = try! NSRegularExpression(pattern: #"^\/([a-f0-9]{32})$"#, options: [.caseInsensitive])
-        let matches = pattern.matches(in: req.url.path, options: [], range: NSRange(location: 0, length: NSString(string: req.url.path).length))
-        guard matches.count == 1 && matches[0].numberOfRanges == 2 else {
-            throw Abort(.notFound)
-        }
-        let gistId = NSString(string: req.url.path).substring(with: matches[0].range(at: 1))
-
-        let promise = req.eventLoop.makePromise(of: View.self)
-        req.client.get(
-            URI(string: "https://api.github.com/gists/\(gistId)"), headers: HTTPHeaders([("User-Agent", "Swift AST Explorer")])
-        ).whenComplete {
-            switch $0 {
-            case .success(let response):
-                guard let body = response.body else {
-                    promise.fail(Abort(.notFound))
-                    return
-                }
-                guard
-                    let contents = try? JSONSerialization.jsonObject(with: Data(body.readableBytesView), options: []) as? [String: Any],
-                    let files = contents["files"] as? [String: Any],
-                    let filename = files.keys.first, let file = files[filename] as? [String: Any],
-                    let content = file["content"] as? String else {
-                    promise.fail(Abort(.notFound))
-                    return
-                }
-
-                return req.view.render(
-                    "index", [
-                        "title": "Swift AST Explorer",
-                        "defaultSampleCode": content,
-                        "swiftVersion": swiftVersion,
-                    ]
-                )
-                .cascade(to: promise)
-            case .failure(let error):
-                promise.fail(error)
-            }
-        }
-
-        return promise.futureResult
+    guard
+      let contents = try? JSONSerialization.jsonObject(with: Data(body.readableBytesView), options: []) as? [String: Any],
+      let files = contents["files"] as? [String: Any],
+      let filename = files.keys.first, let file = files[filename] as? [String: Any],
+      let content = file["content"] as? String else {
+      throw Abort(.notFound)
     }
 
-    app.on(.POST, "update", body: .collect(maxSize: "10mb")) { (req) -> EventLoopFuture<SyntaxResponse> in
-        let parameter = try req.content.decode(RequestParameter.self)
+    return try await req.view.render(
+      "index", [
+        "title": "Swift AST Explorer",
+        "defaultSampleCode": content,
+        "swiftVersion": swiftVersion,
+      ]
+    )
+  }
 
-        let promise = req.eventLoop.makePromise(of: SyntaxResponse.self)
-        DispatchQueue.global().async {
-            do {
-                promise.succeed(try Parser.parse(code: parameter.code, options: parameter.options ?? []))
-            } catch {
-                promise.fail(error)
-            }
-        }
-
-        return promise.futureResult
-    }
+  app.on(.POST, "update", body: .collect(maxSize: "10mb")) { (req) -> SyntaxResponse in
+    let parameter = try req.content.decode(RequestParameter.self)
+    return try Parser.parse(code: parameter.code, options: parameter.options ?? [])
+  }
 }
 
 let swiftVersion = Environment.get("SWIFT_VERSION") ?? ""
 
 private struct RequestParameter: Decodable {
-    let code: String
-    let options: [String]?
+  let code: String
+  let options: [String]?
 }
 
 private let defaultSampleCode = #"""
