@@ -1,6 +1,5 @@
-.dropdown-menu {
-  min-width: 280px;
-  line-height: 1.2;
+.tab-content {
+  overflow: auto;
 }
 
 .lined .nav-link {
@@ -19,4 +18,9 @@
   background: none;
   color: #0d6efd;
   border-color: #0d6efd;
+}
+
+.dropdown-menu {
+  min-width: 280px;
+  line-height: 1.2;
 }

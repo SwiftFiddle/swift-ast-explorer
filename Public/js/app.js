@@ -181,6 +181,13 @@ export class App {
             return acc;
           }, []);
         this.updateStatistics(statistics);
+
+        document.getElementById("structure-content").style.maxHeight =
+          this.contentMaxHeight;
+        document.getElementById("syntax-content").style.maxHeight =
+          this.contentMaxHeight;
+        document.getElementById("statistics-content").style.maxHeight =
+          this.contentMaxHeight;
       })
       .catch((error) => {
         console.log(error);
@@ -198,7 +205,6 @@ export class App {
 
   updateStructure(structureData) {
     this.treeViewContainer.innerHTML = "";
-    this.treeViewContainer.style.maxHeight = this.contentMaxHeight;
     this.treeView = new TreeView(this.treeViewContainer, structureData);
 
     const tabContainerRect = document

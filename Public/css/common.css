@@ -1,12 +1,7 @@
 @media (max-width: 767.98px) {
   .column {
     height: 40vh;
-    overflow: auto;
   }
-}
-
-.tab-content {
-  overflow: scroll;
 }
 
 #syntax-map {
