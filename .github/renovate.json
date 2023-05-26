@@ -1,8 +1,5 @@
 {
   "extends": ["config:base"],
-  "html": {
-    "fileMatch": ["\\.html?$", "\\.leaf?$"]
-  },
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
