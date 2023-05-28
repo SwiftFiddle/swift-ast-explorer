@@ -206,10 +206,6 @@ export class App {
     this.treeViewContainer.innerHTML = "";
     this.treeView = new TreeView(this.treeViewContainer, structureData);
 
-    const tabContainerRect = document
-      .querySelector(".tab-content")
-      .getBoundingClientRect();
-
     let mouseoverCancel = undefined;
     this.treeView.onmouseover = (event, target, data) => {
       this.editor.selection.setRange(
@@ -369,6 +365,10 @@ export class App {
 
           this.popover.content = container.innerHTML;
         }
+
+        const tabContainerRect = document
+          .querySelector(".tab-content")
+          .getBoundingClientRect();
 
         const parent = target.parentElement;
         const caret = parent.querySelector(":scope > div > .caret");
