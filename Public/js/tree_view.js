@@ -160,8 +160,6 @@ export class TreeView {
   }
 }
 
-function onMouseover(event, target, parent) {}
-
 function makeDownCaret() {
   const caret = document.createElement("span");
   caret.classList.add(
