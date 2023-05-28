@@ -2,15 +2,13 @@
 
 import { Tooltip } from "bootstrap";
 import { TreeView } from "./tree_view.js";
+import { StatisticsView } from "./statistics.js";
 import { Popover } from "./popover.js";
 import { WebSocketClient } from "./websocket.js";
 import { debounce } from "./debounce.js";
 
 import "../css/editor.css";
 import "../css/syntax.css";
-
-import DataTable from "datatables.net";
-import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
 
 import "ace-builds/src-min-noconflict/ace";
 import "ace-builds/src-min-noconflict/ext-language_tools";
@@ -55,7 +53,9 @@ export class App {
     this.popover = new Popover();
 
     this.syntaxMapContainer = document.getElementById("syntax-map");
-    this.statisticsContainer = document.getElementById("statistics");
+    this.statisticsView = new StatisticsView(
+      document.getElementById("statistics-container")
+    );
 
     this.init();
   }
@@ -476,51 +476,28 @@ export class App {
   }
 
   updateStatistics(statistics) {
-    const tbody = this.statisticsContainer.querySelector(":scope > tbody");
-    tbody.innerHTML = "";
+    this.statisticsView.update(statistics);
 
-    for (const row of statistics) {
-      const tr = document.createElement("tr");
-      tr.innerHTML = `<td style="font-family: 'Menlo', sans-serif, monospace;">${row.text}</td><td><div>${row.ranges.length}</div></td>`;
-      tbody.appendChild(tr);
-
-      tr.addEventListener("mouseover", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-
-        for (const range of row.ranges) {
-          this.editor.session.addMarker(
-            new Range(
-              range.startRow,
-              range.startColumn,
-              range.endRow,
-              range.endColumn
-            ),
-            "editor-marker",
-            "text"
-          );
-        }
-      });
-      tr.addEventListener("mouseout", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-
-        const markers = this.editor.session.getMarkers();
-        for (const [key, value] of Object.entries(markers)) {
-          this.editor.session.removeMarker(value.id);
-        }
-      });
-    }
-
-    if (this.dataTable) {
-      this.dataTable.destroy();
-    }
-    this.dataTable = new DataTable("#statistics", {
-      autoWidth: false,
-      info: false,
-      paging: false,
-      searching: false,
-    });
+    this.statisticsView.onmouseover = (event, target, ranges) => {
+      for (const range of ranges) {
+        this.editor.session.addMarker(
+          new Range(
+            range.startRow,
+            range.startColumn,
+            range.endRow,
+            range.endColumn
+          ),
+          "editor-marker",
+          "text"
+        );
+      }
+    };
+    this.statisticsView.onmouseout = (event, target) => {
+      const markers = this.editor.session.getMarkers();
+      for (const [key, value] of Object.entries(markers)) {
+        this.editor.session.removeMarker(value.id);
+      }
+    };
   }
 }
 
