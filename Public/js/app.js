@@ -182,15 +182,14 @@ export class App {
           }, []);
         this.updateStatistics(statistics);
 
-        document.getElementById("structure-content").style.maxHeight =
+        document.getElementById("structure").style.maxHeight =
           this.contentMaxHeight;
-        document.getElementById("syntax-content").style.maxHeight =
+        document.getElementById("syntax-map").style.maxHeight =
           this.contentMaxHeight;
-        document.getElementById("statistics-content").style.maxHeight =
+        document.getElementById("statistics-container").style.maxHeight =
           this.contentMaxHeight;
       })
       .catch((error) => {
-        console.log(error);
         if (error.status == 413) {
           alert("Payload Too Large");
         } else {

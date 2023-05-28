@@ -1,27 +1,24 @@
 body {
-  width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
-@media (max-width: 767.98px) {
-  body {
-    overflow-y: auto;
-  }
-
-  .column {
-    height: 40vh;
-  }
+.swift-logo {
+  width: 2rem;
+  height: 2rem;
 }
 
-#syntax-map {
-  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
-  font-size: 11pt;
-  line-height: 1.5;
+.button-circle {
+  width: 2rem;
+  height: 2rem;
+}
+
+.dropdown-menu {
+  min-width: 280px;
+  line-height: 1.2;
 }
 
 .active-tick a::after {
-  font-family: "Font Awesome 5 Pro";
+  font-family: "Font Awesome 6 Pro";
   content: "\f00c";
   color: #0d6efd;
   float: right;
@@ -31,4 +28,36 @@ body {
 .active-tick svg {
   color: #0d6efd;
   float: right;
+}
+
+.nav-item button {
+  width: 168px;
+}
+
+.tab-content {
+  overflow: auto;
+}
+
+#syntax-map {
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
+  font-size: 11pt;
+  line-height: 1.5;
+}
+
+.lined .nav-link {
+  border: none;
+  color: #868e96;
+  border-bottom: 3px solid transparent;
+}
+
+.lined .nav-link:hover {
+  border: none;
+  color: #0d6efd;
+  border-bottom: 3px solid transparent;
+}
+
+.lined .nav-link.active {
+  background: none;
+  color: #0d6efd;
+  border-color: #0d6efd;
 }
