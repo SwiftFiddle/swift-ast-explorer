@@ -6,7 +6,6 @@
 
 .popover-content {
   margin: 0 0 0 0;
-  padding: 8px 8px;
   min-width: 400px;
   max-width: 40vw;
   background-clip: padding-box;
@@ -17,7 +16,8 @@
 }
 
 .popover-content .title {
-  margin: 0 8px 8px 8px;
+  margin: 0 8px 0 8px;
+  padding-top: 8px;
   font-weight: bolder;
   font-size: larger;
 }
@@ -31,6 +31,7 @@
 .popover-content dl {
   margin-top: 0;
   margin-bottom: 0;
+  padding: 8px;
   max-height: 60vh;
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
   overflow: scroll;
