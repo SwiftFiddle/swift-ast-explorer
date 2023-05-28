@@ -1,6 +1,7 @@
 "use strict";
 
 import { Popover } from "./popover.js";
+import "../css/syntax.css";
 
 export class SyntaxView {
   constructor(container) {
