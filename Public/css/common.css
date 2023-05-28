@@ -61,3 +61,8 @@ body {
   color: #0d6efd;
   border-color: #0d6efd;
 }
+
+.alert {
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
+  font-size: 11pt;
+}

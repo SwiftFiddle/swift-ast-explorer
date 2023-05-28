@@ -16,7 +16,7 @@ import "ace-builds/src-min-noconflict/theme-xcode";
 const Range = ace.require("ace/range").Range;
 
 export class App {
-  get contentMaxHeight() {
+  get contentViewHeight() {
     const headerHeight = document.querySelector("header").clientHeight;
     const footerHeight = document.querySelector("footer").clientHeight;
     return `calc(100vh - ${headerHeight}px - ${footerHeight}px)`;
@@ -133,6 +133,13 @@ export class App {
       false
     );
 
+    const onresize = debounce(() => {
+      this.onresize();
+    }, 200);
+    new ResizeObserver(() => {
+      onresize();
+    }).observe(document.body);
+
     this.update();
   }
 
@@ -179,19 +186,12 @@ export class App {
           }, []);
         this.updateStatistics(statistics);
 
-        document.getElementById("structure").style.maxHeight =
-          this.contentMaxHeight;
-        document.getElementById("syntax-container").style.maxHeight =
-          this.contentMaxHeight;
-        document.getElementById("statistics-container").style.maxHeight =
-          this.contentMaxHeight;
+        this.onresize();
       })
       .catch((error) => {
-        if (error.status == 413) {
-          alert("Payload Too Large");
-        } else {
-          alert("Something went wrong");
-        }
+        this.structureView.error = error;
+        this.syntaxView.error = error;
+        this.statisticsView.error = error;
       })
       .finally(() => {
         hideLoading();
@@ -240,6 +240,14 @@ export class App {
         this.editor.session.removeMarker(value.id);
       }
     };
+  }
+
+  onresize() {
+    document.getElementById("structure").style.height = this.contentViewHeight;
+    document.getElementById("syntax-container").style.height =
+      this.contentViewHeight;
+    document.getElementById("statistics-container").style.height =
+      this.contentViewHeight;
   }
 }
 
