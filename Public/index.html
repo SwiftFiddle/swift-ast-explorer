@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="twitter:card" content="summary" />
   <meta property="twitter:image" content="https://swift-ast-explorer.com/images/ogp_image.png" />
@@ -26,172 +25,163 @@
   <title>Swift AST Explorer</title>
 </head>
 
-<body>
-  <!-- Main Content -->
-  <div class="container-fluid g-0 d-flex flex-column min-vh-100">
-    <header class="row m-0 g-0 justify-content-start bg-light">
-      <div class="col-md-6">
-        <div class="row m-0 g-0 justify-content-start bg-light">
-          <div class="col-md-auto m-2">
-            <a class="text-decoration-none" href="/">
-              <span class="fab fa-swift fa-2x text-primary d-inline-block align-middle"
-                style="min-width: 2rem; min-height: 2rem;"></span>
-              <span class="h4 text-dark d-inline-block align-middle m-0">Swift AST Explorer</span>
-            </a>
-          </div>
-          <div class="col-md-auto m-2">
-            <button type="button" id="run-button" class="btn btn-primary btn-sm rounded-pill mx-1 disabled">
-              <span id="run-button-icon" class="fa-solid fa-play fa-fw ms-2"
-                style="display: inline-block; min-width: 1em; min-height: 1em;"></span>
-              <span id="run-button-spinner" class="fad fa-spinner-third fa-spin fa-fw ms-2 d-none"></span>
-              <span class="mx-2">Update</span>
+<body class="d-flex flex-column">
+  <div class="container-fluid d-flex flex-column bg-light g-0 h-100">
+    <header>
+      <div class="row row-cols-2 g-0">
+        <div class="col">
+          <a class="text-decoration-none mx-1" href="/">
+            <span class="fa-brands fa-swift fa-2x text-primary d-inline-block align-middle p-1 swift-logo"></span><span
+              class="h4 text-dark d-inline-block align-middle m-0">Swift AST Explorer</span>
+          </a>
+          <button id="run-button" type="button" class="btn btn-primary btn-sm rounded-pill px-3 mx-1 disabled"
+            aria-label="Update">
+            <span id="run-button-icon" class="fa-solid fa-play fa-fw"></span>
+            <span id="run-button-spinner" class="fa-duotone fa-spinner-third fa-spin fa-fw d-none"></span>
+            <span class="px-1">Update</span>
+          </button>
+          <button id="config-button" type="button"
+            class="btn btn-outline-primary btn-sm rounded-circle button-circle mx-1 disabled" data-bs-toggle="dropdown"
+            data-bs-auto-close="outside" data-bs-offset="0,10" aria-label="Options" aria-expanded="false">
+            <span class="fa-solid fa-cog"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li class="options-item" data-value="fold">
+              <a class="dropdown-item" data-target="#">
+                Fold all sequence expressions
+              </a>
+            </li>
+          </ul>
+          <button id="format-button" type="button"
+            class="btn btn-outline-primary btn-sm rounded-circle button-circle mx-1 disabled" data-bs-toggle="tooltip"
+            data-bs-placement="bottom" data-bs-container="#format-button" title="Format" aria-label="Format">
+            <span class="fa-solid fa-align-left"></span>
+          </button>
+          <span data-bs-toggle="modal" data-bs-target="#help-modal">
+            <button id="help-button" type="button"
+              class="btn btn-outline-primary btn-sm rounded-circle button-circle mx-1" data-bs-toggle="tooltip"
+              data-bs-placement="bottom" data-bs-container="#help-button" title="Help" aria-label="Help">
+              <span class="fa-solid fa-question"></span>
             </button>
-            <button type="button" id="config-button"
-              class="btn btn-outline-primary btn-sm rounded-circle p-0 mx-1 disabled" aria-label="Config"
-              style="min-width: 2rem; min-height: 2rem;" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-              data-bs-offset="0,10" aria-expanded="false">
-              <span class="fa-solid fa-cog fa-fw"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li class="options-item" data-value="fold">
-                <a class="dropdown-item" data-target="#">
-                  Fold all sequence expressions
-                </a>
+          </span>
+        </div>
+        <div class="col">
+          <nav>
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item lined" role="presentation">
+                <button type="button" class="nav-link px-4 active" data-bs-toggle="tab"
+                  data-bs-target="#structure-tab-pane" role="tab" aria-controls="structure-tab-pane"
+                  aria-selected="true"><span class="fa-regular fa-folder-tree"></span><span
+                    class="px-3">Structure</span>
+                </button>
+              </li>
+              <li class="nav-item lined" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#syntax-tab-pane" role="tab"
+                  aria-controls="syntax-tab-pane" aria-selected="false"><span class="fa-light fa-file-code"></span><span
+                    class="px-3">Syntax</span>
+                </button>
+              </li>
+              <li class="nav-item lined" role="presentation">
+                <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#statistics-tab-pane"
+                  role="tab" aria-controls="statistics-tab-pane" aria-selected="false"><span
+                    class="fa-regular fa-table"></span><span class="px-3">Statistics</span>
+                </button>
               </li>
             </ul>
-            <button type="button" id="format-button"
-              class="btn btn-outline-primary btn-sm rounded-circle p-0 mx-1 disabled" data-bs-toggle="tooltip"
-              data-bs-placement="bottom" data-bs-container="#format-button" title="Format" aria-label="Format"
-              style="min-width: 2rem; min-height: 2rem;">
-              <span class="fa-solid fa-align-left fa-fw"></span>
-            </button>
-            <span data-bs-toggle="modal" data-bs-target="#help-modal">
-              <button type="button" id="help-button" class="btn btn-outline-primary btn-sm rounded-circle p-0 mx-1"
-                aria-label="Help" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-container="#help-button"
-                title="Help" style="min-width: 2rem; min-height: 2rem;">
-                <span class="fa-solid fa-question fa-fw"></span>
-              </button>
-            </span>
-          </div>
+          </nav>
         </div>
       </div>
-      <div class="col-md-6">
-        <ul class="nav nav-tabs mt-1 mx-2" role="tablist">
-          <li class="nav-item lined" role="presentation">
-            <button id="structure-tab" class="nav-link  px-4 active" data-bs-toggle="tab"
-              data-bs-target="#structure-content" type="button" role="tab" aria-controls="structure-content"
-              aria-selected="true">
-              <span class="fa-regular fa-folder-tree me-2"
-                style="display: inline-block; min-width: 1em; min-height: 1em;"></span><span>Structure</span>
-            </button>
-          </li>
-          <li class="nav-item lined" role="presentation">
-            <button id="syntax-tab" class="nav-link px-4" data-bs-toggle="tab" data-bs-target="#syntax-content"
-              type="button" role="tab" aria-controls="syntax-content" aria-selected="false">
-              <span class="fa-light fa-file-code me-2"
-                style="display: inline-block; min-width: 1em; min-height: 1em;"></span><span>Syntax</span>
-            </button>
-          </li>
-          <li class="nav-item lined" role="presentation">
-            <button id="statistics-tab" class="nav-link px-4" data-bs-toggle="tab" data-bs-target="#statistics-content"
-              type="button" role="tab" aria-controls="statistics-content" aria-selected="false">
-              <span class="fa-regular fa-table me-2"
-                style="display: inline-block; min-width: 1em; min-height: 1em;"></span><span>Statistics</span>
-            </button>
-          </li>
-        </ul>
-      </div>
     </header>
-
-    <main class="row bg-light flex-fill fill d-flex g-0">
-      <div class="col-md-6 column">
-        <pre id="editor-container" class="h-100">#(defaultSampleCode)</pre>
-      </div>
-      <div class="col-md-6 column">
-        <div class="tab-content" class="h-100">
-          <div id="structure-content" class="tab-pane active" role="tabpanel" aria-labelledby="structure-tab">
-            <div id="structure" class="column mx-2" role="document"></div>
-          </div>
-          <div id="syntax-content" class="tab-pane" role="tabpanel" aria-labelledby="syntax-tab">
-            <div id="syntax-map" class="column mx-2" role="document"></div>
-          </div>
-          <div id="statistics-content" class="tab-pane" role="tabpanel" aria-labelledby="statistics-tab">
-            <div class="column mx-2" role="document">
-              <table id="statistics" class="table table-borderless table-striped table-hover table-sm">
-                <thead>
-                  <tr>
-                    <th scope="col" style="width: 60%;">Syntax</th>
-                    <th scope="col">Count</th>
-                  </tr>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
+    <main class="flex-grow-1">
+      <div class="row row-cols-2 g-0 h-100">
+        <div class="col">
+          <pre id="editor-container">#(defaultSampleCode)</pre>
+        </div>
+        <div class="col">
+          <div class="tab-content">
+            <div id="structure-tab-pane" class="tab-pane active" role="tabpanel" aria-labelledby="home-tab"
+              tabindex="0">
+              <div id="structure" class="" role="document"></div>
+            </div>
+            <div id="syntax-tab-pane" class="tab-pane" role="tabpanel" aria-labelledby="syntax-tab" tabindex="0">
+              <div id="syntax-map" class="" role="document"></div>
+            </div>
+            <div id="statistics-tab-pane" class="tab-pane" role="tabpanel" aria-labelledby="statistics-tab"
+              tabindex="0">
+              <div id="statistics-container" class="" role="document">
+                <table id="statistics" class="table table-borderless table-striped table-hover table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="width: 60%;">Syntax</th>
+                      <th scope="col">Count</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+    <footer>
+      <div class="row row-cols-1 g-0">
+        <div class="col p-1 text-center">
+          <span class="mx-2">
+            <a class="text-reset text-decoration-none small" href="https://status.swift-ast-explorer.com/"
+              target="_blank" rel="nofollow noopener noreferrer"><span
+                class="fa-light fa-monitor-heart-rate"></span><span class="mx-1">System
+                Status</span></a>
+          </span>
 
-    <footer class="bg-light p-1">
-      <div class="row">
-        <div class="col-md-12 text-center text-dark">
           <span class="mx-2">
-            <a class="text-reset text-decoration-none small d-inline-block"
-              href="https://status.swift-ast-explorer.com/" target="_blank" rel="nofollow noopener noreferrer">
-              <span class="fa-light fa-monitor-heart-rate me-1 d-inline-block"
-                style="min-width: 1em; min-height: 1em;"></span>System Status</a>
-          </span>
-          <span class="mx-2">
-            <a class="text-reset text-decoration-none small d-inline-block"
+            <a class="text-reset text-decoration-none small"
               href="https://github.com/swiftfiddle/swift-ast-explorer/issues/new" target="_blank"
-              rel="nofollow noopener noreferrer">
-              <span class="fa-regular fa-comment-alt-smile me-1 d-inline-block"
-                style="min-width: 1em; min-height: 1em;"></span>Feedback</a>
+              rel="nofollow noopener noreferrer"><span class="fa-regular fa-comment-alt-smile"></span><span
+                class="mx-1">Feedback</span></a>
           </span>
           <span class="mx-2">
-            <a class="text-reset text-decoration-none small d-inline-block"
-              href="https://github.com/swiftfiddle/swift-ast-explorer" target="_blank"
-              rel="nofollow noopener noreferrer">
-              <span class="fab fa-github me-1 d-inline-block" style="min-width: 1em; min-height: 1em;"></span>Source
-              Code</a>
+            <a class="text-reset text-decoration-none small" href="https://github.com/swiftfiddle/swift-ast-explorer"
+              target="_blank" rel="nofollow noopener noreferrer"><span class="fa-brands fa-github"></span><span
+                class="mx-1">Source Code</span></a>
           </span>
           <span class="mx-2">
-            <a class="text-reset text-decoration-none small d-inline-block" href="https://twitter.com/k_katsumi"
+            <a class="text-reset text-decoration-none small" href="https://hachyderm.io/@kishikawakatsumi"
+              target="_blank" rel="nofollow noopener noreferrer"><span class="fa-regular fa-at"></span><span
+                class="mx-1">Creator</span></a>
+          </span>
+          <span class="mx-2">
+            <a class="text-reset text-decoration-none small" href="https://github.com/sponsors/kishikawakatsumi"
               target="_blank" rel="nofollow noopener noreferrer">
-              <span class="fa-regular fa-at me-1 d-inline-block"
-                style="min-width: 1em; min-height: 1em;"></span>Creator</a>
-          </span>
-          <span class="mx-2">
-            <a class="text-reset text-decoration-none small d-inline-block"
-              href="https://github.com/sponsors/kishikawakatsumi" target="_blank" rel="nofollow noopener noreferrer">
-              <span class="fa-regular fa-heart me-1 d-inline-block"
-                style="min-width: 1em; min-height: 1em;"></span>Donate</a>
+              <span class="fa-regular fa-heart"></span></span><span class="mx-1">Donate</span></a>
           </span>
         </div>
       </div>
     </footer>
   </div>
 
-  <!-- Help Mocdal -->
   <div id="help-modal" class="modal fade" tabindex="-1" aria-labelledby="help-modal-label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="help-modal-label"><span class="fa-regular fa-question-circle me-2"
-              style="display: inline-block; min-width: 1em; min-height: 1em;"></span>Help</h5>
+          <h5 class="modal-title" id="help-modal-label"><span class="fa-regular fa-question-circle"></span><span
+              class="mx-2">Help</span>
+          </h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <dl>
-            <dt class="bg-light rounded"><span class="fa-solid fa-code-branch fa-fw me-1"></span>Swift Version</dt>
+            <dt class="bg-light rounded"><span class="fa-solid fa-code-branch fa-fw"></span><span class="mx-2">Swift
+                Version</span></dt>
           </dl>
           <dd>
             <pre><code>#(swiftVersion)</code></pre>
           </dd>
 
           <dl>
-            <dt class="bg-light rounded"><span class="fa-regular fa-file-import fa-fw me-1"></span>Import</dt>
+            <dt class="bg-light rounded"><span class="fa-regular fa-file-import fa-fw"></span><span
+                class="mx-2">Import</span></dt>
             <dd>There are a few different ways to import code into the code editor:</dd>
           </dl>
           <ul>
@@ -202,9 +192,8 @@
           </ul>
 
           <dl>
-            <dt class="bg-light rounded pt-2"><span class="fa-regular fa-comment-alt-smile fa-fw me-1"></span>Feedback /
-              Bug
-              Report
+            <dt class="bg-light rounded pt-2"><span class="fa-regular fa-comment-alt-smile fa-fw"></span><span
+                class="mx-2">Feedback / Bug Report</span>
             </dt>
             <dd>
               <a href="https://github.com/swiftfiddle/swift-ast-explorer/issues/new" target="_blank"

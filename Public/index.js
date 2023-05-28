@@ -8,7 +8,6 @@ const { enableAutoPageviews } = Plausible({
 enableAutoPageviews();
 
 import "./scss/default.scss";
-import "./css/bootstrap.css";
 import "./css/common.css";
 
 import "./js/icon.js";
