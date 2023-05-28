@@ -3,6 +3,8 @@
 import DataTable from "datatables.net";
 import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
 
+import "../css/table.css";
+
 export class StatisticsView {
   constructor(container) {
     this.container = container;
