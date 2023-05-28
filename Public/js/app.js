@@ -2,7 +2,8 @@
 
 import { Tooltip } from "bootstrap";
 import { TreeView } from "./tree_view.js";
-import { StatisticsView } from "./statistics.js";
+import { SyntaxView } from "./syntax_view.js";
+import { StatisticsView } from "./statistics_view.js";
 import { Popover } from "./popover.js";
 import { WebSocketClient } from "./websocket.js";
 import { debounce } from "./debounce.js";
@@ -52,7 +53,9 @@ export class App {
     this.treeViewContainer = document.getElementById("structure");
     this.popover = new Popover();
 
-    this.syntaxMapContainer = document.getElementById("syntax-map");
+    this.syntaxView = new SyntaxView(
+      document.getElementById("syntax-container")
+    );
     this.statisticsView = new StatisticsView(
       document.getElementById("statistics-container")
     );
@@ -163,28 +166,24 @@ export class App {
         );
 
         this.updateStructure(structureData);
-
-        this.syntaxMapContainer.innerHTML = data.syntaxHTML;
-        this.updateSyntaxMap();
+        this.updateSyntaxMap(data.syntaxHTML);
 
         const statistics = structureData
           .filter((node) => node.token === undefined)
           .reduce((acc, item) => {
             const existingItem = acc.find((a) => a.text === item.text);
-
             if (existingItem) {
               existingItem.ranges.push(item.range);
             } else {
               acc.push({ text: item.text, ranges: [item.range] });
             }
-
             return acc;
           }, []);
         this.updateStatistics(statistics);
 
         document.getElementById("structure").style.maxHeight =
           this.contentMaxHeight;
-        document.getElementById("syntax-map").style.maxHeight =
+        document.getElementById("syntax-container").style.maxHeight =
           this.contentMaxHeight;
         document.getElementById("statistics-container").style.maxHeight =
           this.contentMaxHeight;
@@ -402,77 +401,8 @@ export class App {
     };
   }
 
-  updateSyntaxMap() {
-    const popover = this.popover;
-    const tabContainerRect = document
-      .querySelector(".tab-content")
-      .getBoundingClientRect();
-
-    let mouseoverCancel = undefined;
-    $(this.syntaxMapContainer)
-      .find("span")
-      .each(function () {
-        $(this).mouseover(function (event) {
-          event.preventDefault();
-          event.stopPropagation();
-
-          if (mouseoverCancel) {
-            cancelAnimationFrame(mouseoverCancel);
-          }
-          mouseoverCancel = requestAnimationFrame(() => {
-            const contents = [];
-
-            $(this)
-              .parents("span")
-              .each(function (index, element) {
-                createDOMRectElement(element.getBoundingClientRect());
-                contents.push([element.dataset.title, element.dataset.content]);
-                if (index > 0) {
-                  return false;
-                }
-              });
-
-            let element = event.target;
-            element.style.backgroundColor = "rgba(81, 101, 255, 0.5)";
-
-            contents.reverse();
-            contents.push([element.dataset.title, element.dataset.content]);
-
-            const dl = `<dl>${contents
-              .map((content) => {
-                return `<dt>${content[0]}</dt><dd>${content[1]}</dd>`;
-              })
-              .join("")}</dl>`;
-            popover.content = dl;
-
-            popover.show(element, {
-              lowerLimit: tabContainerRect.top + tabContainerRect.height,
-              offsetX: 40,
-            });
-          });
-        });
-
-        let mouseoutCancel = undefined;
-        $(this).mouseout(function (event) {
-          event.preventDefault();
-          event.stopPropagation();
-
-          if (mouseoutCancel) {
-            cancelAnimationFrame(mouseoutCancel);
-          }
-          mouseoutCancel = requestAnimationFrame(() => {
-            let element = event.target;
-            element.style.backgroundColor = "";
-
-            let rectElements = document.getElementsByClassName("dom-rect");
-            for (let i = 0, l = rectElements.length; l > i; i++) {
-              rectElements[0].parentNode.removeChild(rectElements[0]);
-            }
-
-            popover.hide();
-          });
-        });
-      });
+  updateSyntaxMap(syntaxHTML) {
+    this.syntaxView.update(syntaxHTML);
   }
 
   updateStatistics(statistics) {
@@ -521,25 +451,6 @@ function hideLoading() {
   document.getElementById("run-button").classList.remove("disabled");
   document.getElementById("run-button-icon").classList.remove("d-none");
   document.getElementById("run-button-spinner").classList.add("d-none");
-}
-
-function createDOMRectElement(domRect) {
-  let rectElements = document.getElementsByClassName("dom-rect");
-  for (let i = 0, l = rectElements.length; l > i; i++) {
-    rectElements[0].parentNode.removeChild(rectElements[0]);
-  }
-
-  let rectElement = document.createElement("div");
-  rectElement.className = "dom-rect";
-  rectElement.style.left = domRect.x - 1 + "px";
-  rectElement.style.top = domRect.y - 1 + "px";
-  rectElement.style.width = domRect.width + "px";
-  rectElement.style.height = domRect.height + "px";
-  rectElement.style.pointerEvents = "none";
-  rectElement.style.position = "absolute";
-  rectElement.style.border = "1px solid rgb(81, 101, 255)";
-  rectElement.style.backgroundColor = "rgba(81, 101, 255, 0.25)";
-  document.body.appendChild(rectElement);
 }
 
 function stripHTMLTag(text) {
