@@ -4,6 +4,10 @@ import { Popover } from "./popover.js";
 import "../css/syntax.css";
 
 export class SyntaxView {
+  set error(error) {
+    this.container.innerHTML = `<div class="alert alert-danger m-3" role="alert">${error}</div>`;
+  }
+
   constructor(container) {
     this.container = container;
     this.popover = new Popover();

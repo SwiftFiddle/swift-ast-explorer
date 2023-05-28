@@ -4,6 +4,10 @@ import { TreeView } from "./tree_view.js";
 import { Popover } from "./popover.js";
 
 export class StructureView {
+  set error(error) {
+    this.container.innerHTML = `<div class="alert alert-danger m-3" role="alert">${error}</div>`;
+  }
+
   constructor(container) {
     this.container = container;
     this.popover = new Popover();
