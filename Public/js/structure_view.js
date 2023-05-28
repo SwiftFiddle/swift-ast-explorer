@@ -64,31 +64,9 @@ function makeSyntaxPopoverContent(data) {
   const title = document.createElement("div");
   title.classList.add("title");
   title.innerText = `${data.text}Syntax`;
-  container.appendChild(title);
+  title.appendChild(makeSyntaxTypeBadge(data.type));
 
-  const label = document.createElement("span");
-  label.classList.add("badge", "text-bg-light");
-  switch (data.type) {
-    case "decl": {
-      label.innerText = "DeclSyntax";
-      break;
-    }
-    case "expr": {
-      label.innerText = "ExprSyntax";
-      break;
-    }
-    case "pattern": {
-      label.innerText = "PatternSyntax";
-      break;
-    }
-    case "type": {
-      label.innerText = "TypeSyntax";
-      break;
-    }
-    default:
-      break;
-  }
-  title.appendChild(label);
+  container.appendChild(title);
 
   const dl = document.createElement("dl");
 
@@ -163,6 +141,32 @@ function makeDescriptionList(term, details, list) {
 
   list.appendChild(dt);
   list.appendChild(dd);
+}
+
+function makeSyntaxTypeBadge(type) {
+  const badge = document.createElement("span");
+  badge.classList.add("badge", "text-bg-light");
+  switch (type) {
+    case "decl": {
+      badge.innerText = "DeclSyntax";
+      break;
+    }
+    case "expr": {
+      badge.innerText = "ExprSyntax";
+      break;
+    }
+    case "pattern": {
+      badge.innerText = "PatternSyntax";
+      break;
+    }
+    case "type": {
+      badge.innerText = "TypeSyntax";
+      break;
+    }
+    default:
+      break;
+  }
+  return badge;
 }
 
 function stripHTMLTag(text) {
