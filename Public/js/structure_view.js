@@ -28,145 +28,10 @@ export class StructureView {
         return;
       }
       if (data.structure.length > 0) {
-        const container = document.createElement("div");
-
-        const title = document.createElement("div");
-        title.classList.add("title");
-        title.innerText = `${data.text}Syntax`;
-        container.appendChild(title);
-
-        switch (data.type) {
-          case "decl": {
-            const label = document.createElement("span");
-            label.classList.add("badge", "text-bg-light");
-            label.innerText = "DeclSyntax";
-            title.appendChild(label);
-            break;
-          }
-          case "expr": {
-            const label = document.createElement("span");
-            label.classList.add("badge", "text-bg-light");
-            label.innerText = "ExprSyntax";
-            title.appendChild(label);
-            break;
-          }
-          case "pattern": {
-            const label = document.createElement("span");
-            label.classList.add("badge", "text-bg-light");
-            label.innerText = "PatternSyntax";
-            title.appendChild(label);
-            break;
-          }
-          case "type": {
-            const label = document.createElement("span");
-            label.classList.add("badge", "text-bg-light");
-            label.innerText = "TypeSyntax";
-            title.appendChild(label);
-            break;
-          }
-          default:
-            break;
-        }
-
-        const dl = document.createElement("dl");
-
-        const dt = document.createElement("dt");
-        const dd = document.createElement("dd");
-
-        dt.innerHTML = "Source Range";
-        const range = data.range;
-        // prettier-ignore
-        dd.innerHTML = `Ln ${range.startRow + 1}, Col ${range.startColumn + 1} - Ln ${range.endRow + 1}, Col ${range.endColumn + 1}`;
-
-        dl.appendChild(dt);
-        dl.appendChild(dd);
-
-        for (const property of data.structure) {
-          const dt = document.createElement("dt");
-          const dd = document.createElement("dd");
-
-          const name = property.name;
-          const value = property.value;
-          if (value && value.text && value.kind) {
-            const text = stripHTMLTag(value.text);
-            const kind = stripHTMLTag(value.kind);
-            dt.innerHTML = `${name}`;
-            dd.innerHTML = `${text}<span class="badge rounded-pill">${kind}</span>`;
-          } else if (value && value.text) {
-            const text = stripHTMLTag(value.text);
-            dt.innerHTML = `${name}`;
-            dd.innerHTML = `${text}`;
-          }
-          dl.appendChild(dt);
-          dl.appendChild(dd);
-        }
-        container.appendChild(dl);
-
-        this.popover.content = container.innerHTML;
+        this.popover.content = makeSyntaxPopoverContent(data);
       }
       if (data.token) {
-        const container = document.createElement("div");
-
-        const title = document.createElement("div");
-        title.classList.add("title");
-        title.innerText = "TokenSyntax";
-        container.appendChild(title);
-
-        const dl = document.createElement("dl");
-
-        {
-          const dt = document.createElement("dt");
-          const dd = document.createElement("dd");
-
-          dt.innerHTML = "Source Range";
-          const range = data.range;
-          // prettier-ignore
-          dd.innerHTML = `Ln ${range.startRow + 1}, Col ${range.startColumn + 1} - Ln ${range.endRow + 1}, Col ${range.endColumn + 1}`;
-
-          dl.appendChild(dt);
-          dl.appendChild(dd);
-        }
-
-        {
-          const dt = document.createElement("dt");
-          dt.innerHTML = "kind";
-          dl.appendChild(dt);
-
-          const dd = document.createElement("dd");
-          dd.innerHTML = stripHTMLTag(data.token.kind);
-          dl.appendChild(dd);
-        }
-        {
-          const dt = document.createElement("dt");
-          dt.innerHTML = "leadingTrivia";
-          dl.appendChild(dt);
-
-          const dd = document.createElement("dd");
-          dd.innerHTML = stripHTMLTag(data.token.leadingTrivia);
-          dl.appendChild(dd);
-        }
-        {
-          const dt = document.createElement("dt");
-          dt.innerHTML = "text";
-          dl.appendChild(dt);
-
-          const dd = document.createElement("dd");
-          dd.innerHTML = stripHTMLTag(data.text);
-          dl.appendChild(dd);
-        }
-        {
-          const dt = document.createElement("dt");
-          dt.innerHTML = "trailingTrivia";
-          dl.appendChild(dt);
-
-          const dd = document.createElement("dd");
-          dd.innerHTML = stripHTMLTag(data.token.trailingTrivia);
-
-          dl.appendChild(dd);
-        }
-        container.appendChild(dl);
-
-        this.popover.content = container.innerHTML;
+        this.popover.content = makeTokenPopoverContent(data);
       }
 
       const tabContainerRect = document
@@ -191,6 +56,113 @@ export class StructureView {
       this.popover.hide();
     };
   }
+}
+
+function makeSyntaxPopoverContent(data) {
+  const container = document.createElement("div");
+
+  const title = document.createElement("div");
+  title.classList.add("title");
+  title.innerText = `${data.text}Syntax`;
+  container.appendChild(title);
+
+  const label = document.createElement("span");
+  label.classList.add("badge", "text-bg-light");
+  switch (data.type) {
+    case "decl": {
+      label.innerText = "DeclSyntax";
+      break;
+    }
+    case "expr": {
+      label.innerText = "ExprSyntax";
+      break;
+    }
+    case "pattern": {
+      label.innerText = "PatternSyntax";
+      break;
+    }
+    case "type": {
+      label.innerText = "TypeSyntax";
+      break;
+    }
+    default:
+      break;
+  }
+  title.appendChild(label);
+
+  const dl = document.createElement("dl");
+
+  makeSourceRangePopoverContent(data, dl);
+
+  for (const property of data.structure) {
+    makePropertyPopoverContent(property, dl);
+  }
+  container.appendChild(dl);
+
+  return container.innerHTML;
+}
+
+function makeTokenPopoverContent(data) {
+  const container = document.createElement("div");
+
+  const title = document.createElement("div");
+  title.classList.add("title");
+  title.innerText = "TokenSyntax";
+
+  container.appendChild(title);
+
+  const dl = document.createElement("dl");
+
+  makeSourceRangePopoverContent(data, dl);
+
+  makeDescriptionList("kind", stripHTMLTag(data.token.kind), dl);
+  makeDescriptionList(
+    "leadingTrivia",
+    stripHTMLTag(data.token.leadingTrivia),
+    dl
+  );
+  makeDescriptionList("text", stripHTMLTag(data.text), dl);
+  makeDescriptionList(
+    "trailingTrivia",
+    stripHTMLTag(data.token.trailingTrivia),
+    dl
+  );
+
+  container.appendChild(dl);
+
+  return container.innerHTML;
+}
+
+function makeSourceRangePopoverContent(data, list) {
+  const range = data.range;
+  // prettier-ignore
+  const details = `Ln ${range.startRow + 1}, Col ${range.startColumn + 1} - Ln ${range.endRow + 1}, Col ${range.endColumn + 1}`;
+  makeDescriptionList("Source Range", details, list);
+}
+
+function makePropertyPopoverContent(property, list) {
+  const details = (() => {
+    const value = property.value;
+    if (value && value.text && value.kind) {
+      const text = stripHTMLTag(value.text);
+      const kind = stripHTMLTag(value.kind);
+      return `${text}<span class="badge rounded-pill">${kind}</span>`;
+    } else if (value && value.text) {
+      return stripHTMLTag(value.text);
+    }
+  })();
+  makeDescriptionList(property.name, details, list);
+}
+
+function makeDescriptionList(term, details, list) {
+  const dt = document.createElement("dt");
+  dt.innerHTML = term;
+
+  const dd = document.createElement("dd");
+  dd.innerHTML = details;
+
+  list.appendChild(dt);
+  list.appendChild(dd);
 }
 
 function stripHTMLTag(text) {
