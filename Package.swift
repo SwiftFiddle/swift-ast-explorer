@@ -8,7 +8,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-syntax", branch: "508.0.0"),
-    .package(url: "https://github.com/vapor/vapor.git", from: "4.76.3"),
+    .package(url: "https://github.com/vapor/vapor.git", from: "4.76.4"),
     .package(url: "https://github.com/vapor/leaf.git", from: "4.2.4"),
   ],
   targets: [
