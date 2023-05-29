@@ -30,10 +30,13 @@
     <header class="invisible">
       <div class="row row-cols-2 g-0">
         <div class="col">
-          <a class="text-decoration-none mx-1" href="/">
-            <span class="fa-brands fa-swift fa-2x text-primary d-inline-block align-middle p-1 swift-logo"></span><span
-              class="h4 text-dark d-inline-block align-middle m-0">Swift AST Explorer</span>
-          </a>
+          <div class="d-inline-block mx-1">
+            <a class="text-decoration-none" href="/">
+              <span
+                class="fa-brands fa-swift fa-2x text-primary d-inline-block align-middle p-1 swift-logo"></span><span
+                class="h4 text-dark d-inline-block align-middle m-0">Swift AST Explorer</span>
+            </a>
+          </div>
           <button id="run-button" type="button" class="btn btn-primary btn-sm rounded-pill px-3 mx-1 disabled"
             aria-label="Update">
             <span id="run-button-icon" class="fa-solid fa-play fa-fw"></span>
@@ -58,9 +61,9 @@
             <span class="fa-solid fa-align-left"></span>
           </button>
           <span data-bs-toggle="modal" data-bs-target="#help-modal">
-            <button id="help-button" type="button"
-              class="btn btn-outline-primary btn-sm rounded-circle button-circle mx-1" data-bs-toggle="tooltip"
-              data-bs-placement="bottom" data-bs-container="#help-button" title="Help" aria-label="Help">
+            <button id="help-button" type="button" class="btn btn-outline-primary btn-sm rounded-circle button-circle"
+              data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-container="#help-button" title="Help"
+              aria-label="Help">
               <span class="fa-solid fa-question"></span>
             </button>
           </span>
@@ -69,10 +72,9 @@
           <nav>
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item lined" role="presentation">
-                <button type="button" class="nav-link px-4 active" data-bs-toggle="tab"
-                  data-bs-target="#structure-tab-pane" role="tab" aria-controls="structure-tab-pane"
-                  aria-selected="true"><span class="fa-regular fa-folder-tree"></span><span
-                    class="px-3">Structure</span>
+                <button type="button" class="nav-link active" data-bs-toggle="tab" data-bs-target="#structure-tab-pane"
+                  role="tab" aria-controls="structure-tab-pane" aria-selected="true"><span
+                    class="fa-regular fa-folder-tree"></span><span class="px-3">Structure</span>
                 </button>
               </li>
               <li class="nav-item lined" role="presentation">
@@ -117,34 +119,33 @@
     <footer class="invisible">
       <div class="row row-cols-1 g-0">
         <div class="col p-1 text-center">
-          <span class="mx-2">
+          <div class="d-inline-block mx-2">
             <a class="text-reset text-decoration-none small" href="https://status.swift-ast-explorer.com/"
               target="_blank" rel="nofollow noopener noreferrer"><span
-                class="fa-light fa-monitor-heart-rate"></span><span class="mx-1">System
+                class="fa-light fa-monitor-heart-rate"></span><span class="mx-2">System
                 Status</span></a>
-          </span>
-
-          <span class="mx-2">
+          </div>
+          <div class="d-inline-block mx-2">
             <a class="text-reset text-decoration-none small"
               href="https://github.com/swiftfiddle/swift-ast-explorer/issues/new" target="_blank"
               rel="nofollow noopener noreferrer"><span class="fa-regular fa-comment-alt-smile"></span><span
-                class="mx-1">Feedback</span></a>
-          </span>
-          <span class="mx-2">
+                class="mx-2">Feedback</span></a>
+          </div>
+          <div class="d-inline-block mx-2">
             <a class="text-reset text-decoration-none small" href="https://github.com/swiftfiddle/swift-ast-explorer"
               target="_blank" rel="nofollow noopener noreferrer"><span class="fa-brands fa-github"></span><span
-                class="mx-1">Source Code</span></a>
-          </span>
-          <span class="mx-2">
+                class="mx-2">Source Code</span></a>
+          </div>
+          <div class="d-inline-block mx-2">
             <a class="text-reset text-decoration-none small" href="https://hachyderm.io/@kishikawakatsumi"
               target="_blank" rel="nofollow noopener noreferrer"><span class="fa-regular fa-at"></span><span
-                class="mx-1">Creator</span></a>
-          </span>
-          <span class="mx-2">
+                class="mx-2">Creator</span></a>
+          </div>
+          <div class="d-inline-block mx-2">
             <a class="text-reset text-decoration-none small" href="https://github.com/sponsors/kishikawakatsumi"
               target="_blank" rel="nofollow noopener noreferrer">
-              <span class="fa-regular fa-heart"></span></span><span class="mx-1">Donate</span></a>
-          </span>
+              <span class="fa-solid fa-heart" style="color: #bf3989;"></span></span><span class="mx-2">Donate</span></a>
+          </div>
         </div>
       </div>
     </footer>
