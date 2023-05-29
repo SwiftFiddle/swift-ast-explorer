@@ -16,11 +16,40 @@ final class TokenVisitor: SyntaxRewriter {
   }
 
   override func visitPre(_ node: Syntax) {
-    var syntax = "\(node.syntaxNodeType)"
-    if syntax.hasSuffix("Syntax") {
-      syntax = String(syntax.dropLast(6))
+    let syntaxNodeType = node.syntaxNodeType
+
+    let className: String
+    if "\(syntaxNodeType)".hasSuffix("Syntax") {
+      className = String("\(syntaxNodeType)".dropLast(6))
+    } else {
+      className = "\(syntaxNodeType)"
     }
-    list.append("<span class='\(syntax)' data-title='Syntax' data-content='\(syntax)'>")
+
+    let content: String
+    let type: String
+    if let tokenSyntax = node.as(TokenSyntax.self) {
+      content = "\(tokenSyntax.tokenKind)"
+      type = "Token"
+    } else {
+      content = "\(syntaxNodeType)"
+      type = "Syntax"
+    }
+
+    let sourceRange = node.sourceRange(converter: converter)
+    let start = sourceRange.start
+    let end = sourceRange.end
+    let startRow = start.line ?? 1
+    let startColumn = start.column ?? 1
+    let endRow = end.line ?? 1
+    let endColumn = end.column ?? 1
+
+    list.append(
+      "<span class='\(className)' " +
+      "data-title='\("\(node.withoutTrivia())".replacingOccurrences(of: "\n", with: "↲"))' " +
+      "data-content='\(content)' " +
+      "data-type='\(type)' " +
+      #"data-range='{"startRow":\#(startRow),"startColumn":\#(startColumn),"endRow":\#(endRow),"endColumn":\#(endColumn)}'>"#
+    )
 
     let syntaxType: SyntaxType
     switch node {
@@ -36,18 +65,14 @@ final class TokenVisitor: SyntaxRewriter {
       syntaxType = .other
     }
 
-    let sourceRange = node.sourceRange(converter: converter)
-    let start = sourceRange.start
-    let end = sourceRange.end
-
     let treeNode = TreeNode(
       id: index,
-      text: syntax,
+      text: className,
       range: Range(
-        startRow: start.line.flatMap { $0 } ?? 1,
-        startColumn: start.column.flatMap { $0 } ?? 1,
-        endRow: end.line.flatMap { $0 } ?? 1,
-        endColumn: end.column.flatMap { $0 } ?? 1
+        startRow: startRow,
+        startColumn: startColumn,
+        endRow: endRow,
+        endColumn: endColumn
       ),
       type: syntaxType
     )
@@ -134,14 +159,26 @@ final class TokenVisitor: SyntaxRewriter {
       kind = "keyword"
     }
 
+    let sourceRange = token.sourceRange(converter: converter)
+    let start = sourceRange.start
+    let end = sourceRange.end
+    let startRow = start.line ?? 1
+    let startColumn = start.column ?? 1
+    let endRow = end.line ?? 1
+    let endColumn = end.column ?? 1
     list.append(
-      "<span class='token \(kind)' data-title='Token' data-content='\(token.tokenKind)'>\(escapeHtmlSpecialCharacters(token.text))</span>"
+      "<span class='token \(kind)' " +
+      "data-title='\(token.withoutTrivia())' " +
+      "data-content='\(token.tokenKind)' " +
+      "data-type='Token' " +
+      #"data-range='{"startRow":\#(startRow),"startColumn":\#(startColumn),"endRow":\#(endRow),"endColumn":\#(endColumn)}'>"# +
+      "\(escapeHtmlSpecialCharacters(token.text))</span>"
     )
   }
 
   private func processTriviaPiece(_ piece: TriviaPiece) -> String {
     func wrapWithSpanTag(class c: String, text: String) -> String {
-      "<span class='\(c)' data-title='Trivia' data-content='\(c)'>\(escapeHtmlSpecialCharacters(text))</span>"
+      "<span class='\(c)' data-title='\(piece)' data-content='\(c)' data-type='Trivia'>\(escapeHtmlSpecialCharacters(text))</span>"
     }
 
     var trivia = ""
