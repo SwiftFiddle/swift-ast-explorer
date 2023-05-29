@@ -10,6 +10,7 @@ import {
   faCodeBranch,
   faCaretRight,
   faCaretDown,
+  faHeart,
 } from "@fortawesome/pro-solid-svg-icons";
 import {
   faCheck,
@@ -19,8 +20,6 @@ import {
   faFileImport,
   faCommentAltSmile,
   faAt,
-  faDonate,
-  faHeart,
 } from "@fortawesome/pro-regular-svg-icons";
 import {
   faFileCode,
@@ -39,6 +38,7 @@ library.add(
   faCodeBranch,
   faCaretRight,
   faCaretDown,
+  faHeart,
 
   faCheck,
   faFolderTree,
@@ -47,8 +47,6 @@ library.add(
   faFileImport,
   faCommentAltSmile,
   faAt,
-  faDonate,
-  faHeart,
 
   faFileCode,
   faMonitorHeartRate,
