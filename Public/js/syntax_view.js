@@ -38,7 +38,12 @@ export class SyntaxView {
             .parents("span")
             .each(function (index, element) {
               createDOMRectElement(element.getBoundingClientRect());
-              contents.push([element.dataset.title, element.dataset.content]);
+              contents.push({
+                title: element.dataset.title,
+                content: element.dataset.content,
+                type: element.dataset.type,
+                range: element.dataset.range,
+              });
               if (index > 0) {
                 return false;
               }
@@ -48,13 +53,35 @@ export class SyntaxView {
           element.style.backgroundColor = "rgba(81, 101, 255, 0.5)";
 
           contents.reverse();
-          contents.push([element.dataset.title, element.dataset.content]);
+          contents.push({
+            title: element.dataset.title,
+            content: element.dataset.content,
+            type: element.dataset.type,
+            range: element.dataset.range,
+          });
 
-          const dl = `<dl>${contents
-            .map((content) => {
-              return `<dt>${content[0]}</dt><dd>${content[1]}</dd>`;
+          const list = contents
+            .filter(
+              (item, index, self) =>
+                index ===
+                self.findIndex(
+                  (t) =>
+                    t.title === item.title &&
+                    t.content === item.content &&
+                    t.range === item.range
+                )
+            )
+            .map((item) => {
+              if (item.range) {
+                const range = JSON.parse(item.range);
+                const sourceRange = `${range.startRow}:${range.startColumn} - ${range.endRow}:${range.endColumn}`;
+                return `<dt class="text-truncate" style="max-width: calc(40vw - 20px);"><span class="badge annotation" style="width: auto; text-align: start;">Text</span>${item.title}</dt><dd><div><span class="badge annotation">Range</span>${sourceRange}</div><div><span class="badge annotation">${item.type}</span>${item.content}</div></dd>`;
+              } else {
+                return `<dt class="text-truncate" style="max-width: calc(40vw - 20px);"><span class="badge annotation" style="width: auto; text-align: start;">Text</span>${item.title}</dt><dd><div><span class="badge annotation">${item.type}</span>${item.content}</div></dd>`;
+              }
             })
-            .join("")}</dl>`;
+            .join("");
+          const dl = `<dl>${list}</dl>`;
           popover.content = dl;
 
           popover.show(element, {
