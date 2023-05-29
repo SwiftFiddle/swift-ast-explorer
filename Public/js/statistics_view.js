@@ -5,6 +5,8 @@ import "datatables.net-bs5/css/dataTables.bootstrap5.min.css";
 
 import "../css/table.css";
 
+import { throttle } from "./throttle.js";
+
 export class StatisticsView {
   set error(error) {
     this.container.innerHTML = `<div class="alert alert-danger m-3" role="alert">${error}</div>`;
@@ -36,18 +38,29 @@ export class StatisticsView {
       tr.innerHTML = `<td style="font-family: Menlo, Consolas, 'DejaVu Sans Mono', 'Ubuntu Mono', monospace;">${row.text}</td><td><div>${row.ranges.length}</div></td>`;
       body.appendChild(tr);
 
-      tr.addEventListener("mouseover", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-
-        this.onmouseover(event, tr, row.ranges);
+      const onmouseover = throttle((event, element, data) => {
+        this.onmouseover(event, element, data);
       });
-      tr.addEventListener("mouseout", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-
-        this.onmouseout(event, tr);
+      const onmouseout = throttle((event, element, data) => {
+        this.onmouseout(event, element, data);
       });
+
+      tr.addEventListener(
+        "mouseover",
+        (event) => {
+          event.stopPropagation();
+          onmouseover(event, tr, row.ranges);
+        },
+        { capture: false, once: false, passive: false }
+      );
+      tr.addEventListener(
+        "mouseout",
+        (event) => {
+          event.stopPropagation();
+          onmouseout(event, tr);
+        },
+        { capture: false, once: false, passive: false }
+      );
     }
 
     if (this.dataTable) {
