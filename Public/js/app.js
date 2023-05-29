@@ -19,7 +19,8 @@ export class App {
   get contentViewHeight() {
     const headerHeight = document.querySelector("header").clientHeight;
     const footerHeight = document.querySelector("footer").clientHeight;
-    return `calc(100vh - ${headerHeight}px - ${footerHeight}px)`;
+    const viewport = CSS.supports("height", "100svh") ? "100svh" : "100vh";
+    return `calc(${viewport} - ${headerHeight}px - ${footerHeight}px)`;
   }
 
   constructor() {
