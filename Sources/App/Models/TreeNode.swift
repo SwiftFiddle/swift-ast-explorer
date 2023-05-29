@@ -28,10 +28,12 @@ struct Range: Codable {
 struct StructureProperty: Codable {
   let name: String
   let value: StructureValue?
+  let ref: String?
 
-  init(name: String, value: StructureValue? = nil) {
+  init(name: String, value: StructureValue? = nil, ref: String? = nil) {
     self.name = name
     self.value = value
+    self.ref = ref
   }
 }
 

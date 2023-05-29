@@ -102,7 +102,8 @@ final class TokenVisitor: SyntaxRewriter {
               )
             case let value?:
               if let value = value as? SyntaxProtocol {
-                treeNode.structure.append(StructureProperty(name: key, value: StructureValue(text: "\(value.syntaxNodeType)(...)")))
+                let type = "\(value.syntaxNodeType)"
+                treeNode.structure.append(StructureProperty(name: key, value: StructureValue(text: "\(type)"), ref: "\(type)"))
               } else {
                 treeNode.structure.append(StructureProperty(name: key, value: StructureValue(text: "\(value)")))
               }

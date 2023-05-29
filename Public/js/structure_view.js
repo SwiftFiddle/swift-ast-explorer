@@ -128,7 +128,9 @@ function makeSourceRangePopoverContent(data, list) {
 function makePropertyPopoverContent(property, list) {
   const details = (() => {
     const value = property.value;
-    if (value && value.text && value.kind) {
+    if (property.ref) {
+      return `<span class="badge ref">${property.ref}</span>`;
+    } else if (value && value.text && value.kind) {
       const text = stripHTMLTag(value.text);
       const kind = stripHTMLTag(value.kind);
       return `${text}<span class="badge rounded-pill">${kind}</span>`;

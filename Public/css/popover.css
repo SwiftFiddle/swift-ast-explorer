@@ -22,12 +22,6 @@
   font-size: larger;
 }
 
-.popover-content .badge {
-  margin: 0 8px 0 8px;
-  color: #808080;
-  background-color: #f2f2f2;
-}
-
 .popover-content dl {
   margin-top: 0;
   margin-bottom: 0;
@@ -50,12 +44,26 @@
   white-space: pre-line;
 }
 
+.popover-content .badge {
+  margin: 0 8px 0 8px;
+  color: #696969;
+  background-color: #f2f2f2;
+}
+
+.popover-content .badge.ref {
+  margin: 0 0 0 -0.65em;
+  color: #696969;
+  background-color: #f2f2f2;
+  font-size: 100%;
+  font-weight: normal;
+}
+
 .popover-content .badge.annotation {
   width: 48px;
   text-align: end;
   font-size: 0.8rem;
   margin: 0 8px 0 0;
   padding: 0;
-  color: #808080;
+  color: #696969;
   background-color: transparent;
 }
