@@ -1,19 +1,12 @@
 "use strict";
 
 import { Tooltip } from "bootstrap";
+import { Editor } from "./editor.js";
 import { StructureView } from "./structure_view.js";
 import { SyntaxView } from "./syntax_view.js";
 import { StatisticsView } from "./statistics_view.js";
 import { WebSocketClient } from "./websocket.js";
 import { debounce } from "./debounce.js";
-
-import "../css/editor.css";
-
-import "ace-builds/src-min-noconflict/ace";
-import "ace-builds/src-min-noconflict/ext-language_tools";
-import "ace-builds/src-min-noconflict/mode-swift";
-import "ace-builds/src-min-noconflict/theme-xcode";
-const Range = ace.require("ace/range").Range;
 
 export class App {
   get contentViewHeight() {
@@ -24,30 +17,7 @@ export class App {
   }
 
   constructor() {
-    this.editor = ace.edit("editor-container");
-    this.editor.setTheme("ace/theme/xcode");
-    this.editor.session.setMode("ace/mode/swift");
-    this.editor.$blockScrolling = Infinity;
-    this.editor.setOptions({
-      tabSize: 2,
-      useSoftTabs: true,
-      autoScrollEditorIntoView: true,
-      fontFamily:
-        "Menlo, Consolas, 'DejaVu Sans Mono', 'Ubuntu Mono', monospace",
-      fontSize: "11pt",
-      showInvisibles: false,
-      enableAutoIndent: true,
-      enableBasicAutocompletion: true,
-      enableSnippets: true,
-      enableLiveAutocompletion: true,
-      scrollPastEnd: 0.5, // Overscroll
-      wrap: "free",
-      displayIndentGuides: true,
-    });
-    this.editor.renderer.setOptions({
-      showFoldWidgets: false,
-      showPrintMargin: false,
-    });
+    this.editor = new Editor(document.getElementById("editor-container"));
 
     this.structureView = new StructureView(
       document.getElementById("structure")
@@ -72,7 +42,7 @@ export class App {
     const updateOnTextChange = debounce(() => {
       this.update();
     }, 400);
-    this.editor.on("change", (change) => {
+    this.editor.on("change", () => {
       updateOnTextChange();
     });
 
@@ -106,33 +76,6 @@ export class App {
       event.preventDefault();
       formatter.send({ code: this.editor.getValue() });
     });
-
-    const dropZone = document.getElementById("editor-container");
-    dropZone.addEventListener(
-      "dragover",
-      (event) => {
-        event.stopPropagation();
-        event.preventDefault();
-        event.dataTransfer.dropEffect = "copy";
-      },
-      false
-    );
-    dropZone.addEventListener(
-      "drop",
-      (event) => {
-        event.stopPropagation();
-        event.preventDefault();
-
-        const files = event.dataTransfer.files;
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          this.editor.setValue(event.target.result);
-          this.editor.clearSelection();
-        };
-        reader.readAsText(files[0], "UTF-8");
-      },
-      false
-    );
 
     const onresize = debounce(() => {
       this.onresize();
@@ -203,14 +146,7 @@ export class App {
   updateStructure(structureData) {
     this.structureView.update(structureData);
     this.structureView.onmouseover = (event, target, data) => {
-      this.editor.selection.setRange(
-        new Range(
-          data.range.startRow - 1,
-          data.range.startColumn - 1,
-          data.range.endRow - 1,
-          data.range.endColumn - 1
-        )
-      );
+      this.editor.setSelection(data.range);
     };
   }
 
@@ -223,27 +159,18 @@ export class App {
 
     this.statisticsView.onmouseover = (event, target, ranges) => {
       for (const range of ranges) {
-        this.editor.session.addMarker(
-          new Range(
-            range.startRow - 1,
-            range.startColumn - 1,
-            range.endRow - 1,
-            range.endColumn - 1
-          ),
-          "editor-marker",
-          "text"
-        );
+        this.editor.markText(range);
       }
     };
     this.statisticsView.onmouseout = (event, target) => {
-      const markers = this.editor.session.getMarkers();
-      for (const [key, value] of Object.entries(markers)) {
-        this.editor.session.removeMarker(value.id);
-      }
+      this.editor.clearMarks();
     };
   }
 
   onresize() {
+    document.querySelector(".CodeMirror").style.height = this.contentViewHeight;
+    this.editor.refresh();
+
     document.getElementById("structure").style.height = this.contentViewHeight;
     document.getElementById("syntax-container").style.height =
       this.contentViewHeight;
