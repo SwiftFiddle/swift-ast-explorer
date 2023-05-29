@@ -39,7 +39,7 @@ body {
   overflow: auto;
 }
 
-#syntax-container {
+#lookup-container {
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
   font-size: 11pt;
   line-height: 1.4;
