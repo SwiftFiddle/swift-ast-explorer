@@ -2,6 +2,7 @@
 
 import { Tooltip } from "bootstrap";
 import { Editor } from "./editor.js";
+import { Balloon } from "./balloon.js";
 import { StructureView } from "./structure_view.js";
 import { SyntaxView } from "./syntax_view.js";
 import { StatisticsView } from "./statistics_view.js";
@@ -18,6 +19,7 @@ export class App {
 
   constructor() {
     this.editor = new Editor(document.getElementById("editor-container"));
+    this.balloon = new Balloon();
 
     this.structureView = new StructureView(
       document.getElementById("structure")
@@ -145,8 +147,19 @@ export class App {
 
   updateStructure(structureData) {
     this.structureView.update(structureData);
+
     this.structureView.onmouseover = (event, target, data) => {
-      this.editor.setSelection(data.range);
+      const title = data.token ? "Token" : `${data.text}`;
+      const range = data.range;
+
+      this.balloon.content = `<div class="title">${title}</div><div class="range">${range.startRow}:${range.startColumn} - ${range.endRow}:${range.endColumn}</div>`;
+      this.balloon.show(this.editor.charCoords(range));
+
+      this.editor.setSelection(range);
+    };
+    this.structureView.onmouseout = (event, target, data) => {
+      this.balloon.hide();
+      this.editor.clearSelection();
     };
   }
 
