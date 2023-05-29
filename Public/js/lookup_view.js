@@ -1,9 +1,9 @@
 "use strict";
 
 import { Popover } from "./popover.js";
-import "../css/syntax.css";
+import "../css/lookup.css";
 
-export class SyntaxView {
+export class LoopupView {
   set error(error) {
     this.container.innerHTML = `<div class="alert alert-danger m-3" role="alert">${error}</div>`;
   }

@@ -4,7 +4,7 @@ import { Tooltip } from "bootstrap";
 import { Editor } from "./editor.js";
 import { Balloon } from "./balloon.js";
 import { StructureView } from "./structure_view.js";
-import { SyntaxView } from "./syntax_view.js";
+import { LoopupView } from "./lookup_view.js";
 import { StatisticsView } from "./statistics_view.js";
 import { WebSocketClient } from "./websocket.js";
 import { debounce } from "./debounce.js";
@@ -24,8 +24,8 @@ export class App {
     this.structureView = new StructureView(
       document.getElementById("structure")
     );
-    this.syntaxView = new SyntaxView(
-      document.getElementById("syntax-container")
+    this.loopupView = new LoopupView(
+      document.getElementById("lookup-container")
     );
     this.statisticsView = new StatisticsView(
       document.getElementById("statistics-container")
@@ -117,7 +117,7 @@ export class App {
         );
 
         this.updateStructure(structureData);
-        this.updateSyntaxMap(data.syntaxHTML);
+        this.updateLookup(data.syntaxHTML);
 
         const statistics = structureData
           .filter((node) => node.token === undefined)
@@ -136,7 +136,7 @@ export class App {
       })
       .catch((error) => {
         this.structureView.error = error;
-        this.syntaxView.error = error;
+        this.loopupView.error = error;
         this.statisticsView.error = error;
       })
       .finally(() => {
@@ -163,8 +163,8 @@ export class App {
     };
   }
 
-  updateSyntaxMap(syntaxHTML) {
-    this.syntaxView.update(syntaxHTML);
+  updateLookup(syntaxHTML) {
+    this.loopupView.update(syntaxHTML);
   }
 
   updateStatistics(statistics) {
@@ -185,7 +185,7 @@ export class App {
     this.editor.refresh();
 
     document.getElementById("structure").style.height = this.contentViewHeight;
-    document.getElementById("syntax-container").style.height =
+    document.getElementById("lookup-container").style.height =
       this.contentViewHeight;
     document.getElementById("statistics-container").style.height =
       this.contentViewHeight;
