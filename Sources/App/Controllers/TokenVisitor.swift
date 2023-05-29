@@ -44,10 +44,10 @@ final class TokenVisitor: SyntaxRewriter {
       id: index,
       text: syntax,
       range: Range(
-        startRow: start.line.flatMap { $0 - 1 } ?? 1,
-        startColumn: start.column.flatMap { $0 - 1 } ?? 1,
-        endRow: end.line.flatMap { $0 - 1 } ?? 1,
-        endColumn: end.column.flatMap { $0 - 1 } ?? 1
+        startRow: start.line.flatMap { $0 } ?? 1,
+        startColumn: start.column.flatMap { $0 } ?? 1,
+        endRow: end.line.flatMap { $0 } ?? 1,
+        endColumn: end.column.flatMap { $0 } ?? 1
       ),
       type: syntaxType
     )
