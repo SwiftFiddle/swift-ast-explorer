@@ -44,8 +44,10 @@ export class TreeView {
 
     const li = document.createElement("li");
     li.classList.add("entry");
+
+    const element = document.createElement("div");
+
     if (this.hasChildren(node.id)) {
-      const element = document.createElement("div");
       const caret = downCaret.cloneNode(true);
       element.appendChild(caret);
 
@@ -70,24 +72,7 @@ export class TreeView {
           this.collapse(node, element, li);
         }
       });
-
-      li.addEventListener("mouseover", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-
-        li.classList.add("hover");
-        this.hoveredElement = li;
-        this.onmouseover(event, element, node);
-      });
-      li.addEventListener("mouseout", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-
-        li.classList.remove("hover");
-        this.onmouseout(event, element, node);
-      });
     } else {
-      const element = document.createElement("div");
       element.classList.add("token");
       if (node.text.length === 0) {
         element.innerHTML = `<span class="badge">Empty</span>`;
@@ -95,23 +80,22 @@ export class TreeView {
         element.innerHTML = node.text;
       }
       li.appendChild(element);
-
-      li.addEventListener("mouseover", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-
-        li.classList.add("hover");
-        this.hoveredElement = li;
-        this.onmouseover(event, element, node);
-      });
-      li.addEventListener("mouseout", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-
-        li.classList.remove("hover");
-        this.onmouseout(event, element, node);
-      });
     }
+
+    li.addEventListener("mouseover", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      li.classList.add("hover");
+      this.onmouseover(event, element, node);
+    });
+    li.addEventListener("mouseout", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      li.classList.remove("hover");
+      this.onmouseout(event, element, node);
+    });
 
     ul.appendChild(li);
     return ul;
