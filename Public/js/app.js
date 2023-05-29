@@ -205,10 +205,10 @@ export class App {
     this.structureView.onmouseover = (event, target, data) => {
       this.editor.selection.setRange(
         new Range(
-          data.range.startRow,
-          data.range.startColumn,
-          data.range.endRow,
-          data.range.endColumn
+          data.range.startRow - 1,
+          data.range.startColumn - 1,
+          data.range.endRow - 1,
+          data.range.endColumn - 1
         )
       );
     };
@@ -225,10 +225,10 @@ export class App {
       for (const range of ranges) {
         this.editor.session.addMarker(
           new Range(
-            range.startRow,
-            range.startColumn,
-            range.endRow,
-            range.endColumn
+            range.startRow - 1,
+            range.startColumn - 1,
+            range.endRow - 1,
+            range.endColumn - 1
           ),
           "editor-marker",
           "text"
