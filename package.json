@@ -11,8 +11,8 @@
     "@fortawesome/pro-regular-svg-icons": "6.4.0",
     "@fortawesome/pro-solid-svg-icons": "6.4.0",
     "@popperjs/core": "2.11.8",
-    "ace-builds": "1.22.0",
     "bootstrap": "5.2.3",
+    "codemirror": "5.65.13",
     "datatables.net-bs5": "1.13.4",
     "plausible-tracker": "0.3.8",
     "reconnecting-websocket": "4.4.0"
