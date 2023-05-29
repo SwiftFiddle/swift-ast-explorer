@@ -1,7 +1,7 @@
 "use strict";
 
-import { Popover } from "./popover.js";
 import "../css/lookup.css";
+import { Popover } from "./popover.js";
 
 export class LoopupView {
   set error(error) {
@@ -29,7 +29,6 @@ export class LoopupView {
       .find("span")
       .each(function () {
         $(this).mouseover(function (event) {
-          event.preventDefault();
           event.stopPropagation();
 
           const contents = [];
@@ -91,7 +90,6 @@ export class LoopupView {
         });
 
         $(this).mouseout(function (event) {
-          event.preventDefault();
           event.stopPropagation();
 
           let element = event.target;

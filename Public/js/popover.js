@@ -1,6 +1,7 @@
 "use strict";
 
 import "../css/popover.css";
+import { throttle } from "./throttle.js";
 
 export class Popover {
   set maxWidth(value) {
@@ -28,16 +29,29 @@ export class Popover {
     this.popover.appendChild(this.popoverContent);
     document.body.appendChild(this.popover);
 
-    this.popover.addEventListener("mouseenter", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
+    const onmouseover = throttle((event) => {
       this.onmouseover(event);
     });
-    this.popover.addEventListener("mouseleave", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
+    const onmouseout = throttle((event) => {
       this.onmouseout(event);
     });
+
+    this.popover.addEventListener(
+      "mouseenter",
+      (event) => {
+        event.stopPropagation();
+        onmouseover(event);
+      },
+      { capture: false, once: false, passive: false }
+    );
+    this.popover.addEventListener(
+      "mouseleave",
+      (event) => {
+        event.stopPropagation();
+        onmouseout(event);
+      },
+      { capture: false, once: false, passive: false }
+    );
   }
 
   show(target, options = {}) {
