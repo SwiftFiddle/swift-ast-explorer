@@ -9,27 +9,12 @@ export class Balloon {
 
   constructor() {
     this.balloon = document.createElement("div");
-
-    this.onmouseover = () => {};
-    this.onmouseout = () => {};
-
     this.init();
   }
 
   init() {
     this.balloon.classList.add("d-none", "balloon-content");
     document.body.appendChild(this.balloon);
-
-    this.balloon.addEventListener("mouseenter", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      this.onmouseover(event);
-    });
-    this.balloon.addEventListener("mouseleave", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      this.onmouseout(event);
-    });
   }
 
   show(position) {
