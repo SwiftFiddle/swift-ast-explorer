@@ -16,7 +16,7 @@
 }
 
 .popover-content .title {
-  margin: 0 8px 0 8px;
+  margin: 0 10px 0 10px;
   padding-top: 8px;
   font-weight: bolder;
   font-size: larger;
@@ -31,22 +31,21 @@
 .popover-content dl {
   margin-top: 0;
   margin-bottom: 0;
-  padding: 8px;
+  padding: 10px;
   max-height: 60vh;
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
   overflow: scroll;
 }
 
 .popover-content dt {
-  padding: 0 8px;
-  background-color: #f5f5f5;
+  padding: 0;
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
 }
 
 .popover-content dd {
   margin-bottom: 2px;
   margin-left: 0;
-  padding: 0 8px;
+  padding: 0 0 0 10px;
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
   white-space: pre-line;
 }
