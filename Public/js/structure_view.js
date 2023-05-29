@@ -13,6 +13,7 @@ export class StructureView {
     this.popover = new Popover();
 
     this.onmouseover = () => {};
+    this.onmouseout = () => {};
 
     this.init();
   }
@@ -51,6 +52,8 @@ export class StructureView {
     };
 
     this.treeView.onmouseout = (event, target, data) => {
+      this.onmouseout(event, target, data);
+
       if (!event.relatedTarget) {
         return;
       }

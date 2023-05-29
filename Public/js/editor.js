@@ -1,18 +1,16 @@
 "use strict";
 
 import "codemirror/lib/codemirror.css";
+import "../css/editor.css";
 
 import CodeMirror from "codemirror";
 import "codemirror/mode/swift/swift";
 import "codemirror/addon/edit/matchbrackets";
 import "codemirror/addon/edit/closebrackets";
 
-import "../css/editor.css";
-
 export class Editor {
   constructor(container) {
     this.container = container;
-
     this.init();
   }
 
@@ -80,6 +78,13 @@ export class Editor {
     this.editor.getAllMarks().forEach((mark) => {
       mark.clear();
     });
+  }
+
+  charCoords(range) {
+    return this.editor.charCoords(
+      { ch: range.startColumn - 1, line: range.startRow - 1 },
+      "page"
+    );
   }
 
   focus() {

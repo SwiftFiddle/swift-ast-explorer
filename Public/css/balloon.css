@@ -1,0 +1,29 @@
+.balloon-content {
+  font-size: 70%;
+  white-space: nowrap;
+  border-radius: 5px;
+  background-color: #555;
+  color: #fff;
+  padding: 2px 8px;
+  position: absolute;
+  transform: translateX(-30%);
+}
+
+.balloon-content:before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: calc(50% - 9px);
+  border: 9px solid transparent;
+  border-top: 9px solid #555;
+}
+
+.balloon-content .title {
+  color: #fff;
+  font-weight: bolder;
+}
+
+.balloon-content .range {
+  color: #dcdcdc;
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
+}
