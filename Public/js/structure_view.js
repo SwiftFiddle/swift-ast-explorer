@@ -51,6 +51,9 @@ export class StructureView {
     };
 
     this.treeView.onmouseout = (event, target, data) => {
+      if (!event.relatedTarget) {
+        return;
+      }
       if (!event.relatedTarget.classList.contains("popover-content")) {
         this.popover.hide();
       }
