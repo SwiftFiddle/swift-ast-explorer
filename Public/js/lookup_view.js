@@ -84,7 +84,7 @@ export class LoopupView {
           popover.content = dl;
 
           popover.show(element, {
-            lowerLimit: tabContainerRect.top + tabContainerRect.height,
+            containerRect: tabContainerRect,
             offsetX: 40,
           });
         });

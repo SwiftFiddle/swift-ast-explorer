@@ -47,7 +47,7 @@ export class Popover {
   }
 
   show(target, options = {}) {
-    const lowerLimit = options.lowerLimit;
+    const containerRect = options.containerRect;
     const offsetX = options.offsetX || 0;
 
     this.popover.classList.remove("d-none");
@@ -55,9 +55,10 @@ export class Popover {
     const targetRect = target.getBoundingClientRect();
     const popoverRect = this.popover.getBoundingClientRect();
 
+    const bottom = containerRect.top + containerRect.height;
     const top = targetRect.top - 6;
-    if (top + popoverRect.height > lowerLimit) {
-      this.popover.style.top = `${lowerLimit - popoverRect.height}px`;
+    if (top + popoverRect.height > bottom) {
+      this.popover.style.top = `${bottom - popoverRect.height}px`;
     } else {
       this.popover.style.top = `${top}px`;
     }

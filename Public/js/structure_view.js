@@ -43,11 +43,9 @@ export class StructureView {
         .querySelector(".tab-content")
         .getBoundingClientRect();
 
-      const parent = target.parentElement;
-      const caret = parent.querySelector(":scope > div > .caret");
-      this.popover.show(caret || target, {
-        lowerLimit: tabContainerRect.top + tabContainerRect.height,
-        offsetX: caret ? 0 : 24,
+      this.popover.show(target, {
+        containerRect: tabContainerRect,
+        offsetX: 24,
       });
     };
 

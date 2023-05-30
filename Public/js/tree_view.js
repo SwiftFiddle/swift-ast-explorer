@@ -45,41 +45,41 @@ export class TreeView {
     const li = document.createElement("li");
     li.classList.add("entry");
 
-    const element = document.createElement("div");
+    const content = document.createElement("div");
 
     if (this.hasChildren(node.id)) {
       const caret = downCaret.cloneNode(true);
-      element.appendChild(caret);
+      content.appendChild(caret);
 
       const div = document.createElement("div");
-      div.classList = `${node.type}-syntax`;
+      div.classList.add(`${node.type}-syntax`);
       div.innerHTML = node.text;
-      element.appendChild(div);
-      li.appendChild(element);
+      content.appendChild(div);
+      li.appendChild(content);
 
       const children = this.getChildren(node.id);
       for (const child of children) {
         li.appendChild(this.renderNode(child));
       }
 
-      element.addEventListener("click", (event) => {
+      content.addEventListener("click", (event) => {
         event.preventDefault();
         event.stopPropagation();
 
-        if (element.classList.contains("collapsed")) {
-          this.expand(node, element, li);
+        if (content.classList.contains("collapsed")) {
+          this.expand(node, content, li);
         } else {
-          this.collapse(node, element, li);
+          this.collapse(node, content, li);
         }
       });
     } else {
-      element.classList.add("token");
+      content.classList.add("token");
       if (node.text.length === 0) {
-        element.innerHTML = `<span class="badge">Empty</span>`;
+        content.innerHTML = `<span class="badge">Empty</span>`;
       } else {
-        element.innerHTML = node.text;
+        content.innerHTML = node.text;
       }
-      li.appendChild(element);
+      li.appendChild(content);
     }
 
     li.addEventListener(
@@ -88,7 +88,7 @@ export class TreeView {
         event.stopPropagation();
 
         li.classList.add("hover");
-        this.onmouseover(event, element, node);
+        this.onmouseover(event, content, node);
       },
       { capture: false, once: false, passive: false }
     );
@@ -98,7 +98,7 @@ export class TreeView {
         event.stopPropagation();
 
         li.classList.remove("hover");
-        this.onmouseout(event, element, node);
+        this.onmouseout(event, content, node);
       },
       { capture: false, once: false, passive: false }
     );

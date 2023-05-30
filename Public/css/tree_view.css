@@ -5,15 +5,19 @@
 
 .tree-view ul {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 0;
 }
 
 .tree-view li.entry {
   position: relative;
   list-style: none;
   margin: 0;
-  padding: 5px 5px 0 5px;
+  padding: 5px 5px 0 25px;
   cursor: pointer;
+}
+
+.tree-view li.entry div {
+  display: inline-block;
 }
 
 .tree-view li.entry.hover {
@@ -22,7 +26,7 @@
 
 .tree-view li .caret {
   position: absolute;
-  left: -20px;
+  left: 0;
   color: #a9a9a9;
 }
 

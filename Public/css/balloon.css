@@ -2,7 +2,7 @@
   font-size: 70%;
   white-space: nowrap;
   border-radius: 5px;
-  background-color: #555;
+  background-color: rgba(85, 85, 85, 0.9);
   color: #fff;
   padding: 2px 8px;
   position: absolute;
@@ -13,9 +13,9 @@
   content: "";
   position: absolute;
   top: 34px;
-  left: calc(50% - 9px);
+  left: calc(24% - 9px);
   border: 9px solid transparent;
-  border-top: 9px solid #555;
+  border-top: 9px solid rgba(85, 85, 85, 0.9);
 }
 
 .balloon-content .title {
