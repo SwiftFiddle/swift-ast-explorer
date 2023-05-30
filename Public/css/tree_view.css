@@ -1,3 +1,8 @@
+.scrollable {
+  overflow: auto;
+  height: 100%;
+}
+
 .tree-view {
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
   font-size: 11pt;

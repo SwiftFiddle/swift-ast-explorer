@@ -7,6 +7,7 @@ export class TreeView {
     this.container = container;
     this.tree = tree;
 
+    this.scrollable = document.createElement("div");
     this.treeView = document.createElement("div");
 
     this.state = {};
@@ -21,12 +22,32 @@ export class TreeView {
 
   init() {
     this.treeView.classList.add("tree-view");
+    this.scrollable.classList.add("scrollable");
+
+    this.computeDimensions();
 
     const fragment = document.createDocumentFragment();
     this.renderTree(fragment, this.tree);
     this.treeView.appendChild(fragment);
 
-    this.container.appendChild(this.treeView);
+    this.scrollable.appendChild(this.treeView);
+    this.container.appendChild(this.scrollable);
+
+    let ticking = false;
+    this.scrollable.addEventListener(
+      "scroll",
+      (event) => {
+        event.stopPropagation();
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            this.onscroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      },
+      { capture: false, once: false, passive: true }
+    );
   }
 
   renderTree(container, tree) {
@@ -46,9 +67,10 @@ export class TreeView {
     li.classList.add("entry");
 
     const content = document.createElement("div");
+    content.style.height = `${this.rowHeight}px`;
 
     if (this.hasChildren(node.id)) {
-      content.appendChild(makeMarker());
+      // content.appendChild(makeMarker());
 
       content.addEventListener("click", (event) => {
         this.onclick(event, node, li);
@@ -58,7 +80,7 @@ export class TreeView {
       div.classList.add(`${node.type}-syntax`);
       div.innerHTML = node.text;
 
-      content.appendChild(div);
+      // content.appendChild(div);
       li.appendChild(content);
 
       const children = this.getChildren(node.id);
@@ -68,8 +90,8 @@ export class TreeView {
       }
     } else {
       content.classList.add("token");
-      content.innerHTML =
-        node.text.length === 0 ? `<span class="badge">Empty</span>` : node.text;
+      // content.innerHTML =
+      //   node.text.length === 0 ? `<span class="badge">Empty</span>` : node.text;
       li.appendChild(content);
     }
 
@@ -146,6 +168,22 @@ export class TreeView {
     this.state[node.id] = children;
   }
 
+  computeDimensions() {
+    this.viewportHeight = this.container.getBoundingClientRect().height;
+
+    this.treeView.innerHTML = `<ul><li class="entry"><div class="token">SourceFile</div></li></ul>`;
+    this.treeView.style.visibility = "hidden";
+    document.body.appendChild(this.treeView);
+
+    this.rowHeight = this.treeView
+      .querySelector(":scope > ul > li")
+      .getBoundingClientRect().height;
+
+    this.treeView.innerHTML = "";
+    document.body.removeChild(this.treeView);
+    this.treeView.style.visibility = "visible";
+  }
+
   onclick(event, node, li) {
     event.preventDefault();
     event.stopPropagation();
@@ -156,6 +194,8 @@ export class TreeView {
       this.open(node, li);
     }
   }
+
+  onscroll() {}
 }
 
 function makeMarker() {
