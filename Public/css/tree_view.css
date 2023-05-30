@@ -1,7 +1,6 @@
 .tree-view {
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
   font-size: 11pt;
-  overflow: scroll;
 }
 
 .tree-view ul {
