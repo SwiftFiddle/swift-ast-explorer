@@ -1,7 +1,6 @@
 "use strict";
 
 import "../css/tree_view.css";
-import { throttle } from "./throttle.js";
 
 const downCaret = makeDownCaret();
 const rightCaret = makeRightCaret();
@@ -83,20 +82,13 @@ export class TreeView {
       li.appendChild(element);
     }
 
-    const onmouseover = throttle((event, element, data) => {
-      this.onmouseover(event, element, data);
-    });
-    const onmouseout = throttle((event, element, data) => {
-      this.onmouseout(event, element, data);
-    });
-
     li.addEventListener(
       "mouseover",
       (event) => {
         event.stopPropagation();
 
         li.classList.add("hover");
-        onmouseover(event, element, node);
+        this.onmouseover(event, element, node);
       },
       { capture: false, once: false, passive: false }
     );
@@ -106,7 +98,7 @@ export class TreeView {
         event.stopPropagation();
 
         li.classList.remove("hover");
-        onmouseout(event, element, node);
+        this.onmouseout(event, element, node);
       },
       { capture: false, once: false, passive: false }
     );
