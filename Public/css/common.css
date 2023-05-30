@@ -35,7 +35,7 @@ body {
   width: 160px;
 }
 
-.tab-content {
+.tab-pane {
   overflow: auto;
 }
 
