@@ -34,7 +34,7 @@ export class Popover {
         event.stopPropagation();
         this.onmouseover(event);
       },
-      { capture: false, once: false, passive: false }
+      { capture: false, once: false, passive: true }
     );
     this.popover.addEventListener(
       "mouseleave",
@@ -42,7 +42,7 @@ export class Popover {
         event.stopPropagation();
         this.onmouseout(event);
       },
-      { capture: false, once: false, passive: false }
+      { capture: false, once: false, passive: true }
     );
   }
 

@@ -21,10 +21,6 @@ export class LoopupView {
 
     const popover = this.popover;
 
-    const tabContainerRect = document
-      .querySelector(".tab-content")
-      .getBoundingClientRect();
-
     $(this.container)
       .find("span")
       .each(function () {
@@ -82,6 +78,10 @@ export class LoopupView {
             .join("");
           const dl = `<dl>${list}</dl>`;
           popover.content = dl;
+
+          const tabContainerRect = document
+            .querySelector(".tab-content")
+            .getBoundingClientRect();
 
           popover.show(element, {
             containerRect: tabContainerRect,

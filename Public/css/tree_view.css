@@ -24,10 +24,38 @@
   background-color: rgb(100, 149, 237, 0.25);
 }
 
-.tree-view li .caret {
+.tree-view li .marker {
+  position: relative;
+}
+
+.tree-view li.opened .marker::before {
   position: absolute;
-  left: 0;
+  margin-left: -20px;
+  padding: 0.25rem;
   color: #a9a9a9;
+  font-size: 0.75em;
+  font-family: "FontAwesome 6 Solid";
+  content: "\f0d7";
+  display: none;
+}
+
+.tree-view li.collapsed .marker::before {
+  position: absolute;
+  margin-left: -20px;
+  padding: 0.25rem;
+  color: #a9a9a9;
+  font-size: 0.75em;
+  font-family: "FontAwesome 6 Solid";
+  content: "\f0da";
+  display: none;
+}
+
+.tree-view li svg {
+  position: absolute;
+  margin-left: -20px;
+  padding: 0.25rem;
+  color: #a9a9a9;
+  font-size: 0.75em;
 }
 
 .tree-view .decl-syntax {
