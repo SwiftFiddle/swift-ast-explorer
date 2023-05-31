@@ -14,9 +14,7 @@ export class TreeView {
     this.onmouseover = () => {};
     this.onmouseout = () => {};
 
-    requestAnimationFrame(() => {
-      this.init();
-    });
+    this.init();
   }
 
   init() {

@@ -24,9 +24,9 @@ export class StructureView {
 
   update(structureData) {
     this.container.innerHTML = "";
-    this.treeView = new TreeView(this.container, structureData);
+    const treeView = new TreeView(this.container, structureData);
 
-    this.treeView.onmouseover = (event, target, data) => {
+    treeView.onmouseover = (event, target, data) => {
       this.onmouseover(event, target, data);
 
       if (!data.structure.length && !data.token) {
@@ -49,7 +49,7 @@ export class StructureView {
       });
     };
 
-    this.treeView.onmouseout = (event, target, data) => {
+    treeView.onmouseout = (event, target, data) => {
       this.onmouseout(event, target, data);
 
       if (!event.relatedTarget) {

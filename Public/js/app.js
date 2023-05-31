@@ -4,7 +4,7 @@ import { Tooltip } from "bootstrap";
 import { Editor } from "./editor.js";
 import { Balloon } from "./balloon.js";
 import { StructureView } from "./structure_view.js";
-import { LoopupView } from "./lookup_view.js";
+import { LookupView } from "./lookup_view.js";
 import { StatisticsView } from "./statistics_view.js";
 import { WebSocketClient } from "./websocket.js";
 import { debounce } from "./debounce.js";
@@ -21,10 +21,12 @@ export class App {
     this.editor = new Editor(document.getElementById("editor-container"));
     this.balloon = new Balloon();
 
+    this.cache = {};
+
     this.structureView = new StructureView(
-      document.getElementById("structure")
+      document.getElementById("structure-container")
     );
-    this.loopupView = new LoopupView(
+    this.lookupView = new LookupView(
       document.getElementById("lookup-container")
     );
     this.statisticsView = new StatisticsView(
@@ -79,6 +81,24 @@ export class App {
       formatter.send({ code: this.editor.getValue() });
     });
 
+    document.addEventListener("show.bs.tab", (event) => {
+      this.updateActiveTab(event.target);
+    });
+    document.addEventListener("hidden.bs.tab", (event) => {
+      const hiddenTab = event.target;
+      switch (hiddenTab.dataset.bsTarget) {
+        case "#structure-tab-pane":
+          document.getElementById("structure-container").innerHTML = "";
+          break;
+        case "#lookup-tab-pane":
+          document.getElementById("lookup-container").innerHTML = "";
+          break;
+        case "#statistics-tab-pane":
+          document.getElementById("statistics-container").innerHTML = "";
+          break;
+      }
+    });
+
     const onresize = debounce(() => {
       this.onresize();
     }, 200);
@@ -91,6 +111,7 @@ export class App {
 
   update() {
     showLoading();
+    this.cache = {};
 
     const options = configurations();
 
@@ -107,36 +128,13 @@ export class App {
       body: JSON.stringify(json),
     })
       .then((response) => response.json())
-      .then((data) => {
-        const structureData = JSON.parse(
-          data.syntaxJSON
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/'/g, "&#039;")
-        );
-
-        this.updateStructure(structureData);
-        this.updateLookup(data.syntaxHTML);
-
-        const statistics = structureData
-          .filter((node) => node.token === undefined)
-          .reduce((acc, item) => {
-            const existingItem = acc.find((a) => a.text === item.text);
-            if (existingItem) {
-              existingItem.ranges.push(item.range);
-            } else {
-              acc.push({ text: item.text, ranges: [item.range] });
-            }
-            return acc;
-          }, []);
-        this.updateStatistics(statistics);
-
-        this.onresize();
+      .then((response) => {
+        this.response = response;
+        this.updateActiveTab();
       })
       .catch((error) => {
         this.structureView.error = error;
-        this.loopupView.error = error;
+        this.lookupView.error = error;
         this.statisticsView.error = error;
       })
       .finally(() => {
@@ -145,8 +143,34 @@ export class App {
       });
   }
 
-  updateStructure(structureData) {
-    this.structureView.update(structureData);
+  updateActiveTab(tab) {
+    const activeTab = tab || document.querySelector(".nav-link.active");
+    switch (activeTab.dataset.bsTarget) {
+      case "#structure-tab-pane":
+        this.updateStructure();
+        break;
+      case "#lookup-tab-pane":
+        this.updateLookup();
+        break;
+      case "#statistics-tab-pane":
+        this.updateStatistics();
+        break;
+    }
+
+    this.onresize();
+  }
+
+  updateStructure() {
+    this.renderWithCache("structure-container", () => {
+      const data = JSON.parse(
+        this.response.syntaxJSON
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/'/g, "&#039;")
+      );
+      this.structureView.update(data);
+    });
 
     this.structureView.onmouseover = (event, target, data) => {
       const title = data.token ? "Token" : `${data.text}`;
@@ -163,12 +187,37 @@ export class App {
     };
   }
 
-  updateLookup(syntaxHTML) {
-    this.loopupView.update(syntaxHTML);
+  updateLookup() {
+    this.renderWithCache("lookup-container", () => {
+      const data = this.response.syntaxHTML;
+      this.lookupView.update(data);
+    });
   }
 
-  updateStatistics(statistics) {
-    this.statisticsView.update(statistics);
+  updateStatistics() {
+    this.renderWithCache("statistics-container", () => {
+      const data = JSON.parse(
+        this.response.syntaxJSON
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/'/g, "&#039;")
+      );
+
+      const statistics = data
+        .filter((node) => node.token === undefined)
+        .reduce((acc, item) => {
+          const existingItem = acc.find((a) => a.text === item.text);
+          if (existingItem) {
+            existingItem.ranges.push(item.range);
+          } else {
+            acc.push({ text: item.text, ranges: [item.range] });
+          }
+          return acc;
+        }, []);
+
+      this.statisticsView.update(statistics);
+    });
 
     this.statisticsView.onmouseover = (event, target, ranges) => {
       for (const range of ranges) {
@@ -184,11 +233,22 @@ export class App {
     document.querySelector(".CodeMirror").style.height = this.contentViewHeight;
     this.editor.refresh();
 
-    document.getElementById("structure").style.height = this.contentViewHeight;
+    document.getElementById("structure-container").style.height =
+      this.contentViewHeight;
     document.getElementById("lookup-container").style.height =
       this.contentViewHeight;
     document.getElementById("statistics-container").style.height =
       this.contentViewHeight;
+  }
+
+  renderWithCache(id, render) {
+    const container = document.getElementById(id);
+    if (this.cache[id]) {
+      container.appendChild(this.cache[id]);
+      return;
+    }
+    render();
+    this.cache[id] = container.querySelector(":scope > div");
   }
 }
 
