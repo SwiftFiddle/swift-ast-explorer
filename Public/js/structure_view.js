@@ -10,6 +10,7 @@ export class StructureView {
 
   constructor(container) {
     this.container = container;
+    this.popover = new Popover();
 
     this.onmouseover = () => {};
     this.onmouseout = () => {};
@@ -24,7 +25,6 @@ export class StructureView {
   update(structureData) {
     this.container.innerHTML = "";
     const treeView = new TreeView(this.container, structureData);
-    this.popover = new Popover();
 
     treeView.onmouseover = (event, target, data) => {
       this.onmouseover(event, target, data);
