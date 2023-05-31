@@ -14,7 +14,7 @@ import {
 } from "@fortawesome/pro-solid-svg-icons";
 import {
   faCheck,
-  faFolderTree,
+  faListTree,
   faTable,
   faQuestionCircle,
   faFileImport,
@@ -41,7 +41,7 @@ library.add(
   faHeart,
 
   faCheck,
-  faFolderTree,
+  faListTree,
   faTable,
   faQuestionCircle,
   faFileImport,
