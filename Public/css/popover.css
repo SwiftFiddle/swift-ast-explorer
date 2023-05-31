@@ -7,7 +7,7 @@
 .popover-content {
   margin: 0 0 0 0;
   min-width: 400px;
-  max-width: 40vw;
+  max-width: 60vw;
   background-clip: padding-box;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.175);
@@ -16,7 +16,7 @@
 }
 
 .popover-content .title {
-  margin: 0 10px 0 10px;
+  margin: 0 14px 0 14px;
   padding-top: 8px;
   font-weight: bolder;
   font-size: larger;
@@ -25,10 +25,9 @@
 .popover-content dl {
   margin-top: 0;
   margin-bottom: 0;
-  padding: 10px;
-  max-height: 60vh;
+  padding: 10px 14px;
+  max-height: 90vh;
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
-  overflow: scroll;
 }
 
 .popover-content dt {
