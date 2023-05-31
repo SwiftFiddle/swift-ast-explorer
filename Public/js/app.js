@@ -130,6 +130,14 @@ export class App {
       .then((response) => response.json())
       .then((response) => {
         this.response = response;
+        this.structureData = JSON.parse(
+          response.syntaxJSON
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/'/g, "&#039;")
+        );
+
         this.updateActiveTab();
       })
       .catch((error) => {
@@ -162,13 +170,10 @@ export class App {
 
   updateStructure() {
     this.renderWithCache("structure-container", () => {
-      const data = JSON.parse(
-        this.response.syntaxJSON
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/'/g, "&#039;")
-      );
+      if (this.structureData === undefined) {
+        return;
+      }
+      const data = this.structureData;
       this.structureView.update(data);
     });
 
@@ -196,13 +201,10 @@ export class App {
 
   updateStatistics() {
     this.renderWithCache("statistics-container", () => {
-      const data = JSON.parse(
-        this.response.syntaxJSON
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/'/g, "&#039;")
-      );
+      if (this.structureData === undefined) {
+        return;
+      }
+      const data = this.structureData;
 
       const statistics = data
         .filter((node) => node.token === undefined)
