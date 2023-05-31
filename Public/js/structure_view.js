@@ -176,6 +176,10 @@ function makeSyntaxTypeBadge(type) {
       badge.innerText = "TypeSyntax";
       break;
     }
+    case "collection": {
+      badge.innerText = "SyntaxCollection";
+      break;
+    }
     default:
       break;
   }

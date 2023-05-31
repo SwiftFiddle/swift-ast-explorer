@@ -52,6 +52,7 @@ enum SyntaxType: String, Codable {
   case expr
   case pattern
   case type
+  case collection
   case other
 }
 
