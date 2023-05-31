@@ -14,8 +14,6 @@ public func configure(_ app: Application) async throws {
   app.http.server.configuration.responseCompression = .enabled
   app.http.server.configuration.supportPipelining = true
 
-  app.caches.use(.memory)
-
   app.views.use(.leaf)
   app.leaf.configuration.rootDirectory = publicDirectory
   app.leaf.cache.isEnabled = app.environment.isRelease
