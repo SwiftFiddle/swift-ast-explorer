@@ -1,29 +1,65 @@
-.balloon-content {
+.balloon {
   font-size: 70%;
   white-space: nowrap;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: rgba(85, 85, 85, 0.9);
   color: #fff;
   padding: 2px 8px;
   position: absolute;
   transform: translateX(-30%);
+  z-index: 1080;
 }
 
-.balloon-content:before {
-  content: "";
+.balloon.top::after {
+  content: " ";
   position: absolute;
-  top: 34px;
-  left: calc(24% - 9px);
-  border: 9px solid transparent;
-  border-top: 9px solid rgba(85, 85, 85, 0.9);
+  top: 100%;
+  left: 24%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(85, 85, 85, 0.9) transparent transparent transparent;
 }
 
-.balloon-content .title {
+.balloon.bottom::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(85, 85, 85, 0.9) transparent;
+}
+
+.balloon.right::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(85, 85, 85, 0.9) transparent transparent;
+}
+
+.balloon.left::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent rgba(85, 85, 85, 0.9);
+}
+
+.balloon .title {
   color: #fff;
   font-weight: bolder;
 }
 
-.balloon-content .range {
+.balloon .range {
   color: #dcdcdc;
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
 }

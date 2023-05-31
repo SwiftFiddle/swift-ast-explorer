@@ -181,8 +181,12 @@ export class App {
       const title = data.token ? "Token" : `${data.text}`;
       const range = data.range;
 
-      this.balloon.content = `<div class="title">${title}</div><div class="range">${range.startRow}:${range.startColumn} - ${range.endRow}:${range.endColumn}</div>`;
-      this.balloon.show(this.editor.charCoords(range));
+      const formatted = formatRange(range);
+      this.balloon.content = `<div class="title">${title}</div><div class="range">${formatted}</div>`;
+      this.balloon.show(this.editor.charCoords(range), {
+        placement: "top",
+        offset: { x: 10, y: -6 },
+      });
 
       this.editor.setSelection(range);
     };
@@ -222,11 +226,52 @@ export class App {
     });
 
     this.statisticsView.onmouseover = (event, target, ranges) => {
+      this.balloon.content = ranges
+        .map((range) => {
+          return {
+            startRow: range.startRow
+              .toString()
+              .padStart(2, " ")
+              .replace(" ", "&nbsp;"),
+            startColumn: range.startColumn
+              .toString()
+              .padEnd(2, " ")
+              .replace(" ", "&nbsp;"),
+            endRow: range.endRow
+              .toString()
+              .padStart(2, " ")
+              .replace(" ", "&nbsp;"),
+            endColumn: range.endColumn
+              .toString()
+              .padEnd(2, " ")
+              .replace(" ", "&nbsp;"),
+          };
+        })
+        .map((range) => {
+          return `<div class="range">${formatRange(range)}</div>`;
+        })
+        .join("");
+
+      const tabContainer = document.querySelector(".tab-content");
+
+      const rect = target.getBoundingClientRect();
+      this.balloon.show(rect, {
+        placement: "top",
+        offset: { x: 10, y: -6 },
+        containerRect: {
+          left: tabContainer.offsetLeft,
+          top: tabContainer.offsetTop,
+          width: tabContainer.clientWidth,
+          height: tabContainer.clientHeight,
+        },
+      });
+
       for (const range of ranges) {
         this.editor.markText(range);
       }
     };
     this.statisticsView.onmouseout = (event, target) => {
+      this.balloon.hide();
       this.editor.clearMarks();
     };
   }
@@ -278,4 +323,8 @@ function hideLoading() {
   document.getElementById("run-button").classList.remove("disabled");
   document.getElementById("run-button-icon").classList.remove("d-none");
   document.getElementById("run-button-spinner").classList.add("d-none");
+}
+
+function formatRange(range) {
+  return `${range.startRow}:${range.startColumn} - ${range.endRow}:${range.endColumn}`;
 }
