@@ -47,8 +47,13 @@ export class Popover {
   }
 
   show(target, options = {}) {
-    const containerRect = options.containerRect;
-    const offsetX = options.offsetX || 0;
+    const containerRect = options.containerRect || {
+      left: 0,
+      top: 0,
+      width: 0,
+      height: 0,
+    };
+    const offset = options.offset || { x: 0, y: 0 };
 
     this.popover.classList.remove("d-none");
 
@@ -61,14 +66,14 @@ export class Popover {
     };
 
     const bottom = containerRect.top + containerRect.height;
-    const top = targetRect.top - 6;
+    const top = targetRect.top - 6 + offset.y;
     if (top + popoverRect.height > bottom) {
       this.popover.style.top = `${bottom - popoverRect.height}px`;
     } else {
       this.popover.style.top = `${top}px`;
     }
 
-    const left = `${targetRect.left - popoverRect.width - offsetX}px`;
+    const left = `${targetRect.left - popoverRect.width + offset.x}px`;
     this.popover.style.left = left;
   }
 

@@ -111,7 +111,7 @@ export class App {
 
   update() {
     showLoading();
-    this.cache = {};
+    this.invalidateCache();
 
     const options = configurations();
 
@@ -249,6 +249,10 @@ export class App {
     }
     render();
     this.cache[id] = container.querySelector(":scope > div");
+  }
+
+  invalidateCache() {
+    this.cache = {};
   }
 }
 

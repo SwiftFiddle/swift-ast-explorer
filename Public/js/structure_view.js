@@ -48,7 +48,7 @@ export class StructureView {
           width: tabContainer.clientWidth,
           height: tabContainer.clientHeight,
         },
-        offsetX: 24,
+        offset: { x: -24, y: 1 },
       });
     };
 
