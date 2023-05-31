@@ -3,7 +3,7 @@
 import "../css/lookup.css";
 import { Popover } from "./popover.js";
 
-export class LoopupView {
+export class LookupView {
   set error(error) {
     this.container.innerHTML = `<div class="alert alert-danger m-3" role="alert">${error}</div>`;
   }
@@ -17,13 +17,14 @@ export class LoopupView {
   }
 
   update(syntaxHTML) {
-    this.container.innerHTML = syntaxHTML;
+    this.container.innerHTML = "";
+
+    const contentView = document.createElement("div");
+    contentView.innerHTML = syntaxHTML;
+
+    this.container.appendChild(contentView);
 
     const popover = this.popover;
-
-    const tabContainerRect = document
-      .querySelector(".tab-content")
-      .getBoundingClientRect();
 
     $(this.container)
       .find("span")
@@ -83,9 +84,16 @@ export class LoopupView {
           const dl = `<dl>${list}</dl>`;
           popover.content = dl;
 
+          const tabContainer = document.querySelector(".tab-content");
+
           popover.show(element, {
-            containerRect: tabContainerRect,
-            offsetX: 40,
+            containerRect: {
+              left: tabContainer.offsetLeft,
+              top: tabContainer.offsetTop,
+              width: tabContainer.clientWidth,
+              height: tabContainer.clientHeight,
+            },
+            offset: { x: -40, y: 4 },
           });
         });
 

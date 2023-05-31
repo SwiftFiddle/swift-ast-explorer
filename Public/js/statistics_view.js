@@ -42,7 +42,7 @@ export class StatisticsView {
           event.stopPropagation();
           this.onmouseover(event, tr, row.ranges);
         },
-        { capture: false, once: false, passive: false }
+        { capture: false, once: false, passive: true }
       );
       tr.addEventListener(
         "mouseout",
@@ -50,7 +50,7 @@ export class StatisticsView {
           event.stopPropagation();
           this.onmouseout(event, tr);
         },
-        { capture: false, once: false, passive: false }
+        { capture: false, once: false, passive: true }
       );
     }
 

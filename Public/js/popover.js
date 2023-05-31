@@ -34,7 +34,7 @@ export class Popover {
         event.stopPropagation();
         this.onmouseover(event);
       },
-      { capture: false, once: false, passive: false }
+      { capture: false, once: false, passive: true }
     );
     this.popover.addEventListener(
       "mouseleave",
@@ -42,28 +42,38 @@ export class Popover {
         event.stopPropagation();
         this.onmouseout(event);
       },
-      { capture: false, once: false, passive: false }
+      { capture: false, once: false, passive: true }
     );
   }
 
   show(target, options = {}) {
-    const containerRect = options.containerRect;
-    const offsetX = options.offsetX || 0;
+    const containerRect = options.containerRect || {
+      left: 0,
+      top: 0,
+      width: 0,
+      height: 0,
+    };
+    const offset = options.offset || { x: 0, y: 0 };
 
     this.popover.classList.remove("d-none");
 
     const targetRect = target.getBoundingClientRect();
-    const popoverRect = this.popover.getBoundingClientRect();
+    const popoverRect = {
+      left: 0,
+      top: 0,
+      width: this.popover.clientWidth,
+      height: this.popover.clientHeight,
+    };
 
     const bottom = containerRect.top + containerRect.height;
-    const top = targetRect.top - 6;
+    const top = targetRect.top - 6 + offset.y;
     if (top + popoverRect.height > bottom) {
       this.popover.style.top = `${bottom - popoverRect.height}px`;
     } else {
       this.popover.style.top = `${top}px`;
     }
 
-    const left = `${targetRect.left - popoverRect.width - offsetX}px`;
+    const left = `${targetRect.left - popoverRect.width + offset.x}px`;
     this.popover.style.left = left;
   }
 

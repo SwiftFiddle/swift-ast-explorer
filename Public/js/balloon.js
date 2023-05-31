@@ -19,9 +19,9 @@ export class Balloon {
 
   show(position) {
     this.balloon.classList.remove("d-none");
-    const bounds = this.balloon.getBoundingClientRect();
+    const height = this.balloon.clientHeight;
 
-    this.balloon.style.top = `${position.top - bounds.height - 4}px`;
+    this.balloon.style.top = `${position.top - height - 4}px`;
     this.balloon.style.left = `${position.left + 10}px`;
   }
 
