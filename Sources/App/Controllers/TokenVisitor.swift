@@ -113,7 +113,12 @@ final class TokenVisitor: SyntaxRewriter {
           }
         }
       }
-    case .collection, .choices:
+    case .collection(let syntax):
+      treeNode.type = .collection
+      treeNode.structure.append(StructureProperty(name: "Element", value: StructureValue(text: "\(syntax)")))
+      treeNode.structure.append(StructureProperty(name: "Count", value: StructureValue(text: "\(node.children(viewMode: .all).count)")))
+      break
+    case .choices:
       break
     }
 
