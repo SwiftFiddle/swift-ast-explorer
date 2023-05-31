@@ -41,6 +41,10 @@
   white-space: pre-line;
 }
 
+.popover-content .font-monospace {
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace !important;
+}
+
 .popover-content .badge {
   margin: 0 8px 0 8px;
   color: #696969;

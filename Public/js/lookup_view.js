@@ -75,9 +75,15 @@ export class LookupView {
               if (item.range) {
                 const range = JSON.parse(item.range);
                 const sourceRange = `${range.startRow}:${range.startColumn} - ${range.endRow}:${range.endColumn}`;
-                return `<dt class="text-truncate" style="max-width: calc(40vw - 20px);"><span class="badge annotation" style="width: auto; text-align: start;">Text</span>${item.title}</dt><dd><div><span class="badge annotation">Range</span>${sourceRange}</div><div><span class="badge annotation">${item.type}</span>${item.content}</div></dd>`;
+                return `<dt class="text-truncate" style="max-width: calc(40vw - 20px);">
+  <span class="badge annotation" style="width: auto; text-align: start;">Text</span><span class="font-monospace">${item.title}</span>
+</dt>
+<dd><div><span class="badge annotation">Range</span>${sourceRange}</div><div><span class="badge annotation">${item.type}</span>${item.content}</div></dd>`;
               } else {
-                return `<dt class="text-truncate" style="max-width: calc(40vw - 20px);"><span class="badge annotation" style="width: auto; text-align: start;">Text</span>${item.title}</dt><dd><div><span class="badge annotation">${item.type}</span>${item.content}</div></dd>`;
+                return `<dt class="text-truncate" style="max-width: calc(40vw - 20px);">
+  <span class="badge annotation" style="width: auto; text-align: start;">Text</span><span class="font-monospace">${item.title}</span>
+</dt>
+<dd><div><span class="badge annotation">${item.type}</span>${item.content}</div></dd>`;
               }
             })
             .join("");
