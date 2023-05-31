@@ -61,12 +61,15 @@
 .tree-view .decl-syntax {
   color: #007aff;
 }
+
 .tree-view .expr-syntax {
   color: #ff8c00;
 }
+
 .tree-view .pattern-syntax {
   color: #008b8b;
 }
+
 .tree-view .type-syntax {
   color: #8b0000;
 }
