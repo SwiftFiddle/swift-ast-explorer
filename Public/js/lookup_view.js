@@ -10,7 +10,7 @@ export class LookupView {
 
   constructor(container) {
     this.container = container;
-    this.popover = new Popover();
+    // this.popover = new Popover();
 
     this.onmouseover = () => {};
     this.onmouseout = () => {};
@@ -84,12 +84,15 @@ export class LookupView {
           const dl = `<dl>${list}</dl>`;
           popover.content = dl;
 
-          const tabContainerRect = document
-            .querySelector(".tab-content")
-            .getBoundingClientRect();
+          const tabContainer = document.querySelector(".tab-content");
 
           popover.show(element, {
-            containerRect: tabContainerRect,
+            containerRect: {
+              left: tabContainer.offsetLeft,
+              top: tabContainer.offsetTop,
+              width: tabContainer.clientWidth,
+              height: tabContainer.clientHeight,
+            },
             offsetX: 40,
           });
         });

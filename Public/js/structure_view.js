@@ -10,7 +10,6 @@ export class StructureView {
 
   constructor(container) {
     this.container = container;
-    this.popover = new Popover();
 
     this.onmouseover = () => {};
     this.onmouseout = () => {};
@@ -25,6 +24,7 @@ export class StructureView {
   update(structureData) {
     this.container.innerHTML = "";
     const treeView = new TreeView(this.container, structureData);
+    this.popover = new Popover();
 
     treeView.onmouseover = (event, target, data) => {
       this.onmouseover(event, target, data);
@@ -39,12 +39,15 @@ export class StructureView {
         this.popover.content = makeTokenPopoverContent(data);
       }
 
-      const tabContainerRect = document
-        .querySelector(".tab-content")
-        .getBoundingClientRect();
+      const tabContainer = document.querySelector(".tab-content");
 
       this.popover.show(target, {
-        containerRect: tabContainerRect,
+        containerRect: {
+          left: tabContainer.offsetLeft,
+          top: tabContainer.offsetTop,
+          width: tabContainer.clientWidth,
+          height: tabContainer.clientHeight,
+        },
         offsetX: 24,
       });
     };

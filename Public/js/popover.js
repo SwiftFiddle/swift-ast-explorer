@@ -53,7 +53,12 @@ export class Popover {
     this.popover.classList.remove("d-none");
 
     const targetRect = target.getBoundingClientRect();
-    const popoverRect = this.popover.getBoundingClientRect();
+    const popoverRect = {
+      left: 0,
+      top: 0,
+      width: this.popover.clientWidth,
+      height: this.popover.clientHeight,
+    };
 
     const bottom = containerRect.top + containerRect.height;
     const top = targetRect.top - 6;
