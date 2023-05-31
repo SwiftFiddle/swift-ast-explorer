@@ -2,7 +2,7 @@
 <img src="https://github.com/SwiftFiddle/swift-ast-explorer/actions/workflows/test.yml/badge.svg">
 <img src="https://img.shields.io/badge/os-macOS/Linux-green.svg?style=flat" alt="macOS/Linux">
 <a href="http://swift.org">
-<img src="https://img.shields.io/badge/swift-5.8-orange.svg?style=flat" alt="Swift 5.3 Compatible">
+<img src="https://img.shields.io/badge/swift-5.8-orange.svg?style=flat" alt="Swift 5.8 Compatible">
 </a>
 <a href="https://github.com/kishikawakatsumi/swift-ast-explorer/blob/master/LICENSE">
 <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
@@ -11,23 +11,24 @@
 
 # Swift AST Explorer
 
-AST visualizer for Swift source code. https://swift-ast-explorer.com/
+Swift AST Explorer is a tool for visualizing the Abstract Syntax Tree (AST) of Swift source code.  
+Check it out at https://swift-ast-explorer.com/
 
-<a href="https://swift-ast-explorer.com/"><img width="1024" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/130250442-3d026d08-423c-4e82-9902-1df4369f572a.png"></a>
+<a href="https://swift-ast-explorer.com/"><img width="1024" alt="Screen Shot" src="https://github.com/SwiftFiddle/swift-ast-explorer/assets/40610/d41c6f6f-4493-4673-99a6-8dc05fcab30b"></a>
 
 ## Features
 
-### Show Swift syntax in a tree structure.
+### Presents Swift syntax in a tree structure
 
-<img width="600" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95597584-cbbeab80-0a89-11eb-918f-03cb50a46b22.png">
+<img width="600" alt="Screen Shot" src="https://github.com/SwiftFiddle/swift-ast-explorer/assets/40610/4815c8e3-5e62-455d-8954-656a24d3461d.png">
 
-### Visualize which syntax each token in the source code corresponds to.
+### Maps each token in the source code to the corresponding syntax
 
-<img width="600" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95597956-47b8f380-0a8a-11eb-9d2a-9f12f7ebc25b.png">
+<img width="600" alt="Screen Shot" src="https://github.com/SwiftFiddle/swift-ast-explorer/assets/40610/2632bb58-2315-4488-bbc6-a8d2c86ae3ff.png">
 
-### Display an overview and inspect where each syntax is used.
+### Provides an overview and inspection of syntax usage
 
-<img width="600" alt="Screen Shot" src="https://user-images.githubusercontent.com/40610/95598041-64edc200-0a8a-11eb-818d-0c940d40ffd2.png">
+<img width="600" alt="Screen Shot" src="https://github.com/SwiftFiddle/swift-ast-explorer/assets/40610/c36e5705-1029-4590-8719-1b939c9ab209.png">
 
 ## Author
 
@@ -41,4 +42,4 @@ To support this project, you can become a sponsor through [GitHub Sponsors](http
 
 ## License
 
-The project is released under the [MIT License](https://github.com/kishikawakatsumi/swift-ast-explorer/blob/main/LICENSE)
+The project is released under the [Apache License 2.0](https://github.com/kishikawakatsumi/swift-ast-explorer/blob/main/LICENSE)
