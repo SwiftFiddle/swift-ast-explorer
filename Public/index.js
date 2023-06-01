@@ -14,7 +14,3 @@ import "./js/icon.js";
 
 import { App } from "./js/app.js";
 new App();
-
-document.querySelector("header").classList.remove("invisible");
-document.querySelector("main").classList.remove("invisible");
-document.querySelector("footer").classList.remove("invisible");
