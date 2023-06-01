@@ -25,76 +25,75 @@
   <title>Swift AST Explorer</title>
 </head>
 
-<body class="d-flex flex-column">
+<body>
   <div class="container-fluid d-flex flex-column bg-light g-0 h-100">
-    <header class="invisible">
-      <div class="row row-cols-2 g-0">
-        <div class="col">
-          <div class="d-inline-block mx-1">
-            <a class="text-decoration-none" href="/">
-              <span
-                class="fa-brands fa-swift fa-2x text-primary d-inline-block align-middle p-1 swift-logo"></span><span
-                class="h4 text-dark d-inline-block align-middle m-0">Swift AST Explorer</span>
+    <header class="row row-cols-2 g-0">
+      <div class="col">
+        <div class="d-inline-block mx-1">
+          <a class="text-decoration-none" href="/">
+            <span class="fa-brands fa-swift fa-2x text-primary d-inline-block align-middle p-1 swift-logo"></span><span
+              class="h4 text-dark d-inline-block align-middle m-0">Swift AST Explorer</span>
+          </a>
+        </div>
+        <button id="run-button" type="button" class="btn btn-primary btn-sm rounded-pill px-3 mx-1 disabled"
+          aria-label="Update">
+          <span id="run-button-icon" class="fa-solid fa-play fa-fw"></span>
+          <span id="run-button-spinner" class="fa-duotone fa-spinner-third fa-spin fa-fw d-none"></span>
+          <span class="px-1">Update</span>
+        </button>
+        <button id="config-button" type="button"
+          class="btn btn-outline-primary btn-sm rounded-circle button-circle mx-1 disabled" data-bs-toggle="dropdown"
+          data-bs-auto-close="outside" data-bs-offset="0,10" aria-label="Options" aria-expanded="false"
+          style="width: 2rem; height: 2rem;">
+          <span class="fa-solid fa-cog"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li class="options-item" data-value="fold">
+            <a class="dropdown-item" data-target="#">
+              Fold all sequence expressions
             </a>
-          </div>
-          <button id="run-button" type="button" class="btn btn-primary btn-sm rounded-pill px-3 mx-1 disabled"
-            aria-label="Update">
-            <span id="run-button-icon" class="fa-solid fa-play fa-fw"></span>
-            <span id="run-button-spinner" class="fa-duotone fa-spinner-third fa-spin fa-fw d-none"></span>
-            <span class="px-1">Update</span>
+          </li>
+        </ul>
+        <button id="format-button" type="button"
+          class="btn btn-outline-primary btn-sm rounded-circle button-circle mx-1 disabled" data-bs-toggle="tooltip"
+          data-bs-placement="bottom" data-bs-container="#format-button" title="Format" aria-label="Format"
+          style="width: 2rem; height: 2rem;">
+          <span class="fa-solid fa-align-left"></span>
+        </button>
+        <span data-bs-toggle="modal" data-bs-target="#help-modal">
+          <button id="help-button" type="button" class="btn btn-outline-primary btn-sm rounded-circle button-circle"
+            data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-container="#help-button" title="Help"
+            aria-label="Help" style="width: 2rem; height: 2rem;">
+            <span class="fa-solid fa-question"></span>
           </button>
-          <button id="config-button" type="button"
-            class="btn btn-outline-primary btn-sm rounded-circle button-circle mx-1 disabled" data-bs-toggle="dropdown"
-            data-bs-auto-close="outside" data-bs-offset="0,10" aria-label="Options" aria-expanded="false">
-            <span class="fa-solid fa-cog"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li class="options-item" data-value="fold">
-              <a class="dropdown-item" data-target="#">
-                Fold all sequence expressions
-              </a>
+        </span>
+      </div>
+      <div class="col">
+        <nav>
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item lined" role="presentation">
+              <button type="button" class="nav-link active" data-bs-toggle="tab" data-bs-target="#structure-tab-pane"
+                role="tab" aria-controls="structure-tab-pane" aria-selected="true"><span
+                  class="fa-regular fa-list-tree"></span><span class="px-3">Structure</span>
+              </button>
+            </li>
+            <li class="nav-item lined" role="presentation">
+              <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#lookup-tab-pane" role="tab"
+                aria-controls="lookup-tab-pane" aria-selected="false"><span class="fa-light fa-file-code"></span><span
+                  class="px-3">Lookup</span>
+              </button>
+            </li>
+            <li class="nav-item lined" role="presentation">
+              <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#statistics-tab-pane"
+                role="tab" aria-controls="statistics-tab-pane" aria-selected="false"><span
+                  class="fa-regular fa-table"></span><span class="px-3">Statistics</span>
+              </button>
             </li>
           </ul>
-          <button id="format-button" type="button"
-            class="btn btn-outline-primary btn-sm rounded-circle button-circle mx-1 disabled" data-bs-toggle="tooltip"
-            data-bs-placement="bottom" data-bs-container="#format-button" title="Format" aria-label="Format">
-            <span class="fa-solid fa-align-left"></span>
-          </button>
-          <span data-bs-toggle="modal" data-bs-target="#help-modal">
-            <button id="help-button" type="button" class="btn btn-outline-primary btn-sm rounded-circle button-circle"
-              data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-container="#help-button" title="Help"
-              aria-label="Help">
-              <span class="fa-solid fa-question"></span>
-            </button>
-          </span>
-        </div>
-        <div class="col">
-          <nav>
-            <ul class="nav nav-tabs" role="tablist">
-              <li class="nav-item lined" role="presentation">
-                <button type="button" class="nav-link active" data-bs-toggle="tab" data-bs-target="#structure-tab-pane"
-                  role="tab" aria-controls="structure-tab-pane" aria-selected="true"><span
-                    class="fa-regular fa-list-tree"></span><span class="px-3">Structure</span>
-                </button>
-              </li>
-              <li class="nav-item lined" role="presentation">
-                <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#lookup-tab-pane" role="tab"
-                  aria-controls="lookup-tab-pane" aria-selected="false"><span class="fa-light fa-file-code"></span><span
-                    class="px-3">Lookup</span>
-                </button>
-              </li>
-              <li class="nav-item lined" role="presentation">
-                <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#statistics-tab-pane"
-                  role="tab" aria-controls="statistics-tab-pane" aria-selected="false"><span
-                    class="fa-regular fa-table"></span><span class="px-3">Statistics</span>
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        </nav>
       </div>
     </header>
-    <main class="flex-grow-1 invisible">
+    <main class="flex-grow-1">
       <div class="row row-cols-2 g-0 h-100">
         <div class="col">
           <textarea id="editor-container" class="h-100 d-none">#(defaultSampleCode)</textarea>
@@ -116,36 +115,34 @@
         </div>
       </div>
     </main>
-    <footer class="invisible">
-      <div class="row row-cols-1 g-0">
-        <div class="col p-1 text-center">
-          <div class="d-inline-block mx-2">
-            <a class="text-reset text-decoration-none small" href="https://status.swift-ast-explorer.com/"
-              target="_blank" rel="nofollow noopener noreferrer"><span
-                class="fa-light fa-monitor-heart-rate"></span><span class="mx-2">System
-                Status</span></a>
-          </div>
-          <div class="d-inline-block mx-2">
-            <a class="text-reset text-decoration-none small"
-              href="https://github.com/swiftfiddle/swift-ast-explorer/issues/new" target="_blank"
-              rel="nofollow noopener noreferrer"><span class="fa-regular fa-comment-alt-smile"></span><span
-                class="mx-2">Feedback</span></a>
-          </div>
-          <div class="d-inline-block mx-2">
-            <a class="text-reset text-decoration-none small" href="https://github.com/swiftfiddle/swift-ast-explorer"
-              target="_blank" rel="nofollow noopener noreferrer"><span class="fa-brands fa-github"></span><span
-                class="mx-2">Source Code</span></a>
-          </div>
-          <div class="d-inline-block mx-2">
-            <a class="text-reset text-decoration-none small" href="https://hachyderm.io/@kishikawakatsumi"
-              target="_blank" rel="nofollow noopener noreferrer"><span class="fa-regular fa-at"></span><span
-                class="mx-2">Creator</span></a>
-          </div>
-          <div class="d-inline-block mx-2">
-            <a class="text-reset text-decoration-none small" href="https://github.com/sponsors/kishikawakatsumi"
-              target="_blank" rel="nofollow noopener noreferrer">
-              <span class="fa-solid fa-heart" style="color: #bf3989;"></span></span><span class="mx-2">Donate</span></a>
-          </div>
+    <footer class="row row-cols-1 g-0">
+      <div class="col p-1 text-center">
+        <div class="d-inline-block mx-2">
+          <a class="text-reset text-decoration-none small" href="https://status.swift-ast-explorer.com/" target="_blank"
+            rel="nofollow noopener noreferrer"><span class="fa-light fa-monitor-heart-rate"></span><span
+              class="mx-2">System
+              Status</span></a>
+        </div>
+        <div class="d-inline-block mx-2">
+          <a class="text-reset text-decoration-none small"
+            href="https://github.com/swiftfiddle/swift-ast-explorer/issues/new" target="_blank"
+            rel="nofollow noopener noreferrer"><span class="fa-regular fa-comment-alt-smile"></span><span
+              class="mx-2">Feedback</span></a>
+        </div>
+        <div class="d-inline-block mx-2">
+          <a class="text-reset text-decoration-none small" href="https://github.com/swiftfiddle/swift-ast-explorer"
+            target="_blank" rel="nofollow noopener noreferrer"><span class="fa-brands fa-github"></span><span
+              class="mx-2">Source Code</span></a>
+        </div>
+        <div class="d-inline-block mx-2">
+          <a class="text-reset text-decoration-none small" href="https://hachyderm.io/@kishikawakatsumi" target="_blank"
+            rel="nofollow noopener noreferrer"><span class="fa-regular fa-at"></span><span
+              class="mx-2">Creator</span></a>
+        </div>
+        <div class="d-inline-block mx-2">
+          <a class="text-reset text-decoration-none small" href="https://github.com/sponsors/kishikawakatsumi"
+            target="_blank" rel="nofollow noopener noreferrer">
+            <span class="fa-solid fa-heart" style="color: #bf3989;"></span></span><span class="mx-2">Donate</span></a>
         </div>
       </div>
     </footer>
