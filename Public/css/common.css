@@ -1,3 +1,7 @@
+.nav-tabs {
+  border-bottom: none;
+}
+
 .dropdown-menu {
   min-width: 280px;
   line-height: 1.2;
