@@ -3,16 +3,6 @@ body {
   height: 100svh;
 }
 
-.swift-logo {
-  width: 2rem;
-  height: 2rem;
-}
-
-.button-circle {
-  width: 2rem;
-  height: 2rem;
-}
-
 .dropdown-menu {
   min-width: 280px;
   line-height: 1.2;
@@ -31,10 +21,6 @@ body {
   float: right;
 }
 
-.nav-item button {
-  width: 160px;
-}
-
 .tab-pane {
   overflow: auto;
 }
@@ -43,24 +29,6 @@ body {
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
   font-size: 11pt;
   line-height: 1.4;
-}
-
-.lined .nav-link {
-  border: none;
-  color: #868e96;
-  border-bottom: 3px solid transparent;
-}
-
-.lined .nav-link:hover {
-  border: none;
-  color: #0d6efd;
-  border-bottom: 3px solid transparent;
-}
-
-.lined .nav-link.active {
-  background: none;
-  color: #0d6efd;
-  border-color: #0d6efd;
 }
 
 .alert {

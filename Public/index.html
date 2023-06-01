@@ -22,6 +22,44 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
+  <style>
+    .swift-logo {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .button-circle {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .nav-tabs {
+      border-bottom: none;
+    }
+
+    .nav-item button {
+      width: 160px;
+    }
+
+    .nav-item.lined .nav-link {
+      border: none;
+      color: #868e96;
+      border-bottom: 3px solid transparent;
+    }
+
+    .nav-item.lined .nav-link:hover {
+      border: none;
+      color: #0d6efd;
+      border-bottom: 3px solid transparent;
+    }
+
+    .nav-item.lined .nav-link.active {
+      background: none;
+      color: #0d6efd;
+      border-color: #0d6efd;
+    }
+  </style>
+
   <title>Swift AST Explorer</title>
 </head>
 
@@ -34,39 +72,37 @@
             <span class="fa-brands fa-swift fa-2x text-primary d-inline-block align-middle p-1 swift-logo"></span><span
               class="h4 text-dark d-inline-block align-middle m-0">Swift AST Explorer</span>
           </a>
-        </div>
-        <button id="run-button" type="button" class="btn btn-primary btn-sm rounded-pill px-3 mx-1 disabled"
-          aria-label="Update">
-          <span id="run-button-icon" class="fa-solid fa-play fa-fw"></span>
-          <span id="run-button-spinner" class="fa-duotone fa-spinner-third fa-spin fa-fw d-none"></span>
-          <span class="px-1">Update</span>
-        </button>
-        <button id="config-button" type="button"
-          class="btn btn-outline-primary btn-sm rounded-circle button-circle mx-1 disabled" data-bs-toggle="dropdown"
-          data-bs-auto-close="outside" data-bs-offset="0,10" aria-label="Options" aria-expanded="false"
-          style="width: 2rem; height: 2rem;">
-          <span class="fa-solid fa-cog"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li class="options-item" data-value="fold">
-            <a class="dropdown-item" data-target="#">
-              Fold all sequence expressions
-            </a>
-          </li>
-        </ul>
-        <button id="format-button" type="button"
-          class="btn btn-outline-primary btn-sm rounded-circle button-circle mx-1 disabled" data-bs-toggle="tooltip"
-          data-bs-placement="bottom" data-bs-container="#format-button" title="Format" aria-label="Format"
-          style="width: 2rem; height: 2rem;">
-          <span class="fa-solid fa-align-left"></span>
-        </button>
-        <span data-bs-toggle="modal" data-bs-target="#help-modal">
-          <button id="help-button" type="button" class="btn btn-outline-primary btn-sm rounded-circle button-circle"
-            data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-container="#help-button" title="Help"
-            aria-label="Help" style="width: 2rem; height: 2rem;">
-            <span class="fa-solid fa-question"></span>
+          <button id="run-button" type="button" class="btn btn-primary btn-sm rounded-pill px-3 m-1 disabled"
+            aria-label="Update">
+            <span id="run-button-icon" class="fa-solid fa-play fa-fw"></span>
+            <span id="run-button-spinner" class="fa-duotone fa-spinner-third fa-spin fa-fw d-none"></span>
+            <span class="px-1">Update</span>
           </button>
-        </span>
+          <button id="config-button" type="button"
+            class="btn btn-outline-primary btn-sm rounded-circle button-circle m-1 disabled" data-bs-toggle="dropdown"
+            data-bs-auto-close="outside" data-bs-offset="0,10" aria-label="Options" aria-expanded="false">
+            <span class="fa-solid fa-cog"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li class="options-item" data-value="fold">
+              <a class="dropdown-item" data-target="#">
+                Fold all sequence expressions
+              </a>
+            </li>
+          </ul>
+          <button id="format-button" type="button"
+            class="btn btn-outline-primary btn-sm rounded-circle button-circle m-1 disabled" data-bs-toggle="tooltip"
+            data-bs-placement="bottom" data-bs-container="#format-button" title="Format" aria-label="Format">
+            <span class="fa-solid fa-align-left"></span>
+          </button>
+          <span data-bs-toggle="modal" data-bs-target="#help-modal">
+            <button id="help-button" type="button"
+              class="btn btn-outline-primary btn-sm rounded-circle button-circle m-1" data-bs-toggle="tooltip"
+              data-bs-placement="bottom" data-bs-container="#help-button" title="Help" aria-label="Help">
+              <span class="fa-solid fa-question"></span>
+            </button>
+          </span>
+        </div>
       </div>
       <div class="col">
         <nav>
@@ -93,24 +129,20 @@
         </nav>
       </div>
     </header>
-    <main class="flex-grow-1">
-      <div class="row row-cols-2 g-0 h-100">
-        <div class="col">
-          <textarea id="editor-container" class="h-100 d-none">#(defaultSampleCode)</textarea>
-        </div>
-        <div class="col">
-          <div class="tab-content">
-            <div id="structure-tab-pane" class="tab-pane active" role="tabpanel" aria-labelledby="home-tab"
-              tabindex="0">
-              <div id="structure-container" role="document"></div>
-            </div>
-            <div id="lookup-tab-pane" class="tab-pane" role="tabpanel" aria-labelledby="lookup-tab" tabindex="0">
-              <div id="lookup-container" role="document"></div>
-            </div>
-            <div id="statistics-tab-pane" class="tab-pane" role="tabpanel" aria-labelledby="statistics-tab"
-              tabindex="0">
-              <div id="statistics-container" role="document"></div>
-            </div>
+    <main class="flex-grow-1 row row-cols-2 g-0 h-100">
+      <div class="col">
+        <textarea id="editor-container" class="h-100 d-none">#(defaultSampleCode)</textarea>
+      </div>
+      <div class="col">
+        <div class="tab-content">
+          <div id="structure-tab-pane" class="tab-pane active" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div id="structure-container" role="document"></div>
+          </div>
+          <div id="lookup-tab-pane" class="tab-pane" role="tabpanel" aria-labelledby="lookup-tab" tabindex="0">
+            <div id="lookup-container" role="document"></div>
+          </div>
+          <div id="statistics-tab-pane" class="tab-pane" role="tabpanel" aria-labelledby="statistics-tab" tabindex="0">
+            <div id="statistics-container" role="document"></div>
           </div>
         </div>
       </div>
