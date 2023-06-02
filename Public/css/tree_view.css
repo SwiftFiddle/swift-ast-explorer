@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 
-.tree-view li .marker {
+.tree-view li .collapsible {
   position: relative;
 }
 
@@ -32,7 +32,7 @@
   text-decoration: underline;
 }
 
-.tree-view li.opened .marker::before {
+.tree-view li.opened .collapsible::before {
   position: absolute;
   margin-left: -20px;
   padding: 0.25rem;
@@ -43,7 +43,7 @@
   display: none;
 }
 
-.tree-view li.collapsed .marker::before {
+.tree-view li.collapsed .collapsible::before {
   position: absolute;
   margin-left: -20px;
   padding: 0.25rem;
