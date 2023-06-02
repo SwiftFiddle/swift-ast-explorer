@@ -88,7 +88,7 @@ export class LookupView {
             })
             .join("");
           const dl = `<dl>${list}</dl>`;
-          popover.content = dl;
+          popover.setContent(dl);
 
           const tabContainer = document.querySelector(".tab-content");
 
@@ -99,7 +99,7 @@ export class LookupView {
               width: tabContainer.clientWidth,
               height: tabContainer.clientHeight,
             },
-            offset: { x: -40, y: 4 },
+            offset: { x: -16, y: -2 },
           });
         });
 

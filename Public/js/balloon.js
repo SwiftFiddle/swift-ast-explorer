@@ -3,10 +3,6 @@
 import "../css/balloon.css";
 
 export class Balloon {
-  set content(value) {
-    this.balloon.innerHTML = value;
-  }
-
   constructor() {
     this.balloon = document.createElement("div");
     this.init();
@@ -15,6 +11,11 @@ export class Balloon {
   init() {
     this.balloon.classList.add("d-none", "balloon");
     document.body.appendChild(this.balloon);
+  }
+
+  setContent(content) {
+    this.content = content;
+    this.balloon.innerHTML = content;
   }
 
   show(rect, options = {}) {

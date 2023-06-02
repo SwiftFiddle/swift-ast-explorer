@@ -182,7 +182,9 @@ export class App {
       const range = data.range;
 
       const formatted = formatRange(range);
-      this.balloon.content = `<div class="title">${title}</div><div class="range">${formatted}</div>`;
+      this.balloon.setContent(
+        `<div class="title">${title}</div><div class="range">${formatted}</div>`
+      );
       this.balloon.show(this.editor.charCoords(range), {
         placement: "top",
         offset: { x: 10, y: -6 },
@@ -226,7 +228,7 @@ export class App {
     });
 
     this.statisticsView.onmouseover = (event, target, ranges) => {
-      this.balloon.content = ranges
+      const content = ranges
         .map((range) => {
           return {
             startRow: range.startRow
@@ -251,6 +253,7 @@ export class App {
           return `<div class="range">${formatRange(range)}</div>`;
         })
         .join("");
+      this.balloon.setContent(content);
 
       const tabContainer = document.querySelector(".tab-content");
 
