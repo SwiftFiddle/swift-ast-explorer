@@ -16,6 +16,10 @@
   cursor: pointer;
 }
 
+.tree-view li .marker {
+  position: relative;
+}
+
 .tree-view li.entry div {
   display: inline-block;
 }
@@ -24,8 +28,8 @@
   background-color: rgb(100, 149, 237, 0.25);
 }
 
-.tree-view li .marker {
-  position: relative;
+.tree-view li.entry.hover > div > div {
+  text-decoration: underline;
 }
 
 .tree-view li.opened .marker::before {
