@@ -43,7 +43,7 @@ export class TreeView {
     const content = document.createElement("div");
 
     if (this.hasChildren(node.id)) {
-      content.classList.add("marker");
+      content.classList.add("collapsible");
       content.addEventListener("click", (event) => {
         this.onclick(event, node, li);
       });
