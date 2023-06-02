@@ -39,15 +39,11 @@ export class TreeView {
 
   renderNode(node) {
     const ul = document.createElement("ul");
-
     const li = document.createElement("li");
-    li.classList.add("entry");
-
     const content = document.createElement("div");
 
     if (this.hasChildren(node.id)) {
-      content.appendChild(makeMarker());
-
+      content.classList.add("marker");
       content.addEventListener("click", (event) => {
         this.onclick(event, node, li);
       });
@@ -110,10 +106,6 @@ export class TreeView {
     li.classList.add("opened");
     li.classList.remove("collapsed");
 
-    const div = li.querySelector(":scope > div");
-    div.removeChild(div.querySelector(".marker"));
-    div.insertBefore(makeMarker(), div.firstChild);
-
     const children = this.state[node.id];
     if (children) {
       for (const child of children) {
@@ -131,10 +123,6 @@ export class TreeView {
   collapse(node, li) {
     li.classList.add("collapsed");
     li.classList.remove("opened");
-
-    const div = li.querySelector(":scope > div");
-    div.removeChild(div.querySelector(".marker"));
-    div.insertBefore(makeMarker(), div.firstChild);
 
     const children = li.querySelectorAll(":scope > ul");
     for (const child of children) {
@@ -154,10 +142,4 @@ export class TreeView {
       this.open(node, li);
     }
   }
-}
-
-function makeMarker() {
-  const marker = document.createElement("span");
-  marker.classList.add("marker");
-  return marker;
 }
