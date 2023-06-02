@@ -26,6 +26,9 @@ export class StructureView {
     this.container.innerHTML = "";
     const treeView = new TreeView(this.container, structureData);
 
+    this.contentCache = {};
+    this.rectCache = {};
+
     treeView.onmouseover = (event, target, data) => {
       this.onmouseover(event, target, data);
 
@@ -33,22 +36,36 @@ export class StructureView {
         return;
       }
       if (data.structure.length > 0) {
-        this.popover.content = makeSyntaxPopoverContent(data);
+        if (this.contentCache[data.id] === undefined) {
+          this.contentCache[data.id] = makeSyntaxPopoverContent(data);
+        }
+        this.popover.setContent(this.contentCache[data.id]);
       }
       if (data.token) {
-        this.popover.content = makeTokenPopoverContent(data);
+        if (this.contentCache[data.id] === undefined) {
+          this.contentCache[data.id] = makeTokenPopoverContent(data);
+        }
+        this.popover.setContent(this.contentCache[data.id]);
       }
 
       const tabContainer = document.querySelector(".tab-content");
 
+      let targetRect = this.rectCache[data.id];
+      if (targetRect === undefined) {
+        targetRect = target.getBoundingClientRect();
+        this.rectCache[data.id] = targetRect;
+      }
+      const containerRect = {
+        left: tabContainer.offsetLeft,
+        top: tabContainer.offsetTop,
+        width: tabContainer.clientWidth,
+        height: tabContainer.clientHeight,
+      };
+
       this.popover.show(target, {
-        containerRect: {
-          left: tabContainer.offsetLeft,
-          top: tabContainer.offsetTop,
-          width: tabContainer.clientWidth,
-          height: tabContainer.clientHeight,
-        },
-        offset: { x: -24, y: 1 },
+        targetRect: targetRect,
+        containerRect: containerRect,
+        offset: { x: -10, y: 1 },
       });
     };
 
