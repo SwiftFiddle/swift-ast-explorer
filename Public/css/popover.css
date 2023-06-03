@@ -7,7 +7,7 @@
 .popover-content {
   margin: 0 0 0 0;
   min-width: 400px;
-  max-width: 60vw;
+  max-width: 50vw;
   background-clip: padding-box;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -43,7 +43,7 @@
   margin-top: 0;
   margin-bottom: 0;
   padding: 10px 14px;
-  max-height: 90vh;
+  max-height: 100vh;
 }
 
 .popover-content dt {
@@ -55,7 +55,7 @@
   margin-left: 0;
   padding: 0 0 0 10px;
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
-  white-space: pre-line;
+  word-break: break-all;
 }
 
 .popover-content .font-monospace {

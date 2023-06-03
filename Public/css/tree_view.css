@@ -38,9 +38,7 @@
   padding: 0.25rem;
   color: #a9a9a9;
   font-size: 0.75em;
-  font-family: "FontAwesome 6 Solid";
-  content: "\f0d7";
-  display: none;
+  content: "-";
 }
 
 .tree-view li.collapsed .collapsible::before {
@@ -49,17 +47,7 @@
   padding: 0.25rem;
   color: #a9a9a9;
   font-size: 0.75em;
-  font-family: "FontAwesome 6 Solid";
-  content: "\f0da";
-  display: none;
-}
-
-.tree-view li svg {
-  position: absolute;
-  margin-left: -20px;
-  padding: 0.25rem;
-  color: #a9a9a9;
-  font-size: 0.75em;
+  content: "+";
 }
 
 .tree-view .decl-syntax {

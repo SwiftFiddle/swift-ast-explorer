@@ -91,14 +91,10 @@ export class LookupView {
           popover.setContent(dl);
 
           const tabContainer = document.querySelector(".tab-content");
+          const containerRect = tabContainer.getBoundingClientRect();
 
           popover.show(element, {
-            containerRect: {
-              left: tabContainer.offsetLeft,
-              top: tabContainer.offsetTop,
-              width: tabContainer.clientWidth,
-              height: tabContainer.clientHeight,
-            },
+            containerRect: containerRect,
             offset: { x: -16, y: -2 },
           });
         });

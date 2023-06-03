@@ -12,14 +12,7 @@
 }
 
 .active-tick a::after {
-  font-family: "Font Awesome 6 Pro";
-  content: "\f00c";
-  color: #0d6efd;
-  float: right;
-  display: none;
-}
-
-.active-tick svg {
+  content: "✓";
   color: #0d6efd;
   float: right;
 }

@@ -28,7 +28,6 @@ import {
 import { faSpinnerThird } from "@fortawesome/pro-duotone-svg-icons";
 import { faSwift, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-config.searchPseudoElements = true;
 library.add(
   faPlay,
   faEraser,
