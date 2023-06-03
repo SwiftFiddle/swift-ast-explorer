@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Test
+        run: |
+          set -ex
+          swift test
       - name: Build
         run: |
           set -ex
