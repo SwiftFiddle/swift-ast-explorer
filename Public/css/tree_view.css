@@ -34,20 +34,26 @@
 
 .tree-view li.opened .collapsible::before {
   position: absolute;
-  margin-left: -20px;
-  padding: 0.25rem;
-  color: #a9a9a9;
-  font-size: 0.75em;
-  content: "-";
+  width: 7px;
+  height: 4px;
+  margin-left: -16px;
+  margin-top: 8px;
+  display: inline-block;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%226.88%22%20height%3D%224.128%22%3E%3Cpath%20fill%3D%22%23A9A9A9%22%20fill-rule%3D%22nonzero%22%20d%3D%22M2.954%203.926a.689.689%200%200%200%20.974%200l2.75-2.75A.688.688%200%200%200%206.19%200L.69.002A.69.69%200%200%200%20.2%201.178l2.75%202.75.003-.002Z%22%2F%3E%3C%2Fsvg%3E");
+  background-size: cover;
+  content: "";
 }
 
 .tree-view li.collapsed .collapsible::before {
   position: absolute;
-  margin-left: -20px;
-  padding: 0.25rem;
-  color: #a9a9a9;
-  font-size: 0.75em;
-  content: "+";
+  width: 4px;
+  height: 7px;
+  margin-left: -14.5px;
+  margin-top: 6px;
+  display: inline-block;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%224.128%22%20height%3D%226.88%22%3E%3Cpath%20fill%3D%22%23A9A9A9%22%20fill-rule%3D%22nonzero%22%20d%3D%22M3.926%203.926a.689.689%200%200%200%200-.974L1.176.202A.688.688%200%200%200%200%20.69V6.19a.69.69%200%200%200%201.176.488l2.75-2.75v-.003Z%22%2F%3E%3C%2Fsvg%3E");
+  background-size: cover;
+  content: "";
 }
 
 .tree-view .decl-syntax {
