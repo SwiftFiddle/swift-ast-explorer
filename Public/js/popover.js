@@ -50,7 +50,7 @@ export class Popover {
   }
 
   show(target, options = {}) {
-    const targetRect = options.targetRect || target.getBoundingClientRect();
+    const targetRect = target.getBoundingClientRect();
     const containerRect = options.containerRect || {
       left: 0,
       top: 0,
@@ -61,12 +61,7 @@ export class Popover {
 
     this.popover.classList.remove("d-none");
 
-    const popoverRect = {
-      left: 0,
-      top: 0,
-      width: this.popover.clientWidth,
-      height: this.popover.clientHeight,
-    };
+    const popoverRect = this.popover.getBoundingClientRect();
 
     const left = `${targetRect.left - popoverRect.width + offset.x}px`;
     this.popover.style.left = left;
