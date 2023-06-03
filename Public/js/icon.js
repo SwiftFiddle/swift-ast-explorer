@@ -1,6 +1,6 @@
 "use strict";
 
-import { config, library, dom } from "@fortawesome/fontawesome-svg-core";
+import { library, dom } from "@fortawesome/fontawesome-svg-core";
 import {
   faPlay,
   faEraser,
