@@ -48,7 +48,7 @@ func routes(_ app: Application) throws {
 
   app.on(.POST, "update", body: .collect(maxSize: "10mb")) { (req) -> SyntaxResponse in
     let parameter = try req.content.decode(RequestParameter.self)
-    return try Parser.parse(code: parameter.code, options: parameter.options ?? [])
+    return try SyntaxParser.parse(code: parameter.code, options: parameter.options ?? [])
   }
 }
 

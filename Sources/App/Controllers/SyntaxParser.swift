@@ -1,11 +1,11 @@
 import Foundation
 import SwiftSyntax
 import SwiftOperators
-import SwiftSyntaxParser
+import SwiftParser
 
-struct Parser {
+struct SyntaxParser {
   static func parse(code: String, options: [String] = []) throws -> SyntaxResponse {
-    let sourceFile = try SyntaxParser.parse(source: code, enableBareSlashRegexLiteral: true)
+    let sourceFile = Parser.parse(source: code)
     let syntax: Syntax
     if options.contains("fold"), let folded = try? OperatorTable.standardOperators.foldAll(sourceFile) {
       syntax = folded

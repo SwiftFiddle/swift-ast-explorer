@@ -17,7 +17,7 @@ let package = Package(
       dependencies: [
         .product(name: "SwiftSyntax", package: "swift-syntax"),
         .product(name: "SwiftOperators", package: "swift-syntax"),
-        .product(name: "SwiftSyntaxParser", package: "swift-syntax"),
+        .product(name: "SwiftParser", package: "swift-syntax"),
         .product(name: "Vapor", package: "vapor"),
         .product(name: "Leaf", package: "leaf"),
       ],
@@ -25,9 +25,11 @@ let package = Package(
         .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))
       ]
     ),
-    .testTarget(name: "AppTests", dependencies: [
-      .target(name: "App"),
-      .product(name: "XCTVapor", package: "vapor"),
-    ])
+    .testTarget(
+      name: "AppTests", dependencies: [
+        .target(name: "App"),
+        .product(name: "XCTVapor", package: "vapor"),
+      ]
+    )
   ]
 )
