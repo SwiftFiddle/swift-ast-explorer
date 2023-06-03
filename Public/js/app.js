@@ -21,8 +21,6 @@ export class App {
     this.editor = new Editor(document.getElementById("editor-container"));
     this.balloon = new Balloon();
 
-    this.cache = {};
-
     this.structureView = new StructureView(
       document.getElementById("structure-container")
     );
@@ -81,24 +79,6 @@ export class App {
       formatter.send({ code: this.editor.getValue() });
     });
 
-    document.addEventListener("show.bs.tab", (event) => {
-      this.updateActiveTab(event.target);
-    });
-    document.addEventListener("hidden.bs.tab", (event) => {
-      const hiddenTab = event.target;
-      switch (hiddenTab.dataset.bsTarget) {
-        case "#structure-tab-pane":
-          document.getElementById("structure-container").innerHTML = "";
-          break;
-        case "#lookup-tab-pane":
-          document.getElementById("lookup-container").innerHTML = "";
-          break;
-        case "#statistics-tab-pane":
-          document.getElementById("statistics-container").innerHTML = "";
-          break;
-      }
-    });
-
     const onresize = debounce(() => {
       this.onresize();
     }, 200);
@@ -111,7 +91,6 @@ export class App {
 
   update() {
     showLoading();
-    this.invalidateCache();
 
     const options = configurations();
 
@@ -138,7 +117,11 @@ export class App {
             .replace(/'/g, "&#039;")
         );
 
-        this.updateActiveTab();
+        this.updateStructure();
+        this.updateLookup();
+        this.updateStatistics();
+
+        this.onresize();
       })
       .catch((error) => {
         this.structureView.error = error;
@@ -151,31 +134,12 @@ export class App {
       });
   }
 
-  updateActiveTab(tab) {
-    const activeTab = tab || document.querySelector(".nav-link.active");
-    switch (activeTab.dataset.bsTarget) {
-      case "#structure-tab-pane":
-        this.updateStructure();
-        break;
-      case "#lookup-tab-pane":
-        this.updateLookup();
-        break;
-      case "#statistics-tab-pane":
-        this.updateStatistics();
-        break;
-    }
-
-    this.onresize();
-  }
-
   updateStructure() {
-    this.renderWithCache("structure-container", () => {
-      if (this.structureData === undefined) {
-        return;
-      }
-      const data = this.structureData;
-      this.structureView.update(data);
-    });
+    if (this.structureData === undefined) {
+      return;
+    }
+    const data = this.structureData;
+    this.structureView.update(data);
 
     this.structureView.onmouseover = (event, target, data) => {
       const title = data.token ? "Token" : `${data.text}`;
@@ -199,33 +163,32 @@ export class App {
   }
 
   updateLookup() {
-    this.renderWithCache("lookup-container", () => {
-      const data = this.response.syntaxHTML;
-      this.lookupView.update(data);
-    });
+    if (this.response === undefined || this.response.syntaxHTML === undefined) {
+      return;
+    }
+    const data = this.response.syntaxHTML;
+    this.lookupView.update(data);
   }
 
   updateStatistics() {
-    this.renderWithCache("statistics-container", () => {
-      if (this.structureData === undefined) {
-        return;
-      }
-      const data = this.structureData;
+    if (this.structureData === undefined) {
+      return;
+    }
+    const data = this.structureData;
 
-      const statistics = data
-        .filter((node) => node.token === undefined)
-        .reduce((acc, item) => {
-          const existingItem = acc.find((a) => a.text === item.text);
-          if (existingItem) {
-            existingItem.ranges.push(item.range);
-          } else {
-            acc.push({ text: item.text, ranges: [item.range] });
-          }
-          return acc;
-        }, []);
+    const statistics = data
+      .filter((node) => node.token === undefined)
+      .reduce((acc, item) => {
+        const existingItem = acc.find((a) => a.text === item.text);
+        if (existingItem) {
+          existingItem.ranges.push(item.range);
+        } else {
+          acc.push({ text: item.text, ranges: [item.range] });
+        }
+        return acc;
+      }, []);
 
-      this.statisticsView.update(statistics);
-    });
+    this.statisticsView.update(statistics);
 
     this.statisticsView.onmouseover = (event, target, ranges) => {
       const content = ranges
@@ -289,20 +252,6 @@ export class App {
       this.contentViewHeight;
     document.getElementById("statistics-container").style.height =
       this.contentViewHeight;
-  }
-
-  renderWithCache(id, render) {
-    const container = document.getElementById(id);
-    if (this.cache[id]) {
-      container.appendChild(this.cache[id]);
-      return;
-    }
-    render();
-    this.cache[id] = container.querySelector(":scope > div");
-  }
-
-  invalidateCache() {
-    this.cache = {};
   }
 }
 
