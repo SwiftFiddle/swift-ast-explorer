@@ -19,7 +19,7 @@ export class StatisticsView {
 
   update(statistics) {
     this.container.innerHTML = `<table class="table table-borderless table-striped table-hover table-sm">
-  <thead>
+  <thead class="table-light">
     <tr>
       <th scope="col" style="width: 60%;">Syntax</th>
       <th scope="col">Count</th>
