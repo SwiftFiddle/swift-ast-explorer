@@ -1,0 +1,510 @@
+[
+  {
+    "id": 0,
+    "range": {
+      "startColumn": 1,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeStatements",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "statements",
+        "value": {
+          "text": "CodeBlockItemListSyntax"
+        },
+        "ref": "CodeBlockItemListSyntax"
+      },
+      {
+        "name": "unexpectedBetweenStatementsAndEOFToken",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "eofToken",
+        "value": {
+          "kind": "eof",
+          "text": ""
+        }
+      },
+      {
+        "name": "unexpectedAfterEOFToken",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "type": "other",
+    "text": "SourceFile"
+  },
+  {
+    "text": "CodeBlockItemList",
+    "id": 1,
+    "range": {
+      "startColumn": 1,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "CodeBlockItemSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "1"
+        }
+      }
+    ],
+    "type": "collection",
+    "parent": 0
+  },
+  {
+    "text": "CodeBlockItem",
+    "id": 2,
+    "range": {
+      "startColumn": 1,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeItem",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "item",
+        "value": {
+          "text": "VariableDeclSyntax"
+        },
+        "ref": "VariableDeclSyntax"
+      },
+      {
+        "name": "unexpectedBetweenItemAndSemicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "semicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenSemicolonAndErrorTokens",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "errorTokens",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterErrorTokens",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "type": "other",
+    "parent": 1
+  },
+  {
+    "text": "VariableDecl",
+    "id": 3,
+    "range": {
+      "startColumn": 1,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeAttributes",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "attributes",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenAttributesAndModifiers",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "modifiers",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModifiersAndLetOrVarKeyword",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "letOrVarKeyword",
+        "value": {
+          "kind": "letKeyword",
+          "text": "let␣"
+        }
+      },
+      {
+        "name": "unexpectedBetweenLetOrVarKeywordAndBindings",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "bindings",
+        "value": {
+          "text": "PatternBindingListSyntax"
+        },
+        "ref": "PatternBindingListSyntax"
+      },
+      {
+        "name": "unexpectedAfterBindings",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "type": "decl",
+    "parent": 2
+  },
+  {
+    "parent": 3,
+    "id": 4,
+    "range": {
+      "startColumn": 1,
+      "endRow": 1,
+      "endColumn": 4,
+      "startRow": 1
+    },
+    "text": "let",
+    "structure": [],
+    "token": {
+      "kind": "letKeyword",
+      "leadingTrivia": "",
+      "trailingTrivia": "␣"
+    },
+    "type": "other"
+  },
+  {
+    "text": "PatternBindingList",
+    "id": 5,
+    "range": {
+      "startColumn": 5,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "PatternBindingSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "1"
+        }
+      }
+    ],
+    "type": "collection",
+    "parent": 3
+  },
+  {
+    "text": "PatternBinding",
+    "id": 6,
+    "range": {
+      "startColumn": 5,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforePattern",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "pattern",
+        "value": {
+          "text": "IdentifierPatternSyntax"
+        },
+        "ref": "IdentifierPatternSyntax"
+      },
+      {
+        "name": "unexpectedBetweenPatternAndTypeAnnotation",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "typeAnnotation",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenTypeAnnotationAndInitializer",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "initializer",
+        "value": {
+          "text": "InitializerClauseSyntax"
+        },
+        "ref": "InitializerClauseSyntax"
+      },
+      {
+        "name": "unexpectedBetweenInitializerAndAccessor",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "accessor",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "trailingComma",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "type": "other",
+    "parent": 5
+  },
+  {
+    "text": "IdentifierPattern",
+    "id": 7,
+    "range": {
+      "startColumn": 5,
+      "endRow": 1,
+      "endColumn": 11,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeIdentifier",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "identifier",
+        "value": {
+          "kind": "identifier(\"number\")",
+          "text": "number␣"
+        }
+      },
+      {
+        "name": "unexpectedAfterIdentifier",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "type": "pattern",
+    "parent": 6
+  },
+  {
+    "parent": 7,
+    "id": 8,
+    "range": {
+      "startColumn": 5,
+      "endRow": 1,
+      "endColumn": 11,
+      "startRow": 1
+    },
+    "text": "number",
+    "structure": [],
+    "token": {
+      "kind": "identifier(\"number\")",
+      "leadingTrivia": "",
+      "trailingTrivia": "␣"
+    },
+    "type": "other"
+  },
+  {
+    "text": "InitializerClause",
+    "id": 9,
+    "range": {
+      "startColumn": 12,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeEqual",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "equal",
+        "value": {
+          "kind": "equal",
+          "text": "=␣"
+        }
+      },
+      {
+        "name": "unexpectedBetweenEqualAndValue",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "value",
+        "value": {
+          "text": "IntegerLiteralExprSyntax"
+        },
+        "ref": "IntegerLiteralExprSyntax"
+      },
+      {
+        "name": "unexpectedAfterValue",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "type": "other",
+    "parent": 6
+  },
+  {
+    "parent": 9,
+    "id": 10,
+    "range": {
+      "startColumn": 12,
+      "endRow": 1,
+      "endColumn": 13,
+      "startRow": 1
+    },
+    "text": "=",
+    "structure": [],
+    "token": {
+      "kind": "equal",
+      "leadingTrivia": "",
+      "trailingTrivia": "␣"
+    },
+    "type": "other"
+  },
+  {
+    "text": "IntegerLiteralExpr",
+    "id": 11,
+    "range": {
+      "startColumn": 14,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeDigits",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "digits",
+        "value": {
+          "kind": "integerLiteral(\"0\")",
+          "text": "0"
+        }
+      },
+      {
+        "name": "unexpectedAfterDigits",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "type": "expr",
+    "parent": 9
+  },
+  {
+    "parent": 11,
+    "id": 12,
+    "range": {
+      "startColumn": 14,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "text": "0",
+    "structure": [],
+    "token": {
+      "kind": "integerLiteral(\"0\")",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "parent": 0,
+    "id": 13,
+    "range": {
+      "startColumn": 15,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "text": "",
+    "structure": [],
+    "token": {
+      "kind": "eof",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  }
+]
