@@ -23,20 +23,18 @@
 
 .popover .arrow {
   position: absolute;
-  content: "";
+  top: 50%;
+  left: calc(100% + -6px);
+  transform: translateY(-50%) rotate(-135deg);
   width: 10px;
   height: 10px;
+  content: "";
   background-color: #fff;
   border: 1px solid transparent;
   border-left-color: rgba(0, 0, 0, 0.2);
   border-bottom-color: rgba(0, 0, 0, 0.2);
   z-index: 1070;
-}
-
-.popover .arrow {
-  top: 50%;
-  left: calc(100% + -6px);
-  transform: translateY(-50%) rotate(-135deg);
+  pointer-events: none;
 }
 
 .popover-content dl {
