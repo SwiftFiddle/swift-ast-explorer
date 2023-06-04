@@ -18,14 +18,26 @@ final class TreeNode: Codable {
   }
 }
 
-struct Range: Codable {
+extension TreeNode: Equatable {
+  static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
+    lhs.id == rhs.id &&
+    lhs.parent == rhs.parent &&
+    lhs.text == rhs.text &&
+    lhs.range == rhs.range &&
+    lhs.structure == rhs.structure &&
+    lhs.type == rhs.type &&
+    lhs.token == rhs.token
+  }
+}
+
+struct Range: Codable, Equatable {
   var startRow: Int
   var startColumn: Int
   var endRow: Int
   var endColumn: Int
 }
 
-struct StructureProperty: Codable {
+struct StructureProperty: Codable, Equatable {
   let name: String
   let value: StructureValue?
   let ref: String?
@@ -37,7 +49,7 @@ struct StructureProperty: Codable {
   }
 }
 
-struct StructureValue: Codable {
+struct StructureValue: Codable, Equatable {
   let text: String
   let kind: String?
 
@@ -56,7 +68,7 @@ enum SyntaxType: String, Codable {
   case other
 }
 
-struct Token: Codable {
+struct Token: Codable, Equatable {
   var kind: String
   var leadingTrivia: String
   var trailingTrivia: String
