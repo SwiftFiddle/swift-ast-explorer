@@ -67,7 +67,7 @@ final class AppTests: XCTestCase {
   }
 
   func testParser1() throws {
-    let response = try Parser.parse(
+    let response = try SyntaxParser.parse(
       code: """
         let number = 0
         """
@@ -86,7 +86,7 @@ final class AppTests: XCTestCase {
   }
 
   func testParser2() throws {
-    let response = try Parser.parse(
+    let response = try SyntaxParser.parse(
       code: """
         var temperatureInFahrenheit = 90
 
@@ -115,7 +115,7 @@ final class AppTests: XCTestCase {
   }
 
   func testParser3() throws {
-    let response = try Parser.parse(
+    let response = try SyntaxParser.parse(
       code: #"""
         import Foundation
 
@@ -178,7 +178,7 @@ final class AppTests: XCTestCase {
   }
 
   func testParserFolding1() throws {
-    let response = try Parser.parse(
+    let response = try SyntaxParser.parse(
       code: """
         let number = 0
         """,
@@ -198,7 +198,7 @@ final class AppTests: XCTestCase {
   }
 
   func testParserFolding2() throws {
-    let response = try Parser.parse(
+    let response = try SyntaxParser.parse(
       code: """
         var temperatureInFahrenheit = 90
 
@@ -228,7 +228,7 @@ final class AppTests: XCTestCase {
   }
 
   func testParserFolding3() throws {
-    let response = try Parser.parse(
+    let response = try SyntaxParser.parse(
       code: #"""
         import Foundation
 
