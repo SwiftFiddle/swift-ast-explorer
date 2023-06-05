@@ -34,26 +34,32 @@
 
 .tree-view li.opened .collapsible::before {
   position: absolute;
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-top: 2px;
+  padding-bottom: 2px;
   width: 7px;
   height: 4px;
-  margin-left: -16px;
-  margin-top: 8px;
   display: inline-block;
-  background-image: url("../images/caret-down-solid.svg");
-  background-size: cover;
   content: "";
+  background-image: url("../images/caret-down-solid.svg");
+  background-repeat: no-repeat;
 }
 
 .tree-view li.collapsed .collapsible::before {
   position: absolute;
+  left: -14.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-top: 2px;
+  padding-bottom: 2px;
   width: 4px;
   height: 7px;
-  margin-left: -14.5px;
-  margin-top: 6px;
   display: inline-block;
-  background-image: url("../images/caret-right-solid.svg");
-  background-size: cover;
   content: "";
+  background-image: url("../images/caret-right-solid.svg");
+  background-repeat: no-repeat;
 }
 
 .tree-view .decl-syntax {
