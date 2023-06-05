@@ -198,6 +198,35 @@ final class AppTests: XCTestCase {
     )
   }
 
+  func testParser4() throws {
+    let response = try SyntaxParser.parse(
+      code: """
+        struct Result< {{
+          let text: String
+          let someOtherThing: String
+        }
+        """
+    )
+
+    let decoder = JSONDecoder()
+
+    XCTAssertEqual(
+      try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
+      try decoder.decode(
+        [TreeNode].self, from: Data(
+          contentsOf: Bundle.module.url(forResource: "test-1-4.json", withExtension: nil)!
+        )
+      )
+    )
+    XCTAssertEqual(
+      response.syntaxHTML,
+      try String(
+        contentsOf: Bundle.module.url(forResource: "test-1-4.html", withExtension: nil)!
+      )
+      .replacingOccurrences(of: "\n", with: "")
+    )
+  }
+
   func testParserFolding1() throws {
     let response = try SyntaxParser.parse(
       code: """
@@ -329,6 +358,36 @@ final class AppTests: XCTestCase {
       response.syntaxHTML,
       try String(
         contentsOf: Bundle.module.url(forResource: "test-2-3.html", withExtension: nil)!
+      )
+      .replacingOccurrences(of: "\n", with: "")
+    )
+  }
+
+  func testParserFolding4() throws {
+    let response = try SyntaxParser.parse(
+      code: """
+        struct Result< {{
+          let text: String
+          let someOtherThing: String
+        }
+        """,
+      options: ["fold"]
+    )
+
+    let decoder = JSONDecoder()
+
+    XCTAssertEqual(
+      try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
+      try decoder.decode(
+        [TreeNode].self, from: Data(
+          contentsOf: Bundle.module.url(forResource: "test-2-4.json", withExtension: nil)!
+        )
+      )
+    )
+    XCTAssertEqual(
+      response.syntaxHTML,
+      try String(
+        contentsOf: Bundle.module.url(forResource: "test-2-4.html", withExtension: nil)!
       )
       .replacingOccurrences(of: "\n", with: "")
     )
