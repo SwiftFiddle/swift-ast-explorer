@@ -2,6 +2,7 @@
   position: absolute;
   z-index: 1070;
   font-size: 10pt;
+  box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
 }
 
 .popover-content {
@@ -23,6 +24,7 @@
 
 .popover .arrow {
   position: absolute;
+  z-index: 1070;
   top: 50%;
   left: calc(100% + -6px);
   transform: translateY(-50%) rotate(-135deg);
@@ -33,7 +35,7 @@
   border: 1px solid transparent;
   border-left-color: rgba(0, 0, 0, 0.2);
   border-bottom-color: rgba(0, 0, 0, 0.2);
-  z-index: 1070;
+  box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
   pointer-events: none;
 }
 
