@@ -16,8 +16,9 @@
   width: 14px;
   height: 10px;
   margin-top: 4px;
+  margin-bottom: 4px;
   background-image: url("../images/check-solid.svg");
-  background-size: cover;
+  background-repeat: no-repeat;
   content: "";
   float: right;
 }
