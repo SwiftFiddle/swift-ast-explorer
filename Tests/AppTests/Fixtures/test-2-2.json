@@ -3383,7 +3383,7 @@
     "structure": [],
     "token": {
       "kind": "eof",
-      "leadingTrivia": "↲↲<span class='lineComment' data-title='// Prints \"It's really warm. Don't forget to wear sunscreen.\"' data-content='lineComment' data-type='Trivia'>// Prints &quot;It&apos;s really warm. Don&apos;t forget to wear sunscreen.&quot;</span>",
+      "leadingTrivia": "↲↲<span class='lineComment' data-title='// Prints &quot;It&apos;s really warm. Don&apos;t forget to wear sunscreen.&quot;' data-content='lineComment' data-type='Trivia'>// Prints &quot;It&apos;s really warm. Don&apos;t forget to wear sunscreen.&quot;</span>",
       "trailingTrivia": ""
     },
     "type": "other"

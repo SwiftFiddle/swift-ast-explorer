@@ -45,9 +45,9 @@ final class TokenVisitor: SyntaxRewriter {
 
     list.append(
       "<span class='\(className)' " +
-      "data-title='\("\(node.withoutTrivia())".replacingOccurrences(of: "\n", with: "↲"))' " +
-      "data-content='\(content)' " +
-      "data-type='\(type)' " +
+      "data-title='\("\(escapeHTML("\(node.withoutTrivia())"))".replacingOccurrences(of: "\n", with: "↲"))' " +
+      "data-content='\(escapeHTML(content))' " +
+      "data-type='\(escapeHTML(type))' " +
       #"data-range='{"startRow":\#(startRow),"startColumn":\#(startColumn),"endRow":\#(endRow),"endColumn":\#(endColumn)}'>"#
     )
 
@@ -172,19 +172,20 @@ final class TokenVisitor: SyntaxRewriter {
     let startColumn = start.column ?? 1
     let endRow = end.line ?? 1
     let endColumn = end.column ?? 1
+    let text = token.presence == .present ? token.text : ""
     list.append(
       "<span class='token \(kind)' " +
-      "data-title='\(token.withoutTrivia())' " +
-      "data-content='\(token.tokenKind)' " +
+      "data-title='\(escapeHTML("\(token.withoutTrivia())"))' " +
+      "data-content='\(escapeHTML("\(token.tokenKind)"))' " +
       "data-type='Token' " +
       #"data-range='{"startRow":\#(startRow),"startColumn":\#(startColumn),"endRow":\#(endRow),"endColumn":\#(endColumn)}'>"# +
-      "\(escapeHtmlSpecialCharacters(token.text))</span>"
+      "\(escapeHTML(text))</span>"
     )
   }
 
   private func processTriviaPiece(_ piece: TriviaPiece) -> String {
     func wrapWithSpanTag(class c: String, text: String) -> String {
-      "<span class='\(c)' data-title='\(piece)' data-content='\(c)' data-type='Trivia'>\(escapeHtmlSpecialCharacters(text))</span>"
+      "<span class='\(escapeHTML(c))' data-title='\(escapeHTML("\(piece)"))' data-content='\(escapeHTML(c))' data-type='Trivia'>\(escapeHTML(text))</span>"
     }
 
     var trivia = ""
@@ -217,7 +218,7 @@ final class TokenVisitor: SyntaxRewriter {
     text.replacingOccurrences(of: "&nbsp;", with: "␣").replacingOccurrences(of: "<br>", with: "↲")
   }
 
-  private func escapeHtmlSpecialCharacters(_ string: String) -> String {
+  private func escapeHTML(_ string: String) -> String {
     var newString = string
     let specialCharacters = [
       ("&", "&amp;"),
