@@ -1,5 +1,5 @@
-<span class='SourceFile' data-title='import Foundation↲↲struct BlackjackCard {↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = "♠"↲    case hearts = "♡"↲    case diamonds = "♢"↲    case clubs = "♣"↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output↲  }↲}↲' data-content='SourceFileSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":45,"endColumn":1}'>
-<span class='CodeBlockItemList' data-title='import Foundation↲↲struct BlackjackCard {↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = "♠"↲    case hearts = "♡"↲    case diamonds = "♢"↲    case clubs = "♣"↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output↲  }↲}' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":44,"endColumn":2}'>
+<span class='SourceFile' data-title='import Foundation↲↲struct BlackjackCard {↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }↲}↲' data-content='SourceFileSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":45,"endColumn":1}'>
+<span class='CodeBlockItemList' data-title='import Foundation↲↲struct BlackjackCard {↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }↲}' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":44,"endColumn":2}'>
 <span class='CodeBlockItem' data-title='import Foundation' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":18}'>
 <span class='ImportDecl' data-title='import Foundation' data-content='ImportDeclSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":18}'>
 <span class='Token' data-title='import' data-content='importKeyword' data-type='Token' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":7}'>
@@ -7,38 +7,38 @@
 </span>
 <span class='AccessPath' data-title='Foundation' data-content='AccessPathSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":8,"endRow":1,"endColumn":18}'>
 <span class='AccessPathComponent' data-title='Foundation' data-content='AccessPathComponentSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":8,"endRow":1,"endColumn":18}'>
-<span class='Token' data-title='Foundation' data-content='identifier("Foundation")' data-type='Token' data-range='{"startRow":1,"startColumn":8,"endRow":1,"endColumn":18}'>
-<span class='token identifier' data-title='Foundation' data-content='identifier("Foundation")' data-type='Token' data-range='{"startRow":1,"startColumn":8,"endRow":1,"endColumn":18}'>Foundation</span>
+<span class='Token' data-title='Foundation' data-content='identifier(&quot;Foundation&quot;)' data-type='Token' data-range='{"startRow":1,"startColumn":8,"endRow":1,"endColumn":18}'>
+<span class='token identifier' data-title='Foundation' data-content='identifier(&quot;Foundation&quot;)' data-type='Token' data-range='{"startRow":1,"startColumn":8,"endRow":1,"endColumn":18}'>Foundation</span>
 </span>
 </span>
 </span>
 </span>
 </span>
-<span class='CodeBlockItem' data-title='struct BlackjackCard {↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = "♠"↲    case hearts = "♡"↲    case diamonds = "♢"↲    case clubs = "♣"↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output↲  }↲}' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":1,"endRow":44,"endColumn":2}'>
-<span class='StructDecl' data-title='struct BlackjackCard {↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = "♠"↲    case hearts = "♡"↲    case diamonds = "♢"↲    case clubs = "♣"↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output↲  }↲}' data-content='StructDeclSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":1,"endRow":44,"endColumn":2}'>
+<span class='CodeBlockItem' data-title='struct BlackjackCard {↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }↲}' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":1,"endRow":44,"endColumn":2}'>
+<span class='StructDecl' data-title='struct BlackjackCard {↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }↲}' data-content='StructDeclSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":1,"endRow":44,"endColumn":2}'>
 <span class='Token' data-title='struct' data-content='structKeyword' data-type='Token' data-range='{"startRow":3,"startColumn":1,"endRow":3,"endColumn":7}'>
 <br>
 <br>
 <span class='token keyword' data-title='struct' data-content='structKeyword' data-type='Token' data-range='{"startRow":3,"startColumn":1,"endRow":3,"endColumn":7}'>struct</span>&nbsp;
 </span>
-<span class='Token' data-title='BlackjackCard' data-content='identifier("BlackjackCard")' data-type='Token' data-range='{"startRow":3,"startColumn":8,"endRow":3,"endColumn":21}'>
-<span class='token identifier' data-title='BlackjackCard' data-content='identifier("BlackjackCard")' data-type='Token' data-range='{"startRow":3,"startColumn":8,"endRow":3,"endColumn":21}'>BlackjackCard</span>&nbsp;
+<span class='Token' data-title='BlackjackCard' data-content='identifier(&quot;BlackjackCard&quot;)' data-type='Token' data-range='{"startRow":3,"startColumn":8,"endRow":3,"endColumn":21}'>
+<span class='token identifier' data-title='BlackjackCard' data-content='identifier(&quot;BlackjackCard&quot;)' data-type='Token' data-range='{"startRow":3,"startColumn":8,"endRow":3,"endColumn":21}'>BlackjackCard</span>&nbsp;
 </span>
-<span class='MemberDeclBlock' data-title='{↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = "♠"↲    case hearts = "♡"↲    case diamonds = "♢"↲    case clubs = "♣"↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output↲  }↲}' data-content='MemberDeclBlockSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":22,"endRow":44,"endColumn":2}'>
+<span class='MemberDeclBlock' data-title='{↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }↲}' data-content='MemberDeclBlockSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":22,"endRow":44,"endColumn":2}'>
 <span class='Token' data-title='{' data-content='leftBrace' data-type='Token' data-range='{"startRow":3,"startColumn":22,"endRow":3,"endColumn":23}'>
 <span class='token leftBrace' data-title='{' data-content='leftBrace' data-type='Token' data-range='{"startRow":3,"startColumn":22,"endRow":3,"endColumn":23}'>{</span>
 </span>
-<span class='MemberDeclList' data-title='enum Suit: Character {↲    case spades = "♠"↲    case hearts = "♡"↲    case diamonds = "♢"↲    case clubs = "♣"↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output↲  }' data-content='MemberDeclListSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":43,"endColumn":4}'>
-<span class='MemberDeclListItem' data-title='enum Suit: Character {↲    case spades = "♠"↲    case hearts = "♡"↲    case diamonds = "♢"↲    case clubs = "♣"↲  }' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":10,"endColumn":4}'>
-<span class='EnumDecl' data-title='enum Suit: Character {↲    case spades = "♠"↲    case hearts = "♡"↲    case diamonds = "♢"↲    case clubs = "♣"↲  }' data-content='EnumDeclSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":10,"endColumn":4}'>
+<span class='MemberDeclList' data-title='enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }' data-content='MemberDeclListSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":43,"endColumn":4}'>
+<span class='MemberDeclListItem' data-title='enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":10,"endColumn":4}'>
+<span class='EnumDecl' data-title='enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }' data-content='EnumDeclSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":10,"endColumn":4}'>
 <span class='Token' data-title='enum' data-content='enumKeyword' data-type='Token' data-range='{"startRow":5,"startColumn":3,"endRow":5,"endColumn":7}'>
 <br>&nbsp;&nbsp;
 <span class='lineComment' data-title='// nested Suit enumeration' data-content='lineComment' data-type='Trivia'>// nested Suit enumeration</span>
 <br>&nbsp;&nbsp;
 <span class='token keyword' data-title='enum' data-content='enumKeyword' data-type='Token' data-range='{"startRow":5,"startColumn":3,"endRow":5,"endColumn":7}'>enum</span>&nbsp;
 </span>
-<span class='Token' data-title='Suit' data-content='identifier("Suit")' data-type='Token' data-range='{"startRow":5,"startColumn":8,"endRow":5,"endColumn":12}'>
-<span class='token identifier' data-title='Suit' data-content='identifier("Suit")' data-type='Token' data-range='{"startRow":5,"startColumn":8,"endRow":5,"endColumn":12}'>Suit</span>
+<span class='Token' data-title='Suit' data-content='identifier(&quot;Suit&quot;)' data-type='Token' data-range='{"startRow":5,"startColumn":8,"endRow":5,"endColumn":12}'>
+<span class='token identifier' data-title='Suit' data-content='identifier(&quot;Suit&quot;)' data-type='Token' data-range='{"startRow":5,"startColumn":8,"endRow":5,"endColumn":12}'>Suit</span>
 </span>
 <span class='TypeInheritanceClause' data-title=': Character' data-content='TypeInheritanceClauseSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":12,"endRow":5,"endColumn":23}'>
 <span class='Token' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":5,"startColumn":12,"endRow":5,"endColumn":13}'>
@@ -47,46 +47,46 @@
 <span class='InheritedTypeList' data-title='Character' data-content='InheritedTypeListSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":14,"endRow":5,"endColumn":23}'>
 <span class='InheritedType' data-title='Character' data-content='InheritedTypeSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":14,"endRow":5,"endColumn":23}'>
 <span class='SimpleTypeIdentifier' data-title='Character' data-content='SimpleTypeIdentifierSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":14,"endRow":5,"endColumn":23}'>
-<span class='Token' data-title='Character' data-content='identifier("Character")' data-type='Token' data-range='{"startRow":5,"startColumn":14,"endRow":5,"endColumn":23}'>
-<span class='token identifier' data-title='Character' data-content='identifier("Character")' data-type='Token' data-range='{"startRow":5,"startColumn":14,"endRow":5,"endColumn":23}'>Character</span>&nbsp;
+<span class='Token' data-title='Character' data-content='identifier(&quot;Character&quot;)' data-type='Token' data-range='{"startRow":5,"startColumn":14,"endRow":5,"endColumn":23}'>
+<span class='token identifier' data-title='Character' data-content='identifier(&quot;Character&quot;)' data-type='Token' data-range='{"startRow":5,"startColumn":14,"endRow":5,"endColumn":23}'>Character</span>&nbsp;
 </span>
 </span>
 </span>
 </span>
 </span>
-<span class='MemberDeclBlock' data-title='{↲    case spades = "♠"↲    case hearts = "♡"↲    case diamonds = "♢"↲    case clubs = "♣"↲  }' data-content='MemberDeclBlockSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":24,"endRow":10,"endColumn":4}'>
+<span class='MemberDeclBlock' data-title='{↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }' data-content='MemberDeclBlockSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":24,"endRow":10,"endColumn":4}'>
 <span class='Token' data-title='{' data-content='leftBrace' data-type='Token' data-range='{"startRow":5,"startColumn":24,"endRow":5,"endColumn":25}'>
 <span class='token leftBrace' data-title='{' data-content='leftBrace' data-type='Token' data-range='{"startRow":5,"startColumn":24,"endRow":5,"endColumn":25}'>{</span>
 </span>
-<span class='MemberDeclList' data-title='case spades = "♠"↲    case hearts = "♡"↲    case diamonds = "♢"↲    case clubs = "♣"' data-content='MemberDeclListSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":9,"endColumn":23}'>
-<span class='MemberDeclListItem' data-title='case spades = "♠"' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":24}'>
-<span class='EnumCaseDecl' data-title='case spades = "♠"' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":24}'>
+<span class='MemberDeclList' data-title='case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;' data-content='MemberDeclListSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":9,"endColumn":23}'>
+<span class='MemberDeclListItem' data-title='case spades = &quot;♠&quot;' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":24}'>
+<span class='EnumCaseDecl' data-title='case spades = &quot;♠&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":24}'>
 <span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":9}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":9}'>case</span>&nbsp;
 </span>
-<span class='EnumCaseElementList' data-title='spades = "♠"' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":10,"endRow":6,"endColumn":24}'>
-<span class='EnumCaseElement' data-title='spades = "♠"' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":10,"endRow":6,"endColumn":24}'>
-<span class='Token' data-title='spades' data-content='identifier("spades")' data-type='Token' data-range='{"startRow":6,"startColumn":10,"endRow":6,"endColumn":16}'>
-<span class='token identifier' data-title='spades' data-content='identifier("spades")' data-type='Token' data-range='{"startRow":6,"startColumn":10,"endRow":6,"endColumn":16}'>spades</span>&nbsp;
+<span class='EnumCaseElementList' data-title='spades = &quot;♠&quot;' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":10,"endRow":6,"endColumn":24}'>
+<span class='EnumCaseElement' data-title='spades = &quot;♠&quot;' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":10,"endRow":6,"endColumn":24}'>
+<span class='Token' data-title='spades' data-content='identifier(&quot;spades&quot;)' data-type='Token' data-range='{"startRow":6,"startColumn":10,"endRow":6,"endColumn":16}'>
+<span class='token identifier' data-title='spades' data-content='identifier(&quot;spades&quot;)' data-type='Token' data-range='{"startRow":6,"startColumn":10,"endRow":6,"endColumn":16}'>spades</span>&nbsp;
 </span>
-<span class='InitializerClause' data-title='= "♠"' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":17,"endRow":6,"endColumn":24}'>
+<span class='InitializerClause' data-title='= &quot;♠&quot;' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":17,"endRow":6,"endColumn":24}'>
 <span class='Token' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":6,"startColumn":17,"endRow":6,"endColumn":18}'>
 <span class='token equal' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":6,"startColumn":17,"endRow":6,"endColumn":18}'>=</span>&nbsp;
 </span>
-<span class='StringLiteralExpr' data-title='"♠"' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":19,"endRow":6,"endColumn":24}'>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":6,"startColumn":19,"endRow":6,"endColumn":20}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":6,"startColumn":19,"endRow":6,"endColumn":20}'>&quot;</span>
+<span class='StringLiteralExpr' data-title='&quot;♠&quot;' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":19,"endRow":6,"endColumn":24}'>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":6,"startColumn":19,"endRow":6,"endColumn":20}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":6,"startColumn":19,"endRow":6,"endColumn":20}'>&quot;</span>
 </span>
 <span class='StringLiteralSegments' data-title='♠' data-content='StringLiteralSegmentsSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":20,"endRow":6,"endColumn":23}'>
 <span class='StringSegment' data-title='♠' data-content='StringSegmentSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":20,"endRow":6,"endColumn":23}'>
-<span class='Token' data-title='♠' data-content='stringSegment("♠")' data-type='Token' data-range='{"startRow":6,"startColumn":20,"endRow":6,"endColumn":23}'>
-<span class='token stringSegment' data-title='♠' data-content='stringSegment("♠")' data-type='Token' data-range='{"startRow":6,"startColumn":20,"endRow":6,"endColumn":23}'>♠</span>
+<span class='Token' data-title='♠' data-content='stringSegment(&quot;♠&quot;)' data-type='Token' data-range='{"startRow":6,"startColumn":20,"endRow":6,"endColumn":23}'>
+<span class='token stringSegment' data-title='♠' data-content='stringSegment(&quot;♠&quot;)' data-type='Token' data-range='{"startRow":6,"startColumn":20,"endRow":6,"endColumn":23}'>♠</span>
 </span>
 </span>
 </span>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":6,"startColumn":23,"endRow":6,"endColumn":24}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":6,"startColumn":23,"endRow":6,"endColumn":24}'>&quot;</span>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":6,"startColumn":23,"endRow":6,"endColumn":24}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":6,"startColumn":23,"endRow":6,"endColumn":24}'>&quot;</span>
 </span>
 </span>
 </span>
@@ -94,34 +94,34 @@
 </span>
 </span>
 </span>
-<span class='MemberDeclListItem' data-title='case hearts = "♡"' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":24}'>
-<span class='EnumCaseDecl' data-title='case hearts = "♡"' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":24}'>
+<span class='MemberDeclListItem' data-title='case hearts = &quot;♡&quot;' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":24}'>
+<span class='EnumCaseDecl' data-title='case hearts = &quot;♡&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":24}'>
 <span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":9}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":9}'>case</span>&nbsp;
 </span>
-<span class='EnumCaseElementList' data-title='hearts = "♡"' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":10,"endRow":7,"endColumn":24}'>
-<span class='EnumCaseElement' data-title='hearts = "♡"' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":10,"endRow":7,"endColumn":24}'>
-<span class='Token' data-title='hearts' data-content='identifier("hearts")' data-type='Token' data-range='{"startRow":7,"startColumn":10,"endRow":7,"endColumn":16}'>
-<span class='token identifier' data-title='hearts' data-content='identifier("hearts")' data-type='Token' data-range='{"startRow":7,"startColumn":10,"endRow":7,"endColumn":16}'>hearts</span>&nbsp;
+<span class='EnumCaseElementList' data-title='hearts = &quot;♡&quot;' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":10,"endRow":7,"endColumn":24}'>
+<span class='EnumCaseElement' data-title='hearts = &quot;♡&quot;' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":10,"endRow":7,"endColumn":24}'>
+<span class='Token' data-title='hearts' data-content='identifier(&quot;hearts&quot;)' data-type='Token' data-range='{"startRow":7,"startColumn":10,"endRow":7,"endColumn":16}'>
+<span class='token identifier' data-title='hearts' data-content='identifier(&quot;hearts&quot;)' data-type='Token' data-range='{"startRow":7,"startColumn":10,"endRow":7,"endColumn":16}'>hearts</span>&nbsp;
 </span>
-<span class='InitializerClause' data-title='= "♡"' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":17,"endRow":7,"endColumn":24}'>
+<span class='InitializerClause' data-title='= &quot;♡&quot;' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":17,"endRow":7,"endColumn":24}'>
 <span class='Token' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":7,"startColumn":17,"endRow":7,"endColumn":18}'>
 <span class='token equal' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":7,"startColumn":17,"endRow":7,"endColumn":18}'>=</span>&nbsp;
 </span>
-<span class='StringLiteralExpr' data-title='"♡"' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":19,"endRow":7,"endColumn":24}'>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":7,"startColumn":19,"endRow":7,"endColumn":20}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":7,"startColumn":19,"endRow":7,"endColumn":20}'>&quot;</span>
+<span class='StringLiteralExpr' data-title='&quot;♡&quot;' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":19,"endRow":7,"endColumn":24}'>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":7,"startColumn":19,"endRow":7,"endColumn":20}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":7,"startColumn":19,"endRow":7,"endColumn":20}'>&quot;</span>
 </span>
 <span class='StringLiteralSegments' data-title='♡' data-content='StringLiteralSegmentsSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":20,"endRow":7,"endColumn":23}'>
 <span class='StringSegment' data-title='♡' data-content='StringSegmentSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":20,"endRow":7,"endColumn":23}'>
-<span class='Token' data-title='♡' data-content='stringSegment("♡")' data-type='Token' data-range='{"startRow":7,"startColumn":20,"endRow":7,"endColumn":23}'>
-<span class='token stringSegment' data-title='♡' data-content='stringSegment("♡")' data-type='Token' data-range='{"startRow":7,"startColumn":20,"endRow":7,"endColumn":23}'>♡</span>
+<span class='Token' data-title='♡' data-content='stringSegment(&quot;♡&quot;)' data-type='Token' data-range='{"startRow":7,"startColumn":20,"endRow":7,"endColumn":23}'>
+<span class='token stringSegment' data-title='♡' data-content='stringSegment(&quot;♡&quot;)' data-type='Token' data-range='{"startRow":7,"startColumn":20,"endRow":7,"endColumn":23}'>♡</span>
 </span>
 </span>
 </span>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":7,"startColumn":23,"endRow":7,"endColumn":24}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":7,"startColumn":23,"endRow":7,"endColumn":24}'>&quot;</span>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":7,"startColumn":23,"endRow":7,"endColumn":24}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":7,"startColumn":23,"endRow":7,"endColumn":24}'>&quot;</span>
 </span>
 </span>
 </span>
@@ -129,34 +129,34 @@
 </span>
 </span>
 </span>
-<span class='MemberDeclListItem' data-title='case diamonds = "♢"' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":26}'>
-<span class='EnumCaseDecl' data-title='case diamonds = "♢"' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":26}'>
+<span class='MemberDeclListItem' data-title='case diamonds = &quot;♢&quot;' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":26}'>
+<span class='EnumCaseDecl' data-title='case diamonds = &quot;♢&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":26}'>
 <span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":9}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":9}'>case</span>&nbsp;
 </span>
-<span class='EnumCaseElementList' data-title='diamonds = "♢"' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":10,"endRow":8,"endColumn":26}'>
-<span class='EnumCaseElement' data-title='diamonds = "♢"' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":10,"endRow":8,"endColumn":26}'>
-<span class='Token' data-title='diamonds' data-content='identifier("diamonds")' data-type='Token' data-range='{"startRow":8,"startColumn":10,"endRow":8,"endColumn":18}'>
-<span class='token identifier' data-title='diamonds' data-content='identifier("diamonds")' data-type='Token' data-range='{"startRow":8,"startColumn":10,"endRow":8,"endColumn":18}'>diamonds</span>&nbsp;
+<span class='EnumCaseElementList' data-title='diamonds = &quot;♢&quot;' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":10,"endRow":8,"endColumn":26}'>
+<span class='EnumCaseElement' data-title='diamonds = &quot;♢&quot;' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":10,"endRow":8,"endColumn":26}'>
+<span class='Token' data-title='diamonds' data-content='identifier(&quot;diamonds&quot;)' data-type='Token' data-range='{"startRow":8,"startColumn":10,"endRow":8,"endColumn":18}'>
+<span class='token identifier' data-title='diamonds' data-content='identifier(&quot;diamonds&quot;)' data-type='Token' data-range='{"startRow":8,"startColumn":10,"endRow":8,"endColumn":18}'>diamonds</span>&nbsp;
 </span>
-<span class='InitializerClause' data-title='= "♢"' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":19,"endRow":8,"endColumn":26}'>
+<span class='InitializerClause' data-title='= &quot;♢&quot;' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":19,"endRow":8,"endColumn":26}'>
 <span class='Token' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":8,"startColumn":19,"endRow":8,"endColumn":20}'>
 <span class='token equal' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":8,"startColumn":19,"endRow":8,"endColumn":20}'>=</span>&nbsp;
 </span>
-<span class='StringLiteralExpr' data-title='"♢"' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":21,"endRow":8,"endColumn":26}'>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":8,"startColumn":21,"endRow":8,"endColumn":22}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":8,"startColumn":21,"endRow":8,"endColumn":22}'>&quot;</span>
+<span class='StringLiteralExpr' data-title='&quot;♢&quot;' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":21,"endRow":8,"endColumn":26}'>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":8,"startColumn":21,"endRow":8,"endColumn":22}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":8,"startColumn":21,"endRow":8,"endColumn":22}'>&quot;</span>
 </span>
 <span class='StringLiteralSegments' data-title='♢' data-content='StringLiteralSegmentsSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":22,"endRow":8,"endColumn":25}'>
 <span class='StringSegment' data-title='♢' data-content='StringSegmentSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":22,"endRow":8,"endColumn":25}'>
-<span class='Token' data-title='♢' data-content='stringSegment("♢")' data-type='Token' data-range='{"startRow":8,"startColumn":22,"endRow":8,"endColumn":25}'>
-<span class='token stringSegment' data-title='♢' data-content='stringSegment("♢")' data-type='Token' data-range='{"startRow":8,"startColumn":22,"endRow":8,"endColumn":25}'>♢</span>
+<span class='Token' data-title='♢' data-content='stringSegment(&quot;♢&quot;)' data-type='Token' data-range='{"startRow":8,"startColumn":22,"endRow":8,"endColumn":25}'>
+<span class='token stringSegment' data-title='♢' data-content='stringSegment(&quot;♢&quot;)' data-type='Token' data-range='{"startRow":8,"startColumn":22,"endRow":8,"endColumn":25}'>♢</span>
 </span>
 </span>
 </span>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":8,"startColumn":25,"endRow":8,"endColumn":26}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":8,"startColumn":25,"endRow":8,"endColumn":26}'>&quot;</span>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":8,"startColumn":25,"endRow":8,"endColumn":26}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":8,"startColumn":25,"endRow":8,"endColumn":26}'>&quot;</span>
 </span>
 </span>
 </span>
@@ -164,34 +164,34 @@
 </span>
 </span>
 </span>
-<span class='MemberDeclListItem' data-title='case clubs = "♣"' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":23}'>
-<span class='EnumCaseDecl' data-title='case clubs = "♣"' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":23}'>
+<span class='MemberDeclListItem' data-title='case clubs = &quot;♣&quot;' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":23}'>
+<span class='EnumCaseDecl' data-title='case clubs = &quot;♣&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":23}'>
 <span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":9}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":9}'>case</span>&nbsp;
 </span>
-<span class='EnumCaseElementList' data-title='clubs = "♣"' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":10,"endRow":9,"endColumn":23}'>
-<span class='EnumCaseElement' data-title='clubs = "♣"' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":10,"endRow":9,"endColumn":23}'>
-<span class='Token' data-title='clubs' data-content='identifier("clubs")' data-type='Token' data-range='{"startRow":9,"startColumn":10,"endRow":9,"endColumn":15}'>
-<span class='token identifier' data-title='clubs' data-content='identifier("clubs")' data-type='Token' data-range='{"startRow":9,"startColumn":10,"endRow":9,"endColumn":15}'>clubs</span>&nbsp;
+<span class='EnumCaseElementList' data-title='clubs = &quot;♣&quot;' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":10,"endRow":9,"endColumn":23}'>
+<span class='EnumCaseElement' data-title='clubs = &quot;♣&quot;' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":10,"endRow":9,"endColumn":23}'>
+<span class='Token' data-title='clubs' data-content='identifier(&quot;clubs&quot;)' data-type='Token' data-range='{"startRow":9,"startColumn":10,"endRow":9,"endColumn":15}'>
+<span class='token identifier' data-title='clubs' data-content='identifier(&quot;clubs&quot;)' data-type='Token' data-range='{"startRow":9,"startColumn":10,"endRow":9,"endColumn":15}'>clubs</span>&nbsp;
 </span>
-<span class='InitializerClause' data-title='= "♣"' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":16,"endRow":9,"endColumn":23}'>
+<span class='InitializerClause' data-title='= &quot;♣&quot;' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":16,"endRow":9,"endColumn":23}'>
 <span class='Token' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":9,"startColumn":16,"endRow":9,"endColumn":17}'>
 <span class='token equal' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":9,"startColumn":16,"endRow":9,"endColumn":17}'>=</span>&nbsp;
 </span>
-<span class='StringLiteralExpr' data-title='"♣"' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":18,"endRow":9,"endColumn":23}'>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":9,"startColumn":18,"endRow":9,"endColumn":19}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":9,"startColumn":18,"endRow":9,"endColumn":19}'>&quot;</span>
+<span class='StringLiteralExpr' data-title='&quot;♣&quot;' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":18,"endRow":9,"endColumn":23}'>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":9,"startColumn":18,"endRow":9,"endColumn":19}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":9,"startColumn":18,"endRow":9,"endColumn":19}'>&quot;</span>
 </span>
 <span class='StringLiteralSegments' data-title='♣' data-content='StringLiteralSegmentsSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":19,"endRow":9,"endColumn":22}'>
 <span class='StringSegment' data-title='♣' data-content='StringSegmentSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":19,"endRow":9,"endColumn":22}'>
-<span class='Token' data-title='♣' data-content='stringSegment("♣")' data-type='Token' data-range='{"startRow":9,"startColumn":19,"endRow":9,"endColumn":22}'>
-<span class='token stringSegment' data-title='♣' data-content='stringSegment("♣")' data-type='Token' data-range='{"startRow":9,"startColumn":19,"endRow":9,"endColumn":22}'>♣</span>
+<span class='Token' data-title='♣' data-content='stringSegment(&quot;♣&quot;)' data-type='Token' data-range='{"startRow":9,"startColumn":19,"endRow":9,"endColumn":22}'>
+<span class='token stringSegment' data-title='♣' data-content='stringSegment(&quot;♣&quot;)' data-type='Token' data-range='{"startRow":9,"startColumn":19,"endRow":9,"endColumn":22}'>♣</span>
 </span>
 </span>
 </span>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":9,"startColumn":22,"endRow":9,"endColumn":23}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":9,"startColumn":22,"endRow":9,"endColumn":23}'>&quot;</span>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":9,"startColumn":22,"endRow":9,"endColumn":23}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":9,"startColumn":22,"endRow":9,"endColumn":23}'>&quot;</span>
 </span>
 </span>
 </span>
@@ -216,8 +216,8 @@
 <br>&nbsp;&nbsp;
 <span class='token keyword' data-title='enum' data-content='enumKeyword' data-type='Token' data-range='{"startRow":13,"startColumn":3,"endRow":13,"endColumn":7}'>enum</span>&nbsp;
 </span>
-<span class='Token' data-title='Rank' data-content='identifier("Rank")' data-type='Token' data-range='{"startRow":13,"startColumn":8,"endRow":13,"endColumn":12}'>
-<span class='token identifier' data-title='Rank' data-content='identifier("Rank")' data-type='Token' data-range='{"startRow":13,"startColumn":8,"endRow":13,"endColumn":12}'>Rank</span>
+<span class='Token' data-title='Rank' data-content='identifier(&quot;Rank&quot;)' data-type='Token' data-range='{"startRow":13,"startColumn":8,"endRow":13,"endColumn":12}'>
+<span class='token identifier' data-title='Rank' data-content='identifier(&quot;Rank&quot;)' data-type='Token' data-range='{"startRow":13,"startColumn":8,"endRow":13,"endColumn":12}'>Rank</span>
 </span>
 <span class='TypeInheritanceClause' data-title=': Int' data-content='TypeInheritanceClauseSyntax' data-type='Syntax' data-range='{"startRow":13,"startColumn":12,"endRow":13,"endColumn":17}'>
 <span class='Token' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":13,"startColumn":12,"endRow":13,"endColumn":13}'>
@@ -226,8 +226,8 @@
 <span class='InheritedTypeList' data-title='Int' data-content='InheritedTypeListSyntax' data-type='Syntax' data-range='{"startRow":13,"startColumn":14,"endRow":13,"endColumn":17}'>
 <span class='InheritedType' data-title='Int' data-content='InheritedTypeSyntax' data-type='Syntax' data-range='{"startRow":13,"startColumn":14,"endRow":13,"endColumn":17}'>
 <span class='SimpleTypeIdentifier' data-title='Int' data-content='SimpleTypeIdentifierSyntax' data-type='Syntax' data-range='{"startRow":13,"startColumn":14,"endRow":13,"endColumn":17}'>
-<span class='Token' data-title='Int' data-content='identifier("Int")' data-type='Token' data-range='{"startRow":13,"startColumn":14,"endRow":13,"endColumn":17}'>
-<span class='token identifier' data-title='Int' data-content='identifier("Int")' data-type='Token' data-range='{"startRow":13,"startColumn":14,"endRow":13,"endColumn":17}'>Int</span>&nbsp;
+<span class='Token' data-title='Int' data-content='identifier(&quot;Int&quot;)' data-type='Token' data-range='{"startRow":13,"startColumn":14,"endRow":13,"endColumn":17}'>
+<span class='token identifier' data-title='Int' data-content='identifier(&quot;Int&quot;)' data-type='Token' data-range='{"startRow":13,"startColumn":14,"endRow":13,"endColumn":17}'>Int</span>&nbsp;
 </span>
 </span>
 </span>
@@ -246,16 +246,16 @@
 </span>
 <span class='EnumCaseElementList' data-title='two = 2' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":10,"endRow":14,"endColumn":17}'>
 <span class='EnumCaseElement' data-title='two = 2' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":10,"endRow":14,"endColumn":17}'>
-<span class='Token' data-title='two' data-content='identifier("two")' data-type='Token' data-range='{"startRow":14,"startColumn":10,"endRow":14,"endColumn":13}'>
-<span class='token identifier' data-title='two' data-content='identifier("two")' data-type='Token' data-range='{"startRow":14,"startColumn":10,"endRow":14,"endColumn":13}'>two</span>&nbsp;
+<span class='Token' data-title='two' data-content='identifier(&quot;two&quot;)' data-type='Token' data-range='{"startRow":14,"startColumn":10,"endRow":14,"endColumn":13}'>
+<span class='token identifier' data-title='two' data-content='identifier(&quot;two&quot;)' data-type='Token' data-range='{"startRow":14,"startColumn":10,"endRow":14,"endColumn":13}'>two</span>&nbsp;
 </span>
 <span class='InitializerClause' data-title='= 2' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":14,"endRow":14,"endColumn":17}'>
 <span class='Token' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":14,"startColumn":14,"endRow":14,"endColumn":15}'>
 <span class='token equal' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":14,"startColumn":14,"endRow":14,"endColumn":15}'>=</span>&nbsp;
 </span>
 <span class='IntegerLiteralExpr' data-title='2' data-content='IntegerLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":16,"endRow":14,"endColumn":17}'>
-<span class='Token' data-title='2' data-content='integerLiteral("2")' data-type='Token' data-range='{"startRow":14,"startColumn":16,"endRow":14,"endColumn":17}'>
-<span class='token integerLiteral' data-title='2' data-content='integerLiteral("2")' data-type='Token' data-range='{"startRow":14,"startColumn":16,"endRow":14,"endColumn":17}'>2</span>
+<span class='Token' data-title='2' data-content='integerLiteral(&quot;2&quot;)' data-type='Token' data-range='{"startRow":14,"startColumn":16,"endRow":14,"endColumn":17}'>
+<span class='token integerLiteral' data-title='2' data-content='integerLiteral(&quot;2&quot;)' data-type='Token' data-range='{"startRow":14,"startColumn":16,"endRow":14,"endColumn":17}'>2</span>
 </span>
 </span>
 </span>
@@ -271,64 +271,64 @@
 </span>
 <span class='EnumCaseElementList' data-title='three, four, five, six, seven, eight, nine, ten' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":10,"endRow":15,"endColumn":57}'>
 <span class='EnumCaseElement' data-title='three,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":10,"endRow":15,"endColumn":16}'>
-<span class='Token' data-title='three' data-content='identifier("three")' data-type='Token' data-range='{"startRow":15,"startColumn":10,"endRow":15,"endColumn":15}'>
-<span class='token identifier' data-title='three' data-content='identifier("three")' data-type='Token' data-range='{"startRow":15,"startColumn":10,"endRow":15,"endColumn":15}'>three</span>
+<span class='Token' data-title='three' data-content='identifier(&quot;three&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":10,"endRow":15,"endColumn":15}'>
+<span class='token identifier' data-title='three' data-content='identifier(&quot;three&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":10,"endRow":15,"endColumn":15}'>three</span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":15,"endRow":15,"endColumn":16}'>
 <span class='token comma' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":15,"endRow":15,"endColumn":16}'>,</span>&nbsp;
 </span>
 </span>
 <span class='EnumCaseElement' data-title='four,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":17,"endRow":15,"endColumn":22}'>
-<span class='Token' data-title='four' data-content='identifier("four")' data-type='Token' data-range='{"startRow":15,"startColumn":17,"endRow":15,"endColumn":21}'>
-<span class='token identifier' data-title='four' data-content='identifier("four")' data-type='Token' data-range='{"startRow":15,"startColumn":17,"endRow":15,"endColumn":21}'>four</span>
+<span class='Token' data-title='four' data-content='identifier(&quot;four&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":17,"endRow":15,"endColumn":21}'>
+<span class='token identifier' data-title='four' data-content='identifier(&quot;four&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":17,"endRow":15,"endColumn":21}'>four</span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":21,"endRow":15,"endColumn":22}'>
 <span class='token comma' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":21,"endRow":15,"endColumn":22}'>,</span>&nbsp;
 </span>
 </span>
 <span class='EnumCaseElement' data-title='five,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":23,"endRow":15,"endColumn":28}'>
-<span class='Token' data-title='five' data-content='identifier("five")' data-type='Token' data-range='{"startRow":15,"startColumn":23,"endRow":15,"endColumn":27}'>
-<span class='token identifier' data-title='five' data-content='identifier("five")' data-type='Token' data-range='{"startRow":15,"startColumn":23,"endRow":15,"endColumn":27}'>five</span>
+<span class='Token' data-title='five' data-content='identifier(&quot;five&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":23,"endRow":15,"endColumn":27}'>
+<span class='token identifier' data-title='five' data-content='identifier(&quot;five&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":23,"endRow":15,"endColumn":27}'>five</span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":27,"endRow":15,"endColumn":28}'>
 <span class='token comma' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":27,"endRow":15,"endColumn":28}'>,</span>&nbsp;
 </span>
 </span>
 <span class='EnumCaseElement' data-title='six,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":29,"endRow":15,"endColumn":33}'>
-<span class='Token' data-title='six' data-content='identifier("six")' data-type='Token' data-range='{"startRow":15,"startColumn":29,"endRow":15,"endColumn":32}'>
-<span class='token identifier' data-title='six' data-content='identifier("six")' data-type='Token' data-range='{"startRow":15,"startColumn":29,"endRow":15,"endColumn":32}'>six</span>
+<span class='Token' data-title='six' data-content='identifier(&quot;six&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":29,"endRow":15,"endColumn":32}'>
+<span class='token identifier' data-title='six' data-content='identifier(&quot;six&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":29,"endRow":15,"endColumn":32}'>six</span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":32,"endRow":15,"endColumn":33}'>
 <span class='token comma' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":32,"endRow":15,"endColumn":33}'>,</span>&nbsp;
 </span>
 </span>
 <span class='EnumCaseElement' data-title='seven,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":34,"endRow":15,"endColumn":40}'>
-<span class='Token' data-title='seven' data-content='identifier("seven")' data-type='Token' data-range='{"startRow":15,"startColumn":34,"endRow":15,"endColumn":39}'>
-<span class='token identifier' data-title='seven' data-content='identifier("seven")' data-type='Token' data-range='{"startRow":15,"startColumn":34,"endRow":15,"endColumn":39}'>seven</span>
+<span class='Token' data-title='seven' data-content='identifier(&quot;seven&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":34,"endRow":15,"endColumn":39}'>
+<span class='token identifier' data-title='seven' data-content='identifier(&quot;seven&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":34,"endRow":15,"endColumn":39}'>seven</span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":39,"endRow":15,"endColumn":40}'>
 <span class='token comma' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":39,"endRow":15,"endColumn":40}'>,</span>&nbsp;
 </span>
 </span>
 <span class='EnumCaseElement' data-title='eight,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":41,"endRow":15,"endColumn":47}'>
-<span class='Token' data-title='eight' data-content='identifier("eight")' data-type='Token' data-range='{"startRow":15,"startColumn":41,"endRow":15,"endColumn":46}'>
-<span class='token identifier' data-title='eight' data-content='identifier("eight")' data-type='Token' data-range='{"startRow":15,"startColumn":41,"endRow":15,"endColumn":46}'>eight</span>
+<span class='Token' data-title='eight' data-content='identifier(&quot;eight&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":41,"endRow":15,"endColumn":46}'>
+<span class='token identifier' data-title='eight' data-content='identifier(&quot;eight&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":41,"endRow":15,"endColumn":46}'>eight</span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":46,"endRow":15,"endColumn":47}'>
 <span class='token comma' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":46,"endRow":15,"endColumn":47}'>,</span>&nbsp;
 </span>
 </span>
 <span class='EnumCaseElement' data-title='nine,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":48,"endRow":15,"endColumn":53}'>
-<span class='Token' data-title='nine' data-content='identifier("nine")' data-type='Token' data-range='{"startRow":15,"startColumn":48,"endRow":15,"endColumn":52}'>
-<span class='token identifier' data-title='nine' data-content='identifier("nine")' data-type='Token' data-range='{"startRow":15,"startColumn":48,"endRow":15,"endColumn":52}'>nine</span>
+<span class='Token' data-title='nine' data-content='identifier(&quot;nine&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":48,"endRow":15,"endColumn":52}'>
+<span class='token identifier' data-title='nine' data-content='identifier(&quot;nine&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":48,"endRow":15,"endColumn":52}'>nine</span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":52,"endRow":15,"endColumn":53}'>
 <span class='token comma' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":15,"startColumn":52,"endRow":15,"endColumn":53}'>,</span>&nbsp;
 </span>
 </span>
 <span class='EnumCaseElement' data-title='ten' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":54,"endRow":15,"endColumn":57}'>
-<span class='Token' data-title='ten' data-content='identifier("ten")' data-type='Token' data-range='{"startRow":15,"startColumn":54,"endRow":15,"endColumn":57}'>
-<span class='token identifier' data-title='ten' data-content='identifier("ten")' data-type='Token' data-range='{"startRow":15,"startColumn":54,"endRow":15,"endColumn":57}'>ten</span>
+<span class='Token' data-title='ten' data-content='identifier(&quot;ten&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":54,"endRow":15,"endColumn":57}'>
+<span class='token identifier' data-title='ten' data-content='identifier(&quot;ten&quot;)' data-type='Token' data-range='{"startRow":15,"startColumn":54,"endRow":15,"endColumn":57}'>ten</span>
 </span>
 </span>
 </span>
@@ -342,32 +342,32 @@
 </span>
 <span class='EnumCaseElementList' data-title='jack, queen, king, ace' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":10,"endRow":16,"endColumn":32}'>
 <span class='EnumCaseElement' data-title='jack,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":10,"endRow":16,"endColumn":15}'>
-<span class='Token' data-title='jack' data-content='identifier("jack")' data-type='Token' data-range='{"startRow":16,"startColumn":10,"endRow":16,"endColumn":14}'>
-<span class='token identifier' data-title='jack' data-content='identifier("jack")' data-type='Token' data-range='{"startRow":16,"startColumn":10,"endRow":16,"endColumn":14}'>jack</span>
+<span class='Token' data-title='jack' data-content='identifier(&quot;jack&quot;)' data-type='Token' data-range='{"startRow":16,"startColumn":10,"endRow":16,"endColumn":14}'>
+<span class='token identifier' data-title='jack' data-content='identifier(&quot;jack&quot;)' data-type='Token' data-range='{"startRow":16,"startColumn":10,"endRow":16,"endColumn":14}'>jack</span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":16,"startColumn":14,"endRow":16,"endColumn":15}'>
 <span class='token comma' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":16,"startColumn":14,"endRow":16,"endColumn":15}'>,</span>&nbsp;
 </span>
 </span>
 <span class='EnumCaseElement' data-title='queen,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":16,"endRow":16,"endColumn":22}'>
-<span class='Token' data-title='queen' data-content='identifier("queen")' data-type='Token' data-range='{"startRow":16,"startColumn":16,"endRow":16,"endColumn":21}'>
-<span class='token identifier' data-title='queen' data-content='identifier("queen")' data-type='Token' data-range='{"startRow":16,"startColumn":16,"endRow":16,"endColumn":21}'>queen</span>
+<span class='Token' data-title='queen' data-content='identifier(&quot;queen&quot;)' data-type='Token' data-range='{"startRow":16,"startColumn":16,"endRow":16,"endColumn":21}'>
+<span class='token identifier' data-title='queen' data-content='identifier(&quot;queen&quot;)' data-type='Token' data-range='{"startRow":16,"startColumn":16,"endRow":16,"endColumn":21}'>queen</span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":16,"startColumn":21,"endRow":16,"endColumn":22}'>
 <span class='token comma' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":16,"startColumn":21,"endRow":16,"endColumn":22}'>,</span>&nbsp;
 </span>
 </span>
 <span class='EnumCaseElement' data-title='king,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":23,"endRow":16,"endColumn":28}'>
-<span class='Token' data-title='king' data-content='identifier("king")' data-type='Token' data-range='{"startRow":16,"startColumn":23,"endRow":16,"endColumn":27}'>
-<span class='token identifier' data-title='king' data-content='identifier("king")' data-type='Token' data-range='{"startRow":16,"startColumn":23,"endRow":16,"endColumn":27}'>king</span>
+<span class='Token' data-title='king' data-content='identifier(&quot;king&quot;)' data-type='Token' data-range='{"startRow":16,"startColumn":23,"endRow":16,"endColumn":27}'>
+<span class='token identifier' data-title='king' data-content='identifier(&quot;king&quot;)' data-type='Token' data-range='{"startRow":16,"startColumn":23,"endRow":16,"endColumn":27}'>king</span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":16,"startColumn":27,"endRow":16,"endColumn":28}'>
 <span class='token comma' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":16,"startColumn":27,"endRow":16,"endColumn":28}'>,</span>&nbsp;
 </span>
 </span>
 <span class='EnumCaseElement' data-title='ace' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":29,"endRow":16,"endColumn":32}'>
-<span class='Token' data-title='ace' data-content='identifier("ace")' data-type='Token' data-range='{"startRow":16,"startColumn":29,"endRow":16,"endColumn":32}'>
-<span class='token identifier' data-title='ace' data-content='identifier("ace")' data-type='Token' data-range='{"startRow":16,"startColumn":29,"endRow":16,"endColumn":32}'>ace</span>
+<span class='Token' data-title='ace' data-content='identifier(&quot;ace&quot;)' data-type='Token' data-range='{"startRow":16,"startColumn":29,"endRow":16,"endColumn":32}'>
+<span class='token identifier' data-title='ace' data-content='identifier(&quot;ace&quot;)' data-type='Token' data-range='{"startRow":16,"startColumn":29,"endRow":16,"endColumn":32}'>ace</span>
 </span>
 </span>
 </span>
@@ -380,8 +380,8 @@
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <span class='token keyword' data-title='struct' data-content='structKeyword' data-type='Token' data-range='{"startRow":18,"startColumn":5,"endRow":18,"endColumn":11}'>struct</span>&nbsp;
 </span>
-<span class='Token' data-title='Values' data-content='identifier("Values")' data-type='Token' data-range='{"startRow":18,"startColumn":12,"endRow":18,"endColumn":18}'>
-<span class='token identifier' data-title='Values' data-content='identifier("Values")' data-type='Token' data-range='{"startRow":18,"startColumn":12,"endRow":18,"endColumn":18}'>Values</span>&nbsp;
+<span class='Token' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":18,"startColumn":12,"endRow":18,"endColumn":18}'>
+<span class='token identifier' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":18,"startColumn":12,"endRow":18,"endColumn":18}'>Values</span>&nbsp;
 </span>
 <span class='MemberDeclBlock' data-title='{↲      let first: Int, second: Int?↲    }' data-content='MemberDeclBlockSyntax' data-type='Syntax' data-range='{"startRow":18,"startColumn":19,"endRow":20,"endColumn":6}'>
 <span class='Token' data-title='{' data-content='leftBrace' data-type='Token' data-range='{"startRow":18,"startColumn":19,"endRow":18,"endColumn":20}'>
@@ -397,8 +397,8 @@
 <span class='PatternBindingList' data-title='first: Int, second: Int?' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":11,"endRow":19,"endColumn":35}'>
 <span class='PatternBinding' data-title='first: Int,' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":11,"endRow":19,"endColumn":22}'>
 <span class='IdentifierPattern' data-title='first' data-content='IdentifierPatternSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":11,"endRow":19,"endColumn":16}'>
-<span class='Token' data-title='first' data-content='identifier("first")' data-type='Token' data-range='{"startRow":19,"startColumn":11,"endRow":19,"endColumn":16}'>
-<span class='token identifier' data-title='first' data-content='identifier("first")' data-type='Token' data-range='{"startRow":19,"startColumn":11,"endRow":19,"endColumn":16}'>first</span>
+<span class='Token' data-title='first' data-content='identifier(&quot;first&quot;)' data-type='Token' data-range='{"startRow":19,"startColumn":11,"endRow":19,"endColumn":16}'>
+<span class='token identifier' data-title='first' data-content='identifier(&quot;first&quot;)' data-type='Token' data-range='{"startRow":19,"startColumn":11,"endRow":19,"endColumn":16}'>first</span>
 </span>
 </span>
 <span class='TypeAnnotation' data-title=': Int' data-content='TypeAnnotationSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":16,"endRow":19,"endColumn":21}'>
@@ -406,8 +406,8 @@
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":19,"startColumn":16,"endRow":19,"endColumn":17}'>:</span>&nbsp;
 </span>
 <span class='SimpleTypeIdentifier' data-title='Int' data-content='SimpleTypeIdentifierSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":18,"endRow":19,"endColumn":21}'>
-<span class='Token' data-title='Int' data-content='identifier("Int")' data-type='Token' data-range='{"startRow":19,"startColumn":18,"endRow":19,"endColumn":21}'>
-<span class='token identifier' data-title='Int' data-content='identifier("Int")' data-type='Token' data-range='{"startRow":19,"startColumn":18,"endRow":19,"endColumn":21}'>Int</span>
+<span class='Token' data-title='Int' data-content='identifier(&quot;Int&quot;)' data-type='Token' data-range='{"startRow":19,"startColumn":18,"endRow":19,"endColumn":21}'>
+<span class='token identifier' data-title='Int' data-content='identifier(&quot;Int&quot;)' data-type='Token' data-range='{"startRow":19,"startColumn":18,"endRow":19,"endColumn":21}'>Int</span>
 </span>
 </span>
 </span>
@@ -417,8 +417,8 @@
 </span>
 <span class='PatternBinding' data-title='second: Int?' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":23,"endRow":19,"endColumn":35}'>
 <span class='IdentifierPattern' data-title='second' data-content='IdentifierPatternSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":23,"endRow":19,"endColumn":29}'>
-<span class='Token' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":19,"startColumn":23,"endRow":19,"endColumn":29}'>
-<span class='token identifier' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":19,"startColumn":23,"endRow":19,"endColumn":29}'>second</span>
+<span class='Token' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":19,"startColumn":23,"endRow":19,"endColumn":29}'>
+<span class='token identifier' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":19,"startColumn":23,"endRow":19,"endColumn":29}'>second</span>
 </span>
 </span>
 <span class='TypeAnnotation' data-title=': Int?' data-content='TypeAnnotationSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":29,"endRow":19,"endColumn":35}'>
@@ -427,8 +427,8 @@
 </span>
 <span class='OptionalType' data-title='Int?' data-content='OptionalTypeSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":31,"endRow":19,"endColumn":35}'>
 <span class='SimpleTypeIdentifier' data-title='Int' data-content='SimpleTypeIdentifierSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":31,"endRow":19,"endColumn":34}'>
-<span class='Token' data-title='Int' data-content='identifier("Int")' data-type='Token' data-range='{"startRow":19,"startColumn":31,"endRow":19,"endColumn":34}'>
-<span class='token identifier' data-title='Int' data-content='identifier("Int")' data-type='Token' data-range='{"startRow":19,"startColumn":31,"endRow":19,"endColumn":34}'>Int</span>
+<span class='Token' data-title='Int' data-content='identifier(&quot;Int&quot;)' data-type='Token' data-range='{"startRow":19,"startColumn":31,"endRow":19,"endColumn":34}'>
+<span class='token identifier' data-title='Int' data-content='identifier(&quot;Int&quot;)' data-type='Token' data-range='{"startRow":19,"startColumn":31,"endRow":19,"endColumn":34}'>Int</span>
 </span>
 </span>
 <span class='Token' data-title='?' data-content='postfixQuestionMark' data-type='Token' data-range='{"startRow":19,"startColumn":34,"endRow":19,"endColumn":35}'>
@@ -458,8 +458,8 @@
 <span class='PatternBindingList' data-title='values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":22,"startColumn":9,"endRow":31,"endColumn":6}'>
 <span class='PatternBinding' data-title='values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":22,"startColumn":9,"endRow":31,"endColumn":6}'>
 <span class='IdentifierPattern' data-title='values' data-content='IdentifierPatternSyntax' data-type='Syntax' data-range='{"startRow":22,"startColumn":9,"endRow":22,"endColumn":15}'>
-<span class='Token' data-title='values' data-content='identifier("values")' data-type='Token' data-range='{"startRow":22,"startColumn":9,"endRow":22,"endColumn":15}'>
-<span class='token identifier' data-title='values' data-content='identifier("values")' data-type='Token' data-range='{"startRow":22,"startColumn":9,"endRow":22,"endColumn":15}'>values</span>
+<span class='Token' data-title='values' data-content='identifier(&quot;values&quot;)' data-type='Token' data-range='{"startRow":22,"startColumn":9,"endRow":22,"endColumn":15}'>
+<span class='token identifier' data-title='values' data-content='identifier(&quot;values&quot;)' data-type='Token' data-range='{"startRow":22,"startColumn":9,"endRow":22,"endColumn":15}'>values</span>
 </span>
 </span>
 <span class='TypeAnnotation' data-title=': Values' data-content='TypeAnnotationSyntax' data-type='Syntax' data-range='{"startRow":22,"startColumn":15,"endRow":22,"endColumn":23}'>
@@ -467,8 +467,8 @@
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":22,"startColumn":15,"endRow":22,"endColumn":16}'>:</span>&nbsp;
 </span>
 <span class='SimpleTypeIdentifier' data-title='Values' data-content='SimpleTypeIdentifierSyntax' data-type='Syntax' data-range='{"startRow":22,"startColumn":17,"endRow":22,"endColumn":23}'>
-<span class='Token' data-title='Values' data-content='identifier("Values")' data-type='Token' data-range='{"startRow":22,"startColumn":17,"endRow":22,"endColumn":23}'>
-<span class='token identifier' data-title='Values' data-content='identifier("Values")' data-type='Token' data-range='{"startRow":22,"startColumn":17,"endRow":22,"endColumn":23}'>Values</span>&nbsp;
+<span class='Token' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":22,"startColumn":17,"endRow":22,"endColumn":23}'>
+<span class='token identifier' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":22,"startColumn":17,"endRow":22,"endColumn":23}'>Values</span>&nbsp;
 </span>
 </span>
 </span>
@@ -505,8 +505,8 @@
 <span class='Token' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":24,"startColumn":12,"endRow":24,"endColumn":13}'>
 <span class='token prefixPeriod' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":24,"startColumn":12,"endRow":24,"endColumn":13}'>.</span>
 </span>
-<span class='Token' data-title='ace' data-content='identifier("ace")' data-type='Token' data-range='{"startRow":24,"startColumn":13,"endRow":24,"endColumn":16}'>
-<span class='token identifier' data-title='ace' data-content='identifier("ace")' data-type='Token' data-range='{"startRow":24,"startColumn":13,"endRow":24,"endColumn":16}'>ace</span>
+<span class='Token' data-title='ace' data-content='identifier(&quot;ace&quot;)' data-type='Token' data-range='{"startRow":24,"startColumn":13,"endRow":24,"endColumn":16}'>
+<span class='token identifier' data-title='ace' data-content='identifier(&quot;ace&quot;)' data-type='Token' data-range='{"startRow":24,"startColumn":13,"endRow":24,"endColumn":16}'>ace</span>
 </span>
 </span>
 </span>
@@ -525,8 +525,8 @@
 </span>
 <span class='FunctionCallExpr' data-title='Values(first: 1, second: 11)' data-content='FunctionCallExprSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":16,"endRow":25,"endColumn":44}'>
 <span class='IdentifierExpr' data-title='Values' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":16,"endRow":25,"endColumn":22}'>
-<span class='Token' data-title='Values' data-content='identifier("Values")' data-type='Token' data-range='{"startRow":25,"startColumn":16,"endRow":25,"endColumn":22}'>
-<span class='token identifier' data-title='Values' data-content='identifier("Values")' data-type='Token' data-range='{"startRow":25,"startColumn":16,"endRow":25,"endColumn":22}'>Values</span>
+<span class='Token' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":25,"startColumn":16,"endRow":25,"endColumn":22}'>
+<span class='token identifier' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":25,"startColumn":16,"endRow":25,"endColumn":22}'>Values</span>
 </span>
 </span>
 <span class='Token' data-title='(' data-content='leftParen' data-type='Token' data-range='{"startRow":25,"startColumn":22,"endRow":25,"endColumn":23}'>
@@ -534,15 +534,15 @@
 </span>
 <span class='TupleExprElementList' data-title='first: 1, second: 11' data-content='TupleExprElementListSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":23,"endRow":25,"endColumn":43}'>
 <span class='TupleExprElement' data-title='first: 1,' data-content='TupleExprElementSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":23,"endRow":25,"endColumn":32}'>
-<span class='Token' data-title='first' data-content='identifier("first")' data-type='Token' data-range='{"startRow":25,"startColumn":23,"endRow":25,"endColumn":28}'>
-<span class='token identifier' data-title='first' data-content='identifier("first")' data-type='Token' data-range='{"startRow":25,"startColumn":23,"endRow":25,"endColumn":28}'>first</span>
+<span class='Token' data-title='first' data-content='identifier(&quot;first&quot;)' data-type='Token' data-range='{"startRow":25,"startColumn":23,"endRow":25,"endColumn":28}'>
+<span class='token identifier' data-title='first' data-content='identifier(&quot;first&quot;)' data-type='Token' data-range='{"startRow":25,"startColumn":23,"endRow":25,"endColumn":28}'>first</span>
 </span>
 <span class='Token' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":25,"startColumn":28,"endRow":25,"endColumn":29}'>
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":25,"startColumn":28,"endRow":25,"endColumn":29}'>:</span>&nbsp;
 </span>
 <span class='IntegerLiteralExpr' data-title='1' data-content='IntegerLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":30,"endRow":25,"endColumn":31}'>
-<span class='Token' data-title='1' data-content='integerLiteral("1")' data-type='Token' data-range='{"startRow":25,"startColumn":30,"endRow":25,"endColumn":31}'>
-<span class='token integerLiteral' data-title='1' data-content='integerLiteral("1")' data-type='Token' data-range='{"startRow":25,"startColumn":30,"endRow":25,"endColumn":31}'>1</span>
+<span class='Token' data-title='1' data-content='integerLiteral(&quot;1&quot;)' data-type='Token' data-range='{"startRow":25,"startColumn":30,"endRow":25,"endColumn":31}'>
+<span class='token integerLiteral' data-title='1' data-content='integerLiteral(&quot;1&quot;)' data-type='Token' data-range='{"startRow":25,"startColumn":30,"endRow":25,"endColumn":31}'>1</span>
 </span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":25,"startColumn":31,"endRow":25,"endColumn":32}'>
@@ -550,15 +550,15 @@
 </span>
 </span>
 <span class='TupleExprElement' data-title='second: 11' data-content='TupleExprElementSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":33,"endRow":25,"endColumn":43}'>
-<span class='Token' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":25,"startColumn":33,"endRow":25,"endColumn":39}'>
-<span class='token identifier' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":25,"startColumn":33,"endRow":25,"endColumn":39}'>second</span>
+<span class='Token' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":25,"startColumn":33,"endRow":25,"endColumn":39}'>
+<span class='token identifier' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":25,"startColumn":33,"endRow":25,"endColumn":39}'>second</span>
 </span>
 <span class='Token' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":25,"startColumn":39,"endRow":25,"endColumn":40}'>
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":25,"startColumn":39,"endRow":25,"endColumn":40}'>:</span>&nbsp;
 </span>
 <span class='IntegerLiteralExpr' data-title='11' data-content='IntegerLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":41,"endRow":25,"endColumn":43}'>
-<span class='Token' data-title='11' data-content='integerLiteral("11")' data-type='Token' data-range='{"startRow":25,"startColumn":41,"endRow":25,"endColumn":43}'>
-<span class='token integerLiteral' data-title='11' data-content='integerLiteral("11")' data-type='Token' data-range='{"startRow":25,"startColumn":41,"endRow":25,"endColumn":43}'>11</span>
+<span class='Token' data-title='11' data-content='integerLiteral(&quot;11&quot;)' data-type='Token' data-range='{"startRow":25,"startColumn":41,"endRow":25,"endColumn":43}'>
+<span class='token integerLiteral' data-title='11' data-content='integerLiteral(&quot;11&quot;)' data-type='Token' data-range='{"startRow":25,"startColumn":41,"endRow":25,"endColumn":43}'>11</span>
 </span>
 </span>
 </span>
@@ -584,8 +584,8 @@
 <span class='Token' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":12,"endRow":26,"endColumn":13}'>
 <span class='token prefixPeriod' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":12,"endRow":26,"endColumn":13}'>.</span>
 </span>
-<span class='Token' data-title='jack' data-content='identifier("jack")' data-type='Token' data-range='{"startRow":26,"startColumn":13,"endRow":26,"endColumn":17}'>
-<span class='token identifier' data-title='jack' data-content='identifier("jack")' data-type='Token' data-range='{"startRow":26,"startColumn":13,"endRow":26,"endColumn":17}'>jack</span>
+<span class='Token' data-title='jack' data-content='identifier(&quot;jack&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":13,"endRow":26,"endColumn":17}'>
+<span class='token identifier' data-title='jack' data-content='identifier(&quot;jack&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":13,"endRow":26,"endColumn":17}'>jack</span>
 </span>
 </span>
 </span>
@@ -599,8 +599,8 @@
 <span class='Token' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":19,"endRow":26,"endColumn":20}'>
 <span class='token prefixPeriod' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":19,"endRow":26,"endColumn":20}'>.</span>
 </span>
-<span class='Token' data-title='queen' data-content='identifier("queen")' data-type='Token' data-range='{"startRow":26,"startColumn":20,"endRow":26,"endColumn":25}'>
-<span class='token identifier' data-title='queen' data-content='identifier("queen")' data-type='Token' data-range='{"startRow":26,"startColumn":20,"endRow":26,"endColumn":25}'>queen</span>
+<span class='Token' data-title='queen' data-content='identifier(&quot;queen&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":20,"endRow":26,"endColumn":25}'>
+<span class='token identifier' data-title='queen' data-content='identifier(&quot;queen&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":20,"endRow":26,"endColumn":25}'>queen</span>
 </span>
 </span>
 </span>
@@ -614,8 +614,8 @@
 <span class='Token' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":27,"endRow":26,"endColumn":28}'>
 <span class='token prefixPeriod' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":27,"endRow":26,"endColumn":28}'>.</span>
 </span>
-<span class='Token' data-title='king' data-content='identifier("king")' data-type='Token' data-range='{"startRow":26,"startColumn":28,"endRow":26,"endColumn":32}'>
-<span class='token identifier' data-title='king' data-content='identifier("king")' data-type='Token' data-range='{"startRow":26,"startColumn":28,"endRow":26,"endColumn":32}'>king</span>
+<span class='Token' data-title='king' data-content='identifier(&quot;king&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":28,"endRow":26,"endColumn":32}'>
+<span class='token identifier' data-title='king' data-content='identifier(&quot;king&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":28,"endRow":26,"endColumn":32}'>king</span>
 </span>
 </span>
 </span>
@@ -634,8 +634,8 @@
 </span>
 <span class='FunctionCallExpr' data-title='Values(first: 10, second: nil)' data-content='FunctionCallExprSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":16,"endRow":27,"endColumn":46}'>
 <span class='IdentifierExpr' data-title='Values' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":16,"endRow":27,"endColumn":22}'>
-<span class='Token' data-title='Values' data-content='identifier("Values")' data-type='Token' data-range='{"startRow":27,"startColumn":16,"endRow":27,"endColumn":22}'>
-<span class='token identifier' data-title='Values' data-content='identifier("Values")' data-type='Token' data-range='{"startRow":27,"startColumn":16,"endRow":27,"endColumn":22}'>Values</span>
+<span class='Token' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":27,"startColumn":16,"endRow":27,"endColumn":22}'>
+<span class='token identifier' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":27,"startColumn":16,"endRow":27,"endColumn":22}'>Values</span>
 </span>
 </span>
 <span class='Token' data-title='(' data-content='leftParen' data-type='Token' data-range='{"startRow":27,"startColumn":22,"endRow":27,"endColumn":23}'>
@@ -643,15 +643,15 @@
 </span>
 <span class='TupleExprElementList' data-title='first: 10, second: nil' data-content='TupleExprElementListSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":23,"endRow":27,"endColumn":45}'>
 <span class='TupleExprElement' data-title='first: 10,' data-content='TupleExprElementSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":23,"endRow":27,"endColumn":33}'>
-<span class='Token' data-title='first' data-content='identifier("first")' data-type='Token' data-range='{"startRow":27,"startColumn":23,"endRow":27,"endColumn":28}'>
-<span class='token identifier' data-title='first' data-content='identifier("first")' data-type='Token' data-range='{"startRow":27,"startColumn":23,"endRow":27,"endColumn":28}'>first</span>
+<span class='Token' data-title='first' data-content='identifier(&quot;first&quot;)' data-type='Token' data-range='{"startRow":27,"startColumn":23,"endRow":27,"endColumn":28}'>
+<span class='token identifier' data-title='first' data-content='identifier(&quot;first&quot;)' data-type='Token' data-range='{"startRow":27,"startColumn":23,"endRow":27,"endColumn":28}'>first</span>
 </span>
 <span class='Token' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":27,"startColumn":28,"endRow":27,"endColumn":29}'>
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":27,"startColumn":28,"endRow":27,"endColumn":29}'>:</span>&nbsp;
 </span>
 <span class='IntegerLiteralExpr' data-title='10' data-content='IntegerLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":30,"endRow":27,"endColumn":32}'>
-<span class='Token' data-title='10' data-content='integerLiteral("10")' data-type='Token' data-range='{"startRow":27,"startColumn":30,"endRow":27,"endColumn":32}'>
-<span class='token integerLiteral' data-title='10' data-content='integerLiteral("10")' data-type='Token' data-range='{"startRow":27,"startColumn":30,"endRow":27,"endColumn":32}'>10</span>
+<span class='Token' data-title='10' data-content='integerLiteral(&quot;10&quot;)' data-type='Token' data-range='{"startRow":27,"startColumn":30,"endRow":27,"endColumn":32}'>
+<span class='token integerLiteral' data-title='10' data-content='integerLiteral(&quot;10&quot;)' data-type='Token' data-range='{"startRow":27,"startColumn":30,"endRow":27,"endColumn":32}'>10</span>
 </span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":27,"startColumn":32,"endRow":27,"endColumn":33}'>
@@ -659,8 +659,8 @@
 </span>
 </span>
 <span class='TupleExprElement' data-title='second: nil' data-content='TupleExprElementSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":34,"endRow":27,"endColumn":45}'>
-<span class='Token' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":27,"startColumn":34,"endRow":27,"endColumn":40}'>
-<span class='token identifier' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":27,"startColumn":34,"endRow":27,"endColumn":40}'>second</span>
+<span class='Token' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":27,"startColumn":34,"endRow":27,"endColumn":40}'>
+<span class='token identifier' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":27,"startColumn":34,"endRow":27,"endColumn":40}'>second</span>
 </span>
 <span class='Token' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":27,"startColumn":40,"endRow":27,"endColumn":41}'>
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":27,"startColumn":40,"endRow":27,"endColumn":41}'>:</span>&nbsp;
@@ -699,8 +699,8 @@
 </span>
 <span class='FunctionCallExpr' data-title='Values(first: self.rawValue, second: nil)' data-content='FunctionCallExprSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":16,"endRow":29,"endColumn":57}'>
 <span class='IdentifierExpr' data-title='Values' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":16,"endRow":29,"endColumn":22}'>
-<span class='Token' data-title='Values' data-content='identifier("Values")' data-type='Token' data-range='{"startRow":29,"startColumn":16,"endRow":29,"endColumn":22}'>
-<span class='token identifier' data-title='Values' data-content='identifier("Values")' data-type='Token' data-range='{"startRow":29,"startColumn":16,"endRow":29,"endColumn":22}'>Values</span>
+<span class='Token' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":29,"startColumn":16,"endRow":29,"endColumn":22}'>
+<span class='token identifier' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":29,"startColumn":16,"endRow":29,"endColumn":22}'>Values</span>
 </span>
 </span>
 <span class='Token' data-title='(' data-content='leftParen' data-type='Token' data-range='{"startRow":29,"startColumn":22,"endRow":29,"endColumn":23}'>
@@ -708,8 +708,8 @@
 </span>
 <span class='TupleExprElementList' data-title='first: self.rawValue, second: nil' data-content='TupleExprElementListSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":23,"endRow":29,"endColumn":56}'>
 <span class='TupleExprElement' data-title='first: self.rawValue,' data-content='TupleExprElementSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":23,"endRow":29,"endColumn":44}'>
-<span class='Token' data-title='first' data-content='identifier("first")' data-type='Token' data-range='{"startRow":29,"startColumn":23,"endRow":29,"endColumn":28}'>
-<span class='token identifier' data-title='first' data-content='identifier("first")' data-type='Token' data-range='{"startRow":29,"startColumn":23,"endRow":29,"endColumn":28}'>first</span>
+<span class='Token' data-title='first' data-content='identifier(&quot;first&quot;)' data-type='Token' data-range='{"startRow":29,"startColumn":23,"endRow":29,"endColumn":28}'>
+<span class='token identifier' data-title='first' data-content='identifier(&quot;first&quot;)' data-type='Token' data-range='{"startRow":29,"startColumn":23,"endRow":29,"endColumn":28}'>first</span>
 </span>
 <span class='Token' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":29,"startColumn":28,"endRow":29,"endColumn":29}'>
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":29,"startColumn":28,"endRow":29,"endColumn":29}'>:</span>&nbsp;
@@ -723,8 +723,8 @@
 <span class='Token' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":29,"startColumn":34,"endRow":29,"endColumn":35}'>
 <span class='token period' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":29,"startColumn":34,"endRow":29,"endColumn":35}'>.</span>
 </span>
-<span class='Token' data-title='rawValue' data-content='identifier("rawValue")' data-type='Token' data-range='{"startRow":29,"startColumn":35,"endRow":29,"endColumn":43}'>
-<span class='token identifier' data-title='rawValue' data-content='identifier("rawValue")' data-type='Token' data-range='{"startRow":29,"startColumn":35,"endRow":29,"endColumn":43}'>rawValue</span>
+<span class='Token' data-title='rawValue' data-content='identifier(&quot;rawValue&quot;)' data-type='Token' data-range='{"startRow":29,"startColumn":35,"endRow":29,"endColumn":43}'>
+<span class='token identifier' data-title='rawValue' data-content='identifier(&quot;rawValue&quot;)' data-type='Token' data-range='{"startRow":29,"startColumn":35,"endRow":29,"endColumn":43}'>rawValue</span>
 </span>
 </span>
 <span class='Token' data-title=',' data-content='comma' data-type='Token' data-range='{"startRow":29,"startColumn":43,"endRow":29,"endColumn":44}'>
@@ -732,8 +732,8 @@
 </span>
 </span>
 <span class='TupleExprElement' data-title='second: nil' data-content='TupleExprElementSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":45,"endRow":29,"endColumn":56}'>
-<span class='Token' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":29,"startColumn":45,"endRow":29,"endColumn":51}'>
-<span class='token identifier' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":29,"startColumn":45,"endRow":29,"endColumn":51}'>second</span>
+<span class='Token' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":29,"startColumn":45,"endRow":29,"endColumn":51}'>
+<span class='token identifier' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":29,"startColumn":45,"endRow":29,"endColumn":51}'>second</span>
 </span>
 <span class='Token' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":29,"startColumn":51,"endRow":29,"endColumn":52}'>
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":29,"startColumn":51,"endRow":29,"endColumn":52}'>:</span>&nbsp;
@@ -790,8 +790,8 @@
 <span class='PatternBindingList' data-title='rank: Rank, suit: Suit' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":7,"endRow":35,"endColumn":29}'>
 <span class='PatternBinding' data-title='rank: Rank,' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":7,"endRow":35,"endColumn":18}'>
 <span class='IdentifierPattern' data-title='rank' data-content='IdentifierPatternSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":7,"endRow":35,"endColumn":11}'>
-<span class='Token' data-title='rank' data-content='identifier("rank")' data-type='Token' data-range='{"startRow":35,"startColumn":7,"endRow":35,"endColumn":11}'>
-<span class='token identifier' data-title='rank' data-content='identifier("rank")' data-type='Token' data-range='{"startRow":35,"startColumn":7,"endRow":35,"endColumn":11}'>rank</span>
+<span class='Token' data-title='rank' data-content='identifier(&quot;rank&quot;)' data-type='Token' data-range='{"startRow":35,"startColumn":7,"endRow":35,"endColumn":11}'>
+<span class='token identifier' data-title='rank' data-content='identifier(&quot;rank&quot;)' data-type='Token' data-range='{"startRow":35,"startColumn":7,"endRow":35,"endColumn":11}'>rank</span>
 </span>
 </span>
 <span class='TypeAnnotation' data-title=': Rank' data-content='TypeAnnotationSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":11,"endRow":35,"endColumn":17}'>
@@ -799,8 +799,8 @@
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":35,"startColumn":11,"endRow":35,"endColumn":12}'>:</span>&nbsp;
 </span>
 <span class='SimpleTypeIdentifier' data-title='Rank' data-content='SimpleTypeIdentifierSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":13,"endRow":35,"endColumn":17}'>
-<span class='Token' data-title='Rank' data-content='identifier("Rank")' data-type='Token' data-range='{"startRow":35,"startColumn":13,"endRow":35,"endColumn":17}'>
-<span class='token identifier' data-title='Rank' data-content='identifier("Rank")' data-type='Token' data-range='{"startRow":35,"startColumn":13,"endRow":35,"endColumn":17}'>Rank</span>
+<span class='Token' data-title='Rank' data-content='identifier(&quot;Rank&quot;)' data-type='Token' data-range='{"startRow":35,"startColumn":13,"endRow":35,"endColumn":17}'>
+<span class='token identifier' data-title='Rank' data-content='identifier(&quot;Rank&quot;)' data-type='Token' data-range='{"startRow":35,"startColumn":13,"endRow":35,"endColumn":17}'>Rank</span>
 </span>
 </span>
 </span>
@@ -810,8 +810,8 @@
 </span>
 <span class='PatternBinding' data-title='suit: Suit' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":19,"endRow":35,"endColumn":29}'>
 <span class='IdentifierPattern' data-title='suit' data-content='IdentifierPatternSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":19,"endRow":35,"endColumn":23}'>
-<span class='Token' data-title='suit' data-content='identifier("suit")' data-type='Token' data-range='{"startRow":35,"startColumn":19,"endRow":35,"endColumn":23}'>
-<span class='token identifier' data-title='suit' data-content='identifier("suit")' data-type='Token' data-range='{"startRow":35,"startColumn":19,"endRow":35,"endColumn":23}'>suit</span>
+<span class='Token' data-title='suit' data-content='identifier(&quot;suit&quot;)' data-type='Token' data-range='{"startRow":35,"startColumn":19,"endRow":35,"endColumn":23}'>
+<span class='token identifier' data-title='suit' data-content='identifier(&quot;suit&quot;)' data-type='Token' data-range='{"startRow":35,"startColumn":19,"endRow":35,"endColumn":23}'>suit</span>
 </span>
 </span>
 <span class='TypeAnnotation' data-title=': Suit' data-content='TypeAnnotationSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":23,"endRow":35,"endColumn":29}'>
@@ -819,8 +819,8 @@
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":35,"startColumn":23,"endRow":35,"endColumn":24}'>:</span>&nbsp;
 </span>
 <span class='SimpleTypeIdentifier' data-title='Suit' data-content='SimpleTypeIdentifierSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":25,"endRow":35,"endColumn":29}'>
-<span class='Token' data-title='Suit' data-content='identifier("Suit")' data-type='Token' data-range='{"startRow":35,"startColumn":25,"endRow":35,"endColumn":29}'>
-<span class='token identifier' data-title='Suit' data-content='identifier("Suit")' data-type='Token' data-range='{"startRow":35,"startColumn":25,"endRow":35,"endColumn":29}'>Suit</span>
+<span class='Token' data-title='Suit' data-content='identifier(&quot;Suit&quot;)' data-type='Token' data-range='{"startRow":35,"startColumn":25,"endRow":35,"endColumn":29}'>
+<span class='token identifier' data-title='Suit' data-content='identifier(&quot;Suit&quot;)' data-type='Token' data-range='{"startRow":35,"startColumn":25,"endRow":35,"endColumn":29}'>Suit</span>
 </span>
 </span>
 </span>
@@ -828,17 +828,17 @@
 </span>
 </span>
 </span>
-<span class='MemberDeclListItem' data-title='var description: String {↲    var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output↲  }' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":3,"endRow":43,"endColumn":4}'>
-<span class='VariableDecl' data-title='var description: String {↲    var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output↲  }' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":3,"endRow":43,"endColumn":4}'>
+<span class='MemberDeclListItem' data-title='var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":3,"endRow":43,"endColumn":4}'>
+<span class='VariableDecl' data-title='var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":3,"endRow":43,"endColumn":4}'>
 <span class='Token' data-title='var' data-content='varKeyword' data-type='Token' data-range='{"startRow":36,"startColumn":3,"endRow":36,"endColumn":6}'>
 <br>&nbsp;&nbsp;
 <span class='token keyword' data-title='var' data-content='varKeyword' data-type='Token' data-range='{"startRow":36,"startColumn":3,"endRow":36,"endColumn":6}'>var</span>&nbsp;
 </span>
-<span class='PatternBindingList' data-title='description: String {↲    var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output↲  }' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":7,"endRow":43,"endColumn":4}'>
-<span class='PatternBinding' data-title='description: String {↲    var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output↲  }' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":7,"endRow":43,"endColumn":4}'>
+<span class='PatternBindingList' data-title='description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":7,"endRow":43,"endColumn":4}'>
+<span class='PatternBinding' data-title='description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":7,"endRow":43,"endColumn":4}'>
 <span class='IdentifierPattern' data-title='description' data-content='IdentifierPatternSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":7,"endRow":36,"endColumn":18}'>
-<span class='Token' data-title='description' data-content='identifier("description")' data-type='Token' data-range='{"startRow":36,"startColumn":7,"endRow":36,"endColumn":18}'>
-<span class='token identifier' data-title='description' data-content='identifier("description")' data-type='Token' data-range='{"startRow":36,"startColumn":7,"endRow":36,"endColumn":18}'>description</span>
+<span class='Token' data-title='description' data-content='identifier(&quot;description&quot;)' data-type='Token' data-range='{"startRow":36,"startColumn":7,"endRow":36,"endColumn":18}'>
+<span class='token identifier' data-title='description' data-content='identifier(&quot;description&quot;)' data-type='Token' data-range='{"startRow":36,"startColumn":7,"endRow":36,"endColumn":18}'>description</span>
 </span>
 </span>
 <span class='TypeAnnotation' data-title=': String' data-content='TypeAnnotationSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":18,"endRow":36,"endColumn":26}'>
@@ -846,41 +846,41 @@
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":36,"startColumn":18,"endRow":36,"endColumn":19}'>:</span>&nbsp;
 </span>
 <span class='SimpleTypeIdentifier' data-title='String' data-content='SimpleTypeIdentifierSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":20,"endRow":36,"endColumn":26}'>
-<span class='Token' data-title='String' data-content='identifier("String")' data-type='Token' data-range='{"startRow":36,"startColumn":20,"endRow":36,"endColumn":26}'>
-<span class='token identifier' data-title='String' data-content='identifier("String")' data-type='Token' data-range='{"startRow":36,"startColumn":20,"endRow":36,"endColumn":26}'>String</span>&nbsp;
+<span class='Token' data-title='String' data-content='identifier(&quot;String&quot;)' data-type='Token' data-range='{"startRow":36,"startColumn":20,"endRow":36,"endColumn":26}'>
+<span class='token identifier' data-title='String' data-content='identifier(&quot;String&quot;)' data-type='Token' data-range='{"startRow":36,"startColumn":20,"endRow":36,"endColumn":26}'>String</span>&nbsp;
 </span>
 </span>
 </span>
-<span class='CodeBlock' data-title='{↲    var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output↲  }' data-content='CodeBlockSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":27,"endRow":43,"endColumn":4}'>
+<span class='CodeBlock' data-title='{↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }' data-content='CodeBlockSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":27,"endRow":43,"endColumn":4}'>
 <span class='Token' data-title='{' data-content='leftBrace' data-type='Token' data-range='{"startRow":36,"startColumn":27,"endRow":36,"endColumn":28}'>
 <span class='token leftBrace' data-title='{' data-content='leftBrace' data-type='Token' data-range='{"startRow":36,"startColumn":27,"endRow":36,"endColumn":28}'>{</span>
 </span>
-<span class='CodeBlockItemList' data-title='var output = "suit is \(suit.rawValue),"↲    output += " value is \(rank.values.first)"↲    if let second = rank.values.second {↲      output += " or \(second)"↲    }↲    return output' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":42,"endColumn":18}'>
-<span class='CodeBlockItem' data-title='var output = "suit is \(suit.rawValue),"' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":45}'>
-<span class='VariableDecl' data-title='var output = "suit is \(suit.rawValue),"' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":45}'>
+<span class='CodeBlockItemList' data-title='var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":42,"endColumn":18}'>
+<span class='CodeBlockItem' data-title='var output = &quot;suit is \(suit.rawValue),&quot;' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":45}'>
+<span class='VariableDecl' data-title='var output = &quot;suit is \(suit.rawValue),&quot;' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":45}'>
 <span class='Token' data-title='var' data-content='varKeyword' data-type='Token' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":8}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <span class='token keyword' data-title='var' data-content='varKeyword' data-type='Token' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":8}'>var</span>&nbsp;
 </span>
-<span class='PatternBindingList' data-title='output = "suit is \(suit.rawValue),"' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":9,"endRow":37,"endColumn":45}'>
-<span class='PatternBinding' data-title='output = "suit is \(suit.rawValue),"' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":9,"endRow":37,"endColumn":45}'>
+<span class='PatternBindingList' data-title='output = &quot;suit is \(suit.rawValue),&quot;' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":9,"endRow":37,"endColumn":45}'>
+<span class='PatternBinding' data-title='output = &quot;suit is \(suit.rawValue),&quot;' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":9,"endRow":37,"endColumn":45}'>
 <span class='IdentifierPattern' data-title='output' data-content='IdentifierPatternSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":9,"endRow":37,"endColumn":15}'>
-<span class='Token' data-title='output' data-content='identifier("output")' data-type='Token' data-range='{"startRow":37,"startColumn":9,"endRow":37,"endColumn":15}'>
-<span class='token identifier' data-title='output' data-content='identifier("output")' data-type='Token' data-range='{"startRow":37,"startColumn":9,"endRow":37,"endColumn":15}'>output</span>&nbsp;
+<span class='Token' data-title='output' data-content='identifier(&quot;output&quot;)' data-type='Token' data-range='{"startRow":37,"startColumn":9,"endRow":37,"endColumn":15}'>
+<span class='token identifier' data-title='output' data-content='identifier(&quot;output&quot;)' data-type='Token' data-range='{"startRow":37,"startColumn":9,"endRow":37,"endColumn":15}'>output</span>&nbsp;
 </span>
 </span>
-<span class='InitializerClause' data-title='= "suit is \(suit.rawValue),"' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":16,"endRow":37,"endColumn":45}'>
+<span class='InitializerClause' data-title='= &quot;suit is \(suit.rawValue),&quot;' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":16,"endRow":37,"endColumn":45}'>
 <span class='Token' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":37,"startColumn":16,"endRow":37,"endColumn":17}'>
 <span class='token equal' data-title='=' data-content='equal' data-type='Token' data-range='{"startRow":37,"startColumn":16,"endRow":37,"endColumn":17}'>=</span>&nbsp;
 </span>
-<span class='StringLiteralExpr' data-title='"suit is \(suit.rawValue),"' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":18,"endRow":37,"endColumn":45}'>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":37,"startColumn":18,"endRow":37,"endColumn":19}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":37,"startColumn":18,"endRow":37,"endColumn":19}'>&quot;</span>
+<span class='StringLiteralExpr' data-title='&quot;suit is \(suit.rawValue),&quot;' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":18,"endRow":37,"endColumn":45}'>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":37,"startColumn":18,"endRow":37,"endColumn":19}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":37,"startColumn":18,"endRow":37,"endColumn":19}'>&quot;</span>
 </span>
 <span class='StringLiteralSegments' data-title='suit is \(suit.rawValue),' data-content='StringLiteralSegmentsSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":19,"endRow":37,"endColumn":44}'>
 <span class='StringSegment' data-title='suit is ' data-content='StringSegmentSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":19,"endRow":37,"endColumn":27}'>
-<span class='Token' data-title='suit is ' data-content='stringSegment("suit is ")' data-type='Token' data-range='{"startRow":37,"startColumn":19,"endRow":37,"endColumn":27}'>
-<span class='token stringSegment' data-title='suit is ' data-content='stringSegment("suit is ")' data-type='Token' data-range='{"startRow":37,"startColumn":19,"endRow":37,"endColumn":27}'>suit is </span>
+<span class='Token' data-title='suit is ' data-content='stringSegment(&quot;suit is &quot;)' data-type='Token' data-range='{"startRow":37,"startColumn":19,"endRow":37,"endColumn":27}'>
+<span class='token stringSegment' data-title='suit is ' data-content='stringSegment(&quot;suit is &quot;)' data-type='Token' data-range='{"startRow":37,"startColumn":19,"endRow":37,"endColumn":27}'>suit is </span>
 </span>
 </span>
 <span class='ExpressionSegment' data-title='\(suit.rawValue)' data-content='ExpressionSegmentSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":27,"endRow":37,"endColumn":43}'>
@@ -894,15 +894,15 @@
 <span class='TupleExprElement' data-title='suit.rawValue' data-content='TupleExprElementSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":29,"endRow":37,"endColumn":42}'>
 <span class='MemberAccessExpr' data-title='suit.rawValue' data-content='MemberAccessExprSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":29,"endRow":37,"endColumn":42}'>
 <span class='IdentifierExpr' data-title='suit' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":29,"endRow":37,"endColumn":33}'>
-<span class='Token' data-title='suit' data-content='identifier("suit")' data-type='Token' data-range='{"startRow":37,"startColumn":29,"endRow":37,"endColumn":33}'>
-<span class='token identifier' data-title='suit' data-content='identifier("suit")' data-type='Token' data-range='{"startRow":37,"startColumn":29,"endRow":37,"endColumn":33}'>suit</span>
+<span class='Token' data-title='suit' data-content='identifier(&quot;suit&quot;)' data-type='Token' data-range='{"startRow":37,"startColumn":29,"endRow":37,"endColumn":33}'>
+<span class='token identifier' data-title='suit' data-content='identifier(&quot;suit&quot;)' data-type='Token' data-range='{"startRow":37,"startColumn":29,"endRow":37,"endColumn":33}'>suit</span>
 </span>
 </span>
 <span class='Token' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":37,"startColumn":33,"endRow":37,"endColumn":34}'>
 <span class='token period' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":37,"startColumn":33,"endRow":37,"endColumn":34}'>.</span>
 </span>
-<span class='Token' data-title='rawValue' data-content='identifier("rawValue")' data-type='Token' data-range='{"startRow":37,"startColumn":34,"endRow":37,"endColumn":42}'>
-<span class='token identifier' data-title='rawValue' data-content='identifier("rawValue")' data-type='Token' data-range='{"startRow":37,"startColumn":34,"endRow":37,"endColumn":42}'>rawValue</span>
+<span class='Token' data-title='rawValue' data-content='identifier(&quot;rawValue&quot;)' data-type='Token' data-range='{"startRow":37,"startColumn":34,"endRow":37,"endColumn":42}'>
+<span class='token identifier' data-title='rawValue' data-content='identifier(&quot;rawValue&quot;)' data-type='Token' data-range='{"startRow":37,"startColumn":34,"endRow":37,"endColumn":42}'>rawValue</span>
 </span>
 </span>
 </span>
@@ -912,13 +912,13 @@
 </span>
 </span>
 <span class='StringSegment' data-title=',' data-content='StringSegmentSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":43,"endRow":37,"endColumn":44}'>
-<span class='Token' data-title=',' data-content='stringSegment(",")' data-type='Token' data-range='{"startRow":37,"startColumn":43,"endRow":37,"endColumn":44}'>
-<span class='token stringSegment' data-title=',' data-content='stringSegment(",")' data-type='Token' data-range='{"startRow":37,"startColumn":43,"endRow":37,"endColumn":44}'>,</span>
+<span class='Token' data-title=',' data-content='stringSegment(&quot;,&quot;)' data-type='Token' data-range='{"startRow":37,"startColumn":43,"endRow":37,"endColumn":44}'>
+<span class='token stringSegment' data-title=',' data-content='stringSegment(&quot;,&quot;)' data-type='Token' data-range='{"startRow":37,"startColumn":43,"endRow":37,"endColumn":44}'>,</span>
 </span>
 </span>
 </span>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":37,"startColumn":44,"endRow":37,"endColumn":45}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":37,"startColumn":44,"endRow":37,"endColumn":45}'>&quot;</span>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":37,"startColumn":44,"endRow":37,"endColumn":45}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":37,"startColumn":44,"endRow":37,"endColumn":45}'>&quot;</span>
 </span>
 </span>
 </span>
@@ -926,27 +926,27 @@
 </span>
 </span>
 </span>
-<span class='CodeBlockItem' data-title='output += " value is \(rank.values.first)"' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":5,"endRow":38,"endColumn":47}'>
-<span class='InfixOperatorExpr' data-title='output += " value is \(rank.values.first)"' data-content='InfixOperatorExprSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":5,"endRow":38,"endColumn":47}'>
+<span class='CodeBlockItem' data-title='output += &quot; value is \(rank.values.first)&quot;' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":5,"endRow":38,"endColumn":47}'>
+<span class='InfixOperatorExpr' data-title='output += &quot; value is \(rank.values.first)&quot;' data-content='InfixOperatorExprSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":5,"endRow":38,"endColumn":47}'>
 <span class='IdentifierExpr' data-title='output' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":5,"endRow":38,"endColumn":11}'>
-<span class='Token' data-title='output' data-content='identifier("output")' data-type='Token' data-range='{"startRow":38,"startColumn":5,"endRow":38,"endColumn":11}'>
+<span class='Token' data-title='output' data-content='identifier(&quot;output&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":5,"endRow":38,"endColumn":11}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token identifier' data-title='output' data-content='identifier("output")' data-type='Token' data-range='{"startRow":38,"startColumn":5,"endRow":38,"endColumn":11}'>output</span>&nbsp;
+<span class='token identifier' data-title='output' data-content='identifier(&quot;output&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":5,"endRow":38,"endColumn":11}'>output</span>&nbsp;
 </span>
 </span>
 <span class='BinaryOperatorExpr' data-title='+=' data-content='BinaryOperatorExprSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":12,"endRow":38,"endColumn":14}'>
-<span class='Token' data-title='+=' data-content='spacedBinaryOperator("+=")' data-type='Token' data-range='{"startRow":38,"startColumn":12,"endRow":38,"endColumn":14}'>
-<span class='token spacedBinaryOperator' data-title='+=' data-content='spacedBinaryOperator("+=")' data-type='Token' data-range='{"startRow":38,"startColumn":12,"endRow":38,"endColumn":14}'>+=</span>&nbsp;
+<span class='Token' data-title='+=' data-content='spacedBinaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":12,"endRow":38,"endColumn":14}'>
+<span class='token spacedBinaryOperator' data-title='+=' data-content='spacedBinaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":12,"endRow":38,"endColumn":14}'>+=</span>&nbsp;
 </span>
 </span>
-<span class='StringLiteralExpr' data-title='" value is \(rank.values.first)"' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":15,"endRow":38,"endColumn":47}'>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":38,"startColumn":15,"endRow":38,"endColumn":16}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":38,"startColumn":15,"endRow":38,"endColumn":16}'>&quot;</span>
+<span class='StringLiteralExpr' data-title='&quot; value is \(rank.values.first)&quot;' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":15,"endRow":38,"endColumn":47}'>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":38,"startColumn":15,"endRow":38,"endColumn":16}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":38,"startColumn":15,"endRow":38,"endColumn":16}'>&quot;</span>
 </span>
 <span class='StringLiteralSegments' data-title=' value is \(rank.values.first)' data-content='StringLiteralSegmentsSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":16,"endRow":38,"endColumn":46}'>
 <span class='StringSegment' data-title=' value is ' data-content='StringSegmentSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":16,"endRow":38,"endColumn":26}'>
-<span class='Token' data-title=' value is ' data-content='stringSegment(" value is ")' data-type='Token' data-range='{"startRow":38,"startColumn":16,"endRow":38,"endColumn":26}'>
-<span class='token stringSegment' data-title=' value is ' data-content='stringSegment(" value is ")' data-type='Token' data-range='{"startRow":38,"startColumn":16,"endRow":38,"endColumn":26}'> value is </span>
+<span class='Token' data-title=' value is ' data-content='stringSegment(&quot; value is &quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":16,"endRow":38,"endColumn":26}'>
+<span class='token stringSegment' data-title=' value is ' data-content='stringSegment(&quot; value is &quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":16,"endRow":38,"endColumn":26}'> value is </span>
 </span>
 </span>
 <span class='ExpressionSegment' data-title='\(rank.values.first)' data-content='ExpressionSegmentSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":26,"endRow":38,"endColumn":46}'>
@@ -961,22 +961,22 @@
 <span class='MemberAccessExpr' data-title='rank.values.first' data-content='MemberAccessExprSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":28,"endRow":38,"endColumn":45}'>
 <span class='MemberAccessExpr' data-title='rank.values' data-content='MemberAccessExprSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":28,"endRow":38,"endColumn":39}'>
 <span class='IdentifierExpr' data-title='rank' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":28,"endRow":38,"endColumn":32}'>
-<span class='Token' data-title='rank' data-content='identifier("rank")' data-type='Token' data-range='{"startRow":38,"startColumn":28,"endRow":38,"endColumn":32}'>
-<span class='token identifier' data-title='rank' data-content='identifier("rank")' data-type='Token' data-range='{"startRow":38,"startColumn":28,"endRow":38,"endColumn":32}'>rank</span>
+<span class='Token' data-title='rank' data-content='identifier(&quot;rank&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":28,"endRow":38,"endColumn":32}'>
+<span class='token identifier' data-title='rank' data-content='identifier(&quot;rank&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":28,"endRow":38,"endColumn":32}'>rank</span>
 </span>
 </span>
 <span class='Token' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":38,"startColumn":32,"endRow":38,"endColumn":33}'>
 <span class='token period' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":38,"startColumn":32,"endRow":38,"endColumn":33}'>.</span>
 </span>
-<span class='Token' data-title='values' data-content='identifier("values")' data-type='Token' data-range='{"startRow":38,"startColumn":33,"endRow":38,"endColumn":39}'>
-<span class='token identifier' data-title='values' data-content='identifier("values")' data-type='Token' data-range='{"startRow":38,"startColumn":33,"endRow":38,"endColumn":39}'>values</span>
+<span class='Token' data-title='values' data-content='identifier(&quot;values&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":33,"endRow":38,"endColumn":39}'>
+<span class='token identifier' data-title='values' data-content='identifier(&quot;values&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":33,"endRow":38,"endColumn":39}'>values</span>
 </span>
 </span>
 <span class='Token' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":38,"startColumn":39,"endRow":38,"endColumn":40}'>
 <span class='token period' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":38,"startColumn":39,"endRow":38,"endColumn":40}'>.</span>
 </span>
-<span class='Token' data-title='first' data-content='identifier("first")' data-type='Token' data-range='{"startRow":38,"startColumn":40,"endRow":38,"endColumn":45}'>
-<span class='token identifier' data-title='first' data-content='identifier("first")' data-type='Token' data-range='{"startRow":38,"startColumn":40,"endRow":38,"endColumn":45}'>first</span>
+<span class='Token' data-title='first' data-content='identifier(&quot;first&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":40,"endRow":38,"endColumn":45}'>
+<span class='token identifier' data-title='first' data-content='identifier(&quot;first&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":40,"endRow":38,"endColumn":45}'>first</span>
 </span>
 </span>
 </span>
@@ -986,19 +986,19 @@
 </span>
 </span>
 <span class='StringSegment' data-title='' data-content='StringSegmentSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":46,"endRow":38,"endColumn":46}'>
-<span class='Token' data-title='' data-content='stringSegment("")' data-type='Token' data-range='{"startRow":38,"startColumn":46,"endRow":38,"endColumn":46}'>
-<span class='token stringSegment' data-title='' data-content='stringSegment("")' data-type='Token' data-range='{"startRow":38,"startColumn":46,"endRow":38,"endColumn":46}'></span>
+<span class='Token' data-title='' data-content='stringSegment(&quot;&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":46,"endRow":38,"endColumn":46}'>
+<span class='token stringSegment' data-title='' data-content='stringSegment(&quot;&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":46,"endRow":38,"endColumn":46}'></span>
 </span>
 </span>
 </span>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":38,"startColumn":46,"endRow":38,"endColumn":47}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":38,"startColumn":46,"endRow":38,"endColumn":47}'>&quot;</span>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":38,"startColumn":46,"endRow":38,"endColumn":47}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":38,"startColumn":46,"endRow":38,"endColumn":47}'>&quot;</span>
 </span>
 </span>
 </span>
 </span>
-<span class='CodeBlockItem' data-title='if let second = rank.values.second {↲      output += " or \(second)"↲    }' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":5,"endRow":41,"endColumn":6}'>
-<span class='IfStmt' data-title='if let second = rank.values.second {↲      output += " or \(second)"↲    }' data-content='IfStmtSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":5,"endRow":41,"endColumn":6}'>
+<span class='CodeBlockItem' data-title='if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":5,"endRow":41,"endColumn":6}'>
+<span class='IfStmt' data-title='if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }' data-content='IfStmtSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":5,"endRow":41,"endColumn":6}'>
 <span class='Token' data-title='if' data-content='ifKeyword' data-type='Token' data-range='{"startRow":39,"startColumn":5,"endRow":39,"endColumn":7}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <span class='token keyword' data-title='if' data-content='ifKeyword' data-type='Token' data-range='{"startRow":39,"startColumn":5,"endRow":39,"endColumn":7}'>if</span>&nbsp;
@@ -1010,8 +1010,8 @@
 <span class='token keyword' data-title='let' data-content='letKeyword' data-type='Token' data-range='{"startRow":39,"startColumn":8,"endRow":39,"endColumn":11}'>let</span>&nbsp;
 </span>
 <span class='IdentifierPattern' data-title='second' data-content='IdentifierPatternSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":12,"endRow":39,"endColumn":18}'>
-<span class='Token' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":39,"startColumn":12,"endRow":39,"endColumn":18}'>
-<span class='token identifier' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":39,"startColumn":12,"endRow":39,"endColumn":18}'>second</span>&nbsp;
+<span class='Token' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":39,"startColumn":12,"endRow":39,"endColumn":18}'>
+<span class='token identifier' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":39,"startColumn":12,"endRow":39,"endColumn":18}'>second</span>&nbsp;
 </span>
 </span>
 <span class='InitializerClause' data-title='= rank.values.second' data-content='InitializerClauseSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":19,"endRow":39,"endColumn":39}'>
@@ -1021,54 +1021,54 @@
 <span class='MemberAccessExpr' data-title='rank.values.second' data-content='MemberAccessExprSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":21,"endRow":39,"endColumn":39}'>
 <span class='MemberAccessExpr' data-title='rank.values' data-content='MemberAccessExprSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":21,"endRow":39,"endColumn":32}'>
 <span class='IdentifierExpr' data-title='rank' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":21,"endRow":39,"endColumn":25}'>
-<span class='Token' data-title='rank' data-content='identifier("rank")' data-type='Token' data-range='{"startRow":39,"startColumn":21,"endRow":39,"endColumn":25}'>
-<span class='token identifier' data-title='rank' data-content='identifier("rank")' data-type='Token' data-range='{"startRow":39,"startColumn":21,"endRow":39,"endColumn":25}'>rank</span>
+<span class='Token' data-title='rank' data-content='identifier(&quot;rank&quot;)' data-type='Token' data-range='{"startRow":39,"startColumn":21,"endRow":39,"endColumn":25}'>
+<span class='token identifier' data-title='rank' data-content='identifier(&quot;rank&quot;)' data-type='Token' data-range='{"startRow":39,"startColumn":21,"endRow":39,"endColumn":25}'>rank</span>
 </span>
 </span>
 <span class='Token' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":39,"startColumn":25,"endRow":39,"endColumn":26}'>
 <span class='token period' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":39,"startColumn":25,"endRow":39,"endColumn":26}'>.</span>
 </span>
-<span class='Token' data-title='values' data-content='identifier("values")' data-type='Token' data-range='{"startRow":39,"startColumn":26,"endRow":39,"endColumn":32}'>
-<span class='token identifier' data-title='values' data-content='identifier("values")' data-type='Token' data-range='{"startRow":39,"startColumn":26,"endRow":39,"endColumn":32}'>values</span>
+<span class='Token' data-title='values' data-content='identifier(&quot;values&quot;)' data-type='Token' data-range='{"startRow":39,"startColumn":26,"endRow":39,"endColumn":32}'>
+<span class='token identifier' data-title='values' data-content='identifier(&quot;values&quot;)' data-type='Token' data-range='{"startRow":39,"startColumn":26,"endRow":39,"endColumn":32}'>values</span>
 </span>
 </span>
 <span class='Token' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":39,"startColumn":32,"endRow":39,"endColumn":33}'>
 <span class='token period' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":39,"startColumn":32,"endRow":39,"endColumn":33}'>.</span>
 </span>
-<span class='Token' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":39,"startColumn":33,"endRow":39,"endColumn":39}'>
-<span class='token identifier' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":39,"startColumn":33,"endRow":39,"endColumn":39}'>second</span>&nbsp;
+<span class='Token' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":39,"startColumn":33,"endRow":39,"endColumn":39}'>
+<span class='token identifier' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":39,"startColumn":33,"endRow":39,"endColumn":39}'>second</span>&nbsp;
 </span>
 </span>
 </span>
 </span>
 </span>
 </span>
-<span class='CodeBlock' data-title='{↲      output += " or \(second)"↲    }' data-content='CodeBlockSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":40,"endRow":41,"endColumn":6}'>
+<span class='CodeBlock' data-title='{↲      output += &quot; or \(second)&quot;↲    }' data-content='CodeBlockSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":40,"endRow":41,"endColumn":6}'>
 <span class='Token' data-title='{' data-content='leftBrace' data-type='Token' data-range='{"startRow":39,"startColumn":40,"endRow":39,"endColumn":41}'>
 <span class='token leftBrace' data-title='{' data-content='leftBrace' data-type='Token' data-range='{"startRow":39,"startColumn":40,"endRow":39,"endColumn":41}'>{</span>
 </span>
-<span class='CodeBlockItemList' data-title='output += " or \(second)"' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":7,"endRow":40,"endColumn":32}'>
-<span class='CodeBlockItem' data-title='output += " or \(second)"' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":7,"endRow":40,"endColumn":32}'>
-<span class='InfixOperatorExpr' data-title='output += " or \(second)"' data-content='InfixOperatorExprSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":7,"endRow":40,"endColumn":32}'>
+<span class='CodeBlockItemList' data-title='output += &quot; or \(second)&quot;' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":7,"endRow":40,"endColumn":32}'>
+<span class='CodeBlockItem' data-title='output += &quot; or \(second)&quot;' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":7,"endRow":40,"endColumn":32}'>
+<span class='InfixOperatorExpr' data-title='output += &quot; or \(second)&quot;' data-content='InfixOperatorExprSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":7,"endRow":40,"endColumn":32}'>
 <span class='IdentifierExpr' data-title='output' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":7,"endRow":40,"endColumn":13}'>
-<span class='Token' data-title='output' data-content='identifier("output")' data-type='Token' data-range='{"startRow":40,"startColumn":7,"endRow":40,"endColumn":13}'>
+<span class='Token' data-title='output' data-content='identifier(&quot;output&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":7,"endRow":40,"endColumn":13}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token identifier' data-title='output' data-content='identifier("output")' data-type='Token' data-range='{"startRow":40,"startColumn":7,"endRow":40,"endColumn":13}'>output</span>&nbsp;
+<span class='token identifier' data-title='output' data-content='identifier(&quot;output&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":7,"endRow":40,"endColumn":13}'>output</span>&nbsp;
 </span>
 </span>
 <span class='BinaryOperatorExpr' data-title='+=' data-content='BinaryOperatorExprSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":14,"endRow":40,"endColumn":16}'>
-<span class='Token' data-title='+=' data-content='spacedBinaryOperator("+=")' data-type='Token' data-range='{"startRow":40,"startColumn":14,"endRow":40,"endColumn":16}'>
-<span class='token spacedBinaryOperator' data-title='+=' data-content='spacedBinaryOperator("+=")' data-type='Token' data-range='{"startRow":40,"startColumn":14,"endRow":40,"endColumn":16}'>+=</span>&nbsp;
+<span class='Token' data-title='+=' data-content='spacedBinaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":14,"endRow":40,"endColumn":16}'>
+<span class='token spacedBinaryOperator' data-title='+=' data-content='spacedBinaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":14,"endRow":40,"endColumn":16}'>+=</span>&nbsp;
 </span>
 </span>
-<span class='StringLiteralExpr' data-title='" or \(second)"' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":17,"endRow":40,"endColumn":32}'>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":40,"startColumn":17,"endRow":40,"endColumn":18}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":40,"startColumn":17,"endRow":40,"endColumn":18}'>&quot;</span>
+<span class='StringLiteralExpr' data-title='&quot; or \(second)&quot;' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":17,"endRow":40,"endColumn":32}'>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":40,"startColumn":17,"endRow":40,"endColumn":18}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":40,"startColumn":17,"endRow":40,"endColumn":18}'>&quot;</span>
 </span>
 <span class='StringLiteralSegments' data-title=' or \(second)' data-content='StringLiteralSegmentsSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":18,"endRow":40,"endColumn":31}'>
 <span class='StringSegment' data-title=' or ' data-content='StringSegmentSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":18,"endRow":40,"endColumn":22}'>
-<span class='Token' data-title=' or ' data-content='stringSegment(" or ")' data-type='Token' data-range='{"startRow":40,"startColumn":18,"endRow":40,"endColumn":22}'>
-<span class='token stringSegment' data-title=' or ' data-content='stringSegment(" or ")' data-type='Token' data-range='{"startRow":40,"startColumn":18,"endRow":40,"endColumn":22}'> or </span>
+<span class='Token' data-title=' or ' data-content='stringSegment(&quot; or &quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":18,"endRow":40,"endColumn":22}'>
+<span class='token stringSegment' data-title=' or ' data-content='stringSegment(&quot; or &quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":18,"endRow":40,"endColumn":22}'> or </span>
 </span>
 </span>
 <span class='ExpressionSegment' data-title='\(second)' data-content='ExpressionSegmentSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":22,"endRow":40,"endColumn":31}'>
@@ -1081,8 +1081,8 @@
 <span class='TupleExprElementList' data-title='second' data-content='TupleExprElementListSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":24,"endRow":40,"endColumn":30}'>
 <span class='TupleExprElement' data-title='second' data-content='TupleExprElementSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":24,"endRow":40,"endColumn":30}'>
 <span class='IdentifierExpr' data-title='second' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":24,"endRow":40,"endColumn":30}'>
-<span class='Token' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":40,"startColumn":24,"endRow":40,"endColumn":30}'>
-<span class='token identifier' data-title='second' data-content='identifier("second")' data-type='Token' data-range='{"startRow":40,"startColumn":24,"endRow":40,"endColumn":30}'>second</span>
+<span class='Token' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":24,"endRow":40,"endColumn":30}'>
+<span class='token identifier' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":24,"endRow":40,"endColumn":30}'>second</span>
 </span>
 </span>
 </span>
@@ -1092,13 +1092,13 @@
 </span>
 </span>
 <span class='StringSegment' data-title='' data-content='StringSegmentSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":31,"endRow":40,"endColumn":31}'>
-<span class='Token' data-title='' data-content='stringSegment("")' data-type='Token' data-range='{"startRow":40,"startColumn":31,"endRow":40,"endColumn":31}'>
-<span class='token stringSegment' data-title='' data-content='stringSegment("")' data-type='Token' data-range='{"startRow":40,"startColumn":31,"endRow":40,"endColumn":31}'></span>
+<span class='Token' data-title='' data-content='stringSegment(&quot;&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":31,"endRow":40,"endColumn":31}'>
+<span class='token stringSegment' data-title='' data-content='stringSegment(&quot;&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":31,"endRow":40,"endColumn":31}'></span>
 </span>
 </span>
 </span>
-<span class='Token' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":40,"startColumn":31,"endRow":40,"endColumn":32}'>
-<span class='token stringQuote' data-title='"' data-content='stringQuote' data-type='Token' data-range='{"startRow":40,"startColumn":31,"endRow":40,"endColumn":32}'>&quot;</span>
+<span class='Token' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":40,"startColumn":31,"endRow":40,"endColumn":32}'>
+<span class='token stringQuote' data-title='&quot;' data-content='stringQuote' data-type='Token' data-range='{"startRow":40,"startColumn":31,"endRow":40,"endColumn":32}'>&quot;</span>
 </span>
 </span>
 </span>
@@ -1118,8 +1118,8 @@
 <span class='token keyword' data-title='return' data-content='returnKeyword' data-type='Token' data-range='{"startRow":42,"startColumn":5,"endRow":42,"endColumn":11}'>return</span>&nbsp;
 </span>
 <span class='IdentifierExpr' data-title='output' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":42,"startColumn":12,"endRow":42,"endColumn":18}'>
-<span class='Token' data-title='output' data-content='identifier("output")' data-type='Token' data-range='{"startRow":42,"startColumn":12,"endRow":42,"endColumn":18}'>
-<span class='token identifier' data-title='output' data-content='identifier("output")' data-type='Token' data-range='{"startRow":42,"startColumn":12,"endRow":42,"endColumn":18}'>output</span>
+<span class='Token' data-title='output' data-content='identifier(&quot;output&quot;)' data-type='Token' data-range='{"startRow":42,"startColumn":12,"endRow":42,"endColumn":18}'>
+<span class='token identifier' data-title='output' data-content='identifier(&quot;output&quot;)' data-type='Token' data-range='{"startRow":42,"startColumn":12,"endRow":42,"endColumn":18}'>output</span>
 </span>
 </span>
 </span>

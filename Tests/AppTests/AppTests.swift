@@ -244,6 +244,7 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    print(response.syntaxJSON)
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
