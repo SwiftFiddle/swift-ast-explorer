@@ -41,12 +41,12 @@
         }
       }
     ],
-    "type": "other",
-    "text": "SourceFile"
+    "text": "SourceFile",
+    "type": "other"
   },
   {
-    "text": "CodeBlockItemList",
     "id": 1,
+    "parent": 0,
     "range": {
       "startColumn": 1,
       "endRow": 4,
@@ -67,12 +67,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 0
+    "text": "CodeBlockItemList",
+    "type": "collection"
   },
   {
-    "text": "CodeBlockItem",
     "id": 2,
+    "parent": 1,
     "range": {
       "startColumn": 1,
       "endRow": 1,
@@ -125,12 +125,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 1
+    "text": "CodeBlockItem",
+    "type": "other"
   },
   {
-    "text": "StructDecl",
     "id": 3,
+    "parent": 2,
     "range": {
       "startColumn": 1,
       "endRow": 1,
@@ -245,20 +245,20 @@
         }
       }
     ],
-    "type": "decl",
-    "parent": 2
+    "text": "StructDecl",
+    "type": "decl"
   },
   {
-    "parent": 3,
     "id": 4,
+    "parent": 3,
     "range": {
       "startColumn": 1,
       "endRow": 1,
       "endColumn": 7,
       "startRow": 1
     },
-    "text": "struct",
     "structure": [],
+    "text": "struct",
     "token": {
       "kind": "structKeyword",
       "leadingTrivia": "",
@@ -267,16 +267,16 @@
     "type": "other"
   },
   {
-    "parent": 3,
     "id": 5,
+    "parent": 3,
     "range": {
       "startColumn": 8,
       "endRow": 1,
       "endColumn": 14,
       "startRow": 1
     },
-    "text": "Result",
     "structure": [],
+    "text": "Result",
     "token": {
       "kind": "identifier(\"Result\")",
       "leadingTrivia": "",
@@ -285,8 +285,8 @@
     "type": "other"
   },
   {
-    "text": "GenericParameterClause",
     "id": 6,
+    "parent": 3,
     "range": {
       "startColumn": 14,
       "endRow": 1,
@@ -352,20 +352,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 3
+    "text": "GenericParameterClause",
+    "type": "other"
   },
   {
-    "parent": 6,
     "id": 7,
+    "parent": 6,
     "range": {
       "startColumn": 14,
       "endRow": 1,
       "endColumn": 15,
       "startRow": 1
     },
-    "text": "<",
     "structure": [],
+    "text": "<",
     "token": {
       "kind": "leftAngle",
       "leadingTrivia": "",
@@ -374,8 +374,8 @@
     "type": "other"
   },
   {
-    "text": "GenericParameterList",
     "id": 8,
+    "parent": 6,
     "range": {
       "startColumn": 16,
       "endRow": 1,
@@ -396,20 +396,20 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 6
+    "text": "GenericParameterList",
+    "type": "collection"
   },
   {
-    "parent": 6,
     "id": 9,
+    "parent": 6,
     "range": {
       "startColumn": 16,
       "endRow": 1,
       "endColumn": 16,
       "startRow": 1
     },
-    "text": ">",
     "structure": [],
+    "text": ">",
     "token": {
       "kind": "rightAngle",
       "leadingTrivia": "",
@@ -418,8 +418,8 @@
     "type": "other"
   },
   {
-    "text": "MemberDeclBlock",
     "id": 10,
+    "parent": 3,
     "range": {
       "startColumn": 16,
       "endRow": 1,
@@ -473,20 +473,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 3
+    "text": "MemberDeclBlock",
+    "type": "other"
   },
   {
-    "parent": 10,
     "id": 11,
+    "parent": 10,
     "range": {
       "startColumn": 16,
       "endRow": 1,
       "endColumn": 17,
       "startRow": 1
     },
-    "text": "{",
     "structure": [],
+    "text": "{",
     "token": {
       "kind": "leftBrace",
       "leadingTrivia": "",
@@ -495,8 +495,8 @@
     "type": "other"
   },
   {
-    "text": "MemberDeclList",
     "id": 12,
+    "parent": 10,
     "range": {
       "startColumn": 17,
       "endRow": 1,
@@ -517,20 +517,20 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 10
+    "text": "MemberDeclList",
+    "type": "collection"
   },
   {
-    "parent": 10,
     "id": 13,
+    "parent": 10,
     "range": {
       "startColumn": 17,
       "endRow": 1,
       "endColumn": 17,
       "startRow": 1
     },
-    "text": "}",
     "structure": [],
+    "text": "}",
     "token": {
       "kind": "rightBrace",
       "leadingTrivia": "",
@@ -539,16 +539,16 @@
     "type": "other"
   },
   {
-    "parent": 2,
     "id": 14,
+    "parent": 2,
     "range": {
       "startColumn": 17,
       "endRow": 1,
       "endColumn": 17,
       "startRow": 1
     },
-    "text": ";",
     "structure": [],
+    "text": ";",
     "token": {
       "kind": "semicolon",
       "leadingTrivia": "",
@@ -557,8 +557,8 @@
     "type": "other"
   },
   {
-    "text": "CodeBlockItem",
     "id": 15,
+    "parent": 1,
     "range": {
       "startColumn": 17,
       "endRow": 4,
@@ -610,12 +610,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 1
+    "text": "CodeBlockItem",
+    "type": "other"
   },
   {
-    "text": "ClosureExpr",
     "id": 16,
+    "parent": 15,
     "range": {
       "startColumn": 17,
       "endRow": 4,
@@ -681,20 +681,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 15
+    "text": "ClosureExpr",
+    "type": "expr"
   },
   {
-    "parent": 16,
     "id": 17,
+    "parent": 16,
     "range": {
       "startColumn": 17,
       "endRow": 1,
       "endColumn": 18,
       "startRow": 1
     },
-    "text": "{",
     "structure": [],
+    "text": "{",
     "token": {
       "kind": "leftBrace",
       "leadingTrivia": "",
@@ -703,8 +703,8 @@
     "type": "other"
   },
   {
-    "text": "CodeBlockItemList",
     "id": 18,
+    "parent": 16,
     "range": {
       "startColumn": 3,
       "endRow": 3,
@@ -725,12 +725,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 16
+    "text": "CodeBlockItemList",
+    "type": "collection"
   },
   {
-    "text": "CodeBlockItem",
     "id": 19,
+    "parent": 18,
     "range": {
       "startColumn": 3,
       "endRow": 2,
@@ -782,12 +782,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 18
+    "text": "CodeBlockItem",
+    "type": "other"
   },
   {
-    "text": "VariableDecl",
     "id": 20,
+    "parent": 19,
     "range": {
       "startColumn": 3,
       "endRow": 2,
@@ -852,20 +852,20 @@
         }
       }
     ],
-    "type": "decl",
-    "parent": 19
+    "text": "VariableDecl",
+    "type": "decl"
   },
   {
-    "parent": 20,
     "id": 21,
+    "parent": 20,
     "range": {
       "startColumn": 3,
       "endRow": 2,
       "endColumn": 6,
       "startRow": 2
     },
-    "text": "let",
     "structure": [],
+    "text": "let",
     "token": {
       "kind": "letKeyword",
       "leadingTrivia": "↲␣␣",
@@ -874,8 +874,8 @@
     "type": "other"
   },
   {
-    "text": "PatternBindingList",
     "id": 22,
+    "parent": 20,
     "range": {
       "startColumn": 7,
       "endRow": 2,
@@ -896,12 +896,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 20
+    "text": "PatternBindingList",
+    "type": "collection"
   },
   {
-    "text": "PatternBinding",
     "id": 23,
+    "parent": 22,
     "range": {
       "startColumn": 7,
       "endRow": 2,
@@ -978,12 +978,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 22
+    "text": "PatternBinding",
+    "type": "other"
   },
   {
-    "text": "IdentifierPattern",
     "id": 24,
+    "parent": 23,
     "range": {
       "startColumn": 7,
       "endRow": 2,
@@ -1011,20 +1011,20 @@
         }
       }
     ],
-    "type": "pattern",
-    "parent": 23
+    "text": "IdentifierPattern",
+    "type": "pattern"
   },
   {
-    "parent": 24,
     "id": 25,
+    "parent": 24,
     "range": {
       "startColumn": 7,
       "endRow": 2,
       "endColumn": 11,
       "startRow": 2
     },
-    "text": "text",
     "structure": [],
+    "text": "text",
     "token": {
       "kind": "identifier(\"text\")",
       "leadingTrivia": "",
@@ -1033,8 +1033,8 @@
     "type": "other"
   },
   {
-    "text": "TypeAnnotation",
     "id": 26,
+    "parent": 23,
     "range": {
       "startColumn": 11,
       "endRow": 2,
@@ -1075,20 +1075,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 23
+    "text": "TypeAnnotation",
+    "type": "other"
   },
   {
-    "parent": 26,
     "id": 27,
+    "parent": 26,
     "range": {
       "startColumn": 11,
       "endRow": 2,
       "endColumn": 12,
       "startRow": 2
     },
-    "text": ":",
     "structure": [],
+    "text": ":",
     "token": {
       "kind": "colon",
       "leadingTrivia": "",
@@ -1097,8 +1097,8 @@
     "type": "other"
   },
   {
-    "text": "SimpleTypeIdentifier",
     "id": 28,
+    "parent": 26,
     "range": {
       "startColumn": 13,
       "endRow": 2,
@@ -1138,20 +1138,20 @@
         }
       }
     ],
-    "type": "type",
-    "parent": 26
+    "text": "SimpleTypeIdentifier",
+    "type": "type"
   },
   {
-    "parent": 28,
     "id": 29,
+    "parent": 28,
     "range": {
       "startColumn": 13,
       "endRow": 2,
       "endColumn": 19,
       "startRow": 2
     },
-    "text": "String",
     "structure": [],
+    "text": "String",
     "token": {
       "kind": "identifier(\"String\")",
       "leadingTrivia": "",
@@ -1160,8 +1160,8 @@
     "type": "other"
   },
   {
-    "text": "CodeBlockItem",
     "id": 30,
+    "parent": 18,
     "range": {
       "startColumn": 3,
       "endRow": 3,
@@ -1213,12 +1213,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 18
+    "text": "CodeBlockItem",
+    "type": "other"
   },
   {
-    "text": "VariableDecl",
     "id": 31,
+    "parent": 30,
     "range": {
       "startColumn": 3,
       "endRow": 3,
@@ -1283,20 +1283,20 @@
         }
       }
     ],
-    "type": "decl",
-    "parent": 30
+    "text": "VariableDecl",
+    "type": "decl"
   },
   {
-    "parent": 31,
     "id": 32,
+    "parent": 31,
     "range": {
       "startColumn": 3,
       "endRow": 3,
       "endColumn": 6,
       "startRow": 3
     },
-    "text": "let",
     "structure": [],
+    "text": "let",
     "token": {
       "kind": "letKeyword",
       "leadingTrivia": "↲␣␣",
@@ -1305,8 +1305,8 @@
     "type": "other"
   },
   {
-    "text": "PatternBindingList",
     "id": 33,
+    "parent": 31,
     "range": {
       "startColumn": 7,
       "endRow": 3,
@@ -1327,12 +1327,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 31
+    "text": "PatternBindingList",
+    "type": "collection"
   },
   {
-    "text": "PatternBinding",
     "id": 34,
+    "parent": 33,
     "range": {
       "startColumn": 7,
       "endRow": 3,
@@ -1409,12 +1409,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 33
+    "text": "PatternBinding",
+    "type": "other"
   },
   {
-    "text": "IdentifierPattern",
     "id": 35,
+    "parent": 34,
     "range": {
       "startColumn": 7,
       "endRow": 3,
@@ -1442,20 +1442,20 @@
         }
       }
     ],
-    "type": "pattern",
-    "parent": 34
+    "text": "IdentifierPattern",
+    "type": "pattern"
   },
   {
-    "parent": 35,
     "id": 36,
+    "parent": 35,
     "range": {
       "startColumn": 7,
       "endRow": 3,
       "endColumn": 21,
       "startRow": 3
     },
-    "text": "someOtherThing",
     "structure": [],
+    "text": "someOtherThing",
     "token": {
       "kind": "identifier(\"someOtherThing\")",
       "leadingTrivia": "",
@@ -1464,8 +1464,8 @@
     "type": "other"
   },
   {
-    "text": "TypeAnnotation",
     "id": 37,
+    "parent": 34,
     "range": {
       "startColumn": 21,
       "endRow": 3,
@@ -1506,20 +1506,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 34
+    "text": "TypeAnnotation",
+    "type": "other"
   },
   {
-    "parent": 37,
     "id": 38,
+    "parent": 37,
     "range": {
       "startColumn": 21,
       "endRow": 3,
       "endColumn": 22,
       "startRow": 3
     },
-    "text": ":",
     "structure": [],
+    "text": ":",
     "token": {
       "kind": "colon",
       "leadingTrivia": "",
@@ -1528,8 +1528,8 @@
     "type": "other"
   },
   {
-    "text": "SimpleTypeIdentifier",
     "id": 39,
+    "parent": 37,
     "range": {
       "startColumn": 23,
       "endRow": 3,
@@ -1569,20 +1569,20 @@
         }
       }
     ],
-    "type": "type",
-    "parent": 37
+    "text": "SimpleTypeIdentifier",
+    "type": "type"
   },
   {
-    "parent": 39,
     "id": 40,
+    "parent": 39,
     "range": {
       "startColumn": 23,
       "endRow": 3,
       "endColumn": 29,
       "startRow": 3
     },
-    "text": "String",
     "structure": [],
+    "text": "String",
     "token": {
       "kind": "identifier(\"String\")",
       "leadingTrivia": "",
@@ -1591,16 +1591,16 @@
     "type": "other"
   },
   {
-    "parent": 16,
     "id": 41,
+    "parent": 16,
     "range": {
       "startColumn": 1,
       "endRow": 4,
       "endColumn": 2,
       "startRow": 4
     },
-    "text": "}",
     "structure": [],
+    "text": "}",
     "token": {
       "kind": "rightBrace",
       "leadingTrivia": "↲",
@@ -1609,16 +1609,16 @@
     "type": "other"
   },
   {
-    "parent": 0,
     "id": 42,
+    "parent": 0,
     "range": {
       "startColumn": 2,
       "endRow": 4,
       "endColumn": 2,
       "startRow": 4
     },
-    "text": "",
     "structure": [],
+    "text": "",
     "token": {
       "kind": "eof",
       "leadingTrivia": "",

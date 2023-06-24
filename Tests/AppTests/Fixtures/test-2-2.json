@@ -41,12 +41,12 @@
         }
       }
     ],
-    "type": "other",
-    "text": "SourceFile"
+    "text": "SourceFile",
+    "type": "other"
   },
   {
-    "text": "CodeBlockItemList",
     "id": 1,
+    "parent": 0,
     "range": {
       "startColumn": 1,
       "endRow": 9,
@@ -67,12 +67,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 0
+    "text": "CodeBlockItemList",
+    "type": "collection"
   },
   {
-    "text": "CodeBlockItem",
     "id": 2,
+    "parent": 1,
     "range": {
       "startColumn": 1,
       "endRow": 1,
@@ -124,12 +124,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 1
+    "text": "CodeBlockItem",
+    "type": "other"
   },
   {
-    "text": "VariableDecl",
     "id": 3,
+    "parent": 2,
     "range": {
       "startColumn": 1,
       "endRow": 1,
@@ -194,20 +194,20 @@
         }
       }
     ],
-    "type": "decl",
-    "parent": 2
+    "text": "VariableDecl",
+    "type": "decl"
   },
   {
-    "parent": 3,
     "id": 4,
+    "parent": 3,
     "range": {
       "startColumn": 1,
       "endRow": 1,
       "endColumn": 4,
       "startRow": 1
     },
-    "text": "var",
     "structure": [],
+    "text": "var",
     "token": {
       "kind": "varKeyword",
       "leadingTrivia": "",
@@ -216,8 +216,8 @@
     "type": "other"
   },
   {
-    "text": "PatternBindingList",
     "id": 5,
+    "parent": 3,
     "range": {
       "startColumn": 5,
       "endRow": 1,
@@ -238,12 +238,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 3
+    "text": "PatternBindingList",
+    "type": "collection"
   },
   {
-    "text": "PatternBinding",
     "id": 6,
+    "parent": 5,
     "range": {
       "startColumn": 5,
       "endRow": 1,
@@ -320,12 +320,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 5
+    "text": "PatternBinding",
+    "type": "other"
   },
   {
-    "text": "IdentifierPattern",
     "id": 7,
+    "parent": 6,
     "range": {
       "startColumn": 5,
       "endRow": 1,
@@ -353,20 +353,20 @@
         }
       }
     ],
-    "type": "pattern",
-    "parent": 6
+    "text": "IdentifierPattern",
+    "type": "pattern"
   },
   {
-    "parent": 7,
     "id": 8,
+    "parent": 7,
     "range": {
       "startColumn": 5,
       "endRow": 1,
       "endColumn": 28,
       "startRow": 1
     },
-    "text": "temperatureInFahrenheit",
     "structure": [],
+    "text": "temperatureInFahrenheit",
     "token": {
       "kind": "identifier(\"temperatureInFahrenheit\")",
       "leadingTrivia": "",
@@ -375,8 +375,8 @@
     "type": "other"
   },
   {
-    "text": "InitializerClause",
     "id": 9,
+    "parent": 6,
     "range": {
       "startColumn": 29,
       "endRow": 1,
@@ -417,20 +417,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 6
+    "text": "InitializerClause",
+    "type": "other"
   },
   {
-    "parent": 9,
     "id": 10,
+    "parent": 9,
     "range": {
       "startColumn": 29,
       "endRow": 1,
       "endColumn": 30,
       "startRow": 1
     },
-    "text": "=",
     "structure": [],
+    "text": "=",
     "token": {
       "kind": "equal",
       "leadingTrivia": "",
@@ -439,8 +439,8 @@
     "type": "other"
   },
   {
-    "text": "IntegerLiteralExpr",
     "id": 11,
+    "parent": 9,
     "range": {
       "startColumn": 31,
       "endRow": 1,
@@ -468,20 +468,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 9
+    "text": "IntegerLiteralExpr",
+    "type": "expr"
   },
   {
-    "parent": 11,
     "id": 12,
+    "parent": 11,
     "range": {
       "startColumn": 31,
       "endRow": 1,
       "endColumn": 33,
       "startRow": 1
     },
-    "text": "90",
     "structure": [],
+    "text": "90",
     "token": {
       "kind": "integerLiteral(\"90\")",
       "leadingTrivia": "",
@@ -490,8 +490,8 @@
     "type": "other"
   },
   {
-    "text": "CodeBlockItem",
     "id": 13,
+    "parent": 1,
     "range": {
       "startColumn": 1,
       "endRow": 9,
@@ -543,12 +543,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 1
+    "text": "CodeBlockItem",
+    "type": "other"
   },
   {
-    "text": "IfStmt",
     "id": 14,
+    "parent": 13,
     "range": {
       "startColumn": 1,
       "endRow": 9,
@@ -628,20 +628,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 13
+    "text": "IfStmt",
+    "type": "other"
   },
   {
-    "parent": 14,
     "id": 15,
+    "parent": 14,
     "range": {
       "startColumn": 1,
       "endRow": 3,
       "endColumn": 3,
       "startRow": 3
     },
-    "text": "if",
     "structure": [],
+    "text": "if",
     "token": {
       "kind": "ifKeyword",
       "leadingTrivia": "↲↲",
@@ -650,8 +650,8 @@
     "type": "other"
   },
   {
-    "text": "ConditionElementList",
     "id": 16,
+    "parent": 14,
     "range": {
       "startColumn": 4,
       "endRow": 3,
@@ -672,12 +672,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 14
+    "text": "ConditionElementList",
+    "type": "collection"
   },
   {
-    "text": "ConditionElement",
     "id": 17,
+    "parent": 16,
     "range": {
       "startColumn": 4,
       "endRow": 3,
@@ -717,12 +717,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 16
+    "text": "ConditionElement",
+    "type": "other"
   },
   {
-    "text": "InfixOperatorExpr",
     "id": 18,
+    "parent": 17,
     "range": {
       "startColumn": 4,
       "endRow": 3,
@@ -776,12 +776,12 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 17
+    "text": "InfixOperatorExpr",
+    "type": "expr"
   },
   {
-    "text": "IdentifierExpr",
     "id": 19,
+    "parent": 18,
     "range": {
       "startColumn": 4,
       "endRow": 3,
@@ -821,20 +821,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 18
+    "text": "IdentifierExpr",
+    "type": "expr"
   },
   {
-    "parent": 19,
     "id": 20,
+    "parent": 19,
     "range": {
       "startColumn": 4,
       "endRow": 3,
       "endColumn": 27,
       "startRow": 3
     },
-    "text": "temperatureInFahrenheit",
     "structure": [],
+    "text": "temperatureInFahrenheit",
     "token": {
       "kind": "identifier(\"temperatureInFahrenheit\")",
       "leadingTrivia": "",
@@ -843,8 +843,8 @@
     "type": "other"
   },
   {
-    "text": "BinaryOperatorExpr",
     "id": 21,
+    "parent": 18,
     "range": {
       "startColumn": 28,
       "endRow": 3,
@@ -872,20 +872,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 18
+    "text": "BinaryOperatorExpr",
+    "type": "expr"
   },
   {
-    "parent": 21,
     "id": 22,
+    "parent": 21,
     "range": {
       "startColumn": 28,
       "endRow": 3,
       "endColumn": 30,
       "startRow": 3
     },
-    "text": "<=",
     "structure": [],
+    "text": "<=",
     "token": {
       "kind": "spacedBinaryOperator(\"<=\")",
       "leadingTrivia": "",
@@ -894,8 +894,8 @@
     "type": "other"
   },
   {
-    "text": "IntegerLiteralExpr",
     "id": 23,
+    "parent": 18,
     "range": {
       "startColumn": 31,
       "endRow": 3,
@@ -923,20 +923,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 18
+    "text": "IntegerLiteralExpr",
+    "type": "expr"
   },
   {
-    "parent": 23,
     "id": 24,
+    "parent": 23,
     "range": {
       "startColumn": 31,
       "endRow": 3,
       "endColumn": 33,
       "startRow": 3
     },
-    "text": "32",
     "structure": [],
+    "text": "32",
     "token": {
       "kind": "integerLiteral(\"32\")",
       "leadingTrivia": "",
@@ -945,8 +945,8 @@
     "type": "other"
   },
   {
-    "text": "CodeBlock",
     "id": 25,
+    "parent": 14,
     "range": {
       "startColumn": 34,
       "endRow": 5,
@@ -1000,20 +1000,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 14
+    "text": "CodeBlock",
+    "type": "other"
   },
   {
-    "parent": 25,
     "id": 26,
+    "parent": 25,
     "range": {
       "startColumn": 34,
       "endRow": 3,
       "endColumn": 35,
       "startRow": 3
     },
-    "text": "{",
     "structure": [],
+    "text": "{",
     "token": {
       "kind": "leftBrace",
       "leadingTrivia": "",
@@ -1022,8 +1022,8 @@
     "type": "other"
   },
   {
-    "text": "CodeBlockItemList",
     "id": 27,
+    "parent": 25,
     "range": {
       "startColumn": 3,
       "endRow": 4,
@@ -1044,12 +1044,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 25
+    "text": "CodeBlockItemList",
+    "type": "collection"
   },
   {
-    "text": "CodeBlockItem",
     "id": 28,
+    "parent": 27,
     "range": {
       "startColumn": 3,
       "endRow": 4,
@@ -1101,12 +1101,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 27
+    "text": "CodeBlockItem",
+    "type": "other"
   },
   {
-    "text": "FunctionCallExpr",
     "id": 29,
+    "parent": 28,
     "range": {
       "startColumn": 3,
       "endRow": 4,
@@ -1197,12 +1197,12 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 28
+    "text": "FunctionCallExpr",
+    "type": "expr"
   },
   {
-    "text": "IdentifierExpr",
     "id": 30,
+    "parent": 29,
     "range": {
       "startColumn": 3,
       "endRow": 4,
@@ -1242,20 +1242,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 29
+    "text": "IdentifierExpr",
+    "type": "expr"
   },
   {
-    "parent": 30,
     "id": 31,
+    "parent": 30,
     "range": {
       "startColumn": 3,
       "endRow": 4,
       "endColumn": 8,
       "startRow": 4
     },
-    "text": "print",
     "structure": [],
+    "text": "print",
     "token": {
       "kind": "identifier(\"print\")",
       "leadingTrivia": "↲␣␣",
@@ -1264,16 +1264,16 @@
     "type": "other"
   },
   {
-    "parent": 29,
     "id": 32,
+    "parent": 29,
     "range": {
       "startColumn": 8,
       "endRow": 4,
       "endColumn": 9,
       "startRow": 4
     },
-    "text": "(",
     "structure": [],
+    "text": "(",
     "token": {
       "kind": "leftParen",
       "leadingTrivia": "",
@@ -1282,8 +1282,8 @@
     "type": "other"
   },
   {
-    "text": "TupleExprElementList",
     "id": 33,
+    "parent": 29,
     "range": {
       "startColumn": 9,
       "endRow": 4,
@@ -1304,12 +1304,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 29
+    "text": "TupleExprElementList",
+    "type": "collection"
   },
   {
-    "text": "TupleExprElement",
     "id": 34,
+    "parent": 33,
     "range": {
       "startColumn": 9,
       "endRow": 4,
@@ -1373,12 +1373,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 33
+    "text": "TupleExprElement",
+    "type": "other"
   },
   {
-    "text": "StringLiteralExpr",
     "id": 35,
+    "parent": 34,
     "range": {
       "startColumn": 9,
       "endRow": 4,
@@ -1456,20 +1456,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 34
+    "text": "StringLiteralExpr",
+    "type": "expr"
   },
   {
-    "parent": 35,
     "id": 36,
+    "parent": 35,
     "range": {
       "startColumn": 9,
       "endRow": 4,
       "endColumn": 10,
       "startRow": 4
     },
-    "text": "\"",
     "structure": [],
+    "text": "\"",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -1478,8 +1478,8 @@
     "type": "other"
   },
   {
-    "text": "StringLiteralSegments",
     "id": 37,
+    "parent": 35,
     "range": {
       "startColumn": 10,
       "endRow": 4,
@@ -1500,12 +1500,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 35
+    "text": "StringLiteralSegments",
+    "type": "collection"
   },
   {
-    "text": "StringSegment",
     "id": 38,
+    "parent": 37,
     "range": {
       "startColumn": 10,
       "endRow": 4,
@@ -1533,20 +1533,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 37
+    "text": "StringSegment",
+    "type": "other"
   },
   {
-    "parent": 38,
     "id": 39,
+    "parent": 38,
     "range": {
       "startColumn": 10,
       "endRow": 4,
       "endColumn": 51,
       "startRow": 4
     },
-    "text": "It's very cold. Consider wearing a scarf.",
     "structure": [],
+    "text": "It's very cold. Consider wearing a scarf.",
     "token": {
       "kind": "stringSegment(\"It\\'s very cold. Consider wearing a scarf.\")",
       "leadingTrivia": "",
@@ -1555,16 +1555,16 @@
     "type": "other"
   },
   {
-    "parent": 35,
     "id": 40,
+    "parent": 35,
     "range": {
       "startColumn": 51,
       "endRow": 4,
       "endColumn": 52,
       "startRow": 4
     },
-    "text": "\"",
     "structure": [],
+    "text": "\"",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -1573,16 +1573,16 @@
     "type": "other"
   },
   {
-    "parent": 29,
     "id": 41,
+    "parent": 29,
     "range": {
       "startColumn": 52,
       "endRow": 4,
       "endColumn": 53,
       "startRow": 4
     },
-    "text": ")",
     "structure": [],
+    "text": ")",
     "token": {
       "kind": "rightParen",
       "leadingTrivia": "",
@@ -1591,16 +1591,16 @@
     "type": "other"
   },
   {
-    "parent": 25,
     "id": 42,
+    "parent": 25,
     "range": {
       "startColumn": 1,
       "endRow": 5,
       "endColumn": 2,
       "startRow": 5
     },
-    "text": "}",
     "structure": [],
+    "text": "}",
     "token": {
       "kind": "rightBrace",
       "leadingTrivia": "↲",
@@ -1609,16 +1609,16 @@
     "type": "other"
   },
   {
-    "parent": 14,
     "id": 43,
+    "parent": 14,
     "range": {
       "startColumn": 3,
       "endRow": 5,
       "endColumn": 7,
       "startRow": 5
     },
-    "text": "else",
     "structure": [],
+    "text": "else",
     "token": {
       "kind": "elseKeyword",
       "leadingTrivia": "",
@@ -1627,8 +1627,8 @@
     "type": "other"
   },
   {
-    "text": "IfStmt",
     "id": 44,
+    "parent": 14,
     "range": {
       "startColumn": 8,
       "endRow": 9,
@@ -1708,20 +1708,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 14
+    "text": "IfStmt",
+    "type": "other"
   },
   {
-    "parent": 44,
     "id": 45,
+    "parent": 44,
     "range": {
       "startColumn": 8,
       "endRow": 5,
       "endColumn": 10,
       "startRow": 5
     },
-    "text": "if",
     "structure": [],
+    "text": "if",
     "token": {
       "kind": "ifKeyword",
       "leadingTrivia": "",
@@ -1730,8 +1730,8 @@
     "type": "other"
   },
   {
-    "text": "ConditionElementList",
     "id": 46,
+    "parent": 44,
     "range": {
       "startColumn": 11,
       "endRow": 5,
@@ -1752,12 +1752,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 44
+    "text": "ConditionElementList",
+    "type": "collection"
   },
   {
-    "text": "ConditionElement",
     "id": 47,
+    "parent": 46,
     "range": {
       "startColumn": 11,
       "endRow": 5,
@@ -1797,12 +1797,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 46
+    "text": "ConditionElement",
+    "type": "other"
   },
   {
-    "text": "InfixOperatorExpr",
     "id": 48,
+    "parent": 47,
     "range": {
       "startColumn": 11,
       "endRow": 5,
@@ -1856,12 +1856,12 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 47
+    "text": "InfixOperatorExpr",
+    "type": "expr"
   },
   {
-    "text": "IdentifierExpr",
     "id": 49,
+    "parent": 48,
     "range": {
       "startColumn": 11,
       "endRow": 5,
@@ -1901,20 +1901,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 48
+    "text": "IdentifierExpr",
+    "type": "expr"
   },
   {
-    "parent": 49,
     "id": 50,
+    "parent": 49,
     "range": {
       "startColumn": 11,
       "endRow": 5,
       "endColumn": 34,
       "startRow": 5
     },
-    "text": "temperatureInFahrenheit",
     "structure": [],
+    "text": "temperatureInFahrenheit",
     "token": {
       "kind": "identifier(\"temperatureInFahrenheit\")",
       "leadingTrivia": "",
@@ -1923,8 +1923,8 @@
     "type": "other"
   },
   {
-    "text": "BinaryOperatorExpr",
     "id": 51,
+    "parent": 48,
     "range": {
       "startColumn": 35,
       "endRow": 5,
@@ -1952,20 +1952,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 48
+    "text": "BinaryOperatorExpr",
+    "type": "expr"
   },
   {
-    "parent": 51,
     "id": 52,
+    "parent": 51,
     "range": {
       "startColumn": 35,
       "endRow": 5,
       "endColumn": 37,
       "startRow": 5
     },
-    "text": ">=",
     "structure": [],
+    "text": ">=",
     "token": {
       "kind": "spacedBinaryOperator(\">=\")",
       "leadingTrivia": "",
@@ -1974,8 +1974,8 @@
     "type": "other"
   },
   {
-    "text": "IntegerLiteralExpr",
     "id": 53,
+    "parent": 48,
     "range": {
       "startColumn": 38,
       "endRow": 5,
@@ -2003,20 +2003,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 48
+    "text": "IntegerLiteralExpr",
+    "type": "expr"
   },
   {
-    "parent": 53,
     "id": 54,
+    "parent": 53,
     "range": {
       "startColumn": 38,
       "endRow": 5,
       "endColumn": 40,
       "startRow": 5
     },
-    "text": "86",
     "structure": [],
+    "text": "86",
     "token": {
       "kind": "integerLiteral(\"86\")",
       "leadingTrivia": "",
@@ -2025,8 +2025,8 @@
     "type": "other"
   },
   {
-    "text": "CodeBlock",
     "id": 55,
+    "parent": 44,
     "range": {
       "startColumn": 41,
       "endRow": 7,
@@ -2080,20 +2080,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 44
+    "text": "CodeBlock",
+    "type": "other"
   },
   {
-    "parent": 55,
     "id": 56,
+    "parent": 55,
     "range": {
       "startColumn": 41,
       "endRow": 5,
       "endColumn": 42,
       "startRow": 5
     },
-    "text": "{",
     "structure": [],
+    "text": "{",
     "token": {
       "kind": "leftBrace",
       "leadingTrivia": "",
@@ -2102,8 +2102,8 @@
     "type": "other"
   },
   {
-    "text": "CodeBlockItemList",
     "id": 57,
+    "parent": 55,
     "range": {
       "startColumn": 3,
       "endRow": 6,
@@ -2124,12 +2124,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 55
+    "text": "CodeBlockItemList",
+    "type": "collection"
   },
   {
-    "text": "CodeBlockItem",
     "id": 58,
+    "parent": 57,
     "range": {
       "startColumn": 3,
       "endRow": 6,
@@ -2181,12 +2181,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 57
+    "text": "CodeBlockItem",
+    "type": "other"
   },
   {
-    "text": "FunctionCallExpr",
     "id": 59,
+    "parent": 58,
     "range": {
       "startColumn": 3,
       "endRow": 6,
@@ -2277,12 +2277,12 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 58
+    "text": "FunctionCallExpr",
+    "type": "expr"
   },
   {
-    "text": "IdentifierExpr",
     "id": 60,
+    "parent": 59,
     "range": {
       "startColumn": 3,
       "endRow": 6,
@@ -2322,20 +2322,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 59
+    "text": "IdentifierExpr",
+    "type": "expr"
   },
   {
-    "parent": 60,
     "id": 61,
+    "parent": 60,
     "range": {
       "startColumn": 3,
       "endRow": 6,
       "endColumn": 8,
       "startRow": 6
     },
-    "text": "print",
     "structure": [],
+    "text": "print",
     "token": {
       "kind": "identifier(\"print\")",
       "leadingTrivia": "↲␣␣",
@@ -2344,16 +2344,16 @@
     "type": "other"
   },
   {
-    "parent": 59,
     "id": 62,
+    "parent": 59,
     "range": {
       "startColumn": 8,
       "endRow": 6,
       "endColumn": 9,
       "startRow": 6
     },
-    "text": "(",
     "structure": [],
+    "text": "(",
     "token": {
       "kind": "leftParen",
       "leadingTrivia": "",
@@ -2362,8 +2362,8 @@
     "type": "other"
   },
   {
-    "text": "TupleExprElementList",
     "id": 63,
+    "parent": 59,
     "range": {
       "startColumn": 9,
       "endRow": 6,
@@ -2384,12 +2384,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 59
+    "text": "TupleExprElementList",
+    "type": "collection"
   },
   {
-    "text": "TupleExprElement",
     "id": 64,
+    "parent": 63,
     "range": {
       "startColumn": 9,
       "endRow": 6,
@@ -2453,12 +2453,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 63
+    "text": "TupleExprElement",
+    "type": "other"
   },
   {
-    "text": "StringLiteralExpr",
     "id": 65,
+    "parent": 64,
     "range": {
       "startColumn": 9,
       "endRow": 6,
@@ -2536,20 +2536,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 64
+    "text": "StringLiteralExpr",
+    "type": "expr"
   },
   {
-    "parent": 65,
     "id": 66,
+    "parent": 65,
     "range": {
       "startColumn": 9,
       "endRow": 6,
       "endColumn": 10,
       "startRow": 6
     },
-    "text": "\"",
     "structure": [],
+    "text": "\"",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -2558,8 +2558,8 @@
     "type": "other"
   },
   {
-    "text": "StringLiteralSegments",
     "id": 67,
+    "parent": 65,
     "range": {
       "startColumn": 10,
       "endRow": 6,
@@ -2580,12 +2580,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 65
+    "text": "StringLiteralSegments",
+    "type": "collection"
   },
   {
-    "text": "StringSegment",
     "id": 68,
+    "parent": 67,
     "range": {
       "startColumn": 10,
       "endRow": 6,
@@ -2613,20 +2613,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 67
+    "text": "StringSegment",
+    "type": "other"
   },
   {
-    "parent": 68,
     "id": 69,
+    "parent": 68,
     "range": {
       "startColumn": 10,
       "endRow": 6,
       "endColumn": 59,
       "startRow": 6
     },
-    "text": "It's really warm. Don't forget to wear sunscreen.",
     "structure": [],
+    "text": "It's really warm. Don't forget to wear sunscreen.",
     "token": {
       "kind": "stringSegment(\"It\\'s really warm. Don\\'t forget to wear sunscreen.\")",
       "leadingTrivia": "",
@@ -2635,16 +2635,16 @@
     "type": "other"
   },
   {
-    "parent": 65,
     "id": 70,
+    "parent": 65,
     "range": {
       "startColumn": 59,
       "endRow": 6,
       "endColumn": 60,
       "startRow": 6
     },
-    "text": "\"",
     "structure": [],
+    "text": "\"",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -2653,16 +2653,16 @@
     "type": "other"
   },
   {
-    "parent": 59,
     "id": 71,
+    "parent": 59,
     "range": {
       "startColumn": 60,
       "endRow": 6,
       "endColumn": 61,
       "startRow": 6
     },
-    "text": ")",
     "structure": [],
+    "text": ")",
     "token": {
       "kind": "rightParen",
       "leadingTrivia": "",
@@ -2671,16 +2671,16 @@
     "type": "other"
   },
   {
-    "parent": 55,
     "id": 72,
+    "parent": 55,
     "range": {
       "startColumn": 1,
       "endRow": 7,
       "endColumn": 2,
       "startRow": 7
     },
-    "text": "}",
     "structure": [],
+    "text": "}",
     "token": {
       "kind": "rightBrace",
       "leadingTrivia": "↲",
@@ -2689,16 +2689,16 @@
     "type": "other"
   },
   {
-    "parent": 44,
     "id": 73,
+    "parent": 44,
     "range": {
       "startColumn": 3,
       "endRow": 7,
       "endColumn": 7,
       "startRow": 7
     },
-    "text": "else",
     "structure": [],
+    "text": "else",
     "token": {
       "kind": "elseKeyword",
       "leadingTrivia": "",
@@ -2707,8 +2707,8 @@
     "type": "other"
   },
   {
-    "text": "CodeBlock",
     "id": 74,
+    "parent": 44,
     "range": {
       "startColumn": 8,
       "endRow": 9,
@@ -2762,20 +2762,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 44
+    "text": "CodeBlock",
+    "type": "other"
   },
   {
-    "parent": 74,
     "id": 75,
+    "parent": 74,
     "range": {
       "startColumn": 8,
       "endRow": 7,
       "endColumn": 9,
       "startRow": 7
     },
-    "text": "{",
     "structure": [],
+    "text": "{",
     "token": {
       "kind": "leftBrace",
       "leadingTrivia": "",
@@ -2784,8 +2784,8 @@
     "type": "other"
   },
   {
-    "text": "CodeBlockItemList",
     "id": 76,
+    "parent": 74,
     "range": {
       "startColumn": 3,
       "endRow": 8,
@@ -2806,12 +2806,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 74
+    "text": "CodeBlockItemList",
+    "type": "collection"
   },
   {
-    "text": "CodeBlockItem",
     "id": 77,
+    "parent": 76,
     "range": {
       "startColumn": 3,
       "endRow": 8,
@@ -2863,12 +2863,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 76
+    "text": "CodeBlockItem",
+    "type": "other"
   },
   {
-    "text": "FunctionCallExpr",
     "id": 78,
+    "parent": 77,
     "range": {
       "startColumn": 3,
       "endRow": 8,
@@ -2959,12 +2959,12 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 77
+    "text": "FunctionCallExpr",
+    "type": "expr"
   },
   {
-    "text": "IdentifierExpr",
     "id": 79,
+    "parent": 78,
     "range": {
       "startColumn": 3,
       "endRow": 8,
@@ -3004,20 +3004,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 78
+    "text": "IdentifierExpr",
+    "type": "expr"
   },
   {
-    "parent": 79,
     "id": 80,
+    "parent": 79,
     "range": {
       "startColumn": 3,
       "endRow": 8,
       "endColumn": 8,
       "startRow": 8
     },
-    "text": "print",
     "structure": [],
+    "text": "print",
     "token": {
       "kind": "identifier(\"print\")",
       "leadingTrivia": "↲␣␣",
@@ -3026,16 +3026,16 @@
     "type": "other"
   },
   {
-    "parent": 78,
     "id": 81,
+    "parent": 78,
     "range": {
       "startColumn": 8,
       "endRow": 8,
       "endColumn": 9,
       "startRow": 8
     },
-    "text": "(",
     "structure": [],
+    "text": "(",
     "token": {
       "kind": "leftParen",
       "leadingTrivia": "",
@@ -3044,8 +3044,8 @@
     "type": "other"
   },
   {
-    "text": "TupleExprElementList",
     "id": 82,
+    "parent": 78,
     "range": {
       "startColumn": 9,
       "endRow": 8,
@@ -3066,12 +3066,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 78
+    "text": "TupleExprElementList",
+    "type": "collection"
   },
   {
-    "text": "TupleExprElement",
     "id": 83,
+    "parent": 82,
     "range": {
       "startColumn": 9,
       "endRow": 8,
@@ -3135,12 +3135,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 82
+    "text": "TupleExprElement",
+    "type": "other"
   },
   {
-    "text": "StringLiteralExpr",
     "id": 84,
+    "parent": 83,
     "range": {
       "startColumn": 9,
       "endRow": 8,
@@ -3218,20 +3218,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 83
+    "text": "StringLiteralExpr",
+    "type": "expr"
   },
   {
-    "parent": 84,
     "id": 85,
+    "parent": 84,
     "range": {
       "startColumn": 9,
       "endRow": 8,
       "endColumn": 10,
       "startRow": 8
     },
-    "text": "\"",
     "structure": [],
+    "text": "\"",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -3240,8 +3240,8 @@
     "type": "other"
   },
   {
-    "text": "StringLiteralSegments",
     "id": 86,
+    "parent": 84,
     "range": {
       "startColumn": 10,
       "endRow": 8,
@@ -3262,12 +3262,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 84
+    "text": "StringLiteralSegments",
+    "type": "collection"
   },
   {
-    "text": "StringSegment",
     "id": 87,
+    "parent": 86,
     "range": {
       "startColumn": 10,
       "endRow": 8,
@@ -3295,20 +3295,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 86
+    "text": "StringSegment",
+    "type": "other"
   },
   {
-    "parent": 87,
     "id": 88,
+    "parent": 87,
     "range": {
       "startColumn": 10,
       "endRow": 8,
       "endColumn": 45,
       "startRow": 8
     },
-    "text": "It's not that cold. Wear a t-shirt.",
     "structure": [],
+    "text": "It's not that cold. Wear a t-shirt.",
     "token": {
       "kind": "stringSegment(\"It\\'s not that cold. Wear a t-shirt.\")",
       "leadingTrivia": "",
@@ -3317,16 +3317,16 @@
     "type": "other"
   },
   {
-    "parent": 84,
     "id": 89,
+    "parent": 84,
     "range": {
       "startColumn": 45,
       "endRow": 8,
       "endColumn": 46,
       "startRow": 8
     },
-    "text": "\"",
     "structure": [],
+    "text": "\"",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -3335,16 +3335,16 @@
     "type": "other"
   },
   {
-    "parent": 78,
     "id": 90,
+    "parent": 78,
     "range": {
       "startColumn": 46,
       "endRow": 8,
       "endColumn": 47,
       "startRow": 8
     },
-    "text": ")",
     "structure": [],
+    "text": ")",
     "token": {
       "kind": "rightParen",
       "leadingTrivia": "",
@@ -3353,16 +3353,16 @@
     "type": "other"
   },
   {
-    "parent": 74,
     "id": 91,
+    "parent": 74,
     "range": {
       "startColumn": 1,
       "endRow": 9,
       "endColumn": 2,
       "startRow": 9
     },
-    "text": "}",
     "structure": [],
+    "text": "}",
     "token": {
       "kind": "rightBrace",
       "leadingTrivia": "↲",
@@ -3371,16 +3371,16 @@
     "type": "other"
   },
   {
-    "parent": 0,
     "id": 92,
+    "parent": 0,
     "range": {
       "startColumn": 62,
       "endRow": 11,
       "endColumn": 62,
       "startRow": 11
     },
-    "text": "",
     "structure": [],
+    "text": "",
     "token": {
       "kind": "eof",
       "leadingTrivia": "↲↲<span class='lineComment' data-title='// Prints &quot;It&apos;s really warm. Don&apos;t forget to wear sunscreen.&quot;' data-content='lineComment' data-type='Trivia'>// Prints &quot;It&apos;s really warm. Don&apos;t forget to wear sunscreen.&quot;</span>",
