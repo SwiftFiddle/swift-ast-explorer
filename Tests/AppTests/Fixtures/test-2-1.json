@@ -41,12 +41,12 @@
         }
       }
     ],
-    "type": "other",
-    "text": "SourceFile"
+    "text": "SourceFile",
+    "type": "other"
   },
   {
-    "text": "CodeBlockItemList",
     "id": 1,
+    "parent": 0,
     "range": {
       "startColumn": 1,
       "endRow": 1,
@@ -67,12 +67,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 0
+    "text": "CodeBlockItemList",
+    "type": "collection"
   },
   {
-    "text": "CodeBlockItem",
     "id": 2,
+    "parent": 1,
     "range": {
       "startColumn": 1,
       "endRow": 1,
@@ -124,12 +124,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 1
+    "text": "CodeBlockItem",
+    "type": "other"
   },
   {
-    "text": "VariableDecl",
     "id": 3,
+    "parent": 2,
     "range": {
       "startColumn": 1,
       "endRow": 1,
@@ -194,20 +194,20 @@
         }
       }
     ],
-    "type": "decl",
-    "parent": 2
+    "text": "VariableDecl",
+    "type": "decl"
   },
   {
-    "parent": 3,
     "id": 4,
+    "parent": 3,
     "range": {
       "startColumn": 1,
       "endRow": 1,
       "endColumn": 4,
       "startRow": 1
     },
-    "text": "let",
     "structure": [],
+    "text": "let",
     "token": {
       "kind": "letKeyword",
       "leadingTrivia": "",
@@ -216,8 +216,8 @@
     "type": "other"
   },
   {
-    "text": "PatternBindingList",
     "id": 5,
+    "parent": 3,
     "range": {
       "startColumn": 5,
       "endRow": 1,
@@ -238,12 +238,12 @@
         }
       }
     ],
-    "type": "collection",
-    "parent": 3
+    "text": "PatternBindingList",
+    "type": "collection"
   },
   {
-    "text": "PatternBinding",
     "id": 6,
+    "parent": 5,
     "range": {
       "startColumn": 5,
       "endRow": 1,
@@ -320,12 +320,12 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 5
+    "text": "PatternBinding",
+    "type": "other"
   },
   {
-    "text": "IdentifierPattern",
     "id": 7,
+    "parent": 6,
     "range": {
       "startColumn": 5,
       "endRow": 1,
@@ -353,20 +353,20 @@
         }
       }
     ],
-    "type": "pattern",
-    "parent": 6
+    "text": "IdentifierPattern",
+    "type": "pattern"
   },
   {
-    "parent": 7,
     "id": 8,
+    "parent": 7,
     "range": {
       "startColumn": 5,
       "endRow": 1,
       "endColumn": 11,
       "startRow": 1
     },
-    "text": "number",
     "structure": [],
+    "text": "number",
     "token": {
       "kind": "identifier(\"number\")",
       "leadingTrivia": "",
@@ -375,8 +375,8 @@
     "type": "other"
   },
   {
-    "text": "InitializerClause",
     "id": 9,
+    "parent": 6,
     "range": {
       "startColumn": 12,
       "endRow": 1,
@@ -417,20 +417,20 @@
         }
       }
     ],
-    "type": "other",
-    "parent": 6
+    "text": "InitializerClause",
+    "type": "other"
   },
   {
-    "parent": 9,
     "id": 10,
+    "parent": 9,
     "range": {
       "startColumn": 12,
       "endRow": 1,
       "endColumn": 13,
       "startRow": 1
     },
-    "text": "=",
     "structure": [],
+    "text": "=",
     "token": {
       "kind": "equal",
       "leadingTrivia": "",
@@ -439,8 +439,8 @@
     "type": "other"
   },
   {
-    "text": "IntegerLiteralExpr",
     "id": 11,
+    "parent": 9,
     "range": {
       "startColumn": 14,
       "endRow": 1,
@@ -468,20 +468,20 @@
         }
       }
     ],
-    "type": "expr",
-    "parent": 9
+    "text": "IntegerLiteralExpr",
+    "type": "expr"
   },
   {
-    "parent": 11,
     "id": 12,
+    "parent": 11,
     "range": {
       "startColumn": 14,
       "endRow": 1,
       "endColumn": 15,
       "startRow": 1
     },
-    "text": "0",
     "structure": [],
+    "text": "0",
     "token": {
       "kind": "integerLiteral(\"0\")",
       "leadingTrivia": "",
@@ -490,16 +490,16 @@
     "type": "other"
   },
   {
-    "parent": 0,
     "id": 13,
+    "parent": 0,
     "range": {
       "startColumn": 15,
       "endRow": 1,
       "endColumn": 15,
       "startRow": 1
     },
-    "text": "",
     "structure": [],
+    "text": "",
     "token": {
       "kind": "eof",
       "leadingTrivia": "",
