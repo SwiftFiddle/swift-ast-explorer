@@ -6,9 +6,10 @@ import SwiftParser
 struct SyntaxParser {
   static func parse(code: String, options: [String] = []) throws -> SyntaxResponse {
     let sourceFile = Parser.parse(source: code)
+    
     let syntax: Syntax
-    if options.contains("fold"), let folded = try? OperatorTable.standardOperators.foldAll(sourceFile) {
-      syntax = folded
+    if options.contains("fold") {
+      syntax = OperatorTable.standardOperators.foldAll(sourceFile, errorHandler: { _ in })
     } else {
       syntax = Syntax(sourceFile)
     }
