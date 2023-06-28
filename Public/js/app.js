@@ -54,7 +54,17 @@ export class App {
     });
 
     document.getElementById("config-button").classList.remove("disabled");
-    document.querySelectorAll(".options-item").forEach((listItem) => {
+    document.querySelectorAll(".options-item.radio").forEach((listItem) => {
+      listItem.addEventListener("click", (event) => {
+        event.preventDefault();
+        document.querySelectorAll(".options-item.radio").forEach((listItem) => {
+          listItem.classList.remove("active-tick");
+        });
+        listItem.classList.toggle("active-tick");
+        this.update();
+      });
+    });
+    document.querySelectorAll(".options-item.checkbox").forEach((listItem) => {
       listItem.addEventListener("click", (event) => {
         event.preventDefault();
         listItem.classList.toggle("active-tick");
@@ -92,12 +102,14 @@ export class App {
   update() {
     showLoading();
 
+    const branch = branchOption();
     const options = configurations();
 
     const code = this.editor.getValue();
     const json = {
       code,
       options,
+      branch,
     };
     fetch("/update", {
       method: "POST",
@@ -255,9 +267,19 @@ export class App {
   }
 }
 
+function branchOption() {
+  let branch = "branch_stable";
+  document.querySelectorAll(".options-item.radio").forEach((listItem) => {
+    if (listItem.classList.contains("active-tick")) {
+      branch = listItem.dataset.value;
+    }
+  });
+  return branch;
+}
+
 function configurations() {
   const options = [];
-  document.querySelectorAll(".options-item").forEach((listItem) => {
+  document.querySelectorAll(".options-item.checkbox").forEach((listItem) => {
     if (listItem.classList.contains("active-tick")) {
       options.push(listItem.dataset.value);
     }
