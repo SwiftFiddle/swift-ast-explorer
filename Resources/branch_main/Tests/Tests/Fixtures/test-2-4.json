@@ -22,20 +22,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenStatementsAndEOFToken",
+        "name": "unexpectedBetweenStatementsAndEndOfFileToken",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "eofToken",
+        "name": "endOfFileToken",
         "value": {
           "kind": "eof",
           "text": ""
         }
       },
       {
-        "name": "unexpectedAfterEOFToken",
+        "name": "unexpectedAfterEndOfFileToken",
         "value": {
           "text": "nil"
         }
@@ -283,33 +283,33 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeLeftAngleBracket",
+        "name": "unexpectedBeforeLeftAngle",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "leftAngleBracket",
+        "name": "leftAngle",
         "value": {
           "kind": "leftAngle",
           "text": "<␣"
         }
       },
       {
-        "name": "unexpectedBetweenLeftAngleBracketAndGenericParameterList",
+        "name": "unexpectedBetweenLeftAngleAndParameters",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "genericParameterList",
+        "name": "parameters",
         "ref": "GenericParameterListSyntax",
         "value": {
           "text": "GenericParameterListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenGenericParameterListAndGenericWhereClause",
+        "name": "unexpectedBetweenParametersAndGenericWhereClause",
         "value": {
           "text": "nil"
         }
@@ -321,20 +321,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenGenericWhereClauseAndRightAngleBracket",
+        "name": "unexpectedBetweenGenericWhereClauseAndRightAngle",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "rightAngleBracket",
+        "name": "rightAngle",
         "value": {
           "kind": "rightAngle",
           "text": "MISSING"
         }
       },
       {
-        "name": "unexpectedAfterRightAngleBracket",
+        "name": "unexpectedAfterRightAngle",
         "value": {
           "text": "nil"
         }

@@ -17,6 +17,7 @@ jobs:
           set -ex
           swift test
           (cd Resources/branch_release-5.9 && swift test)
+          (cd Resources/branch_main && swift test)
       - name: Build
         run: |
           set -ex
