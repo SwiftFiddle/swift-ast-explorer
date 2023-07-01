@@ -10,23 +10,22 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    print(response.syntaxHTML)
 
-//    XCTAssertEqual(
-//      try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
-//      try decoder.decode(
-//        [TreeNode].self, from: Data(
-//          contentsOf: Bundle.module.url(forResource: "test-1-1.json", withExtension: nil)!
-//        )
-//      )
-//    )
-//    XCTAssertEqual(
-//      response.syntaxHTML,
-//      try String(
-//        contentsOf: Bundle.module.url(forResource: "test-1-1.html", withExtension: nil)!
-//      )
-//      .replacingOccurrences(of: "\n", with: "")
-//    )
+    XCTAssertEqual(
+      try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
+      try decoder.decode(
+        [TreeNode].self, from: Data(
+          contentsOf: Bundle.module.url(forResource: "test-1-1.json", withExtension: nil)!
+        )
+      )
+    )
+    XCTAssertEqual(
+      response.syntaxHTML,
+      try String(
+        contentsOf: Bundle.module.url(forResource: "test-1-1.html", withExtension: nil)!
+      )
+      .replacingOccurrences(of: "\n", with: "")
+    )
   }
 
   func testParser2() throws {

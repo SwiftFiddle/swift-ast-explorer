@@ -64,7 +64,7 @@ func routes(_ app: Application) throws {
       environment: [
         "NSUnbufferedIO": "YES",
       ],
-      workingDirectory: try! AbsolutePath.init(validating: "\(app.directory.resourcesDirectory)\(branch)/.build/release/")
+      workingDirectory: try! AbsolutePath.init(validating: "\(app.directory.resourcesDirectory)\(branch)/.build/debug/")
     )
 
     try process.launch()
