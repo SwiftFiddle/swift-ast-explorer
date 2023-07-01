@@ -1,19 +1,37 @@
-name: Update Package.resolved
+name: Update Swift Package
+
 on:
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: "30 22 * * *"
   workflow_dispatch:
 
 jobs:
-  run:
-    runs-on: macos-13
+  update:
+    runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Update Package.resolved
+      - name: Checkout to the branch
+        uses: actions/checkout@v3
+      - name: Update Swift Package
         run: |
           set -ex
-          swift package update
-          swift build
-          git add Package.resolved
-          git diff-index --quiet HEAD || git commit -m "Update Package.resolved"
-          git push origin master
+
+          swift package update --package-path ./
+          swift package update --package-path Resources/branch_main
+          swift package update --package-path Resources/branch_release-5.9
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GH_PAT }}
+          base: "master"
+          commit-message: "Update Swift Packages"
+          title: "Update Swift Packages"
+          add-paths: |
+            Package.resolved
+            **/Package.resolved
+      - name: Enable Pull Request Automerge
+        if: ${{ steps.cpr.outputs.pull-request-url }}
+        run: gh pr merge --merge --auto ${{ steps.cpr.outputs.pull-request-url }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}

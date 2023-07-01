@@ -1,7 +1,7 @@
 @testable import parser
 import XCTest
 
-final class AppTests: XCTestCase {
+final class Tests: XCTestCase {
   func testParser1() throws {
     let response = try SyntaxParser.parse(
       code: """
