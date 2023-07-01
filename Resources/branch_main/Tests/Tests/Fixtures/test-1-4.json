@@ -1,0 +1,1629 @@
+[
+  {
+    "id": 0,
+    "range": {
+      "startColumn": 1,
+      "endRow": 4,
+      "endColumn": 2,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeStatements",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "statements",
+        "value": {
+          "text": "CodeBlockItemListSyntax"
+        },
+        "ref": "CodeBlockItemListSyntax"
+      },
+      {
+        "name": "unexpectedBetweenStatementsAndEOFToken",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "eofToken",
+        "value": {
+          "kind": "eof",
+          "text": ""
+        }
+      },
+      {
+        "name": "unexpectedAfterEOFToken",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "SourceFile",
+    "type": "other"
+  },
+  {
+    "id": 1,
+    "parent": 0,
+    "range": {
+      "startColumn": 1,
+      "endRow": 4,
+      "endColumn": 2,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "CodeBlockItemSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "2"
+        }
+      }
+    ],
+    "text": "CodeBlockItemList",
+    "type": "collection"
+  },
+  {
+    "id": 2,
+    "parent": 1,
+    "range": {
+      "startColumn": 1,
+      "endRow": 1,
+      "endColumn": 17,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeItem",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "item",
+        "value": {
+          "text": "StructDeclSyntax"
+        },
+        "ref": "StructDeclSyntax"
+      },
+      {
+        "name": "unexpectedBetweenItemAndSemicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "semicolon",
+        "value": {
+          "kind": "semicolon",
+          "text": ""
+        }
+      },
+      {
+        "name": "unexpectedBetweenSemicolonAndErrorTokens",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "errorTokens",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterErrorTokens",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "CodeBlockItem",
+    "type": "other"
+  },
+  {
+    "id": 3,
+    "parent": 2,
+    "range": {
+      "startColumn": 1,
+      "endRow": 1,
+      "endColumn": 17,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeAttributes",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "attributes",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenAttributesAndModifiers",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "modifiers",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModifiersAndStructKeyword",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "structKeyword",
+        "value": {
+          "kind": "structKeyword",
+          "text": "struct␣"
+        }
+      },
+      {
+        "name": "unexpectedBetweenStructKeywordAndIdentifier",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "identifier",
+        "value": {
+          "kind": "identifier(\"Result\")",
+          "text": "Result"
+        }
+      },
+      {
+        "name": "unexpectedBetweenIdentifierAndGenericParameterClause",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "genericParameterClause",
+        "value": {
+          "text": "GenericParameterClauseSyntax"
+        },
+        "ref": "GenericParameterClauseSyntax"
+      },
+      {
+        "name": "unexpectedBetweenGenericParameterClauseAndInheritanceClause",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "inheritanceClause",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenInheritanceClauseAndGenericWhereClause",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "genericWhereClause",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenGenericWhereClauseAndMembers",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "members",
+        "value": {
+          "text": "MemberDeclBlockSyntax"
+        },
+        "ref": "MemberDeclBlockSyntax"
+      },
+      {
+        "name": "unexpectedAfterMembers",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "StructDecl",
+    "type": "decl"
+  },
+  {
+    "id": 4,
+    "parent": 3,
+    "range": {
+      "startColumn": 1,
+      "endRow": 1,
+      "endColumn": 7,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "struct",
+    "token": {
+      "kind": "structKeyword",
+      "leadingTrivia": "",
+      "trailingTrivia": "␣"
+    },
+    "type": "other"
+  },
+  {
+    "id": 5,
+    "parent": 3,
+    "range": {
+      "startColumn": 8,
+      "endRow": 1,
+      "endColumn": 14,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "Result",
+    "token": {
+      "kind": "identifier(\"Result\")",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 6,
+    "parent": 3,
+    "range": {
+      "startColumn": 14,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeLeftAngleBracket",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "leftAngleBracket",
+        "value": {
+          "kind": "leftAngle",
+          "text": "<␣"
+        }
+      },
+      {
+        "name": "unexpectedBetweenLeftAngleBracketAndGenericParameterList",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "genericParameterList",
+        "value": {
+          "text": "GenericParameterListSyntax"
+        },
+        "ref": "GenericParameterListSyntax"
+      },
+      {
+        "name": "unexpectedBetweenGenericParameterListAndGenericWhereClause",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "genericWhereClause",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenGenericWhereClauseAndRightAngleBracket",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "rightAngleBracket",
+        "value": {
+          "kind": "rightAngle",
+          "text": ""
+        }
+      },
+      {
+        "name": "unexpectedAfterRightAngleBracket",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "GenericParameterClause",
+    "type": "other"
+  },
+  {
+    "id": 7,
+    "parent": 6,
+    "range": {
+      "startColumn": 14,
+      "endRow": 1,
+      "endColumn": 15,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "<",
+    "token": {
+      "kind": "leftAngle",
+      "leadingTrivia": "",
+      "trailingTrivia": "␣"
+    },
+    "type": "other"
+  },
+  {
+    "id": 8,
+    "parent": 6,
+    "range": {
+      "startColumn": 16,
+      "endRow": 1,
+      "endColumn": 16,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "GenericParameterSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "GenericParameterList",
+    "type": "collection"
+  },
+  {
+    "id": 9,
+    "parent": 6,
+    "range": {
+      "startColumn": 16,
+      "endRow": 1,
+      "endColumn": 16,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": ">",
+    "token": {
+      "kind": "rightAngle",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 10,
+    "parent": 3,
+    "range": {
+      "startColumn": 16,
+      "endRow": 1,
+      "endColumn": 17,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeLeftBrace",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "leftBrace",
+        "value": {
+          "kind": "leftBrace",
+          "text": "{"
+        }
+      },
+      {
+        "name": "unexpectedBetweenLeftBraceAndMembers",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "members",
+        "value": {
+          "text": "MemberDeclListSyntax"
+        },
+        "ref": "MemberDeclListSyntax"
+      },
+      {
+        "name": "unexpectedBetweenMembersAndRightBrace",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "rightBrace",
+        "value": {
+          "kind": "rightBrace",
+          "text": ""
+        }
+      },
+      {
+        "name": "unexpectedAfterRightBrace",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "MemberDeclBlock",
+    "type": "other"
+  },
+  {
+    "id": 11,
+    "parent": 10,
+    "range": {
+      "startColumn": 16,
+      "endRow": 1,
+      "endColumn": 17,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "{",
+    "token": {
+      "kind": "leftBrace",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 12,
+    "parent": 10,
+    "range": {
+      "startColumn": 17,
+      "endRow": 1,
+      "endColumn": 17,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "MemberDeclListItemSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "MemberDeclList",
+    "type": "collection"
+  },
+  {
+    "id": 13,
+    "parent": 10,
+    "range": {
+      "startColumn": 17,
+      "endRow": 1,
+      "endColumn": 17,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "}",
+    "token": {
+      "kind": "rightBrace",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 14,
+    "parent": 2,
+    "range": {
+      "startColumn": 17,
+      "endRow": 1,
+      "endColumn": 17,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": ";",
+    "token": {
+      "kind": "semicolon",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 15,
+    "parent": 1,
+    "range": {
+      "startColumn": 17,
+      "endRow": 4,
+      "endColumn": 2,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeItem",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "item",
+        "value": {
+          "text": "ClosureExprSyntax"
+        },
+        "ref": "ClosureExprSyntax"
+      },
+      {
+        "name": "unexpectedBetweenItemAndSemicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "semicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenSemicolonAndErrorTokens",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "errorTokens",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterErrorTokens",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "CodeBlockItem",
+    "type": "other"
+  },
+  {
+    "id": 16,
+    "parent": 15,
+    "range": {
+      "startColumn": 17,
+      "endRow": 4,
+      "endColumn": 2,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeLeftBrace",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "leftBrace",
+        "value": {
+          "kind": "leftBrace",
+          "text": "{"
+        }
+      },
+      {
+        "name": "unexpectedBetweenLeftBraceAndSignature",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "signature",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenSignatureAndStatements",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "statements",
+        "value": {
+          "text": "CodeBlockItemListSyntax"
+        },
+        "ref": "CodeBlockItemListSyntax"
+      },
+      {
+        "name": "unexpectedBetweenStatementsAndRightBrace",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "rightBrace",
+        "value": {
+          "kind": "rightBrace",
+          "text": "↲}"
+        }
+      },
+      {
+        "name": "unexpectedAfterRightBrace",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "ClosureExpr",
+    "type": "expr"
+  },
+  {
+    "id": 17,
+    "parent": 16,
+    "range": {
+      "startColumn": 17,
+      "endRow": 1,
+      "endColumn": 18,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "{",
+    "token": {
+      "kind": "leftBrace",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 18,
+    "parent": 16,
+    "range": {
+      "startColumn": 3,
+      "endRow": 3,
+      "endColumn": 29,
+      "startRow": 2
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "CodeBlockItemSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "2"
+        }
+      }
+    ],
+    "text": "CodeBlockItemList",
+    "type": "collection"
+  },
+  {
+    "id": 19,
+    "parent": 18,
+    "range": {
+      "startColumn": 3,
+      "endRow": 2,
+      "endColumn": 19,
+      "startRow": 2
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeItem",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "item",
+        "value": {
+          "text": "VariableDeclSyntax"
+        },
+        "ref": "VariableDeclSyntax"
+      },
+      {
+        "name": "unexpectedBetweenItemAndSemicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "semicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenSemicolonAndErrorTokens",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "errorTokens",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterErrorTokens",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "CodeBlockItem",
+    "type": "other"
+  },
+  {
+    "id": 20,
+    "parent": 19,
+    "range": {
+      "startColumn": 3,
+      "endRow": 2,
+      "endColumn": 19,
+      "startRow": 2
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeAttributes",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "attributes",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenAttributesAndModifiers",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "modifiers",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModifiersAndLetOrVarKeyword",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "letOrVarKeyword",
+        "value": {
+          "kind": "letKeyword",
+          "text": "↲␣␣let␣"
+        }
+      },
+      {
+        "name": "unexpectedBetweenLetOrVarKeywordAndBindings",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "bindings",
+        "value": {
+          "text": "PatternBindingListSyntax"
+        },
+        "ref": "PatternBindingListSyntax"
+      },
+      {
+        "name": "unexpectedAfterBindings",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "VariableDecl",
+    "type": "decl"
+  },
+  {
+    "id": 21,
+    "parent": 20,
+    "range": {
+      "startColumn": 3,
+      "endRow": 2,
+      "endColumn": 6,
+      "startRow": 2
+    },
+    "structure": [],
+    "text": "let",
+    "token": {
+      "kind": "letKeyword",
+      "leadingTrivia": "↲␣␣",
+      "trailingTrivia": "␣"
+    },
+    "type": "other"
+  },
+  {
+    "id": 22,
+    "parent": 20,
+    "range": {
+      "startColumn": 7,
+      "endRow": 2,
+      "endColumn": 19,
+      "startRow": 2
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "PatternBindingSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "1"
+        }
+      }
+    ],
+    "text": "PatternBindingList",
+    "type": "collection"
+  },
+  {
+    "id": 23,
+    "parent": 22,
+    "range": {
+      "startColumn": 7,
+      "endRow": 2,
+      "endColumn": 19,
+      "startRow": 2
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforePattern",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "pattern",
+        "value": {
+          "text": "IdentifierPatternSyntax"
+        },
+        "ref": "IdentifierPatternSyntax"
+      },
+      {
+        "name": "unexpectedBetweenPatternAndTypeAnnotation",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "typeAnnotation",
+        "value": {
+          "text": "TypeAnnotationSyntax"
+        },
+        "ref": "TypeAnnotationSyntax"
+      },
+      {
+        "name": "unexpectedBetweenTypeAnnotationAndInitializer",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "initializer",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenInitializerAndAccessor",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "accessor",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "trailingComma",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "PatternBinding",
+    "type": "other"
+  },
+  {
+    "id": 24,
+    "parent": 23,
+    "range": {
+      "startColumn": 7,
+      "endRow": 2,
+      "endColumn": 11,
+      "startRow": 2
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeIdentifier",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "identifier",
+        "value": {
+          "kind": "identifier(\"text\")",
+          "text": "text"
+        }
+      },
+      {
+        "name": "unexpectedAfterIdentifier",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "IdentifierPattern",
+    "type": "pattern"
+  },
+  {
+    "id": 25,
+    "parent": 24,
+    "range": {
+      "startColumn": 7,
+      "endRow": 2,
+      "endColumn": 11,
+      "startRow": 2
+    },
+    "structure": [],
+    "text": "text",
+    "token": {
+      "kind": "identifier(\"text\")",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 26,
+    "parent": 23,
+    "range": {
+      "startColumn": 11,
+      "endRow": 2,
+      "endColumn": 19,
+      "startRow": 2
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeColon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "colon",
+        "value": {
+          "kind": "colon",
+          "text": ":␣"
+        }
+      },
+      {
+        "name": "unexpectedBetweenColonAndType",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "type",
+        "value": {
+          "text": "SimpleTypeIdentifierSyntax"
+        },
+        "ref": "SimpleTypeIdentifierSyntax"
+      },
+      {
+        "name": "unexpectedAfterType",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "TypeAnnotation",
+    "type": "other"
+  },
+  {
+    "id": 27,
+    "parent": 26,
+    "range": {
+      "startColumn": 11,
+      "endRow": 2,
+      "endColumn": 12,
+      "startRow": 2
+    },
+    "structure": [],
+    "text": ":",
+    "token": {
+      "kind": "colon",
+      "leadingTrivia": "",
+      "trailingTrivia": "␣"
+    },
+    "type": "other"
+  },
+  {
+    "id": 28,
+    "parent": 26,
+    "range": {
+      "startColumn": 13,
+      "endRow": 2,
+      "endColumn": 19,
+      "startRow": 2
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeName",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "name",
+        "value": {
+          "kind": "identifier(\"String\")",
+          "text": "String"
+        }
+      },
+      {
+        "name": "unexpectedBetweenNameAndGenericArgumentClause",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "genericArgumentClause",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterGenericArgumentClause",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "SimpleTypeIdentifier",
+    "type": "type"
+  },
+  {
+    "id": 29,
+    "parent": 28,
+    "range": {
+      "startColumn": 13,
+      "endRow": 2,
+      "endColumn": 19,
+      "startRow": 2
+    },
+    "structure": [],
+    "text": "String",
+    "token": {
+      "kind": "identifier(\"String\")",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 30,
+    "parent": 18,
+    "range": {
+      "startColumn": 3,
+      "endRow": 3,
+      "endColumn": 29,
+      "startRow": 3
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeItem",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "item",
+        "value": {
+          "text": "VariableDeclSyntax"
+        },
+        "ref": "VariableDeclSyntax"
+      },
+      {
+        "name": "unexpectedBetweenItemAndSemicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "semicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenSemicolonAndErrorTokens",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "errorTokens",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterErrorTokens",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "CodeBlockItem",
+    "type": "other"
+  },
+  {
+    "id": 31,
+    "parent": 30,
+    "range": {
+      "startColumn": 3,
+      "endRow": 3,
+      "endColumn": 29,
+      "startRow": 3
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeAttributes",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "attributes",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenAttributesAndModifiers",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "modifiers",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModifiersAndLetOrVarKeyword",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "letOrVarKeyword",
+        "value": {
+          "kind": "letKeyword",
+          "text": "↲␣␣let␣"
+        }
+      },
+      {
+        "name": "unexpectedBetweenLetOrVarKeywordAndBindings",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "bindings",
+        "value": {
+          "text": "PatternBindingListSyntax"
+        },
+        "ref": "PatternBindingListSyntax"
+      },
+      {
+        "name": "unexpectedAfterBindings",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "VariableDecl",
+    "type": "decl"
+  },
+  {
+    "id": 32,
+    "parent": 31,
+    "range": {
+      "startColumn": 3,
+      "endRow": 3,
+      "endColumn": 6,
+      "startRow": 3
+    },
+    "structure": [],
+    "text": "let",
+    "token": {
+      "kind": "letKeyword",
+      "leadingTrivia": "↲␣␣",
+      "trailingTrivia": "␣"
+    },
+    "type": "other"
+  },
+  {
+    "id": 33,
+    "parent": 31,
+    "range": {
+      "startColumn": 7,
+      "endRow": 3,
+      "endColumn": 29,
+      "startRow": 3
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "PatternBindingSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "1"
+        }
+      }
+    ],
+    "text": "PatternBindingList",
+    "type": "collection"
+  },
+  {
+    "id": 34,
+    "parent": 33,
+    "range": {
+      "startColumn": 7,
+      "endRow": 3,
+      "endColumn": 29,
+      "startRow": 3
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforePattern",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "pattern",
+        "value": {
+          "text": "IdentifierPatternSyntax"
+        },
+        "ref": "IdentifierPatternSyntax"
+      },
+      {
+        "name": "unexpectedBetweenPatternAndTypeAnnotation",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "typeAnnotation",
+        "value": {
+          "text": "TypeAnnotationSyntax"
+        },
+        "ref": "TypeAnnotationSyntax"
+      },
+      {
+        "name": "unexpectedBetweenTypeAnnotationAndInitializer",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "initializer",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenInitializerAndAccessor",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "accessor",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "trailingComma",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "PatternBinding",
+    "type": "other"
+  },
+  {
+    "id": 35,
+    "parent": 34,
+    "range": {
+      "startColumn": 7,
+      "endRow": 3,
+      "endColumn": 21,
+      "startRow": 3
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeIdentifier",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "identifier",
+        "value": {
+          "kind": "identifier(\"someOtherThing\")",
+          "text": "someOtherThing"
+        }
+      },
+      {
+        "name": "unexpectedAfterIdentifier",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "IdentifierPattern",
+    "type": "pattern"
+  },
+  {
+    "id": 36,
+    "parent": 35,
+    "range": {
+      "startColumn": 7,
+      "endRow": 3,
+      "endColumn": 21,
+      "startRow": 3
+    },
+    "structure": [],
+    "text": "someOtherThing",
+    "token": {
+      "kind": "identifier(\"someOtherThing\")",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 37,
+    "parent": 34,
+    "range": {
+      "startColumn": 21,
+      "endRow": 3,
+      "endColumn": 29,
+      "startRow": 3
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeColon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "colon",
+        "value": {
+          "kind": "colon",
+          "text": ":␣"
+        }
+      },
+      {
+        "name": "unexpectedBetweenColonAndType",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "type",
+        "value": {
+          "text": "SimpleTypeIdentifierSyntax"
+        },
+        "ref": "SimpleTypeIdentifierSyntax"
+      },
+      {
+        "name": "unexpectedAfterType",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "TypeAnnotation",
+    "type": "other"
+  },
+  {
+    "id": 38,
+    "parent": 37,
+    "range": {
+      "startColumn": 21,
+      "endRow": 3,
+      "endColumn": 22,
+      "startRow": 3
+    },
+    "structure": [],
+    "text": ":",
+    "token": {
+      "kind": "colon",
+      "leadingTrivia": "",
+      "trailingTrivia": "␣"
+    },
+    "type": "other"
+  },
+  {
+    "id": 39,
+    "parent": 37,
+    "range": {
+      "startColumn": 23,
+      "endRow": 3,
+      "endColumn": 29,
+      "startRow": 3
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeName",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "name",
+        "value": {
+          "kind": "identifier(\"String\")",
+          "text": "String"
+        }
+      },
+      {
+        "name": "unexpectedBetweenNameAndGenericArgumentClause",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "genericArgumentClause",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterGenericArgumentClause",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "SimpleTypeIdentifier",
+    "type": "type"
+  },
+  {
+    "id": 40,
+    "parent": 39,
+    "range": {
+      "startColumn": 23,
+      "endRow": 3,
+      "endColumn": 29,
+      "startRow": 3
+    },
+    "structure": [],
+    "text": "String",
+    "token": {
+      "kind": "identifier(\"String\")",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 41,
+    "parent": 16,
+    "range": {
+      "startColumn": 1,
+      "endRow": 4,
+      "endColumn": 2,
+      "startRow": 4
+    },
+    "structure": [],
+    "text": "}",
+    "token": {
+      "kind": "rightBrace",
+      "leadingTrivia": "↲",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 42,
+    "parent": 0,
+    "range": {
+      "startColumn": 2,
+      "endRow": 4,
+      "endColumn": 2,
+      "startRow": 4
+    },
+    "structure": [],
+    "text": "",
+    "token": {
+      "kind": "eof",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  }
+]

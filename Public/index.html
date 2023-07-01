@@ -83,18 +83,41 @@
             <span id="run-button-spinner" class="fa-duotone fa-spinner-third fa-spin fa-fw d-none"></span>
             <span class="px-1">Update</span>
           </button>
-          <button id="config-button" type="button"
-            class="btn btn-outline-primary btn-sm rounded-circle button-circle m-1 disabled" data-bs-toggle="dropdown"
-            data-bs-auto-close="outside" data-bs-offset="0,10" aria-label="Options" aria-expanded="false">
-            <span class="fa-solid fa-cog fa-fw"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li class="options-item" data-value="fold">
-              <a class="dropdown-item" data-target="#">
-                Fold All Sequence Expressions
-              </a>
-            </li>
-          </ul>
+          <div class="dropdown d-inline-block">
+            <button id="config-button" type="button"
+              class="btn btn-outline-primary btn-sm rounded-circle button-circle m-1 disabled" data-bs-toggle="dropdown"
+              data-bs-auto-close="outside" data-bs-offset="0,10" aria-label="Options" aria-expanded="false">
+              <span class="fa-solid fa-cog fa-fw"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <h6 class="dropdown-header">Swift Syntax</h6>
+              </li>
+              <li class="options-item radio active-tick" data-value="branch_stable">
+                <a class="dropdown-item" data-target="#">
+                  508.0.1 (Swift 5.8)
+                </a>
+              </li>
+              <li class="options-item radio" data-value="branch_release-5.9">
+                <a class="dropdown-item" data-target="#">
+                  release/5.9 branch
+                </a>
+              </li>
+              <li class="options-item radio" data-value="branch_main">
+                <a class="dropdown-item" data-target="#">
+                  main branch
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="options-item checkbox" data-value="fold">
+                <a class="dropdown-item" data-target="#">
+                  Fold All Sequence Expressions
+                </a>
+              </li>
+            </ul>
+          </div>
           <button id="format-button" type="button"
             class="btn btn-outline-primary btn-sm rounded-circle button-circle m-1 disabled" data-bs-toggle="tooltip"
             data-bs-placement="bottom" data-bs-container="#format-button" title="Format" aria-label="Format">

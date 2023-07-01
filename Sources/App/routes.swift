@@ -1,4 +1,5 @@
 import Vapor
+import TSCBasic
 
 func routes(_ app: Application) throws {
   app.get("healthz") { _ in ["status": "pass"] }
@@ -48,7 +49,31 @@ func routes(_ app: Application) throws {
 
   app.on(.POST, "update", body: .collect(maxSize: "10mb")) { (req) -> SyntaxResponse in
     let parameter = try req.content.decode(RequestParameter.self)
-    return try SyntaxParser.parse(code: parameter.code, options: parameter.options ?? [])
+    let options = parameter.options ?? []
+    if let branch = parameter.branch, branch != "branch_stable" {
+      let response = try await experimentalParser(branch: branch, arguments: [parameter.code] + options)
+      return try JSONDecoder().decode(SyntaxResponse.self, from: Data(response.stdout.utf8))
+    } else {
+      return try SyntaxParser.parse(code: parameter.code, options: options)
+    }
+  }
+
+  func experimentalParser(branch: String, arguments: [String]) async throws -> (stdout: String, stderr: String) {
+    let process = TSCBasic.Process(
+      arguments: ["parser"] + arguments,
+      environment: [
+        "NSUnbufferedIO": "YES",
+      ],
+      workingDirectory: try! AbsolutePath.init(validating: "\(app.directory.resourcesDirectory)\(branch)/.build/release/")
+    )
+
+    try process.launch()
+    let processResult = try await process.waitUntilExit()
+
+    let stdout = try processResult.utf8Output()
+    let stderr = try processResult.utf8stderrOutput() 
+
+    return (stdout, stderr)
   }
 }
 
@@ -57,6 +82,7 @@ let swiftVersion = Environment.get("SWIFT_VERSION") ?? ""
 private struct RequestParameter: Decodable {
   let code: String
   let options: [String]?
+  let branch: String?
 }
 
 private let defaultSampleCode = #"""
