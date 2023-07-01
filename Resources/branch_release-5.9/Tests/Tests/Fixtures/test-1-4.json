@@ -103,23 +103,11 @@
         "name": "semicolon",
         "value": {
           "kind": "semicolon",
-          "text": ""
+          "text": "MISSING"
         }
       },
       {
-        "name": "unexpectedBetweenSemicolonAndErrorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "errorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterErrorTokens",
+        "name": "unexpectedAfterSemicolon",
         "value": {
           "text": "nil"
         }
@@ -171,7 +159,7 @@
       {
         "name": "structKeyword",
         "value": {
-          "kind": "structKeyword",
+          "kind": "keyword(SwiftSyntax.Keyword.struct)",
           "text": "struct␣"
         }
       },
@@ -226,20 +214,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenGenericWhereClauseAndMembers",
+        "name": "unexpectedBetweenGenericWhereClauseAndMemberBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "members",
+        "name": "memberBlock",
         "ref": "MemberDeclBlockSyntax",
         "value": {
           "text": "MemberDeclBlockSyntax"
         }
       },
       {
-        "name": "unexpectedAfterMembers",
+        "name": "unexpectedAfterMemberBlock",
         "value": {
           "text": "nil"
         }
@@ -260,7 +248,7 @@
     "structure": [],
     "text": "struct",
     "token": {
-      "kind": "structKeyword",
+      "kind": "keyword(SwiftSyntax.Keyword.struct)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -342,7 +330,7 @@
         "name": "rightAngleBracket",
         "value": {
           "kind": "rightAngle",
-          "text": ""
+          "text": "MISSING"
         }
       },
       {
@@ -401,24 +389,6 @@
   },
   {
     "id": 9,
-    "parent": 6,
-    "range": {
-      "endColumn": 16,
-      "endRow": 1,
-      "startColumn": 16,
-      "startRow": 1
-    },
-    "structure": [],
-    "text": ">",
-    "token": {
-      "kind": "rightAngle",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 10,
     "parent": 3,
     "range": {
       "endColumn": 17,
@@ -463,7 +433,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": ""
+          "text": "MISSING"
         }
       },
       {
@@ -477,8 +447,8 @@
     "type": "other"
   },
   {
-    "id": 11,
-    "parent": 10,
+    "id": 10,
+    "parent": 9,
     "range": {
       "endColumn": 17,
       "endRow": 1,
@@ -495,8 +465,8 @@
     "type": "other"
   },
   {
-    "id": 12,
-    "parent": 10,
+    "id": 11,
+    "parent": 9,
     "range": {
       "endColumn": 17,
       "endRow": 1,
@@ -521,43 +491,7 @@
     "type": "collection"
   },
   {
-    "id": 13,
-    "parent": 10,
-    "range": {
-      "endColumn": 17,
-      "endRow": 1,
-      "startColumn": 17,
-      "startRow": 1
-    },
-    "structure": [],
-    "text": "}",
-    "token": {
-      "kind": "rightBrace",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 14,
-    "parent": 2,
-    "range": {
-      "endColumn": 17,
-      "endRow": 1,
-      "startColumn": 17,
-      "startRow": 1
-    },
-    "structure": [],
-    "text": ";",
-    "token": {
-      "kind": "semicolon",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 15,
+    "id": 12,
     "parent": 1,
     "range": {
       "endColumn": 2,
@@ -592,19 +526,7 @@
         }
       },
       {
-        "name": "unexpectedBetweenSemicolonAndErrorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "errorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterErrorTokens",
+        "name": "unexpectedAfterSemicolon",
         "value": {
           "text": "nil"
         }
@@ -614,8 +536,8 @@
     "type": "other"
   },
   {
-    "id": 16,
-    "parent": 15,
+    "id": 13,
+    "parent": 12,
     "range": {
       "endColumn": 2,
       "endRow": 4,
@@ -685,8 +607,8 @@
     "type": "expr"
   },
   {
-    "id": 17,
-    "parent": 16,
+    "id": 14,
+    "parent": 13,
     "range": {
       "endColumn": 18,
       "endRow": 1,
@@ -703,8 +625,8 @@
     "type": "other"
   },
   {
-    "id": 18,
-    "parent": 16,
+    "id": 15,
+    "parent": 13,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -729,8 +651,8 @@
     "type": "collection"
   },
   {
-    "id": 19,
-    "parent": 18,
+    "id": 16,
+    "parent": 15,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -764,19 +686,7 @@
         }
       },
       {
-        "name": "unexpectedBetweenSemicolonAndErrorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "errorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterErrorTokens",
+        "name": "unexpectedAfterSemicolon",
         "value": {
           "text": "nil"
         }
@@ -786,8 +696,8 @@
     "type": "other"
   },
   {
-    "id": 20,
-    "parent": 19,
+    "id": 17,
+    "parent": 16,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -820,20 +730,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndLetOrVarKeyword",
+        "name": "unexpectedBetweenModifiersAndBindingKeyword",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "letOrVarKeyword",
+        "name": "bindingKeyword",
         "value": {
-          "kind": "letKeyword",
+          "kind": "keyword(SwiftSyntax.Keyword.let)",
           "text": "↲␣␣let␣"
         }
       },
       {
-        "name": "unexpectedBetweenLetOrVarKeywordAndBindings",
+        "name": "unexpectedBetweenBindingKeywordAndBindings",
         "value": {
           "text": "nil"
         }
@@ -856,8 +766,8 @@
     "type": "decl"
   },
   {
-    "id": 21,
-    "parent": 20,
+    "id": 18,
+    "parent": 17,
     "range": {
       "endColumn": 6,
       "endRow": 2,
@@ -867,15 +777,15 @@
     "structure": [],
     "text": "let",
     "token": {
-      "kind": "letKeyword",
+      "kind": "keyword(SwiftSyntax.Keyword.let)",
       "leadingTrivia": "↲␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
   },
   {
-    "id": 22,
-    "parent": 20,
+    "id": 19,
+    "parent": 17,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -900,8 +810,8 @@
     "type": "collection"
   },
   {
-    "id": 23,
-    "parent": 22,
+    "id": 20,
+    "parent": 19,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -982,8 +892,8 @@
     "type": "other"
   },
   {
-    "id": 24,
-    "parent": 23,
+    "id": 21,
+    "parent": 20,
     "range": {
       "endColumn": 11,
       "endRow": 2,
@@ -1015,8 +925,8 @@
     "type": "pattern"
   },
   {
-    "id": 25,
-    "parent": 24,
+    "id": 22,
+    "parent": 21,
     "range": {
       "endColumn": 11,
       "endRow": 2,
@@ -1033,8 +943,8 @@
     "type": "other"
   },
   {
-    "id": 26,
-    "parent": 23,
+    "id": 23,
+    "parent": 20,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -1079,8 +989,8 @@
     "type": "other"
   },
   {
-    "id": 27,
-    "parent": 26,
+    "id": 24,
+    "parent": 23,
     "range": {
       "endColumn": 12,
       "endRow": 2,
@@ -1097,8 +1007,8 @@
     "type": "other"
   },
   {
-    "id": 28,
-    "parent": 26,
+    "id": 25,
+    "parent": 23,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -1142,8 +1052,8 @@
     "type": "type"
   },
   {
-    "id": 29,
-    "parent": 28,
+    "id": 26,
+    "parent": 25,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -1160,8 +1070,8 @@
     "type": "other"
   },
   {
-    "id": 30,
-    "parent": 18,
+    "id": 27,
+    "parent": 15,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1195,19 +1105,7 @@
         }
       },
       {
-        "name": "unexpectedBetweenSemicolonAndErrorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "errorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterErrorTokens",
+        "name": "unexpectedAfterSemicolon",
         "value": {
           "text": "nil"
         }
@@ -1217,8 +1115,8 @@
     "type": "other"
   },
   {
-    "id": 31,
-    "parent": 30,
+    "id": 28,
+    "parent": 27,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1251,20 +1149,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndLetOrVarKeyword",
+        "name": "unexpectedBetweenModifiersAndBindingKeyword",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "letOrVarKeyword",
+        "name": "bindingKeyword",
         "value": {
-          "kind": "letKeyword",
+          "kind": "keyword(SwiftSyntax.Keyword.let)",
           "text": "↲␣␣let␣"
         }
       },
       {
-        "name": "unexpectedBetweenLetOrVarKeywordAndBindings",
+        "name": "unexpectedBetweenBindingKeywordAndBindings",
         "value": {
           "text": "nil"
         }
@@ -1287,8 +1185,8 @@
     "type": "decl"
   },
   {
-    "id": 32,
-    "parent": 31,
+    "id": 29,
+    "parent": 28,
     "range": {
       "endColumn": 6,
       "endRow": 3,
@@ -1298,15 +1196,15 @@
     "structure": [],
     "text": "let",
     "token": {
-      "kind": "letKeyword",
+      "kind": "keyword(SwiftSyntax.Keyword.let)",
       "leadingTrivia": "↲␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
   },
   {
-    "id": 33,
-    "parent": 31,
+    "id": 30,
+    "parent": 28,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1331,8 +1229,8 @@
     "type": "collection"
   },
   {
-    "id": 34,
-    "parent": 33,
+    "id": 31,
+    "parent": 30,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1413,8 +1311,8 @@
     "type": "other"
   },
   {
-    "id": 35,
-    "parent": 34,
+    "id": 32,
+    "parent": 31,
     "range": {
       "endColumn": 21,
       "endRow": 3,
@@ -1446,8 +1344,8 @@
     "type": "pattern"
   },
   {
-    "id": 36,
-    "parent": 35,
+    "id": 33,
+    "parent": 32,
     "range": {
       "endColumn": 21,
       "endRow": 3,
@@ -1464,8 +1362,8 @@
     "type": "other"
   },
   {
-    "id": 37,
-    "parent": 34,
+    "id": 34,
+    "parent": 31,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1510,8 +1408,8 @@
     "type": "other"
   },
   {
-    "id": 38,
-    "parent": 37,
+    "id": 35,
+    "parent": 34,
     "range": {
       "endColumn": 22,
       "endRow": 3,
@@ -1528,8 +1426,8 @@
     "type": "other"
   },
   {
-    "id": 39,
-    "parent": 37,
+    "id": 36,
+    "parent": 34,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1573,8 +1471,8 @@
     "type": "type"
   },
   {
-    "id": 40,
-    "parent": 39,
+    "id": 37,
+    "parent": 36,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1591,8 +1489,8 @@
     "type": "other"
   },
   {
-    "id": 41,
-    "parent": 16,
+    "id": 38,
+    "parent": 13,
     "range": {
       "endColumn": 2,
       "endRow": 4,
@@ -1609,7 +1507,7 @@
     "type": "other"
   },
   {
-    "id": 42,
+    "id": 39,
     "parent": 0,
     "range": {
       "endColumn": 2,

@@ -2,8 +2,8 @@
 <span class='CodeBlockItemList' data-title='import Foundation↲↲struct BlackjackCard {↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }↲}' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":44,"endColumn":2}'>
 <span class='CodeBlockItem' data-title='import Foundation' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":18}'>
 <span class='ImportDecl' data-title='import Foundation' data-content='ImportDeclSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":18}'>
-<span class='Token' data-title='import' data-content='importKeyword' data-type='Token' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":7}'>
-<span class='token keyword' data-title='import' data-content='importKeyword' data-type='Token' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":7}'>import</span>&nbsp;
+<span class='Token' data-title='import' data-content='keyword(SwiftSyntax.Keyword.import)' data-type='Token' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":7}'>
+<span class='token keyword' data-title='import' data-content='keyword(SwiftSyntax.Keyword.import)' data-type='Token' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":7}'>import</span>&nbsp;
 </span>
 <span class='AccessPath' data-title='Foundation' data-content='AccessPathSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":8,"endRow":1,"endColumn":18}'>
 <span class='AccessPathComponent' data-title='Foundation' data-content='AccessPathComponentSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":8,"endRow":1,"endColumn":18}'>
@@ -16,10 +16,10 @@
 </span>
 <span class='CodeBlockItem' data-title='struct BlackjackCard {↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }↲}' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":1,"endRow":44,"endColumn":2}'>
 <span class='StructDecl' data-title='struct BlackjackCard {↲  // nested Suit enumeration↲  enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }↲}' data-content='StructDeclSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":1,"endRow":44,"endColumn":2}'>
-<span class='Token' data-title='struct' data-content='structKeyword' data-type='Token' data-range='{"startRow":3,"startColumn":1,"endRow":3,"endColumn":7}'>
+<span class='Token' data-title='struct' data-content='keyword(SwiftSyntax.Keyword.struct)' data-type='Token' data-range='{"startRow":3,"startColumn":1,"endRow":3,"endColumn":7}'>
 <br>
 <br>
-<span class='token keyword' data-title='struct' data-content='structKeyword' data-type='Token' data-range='{"startRow":3,"startColumn":1,"endRow":3,"endColumn":7}'>struct</span>&nbsp;
+<span class='token keyword' data-title='struct' data-content='keyword(SwiftSyntax.Keyword.struct)' data-type='Token' data-range='{"startRow":3,"startColumn":1,"endRow":3,"endColumn":7}'>struct</span>&nbsp;
 </span>
 <span class='Token' data-title='BlackjackCard' data-content='identifier(&quot;BlackjackCard&quot;)' data-type='Token' data-range='{"startRow":3,"startColumn":8,"endRow":3,"endColumn":21}'>
 <span class='token identifier' data-title='BlackjackCard' data-content='identifier(&quot;BlackjackCard&quot;)' data-type='Token' data-range='{"startRow":3,"startColumn":8,"endRow":3,"endColumn":21}'>BlackjackCard</span>&nbsp;
@@ -31,11 +31,11 @@
 <span class='MemberDeclList' data-title='enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }↲↲  // nested Rank enumeration↲  enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }↲↲  // BlackjackCard properties and methods↲  let rank: Rank, suit: Suit↲  var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }' data-content='MemberDeclListSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":43,"endColumn":4}'>
 <span class='MemberDeclListItem' data-title='enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":10,"endColumn":4}'>
 <span class='EnumDecl' data-title='enum Suit: Character {↲    case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;↲  }' data-content='EnumDeclSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":10,"endColumn":4}'>
-<span class='Token' data-title='enum' data-content='enumKeyword' data-type='Token' data-range='{"startRow":5,"startColumn":3,"endRow":5,"endColumn":7}'>
+<span class='Token' data-title='enum' data-content='keyword(SwiftSyntax.Keyword.enum)' data-type='Token' data-range='{"startRow":5,"startColumn":3,"endRow":5,"endColumn":7}'>
 <br>&nbsp;&nbsp;
 <span class='lineComment' data-title='// nested Suit enumeration' data-content='lineComment' data-type='Trivia'>// nested Suit enumeration</span>
 <br>&nbsp;&nbsp;
-<span class='token keyword' data-title='enum' data-content='enumKeyword' data-type='Token' data-range='{"startRow":5,"startColumn":3,"endRow":5,"endColumn":7}'>enum</span>&nbsp;
+<span class='token keyword' data-title='enum' data-content='keyword(SwiftSyntax.Keyword.enum)' data-type='Token' data-range='{"startRow":5,"startColumn":3,"endRow":5,"endColumn":7}'>enum</span>&nbsp;
 </span>
 <span class='Token' data-title='Suit' data-content='identifier(&quot;Suit&quot;)' data-type='Token' data-range='{"startRow":5,"startColumn":8,"endRow":5,"endColumn":12}'>
 <span class='token identifier' data-title='Suit' data-content='identifier(&quot;Suit&quot;)' data-type='Token' data-range='{"startRow":5,"startColumn":8,"endRow":5,"endColumn":12}'>Suit</span>
@@ -61,9 +61,9 @@
 <span class='MemberDeclList' data-title='case spades = &quot;♠&quot;↲    case hearts = &quot;♡&quot;↲    case diamonds = &quot;♢&quot;↲    case clubs = &quot;♣&quot;' data-content='MemberDeclListSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":9,"endColumn":23}'>
 <span class='MemberDeclListItem' data-title='case spades = &quot;♠&quot;' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":24}'>
 <span class='EnumCaseDecl' data-title='case spades = &quot;♠&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":24}'>
-<span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":9}'>
+<span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":9}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":9}'>case</span>&nbsp;
+<span class='token keyword' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":9}'>case</span>&nbsp;
 </span>
 <span class='EnumCaseElementList' data-title='spades = &quot;♠&quot;' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":10,"endRow":6,"endColumn":24}'>
 <span class='EnumCaseElement' data-title='spades = &quot;♠&quot;' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":10,"endRow":6,"endColumn":24}'>
@@ -96,9 +96,9 @@
 </span>
 <span class='MemberDeclListItem' data-title='case hearts = &quot;♡&quot;' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":24}'>
 <span class='EnumCaseDecl' data-title='case hearts = &quot;♡&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":24}'>
-<span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":9}'>
+<span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":9}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":9}'>case</span>&nbsp;
+<span class='token keyword' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":9}'>case</span>&nbsp;
 </span>
 <span class='EnumCaseElementList' data-title='hearts = &quot;♡&quot;' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":10,"endRow":7,"endColumn":24}'>
 <span class='EnumCaseElement' data-title='hearts = &quot;♡&quot;' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":10,"endRow":7,"endColumn":24}'>
@@ -131,9 +131,9 @@
 </span>
 <span class='MemberDeclListItem' data-title='case diamonds = &quot;♢&quot;' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":26}'>
 <span class='EnumCaseDecl' data-title='case diamonds = &quot;♢&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":26}'>
-<span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":9}'>
+<span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":9}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":9}'>case</span>&nbsp;
+<span class='token keyword' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":9}'>case</span>&nbsp;
 </span>
 <span class='EnumCaseElementList' data-title='diamonds = &quot;♢&quot;' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":10,"endRow":8,"endColumn":26}'>
 <span class='EnumCaseElement' data-title='diamonds = &quot;♢&quot;' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":10,"endRow":8,"endColumn":26}'>
@@ -166,9 +166,9 @@
 </span>
 <span class='MemberDeclListItem' data-title='case clubs = &quot;♣&quot;' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":23}'>
 <span class='EnumCaseDecl' data-title='case clubs = &quot;♣&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":23}'>
-<span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":9}'>
+<span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":9}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":9}'>case</span>&nbsp;
+<span class='token keyword' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":9}'>case</span>&nbsp;
 </span>
 <span class='EnumCaseElementList' data-title='clubs = &quot;♣&quot;' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":10,"endRow":9,"endColumn":23}'>
 <span class='EnumCaseElement' data-title='clubs = &quot;♣&quot;' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":10,"endRow":9,"endColumn":23}'>
@@ -209,12 +209,12 @@
 </span>
 <span class='MemberDeclListItem' data-title='enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":13,"startColumn":3,"endRow":32,"endColumn":4}'>
 <span class='EnumDecl' data-title='enum Rank: Int {↲    case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }↲  }' data-content='EnumDeclSyntax' data-type='Syntax' data-range='{"startRow":13,"startColumn":3,"endRow":32,"endColumn":4}'>
-<span class='Token' data-title='enum' data-content='enumKeyword' data-type='Token' data-range='{"startRow":13,"startColumn":3,"endRow":13,"endColumn":7}'>
+<span class='Token' data-title='enum' data-content='keyword(SwiftSyntax.Keyword.enum)' data-type='Token' data-range='{"startRow":13,"startColumn":3,"endRow":13,"endColumn":7}'>
 <br>
 <br>&nbsp;&nbsp;
 <span class='lineComment' data-title='// nested Rank enumeration' data-content='lineComment' data-type='Trivia'>// nested Rank enumeration</span>
 <br>&nbsp;&nbsp;
-<span class='token keyword' data-title='enum' data-content='enumKeyword' data-type='Token' data-range='{"startRow":13,"startColumn":3,"endRow":13,"endColumn":7}'>enum</span>&nbsp;
+<span class='token keyword' data-title='enum' data-content='keyword(SwiftSyntax.Keyword.enum)' data-type='Token' data-range='{"startRow":13,"startColumn":3,"endRow":13,"endColumn":7}'>enum</span>&nbsp;
 </span>
 <span class='Token' data-title='Rank' data-content='identifier(&quot;Rank&quot;)' data-type='Token' data-range='{"startRow":13,"startColumn":8,"endRow":13,"endColumn":12}'>
 <span class='token identifier' data-title='Rank' data-content='identifier(&quot;Rank&quot;)' data-type='Token' data-range='{"startRow":13,"startColumn":8,"endRow":13,"endColumn":12}'>Rank</span>
@@ -240,9 +240,9 @@
 <span class='MemberDeclList' data-title='case two = 2↲    case three, four, five, six, seven, eight, nine, ten↲    case jack, queen, king, ace↲↲    struct Values {↲      let first: Int, second: Int?↲    }↲↲    var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }' data-content='MemberDeclListSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":5,"endRow":31,"endColumn":6}'>
 <span class='MemberDeclListItem' data-title='case two = 2' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":5,"endRow":14,"endColumn":17}'>
 <span class='EnumCaseDecl' data-title='case two = 2' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":5,"endRow":14,"endColumn":17}'>
-<span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":14,"startColumn":5,"endRow":14,"endColumn":9}'>
+<span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":14,"startColumn":5,"endRow":14,"endColumn":9}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":14,"startColumn":5,"endRow":14,"endColumn":9}'>case</span>&nbsp;
+<span class='token keyword' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":14,"startColumn":5,"endRow":14,"endColumn":9}'>case</span>&nbsp;
 </span>
 <span class='EnumCaseElementList' data-title='two = 2' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":10,"endRow":14,"endColumn":17}'>
 <span class='EnumCaseElement' data-title='two = 2' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":10,"endRow":14,"endColumn":17}'>
@@ -265,9 +265,9 @@
 </span>
 <span class='MemberDeclListItem' data-title='case three, four, five, six, seven, eight, nine, ten' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":5,"endRow":15,"endColumn":57}'>
 <span class='EnumCaseDecl' data-title='case three, four, five, six, seven, eight, nine, ten' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":5,"endRow":15,"endColumn":57}'>
-<span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":15,"startColumn":5,"endRow":15,"endColumn":9}'>
+<span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":15,"startColumn":5,"endRow":15,"endColumn":9}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":15,"startColumn":5,"endRow":15,"endColumn":9}'>case</span>&nbsp;
+<span class='token keyword' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":15,"startColumn":5,"endRow":15,"endColumn":9}'>case</span>&nbsp;
 </span>
 <span class='EnumCaseElementList' data-title='three, four, five, six, seven, eight, nine, ten' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":10,"endRow":15,"endColumn":57}'>
 <span class='EnumCaseElement' data-title='three,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":10,"endRow":15,"endColumn":16}'>
@@ -336,9 +336,9 @@
 </span>
 <span class='MemberDeclListItem' data-title='case jack, queen, king, ace' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":5,"endRow":16,"endColumn":32}'>
 <span class='EnumCaseDecl' data-title='case jack, queen, king, ace' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":5,"endRow":16,"endColumn":32}'>
-<span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":16,"startColumn":5,"endRow":16,"endColumn":9}'>
+<span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":16,"startColumn":5,"endRow":16,"endColumn":9}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":16,"startColumn":5,"endRow":16,"endColumn":9}'>case</span>&nbsp;
+<span class='token keyword' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":16,"startColumn":5,"endRow":16,"endColumn":9}'>case</span>&nbsp;
 </span>
 <span class='EnumCaseElementList' data-title='jack, queen, king, ace' data-content='EnumCaseElementListSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":10,"endRow":16,"endColumn":32}'>
 <span class='EnumCaseElement' data-title='jack,' data-content='EnumCaseElementSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":10,"endRow":16,"endColumn":15}'>
@@ -375,10 +375,10 @@
 </span>
 <span class='MemberDeclListItem' data-title='struct Values {↲      let first: Int, second: Int?↲    }' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":18,"startColumn":5,"endRow":20,"endColumn":6}'>
 <span class='StructDecl' data-title='struct Values {↲      let first: Int, second: Int?↲    }' data-content='StructDeclSyntax' data-type='Syntax' data-range='{"startRow":18,"startColumn":5,"endRow":20,"endColumn":6}'>
-<span class='Token' data-title='struct' data-content='structKeyword' data-type='Token' data-range='{"startRow":18,"startColumn":5,"endRow":18,"endColumn":11}'>
+<span class='Token' data-title='struct' data-content='keyword(SwiftSyntax.Keyword.struct)' data-type='Token' data-range='{"startRow":18,"startColumn":5,"endRow":18,"endColumn":11}'>
 <br>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='struct' data-content='structKeyword' data-type='Token' data-range='{"startRow":18,"startColumn":5,"endRow":18,"endColumn":11}'>struct</span>&nbsp;
+<span class='token keyword' data-title='struct' data-content='keyword(SwiftSyntax.Keyword.struct)' data-type='Token' data-range='{"startRow":18,"startColumn":5,"endRow":18,"endColumn":11}'>struct</span>&nbsp;
 </span>
 <span class='Token' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":18,"startColumn":12,"endRow":18,"endColumn":18}'>
 <span class='token identifier' data-title='Values' data-content='identifier(&quot;Values&quot;)' data-type='Token' data-range='{"startRow":18,"startColumn":12,"endRow":18,"endColumn":18}'>Values</span>&nbsp;
@@ -390,9 +390,9 @@
 <span class='MemberDeclList' data-title='let first: Int, second: Int?' data-content='MemberDeclListSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":7,"endRow":19,"endColumn":35}'>
 <span class='MemberDeclListItem' data-title='let first: Int, second: Int?' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":7,"endRow":19,"endColumn":35}'>
 <span class='VariableDecl' data-title='let first: Int, second: Int?' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":7,"endRow":19,"endColumn":35}'>
-<span class='Token' data-title='let' data-content='letKeyword' data-type='Token' data-range='{"startRow":19,"startColumn":7,"endRow":19,"endColumn":10}'>
+<span class='Token' data-title='let' data-content='keyword(SwiftSyntax.Keyword.let)' data-type='Token' data-range='{"startRow":19,"startColumn":7,"endRow":19,"endColumn":10}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='let' data-content='letKeyword' data-type='Token' data-range='{"startRow":19,"startColumn":7,"endRow":19,"endColumn":10}'>let</span>&nbsp;
+<span class='token keyword' data-title='let' data-content='keyword(SwiftSyntax.Keyword.let)' data-type='Token' data-range='{"startRow":19,"startColumn":7,"endRow":19,"endColumn":10}'>let</span>&nbsp;
 </span>
 <span class='PatternBindingList' data-title='first: Int, second: Int?' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":11,"endRow":19,"endColumn":35}'>
 <span class='PatternBinding' data-title='first: Int,' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":11,"endRow":19,"endColumn":22}'>
@@ -450,10 +450,10 @@
 </span>
 <span class='MemberDeclListItem' data-title='var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":22,"startColumn":5,"endRow":31,"endColumn":6}'>
 <span class='VariableDecl' data-title='var values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":22,"startColumn":5,"endRow":31,"endColumn":6}'>
-<span class='Token' data-title='var' data-content='varKeyword' data-type='Token' data-range='{"startRow":22,"startColumn":5,"endRow":22,"endColumn":8}'>
+<span class='Token' data-title='var' data-content='keyword(SwiftSyntax.Keyword.var)' data-type='Token' data-range='{"startRow":22,"startColumn":5,"endRow":22,"endColumn":8}'>
 <br>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='var' data-content='varKeyword' data-type='Token' data-range='{"startRow":22,"startColumn":5,"endRow":22,"endColumn":8}'>var</span>&nbsp;
+<span class='token keyword' data-title='var' data-content='keyword(SwiftSyntax.Keyword.var)' data-type='Token' data-range='{"startRow":22,"startColumn":5,"endRow":22,"endColumn":8}'>var</span>&nbsp;
 </span>
 <span class='PatternBindingList' data-title='values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":22,"startColumn":9,"endRow":31,"endColumn":6}'>
 <span class='PatternBinding' data-title='values: Values {↲      switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }↲    }' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":22,"startColumn":9,"endRow":31,"endColumn":6}'>
@@ -478,14 +478,15 @@
 </span>
 <span class='CodeBlockItemList' data-title='switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":23,"startColumn":7,"endRow":30,"endColumn":8}'>
 <span class='CodeBlockItem' data-title='switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":23,"startColumn":7,"endRow":30,"endColumn":8}'>
-<span class='SwitchStmt' data-title='switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }' data-content='SwitchStmtSyntax' data-type='Syntax' data-range='{"startRow":23,"startColumn":7,"endRow":30,"endColumn":8}'>
-<span class='Token' data-title='switch' data-content='switchKeyword' data-type='Token' data-range='{"startRow":23,"startColumn":7,"endRow":23,"endColumn":13}'>
+<span class='ExpressionStmt' data-title='switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }' data-content='ExpressionStmtSyntax' data-type='Syntax' data-range='{"startRow":23,"startColumn":7,"endRow":30,"endColumn":8}'>
+<span class='SwitchExpr' data-title='switch self {↲      case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)↲      }' data-content='SwitchExprSyntax' data-type='Syntax' data-range='{"startRow":23,"startColumn":7,"endRow":30,"endColumn":8}'>
+<span class='Token' data-title='switch' data-content='keyword(SwiftSyntax.Keyword.switch)' data-type='Token' data-range='{"startRow":23,"startColumn":7,"endRow":23,"endColumn":13}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='switch' data-content='switchKeyword' data-type='Token' data-range='{"startRow":23,"startColumn":7,"endRow":23,"endColumn":13}'>switch</span>&nbsp;
+<span class='token keyword' data-title='switch' data-content='keyword(SwiftSyntax.Keyword.switch)' data-type='Token' data-range='{"startRow":23,"startColumn":7,"endRow":23,"endColumn":13}'>switch</span>&nbsp;
 </span>
 <span class='IdentifierExpr' data-title='self' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":23,"startColumn":14,"endRow":23,"endColumn":18}'>
-<span class='Token' data-title='self' data-content='selfKeyword' data-type='Token' data-range='{"startRow":23,"startColumn":14,"endRow":23,"endColumn":18}'>
-<span class='token keyword' data-title='self' data-content='selfKeyword' data-type='Token' data-range='{"startRow":23,"startColumn":14,"endRow":23,"endColumn":18}'>self</span>&nbsp;
+<span class='Token' data-title='self' data-content='keyword(SwiftSyntax.Keyword.self)' data-type='Token' data-range='{"startRow":23,"startColumn":14,"endRow":23,"endColumn":18}'>
+<span class='token keyword' data-title='self' data-content='keyword(SwiftSyntax.Keyword.self)' data-type='Token' data-range='{"startRow":23,"startColumn":14,"endRow":23,"endColumn":18}'>self</span>&nbsp;
 </span>
 </span>
 <span class='Token' data-title='{' data-content='leftBrace' data-type='Token' data-range='{"startRow":23,"startColumn":19,"endRow":23,"endColumn":20}'>
@@ -494,16 +495,16 @@
 <span class='SwitchCaseList' data-title='case .ace:↲        return Values(first: 1, second: 11)↲      case .jack, .queen, .king:↲        return Values(first: 10, second: nil)↲      default:↲        return Values(first: self.rawValue, second: nil)' data-content='SwitchCaseListSyntax' data-type='Syntax' data-range='{"startRow":24,"startColumn":7,"endRow":29,"endColumn":57}'>
 <span class='SwitchCase' data-title='case .ace:↲        return Values(first: 1, second: 11)' data-content='SwitchCaseSyntax' data-type='Syntax' data-range='{"startRow":24,"startColumn":7,"endRow":25,"endColumn":44}'>
 <span class='SwitchCaseLabel' data-title='case .ace:' data-content='SwitchCaseLabelSyntax' data-type='Syntax' data-range='{"startRow":24,"startColumn":7,"endRow":24,"endColumn":17}'>
-<span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":24,"startColumn":7,"endRow":24,"endColumn":11}'>
+<span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":24,"startColumn":7,"endRow":24,"endColumn":11}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":24,"startColumn":7,"endRow":24,"endColumn":11}'>case</span>&nbsp;
+<span class='token keyword' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":24,"startColumn":7,"endRow":24,"endColumn":11}'>case</span>&nbsp;
 </span>
 <span class='CaseItemList' data-title='.ace' data-content='CaseItemListSyntax' data-type='Syntax' data-range='{"startRow":24,"startColumn":12,"endRow":24,"endColumn":16}'>
 <span class='CaseItem' data-title='.ace' data-content='CaseItemSyntax' data-type='Syntax' data-range='{"startRow":24,"startColumn":12,"endRow":24,"endColumn":16}'>
 <span class='ExpressionPattern' data-title='.ace' data-content='ExpressionPatternSyntax' data-type='Syntax' data-range='{"startRow":24,"startColumn":12,"endRow":24,"endColumn":16}'>
 <span class='MemberAccessExpr' data-title='.ace' data-content='MemberAccessExprSyntax' data-type='Syntax' data-range='{"startRow":24,"startColumn":12,"endRow":24,"endColumn":16}'>
-<span class='Token' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":24,"startColumn":12,"endRow":24,"endColumn":13}'>
-<span class='token prefixPeriod' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":24,"startColumn":12,"endRow":24,"endColumn":13}'>.</span>
+<span class='Token' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":24,"startColumn":12,"endRow":24,"endColumn":13}'>
+<span class='token period' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":24,"startColumn":12,"endRow":24,"endColumn":13}'>.</span>
 </span>
 <span class='Token' data-title='ace' data-content='identifier(&quot;ace&quot;)' data-type='Token' data-range='{"startRow":24,"startColumn":13,"endRow":24,"endColumn":16}'>
 <span class='token identifier' data-title='ace' data-content='identifier(&quot;ace&quot;)' data-type='Token' data-range='{"startRow":24,"startColumn":13,"endRow":24,"endColumn":16}'>ace</span>
@@ -519,9 +520,9 @@
 <span class='CodeBlockItemList' data-title='return Values(first: 1, second: 11)' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":9,"endRow":25,"endColumn":44}'>
 <span class='CodeBlockItem' data-title='return Values(first: 1, second: 11)' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":9,"endRow":25,"endColumn":44}'>
 <span class='ReturnStmt' data-title='return Values(first: 1, second: 11)' data-content='ReturnStmtSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":9,"endRow":25,"endColumn":44}'>
-<span class='Token' data-title='return' data-content='returnKeyword' data-type='Token' data-range='{"startRow":25,"startColumn":9,"endRow":25,"endColumn":15}'>
+<span class='Token' data-title='return' data-content='keyword(SwiftSyntax.Keyword.return)' data-type='Token' data-range='{"startRow":25,"startColumn":9,"endRow":25,"endColumn":15}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='return' data-content='returnKeyword' data-type='Token' data-range='{"startRow":25,"startColumn":9,"endRow":25,"endColumn":15}'>return</span>&nbsp;
+<span class='token keyword' data-title='return' data-content='keyword(SwiftSyntax.Keyword.return)' data-type='Token' data-range='{"startRow":25,"startColumn":9,"endRow":25,"endColumn":15}'>return</span>&nbsp;
 </span>
 <span class='FunctionCallExpr' data-title='Values(first: 1, second: 11)' data-content='FunctionCallExprSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":16,"endRow":25,"endColumn":44}'>
 <span class='IdentifierExpr' data-title='Values' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":16,"endRow":25,"endColumn":22}'>
@@ -573,16 +574,16 @@
 </span>
 <span class='SwitchCase' data-title='case .jack, .queen, .king:↲        return Values(first: 10, second: nil)' data-content='SwitchCaseSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":7,"endRow":27,"endColumn":46}'>
 <span class='SwitchCaseLabel' data-title='case .jack, .queen, .king:' data-content='SwitchCaseLabelSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":7,"endRow":26,"endColumn":33}'>
-<span class='Token' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":26,"startColumn":7,"endRow":26,"endColumn":11}'>
+<span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":26,"startColumn":7,"endRow":26,"endColumn":11}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='case' data-content='caseKeyword' data-type='Token' data-range='{"startRow":26,"startColumn":7,"endRow":26,"endColumn":11}'>case</span>&nbsp;
+<span class='token keyword' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":26,"startColumn":7,"endRow":26,"endColumn":11}'>case</span>&nbsp;
 </span>
 <span class='CaseItemList' data-title='.jack, .queen, .king' data-content='CaseItemListSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":12,"endRow":26,"endColumn":32}'>
 <span class='CaseItem' data-title='.jack,' data-content='CaseItemSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":12,"endRow":26,"endColumn":18}'>
 <span class='ExpressionPattern' data-title='.jack' data-content='ExpressionPatternSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":12,"endRow":26,"endColumn":17}'>
 <span class='MemberAccessExpr' data-title='.jack' data-content='MemberAccessExprSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":12,"endRow":26,"endColumn":17}'>
-<span class='Token' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":12,"endRow":26,"endColumn":13}'>
-<span class='token prefixPeriod' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":12,"endRow":26,"endColumn":13}'>.</span>
+<span class='Token' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":26,"startColumn":12,"endRow":26,"endColumn":13}'>
+<span class='token period' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":26,"startColumn":12,"endRow":26,"endColumn":13}'>.</span>
 </span>
 <span class='Token' data-title='jack' data-content='identifier(&quot;jack&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":13,"endRow":26,"endColumn":17}'>
 <span class='token identifier' data-title='jack' data-content='identifier(&quot;jack&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":13,"endRow":26,"endColumn":17}'>jack</span>
@@ -596,8 +597,8 @@
 <span class='CaseItem' data-title='.queen,' data-content='CaseItemSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":19,"endRow":26,"endColumn":26}'>
 <span class='ExpressionPattern' data-title='.queen' data-content='ExpressionPatternSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":19,"endRow":26,"endColumn":25}'>
 <span class='MemberAccessExpr' data-title='.queen' data-content='MemberAccessExprSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":19,"endRow":26,"endColumn":25}'>
-<span class='Token' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":19,"endRow":26,"endColumn":20}'>
-<span class='token prefixPeriod' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":19,"endRow":26,"endColumn":20}'>.</span>
+<span class='Token' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":26,"startColumn":19,"endRow":26,"endColumn":20}'>
+<span class='token period' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":26,"startColumn":19,"endRow":26,"endColumn":20}'>.</span>
 </span>
 <span class='Token' data-title='queen' data-content='identifier(&quot;queen&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":20,"endRow":26,"endColumn":25}'>
 <span class='token identifier' data-title='queen' data-content='identifier(&quot;queen&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":20,"endRow":26,"endColumn":25}'>queen</span>
@@ -611,8 +612,8 @@
 <span class='CaseItem' data-title='.king' data-content='CaseItemSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":27,"endRow":26,"endColumn":32}'>
 <span class='ExpressionPattern' data-title='.king' data-content='ExpressionPatternSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":27,"endRow":26,"endColumn":32}'>
 <span class='MemberAccessExpr' data-title='.king' data-content='MemberAccessExprSyntax' data-type='Syntax' data-range='{"startRow":26,"startColumn":27,"endRow":26,"endColumn":32}'>
-<span class='Token' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":27,"endRow":26,"endColumn":28}'>
-<span class='token prefixPeriod' data-title='.' data-content='prefixPeriod' data-type='Token' data-range='{"startRow":26,"startColumn":27,"endRow":26,"endColumn":28}'>.</span>
+<span class='Token' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":26,"startColumn":27,"endRow":26,"endColumn":28}'>
+<span class='token period' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":26,"startColumn":27,"endRow":26,"endColumn":28}'>.</span>
 </span>
 <span class='Token' data-title='king' data-content='identifier(&quot;king&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":28,"endRow":26,"endColumn":32}'>
 <span class='token identifier' data-title='king' data-content='identifier(&quot;king&quot;)' data-type='Token' data-range='{"startRow":26,"startColumn":28,"endRow":26,"endColumn":32}'>king</span>
@@ -628,9 +629,9 @@
 <span class='CodeBlockItemList' data-title='return Values(first: 10, second: nil)' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":9,"endRow":27,"endColumn":46}'>
 <span class='CodeBlockItem' data-title='return Values(first: 10, second: nil)' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":9,"endRow":27,"endColumn":46}'>
 <span class='ReturnStmt' data-title='return Values(first: 10, second: nil)' data-content='ReturnStmtSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":9,"endRow":27,"endColumn":46}'>
-<span class='Token' data-title='return' data-content='returnKeyword' data-type='Token' data-range='{"startRow":27,"startColumn":9,"endRow":27,"endColumn":15}'>
+<span class='Token' data-title='return' data-content='keyword(SwiftSyntax.Keyword.return)' data-type='Token' data-range='{"startRow":27,"startColumn":9,"endRow":27,"endColumn":15}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='return' data-content='returnKeyword' data-type='Token' data-range='{"startRow":27,"startColumn":9,"endRow":27,"endColumn":15}'>return</span>&nbsp;
+<span class='token keyword' data-title='return' data-content='keyword(SwiftSyntax.Keyword.return)' data-type='Token' data-range='{"startRow":27,"startColumn":9,"endRow":27,"endColumn":15}'>return</span>&nbsp;
 </span>
 <span class='FunctionCallExpr' data-title='Values(first: 10, second: nil)' data-content='FunctionCallExprSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":16,"endRow":27,"endColumn":46}'>
 <span class='IdentifierExpr' data-title='Values' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":16,"endRow":27,"endColumn":22}'>
@@ -666,8 +667,8 @@
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":27,"startColumn":40,"endRow":27,"endColumn":41}'>:</span>&nbsp;
 </span>
 <span class='NilLiteralExpr' data-title='nil' data-content='NilLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":42,"endRow":27,"endColumn":45}'>
-<span class='Token' data-title='nil' data-content='nilKeyword' data-type='Token' data-range='{"startRow":27,"startColumn":42,"endRow":27,"endColumn":45}'>
-<span class='token keyword' data-title='nil' data-content='nilKeyword' data-type='Token' data-range='{"startRow":27,"startColumn":42,"endRow":27,"endColumn":45}'>nil</span>
+<span class='Token' data-title='nil' data-content='keyword(SwiftSyntax.Keyword.nil)' data-type='Token' data-range='{"startRow":27,"startColumn":42,"endRow":27,"endColumn":45}'>
+<span class='token keyword' data-title='nil' data-content='keyword(SwiftSyntax.Keyword.nil)' data-type='Token' data-range='{"startRow":27,"startColumn":42,"endRow":27,"endColumn":45}'>nil</span>
 </span>
 </span>
 </span>
@@ -682,9 +683,9 @@
 </span>
 <span class='SwitchCase' data-title='default:↲        return Values(first: self.rawValue, second: nil)' data-content='SwitchCaseSyntax' data-type='Syntax' data-range='{"startRow":28,"startColumn":7,"endRow":29,"endColumn":57}'>
 <span class='SwitchDefaultLabel' data-title='default:' data-content='SwitchDefaultLabelSyntax' data-type='Syntax' data-range='{"startRow":28,"startColumn":7,"endRow":28,"endColumn":15}'>
-<span class='Token' data-title='default' data-content='defaultKeyword' data-type='Token' data-range='{"startRow":28,"startColumn":7,"endRow":28,"endColumn":14}'>
+<span class='Token' data-title='default' data-content='keyword(SwiftSyntax.Keyword.default)' data-type='Token' data-range='{"startRow":28,"startColumn":7,"endRow":28,"endColumn":14}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='default' data-content='defaultKeyword' data-type='Token' data-range='{"startRow":28,"startColumn":7,"endRow":28,"endColumn":14}'>default</span>
+<span class='token keyword' data-title='default' data-content='keyword(SwiftSyntax.Keyword.default)' data-type='Token' data-range='{"startRow":28,"startColumn":7,"endRow":28,"endColumn":14}'>default</span>
 </span>
 <span class='Token' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":28,"startColumn":14,"endRow":28,"endColumn":15}'>
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":28,"startColumn":14,"endRow":28,"endColumn":15}'>:</span>
@@ -693,9 +694,9 @@
 <span class='CodeBlockItemList' data-title='return Values(first: self.rawValue, second: nil)' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":9,"endRow":29,"endColumn":57}'>
 <span class='CodeBlockItem' data-title='return Values(first: self.rawValue, second: nil)' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":9,"endRow":29,"endColumn":57}'>
 <span class='ReturnStmt' data-title='return Values(first: self.rawValue, second: nil)' data-content='ReturnStmtSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":9,"endRow":29,"endColumn":57}'>
-<span class='Token' data-title='return' data-content='returnKeyword' data-type='Token' data-range='{"startRow":29,"startColumn":9,"endRow":29,"endColumn":15}'>
+<span class='Token' data-title='return' data-content='keyword(SwiftSyntax.Keyword.return)' data-type='Token' data-range='{"startRow":29,"startColumn":9,"endRow":29,"endColumn":15}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='return' data-content='returnKeyword' data-type='Token' data-range='{"startRow":29,"startColumn":9,"endRow":29,"endColumn":15}'>return</span>&nbsp;
+<span class='token keyword' data-title='return' data-content='keyword(SwiftSyntax.Keyword.return)' data-type='Token' data-range='{"startRow":29,"startColumn":9,"endRow":29,"endColumn":15}'>return</span>&nbsp;
 </span>
 <span class='FunctionCallExpr' data-title='Values(first: self.rawValue, second: nil)' data-content='FunctionCallExprSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":16,"endRow":29,"endColumn":57}'>
 <span class='IdentifierExpr' data-title='Values' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":16,"endRow":29,"endColumn":22}'>
@@ -716,8 +717,8 @@
 </span>
 <span class='MemberAccessExpr' data-title='self.rawValue' data-content='MemberAccessExprSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":30,"endRow":29,"endColumn":43}'>
 <span class='IdentifierExpr' data-title='self' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":30,"endRow":29,"endColumn":34}'>
-<span class='Token' data-title='self' data-content='selfKeyword' data-type='Token' data-range='{"startRow":29,"startColumn":30,"endRow":29,"endColumn":34}'>
-<span class='token keyword' data-title='self' data-content='selfKeyword' data-type='Token' data-range='{"startRow":29,"startColumn":30,"endRow":29,"endColumn":34}'>self</span>
+<span class='Token' data-title='self' data-content='keyword(SwiftSyntax.Keyword.self)' data-type='Token' data-range='{"startRow":29,"startColumn":30,"endRow":29,"endColumn":34}'>
+<span class='token keyword' data-title='self' data-content='keyword(SwiftSyntax.Keyword.self)' data-type='Token' data-range='{"startRow":29,"startColumn":30,"endRow":29,"endColumn":34}'>self</span>
 </span>
 </span>
 <span class='Token' data-title='.' data-content='period' data-type='Token' data-range='{"startRow":29,"startColumn":34,"endRow":29,"endColumn":35}'>
@@ -739,8 +740,8 @@
 <span class='token colon' data-title=':' data-content='colon' data-type='Token' data-range='{"startRow":29,"startColumn":51,"endRow":29,"endColumn":52}'>:</span>&nbsp;
 </span>
 <span class='NilLiteralExpr' data-title='nil' data-content='NilLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":53,"endRow":29,"endColumn":56}'>
-<span class='Token' data-title='nil' data-content='nilKeyword' data-type='Token' data-range='{"startRow":29,"startColumn":53,"endRow":29,"endColumn":56}'>
-<span class='token keyword' data-title='nil' data-content='nilKeyword' data-type='Token' data-range='{"startRow":29,"startColumn":53,"endRow":29,"endColumn":56}'>nil</span>
+<span class='Token' data-title='nil' data-content='keyword(SwiftSyntax.Keyword.nil)' data-type='Token' data-range='{"startRow":29,"startColumn":53,"endRow":29,"endColumn":56}'>
+<span class='token keyword' data-title='nil' data-content='keyword(SwiftSyntax.Keyword.nil)' data-type='Token' data-range='{"startRow":29,"startColumn":53,"endRow":29,"endColumn":56}'>nil</span>
 </span>
 </span>
 </span>
@@ -757,6 +758,7 @@
 <span class='Token' data-title='}' data-content='rightBrace' data-type='Token' data-range='{"startRow":30,"startColumn":7,"endRow":30,"endColumn":8}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <span class='token rightBrace' data-title='}' data-content='rightBrace' data-type='Token' data-range='{"startRow":30,"startColumn":7,"endRow":30,"endColumn":8}'>}</span>
+</span>
 </span>
 </span>
 </span>
@@ -780,12 +782,12 @@
 </span>
 <span class='MemberDeclListItem' data-title='let rank: Rank, suit: Suit' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":3,"endRow":35,"endColumn":29}'>
 <span class='VariableDecl' data-title='let rank: Rank, suit: Suit' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":3,"endRow":35,"endColumn":29}'>
-<span class='Token' data-title='let' data-content='letKeyword' data-type='Token' data-range='{"startRow":35,"startColumn":3,"endRow":35,"endColumn":6}'>
+<span class='Token' data-title='let' data-content='keyword(SwiftSyntax.Keyword.let)' data-type='Token' data-range='{"startRow":35,"startColumn":3,"endRow":35,"endColumn":6}'>
 <br>
 <br>&nbsp;&nbsp;
 <span class='lineComment' data-title='// BlackjackCard properties and methods' data-content='lineComment' data-type='Trivia'>// BlackjackCard properties and methods</span>
 <br>&nbsp;&nbsp;
-<span class='token keyword' data-title='let' data-content='letKeyword' data-type='Token' data-range='{"startRow":35,"startColumn":3,"endRow":35,"endColumn":6}'>let</span>&nbsp;
+<span class='token keyword' data-title='let' data-content='keyword(SwiftSyntax.Keyword.let)' data-type='Token' data-range='{"startRow":35,"startColumn":3,"endRow":35,"endColumn":6}'>let</span>&nbsp;
 </span>
 <span class='PatternBindingList' data-title='rank: Rank, suit: Suit' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":7,"endRow":35,"endColumn":29}'>
 <span class='PatternBinding' data-title='rank: Rank,' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":7,"endRow":35,"endColumn":18}'>
@@ -830,9 +832,9 @@
 </span>
 <span class='MemberDeclListItem' data-title='var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }' data-content='MemberDeclListItemSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":3,"endRow":43,"endColumn":4}'>
 <span class='VariableDecl' data-title='var description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":3,"endRow":43,"endColumn":4}'>
-<span class='Token' data-title='var' data-content='varKeyword' data-type='Token' data-range='{"startRow":36,"startColumn":3,"endRow":36,"endColumn":6}'>
+<span class='Token' data-title='var' data-content='keyword(SwiftSyntax.Keyword.var)' data-type='Token' data-range='{"startRow":36,"startColumn":3,"endRow":36,"endColumn":6}'>
 <br>&nbsp;&nbsp;
-<span class='token keyword' data-title='var' data-content='varKeyword' data-type='Token' data-range='{"startRow":36,"startColumn":3,"endRow":36,"endColumn":6}'>var</span>&nbsp;
+<span class='token keyword' data-title='var' data-content='keyword(SwiftSyntax.Keyword.var)' data-type='Token' data-range='{"startRow":36,"startColumn":3,"endRow":36,"endColumn":6}'>var</span>&nbsp;
 </span>
 <span class='PatternBindingList' data-title='description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":7,"endRow":43,"endColumn":4}'>
 <span class='PatternBinding' data-title='description: String {↲    var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output↲  }' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":7,"endRow":43,"endColumn":4}'>
@@ -858,9 +860,9 @@
 <span class='CodeBlockItemList' data-title='var output = &quot;suit is \(suit.rawValue),&quot;↲    output += &quot; value is \(rank.values.first)&quot;↲    if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }↲    return output' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":42,"endColumn":18}'>
 <span class='CodeBlockItem' data-title='var output = &quot;suit is \(suit.rawValue),&quot;' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":45}'>
 <span class='VariableDecl' data-title='var output = &quot;suit is \(suit.rawValue),&quot;' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":45}'>
-<span class='Token' data-title='var' data-content='varKeyword' data-type='Token' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":8}'>
+<span class='Token' data-title='var' data-content='keyword(SwiftSyntax.Keyword.var)' data-type='Token' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":8}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='var' data-content='varKeyword' data-type='Token' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":8}'>var</span>&nbsp;
+<span class='token keyword' data-title='var' data-content='keyword(SwiftSyntax.Keyword.var)' data-type='Token' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":8}'>var</span>&nbsp;
 </span>
 <span class='PatternBindingList' data-title='output = &quot;suit is \(suit.rawValue),&quot;' data-content='PatternBindingListSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":9,"endRow":37,"endColumn":45}'>
 <span class='PatternBinding' data-title='output = &quot;suit is \(suit.rawValue),&quot;' data-content='PatternBindingSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":9,"endRow":37,"endColumn":45}'>
@@ -936,8 +938,8 @@
 </span>
 </span>
 <span class='BinaryOperatorExpr' data-title='+=' data-content='BinaryOperatorExprSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":12,"endRow":38,"endColumn":14}'>
-<span class='Token' data-title='+=' data-content='spacedBinaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":12,"endRow":38,"endColumn":14}'>
-<span class='token spacedBinaryOperator' data-title='+=' data-content='spacedBinaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":12,"endRow":38,"endColumn":14}'>+=</span>&nbsp;
+<span class='Token' data-title='+=' data-content='binaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":12,"endRow":38,"endColumn":14}'>
+<span class='token binaryOperator' data-title='+=' data-content='binaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":38,"startColumn":12,"endRow":38,"endColumn":14}'>+=</span>&nbsp;
 </span>
 </span>
 <span class='StringLiteralExpr' data-title='&quot; value is \(rank.values.first)&quot;' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":38,"startColumn":15,"endRow":38,"endColumn":47}'>
@@ -1000,16 +1002,17 @@
 </span>
 </span>
 <span class='CodeBlockItem' data-title='if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":5,"endRow":41,"endColumn":6}'>
-<span class='IfStmt' data-title='if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }' data-content='IfStmtSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":5,"endRow":41,"endColumn":6}'>
-<span class='Token' data-title='if' data-content='ifKeyword' data-type='Token' data-range='{"startRow":39,"startColumn":5,"endRow":39,"endColumn":7}'>
+<span class='ExpressionStmt' data-title='if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }' data-content='ExpressionStmtSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":5,"endRow":41,"endColumn":6}'>
+<span class='IfExpr' data-title='if let second = rank.values.second {↲      output += &quot; or \(second)&quot;↲    }' data-content='IfExprSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":5,"endRow":41,"endColumn":6}'>
+<span class='Token' data-title='if' data-content='keyword(SwiftSyntax.Keyword.if)' data-type='Token' data-range='{"startRow":39,"startColumn":5,"endRow":39,"endColumn":7}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='if' data-content='ifKeyword' data-type='Token' data-range='{"startRow":39,"startColumn":5,"endRow":39,"endColumn":7}'>if</span>&nbsp;
+<span class='token keyword' data-title='if' data-content='keyword(SwiftSyntax.Keyword.if)' data-type='Token' data-range='{"startRow":39,"startColumn":5,"endRow":39,"endColumn":7}'>if</span>&nbsp;
 </span>
 <span class='ConditionElementList' data-title='let second = rank.values.second' data-content='ConditionElementListSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":8,"endRow":39,"endColumn":39}'>
 <span class='ConditionElement' data-title='let second = rank.values.second' data-content='ConditionElementSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":8,"endRow":39,"endColumn":39}'>
 <span class='OptionalBindingCondition' data-title='let second = rank.values.second' data-content='OptionalBindingConditionSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":8,"endRow":39,"endColumn":39}'>
-<span class='Token' data-title='let' data-content='letKeyword' data-type='Token' data-range='{"startRow":39,"startColumn":8,"endRow":39,"endColumn":11}'>
-<span class='token keyword' data-title='let' data-content='letKeyword' data-type='Token' data-range='{"startRow":39,"startColumn":8,"endRow":39,"endColumn":11}'>let</span>&nbsp;
+<span class='Token' data-title='let' data-content='keyword(SwiftSyntax.Keyword.let)' data-type='Token' data-range='{"startRow":39,"startColumn":8,"endRow":39,"endColumn":11}'>
+<span class='token keyword' data-title='let' data-content='keyword(SwiftSyntax.Keyword.let)' data-type='Token' data-range='{"startRow":39,"startColumn":8,"endRow":39,"endColumn":11}'>let</span>&nbsp;
 </span>
 <span class='IdentifierPattern' data-title='second' data-content='IdentifierPatternSyntax' data-type='Syntax' data-range='{"startRow":39,"startColumn":12,"endRow":39,"endColumn":18}'>
 <span class='Token' data-title='second' data-content='identifier(&quot;second&quot;)' data-type='Token' data-range='{"startRow":39,"startColumn":12,"endRow":39,"endColumn":18}'>
@@ -1060,8 +1063,8 @@
 </span>
 </span>
 <span class='BinaryOperatorExpr' data-title='+=' data-content='BinaryOperatorExprSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":14,"endRow":40,"endColumn":16}'>
-<span class='Token' data-title='+=' data-content='spacedBinaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":14,"endRow":40,"endColumn":16}'>
-<span class='token spacedBinaryOperator' data-title='+=' data-content='spacedBinaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":14,"endRow":40,"endColumn":16}'>+=</span>&nbsp;
+<span class='Token' data-title='+=' data-content='binaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":14,"endRow":40,"endColumn":16}'>
+<span class='token binaryOperator' data-title='+=' data-content='binaryOperator(&quot;+=&quot;)' data-type='Token' data-range='{"startRow":40,"startColumn":14,"endRow":40,"endColumn":16}'>+=</span>&nbsp;
 </span>
 </span>
 <span class='StringLiteralExpr' data-title='&quot; or \(second)&quot;' data-content='StringLiteralExprSyntax' data-type='Syntax' data-range='{"startRow":40,"startColumn":17,"endRow":40,"endColumn":32}'>
@@ -1115,11 +1118,12 @@
 </span>
 </span>
 </span>
+</span>
 <span class='CodeBlockItem' data-title='return output' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":42,"startColumn":5,"endRow":42,"endColumn":18}'>
 <span class='ReturnStmt' data-title='return output' data-content='ReturnStmtSyntax' data-type='Syntax' data-range='{"startRow":42,"startColumn":5,"endRow":42,"endColumn":18}'>
-<span class='Token' data-title='return' data-content='returnKeyword' data-type='Token' data-range='{"startRow":42,"startColumn":5,"endRow":42,"endColumn":11}'>
+<span class='Token' data-title='return' data-content='keyword(SwiftSyntax.Keyword.return)' data-type='Token' data-range='{"startRow":42,"startColumn":5,"endRow":42,"endColumn":11}'>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
-<span class='token keyword' data-title='return' data-content='returnKeyword' data-type='Token' data-range='{"startRow":42,"startColumn":5,"endRow":42,"endColumn":11}'>return</span>&nbsp;
+<span class='token keyword' data-title='return' data-content='keyword(SwiftSyntax.Keyword.return)' data-type='Token' data-range='{"startRow":42,"startColumn":5,"endRow":42,"endColumn":11}'>return</span>&nbsp;
 </span>
 <span class='IdentifierExpr' data-title='output' data-content='IdentifierExprSyntax' data-type='Syntax' data-range='{"startRow":42,"startColumn":12,"endRow":42,"endColumn":18}'>
 <span class='Token' data-title='output' data-content='identifier(&quot;output&quot;)' data-type='Token' data-range='{"startRow":42,"startColumn":12,"endRow":42,"endColumn":18}'>
