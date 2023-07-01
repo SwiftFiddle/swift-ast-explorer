@@ -27,6 +27,9 @@ RUN swift package resolve
 COPY . .
 RUN swift build -c release --static-swift-stdlib
 
+RUN cd Resources/branch_release-5.9 && swift build -c release --static-swift-stdlib
+RUN cd Resources/branch_main && swift build -c release --static-swift-stdlib
+
 WORKDIR /staging
 
 RUN cp "$(swift build --package-path /build -c release --show-bin-path)/App" ./

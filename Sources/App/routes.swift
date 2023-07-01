@@ -71,7 +71,7 @@ func routes(_ app: Application) throws {
     let processResult = try await process.waitUntilExit()
 
     let stdout = try processResult.utf8Output()
-    let stderr = try processResult.utf8stderrOutput() 
+    let stderr = try processResult.utf8stderrOutput()
 
     return (stdout, stderr)
   }
