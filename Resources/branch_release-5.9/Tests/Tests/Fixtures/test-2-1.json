@@ -106,19 +106,7 @@
         }
       },
       {
-        "name": "unexpectedBetweenSemicolonAndErrorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "errorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterErrorTokens",
+        "name": "unexpectedAfterSemicolon",
         "value": {
           "text": "nil"
         }
@@ -162,20 +150,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndLetOrVarKeyword",
+        "name": "unexpectedBetweenModifiersAndBindingKeyword",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "letOrVarKeyword",
+        "name": "bindingKeyword",
         "value": {
-          "kind": "letKeyword",
+          "kind": "keyword(SwiftSyntax.Keyword.let)",
           "text": "let␣"
         }
       },
       {
-        "name": "unexpectedBetweenLetOrVarKeywordAndBindings",
+        "name": "unexpectedBetweenBindingKeywordAndBindings",
         "value": {
           "text": "nil"
         }
@@ -209,7 +197,7 @@
     "structure": [],
     "text": "let",
     "token": {
-      "kind": "letKeyword",
+      "kind": "keyword(SwiftSyntax.Keyword.let)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },

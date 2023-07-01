@@ -19,13 +19,13 @@ final class AppTests: XCTestCase {
         )
       )
     )
-//    XCTAssertEqual(
-//      response.syntaxHTML,
-//      try String(
-//        contentsOf: Bundle.module.url(forResource: "test-1-1.html", withExtension: nil)!
-//      )
-//      .replacingOccurrences(of: "\n", with: "")
-//    )
+    XCTAssertEqual(
+      response.syntaxHTML,
+      try String(
+        contentsOf: Bundle.module.url(forResource: "test-1-1.html", withExtension: nil)!
+      )
+      .replacingOccurrences(of: "\n", with: "")
+    )
   }
 
   func testParser2() throws {

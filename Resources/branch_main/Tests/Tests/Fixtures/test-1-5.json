@@ -88,9 +88,9 @@
       },
       {
         "name": "item",
-        "ref": "IfStmtSyntax",
+        "ref": "ExpressionStmtSyntax",
         "value": {
-          "text": "IfStmtSyntax"
+          "text": "ExpressionStmtSyntax"
         }
       },
       {
@@ -106,19 +106,7 @@
         }
       },
       {
-        "name": "unexpectedBetweenSemicolonAndErrorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "errorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterErrorTokens",
+        "name": "unexpectedAfterSemicolon",
         "value": {
           "text": "nil"
         }
@@ -138,6 +126,39 @@
     },
     "structure": [
       {
+        "name": "unexpectedBeforeExpression",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "expression",
+        "ref": "IfExprSyntax",
+        "value": {
+          "text": "IfExprSyntax"
+        }
+      },
+      {
+        "name": "unexpectedAfterExpression",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "ExpressionStmt",
+    "type": "other"
+  },
+  {
+    "id": 4,
+    "parent": 3,
+    "range": {
+      "endColumn": 2,
+      "endRow": 3,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
         "name": "unexpectedBeforeIfKeyword",
         "value": {
           "text": "nil"
@@ -146,7 +167,7 @@
       {
         "name": "ifKeyword",
         "value": {
-          "kind": "ifKeyword",
+          "kind": "keyword(SwiftSyntax.Keyword.if)",
           "text": "if␣"
         }
       },
@@ -207,12 +228,12 @@
         }
       }
     ],
-    "text": "IfStmt",
-    "type": "other"
+    "text": "IfExpr",
+    "type": "expr"
   },
   {
-    "id": 4,
-    "parent": 3,
+    "id": 5,
+    "parent": 4,
     "range": {
       "endColumn": 3,
       "endRow": 1,
@@ -222,15 +243,15 @@
     "structure": [],
     "text": "if",
     "token": {
-      "kind": "ifKeyword",
+      "kind": "keyword(SwiftSyntax.Keyword.if)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
     "type": "other"
   },
   {
-    "id": 5,
-    "parent": 3,
+    "id": 6,
+    "parent": 4,
     "range": {
       "endColumn": 13,
       "endRow": 1,
@@ -255,8 +276,8 @@
     "type": "collection"
   },
   {
-    "id": 6,
-    "parent": 5,
+    "id": 7,
+    "parent": 6,
     "range": {
       "endColumn": 13,
       "endRow": 1,
@@ -300,8 +321,8 @@
     "type": "other"
   },
   {
-    "id": 7,
-    "parent": 6,
+    "id": 8,
+    "parent": 7,
     "range": {
       "endColumn": 13,
       "endRow": 1,
@@ -333,8 +354,8 @@
     "type": "expr"
   },
   {
-    "id": 8,
-    "parent": 7,
+    "id": 9,
+    "parent": 8,
     "range": {
       "endColumn": 13,
       "endRow": 1,
@@ -359,8 +380,8 @@
     "type": "collection"
   },
   {
-    "id": 9,
-    "parent": 8,
+    "id": 10,
+    "parent": 9,
     "range": {
       "endColumn": 5,
       "endRow": 1,
@@ -404,8 +425,8 @@
     "type": "expr"
   },
   {
-    "id": 10,
-    "parent": 9,
+    "id": 11,
+    "parent": 10,
     "range": {
       "endColumn": 5,
       "endRow": 1,
@@ -422,8 +443,8 @@
     "type": "other"
   },
   {
-    "id": 11,
-    "parent": 8,
+    "id": 12,
+    "parent": 9,
     "range": {
       "endColumn": 7,
       "endRow": 1,
@@ -440,7 +461,7 @@
       {
         "name": "operatorToken",
         "value": {
-          "kind": "spacedBinaryOperator(\"+\")",
+          "kind": "binaryOperator(\"+\")",
           "text": "+␣"
         }
       },
@@ -455,8 +476,8 @@
     "type": "expr"
   },
   {
-    "id": 12,
-    "parent": 11,
+    "id": 13,
+    "parent": 12,
     "range": {
       "endColumn": 7,
       "endRow": 1,
@@ -466,15 +487,15 @@
     "structure": [],
     "text": "+",
     "token": {
-      "kind": "spacedBinaryOperator(\"+\")",
+      "kind": "binaryOperator(\"+\")",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
     "type": "other"
   },
   {
-    "id": 13,
-    "parent": 8,
+    "id": 14,
+    "parent": 9,
     "range": {
       "endColumn": 9,
       "endRow": 1,
@@ -518,8 +539,8 @@
     "type": "expr"
   },
   {
-    "id": 14,
-    "parent": 13,
+    "id": 15,
+    "parent": 14,
     "range": {
       "endColumn": 9,
       "endRow": 1,
@@ -536,8 +557,8 @@
     "type": "other"
   },
   {
-    "id": 15,
-    "parent": 8,
+    "id": 16,
+    "parent": 9,
     "range": {
       "endColumn": 11,
       "endRow": 1,
@@ -554,7 +575,7 @@
       {
         "name": "operatorToken",
         "value": {
-          "kind": "spacedBinaryOperator(\"*\")",
+          "kind": "binaryOperator(\"*\")",
           "text": "*␣"
         }
       },
@@ -569,8 +590,8 @@
     "type": "expr"
   },
   {
-    "id": 16,
-    "parent": 15,
+    "id": 17,
+    "parent": 16,
     "range": {
       "endColumn": 11,
       "endRow": 1,
@@ -580,15 +601,15 @@
     "structure": [],
     "text": "*",
     "token": {
-      "kind": "spacedBinaryOperator(\"*\")",
+      "kind": "binaryOperator(\"*\")",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
     "type": "other"
   },
   {
-    "id": 17,
-    "parent": 8,
+    "id": 18,
+    "parent": 9,
     "range": {
       "endColumn": 13,
       "endRow": 1,
@@ -632,8 +653,8 @@
     "type": "expr"
   },
   {
-    "id": 18,
-    "parent": 17,
+    "id": 19,
+    "parent": 18,
     "range": {
       "endColumn": 13,
       "endRow": 1,
@@ -650,8 +671,8 @@
     "type": "other"
   },
   {
-    "id": 19,
-    "parent": 3,
+    "id": 20,
+    "parent": 4,
     "range": {
       "endColumn": 2,
       "endRow": 3,
@@ -709,8 +730,8 @@
     "type": "other"
   },
   {
-    "id": 20,
-    "parent": 19,
+    "id": 21,
+    "parent": 20,
     "range": {
       "endColumn": 15,
       "endRow": 1,
@@ -727,8 +748,8 @@
     "type": "other"
   },
   {
-    "id": 21,
-    "parent": 19,
+    "id": 22,
+    "parent": 20,
     "range": {
       "endColumn": 9,
       "endRow": 2,
@@ -753,8 +774,8 @@
     "type": "collection"
   },
   {
-    "id": 22,
-    "parent": 21,
+    "id": 23,
+    "parent": 22,
     "range": {
       "endColumn": 9,
       "endRow": 2,
@@ -788,19 +809,7 @@
         }
       },
       {
-        "name": "unexpectedBetweenSemicolonAndErrorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "errorTokens",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterErrorTokens",
+        "name": "unexpectedAfterSemicolon",
         "value": {
           "text": "nil"
         }
@@ -810,8 +819,8 @@
     "type": "other"
   },
   {
-    "id": 23,
-    "parent": 22,
+    "id": 24,
+    "parent": 23,
     "range": {
       "endColumn": 9,
       "endRow": 2,
@@ -828,7 +837,7 @@
       {
         "name": "returnKeyword",
         "value": {
-          "kind": "returnKeyword",
+          "kind": "keyword(SwiftSyntax.Keyword.return)",
           "text": "↲␣␣return"
         }
       },
@@ -855,8 +864,8 @@
     "type": "other"
   },
   {
-    "id": 24,
-    "parent": 23,
+    "id": 25,
+    "parent": 24,
     "range": {
       "endColumn": 9,
       "endRow": 2,
@@ -866,15 +875,15 @@
     "structure": [],
     "text": "return",
     "token": {
-      "kind": "returnKeyword",
+      "kind": "keyword(SwiftSyntax.Keyword.return)",
       "leadingTrivia": "↲␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
   },
   {
-    "id": 25,
-    "parent": 19,
+    "id": 26,
+    "parent": 20,
     "range": {
       "endColumn": 2,
       "endRow": 3,
@@ -891,7 +900,7 @@
     "type": "other"
   },
   {
-    "id": 26,
+    "id": 27,
     "parent": 0,
     "range": {
       "endColumn": 2,
