@@ -2,9 +2,9 @@
   {
     "id": 0,
     "range": {
-      "startColumn": 1,
-      "endRow": 3,
       "endColumn": 2,
+      "endRow": 3,
+      "startColumn": 1,
       "startRow": 1
     },
     "structure": [
@@ -16,10 +16,10 @@
       },
       {
         "name": "statements",
+        "ref": "CodeBlockItemListSyntax",
         "value": {
           "text": "CodeBlockItemListSyntax"
-        },
-        "ref": "CodeBlockItemListSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenStatementsAndEOFToken",
@@ -48,9 +48,9 @@
     "id": 1,
     "parent": 0,
     "range": {
-      "startColumn": 1,
-      "endRow": 3,
       "endColumn": 2,
+      "endRow": 3,
+      "startColumn": 1,
       "startRow": 1
     },
     "structure": [
@@ -74,9 +74,9 @@
     "id": 2,
     "parent": 1,
     "range": {
-      "startColumn": 1,
-      "endRow": 3,
       "endColumn": 2,
+      "endRow": 3,
+      "startColumn": 1,
       "startRow": 1
     },
     "structure": [
@@ -88,10 +88,10 @@
       },
       {
         "name": "item",
+        "ref": "IfStmtSyntax",
         "value": {
           "text": "IfStmtSyntax"
-        },
-        "ref": "IfStmtSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenItemAndSemicolon",
@@ -131,9 +131,9 @@
     "id": 3,
     "parent": 2,
     "range": {
-      "startColumn": 1,
-      "endRow": 3,
       "endColumn": 2,
+      "endRow": 3,
+      "startColumn": 1,
       "startRow": 1
     },
     "structure": [
@@ -158,10 +158,10 @@
       },
       {
         "name": "conditions",
+        "ref": "ConditionElementListSyntax",
         "value": {
           "text": "ConditionElementListSyntax"
-        },
-        "ref": "ConditionElementListSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenConditionsAndBody",
@@ -171,10 +171,10 @@
       },
       {
         "name": "body",
+        "ref": "CodeBlockSyntax",
         "value": {
           "text": "CodeBlockSyntax"
-        },
-        "ref": "CodeBlockSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenBodyAndElseKeyword",
@@ -214,9 +214,9 @@
     "id": 4,
     "parent": 3,
     "range": {
-      "startColumn": 1,
-      "endRow": 1,
       "endColumn": 3,
+      "endRow": 1,
+      "startColumn": 1,
       "startRow": 1
     },
     "structure": [],
@@ -232,9 +232,9 @@
     "id": 5,
     "parent": 3,
     "range": {
-      "startColumn": 4,
-      "endRow": 1,
       "endColumn": 13,
+      "endRow": 1,
+      "startColumn": 4,
       "startRow": 1
     },
     "structure": [
@@ -258,9 +258,9 @@
     "id": 6,
     "parent": 5,
     "range": {
-      "startColumn": 4,
-      "endRow": 1,
       "endColumn": 13,
+      "endRow": 1,
+      "startColumn": 4,
       "startRow": 1
     },
     "structure": [
@@ -272,10 +272,10 @@
       },
       {
         "name": "condition",
+        "ref": "SequenceExprSyntax",
         "value": {
           "text": "SequenceExprSyntax"
-        },
-        "ref": "SequenceExprSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenConditionAndTrailingComma",
@@ -303,9 +303,9 @@
     "id": 7,
     "parent": 6,
     "range": {
-      "startColumn": 4,
-      "endRow": 1,
       "endColumn": 13,
+      "endRow": 1,
+      "startColumn": 4,
       "startRow": 1
     },
     "structure": [
@@ -317,10 +317,10 @@
       },
       {
         "name": "elements",
+        "ref": "ExprListSyntax",
         "value": {
           "text": "ExprListSyntax"
-        },
-        "ref": "ExprListSyntax"
+        }
       },
       {
         "name": "unexpectedAfterElements",
@@ -336,9 +336,9 @@
     "id": 8,
     "parent": 7,
     "range": {
-      "startColumn": 4,
-      "endRow": 1,
       "endColumn": 13,
+      "endRow": 1,
+      "startColumn": 4,
       "startRow": 1
     },
     "structure": [
@@ -362,9 +362,9 @@
     "id": 9,
     "parent": 8,
     "range": {
-      "startColumn": 4,
-      "endRow": 1,
       "endColumn": 5,
+      "endRow": 1,
+      "startColumn": 4,
       "startRow": 1
     },
     "structure": [
@@ -407,9 +407,9 @@
     "id": 10,
     "parent": 9,
     "range": {
-      "startColumn": 4,
-      "endRow": 1,
       "endColumn": 5,
+      "endRow": 1,
+      "startColumn": 4,
       "startRow": 1
     },
     "structure": [],
@@ -425,9 +425,9 @@
     "id": 11,
     "parent": 8,
     "range": {
-      "startColumn": 6,
-      "endRow": 1,
       "endColumn": 7,
+      "endRow": 1,
+      "startColumn": 6,
       "startRow": 1
     },
     "structure": [
@@ -458,9 +458,9 @@
     "id": 12,
     "parent": 11,
     "range": {
-      "startColumn": 6,
-      "endRow": 1,
       "endColumn": 7,
+      "endRow": 1,
+      "startColumn": 6,
       "startRow": 1
     },
     "structure": [],
@@ -476,9 +476,9 @@
     "id": 13,
     "parent": 8,
     "range": {
-      "startColumn": 8,
-      "endRow": 1,
       "endColumn": 9,
+      "endRow": 1,
+      "startColumn": 8,
       "startRow": 1
     },
     "structure": [
@@ -521,9 +521,9 @@
     "id": 14,
     "parent": 13,
     "range": {
-      "startColumn": 8,
-      "endRow": 1,
       "endColumn": 9,
+      "endRow": 1,
+      "startColumn": 8,
       "startRow": 1
     },
     "structure": [],
@@ -539,9 +539,9 @@
     "id": 15,
     "parent": 8,
     "range": {
-      "startColumn": 10,
-      "endRow": 1,
       "endColumn": 11,
+      "endRow": 1,
+      "startColumn": 10,
       "startRow": 1
     },
     "structure": [
@@ -572,9 +572,9 @@
     "id": 16,
     "parent": 15,
     "range": {
-      "startColumn": 10,
-      "endRow": 1,
       "endColumn": 11,
+      "endRow": 1,
+      "startColumn": 10,
       "startRow": 1
     },
     "structure": [],
@@ -590,9 +590,9 @@
     "id": 17,
     "parent": 8,
     "range": {
-      "startColumn": 12,
-      "endRow": 1,
       "endColumn": 13,
+      "endRow": 1,
+      "startColumn": 12,
       "startRow": 1
     },
     "structure": [
@@ -635,9 +635,9 @@
     "id": 18,
     "parent": 17,
     "range": {
-      "startColumn": 12,
-      "endRow": 1,
       "endColumn": 13,
+      "endRow": 1,
+      "startColumn": 12,
       "startRow": 1
     },
     "structure": [],
@@ -653,9 +653,9 @@
     "id": 19,
     "parent": 3,
     "range": {
-      "startColumn": 14,
-      "endRow": 3,
       "endColumn": 2,
+      "endRow": 3,
+      "startColumn": 14,
       "startRow": 1
     },
     "structure": [
@@ -680,10 +680,10 @@
       },
       {
         "name": "statements",
+        "ref": "CodeBlockItemListSyntax",
         "value": {
           "text": "CodeBlockItemListSyntax"
-        },
-        "ref": "CodeBlockItemListSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenStatementsAndRightBrace",
@@ -712,9 +712,9 @@
     "id": 20,
     "parent": 19,
     "range": {
-      "startColumn": 14,
-      "endRow": 1,
       "endColumn": 15,
+      "endRow": 1,
+      "startColumn": 14,
       "startRow": 1
     },
     "structure": [],
@@ -730,9 +730,9 @@
     "id": 21,
     "parent": 19,
     "range": {
-      "startColumn": 3,
-      "endRow": 2,
       "endColumn": 9,
+      "endRow": 2,
+      "startColumn": 3,
       "startRow": 2
     },
     "structure": [
@@ -756,9 +756,9 @@
     "id": 22,
     "parent": 21,
     "range": {
-      "startColumn": 3,
-      "endRow": 2,
       "endColumn": 9,
+      "endRow": 2,
+      "startColumn": 3,
       "startRow": 2
     },
     "structure": [
@@ -770,10 +770,10 @@
       },
       {
         "name": "item",
+        "ref": "ReturnStmtSyntax",
         "value": {
           "text": "ReturnStmtSyntax"
-        },
-        "ref": "ReturnStmtSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenItemAndSemicolon",
@@ -813,9 +813,9 @@
     "id": 23,
     "parent": 22,
     "range": {
-      "startColumn": 3,
-      "endRow": 2,
       "endColumn": 9,
+      "endRow": 2,
+      "startColumn": 3,
       "startRow": 2
     },
     "structure": [
@@ -858,9 +858,9 @@
     "id": 24,
     "parent": 23,
     "range": {
-      "startColumn": 3,
-      "endRow": 2,
       "endColumn": 9,
+      "endRow": 2,
+      "startColumn": 3,
       "startRow": 2
     },
     "structure": [],
@@ -876,9 +876,9 @@
     "id": 25,
     "parent": 19,
     "range": {
-      "startColumn": 1,
-      "endRow": 3,
       "endColumn": 2,
+      "endRow": 3,
+      "startColumn": 1,
       "startRow": 3
     },
     "structure": [],
@@ -894,9 +894,9 @@
     "id": 26,
     "parent": 0,
     "range": {
-      "startColumn": 2,
-      "endRow": 3,
       "endColumn": 2,
+      "endRow": 3,
+      "startColumn": 2,
       "startRow": 3
     },
     "structure": [],
