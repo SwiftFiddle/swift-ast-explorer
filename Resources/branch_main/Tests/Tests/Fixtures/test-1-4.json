@@ -2,9 +2,9 @@
   {
     "id": 0,
     "range": {
-      "startColumn": 1,
-      "endRow": 4,
       "endColumn": 2,
+      "endRow": 4,
+      "startColumn": 1,
       "startRow": 1
     },
     "structure": [
@@ -16,10 +16,10 @@
       },
       {
         "name": "statements",
+        "ref": "CodeBlockItemListSyntax",
         "value": {
           "text": "CodeBlockItemListSyntax"
-        },
-        "ref": "CodeBlockItemListSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenStatementsAndEOFToken",
@@ -48,9 +48,9 @@
     "id": 1,
     "parent": 0,
     "range": {
-      "startColumn": 1,
-      "endRow": 4,
       "endColumn": 2,
+      "endRow": 4,
+      "startColumn": 1,
       "startRow": 1
     },
     "structure": [
@@ -74,9 +74,9 @@
     "id": 2,
     "parent": 1,
     "range": {
-      "startColumn": 1,
-      "endRow": 1,
       "endColumn": 17,
+      "endRow": 1,
+      "startColumn": 1,
       "startRow": 1
     },
     "structure": [
@@ -88,10 +88,10 @@
       },
       {
         "name": "item",
+        "ref": "StructDeclSyntax",
         "value": {
           "text": "StructDeclSyntax"
-        },
-        "ref": "StructDeclSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenItemAndSemicolon",
@@ -132,9 +132,9 @@
     "id": 3,
     "parent": 2,
     "range": {
-      "startColumn": 1,
-      "endRow": 1,
       "endColumn": 17,
+      "endRow": 1,
+      "startColumn": 1,
       "startRow": 1
     },
     "structure": [
@@ -196,10 +196,10 @@
       },
       {
         "name": "genericParameterClause",
+        "ref": "GenericParameterClauseSyntax",
         "value": {
           "text": "GenericParameterClauseSyntax"
-        },
-        "ref": "GenericParameterClauseSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenGenericParameterClauseAndInheritanceClause",
@@ -233,10 +233,10 @@
       },
       {
         "name": "members",
+        "ref": "MemberDeclBlockSyntax",
         "value": {
           "text": "MemberDeclBlockSyntax"
-        },
-        "ref": "MemberDeclBlockSyntax"
+        }
       },
       {
         "name": "unexpectedAfterMembers",
@@ -252,9 +252,9 @@
     "id": 4,
     "parent": 3,
     "range": {
-      "startColumn": 1,
-      "endRow": 1,
       "endColumn": 7,
+      "endRow": 1,
+      "startColumn": 1,
       "startRow": 1
     },
     "structure": [],
@@ -270,9 +270,9 @@
     "id": 5,
     "parent": 3,
     "range": {
-      "startColumn": 8,
-      "endRow": 1,
       "endColumn": 14,
+      "endRow": 1,
+      "startColumn": 8,
       "startRow": 1
     },
     "structure": [],
@@ -288,9 +288,9 @@
     "id": 6,
     "parent": 3,
     "range": {
-      "startColumn": 14,
-      "endRow": 1,
       "endColumn": 15,
+      "endRow": 1,
+      "startColumn": 14,
       "startRow": 1
     },
     "structure": [
@@ -315,10 +315,10 @@
       },
       {
         "name": "genericParameterList",
+        "ref": "GenericParameterListSyntax",
         "value": {
           "text": "GenericParameterListSyntax"
-        },
-        "ref": "GenericParameterListSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenGenericParameterListAndGenericWhereClause",
@@ -359,9 +359,9 @@
     "id": 7,
     "parent": 6,
     "range": {
-      "startColumn": 14,
-      "endRow": 1,
       "endColumn": 15,
+      "endRow": 1,
+      "startColumn": 14,
       "startRow": 1
     },
     "structure": [],
@@ -377,9 +377,9 @@
     "id": 8,
     "parent": 6,
     "range": {
-      "startColumn": 16,
-      "endRow": 1,
       "endColumn": 16,
+      "endRow": 1,
+      "startColumn": 16,
       "startRow": 1
     },
     "structure": [
@@ -403,9 +403,9 @@
     "id": 9,
     "parent": 6,
     "range": {
-      "startColumn": 16,
-      "endRow": 1,
       "endColumn": 16,
+      "endRow": 1,
+      "startColumn": 16,
       "startRow": 1
     },
     "structure": [],
@@ -421,9 +421,9 @@
     "id": 10,
     "parent": 3,
     "range": {
-      "startColumn": 16,
-      "endRow": 1,
       "endColumn": 17,
+      "endRow": 1,
+      "startColumn": 16,
       "startRow": 1
     },
     "structure": [
@@ -448,10 +448,10 @@
       },
       {
         "name": "members",
+        "ref": "MemberDeclListSyntax",
         "value": {
           "text": "MemberDeclListSyntax"
-        },
-        "ref": "MemberDeclListSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenMembersAndRightBrace",
@@ -480,9 +480,9 @@
     "id": 11,
     "parent": 10,
     "range": {
-      "startColumn": 16,
-      "endRow": 1,
       "endColumn": 17,
+      "endRow": 1,
+      "startColumn": 16,
       "startRow": 1
     },
     "structure": [],
@@ -498,9 +498,9 @@
     "id": 12,
     "parent": 10,
     "range": {
-      "startColumn": 17,
-      "endRow": 1,
       "endColumn": 17,
+      "endRow": 1,
+      "startColumn": 17,
       "startRow": 1
     },
     "structure": [
@@ -524,9 +524,9 @@
     "id": 13,
     "parent": 10,
     "range": {
-      "startColumn": 17,
-      "endRow": 1,
       "endColumn": 17,
+      "endRow": 1,
+      "startColumn": 17,
       "startRow": 1
     },
     "structure": [],
@@ -542,9 +542,9 @@
     "id": 14,
     "parent": 2,
     "range": {
-      "startColumn": 17,
-      "endRow": 1,
       "endColumn": 17,
+      "endRow": 1,
+      "startColumn": 17,
       "startRow": 1
     },
     "structure": [],
@@ -560,9 +560,9 @@
     "id": 15,
     "parent": 1,
     "range": {
-      "startColumn": 17,
-      "endRow": 4,
       "endColumn": 2,
+      "endRow": 4,
+      "startColumn": 17,
       "startRow": 1
     },
     "structure": [
@@ -574,10 +574,10 @@
       },
       {
         "name": "item",
+        "ref": "ClosureExprSyntax",
         "value": {
           "text": "ClosureExprSyntax"
-        },
-        "ref": "ClosureExprSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenItemAndSemicolon",
@@ -617,9 +617,9 @@
     "id": 16,
     "parent": 15,
     "range": {
-      "startColumn": 17,
-      "endRow": 4,
       "endColumn": 2,
+      "endRow": 4,
+      "startColumn": 17,
       "startRow": 1
     },
     "structure": [
@@ -656,10 +656,10 @@
       },
       {
         "name": "statements",
+        "ref": "CodeBlockItemListSyntax",
         "value": {
           "text": "CodeBlockItemListSyntax"
-        },
-        "ref": "CodeBlockItemListSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenStatementsAndRightBrace",
@@ -688,9 +688,9 @@
     "id": 17,
     "parent": 16,
     "range": {
-      "startColumn": 17,
-      "endRow": 1,
       "endColumn": 18,
+      "endRow": 1,
+      "startColumn": 17,
       "startRow": 1
     },
     "structure": [],
@@ -706,9 +706,9 @@
     "id": 18,
     "parent": 16,
     "range": {
-      "startColumn": 3,
-      "endRow": 3,
       "endColumn": 29,
+      "endRow": 3,
+      "startColumn": 3,
       "startRow": 2
     },
     "structure": [
@@ -732,9 +732,9 @@
     "id": 19,
     "parent": 18,
     "range": {
-      "startColumn": 3,
-      "endRow": 2,
       "endColumn": 19,
+      "endRow": 2,
+      "startColumn": 3,
       "startRow": 2
     },
     "structure": [
@@ -746,10 +746,10 @@
       },
       {
         "name": "item",
+        "ref": "VariableDeclSyntax",
         "value": {
           "text": "VariableDeclSyntax"
-        },
-        "ref": "VariableDeclSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenItemAndSemicolon",
@@ -789,9 +789,9 @@
     "id": 20,
     "parent": 19,
     "range": {
-      "startColumn": 3,
-      "endRow": 2,
       "endColumn": 19,
+      "endRow": 2,
+      "startColumn": 3,
       "startRow": 2
     },
     "structure": [
@@ -840,10 +840,10 @@
       },
       {
         "name": "bindings",
+        "ref": "PatternBindingListSyntax",
         "value": {
           "text": "PatternBindingListSyntax"
-        },
-        "ref": "PatternBindingListSyntax"
+        }
       },
       {
         "name": "unexpectedAfterBindings",
@@ -859,9 +859,9 @@
     "id": 21,
     "parent": 20,
     "range": {
-      "startColumn": 3,
-      "endRow": 2,
       "endColumn": 6,
+      "endRow": 2,
+      "startColumn": 3,
       "startRow": 2
     },
     "structure": [],
@@ -877,9 +877,9 @@
     "id": 22,
     "parent": 20,
     "range": {
-      "startColumn": 7,
-      "endRow": 2,
       "endColumn": 19,
+      "endRow": 2,
+      "startColumn": 7,
       "startRow": 2
     },
     "structure": [
@@ -903,9 +903,9 @@
     "id": 23,
     "parent": 22,
     "range": {
-      "startColumn": 7,
-      "endRow": 2,
       "endColumn": 19,
+      "endRow": 2,
+      "startColumn": 7,
       "startRow": 2
     },
     "structure": [
@@ -917,10 +917,10 @@
       },
       {
         "name": "pattern",
+        "ref": "IdentifierPatternSyntax",
         "value": {
           "text": "IdentifierPatternSyntax"
-        },
-        "ref": "IdentifierPatternSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenPatternAndTypeAnnotation",
@@ -930,10 +930,10 @@
       },
       {
         "name": "typeAnnotation",
+        "ref": "TypeAnnotationSyntax",
         "value": {
           "text": "TypeAnnotationSyntax"
-        },
-        "ref": "TypeAnnotationSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenTypeAnnotationAndInitializer",
@@ -985,9 +985,9 @@
     "id": 24,
     "parent": 23,
     "range": {
-      "startColumn": 7,
-      "endRow": 2,
       "endColumn": 11,
+      "endRow": 2,
+      "startColumn": 7,
       "startRow": 2
     },
     "structure": [
@@ -1018,9 +1018,9 @@
     "id": 25,
     "parent": 24,
     "range": {
-      "startColumn": 7,
-      "endRow": 2,
       "endColumn": 11,
+      "endRow": 2,
+      "startColumn": 7,
       "startRow": 2
     },
     "structure": [],
@@ -1036,9 +1036,9 @@
     "id": 26,
     "parent": 23,
     "range": {
-      "startColumn": 11,
-      "endRow": 2,
       "endColumn": 19,
+      "endRow": 2,
+      "startColumn": 11,
       "startRow": 2
     },
     "structure": [
@@ -1063,10 +1063,10 @@
       },
       {
         "name": "type",
+        "ref": "SimpleTypeIdentifierSyntax",
         "value": {
           "text": "SimpleTypeIdentifierSyntax"
-        },
-        "ref": "SimpleTypeIdentifierSyntax"
+        }
       },
       {
         "name": "unexpectedAfterType",
@@ -1082,9 +1082,9 @@
     "id": 27,
     "parent": 26,
     "range": {
-      "startColumn": 11,
-      "endRow": 2,
       "endColumn": 12,
+      "endRow": 2,
+      "startColumn": 11,
       "startRow": 2
     },
     "structure": [],
@@ -1100,9 +1100,9 @@
     "id": 28,
     "parent": 26,
     "range": {
-      "startColumn": 13,
-      "endRow": 2,
       "endColumn": 19,
+      "endRow": 2,
+      "startColumn": 13,
       "startRow": 2
     },
     "structure": [
@@ -1145,9 +1145,9 @@
     "id": 29,
     "parent": 28,
     "range": {
-      "startColumn": 13,
-      "endRow": 2,
       "endColumn": 19,
+      "endRow": 2,
+      "startColumn": 13,
       "startRow": 2
     },
     "structure": [],
@@ -1163,9 +1163,9 @@
     "id": 30,
     "parent": 18,
     "range": {
-      "startColumn": 3,
-      "endRow": 3,
       "endColumn": 29,
+      "endRow": 3,
+      "startColumn": 3,
       "startRow": 3
     },
     "structure": [
@@ -1177,10 +1177,10 @@
       },
       {
         "name": "item",
+        "ref": "VariableDeclSyntax",
         "value": {
           "text": "VariableDeclSyntax"
-        },
-        "ref": "VariableDeclSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenItemAndSemicolon",
@@ -1220,9 +1220,9 @@
     "id": 31,
     "parent": 30,
     "range": {
-      "startColumn": 3,
-      "endRow": 3,
       "endColumn": 29,
+      "endRow": 3,
+      "startColumn": 3,
       "startRow": 3
     },
     "structure": [
@@ -1271,10 +1271,10 @@
       },
       {
         "name": "bindings",
+        "ref": "PatternBindingListSyntax",
         "value": {
           "text": "PatternBindingListSyntax"
-        },
-        "ref": "PatternBindingListSyntax"
+        }
       },
       {
         "name": "unexpectedAfterBindings",
@@ -1290,9 +1290,9 @@
     "id": 32,
     "parent": 31,
     "range": {
-      "startColumn": 3,
-      "endRow": 3,
       "endColumn": 6,
+      "endRow": 3,
+      "startColumn": 3,
       "startRow": 3
     },
     "structure": [],
@@ -1308,9 +1308,9 @@
     "id": 33,
     "parent": 31,
     "range": {
-      "startColumn": 7,
-      "endRow": 3,
       "endColumn": 29,
+      "endRow": 3,
+      "startColumn": 7,
       "startRow": 3
     },
     "structure": [
@@ -1334,9 +1334,9 @@
     "id": 34,
     "parent": 33,
     "range": {
-      "startColumn": 7,
-      "endRow": 3,
       "endColumn": 29,
+      "endRow": 3,
+      "startColumn": 7,
       "startRow": 3
     },
     "structure": [
@@ -1348,10 +1348,10 @@
       },
       {
         "name": "pattern",
+        "ref": "IdentifierPatternSyntax",
         "value": {
           "text": "IdentifierPatternSyntax"
-        },
-        "ref": "IdentifierPatternSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenPatternAndTypeAnnotation",
@@ -1361,10 +1361,10 @@
       },
       {
         "name": "typeAnnotation",
+        "ref": "TypeAnnotationSyntax",
         "value": {
           "text": "TypeAnnotationSyntax"
-        },
-        "ref": "TypeAnnotationSyntax"
+        }
       },
       {
         "name": "unexpectedBetweenTypeAnnotationAndInitializer",
@@ -1416,9 +1416,9 @@
     "id": 35,
     "parent": 34,
     "range": {
-      "startColumn": 7,
-      "endRow": 3,
       "endColumn": 21,
+      "endRow": 3,
+      "startColumn": 7,
       "startRow": 3
     },
     "structure": [
@@ -1449,9 +1449,9 @@
     "id": 36,
     "parent": 35,
     "range": {
-      "startColumn": 7,
-      "endRow": 3,
       "endColumn": 21,
+      "endRow": 3,
+      "startColumn": 7,
       "startRow": 3
     },
     "structure": [],
@@ -1467,9 +1467,9 @@
     "id": 37,
     "parent": 34,
     "range": {
-      "startColumn": 21,
-      "endRow": 3,
       "endColumn": 29,
+      "endRow": 3,
+      "startColumn": 21,
       "startRow": 3
     },
     "structure": [
@@ -1494,10 +1494,10 @@
       },
       {
         "name": "type",
+        "ref": "SimpleTypeIdentifierSyntax",
         "value": {
           "text": "SimpleTypeIdentifierSyntax"
-        },
-        "ref": "SimpleTypeIdentifierSyntax"
+        }
       },
       {
         "name": "unexpectedAfterType",
@@ -1513,9 +1513,9 @@
     "id": 38,
     "parent": 37,
     "range": {
-      "startColumn": 21,
-      "endRow": 3,
       "endColumn": 22,
+      "endRow": 3,
+      "startColumn": 21,
       "startRow": 3
     },
     "structure": [],
@@ -1531,9 +1531,9 @@
     "id": 39,
     "parent": 37,
     "range": {
-      "startColumn": 23,
-      "endRow": 3,
       "endColumn": 29,
+      "endRow": 3,
+      "startColumn": 23,
       "startRow": 3
     },
     "structure": [
@@ -1576,9 +1576,9 @@
     "id": 40,
     "parent": 39,
     "range": {
-      "startColumn": 23,
-      "endRow": 3,
       "endColumn": 29,
+      "endRow": 3,
+      "startColumn": 23,
       "startRow": 3
     },
     "structure": [],
@@ -1594,9 +1594,9 @@
     "id": 41,
     "parent": 16,
     "range": {
-      "startColumn": 1,
-      "endRow": 4,
       "endColumn": 2,
+      "endRow": 4,
+      "startColumn": 1,
       "startRow": 4
     },
     "structure": [],
@@ -1612,9 +1612,9 @@
     "id": 42,
     "parent": 0,
     "range": {
-      "startColumn": 2,
-      "endRow": 4,
       "endColumn": 2,
+      "endRow": 4,
+      "startColumn": 2,
       "startRow": 4
     },
     "structure": [],
