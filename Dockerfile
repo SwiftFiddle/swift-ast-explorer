@@ -27,14 +27,14 @@ RUN swift package resolve
 COPY . .
 RUN swift build -c release --static-swift-stdlib
 
-RUN cd Resources/branch_release-5.9 && swift build -c release --static-swift-stdlib
-RUN cd Resources/branch_main && swift build -c release --static-swift-stdlib
+RUN cd Resources/branch_release-5.9 && swift build -c debug --static-swift-stdlib
+RUN cd Resources/branch_main && swift build -c debug --static-swift-stdlib
 
 WORKDIR /staging
 
-RUN cp "$(swift build --package-path /build -c debug --show-bin-path)/App" ./
+RUN cp "$(swift build --package-path /build -c release --show-bin-path)/App" ./
 
-RUN find -L "$(swift build --package-path /build -c debug --show-bin-path)/" -regex '.*\.resources$' -exec cp -Ra {} ./ \;
+RUN find -L "$(swift build --package-path /build -c release --show-bin-path)/" -regex '.*\.resources$' -exec cp -Ra {} ./ \;
 
 RUN [ -d /build/Public ] && { mv /build/Public ./Public && chmod -R a-w ./Public; } || true
 RUN [ -d /build/Resources ] && { mv /build/Resources ./Resources && chmod -R a-w ./Resources; } || true
