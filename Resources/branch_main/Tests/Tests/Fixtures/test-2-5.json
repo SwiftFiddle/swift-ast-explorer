@@ -22,20 +22,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenStatementsAndEOFToken",
+        "name": "unexpectedBetweenStatementsAndEndOfFileToken",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "eofToken",
+        "name": "endOfFileToken",
         "value": {
           "kind": "eof",
           "text": ""
         }
       },
       {
-        "name": "unexpectedAfterEOFToken",
+        "name": "unexpectedAfterEndOfFileToken",
         "value": {
           "text": "nil"
         }
@@ -453,20 +453,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOperatorToken",
+        "name": "unexpectedBeforeOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorToken",
+        "name": "operator",
         "value": {
           "kind": "binaryOperator(\"+\")",
           "text": "+␣"
         }
       },
       {
-        "name": "unexpectedAfterOperatorToken",
+        "name": "unexpectedAfterOperator",
         "value": {
           "text": "nil"
         }
@@ -626,20 +626,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOperatorToken",
+        "name": "unexpectedBeforeOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorToken",
+        "name": "operator",
         "value": {
           "kind": "binaryOperator(\"*\")",
           "text": "*␣"
         }
       },
       {
-        "name": "unexpectedAfterOperatorToken",
+        "name": "unexpectedAfterOperator",
         "value": {
           "text": "nil"
         }

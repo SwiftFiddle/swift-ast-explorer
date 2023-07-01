@@ -22,20 +22,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenStatementsAndEOFToken",
+        "name": "unexpectedBetweenStatementsAndEndOfFileToken",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "eofToken",
+        "name": "endOfFileToken",
         "value": {
           "kind": "eof",
           "text": "↲"
         }
       },
       {
-        "name": "unexpectedAfterEOFToken",
+        "name": "unexpectedAfterEndOfFileToken",
         "value": {
           "text": "nil"
         }
@@ -150,20 +150,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndImportTok",
+        "name": "unexpectedBetweenModifiersAndImportKeyword",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "importTok",
+        "name": "importKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.import)",
           "text": "import␣"
         }
       },
       {
-        "name": "unexpectedBetweenImportTokAndImportKind",
+        "name": "unexpectedBetweenImportKeywordAndImportKind",
         "value": {
           "text": "nil"
         }
@@ -182,9 +182,9 @@
       },
       {
         "name": "path",
-        "ref": "AccessPathSyntax",
+        "ref": "ImportPathSyntax",
         "value": {
-          "text": "AccessPathSyntax"
+          "text": "ImportPathSyntax"
         }
       },
       {
@@ -228,7 +228,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "AccessPathComponentSyntax"
+          "text": "ImportPathComponentSyntax"
         }
       },
       {
@@ -238,7 +238,7 @@
         }
       }
     ],
-    "text": "AccessPath",
+    "text": "ImportPath",
     "type": "collection"
   },
   {
@@ -265,25 +265,25 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndTrailingDot",
+        "name": "unexpectedBetweenNameAndTrailingPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "trailingDot",
+        "name": "trailingPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterTrailingDot",
+        "name": "unexpectedAfterTrailingPeriod",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "AccessPathComponent",
+    "text": "ImportPathComponent",
     "type": "other"
   },
   {
@@ -713,19 +713,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndGenericParameters",
+        "name": "unexpectedBetweenIdentifierAndGenericParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "genericParameters",
+        "name": "genericParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenGenericParametersAndInheritanceClause",
+        "name": "unexpectedBetweenGenericParameterClauseAndInheritanceClause",
         "value": {
           "text": "nil"
         }
@@ -3261,19 +3261,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndGenericParameters",
+        "name": "unexpectedBetweenIdentifierAndGenericParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "genericParameters",
+        "name": "genericParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenGenericParametersAndInheritanceClause",
+        "name": "unexpectedBetweenGenericParameterClauseAndInheritanceClause",
         "value": {
           "text": "nil"
         }
@@ -7739,20 +7739,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenBaseAndDot",
+        "name": "unexpectedBetweenBaseAndPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "dot",
+        "name": "period",
         "value": {
           "kind": "period",
           "text": "."
         }
       },
       {
-        "name": "unexpectedBetweenDotAndName",
+        "name": "unexpectedBetweenPeriodAndName",
         "value": {
           "text": "nil"
         }
@@ -8806,20 +8806,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenBaseAndDot",
+        "name": "unexpectedBetweenBaseAndPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "dot",
+        "name": "period",
         "value": {
           "kind": "period",
           "text": "."
         }
       },
       {
-        "name": "unexpectedBetweenDotAndName",
+        "name": "unexpectedBetweenPeriodAndName",
         "value": {
           "text": "nil"
         }
@@ -9021,20 +9021,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenBaseAndDot",
+        "name": "unexpectedBetweenBaseAndPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "dot",
+        "name": "period",
         "value": {
           "kind": "period",
           "text": "."
         }
       },
       {
-        "name": "unexpectedBetweenDotAndName",
+        "name": "unexpectedBetweenPeriodAndName",
         "value": {
           "text": "nil"
         }
@@ -9235,20 +9235,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenBaseAndDot",
+        "name": "unexpectedBetweenBaseAndPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "dot",
+        "name": "period",
         "value": {
           "kind": "period",
           "text": "."
         }
       },
       {
-        "name": "unexpectedBetweenDotAndName",
+        "name": "unexpectedBetweenPeriodAndName",
         "value": {
           "text": "nil"
         }
@@ -10637,20 +10637,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenBaseAndDot",
+        "name": "unexpectedBetweenBaseAndPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "dot",
+        "name": "period",
         "value": {
           "kind": "period",
           "text": "."
         }
       },
       {
-        "name": "unexpectedBetweenDotAndName",
+        "name": "unexpectedBetweenPeriodAndName",
         "value": {
           "text": "nil"
         }
@@ -12810,19 +12810,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenBackslashAndDelimiter",
+        "name": "unexpectedBetweenBackslashAndRawStringDelimiter",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "delimiter",
+        "name": "rawStringDelimiter",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenDelimiterAndLeftParen",
+        "name": "unexpectedBetweenRawStringDelimiterAndLeftParen",
         "value": {
           "text": "nil"
         }
@@ -13025,20 +13025,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenBaseAndDot",
+        "name": "unexpectedBetweenBaseAndPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "dot",
+        "name": "period",
         "value": {
           "kind": "period",
           "text": "."
         }
       },
       {
-        "name": "unexpectedBetweenDotAndName",
+        "name": "unexpectedBetweenPeriodAndName",
         "value": {
           "text": "nil"
         }
@@ -13436,20 +13436,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOperatorToken",
+        "name": "unexpectedBeforeOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorToken",
+        "name": "operator",
         "value": {
           "kind": "binaryOperator(\"+=\")",
           "text": "+=␣"
         }
       },
       {
-        "name": "unexpectedAfterOperatorToken",
+        "name": "unexpectedAfterOperator",
         "value": {
           "text": "nil"
         }
@@ -13678,19 +13678,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenBackslashAndDelimiter",
+        "name": "unexpectedBetweenBackslashAndRawStringDelimiter",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "delimiter",
+        "name": "rawStringDelimiter",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenDelimiterAndLeftParen",
+        "name": "unexpectedBetweenRawStringDelimiterAndLeftParen",
         "value": {
           "text": "nil"
         }
@@ -13893,20 +13893,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenBaseAndDot",
+        "name": "unexpectedBetweenBaseAndPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "dot",
+        "name": "period",
         "value": {
           "kind": "period",
           "text": "."
         }
       },
       {
-        "name": "unexpectedBetweenDotAndName",
+        "name": "unexpectedBetweenPeriodAndName",
         "value": {
           "text": "nil"
         }
@@ -13964,20 +13964,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenBaseAndDot",
+        "name": "unexpectedBetweenBaseAndPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "dot",
+        "name": "period",
         "value": {
           "kind": "period",
           "text": "."
         }
       },
       {
-        "name": "unexpectedBetweenDotAndName",
+        "name": "unexpectedBetweenPeriodAndName",
         "value": {
           "text": "nil"
         }
@@ -14711,20 +14711,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenBaseAndDot",
+        "name": "unexpectedBetweenBaseAndPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "dot",
+        "name": "period",
         "value": {
           "kind": "period",
           "text": "."
         }
       },
       {
-        "name": "unexpectedBetweenDotAndName",
+        "name": "unexpectedBetweenPeriodAndName",
         "value": {
           "text": "nil"
         }
@@ -14782,20 +14782,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenBaseAndDot",
+        "name": "unexpectedBetweenBaseAndPeriod",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "dot",
+        "name": "period",
         "value": {
           "kind": "period",
           "text": "."
         }
       },
       {
-        "name": "unexpectedBetweenDotAndName",
+        "name": "unexpectedBetweenPeriodAndName",
         "value": {
           "text": "nil"
         }
@@ -15245,20 +15245,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOperatorToken",
+        "name": "unexpectedBeforeOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorToken",
+        "name": "operator",
         "value": {
           "kind": "binaryOperator(\"+=\")",
           "text": "+=␣"
         }
       },
       {
-        "name": "unexpectedAfterOperatorToken",
+        "name": "unexpectedAfterOperator",
         "value": {
           "text": "nil"
         }
@@ -15487,19 +15487,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenBackslashAndDelimiter",
+        "name": "unexpectedBetweenBackslashAndRawStringDelimiter",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "delimiter",
+        "name": "rawStringDelimiter",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenDelimiterAndLeftParen",
+        "name": "unexpectedBetweenRawStringDelimiterAndLeftParen",
         "value": {
           "text": "nil"
         }
