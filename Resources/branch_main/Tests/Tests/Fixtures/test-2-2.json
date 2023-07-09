@@ -150,20 +150,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.var)",
           "text": "var␣"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }

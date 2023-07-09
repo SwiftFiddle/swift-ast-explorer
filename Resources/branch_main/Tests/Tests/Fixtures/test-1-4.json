@@ -730,20 +730,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
           "text": "↲␣␣let␣"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }
@@ -1149,20 +1149,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
           "text": "↲␣␣let␣"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }
