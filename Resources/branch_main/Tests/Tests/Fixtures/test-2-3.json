@@ -163,19 +163,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenImportKeywordAndImportKind",
+        "name": "unexpectedBetweenImportKeywordAndImportKindSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "importKind",
+        "name": "importKindSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenImportKindAndPath",
+        "name": "unexpectedBetweenImportKindSpecifierAndPath",
         "value": {
           "text": "nil"
         }
@@ -5954,20 +5954,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
           "text": "↲␣␣␣␣␣␣let␣"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }
@@ -6734,20 +6734,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.var)",
           "text": "↲↲␣␣␣␣var␣"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }
@@ -11111,20 +11111,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
           "text": "↲↲␣␣//␣BlackjackCard␣properties␣and␣methods↲␣␣let␣"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }
@@ -11809,20 +11809,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.var)",
           "text": "↲␣␣var␣"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }
@@ -12332,20 +12332,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.var)",
           "text": "↲␣␣␣␣var␣"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }
@@ -14494,20 +14494,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeBindingKeyword",
+        "name": "unexpectedBeforeBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
           "text": "let␣"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndPattern",
+        "name": "unexpectedBetweenBindingSpecifierAndPattern",
         "value": {
           "text": "nil"
         }
