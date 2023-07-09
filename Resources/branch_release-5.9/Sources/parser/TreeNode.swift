@@ -33,13 +33,15 @@ extension TreeNode: Equatable {
 extension TreeNode: CustomStringConvertible {
   var description: String {
     """
-    id: \(id)
-    parent: \(String(describing: parent))
-    text: \(text)
-    range: \(range)
-    structure: \(structure)
-    type: \(type)
-    token: \(String(describing: token))
+    {
+      id: \(id)
+      parent: \(String(describing: parent))
+      text: \(text)
+      range: \(range)
+      structure: \(structure)
+      type: \(type)
+      token: \(String(describing: token))
+    }
     """
   }
 }
@@ -54,10 +56,12 @@ struct Range: Codable, Equatable {
 extension Range: CustomStringConvertible {
   var description: String {
     """
-    startRow: \(startRow)
-    startColumn: \(startColumn)
-    endRow: \(endRow)
-    endColumn: \(endColumn)
+    {
+      startRow: \(startRow)
+      startColumn: \(startColumn)
+      endRow: \(endRow)
+      endColumn: \(endColumn)
+    }
     """
   }
 }
@@ -77,9 +81,11 @@ struct StructureProperty: Codable, Equatable {
 extension StructureProperty: CustomStringConvertible {
   var description: String {
     """
-    name: \(name)
-    value: \(String(describing: value))
-    ref: \(String(describing: ref))
+    {
+      name: \(name)
+      value: \(String(describing: value))
+      ref: \(String(describing: ref))
+    }
     """
   }
 }
@@ -97,8 +103,10 @@ struct StructureValue: Codable, Equatable {
 extension StructureValue: CustomStringConvertible {
   var description: String {
     """
-    text: \(text)
-    kind: \(String(describing: kind))
+    {
+      text: \(text)
+      kind: \(String(describing: kind))
+    }
     """
   }
 }
@@ -121,9 +129,11 @@ struct Token: Codable, Equatable {
 extension Token: CustomStringConvertible {
   var description: String {
     """
-    kind: \(kind)
-    leadingTrivia: \(leadingTrivia)
-    trailingTrivia: \(trailingTrivia)
+    {
+      kind: \(kind)
+      leadingTrivia: \(leadingTrivia)
+      trailingTrivia: \(trailingTrivia)
+    }
     """
   }
 }
