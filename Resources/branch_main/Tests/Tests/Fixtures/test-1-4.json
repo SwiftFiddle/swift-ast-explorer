@@ -30,7 +30,7 @@
       {
         "name": "endOfFileToken",
         "value": {
-          "kind": "eof",
+          "kind": "endOfFile",
           "text": ""
         }
       },
@@ -1518,7 +1518,7 @@
     "structure": [],
     "text": "",
     "token": {
-      "kind": "eof",
+      "kind": "endOfFile",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
