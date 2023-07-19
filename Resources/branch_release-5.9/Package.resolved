@@ -6,7 +6,7 @@
       "location" : "https://github.com/apple/swift-syntax",
       "state" : {
         "branch" : "release/5.9",
-        "revision" : "5c6cde34d900197ea4c3d5d384d31ad05ced5d1f"
+        "revision" : "f1246ff6748dc54f32883df849e5fb4d49effe95"
       }
     }
   ],
