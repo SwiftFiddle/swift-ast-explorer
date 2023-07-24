@@ -278,19 +278,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorsAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -1138,20 +1138,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftParenAndArgumentList",
+        "name": "unexpectedBetweenLeftParenAndArguments",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "argumentList",
+        "name": "arguments",
         "ref": "TupleExprElementListSyntax",
         "value": {
           "text": "TupleExprElementListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenArgumentListAndRightParen",
+        "name": "unexpectedBetweenArgumentsAndRightParen",
         "value": {
           "text": "nil"
         }
@@ -2206,20 +2206,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftParenAndArgumentList",
+        "name": "unexpectedBetweenLeftParenAndArguments",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "argumentList",
+        "name": "arguments",
         "ref": "TupleExprElementListSyntax",
         "value": {
           "text": "TupleExprElementListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenArgumentListAndRightParen",
+        "name": "unexpectedBetweenArgumentsAndRightParen",
         "value": {
           "text": "nil"
         }
@@ -2876,20 +2876,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftParenAndArgumentList",
+        "name": "unexpectedBetweenLeftParenAndArguments",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "argumentList",
+        "name": "arguments",
         "ref": "TupleExprElementListSyntax",
         "value": {
           "text": "TupleExprElementListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenArgumentListAndRightParen",
+        "name": "unexpectedBetweenArgumentsAndRightParen",
         "value": {
           "text": "nil"
         }

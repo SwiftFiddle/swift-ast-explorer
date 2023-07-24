@@ -278,19 +278,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorsAndTrailingComma",
         "value": {
           "text": "nil"
         }

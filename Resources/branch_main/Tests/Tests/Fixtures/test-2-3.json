@@ -397,20 +397,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenStructKeywordAndIdentifier",
+        "name": "unexpectedBetweenStructKeywordAndName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"BlackjackCard\")",
           "text": "BlackjackCard␣"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndGenericParameterClause",
+        "name": "unexpectedBetweenNameAndGenericParameterClause",
         "value": {
           "text": "nil"
         }
@@ -700,20 +700,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenEnumKeywordAndIdentifier",
+        "name": "unexpectedBetweenEnumKeywordAndName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"Suit\")",
           "text": "Suit"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndGenericParameterClause",
+        "name": "unexpectedBetweenNameAndGenericParameterClause",
         "value": {
           "text": "nil"
         }
@@ -832,20 +832,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenColonAndInheritedTypeCollection",
+        "name": "unexpectedBetweenColonAndInheritedTypes",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "inheritedTypeCollection",
+        "name": "inheritedTypes",
         "ref": "InheritedTypeListSyntax",
         "value": {
           "text": "InheritedTypeListSyntax"
         }
       },
       {
-        "name": "unexpectedAfterInheritedTypeCollection",
+        "name": "unexpectedAfterInheritedTypes",
         "value": {
           "text": "nil"
         }
@@ -909,20 +909,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeTypeName",
+        "name": "unexpectedBeforeType",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "typeName",
+        "name": "type",
         "ref": "SimpleTypeIdentifierSyntax",
         "value": {
           "text": "SimpleTypeIdentifierSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenTypeNameAndTrailingComma",
+        "name": "unexpectedBetweenTypeAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -1279,20 +1279,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"spades\")",
           "text": "spades␣"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -1786,20 +1786,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"hearts\")",
           "text": "hearts␣"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -2293,20 +2293,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"diamonds\")",
           "text": "diamonds␣"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -2800,20 +2800,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"clubs\")",
           "text": "clubs␣"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -3248,20 +3248,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenEnumKeywordAndIdentifier",
+        "name": "unexpectedBetweenEnumKeywordAndName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"Rank\")",
           "text": "Rank"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndGenericParameterClause",
+        "name": "unexpectedBetweenNameAndGenericParameterClause",
         "value": {
           "text": "nil"
         }
@@ -3380,20 +3380,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenColonAndInheritedTypeCollection",
+        "name": "unexpectedBetweenColonAndInheritedTypes",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "inheritedTypeCollection",
+        "name": "inheritedTypes",
         "ref": "InheritedTypeListSyntax",
         "value": {
           "text": "InheritedTypeListSyntax"
         }
       },
       {
-        "name": "unexpectedAfterInheritedTypeCollection",
+        "name": "unexpectedAfterInheritedTypes",
         "value": {
           "text": "nil"
         }
@@ -3457,20 +3457,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeTypeName",
+        "name": "unexpectedBeforeType",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "typeName",
+        "name": "type",
         "ref": "SimpleTypeIdentifierSyntax",
         "value": {
           "text": "SimpleTypeIdentifierSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenTypeNameAndTrailingComma",
+        "name": "unexpectedBetweenTypeAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -3827,20 +3827,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"two\")",
           "text": "two␣"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -4189,20 +4189,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"three\")",
           "text": "three"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -4295,20 +4295,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"four\")",
           "text": "four"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -4401,20 +4401,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"five\")",
           "text": "five"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -4507,20 +4507,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"six\")",
           "text": "six"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -4613,20 +4613,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"seven\")",
           "text": "seven"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -4719,20 +4719,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"eight\")",
           "text": "eight"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -4825,20 +4825,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"nine\")",
           "text": "nine"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -4931,20 +4931,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"ten\")",
           "text": "ten"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -5177,20 +5177,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"jack\")",
           "text": "jack"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -5283,20 +5283,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"queen\")",
           "text": "queen"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -5389,20 +5389,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"king\")",
           "text": "king"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -5495,20 +5495,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"ace\")",
           "text": "ace"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndAssociatedValue",
         "value": {
           "text": "nil"
         }
@@ -5664,20 +5664,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenStructKeywordAndIdentifier",
+        "name": "unexpectedBetweenStructKeywordAndName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(\"Values\")",
           "text": "Values␣"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndGenericParameterClause",
+        "name": "unexpectedBetweenNameAndGenericParameterClause",
         "value": {
           "text": "nil"
         }
@@ -6082,19 +6082,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorsAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -6361,19 +6361,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorsAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -6862,20 +6862,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessors",
         "ref": "CodeBlockSyntax",
         "value": {
           "text": "CodeBlockSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorsAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -8012,20 +8012,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftParenAndArgumentList",
+        "name": "unexpectedBetweenLeftParenAndArguments",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "argumentList",
+        "name": "arguments",
         "ref": "TupleExprElementListSyntax",
         "value": {
           "text": "TupleExprElementListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenArgumentListAndRightParen",
+        "name": "unexpectedBetweenArgumentsAndRightParen",
         "value": {
           "text": "nil"
         }
@@ -9508,20 +9508,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftParenAndArgumentList",
+        "name": "unexpectedBetweenLeftParenAndArguments",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "argumentList",
+        "name": "arguments",
         "ref": "TupleExprElementListSyntax",
         "value": {
           "text": "TupleExprElementListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenArgumentListAndRightParen",
+        "name": "unexpectedBetweenArgumentsAndRightParen",
         "value": {
           "text": "nil"
         }
@@ -10339,20 +10339,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftParenAndArgumentList",
+        "name": "unexpectedBetweenLeftParenAndArguments",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "argumentList",
+        "name": "arguments",
         "ref": "TupleExprElementListSyntax",
         "value": {
           "text": "TupleExprElementListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenArgumentListAndRightParen",
+        "name": "unexpectedBetweenArgumentsAndRightParen",
         "value": {
           "text": "nil"
         }
@@ -11239,19 +11239,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorsAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -11518,19 +11518,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorsAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -11937,20 +11937,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessors",
         "ref": "CodeBlockSyntax",
         "value": {
           "text": "CodeBlockSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorsAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -12460,19 +12460,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessors",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorsAndTrailingComma",
         "value": {
           "text": "nil"
         }
