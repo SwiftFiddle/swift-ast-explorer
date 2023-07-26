@@ -182,9 +182,9 @@
       },
       {
         "name": "path",
-        "ref": "ImportPathSyntax",
+        "ref": "ImportPathComponentListSyntax",
         "value": {
-          "text": "ImportPathSyntax"
+          "text": "ImportPathComponentListSyntax"
         }
       },
       {
@@ -238,7 +238,7 @@
         }
       }
     ],
-    "text": "ImportPath",
+    "text": "ImportPathComponentList",
     "type": "collection"
   },
   {
@@ -1463,9 +1463,9 @@
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
@@ -1544,7 +1544,7 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
@@ -1970,9 +1970,9 @@
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
@@ -2051,7 +2051,7 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
@@ -2477,9 +2477,9 @@
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
@@ -2558,7 +2558,7 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
@@ -2984,9 +2984,9 @@
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
@@ -3065,7 +3065,7 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
@@ -12651,9 +12651,9 @@
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
@@ -12732,7 +12732,7 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
@@ -13519,9 +13519,9 @@
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
@@ -13600,7 +13600,7 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
@@ -15328,9 +15328,9 @@
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
@@ -15409,7 +15409,7 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
