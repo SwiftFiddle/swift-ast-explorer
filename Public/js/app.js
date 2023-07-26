@@ -54,6 +54,15 @@ export class App {
     });
 
     document.getElementById("config-button").classList.remove("disabled");
+    document.getElementById("version-button").classList.remove("disabled");
+
+    document.querySelectorAll(".options-item.checkbox").forEach((listItem) => {
+      listItem.addEventListener("click", (event) => {
+        event.preventDefault();
+        listItem.classList.toggle("active-tick");
+        this.update();
+      });
+    });
     document.querySelectorAll(".options-item.radio").forEach((listItem) => {
       listItem.addEventListener("click", (event) => {
         event.preventDefault();
@@ -61,13 +70,8 @@ export class App {
           listItem.classList.remove("active-tick");
         });
         listItem.classList.toggle("active-tick");
-        this.update();
-      });
-    });
-    document.querySelectorAll(".options-item.checkbox").forEach((listItem) => {
-      listItem.addEventListener("click", (event) => {
-        event.preventDefault();
-        listItem.classList.toggle("active-tick");
+        document.getElementById("version-text").textContent =
+          listItem.dataset.text;
         this.update();
       });
     });

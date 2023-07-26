@@ -93,29 +93,11 @@
             </button>
             <ul class="dropdown-menu">
               <li>
-                <h6 class="dropdown-header">Swift Syntax</h6>
-              </li>
-              <li class="options-item radio active-tick" data-value="branch_stable">
-                <a class="dropdown-item" data-target="#">
-                  508.0.1 (Swift 5.8)
-                </a>
-              </li>
-              <li class="options-item radio" data-value="branch_release-5.9">
-                <a class="dropdown-item" data-target="#">
-                  release/5.9 branch
-                </a>
-              </li>
-              <li class="options-item radio" data-value="branch_main">
-                <a class="dropdown-item" data-target="#">
-                  main branch
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
+                <h6 class="dropdown-header">Options</h6>
               </li>
               <li class="options-item checkbox" data-value="fold">
                 <a class="dropdown-item" data-target="#">
-                  Fold All Sequence Expressions
+                  Fold Sequence Expressions
                 </a>
               </li>
             </ul>
@@ -132,6 +114,33 @@
               <span class="fa-solid fa-question fa-fw"></span>
             </button>
           </span>
+          <div class="dropdown d-inline-block">
+            <button id="version-button" type="button"
+              class="btn btn-link btn-sm text-decoration-none dropdown-toggle m-1 disabled" data-bs-toggle="dropdown"
+              data-bs-auto-close="outside" aria-label="Options" aria-expanded="false">
+              <span class="fa-solid fa-code-branch"></span><span id="version-text" class="mx-1">508.0.1</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <h6 class="dropdown-header">Swift Syntax Version</h6>
+              </li>
+              <li class="options-item radio active-tick" data-value="branch_stable" data-text="508.0.1">
+                <a class="dropdown-item" data-target="#">
+                  508.0.1 (Swift 5.8)
+                </a>
+              </li>
+              <li class="options-item radio" data-value="branch_release-5.9" data-text="release/5.9">
+                <a class="dropdown-item" data-target="#">
+                  release/5.9 branch
+                </a>
+              </li>
+              <li class="options-item radio" data-value="branch_main" data-text="main">
+                <a class="dropdown-item" data-target="#">
+                  main branch
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="col">
