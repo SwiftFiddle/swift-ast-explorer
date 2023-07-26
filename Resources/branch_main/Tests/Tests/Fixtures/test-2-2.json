@@ -1416,9 +1416,9 @@
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
@@ -1497,7 +1497,7 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
@@ -2484,9 +2484,9 @@
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
@@ -2565,7 +2565,7 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
@@ -3154,9 +3154,9 @@
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
@@ -3235,7 +3235,7 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
