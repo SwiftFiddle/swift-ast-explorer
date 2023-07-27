@@ -33,6 +33,10 @@
       height: 2rem;
     }
 
+    .button-pill {
+      height: 2rem;
+    }
+
     .button-circle {
       width: 2rem;
       height: 2rem;
@@ -77,13 +81,12 @@
             <span class="fa-brands fa-swift fa-2x text-primary d-inline-block align-middle p-1 swift-logo"></span><span
               class="h4 text-dark d-inline-block align-middle m-0">Swift AST Explorer</span>
           </a>
-          <button id="run-button" type="button" class="btn btn-primary btn-sm rounded-pill px-3 m-1 disabled"
-            aria-label="Update">
+          <button id="run-button" type="button"
+            class="btn btn-primary btn-sm rounded-pill button-pill px-3 m-1 disabled" aria-label="Update">
             <span id="run-button-icon" class="fa-solid fa-play fa-fw"></span>
             <div id="run-button-spinner" class="d-inline-block d-none">
               <span class="fa-duotone fa-spinner-third fa-spin fa-fw"></span>
             </div>
-            <span class="px-1">Update</span>
           </button>
           <div class="dropdown d-inline-block">
             <button id="config-button" type="button"

@@ -100,7 +100,9 @@ export class App {
       onresize();
     }).observe(document.body);
 
-    this.update();
+    setTimeout(() => {
+      this.update();
+    }, 100);
   }
 
   update() {
