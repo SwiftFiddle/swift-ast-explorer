@@ -336,7 +336,6 @@ final class Tests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    try! response.syntaxJSON.write(toFile: "/Users/katsumi/Downloads/testParser3.txt", atomically: true, encoding: .utf8)
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),

@@ -31,7 +31,7 @@
         "name": "endOfFileToken",
         "value": {
           "kind": "endOfFile",
-          "text": "↲↲//␣Prints␣\"It's␣really␣warm.␣Don't␣forget␣to␣wear␣sunscreen.\""
+          "text": "↲↲//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;"
         }
       },
       {
@@ -330,7 +330,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"temperatureInFahrenheit\")",
+          "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
           "text": "temperatureInFahrenheit␣"
         }
       },
@@ -356,7 +356,7 @@
     "structure": [],
     "text": "temperatureInFahrenheit",
     "token": {
-      "kind": "identifier(\"temperatureInFahrenheit\")",
+      "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -445,7 +445,7 @@
       {
         "name": "literal",
         "value": {
-          "kind": "integerLiteral(\"90\")",
+          "kind": "integerLiteral(&quot;90&quot;)",
           "text": "90"
         }
       },
@@ -471,7 +471,7 @@
     "structure": [],
     "text": "90",
     "token": {
-      "kind": "integerLiteral(\"90\")",
+      "kind": "integerLiteral(&quot;90&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -807,7 +807,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"temperatureInFahrenheit\")",
+          "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
           "text": "temperatureInFahrenheit␣"
         }
       },
@@ -845,7 +845,7 @@
     "structure": [],
     "text": "temperatureInFahrenheit",
     "token": {
-      "kind": "identifier(\"temperatureInFahrenheit\")",
+      "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -870,8 +870,8 @@
       {
         "name": "operator",
         "value": {
-          "kind": "binaryOperator(\"<=\")",
-          "text": "<=␣"
+          "kind": "binaryOperator(&quot;&lt;=&quot;)",
+          "text": "&lt;=␣"
         }
       },
       {
@@ -894,9 +894,9 @@
       "startRow": 3
     },
     "structure": [],
-    "text": "<=",
+    "text": "&lt;=",
     "token": {
-      "kind": "binaryOperator(\"<=\")",
+      "kind": "binaryOperator(&quot;&lt;=&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -921,7 +921,7 @@
       {
         "name": "literal",
         "value": {
-          "kind": "integerLiteral(\"32\")",
+          "kind": "integerLiteral(&quot;32&quot;)",
           "text": "32␣"
         }
       },
@@ -947,7 +947,7 @@
     "structure": [],
     "text": "32",
     "token": {
-      "kind": "integerLiteral(\"32\")",
+      "kind": "integerLiteral(&quot;32&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -1216,7 +1216,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"print\")",
+          "kind": "identifier(&quot;print&quot;)",
           "text": "↲␣␣print"
         }
       },
@@ -1254,7 +1254,7 @@
     "structure": [],
     "text": "print",
     "token": {
-      "kind": "identifier(\"print\")",
+      "kind": "identifier(&quot;print&quot;)",
       "leadingTrivia": "↲␣␣",
       "trailingTrivia": ""
     },
@@ -1405,7 +1405,7 @@
         "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -1431,7 +1431,7 @@
         "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -1466,7 +1466,7 @@
       "startRow": 4
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -1519,8 +1519,8 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\"It\\'s very cold. Consider wearing a scarf.\")",
-          "text": "It's␣very␣cold.␣Consider␣wearing␣a␣scarf."
+          "kind": "stringSegment(&quot;It\\&apos;s&nbsp;very&nbsp;cold.&nbsp;Consider&nbsp;wearing&nbsp;a&nbsp;scarf.&quot;)",
+          "text": "It&apos;s␣very␣cold.␣Consider␣wearing␣a␣scarf."
         }
       },
       {
@@ -1543,9 +1543,9 @@
       "startRow": 4
     },
     "structure": [],
-    "text": "It's very cold. Consider wearing a scarf.",
+    "text": "It&apos;s&nbsp;very&nbsp;cold.&nbsp;Consider&nbsp;wearing&nbsp;a&nbsp;scarf.",
     "token": {
-      "kind": "stringSegment(\"It\\'s very cold. Consider wearing a scarf.\")",
+      "kind": "stringSegment(&quot;It\\&apos;s&nbsp;very&nbsp;cold.&nbsp;Consider&nbsp;wearing&nbsp;a&nbsp;scarf.&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -1561,7 +1561,7 @@
       "startRow": 4
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -1875,7 +1875,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"temperatureInFahrenheit\")",
+          "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
           "text": "temperatureInFahrenheit␣"
         }
       },
@@ -1913,7 +1913,7 @@
     "structure": [],
     "text": "temperatureInFahrenheit",
     "token": {
-      "kind": "identifier(\"temperatureInFahrenheit\")",
+      "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -1938,8 +1938,8 @@
       {
         "name": "operator",
         "value": {
-          "kind": "binaryOperator(\">=\")",
-          "text": ">=␣"
+          "kind": "binaryOperator(&quot;&gt;=&quot;)",
+          "text": "&gt;=␣"
         }
       },
       {
@@ -1962,9 +1962,9 @@
       "startRow": 5
     },
     "structure": [],
-    "text": ">=",
+    "text": "&gt;=",
     "token": {
-      "kind": "binaryOperator(\">=\")",
+      "kind": "binaryOperator(&quot;&gt;=&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -1989,7 +1989,7 @@
       {
         "name": "literal",
         "value": {
-          "kind": "integerLiteral(\"86\")",
+          "kind": "integerLiteral(&quot;86&quot;)",
           "text": "86␣"
         }
       },
@@ -2015,7 +2015,7 @@
     "structure": [],
     "text": "86",
     "token": {
-      "kind": "integerLiteral(\"86\")",
+      "kind": "integerLiteral(&quot;86&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -2284,7 +2284,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"print\")",
+          "kind": "identifier(&quot;print&quot;)",
           "text": "↲␣␣print"
         }
       },
@@ -2322,7 +2322,7 @@
     "structure": [],
     "text": "print",
     "token": {
-      "kind": "identifier(\"print\")",
+      "kind": "identifier(&quot;print&quot;)",
       "leadingTrivia": "↲␣␣",
       "trailingTrivia": ""
     },
@@ -2473,7 +2473,7 @@
         "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -2499,7 +2499,7 @@
         "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -2534,7 +2534,7 @@
       "startRow": 6
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -2587,8 +2587,8 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\"It\\'s really warm. Don\\'t forget to wear sunscreen.\")",
-          "text": "It's␣really␣warm.␣Don't␣forget␣to␣wear␣sunscreen."
+          "kind": "stringSegment(&quot;It\\&apos;s&nbsp;really&nbsp;warm.&nbsp;Don\\&apos;t&nbsp;forget&nbsp;to&nbsp;wear&nbsp;sunscreen.&quot;)",
+          "text": "It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen."
         }
       },
       {
@@ -2611,9 +2611,9 @@
       "startRow": 6
     },
     "structure": [],
-    "text": "It's really warm. Don't forget to wear sunscreen.",
+    "text": "It&apos;s&nbsp;really&nbsp;warm.&nbsp;Don&apos;t&nbsp;forget&nbsp;to&nbsp;wear&nbsp;sunscreen.",
     "token": {
-      "kind": "stringSegment(\"It\\'s really warm. Don\\'t forget to wear sunscreen.\")",
+      "kind": "stringSegment(&quot;It\\&apos;s&nbsp;really&nbsp;warm.&nbsp;Don\\&apos;t&nbsp;forget&nbsp;to&nbsp;wear&nbsp;sunscreen.&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -2629,7 +2629,7 @@
       "startRow": 6
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -2954,7 +2954,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"print\")",
+          "kind": "identifier(&quot;print&quot;)",
           "text": "↲␣␣print"
         }
       },
@@ -2992,7 +2992,7 @@
     "structure": [],
     "text": "print",
     "token": {
-      "kind": "identifier(\"print\")",
+      "kind": "identifier(&quot;print&quot;)",
       "leadingTrivia": "↲␣␣",
       "trailingTrivia": ""
     },
@@ -3143,7 +3143,7 @@
         "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -3169,7 +3169,7 @@
         "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -3204,7 +3204,7 @@
       "startRow": 8
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -3257,8 +3257,8 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\"It\\'s not that cold. Wear a t-shirt.\")",
-          "text": "It's␣not␣that␣cold.␣Wear␣a␣t-shirt."
+          "kind": "stringSegment(&quot;It\\&apos;s&nbsp;not&nbsp;that&nbsp;cold.&nbsp;Wear&nbsp;a&nbsp;t-shirt.&quot;)",
+          "text": "It&apos;s␣not␣that␣cold.␣Wear␣a␣t-shirt."
         }
       },
       {
@@ -3281,9 +3281,9 @@
       "startRow": 8
     },
     "structure": [],
-    "text": "It's not that cold. Wear a t-shirt.",
+    "text": "It&apos;s&nbsp;not&nbsp;that&nbsp;cold.&nbsp;Wear&nbsp;a&nbsp;t-shirt.",
     "token": {
-      "kind": "stringSegment(\"It\\'s not that cold. Wear a t-shirt.\")",
+      "kind": "stringSegment(&quot;It\\&apos;s&nbsp;not&nbsp;that&nbsp;cold.&nbsp;Wear&nbsp;a&nbsp;t-shirt.&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -3299,7 +3299,7 @@
       "startRow": 8
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
