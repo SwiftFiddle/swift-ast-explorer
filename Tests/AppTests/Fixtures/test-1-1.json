@@ -342,7 +342,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"number\")",
+          "kind": "identifier(&quot;number&quot;)",
           "text": "number␣"
         }
       },
@@ -368,7 +368,7 @@
     "structure": [],
     "text": "number",
     "token": {
-      "kind": "identifier(\"number\")",
+      "kind": "identifier(&quot;number&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -457,7 +457,7 @@
       {
         "name": "digits",
         "value": {
-          "kind": "integerLiteral(\"0\")",
+          "kind": "integerLiteral(&quot;0&quot;)",
           "text": "0"
         }
       },
@@ -483,7 +483,7 @@
     "structure": [],
     "text": "0",
     "token": {
-      "kind": "integerLiteral(\"0\")",
+      "kind": "integerLiteral(&quot;0&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
