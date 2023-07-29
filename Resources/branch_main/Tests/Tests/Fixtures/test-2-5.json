@@ -344,20 +344,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftOperandAndOperatorOperand",
+        "name": "unexpectedBetweenLeftOperandAndOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorOperand",
+        "name": "operator",
         "ref": "BinaryOperatorExprSyntax",
         "value": {
           "text": "BinaryOperatorExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenOperatorOperandAndRightOperand",
+        "name": "unexpectedBetweenOperatorAndRightOperand",
         "value": {
           "text": "nil"
         }
@@ -517,20 +517,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftOperandAndOperatorOperand",
+        "name": "unexpectedBetweenLeftOperandAndOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorOperand",
+        "name": "operator",
         "ref": "BinaryOperatorExprSyntax",
         "value": {
           "text": "BinaryOperatorExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenOperatorOperandAndRightOperand",
+        "name": "unexpectedBetweenOperatorAndRightOperand",
         "value": {
           "text": "nil"
         }

@@ -437,20 +437,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(\"0\")",
           "text": "0"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }

@@ -437,20 +437,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(\"90\")",
           "text": "90"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }
@@ -753,20 +753,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftOperandAndOperatorOperand",
+        "name": "unexpectedBetweenLeftOperandAndOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorOperand",
+        "name": "operator",
         "ref": "BinaryOperatorExprSyntax",
         "value": {
           "text": "BinaryOperatorExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenOperatorOperandAndRightOperand",
+        "name": "unexpectedBetweenOperatorAndRightOperand",
         "value": {
           "text": "nil"
         }
@@ -913,20 +913,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(\"32\")",
           "text": "32␣"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }
@@ -1145,9 +1145,9 @@
       },
       {
         "name": "arguments",
-        "ref": "TupleExprElementListSyntax",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
@@ -1291,7 +1291,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -1301,7 +1301,7 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
@@ -1370,7 +1370,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
@@ -1384,32 +1384,32 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
@@ -1422,32 +1422,32 @@
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -1821,20 +1821,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftOperandAndOperatorOperand",
+        "name": "unexpectedBetweenLeftOperandAndOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorOperand",
+        "name": "operator",
         "ref": "BinaryOperatorExprSyntax",
         "value": {
           "text": "BinaryOperatorExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenOperatorOperandAndRightOperand",
+        "name": "unexpectedBetweenOperatorAndRightOperand",
         "value": {
           "text": "nil"
         }
@@ -1981,20 +1981,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(\"86\")",
           "text": "86␣"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }
@@ -2213,9 +2213,9 @@
       },
       {
         "name": "arguments",
-        "ref": "TupleExprElementListSyntax",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
@@ -2359,7 +2359,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -2369,7 +2369,7 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
@@ -2438,7 +2438,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
@@ -2452,32 +2452,32 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
@@ -2490,32 +2490,32 @@
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -2883,9 +2883,9 @@
       },
       {
         "name": "arguments",
-        "ref": "TupleExprElementListSyntax",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
@@ -3029,7 +3029,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -3039,7 +3039,7 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
@@ -3108,7 +3108,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
@@ -3122,32 +3122,32 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
@@ -3160,32 +3160,32 @@
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }

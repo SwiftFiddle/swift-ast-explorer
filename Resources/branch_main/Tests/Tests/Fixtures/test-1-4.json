@@ -221,9 +221,9 @@
       },
       {
         "name": "memberBlock",
-        "ref": "MemberDeclBlockSyntax",
+        "ref": "MemberBlockSyntax",
         "value": {
-          "text": "MemberDeclBlockSyntax"
+          "text": "MemberBlockSyntax"
         }
       },
       {
@@ -418,9 +418,9 @@
       },
       {
         "name": "members",
-        "ref": "MemberDeclListSyntax",
+        "ref": "MemberBlockItemListSyntax",
         "value": {
-          "text": "MemberDeclListSyntax"
+          "text": "MemberBlockItemListSyntax"
         }
       },
       {
@@ -443,7 +443,7 @@
         }
       }
     ],
-    "text": "MemberDeclBlock",
+    "text": "MemberBlock",
     "type": "other"
   },
   {
@@ -477,7 +477,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "MemberDeclListItemSyntax"
+          "text": "MemberBlockItemSyntax"
         }
       },
       {
@@ -487,7 +487,7 @@
         }
       }
     ],
-    "text": "MemberDeclList",
+    "text": "MemberBlockItemList",
     "type": "collection"
   },
   {
@@ -973,9 +973,9 @@
       },
       {
         "name": "type",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -1048,7 +1048,7 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
@@ -1392,9 +1392,9 @@
       },
       {
         "name": "type",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -1467,7 +1467,7 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
