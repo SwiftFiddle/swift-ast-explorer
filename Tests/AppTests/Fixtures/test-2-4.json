@@ -184,7 +184,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"Result\")",
+          "kind": "identifier(&quot;Result&quot;)",
           "text": "Result"
         }
       },
@@ -278,7 +278,7 @@
     "structure": [],
     "text": "Result",
     "token": {
-      "kind": "identifier(\"Result\")",
+      "kind": "identifier(&quot;Result&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -304,7 +304,7 @@
         "name": "leftAngleBracket",
         "value": {
           "kind": "leftAngle",
-          "text": "<␣"
+          "text": "&lt;␣"
         }
       },
       {
@@ -365,7 +365,7 @@
       "startRow": 1
     },
     "structure": [],
-    "text": "<",
+    "text": "&lt;",
     "token": {
       "kind": "leftAngle",
       "leadingTrivia": "",
@@ -409,7 +409,7 @@
       "startRow": 1
     },
     "structure": [],
-    "text": ">",
+    "text": "&gt;",
     "token": {
       "kind": "rightAngle",
       "leadingTrivia": "",
@@ -1000,7 +1000,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"text\")",
+          "kind": "identifier(&quot;text&quot;)",
           "text": "text"
         }
       },
@@ -1026,7 +1026,7 @@
     "structure": [],
     "text": "text",
     "token": {
-      "kind": "identifier(\"text\")",
+      "kind": "identifier(&quot;text&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -1115,7 +1115,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"String\")",
+          "kind": "identifier(&quot;String&quot;)",
           "text": "String"
         }
       },
@@ -1153,7 +1153,7 @@
     "structure": [],
     "text": "String",
     "token": {
-      "kind": "identifier(\"String\")",
+      "kind": "identifier(&quot;String&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -1431,7 +1431,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"someOtherThing\")",
+          "kind": "identifier(&quot;someOtherThing&quot;)",
           "text": "someOtherThing"
         }
       },
@@ -1457,7 +1457,7 @@
     "structure": [],
     "text": "someOtherThing",
     "token": {
-      "kind": "identifier(\"someOtherThing\")",
+      "kind": "identifier(&quot;someOtherThing&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -1546,7 +1546,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"String\")",
+          "kind": "identifier(&quot;String&quot;)",
           "text": "String"
         }
       },
@@ -1584,7 +1584,7 @@
     "structure": [],
     "text": "String",
     "token": {
-      "kind": "identifier(\"String\")",
+      "kind": "identifier(&quot;String&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },

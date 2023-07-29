@@ -272,7 +272,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"Foundation\")",
+          "kind": "identifier(&quot;Foundation&quot;)",
           "text": "Foundation"
         }
       },
@@ -310,7 +310,7 @@
     "structure": [],
     "text": "Foundation",
     "token": {
-      "kind": "identifier(\"Foundation\")",
+      "kind": "identifier(&quot;Foundation&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -429,7 +429,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"BlackjackCard\")",
+          "kind": "identifier(&quot;BlackjackCard&quot;)",
           "text": "BlackjackCard␣"
         }
       },
@@ -522,7 +522,7 @@
     "structure": [],
     "text": "BlackjackCard",
     "token": {
-      "kind": "identifier(\"BlackjackCard\")",
+      "kind": "identifier(&quot;BlackjackCard&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -732,7 +732,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"Suit\")",
+          "kind": "identifier(&quot;Suit&quot;)",
           "text": "Suit"
         }
       },
@@ -826,7 +826,7 @@
     "structure": [],
     "text": "Suit",
     "token": {
-      "kind": "identifier(\"Suit\")",
+      "kind": "identifier(&quot;Suit&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -986,7 +986,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"Character\")",
+          "kind": "identifier(&quot;Character&quot;)",
           "text": "Character␣"
         }
       },
@@ -1024,7 +1024,7 @@
     "structure": [],
     "text": "Character",
     "token": {
-      "kind": "identifier(\"Character\")",
+      "kind": "identifier(&quot;Character&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -1311,7 +1311,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"spades\")",
+          "kind": "identifier(&quot;spades&quot;)",
           "text": "spades␣"
         }
       },
@@ -1374,7 +1374,7 @@
     "structure": [],
     "text": "spades",
     "token": {
-      "kind": "identifier(\"spades\")",
+      "kind": "identifier(&quot;spades&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -1476,7 +1476,7 @@
         "name": "openQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -1502,7 +1502,7 @@
         "name": "closeQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -1537,7 +1537,7 @@
       "startRow": 6
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -1590,7 +1590,7 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\"♠\")",
+          "kind": "stringSegment(&quot;♠&quot;)",
           "text": "♠"
         }
       },
@@ -1616,7 +1616,7 @@
     "structure": [],
     "text": "♠",
     "token": {
-      "kind": "stringSegment(\"♠\")",
+      "kind": "stringSegment(&quot;♠&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -1632,7 +1632,7 @@
       "startRow": 6
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -1818,7 +1818,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"hearts\")",
+          "kind": "identifier(&quot;hearts&quot;)",
           "text": "hearts␣"
         }
       },
@@ -1881,7 +1881,7 @@
     "structure": [],
     "text": "hearts",
     "token": {
-      "kind": "identifier(\"hearts\")",
+      "kind": "identifier(&quot;hearts&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -1983,7 +1983,7 @@
         "name": "openQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -2009,7 +2009,7 @@
         "name": "closeQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -2044,7 +2044,7 @@
       "startRow": 7
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -2097,7 +2097,7 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\"♡\")",
+          "kind": "stringSegment(&quot;♡&quot;)",
           "text": "♡"
         }
       },
@@ -2123,7 +2123,7 @@
     "structure": [],
     "text": "♡",
     "token": {
-      "kind": "stringSegment(\"♡\")",
+      "kind": "stringSegment(&quot;♡&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -2139,7 +2139,7 @@
       "startRow": 7
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -2325,7 +2325,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"diamonds\")",
+          "kind": "identifier(&quot;diamonds&quot;)",
           "text": "diamonds␣"
         }
       },
@@ -2388,7 +2388,7 @@
     "structure": [],
     "text": "diamonds",
     "token": {
-      "kind": "identifier(\"diamonds\")",
+      "kind": "identifier(&quot;diamonds&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -2490,7 +2490,7 @@
         "name": "openQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -2516,7 +2516,7 @@
         "name": "closeQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -2551,7 +2551,7 @@
       "startRow": 8
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -2604,7 +2604,7 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\"♢\")",
+          "kind": "stringSegment(&quot;♢&quot;)",
           "text": "♢"
         }
       },
@@ -2630,7 +2630,7 @@
     "structure": [],
     "text": "♢",
     "token": {
-      "kind": "stringSegment(\"♢\")",
+      "kind": "stringSegment(&quot;♢&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -2646,7 +2646,7 @@
       "startRow": 8
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -2832,7 +2832,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"clubs\")",
+          "kind": "identifier(&quot;clubs&quot;)",
           "text": "clubs␣"
         }
       },
@@ -2895,7 +2895,7 @@
     "structure": [],
     "text": "clubs",
     "token": {
-      "kind": "identifier(\"clubs\")",
+      "kind": "identifier(&quot;clubs&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -2997,7 +2997,7 @@
         "name": "openQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -3023,7 +3023,7 @@
         "name": "closeQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -3058,7 +3058,7 @@
       "startRow": 9
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -3111,7 +3111,7 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\"♣\")",
+          "kind": "stringSegment(&quot;♣&quot;)",
           "text": "♣"
         }
       },
@@ -3137,7 +3137,7 @@
     "structure": [],
     "text": "♣",
     "token": {
-      "kind": "stringSegment(\"♣\")",
+      "kind": "stringSegment(&quot;♣&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -3153,7 +3153,7 @@
       "startRow": 9
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -3280,7 +3280,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"Rank\")",
+          "kind": "identifier(&quot;Rank&quot;)",
           "text": "Rank"
         }
       },
@@ -3374,7 +3374,7 @@
     "structure": [],
     "text": "Rank",
     "token": {
-      "kind": "identifier(\"Rank\")",
+      "kind": "identifier(&quot;Rank&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -3534,7 +3534,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"Int\")",
+          "kind": "identifier(&quot;Int&quot;)",
           "text": "Int␣"
         }
       },
@@ -3572,7 +3572,7 @@
     "structure": [],
     "text": "Int",
     "token": {
-      "kind": "identifier(\"Int\")",
+      "kind": "identifier(&quot;Int&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -3859,7 +3859,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"two\")",
+          "kind": "identifier(&quot;two&quot;)",
           "text": "two␣"
         }
       },
@@ -3922,7 +3922,7 @@
     "structure": [],
     "text": "two",
     "token": {
-      "kind": "identifier(\"two\")",
+      "kind": "identifier(&quot;two&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -4011,7 +4011,7 @@
       {
         "name": "digits",
         "value": {
-          "kind": "integerLiteral(\"2\")",
+          "kind": "integerLiteral(&quot;2&quot;)",
           "text": "2"
         }
       },
@@ -4037,7 +4037,7 @@
     "structure": [],
     "text": "2",
     "token": {
-      "kind": "integerLiteral(\"2\")",
+      "kind": "integerLiteral(&quot;2&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -4221,7 +4221,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"three\")",
+          "kind": "identifier(&quot;three&quot;)",
           "text": "three"
         }
       },
@@ -4284,7 +4284,7 @@
     "structure": [],
     "text": "three",
     "token": {
-      "kind": "identifier(\"three\")",
+      "kind": "identifier(&quot;three&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -4327,7 +4327,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"four\")",
+          "kind": "identifier(&quot;four&quot;)",
           "text": "four"
         }
       },
@@ -4390,7 +4390,7 @@
     "structure": [],
     "text": "four",
     "token": {
-      "kind": "identifier(\"four\")",
+      "kind": "identifier(&quot;four&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -4433,7 +4433,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"five\")",
+          "kind": "identifier(&quot;five&quot;)",
           "text": "five"
         }
       },
@@ -4496,7 +4496,7 @@
     "structure": [],
     "text": "five",
     "token": {
-      "kind": "identifier(\"five\")",
+      "kind": "identifier(&quot;five&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -4539,7 +4539,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"six\")",
+          "kind": "identifier(&quot;six&quot;)",
           "text": "six"
         }
       },
@@ -4602,7 +4602,7 @@
     "structure": [],
     "text": "six",
     "token": {
-      "kind": "identifier(\"six\")",
+      "kind": "identifier(&quot;six&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -4645,7 +4645,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"seven\")",
+          "kind": "identifier(&quot;seven&quot;)",
           "text": "seven"
         }
       },
@@ -4708,7 +4708,7 @@
     "structure": [],
     "text": "seven",
     "token": {
-      "kind": "identifier(\"seven\")",
+      "kind": "identifier(&quot;seven&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -4751,7 +4751,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"eight\")",
+          "kind": "identifier(&quot;eight&quot;)",
           "text": "eight"
         }
       },
@@ -4814,7 +4814,7 @@
     "structure": [],
     "text": "eight",
     "token": {
-      "kind": "identifier(\"eight\")",
+      "kind": "identifier(&quot;eight&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -4857,7 +4857,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"nine\")",
+          "kind": "identifier(&quot;nine&quot;)",
           "text": "nine"
         }
       },
@@ -4920,7 +4920,7 @@
     "structure": [],
     "text": "nine",
     "token": {
-      "kind": "identifier(\"nine\")",
+      "kind": "identifier(&quot;nine&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -4963,7 +4963,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"ten\")",
+          "kind": "identifier(&quot;ten&quot;)",
           "text": "ten"
         }
       },
@@ -5025,7 +5025,7 @@
     "structure": [],
     "text": "ten",
     "token": {
-      "kind": "identifier(\"ten\")",
+      "kind": "identifier(&quot;ten&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -5209,7 +5209,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"jack\")",
+          "kind": "identifier(&quot;jack&quot;)",
           "text": "jack"
         }
       },
@@ -5272,7 +5272,7 @@
     "structure": [],
     "text": "jack",
     "token": {
-      "kind": "identifier(\"jack\")",
+      "kind": "identifier(&quot;jack&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -5315,7 +5315,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"queen\")",
+          "kind": "identifier(&quot;queen&quot;)",
           "text": "queen"
         }
       },
@@ -5378,7 +5378,7 @@
     "structure": [],
     "text": "queen",
     "token": {
-      "kind": "identifier(\"queen\")",
+      "kind": "identifier(&quot;queen&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -5421,7 +5421,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"king\")",
+          "kind": "identifier(&quot;king&quot;)",
           "text": "king"
         }
       },
@@ -5484,7 +5484,7 @@
     "structure": [],
     "text": "king",
     "token": {
-      "kind": "identifier(\"king\")",
+      "kind": "identifier(&quot;king&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -5527,7 +5527,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"ace\")",
+          "kind": "identifier(&quot;ace&quot;)",
           "text": "ace"
         }
       },
@@ -5589,7 +5589,7 @@
     "structure": [],
     "text": "ace",
     "token": {
-      "kind": "identifier(\"ace\")",
+      "kind": "identifier(&quot;ace&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -5696,7 +5696,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"Values\")",
+          "kind": "identifier(&quot;Values&quot;)",
           "text": "Values␣"
         }
       },
@@ -5789,7 +5789,7 @@
     "structure": [],
     "text": "Values",
     "token": {
-      "kind": "identifier(\"Values\")",
+      "kind": "identifier(&quot;Values&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -6159,7 +6159,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"first\")",
+          "kind": "identifier(&quot;first&quot;)",
           "text": "first"
         }
       },
@@ -6185,7 +6185,7 @@
     "structure": [],
     "text": "first",
     "token": {
-      "kind": "identifier(\"first\")",
+      "kind": "identifier(&quot;first&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -6274,7 +6274,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"Int\")",
+          "kind": "identifier(&quot;Int&quot;)",
           "text": "Int"
         }
       },
@@ -6312,7 +6312,7 @@
     "structure": [],
     "text": "Int",
     "token": {
-      "kind": "identifier(\"Int\")",
+      "kind": "identifier(&quot;Int&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -6437,7 +6437,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"second\")",
+          "kind": "identifier(&quot;second&quot;)",
           "text": "second"
         }
       },
@@ -6463,7 +6463,7 @@
     "structure": [],
     "text": "second",
     "token": {
-      "kind": "identifier(\"second\")",
+      "kind": "identifier(&quot;second&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -6598,7 +6598,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"Int\")",
+          "kind": "identifier(&quot;Int&quot;)",
           "text": "Int"
         }
       },
@@ -6636,7 +6636,7 @@
     "structure": [],
     "text": "Int",
     "token": {
-      "kind": "identifier(\"Int\")",
+      "kind": "identifier(&quot;Int&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -6939,7 +6939,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"values\")",
+          "kind": "identifier(&quot;values&quot;)",
           "text": "values"
         }
       },
@@ -6965,7 +6965,7 @@
     "structure": [],
     "text": "values",
     "token": {
-      "kind": "identifier(\"values\")",
+      "kind": "identifier(&quot;values&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -7054,7 +7054,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"Values\")",
+          "kind": "identifier(&quot;Values&quot;)",
           "text": "Values␣"
         }
       },
@@ -7092,7 +7092,7 @@
     "structure": [],
     "text": "Values",
     "token": {
-      "kind": "identifier(\"Values\")",
+      "kind": "identifier(&quot;Values&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -7763,7 +7763,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"ace\")",
+          "kind": "identifier(&quot;ace&quot;)",
           "text": "ace"
         }
       },
@@ -7819,7 +7819,7 @@
     "structure": [],
     "text": "ace",
     "token": {
-      "kind": "identifier(\"ace\")",
+      "kind": "identifier(&quot;ace&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -8105,7 +8105,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"Values\")",
+          "kind": "identifier(&quot;Values&quot;)",
           "text": "Values"
         }
       },
@@ -8143,7 +8143,7 @@
     "structure": [],
     "text": "Values",
     "token": {
-      "kind": "identifier(\"Values\")",
+      "kind": "identifier(&quot;Values&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -8212,7 +8212,7 @@
       {
         "name": "label",
         "value": {
-          "kind": "identifier(\"first\")",
+          "kind": "identifier(&quot;first&quot;)",
           "text": "first"
         }
       },
@@ -8277,7 +8277,7 @@
     "structure": [],
     "text": "first",
     "token": {
-      "kind": "identifier(\"first\")",
+      "kind": "identifier(&quot;first&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -8320,7 +8320,7 @@
       {
         "name": "digits",
         "value": {
-          "kind": "integerLiteral(\"1\")",
+          "kind": "integerLiteral(&quot;1&quot;)",
           "text": "1"
         }
       },
@@ -8346,7 +8346,7 @@
     "structure": [],
     "text": "1",
     "token": {
-      "kind": "integerLiteral(\"1\")",
+      "kind": "integerLiteral(&quot;1&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -8389,7 +8389,7 @@
       {
         "name": "label",
         "value": {
-          "kind": "identifier(\"second\")",
+          "kind": "identifier(&quot;second&quot;)",
           "text": "second"
         }
       },
@@ -8453,7 +8453,7 @@
     "structure": [],
     "text": "second",
     "token": {
-      "kind": "identifier(\"second\")",
+      "kind": "identifier(&quot;second&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -8496,7 +8496,7 @@
       {
         "name": "digits",
         "value": {
-          "kind": "integerLiteral(\"11\")",
+          "kind": "integerLiteral(&quot;11&quot;)",
           "text": "11"
         }
       },
@@ -8522,7 +8522,7 @@
     "structure": [],
     "text": "11",
     "token": {
-      "kind": "integerLiteral(\"11\")",
+      "kind": "integerLiteral(&quot;11&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -8842,7 +8842,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"jack\")",
+          "kind": "identifier(&quot;jack&quot;)",
           "text": "jack"
         }
       },
@@ -8898,7 +8898,7 @@
     "structure": [],
     "text": "jack",
     "token": {
-      "kind": "identifier(\"jack\")",
+      "kind": "identifier(&quot;jack&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -9057,7 +9057,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"queen\")",
+          "kind": "identifier(&quot;queen&quot;)",
           "text": "queen"
         }
       },
@@ -9113,7 +9113,7 @@
     "structure": [],
     "text": "queen",
     "token": {
-      "kind": "identifier(\"queen\")",
+      "kind": "identifier(&quot;queen&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -9271,7 +9271,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"king\")",
+          "kind": "identifier(&quot;king&quot;)",
           "text": "king"
         }
       },
@@ -9327,7 +9327,7 @@
     "structure": [],
     "text": "king",
     "token": {
-      "kind": "identifier(\"king\")",
+      "kind": "identifier(&quot;king&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -9613,7 +9613,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"Values\")",
+          "kind": "identifier(&quot;Values&quot;)",
           "text": "Values"
         }
       },
@@ -9651,7 +9651,7 @@
     "structure": [],
     "text": "Values",
     "token": {
-      "kind": "identifier(\"Values\")",
+      "kind": "identifier(&quot;Values&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -9720,7 +9720,7 @@
       {
         "name": "label",
         "value": {
-          "kind": "identifier(\"first\")",
+          "kind": "identifier(&quot;first&quot;)",
           "text": "first"
         }
       },
@@ -9785,7 +9785,7 @@
     "structure": [],
     "text": "first",
     "token": {
-      "kind": "identifier(\"first\")",
+      "kind": "identifier(&quot;first&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -9828,7 +9828,7 @@
       {
         "name": "digits",
         "value": {
-          "kind": "integerLiteral(\"10\")",
+          "kind": "integerLiteral(&quot;10&quot;)",
           "text": "10"
         }
       },
@@ -9854,7 +9854,7 @@
     "structure": [],
     "text": "10",
     "token": {
-      "kind": "integerLiteral(\"10\")",
+      "kind": "integerLiteral(&quot;10&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -9897,7 +9897,7 @@
       {
         "name": "label",
         "value": {
-          "kind": "identifier(\"second\")",
+          "kind": "identifier(&quot;second&quot;)",
           "text": "second"
         }
       },
@@ -9961,7 +9961,7 @@
     "structure": [],
     "text": "second",
     "token": {
-      "kind": "identifier(\"second\")",
+      "kind": "identifier(&quot;second&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -10456,7 +10456,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"Values\")",
+          "kind": "identifier(&quot;Values&quot;)",
           "text": "Values"
         }
       },
@@ -10494,7 +10494,7 @@
     "structure": [],
     "text": "Values",
     "token": {
-      "kind": "identifier(\"Values\")",
+      "kind": "identifier(&quot;Values&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -10563,7 +10563,7 @@
       {
         "name": "label",
         "value": {
-          "kind": "identifier(\"first\")",
+          "kind": "identifier(&quot;first&quot;)",
           "text": "first"
         }
       },
@@ -10628,7 +10628,7 @@
     "structure": [],
     "text": "first",
     "token": {
-      "kind": "identifier(\"first\")",
+      "kind": "identifier(&quot;first&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -10697,7 +10697,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"rawValue\")",
+          "kind": "identifier(&quot;rawValue&quot;)",
           "text": "rawValue"
         }
       },
@@ -10816,7 +10816,7 @@
     "structure": [],
     "text": "rawValue",
     "token": {
-      "kind": "identifier(\"rawValue\")",
+      "kind": "identifier(&quot;rawValue&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -10859,7 +10859,7 @@
       {
         "name": "label",
         "value": {
-          "kind": "identifier(\"second\")",
+          "kind": "identifier(&quot;second&quot;)",
           "text": "second"
         }
       },
@@ -10923,7 +10923,7 @@
     "structure": [],
     "text": "second",
     "token": {
-      "kind": "identifier(\"second\")",
+      "kind": "identifier(&quot;second&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -11331,7 +11331,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"rank\")",
+          "kind": "identifier(&quot;rank&quot;)",
           "text": "rank"
         }
       },
@@ -11357,7 +11357,7 @@
     "structure": [],
     "text": "rank",
     "token": {
-      "kind": "identifier(\"rank\")",
+      "kind": "identifier(&quot;rank&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -11446,7 +11446,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"Rank\")",
+          "kind": "identifier(&quot;Rank&quot;)",
           "text": "Rank"
         }
       },
@@ -11484,7 +11484,7 @@
     "structure": [],
     "text": "Rank",
     "token": {
-      "kind": "identifier(\"Rank\")",
+      "kind": "identifier(&quot;Rank&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -11609,7 +11609,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"suit\")",
+          "kind": "identifier(&quot;suit&quot;)",
           "text": "suit"
         }
       },
@@ -11635,7 +11635,7 @@
     "structure": [],
     "text": "suit",
     "token": {
-      "kind": "identifier(\"suit\")",
+      "kind": "identifier(&quot;suit&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -11724,7 +11724,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"Suit\")",
+          "kind": "identifier(&quot;Suit&quot;)",
           "text": "Suit"
         }
       },
@@ -11762,7 +11762,7 @@
     "structure": [],
     "text": "Suit",
     "token": {
-      "kind": "identifier(\"Suit\")",
+      "kind": "identifier(&quot;Suit&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -12029,7 +12029,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"description\")",
+          "kind": "identifier(&quot;description&quot;)",
           "text": "description"
         }
       },
@@ -12055,7 +12055,7 @@
     "structure": [],
     "text": "description",
     "token": {
-      "kind": "identifier(\"description\")",
+      "kind": "identifier(&quot;description&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -12144,7 +12144,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"String\")",
+          "kind": "identifier(&quot;String&quot;)",
           "text": "String␣"
         }
       },
@@ -12182,7 +12182,7 @@
     "structure": [],
     "text": "String",
     "token": {
-      "kind": "identifier(\"String\")",
+      "kind": "identifier(&quot;String&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -12563,7 +12563,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"output\")",
+          "kind": "identifier(&quot;output&quot;)",
           "text": "output␣"
         }
       },
@@ -12589,7 +12589,7 @@
     "structure": [],
     "text": "output",
     "token": {
-      "kind": "identifier(\"output\")",
+      "kind": "identifier(&quot;output&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -12691,7 +12691,7 @@
         "name": "openQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -12717,7 +12717,7 @@
         "name": "closeQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -12752,7 +12752,7 @@
       "startRow": 37
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -12805,7 +12805,7 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\"suit is \")",
+          "kind": "stringSegment(&quot;suit&nbsp;is&nbsp;&quot;)",
           "text": "suit␣is␣"
         }
       },
@@ -12829,9 +12829,9 @@
       "startRow": 37
     },
     "structure": [],
-    "text": "suit is ",
+    "text": "suit&nbsp;is&nbsp;",
     "token": {
-      "kind": "stringSegment(\"suit is \")",
+      "kind": "stringSegment(&quot;suit&nbsp;is&nbsp;&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -13097,7 +13097,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"rawValue\")",
+          "kind": "identifier(&quot;rawValue&quot;)",
           "text": "rawValue"
         }
       },
@@ -13142,7 +13142,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"suit\")",
+          "kind": "identifier(&quot;suit&quot;)",
           "text": "suit"
         }
       },
@@ -13180,7 +13180,7 @@
     "structure": [],
     "text": "suit",
     "token": {
-      "kind": "identifier(\"suit\")",
+      "kind": "identifier(&quot;suit&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -13216,7 +13216,7 @@
     "structure": [],
     "text": "rawValue",
     "token": {
-      "kind": "identifier(\"rawValue\")",
+      "kind": "identifier(&quot;rawValue&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -13259,7 +13259,7 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\",\")",
+          "kind": "stringSegment(&quot;,&quot;)",
           "text": ","
         }
       },
@@ -13285,7 +13285,7 @@
     "structure": [],
     "text": ",",
     "token": {
-      "kind": "stringSegment(\",\")",
+      "kind": "stringSegment(&quot;,&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -13301,7 +13301,7 @@
       "startRow": 37
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -13444,7 +13444,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"output\")",
+          "kind": "identifier(&quot;output&quot;)",
           "text": "↲␣␣␣␣output␣"
         }
       },
@@ -13482,7 +13482,7 @@
     "structure": [],
     "text": "output",
     "token": {
-      "kind": "identifier(\"output\")",
+      "kind": "identifier(&quot;output&quot;)",
       "leadingTrivia": "↲␣␣␣␣",
       "trailingTrivia": "␣"
     },
@@ -13507,7 +13507,7 @@
       {
         "name": "operatorToken",
         "value": {
-          "kind": "spacedBinaryOperator(\"+=\")",
+          "kind": "spacedBinaryOperator(&quot;+=&quot;)",
           "text": "+=␣"
         }
       },
@@ -13533,7 +13533,7 @@
     "structure": [],
     "text": "+=",
     "token": {
-      "kind": "spacedBinaryOperator(\"+=\")",
+      "kind": "spacedBinaryOperator(&quot;+=&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -13571,7 +13571,7 @@
         "name": "openQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -13597,7 +13597,7 @@
         "name": "closeQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -13632,7 +13632,7 @@
       "startRow": 38
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -13685,7 +13685,7 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\" value is \")",
+          "kind": "stringSegment(&quot;&nbsp;value&nbsp;is&nbsp;&quot;)",
           "text": "␣value␣is␣"
         }
       },
@@ -13709,9 +13709,9 @@
       "startRow": 38
     },
     "structure": [],
-    "text": " value is ",
+    "text": "&nbsp;value&nbsp;is&nbsp;",
     "token": {
-      "kind": "stringSegment(\" value is \")",
+      "kind": "stringSegment(&quot;&nbsp;value&nbsp;is&nbsp;&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -13977,7 +13977,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"first\")",
+          "kind": "identifier(&quot;first&quot;)",
           "text": "first"
         }
       },
@@ -14048,7 +14048,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"values\")",
+          "kind": "identifier(&quot;values&quot;)",
           "text": "values"
         }
       },
@@ -14093,7 +14093,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"rank\")",
+          "kind": "identifier(&quot;rank&quot;)",
           "text": "rank"
         }
       },
@@ -14131,7 +14131,7 @@
     "structure": [],
     "text": "rank",
     "token": {
-      "kind": "identifier(\"rank\")",
+      "kind": "identifier(&quot;rank&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -14167,7 +14167,7 @@
     "structure": [],
     "text": "values",
     "token": {
-      "kind": "identifier(\"values\")",
+      "kind": "identifier(&quot;values&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -14203,7 +14203,7 @@
     "structure": [],
     "text": "first",
     "token": {
-      "kind": "identifier(\"first\")",
+      "kind": "identifier(&quot;first&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -14246,7 +14246,7 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\"\")",
+          "kind": "stringSegment(&quot;&quot;)",
           "text": ""
         }
       },
@@ -14272,7 +14272,7 @@
     "structure": [],
     "text": "",
     "token": {
-      "kind": "stringSegment(\"\")",
+      "kind": "stringSegment(&quot;&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -14288,7 +14288,7 @@
       "startRow": 38
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -14633,7 +14633,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"second\")",
+          "kind": "identifier(&quot;second&quot;)",
           "text": "second␣"
         }
       },
@@ -14659,7 +14659,7 @@
     "structure": [],
     "text": "second",
     "token": {
-      "kind": "identifier(\"second\")",
+      "kind": "identifier(&quot;second&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -14774,7 +14774,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"second\")",
+          "kind": "identifier(&quot;second&quot;)",
           "text": "second␣"
         }
       },
@@ -14845,7 +14845,7 @@
       {
         "name": "name",
         "value": {
-          "kind": "identifier(\"values\")",
+          "kind": "identifier(&quot;values&quot;)",
           "text": "values"
         }
       },
@@ -14890,7 +14890,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"rank\")",
+          "kind": "identifier(&quot;rank&quot;)",
           "text": "rank"
         }
       },
@@ -14928,7 +14928,7 @@
     "structure": [],
     "text": "rank",
     "token": {
-      "kind": "identifier(\"rank\")",
+      "kind": "identifier(&quot;rank&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -14964,7 +14964,7 @@
     "structure": [],
     "text": "values",
     "token": {
-      "kind": "identifier(\"values\")",
+      "kind": "identifier(&quot;values&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -15000,7 +15000,7 @@
     "structure": [],
     "text": "second",
     "token": {
-      "kind": "identifier(\"second\")",
+      "kind": "identifier(&quot;second&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -15244,7 +15244,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"output\")",
+          "kind": "identifier(&quot;output&quot;)",
           "text": "↲␣␣␣␣␣␣output␣"
         }
       },
@@ -15282,7 +15282,7 @@
     "structure": [],
     "text": "output",
     "token": {
-      "kind": "identifier(\"output\")",
+      "kind": "identifier(&quot;output&quot;)",
       "leadingTrivia": "↲␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
@@ -15307,7 +15307,7 @@
       {
         "name": "operatorToken",
         "value": {
-          "kind": "spacedBinaryOperator(\"+=\")",
+          "kind": "spacedBinaryOperator(&quot;+=&quot;)",
           "text": "+=␣"
         }
       },
@@ -15333,7 +15333,7 @@
     "structure": [],
     "text": "+=",
     "token": {
-      "kind": "spacedBinaryOperator(\"+=\")",
+      "kind": "spacedBinaryOperator(&quot;+=&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -15371,7 +15371,7 @@
         "name": "openQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -15397,7 +15397,7 @@
         "name": "closeQuote",
         "value": {
           "kind": "stringQuote",
-          "text": "\""
+          "text": "&quot;"
         }
       },
       {
@@ -15432,7 +15432,7 @@
       "startRow": 40
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -15485,7 +15485,7 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\" or \")",
+          "kind": "stringSegment(&quot;&nbsp;or&nbsp;&quot;)",
           "text": "␣or␣"
         }
       },
@@ -15509,9 +15509,9 @@
       "startRow": 40
     },
     "structure": [],
-    "text": " or ",
+    "text": "&nbsp;or&nbsp;",
     "token": {
-      "kind": "stringSegment(\" or \")",
+      "kind": "stringSegment(&quot;&nbsp;or&nbsp;&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -15751,7 +15751,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"second\")",
+          "kind": "identifier(&quot;second&quot;)",
           "text": "second"
         }
       },
@@ -15789,7 +15789,7 @@
     "structure": [],
     "text": "second",
     "token": {
-      "kind": "identifier(\"second\")",
+      "kind": "identifier(&quot;second&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -15832,7 +15832,7 @@
       {
         "name": "content",
         "value": {
-          "kind": "stringSegment(\"\")",
+          "kind": "stringSegment(&quot;&quot;)",
           "text": ""
         }
       },
@@ -15858,7 +15858,7 @@
     "structure": [],
     "text": "",
     "token": {
-      "kind": "stringSegment(\"\")",
+      "kind": "stringSegment(&quot;&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
@@ -15874,7 +15874,7 @@
       "startRow": 40
     },
     "structure": [],
-    "text": "\"",
+    "text": "&quot;",
     "token": {
       "kind": "stringQuote",
       "leadingTrivia": "",
@@ -16040,7 +16040,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"output\")",
+          "kind": "identifier(&quot;output&quot;)",
           "text": "output"
         }
       },
@@ -16078,7 +16078,7 @@
     "structure": [],
     "text": "output",
     "token": {
-      "kind": "identifier(\"output\")",
+      "kind": "identifier(&quot;output&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },

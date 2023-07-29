@@ -377,7 +377,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"a\")",
+          "kind": "identifier(&quot;a&quot;)",
           "text": "a␣"
         }
       },
@@ -415,7 +415,7 @@
     "structure": [],
     "text": "a",
     "token": {
-      "kind": "identifier(\"a\")",
+      "kind": "identifier(&quot;a&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -440,7 +440,7 @@
       {
         "name": "operatorToken",
         "value": {
-          "kind": "spacedBinaryOperator(\"+\")",
+          "kind": "spacedBinaryOperator(&quot;+&quot;)",
           "text": "+␣"
         }
       },
@@ -466,7 +466,7 @@
     "structure": [],
     "text": "+",
     "token": {
-      "kind": "spacedBinaryOperator(\"+\")",
+      "kind": "spacedBinaryOperator(&quot;+&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -550,7 +550,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"b\")",
+          "kind": "identifier(&quot;b&quot;)",
           "text": "b␣"
         }
       },
@@ -588,7 +588,7 @@
     "structure": [],
     "text": "b",
     "token": {
-      "kind": "identifier(\"b\")",
+      "kind": "identifier(&quot;b&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -613,7 +613,7 @@
       {
         "name": "operatorToken",
         "value": {
-          "kind": "spacedBinaryOperator(\"*\")",
+          "kind": "spacedBinaryOperator(&quot;*&quot;)",
           "text": "*␣"
         }
       },
@@ -639,7 +639,7 @@
     "structure": [],
     "text": "*",
     "token": {
-      "kind": "spacedBinaryOperator(\"*\")",
+      "kind": "spacedBinaryOperator(&quot;*&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },
@@ -664,7 +664,7 @@
       {
         "name": "identifier",
         "value": {
-          "kind": "identifier(\"c\")",
+          "kind": "identifier(&quot;c&quot;)",
           "text": "c␣"
         }
       },
@@ -702,7 +702,7 @@
     "structure": [],
     "text": "c",
     "token": {
-      "kind": "identifier(\"c\")",
+      "kind": "identifier(&quot;c&quot;)",
       "leadingTrivia": "",
       "trailingTrivia": "␣"
     },

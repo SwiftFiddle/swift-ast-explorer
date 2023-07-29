@@ -142,7 +142,7 @@ final class TokenVisitor: SyntaxRewriter {
   }
 
   override func visit(_ token: TokenSyntax) -> TokenSyntax {
-    current.text = token.text
+    current.text = escapeHTML(token.text)
     current.token = Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
 
     token.leadingTrivia.forEach { (piece) in
@@ -183,7 +183,7 @@ final class TokenVisitor: SyntaxRewriter {
     let end = sourceRange.end
     let text = token.presence == .present ? token.text : ""
     list.append(
-      "<span class='token \(kind)' " +
+      "<span class='token \(escapeHTML(kind))' " +
       "data-title='\(escapeHTML("\(token.trimmed)"))' " +
       "data-content='\(escapeHTML("\(token.tokenKind)"))' " +
       "data-type='Token' " +
@@ -230,21 +230,21 @@ final class TokenVisitor: SyntaxRewriter {
   private func replaceSymbols(text: String) -> String {
     text.replacingOccurrences(of: "&nbsp;", with: "␣").replacingOccurrences(of: "<br>", with: "↲")
   }
+}
 
-  private func escapeHTML(_ string: String) -> String {
-    var newString = string
-    let specialCharacters = [
-      ("&", "&amp;"),
-      ("<", "&lt;"),
-      (">", "&gt;"),
-      ("\"", "&quot;"),
-      ("'", "&apos;"),
-    ];
-    for (unescaped, escaped) in specialCharacters {
-      newString = newString.replacingOccurrences(of: unescaped, with: escaped, options: .literal, range: nil)
-    }
-    return newString
-      .replacingOccurrences(of: " ", with: "&nbsp;")
-      .replacingOccurrences(of: "\n", with: "<br>")
+func escapeHTML(_ string: String) -> String {
+  var newString = string
+  let specialCharacters = [
+    ("&", "&amp;"),
+    ("<", "&lt;"),
+    (">", "&gt;"),
+    ("\"", "&quot;"),
+    ("'", "&apos;"),
+  ];
+  for (unescaped, escaped) in specialCharacters {
+    newString = newString.replacingOccurrences(of: unescaped, with: escaped, options: .literal, range: nil)
   }
+  return newString
+    .replacingOccurrences(of: " ", with: "&nbsp;")
+    .replacingOccurrences(of: "\n", with: "<br>")
 }

@@ -12,7 +12,7 @@ final class TreeNode: Codable {
 
   init(id: Int, text: String, range: Range, type: SyntaxType) {
     self.id = id
-    self.text = text
+    self.text = escapeHTML(text)
     self.range = range
     self.type = type
   }
@@ -43,9 +43,13 @@ struct StructureProperty: Codable, Equatable {
   let ref: String?
 
   init(name: String, value: StructureValue? = nil, ref: String? = nil) {
-    self.name = name
+    self.name = escapeHTML(name)
     self.value = value
-    self.ref = ref
+    if let ref {
+      self.ref = escapeHTML(ref)
+    } else {
+      self.ref = nil
+    }
   }
 }
 
@@ -54,8 +58,12 @@ struct StructureValue: Codable, Equatable {
   let kind: String?
 
   init(text: String, kind: String? = nil) {
-    self.text = text
-    self.kind = kind
+    self.text = escapeHTML(text)
+    if let kind {
+      self.kind = escapeHTML(kind)
+    } else {
+      self.kind = nil
+    }
   }
 }
 
@@ -72,4 +80,10 @@ struct Token: Codable, Equatable {
   var kind: String
   var leadingTrivia: String
   var trailingTrivia: String
+
+  init(kind: String, leadingTrivia: String, trailingTrivia: String) {
+    self.kind = escapeHTML(kind)
+    self.leadingTrivia = leadingTrivia
+    self.trailingTrivia = trailingTrivia
+  }
 }

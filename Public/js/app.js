@@ -127,13 +127,7 @@ export class App {
       .then((response) => response.json())
       .then((response) => {
         this.response = response;
-        this.structureData = JSON.parse(
-          response.syntaxJSON
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/'/g, "&#039;")
-        );
+        this.structureData = JSON.parse(response.syntaxJSON);
 
         this.updateStructure();
         this.updateLookup();

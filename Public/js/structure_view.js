@@ -98,18 +98,10 @@ function makeTokenPopoverContent(data) {
 
   makeSourceRangePopoverContent(data, dl);
 
-  makeDescriptionList("kind", stripHTMLTag(data.token.kind), dl);
-  makeDescriptionList(
-    "leadingTrivia",
-    stripHTMLTag(data.token.leadingTrivia),
-    dl
-  );
-  makeDescriptionList("text", stripHTMLTag(data.text), dl);
-  makeDescriptionList(
-    "trailingTrivia",
-    stripHTMLTag(data.token.trailingTrivia),
-    dl
-  );
+  makeDescriptionList("kind", data.token.kind, dl);
+  makeDescriptionList("leadingTrivia", data.token.leadingTrivia, dl);
+  makeDescriptionList("text", data.text, dl);
+  makeDescriptionList("trailingTrivia", data.token.trailingTrivia, dl);
 
   container.appendChild(dl);
 
@@ -129,11 +121,11 @@ function makePropertyPopoverContent(property, list) {
     if (property.ref) {
       return `<span class="badge ref">${property.ref}</span>`;
     } else if (value && value.text && value.kind) {
-      const text = stripHTMLTag(value.text);
-      const kind = stripHTMLTag(value.kind);
+      const text = value.text;
+      const kind = value.kind;
       return `${text}<span class="badge rounded-pill">${kind}</span>`;
     } else if (value && value.text) {
-      return stripHTMLTag(value.text);
+      return value.text;
     }
   })();
   makeDescriptionList(property.name, details, list);
@@ -178,20 +170,4 @@ function makeSyntaxTypeBadge(type) {
       break;
   }
   return badge;
-}
-
-function stripHTMLTag(text) {
-  const div = document.createElement("div");
-  div.innerHTML = text
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&#039;/g, "'")
-    .replace(/&amp;/g, "&");
-  return escapeHTML(div.textContent || div.innerText || "");
-}
-
-function escapeHTML(text) {
-  const div = document.createElement("div");
-  div.appendChild(document.createTextNode(text));
-  return div.innerHTML;
 }
