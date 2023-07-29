@@ -3356,7 +3356,7 @@
     "text": "",
     "token": {
       "kind": "endOfFile",
-      "leadingTrivia": "↲↲<span class='lineComment' data-title='// Prints &quot;It&apos;s really warm. Don&apos;t forget to wear sunscreen.&quot;' data-content='lineComment' data-type='Trivia'>// Prints &quot;It&apos;s really warm. Don&apos;t forget to wear sunscreen.&quot;</span>",
+      "leadingTrivia": "↲↲<span class='lineComment' data-title='//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;' data-content='lineComment' data-type='Trivia'>//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;</span>",
       "trailingTrivia": ""
     },
     "type": "other"
