@@ -809,7 +809,7 @@
     "text": "enum",
     "token": {
       "kind": "enumKeyword",
-      "leadingTrivia": "↲␣␣<span class='lineComment' data-title='// nested Suit enumeration' data-content='lineComment' data-type='Trivia'>// nested Suit enumeration</span>↲␣␣",
+      "leadingTrivia": "↲␣␣<span class='lineComment' data-title='//␣nested␣Suit␣enumeration' data-content='lineComment' data-type='Trivia'>//␣nested␣Suit␣enumeration</span>↲␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -3357,7 +3357,7 @@
     "text": "enum",
     "token": {
       "kind": "enumKeyword",
-      "leadingTrivia": "↲↲␣␣<span class='lineComment' data-title='// nested Rank enumeration' data-content='lineComment' data-type='Trivia'>// nested Rank enumeration</span>↲␣␣",
+      "leadingTrivia": "↲↲␣␣<span class='lineComment' data-title='//␣nested␣Rank␣enumeration' data-content='lineComment' data-type='Trivia'>//␣nested␣Rank␣enumeration</span>↲␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -11198,7 +11198,7 @@
     "text": "let",
     "token": {
       "kind": "letKeyword",
-      "leadingTrivia": "↲↲␣␣<span class='lineComment' data-title='// BlackjackCard properties and methods' data-content='lineComment' data-type='Trivia'>// BlackjackCard properties and methods</span>↲␣␣",
+      "leadingTrivia": "↲↲␣␣<span class='lineComment' data-title='//␣BlackjackCard␣properties␣and␣methods' data-content='lineComment' data-type='Trivia'>//␣BlackjackCard␣properties␣and␣methods</span>↲␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
