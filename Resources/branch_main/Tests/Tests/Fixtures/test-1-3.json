@@ -453,9 +453,9 @@
       },
       {
         "name": "memberBlock",
-        "ref": "MemberDeclBlockSyntax",
+        "ref": "MemberBlockSyntax",
         "value": {
-          "text": "MemberDeclBlockSyntax"
+          "text": "MemberBlockSyntax"
         }
       },
       {
@@ -535,9 +535,9 @@
       },
       {
         "name": "members",
-        "ref": "MemberDeclListSyntax",
+        "ref": "MemberBlockItemListSyntax",
         "value": {
-          "text": "MemberDeclListSyntax"
+          "text": "MemberBlockItemListSyntax"
         }
       },
       {
@@ -560,7 +560,7 @@
         }
       }
     ],
-    "text": "MemberDeclBlock",
+    "text": "MemberBlock",
     "type": "other"
   },
   {
@@ -594,7 +594,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "MemberDeclListItemSyntax"
+          "text": "MemberBlockItemSyntax"
         }
       },
       {
@@ -604,7 +604,7 @@
         }
       }
     ],
-    "text": "MemberDeclList",
+    "text": "MemberBlockItemList",
     "type": "collection"
   },
   {
@@ -649,7 +649,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -732,9 +732,9 @@
       },
       {
         "name": "inheritanceClause",
-        "ref": "TypeInheritanceClauseSyntax",
+        "ref": "InheritanceClauseSyntax",
         "value": {
-          "text": "TypeInheritanceClauseSyntax"
+          "text": "InheritanceClauseSyntax"
         }
       },
       {
@@ -757,9 +757,9 @@
       },
       {
         "name": "memberBlock",
-        "ref": "MemberDeclBlockSyntax",
+        "ref": "MemberBlockSyntax",
         "value": {
-          "text": "MemberDeclBlockSyntax"
+          "text": "MemberBlockSyntax"
         }
       },
       {
@@ -851,7 +851,7 @@
         }
       }
     ],
-    "text": "TypeInheritanceClause",
+    "text": "InheritanceClause",
     "type": "other"
   },
   {
@@ -916,9 +916,9 @@
       },
       {
         "name": "type",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -985,7 +985,7 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
@@ -1037,9 +1037,9 @@
       },
       {
         "name": "members",
-        "ref": "MemberDeclListSyntax",
+        "ref": "MemberBlockItemListSyntax",
         "value": {
-          "text": "MemberDeclListSyntax"
+          "text": "MemberBlockItemListSyntax"
         }
       },
       {
@@ -1062,7 +1062,7 @@
         }
       }
     ],
-    "text": "MemberDeclBlock",
+    "text": "MemberBlock",
     "type": "other"
   },
   {
@@ -1096,7 +1096,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "MemberDeclListItemSyntax"
+          "text": "MemberBlockItemSyntax"
         }
       },
       {
@@ -1106,7 +1106,7 @@
         }
       }
     ],
-    "text": "MemberDeclList",
+    "text": "MemberBlockItemList",
     "type": "collection"
   },
   {
@@ -1151,7 +1151,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -1292,19 +1292,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -1431,32 +1431,32 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
@@ -1469,32 +1469,32 @@
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -1658,7 +1658,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -1799,19 +1799,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -1938,32 +1938,32 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
@@ -1976,32 +1976,32 @@
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -2165,7 +2165,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -2306,19 +2306,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -2445,32 +2445,32 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
@@ -2483,32 +2483,32 @@
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -2672,7 +2672,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -2813,19 +2813,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -2952,32 +2952,32 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
@@ -2990,32 +2990,32 @@
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -3197,7 +3197,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -3280,9 +3280,9 @@
       },
       {
         "name": "inheritanceClause",
-        "ref": "TypeInheritanceClauseSyntax",
+        "ref": "InheritanceClauseSyntax",
         "value": {
-          "text": "TypeInheritanceClauseSyntax"
+          "text": "InheritanceClauseSyntax"
         }
       },
       {
@@ -3305,9 +3305,9 @@
       },
       {
         "name": "memberBlock",
-        "ref": "MemberDeclBlockSyntax",
+        "ref": "MemberBlockSyntax",
         "value": {
-          "text": "MemberDeclBlockSyntax"
+          "text": "MemberBlockSyntax"
         }
       },
       {
@@ -3399,7 +3399,7 @@
         }
       }
     ],
-    "text": "TypeInheritanceClause",
+    "text": "InheritanceClause",
     "type": "other"
   },
   {
@@ -3464,9 +3464,9 @@
       },
       {
         "name": "type",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -3533,7 +3533,7 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
@@ -3585,9 +3585,9 @@
       },
       {
         "name": "members",
-        "ref": "MemberDeclListSyntax",
+        "ref": "MemberBlockItemListSyntax",
         "value": {
-          "text": "MemberDeclListSyntax"
+          "text": "MemberBlockItemListSyntax"
         }
       },
       {
@@ -3610,7 +3610,7 @@
         }
       }
     ],
-    "text": "MemberDeclBlock",
+    "text": "MemberBlock",
     "type": "other"
   },
   {
@@ -3644,7 +3644,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "MemberDeclListItemSyntax"
+          "text": "MemberBlockItemSyntax"
         }
       },
       {
@@ -3654,7 +3654,7 @@
         }
       }
     ],
-    "text": "MemberDeclList",
+    "text": "MemberBlockItemList",
     "type": "collection"
   },
   {
@@ -3699,7 +3699,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -3840,19 +3840,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -3979,20 +3979,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(\"2\")",
           "text": "2"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }
@@ -4061,7 +4061,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -4202,19 +4202,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -4308,19 +4308,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -4414,19 +4414,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -4520,19 +4520,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -4626,19 +4626,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -4732,19 +4732,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -4838,19 +4838,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -4944,19 +4944,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -5049,7 +5049,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -5190,19 +5190,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -5296,19 +5296,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -5402,19 +5402,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -5508,19 +5508,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenNameAndAssociatedValue",
+        "name": "unexpectedBetweenNameAndParameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "associatedValue",
+        "name": "parameterClause",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAssociatedValueAndRawValue",
+        "name": "unexpectedBetweenParameterClauseAndRawValue",
         "value": {
           "text": "nil"
         }
@@ -5613,7 +5613,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -5720,9 +5720,9 @@
       },
       {
         "name": "memberBlock",
-        "ref": "MemberDeclBlockSyntax",
+        "ref": "MemberBlockSyntax",
         "value": {
-          "text": "MemberDeclBlockSyntax"
+          "text": "MemberBlockSyntax"
         }
       },
       {
@@ -5802,9 +5802,9 @@
       },
       {
         "name": "members",
-        "ref": "MemberDeclListSyntax",
+        "ref": "MemberBlockItemListSyntax",
         "value": {
-          "text": "MemberDeclListSyntax"
+          "text": "MemberBlockItemListSyntax"
         }
       },
       {
@@ -5827,7 +5827,7 @@
         }
       }
     ],
-    "text": "MemberDeclBlock",
+    "text": "MemberBlock",
     "type": "other"
   },
   {
@@ -5861,7 +5861,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "MemberDeclListItemSyntax"
+          "text": "MemberBlockItemSyntax"
         }
       },
       {
@@ -5871,7 +5871,7 @@
         }
       }
     ],
-    "text": "MemberDeclList",
+    "text": "MemberBlockItemList",
     "type": "collection"
   },
   {
@@ -5916,7 +5916,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -6198,9 +6198,9 @@
       },
       {
         "name": "type",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -6273,7 +6273,7 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
@@ -6527,9 +6527,9 @@
       },
       {
         "name": "wrappedType",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -6597,7 +6597,7 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
@@ -6696,7 +6696,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -6978,9 +6978,9 @@
       },
       {
         "name": "type",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -7053,7 +7053,7 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
@@ -7279,20 +7279,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenSwitchKeywordAndExpression",
+        "name": "unexpectedBetweenSwitchKeywordAndSubject",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "expression",
+        "name": "subject",
         "ref": "IdentifierExprSyntax",
         "value": {
           "text": "IdentifierExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenExpressionAndLeftBrace",
+        "name": "unexpectedBetweenSubjectAndLeftBrace",
         "value": {
           "text": "nil"
         }
@@ -7476,19 +7476,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeUnknownAttr",
+        "name": "unexpectedBeforeAttribute",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unknownAttr",
+        "name": "attribute",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenUnknownAttrAndLabel",
+        "name": "unexpectedBetweenAttributeAndLabel",
         "value": {
           "text": "nil"
         }
@@ -7554,9 +7554,9 @@
       },
       {
         "name": "caseItems",
-        "ref": "CaseItemListSyntax",
+        "ref": "SwitchCaseItemListSyntax",
         "value": {
-          "text": "CaseItemListSyntax"
+          "text": "SwitchCaseItemListSyntax"
         }
       },
       {
@@ -7613,7 +7613,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "CaseItemSyntax"
+          "text": "SwitchCaseItemSyntax"
         }
       },
       {
@@ -7623,7 +7623,7 @@
         }
       }
     ],
-    "text": "CaseItemList",
+    "text": "SwitchCaseItemList",
     "type": "collection"
   },
   {
@@ -7680,7 +7680,7 @@
         }
       }
     ],
-    "text": "CaseItem",
+    "text": "SwitchCaseItem",
     "type": "other"
   },
   {
@@ -8019,9 +8019,9 @@
       },
       {
         "name": "arguments",
-        "ref": "TupleExprElementListSyntax",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
@@ -8165,7 +8165,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -8175,7 +8175,7 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
@@ -8247,7 +8247,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
@@ -8297,20 +8297,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(\"1\")",
           "text": "1"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }
@@ -8423,7 +8423,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
@@ -8473,20 +8473,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(\"11\")",
           "text": "11"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }
@@ -8542,19 +8542,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeUnknownAttr",
+        "name": "unexpectedBeforeAttribute",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unknownAttr",
+        "name": "attribute",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenUnknownAttrAndLabel",
+        "name": "unexpectedBetweenAttributeAndLabel",
         "value": {
           "text": "nil"
         }
@@ -8620,9 +8620,9 @@
       },
       {
         "name": "caseItems",
-        "ref": "CaseItemListSyntax",
+        "ref": "SwitchCaseItemListSyntax",
         "value": {
-          "text": "CaseItemListSyntax"
+          "text": "SwitchCaseItemListSyntax"
         }
       },
       {
@@ -8679,7 +8679,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "CaseItemSyntax"
+          "text": "SwitchCaseItemSyntax"
         }
       },
       {
@@ -8689,7 +8689,7 @@
         }
       }
     ],
-    "text": "CaseItemList",
+    "text": "SwitchCaseItemList",
     "type": "collection"
   },
   {
@@ -8747,7 +8747,7 @@
         }
       }
     ],
-    "text": "CaseItem",
+    "text": "SwitchCaseItem",
     "type": "other"
   },
   {
@@ -8962,7 +8962,7 @@
         }
       }
     ],
-    "text": "CaseItem",
+    "text": "SwitchCaseItem",
     "type": "other"
   },
   {
@@ -9176,7 +9176,7 @@
         }
       }
     ],
-    "text": "CaseItem",
+    "text": "SwitchCaseItem",
     "type": "other"
   },
   {
@@ -9515,9 +9515,9 @@
       },
       {
         "name": "arguments",
-        "ref": "TupleExprElementListSyntax",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
@@ -9661,7 +9661,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -9671,7 +9671,7 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
@@ -9743,7 +9743,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
@@ -9793,20 +9793,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(\"10\")",
           "text": "10"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }
@@ -9919,7 +9919,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
@@ -10038,19 +10038,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeUnknownAttr",
+        "name": "unexpectedBeforeAttribute",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unknownAttr",
+        "name": "attribute",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenUnknownAttrAndLabel",
+        "name": "unexpectedBetweenAttributeAndLabel",
         "value": {
           "text": "nil"
         }
@@ -10346,9 +10346,9 @@
       },
       {
         "name": "arguments",
-        "ref": "TupleExprElementListSyntax",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
@@ -10492,7 +10492,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -10502,7 +10502,7 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
@@ -10574,7 +10574,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
@@ -10869,7 +10869,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
@@ -11073,7 +11073,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -11355,9 +11355,9 @@
       },
       {
         "name": "type",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -11430,7 +11430,7 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
@@ -11633,9 +11633,9 @@
       },
       {
         "name": "type",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -11708,7 +11708,7 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
@@ -11771,7 +11771,7 @@
         }
       }
     ],
-    "text": "MemberDeclListItem",
+    "text": "MemberBlockItem",
     "type": "other"
   },
   {
@@ -12053,9 +12053,9 @@
       },
       {
         "name": "type",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -12128,7 +12128,7 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
@@ -12619,32 +12619,32 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
@@ -12657,32 +12657,32 @@
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -12810,19 +12810,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenBackslashAndRawStringDelimiter",
+        "name": "unexpectedBetweenBackslashAndPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "rawStringDelimiter",
+        "name": "pounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenRawStringDelimiterAndLeftParen",
+        "name": "unexpectedBetweenPoundsAndLeftParen",
         "value": {
           "text": "nil"
         }
@@ -12842,9 +12842,9 @@
       },
       {
         "name": "expressions",
-        "ref": "TupleExprElementListSyntax",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
@@ -12919,7 +12919,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -12929,7 +12929,7 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
@@ -12998,7 +12998,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
@@ -13487,32 +13487,32 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
@@ -13525,32 +13525,32 @@
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -13678,19 +13678,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenBackslashAndRawStringDelimiter",
+        "name": "unexpectedBetweenBackslashAndPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "rawStringDelimiter",
+        "name": "pounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenRawStringDelimiterAndLeftParen",
+        "name": "unexpectedBetweenPoundsAndLeftParen",
         "value": {
           "text": "nil"
         }
@@ -13710,9 +13710,9 @@
       },
       {
         "name": "expressions",
-        "ref": "TupleExprElementListSyntax",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
@@ -13787,7 +13787,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -13797,7 +13797,7 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
@@ -13866,7 +13866,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
@@ -15296,32 +15296,32 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
@@ -15334,32 +15334,32 @@
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "\""
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -15487,19 +15487,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenBackslashAndRawStringDelimiter",
+        "name": "unexpectedBetweenBackslashAndPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "rawStringDelimiter",
+        "name": "pounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenRawStringDelimiterAndLeftParen",
+        "name": "unexpectedBetweenPoundsAndLeftParen",
         "value": {
           "text": "nil"
         }
@@ -15519,9 +15519,9 @@
       },
       {
         "name": "expressions",
-        "ref": "TupleExprElementListSyntax",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
@@ -15596,7 +15596,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -15606,7 +15606,7 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
@@ -15675,7 +15675,7 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
