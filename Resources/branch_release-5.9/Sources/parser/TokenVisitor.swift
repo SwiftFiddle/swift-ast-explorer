@@ -244,5 +244,7 @@ final class TokenVisitor: SyntaxRewriter {
       newString = newString.replacingOccurrences(of: unescaped, with: escaped, options: .literal, range: nil)
     }
     return newString
+      .replacingOccurrences(of: " ", with: "&nbsp;")
+      .replacingOccurrences(of: "\n", with: "<br>")
   }
 }
