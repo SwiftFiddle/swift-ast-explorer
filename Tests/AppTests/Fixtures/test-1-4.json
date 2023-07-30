@@ -868,7 +868,7 @@
     "text": "let",
     "token": {
       "kind": "letKeyword",
-      "leadingTrivia": "↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -1299,7 +1299,7 @@
     "text": "let",
     "token": {
       "kind": "letKeyword",
-      "leadingTrivia": "↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -1603,7 +1603,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>",
+      "leadingTrivia": "↲<br/>",
       "trailingTrivia": ""
     },
     "type": "other"

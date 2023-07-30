@@ -45,9 +45,9 @@ final class TokenVisitor: SyntaxRewriter {
 
     list.append(
       "<span class='\(className)' " +
-      "data-title='\("\(escapeHTML("\(node.withoutTrivia())"))".replacingOccurrences(of: "\n", with: "↲"))' " +
-      "data-content='\(escapeHTML(content))' " +
-      "data-type='\(escapeHTML(type))' " +
+      "data-title='\("\(node.withoutTrivia())".htmlEscaped().displayInvisibles())' " +
+      "data-content='\(content.htmlEscaped().substituteInvisibles())' " +
+      "data-type='\(type.htmlEscaped())' " +
       #"data-range='{"startRow":\#(startRow),"startColumn":\#(startColumn),"endRow":\#(endRow),"endColumn":\#(endColumn)}'>"#
     )
 
@@ -129,7 +129,12 @@ final class TokenVisitor: SyntaxRewriter {
   }
 
   override func visit(_ token: TokenSyntax) -> TokenSyntax {
-    current.text = escapeHTML(token.text)
+    current.text = token
+      .text
+      .htmlEscaped()
+      .substituteInvisibles()
+      .replacingOccurrences(of: "&nbsp;", with: "␣")
+      .replacingOccurrences(of: "<br/>", with: "↲<br/>")
     current.token = Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
 
     token.leadingTrivia.forEach { (piece) in
@@ -174,18 +179,21 @@ final class TokenVisitor: SyntaxRewriter {
     let endColumn = end.column ?? 1
     let text = token.presence == .present ? token.text : ""
     list.append(
-      "<span class='token \(escapeHTML(kind))' " +
-      "data-title='\(escapeHTML("\(token.withoutTrivia())"))' " +
-      "data-content='\(escapeHTML("\(token.tokenKind)"))' " +
+      "<span class='token \(kind.htmlEscaped())' " +
+      "data-title='\("\(token.withoutTrivia())".htmlEscaped().displayInvisibles())' " +
+      "data-content='\("\(token.tokenKind)".htmlEscaped().substituteInvisibles())' " +
       "data-type='Token' " +
       #"data-range='{"startRow":\#(startRow),"startColumn":\#(startColumn),"endRow":\#(endRow),"endColumn":\#(endColumn)}'>"# +
-      "\(escapeHTML(text))</span>"
+      "\(text.htmlEscaped().substituteInvisibles())</span>"
     )
   }
 
   private func processTriviaPiece(_ piece: TriviaPiece) -> String {
     func wrapWithSpanTag(class c: String, text: String) -> String {
-      "<span class='\(escapeHTML(c))' data-title='\(escapeHTML("\(piece)"))' data-content='\(escapeHTML(c))' data-type='Trivia'>\(escapeHTML(text))</span>"
+      "<span class='\(c.htmlEscaped())' " +
+      "data-title='\("\(piece)".htmlEscaped().displayInvisibles())' " +
+      "data-content='\(c.htmlEscaped().substituteInvisibles())' " +
+      "data-type='Trivia'>\(text.htmlEscaped().substituteInvisibles())</span>"
     }
 
     var trivia = ""
@@ -197,7 +205,7 @@ final class TokenVisitor: SyntaxRewriter {
     case .verticalTabs, .formfeeds:
       break
     case .newlines(let count), .carriageReturns(let count), .carriageReturnLineFeeds(let count):
-      trivia += String(repeating: "<br>", count: count)
+      trivia += String(repeating: "<br/>", count: count)
     case .lineComment(let text):
       trivia += wrapWithSpanTag(class: "lineComment", text: text)
     case .blockComment(let text):
@@ -217,23 +225,35 @@ final class TokenVisitor: SyntaxRewriter {
   private func replaceSymbols(text: String) -> String {
     text
       .replacingOccurrences(of: "&nbsp;", with: "␣")
-      .replacingOccurrences(of: "<br>", with: "↲<br>")
+      .replacingOccurrences(of: "<br/>", with: "↲<br/>")
   }
 }
 
-func escapeHTML(_ string: String) -> String {
-  var newString = string
-  let specialCharacters = [
-    ("&", "&amp;"),
-    ("<", "&lt;"),
-    (">", "&gt;"),
-    ("\"", "&quot;"),
-    ("'", "&apos;"),
-  ];
-  for (unescaped, escaped) in specialCharacters {
-    newString = newString.replacingOccurrences(of: unescaped, with: escaped, options: .literal, range: nil)
+private extension String {
+  func htmlEscaped() -> String {
+    var string = self
+    let specialCharacters = [
+      ("&", "&amp;"),
+      ("<", "&lt;"),
+      (">", "&gt;"),
+      ("\"", "&quot;"),
+      ("'", "&apos;"),
+    ];
+    for (unescaped, escaped) in specialCharacters {
+      string = string.replacingOccurrences(of: unescaped, with: escaped, options: .literal, range: nil)
+    }
+    return string
   }
-  return newString
-    .replacingOccurrences(of: " ", with: "&nbsp;")
-    .replacingOccurrences(of: "\n", with: "<br>")
+
+  func substituteInvisibles() -> String {
+    self
+      .replacingOccurrences(of: " ", with: "&nbsp;")
+      .replacingOccurrences(of: "\n", with: "<br/>")
+  }
+
+  func displayInvisibles() -> String {
+    self
+      .replacingOccurrences(of: " ", with: "␣")
+      .replacingOccurrences(of: "\n", with: "↲")
+  }
 }

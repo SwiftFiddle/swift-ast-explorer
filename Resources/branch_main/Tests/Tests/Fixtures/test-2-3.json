@@ -481,7 +481,7 @@
     "text": "struct",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.struct)",
-      "leadingTrivia": "↲<br>↲<br>",
+      "leadingTrivia": "↲<br/>↲<br/>",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -785,7 +785,7 @@
     "text": "enum",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.enum)",
-      "leadingTrivia": "↲<br>␣␣<span class='lineComment' data-title='//␣nested␣Suit␣enumeration' data-content='lineComment' data-type='Trivia'>//␣nested␣Suit␣enumeration</span>↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣<span class='lineComment' data-title='//␣nested␣Suit␣enumeration' data-content='lineComment' data-type='Trivia'>//␣nested␣Suit␣enumeration</span>↲<br/>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -1237,7 +1237,7 @@
     "text": "case",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.case)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -1744,7 +1744,7 @@
     "text": "case",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.case)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -2251,7 +2251,7 @@
     "text": "case",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.case)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -2758,7 +2758,7 @@
     "text": "case",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.case)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -3150,7 +3150,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -3333,7 +3333,7 @@
     "text": "enum",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.enum)",
-      "leadingTrivia": "↲<br>↲<br>␣␣<span class='lineComment' data-title='//␣nested␣Rank␣enumeration' data-content='lineComment' data-type='Trivia'>//␣nested␣Rank␣enumeration</span>↲<br>␣␣",
+      "leadingTrivia": "↲<br/>↲<br/>␣␣<span class='lineComment' data-title='//␣nested␣Rank␣enumeration' data-content='lineComment' data-type='Trivia'>//␣nested␣Rank␣enumeration</span>↲<br/>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -3785,7 +3785,7 @@
     "text": "case",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.case)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -4147,7 +4147,7 @@
     "text": "case",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.case)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -5135,7 +5135,7 @@
     "text": "case",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.case)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -5748,7 +5748,7 @@
     "text": "struct",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.struct)",
-      "leadingTrivia": "↲<br>↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -6002,7 +6002,7 @@
     "text": "let",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.let)",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -6649,7 +6649,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -6782,7 +6782,7 @@
     "text": "var",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.var)",
-      "leadingTrivia": "↲<br>↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -7353,7 +7353,7 @@
     "text": "switch",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.switch)",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -7595,7 +7595,7 @@
     "text": "case",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.case)",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -7970,7 +7970,7 @@
     "text": "return",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.return)",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -8661,7 +8661,7 @@
     "text": "case",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.case)",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -9466,7 +9466,7 @@
     "text": "return",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.return)",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -10144,7 +10144,7 @@
     "text": "default",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.default)",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -10297,7 +10297,7 @@
     "text": "return",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.return)",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -10990,7 +10990,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -11008,7 +11008,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -11026,7 +11026,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -11159,7 +11159,7 @@
     "text": "let",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.let)",
-      "leadingTrivia": "↲<br>↲<br>␣␣<span class='lineComment' data-title='//␣BlackjackCard␣properties␣and␣methods' data-content='lineComment' data-type='Trivia'>//␣BlackjackCard␣properties␣and␣methods</span>↲<br>␣␣",
+      "leadingTrivia": "↲<br/>↲<br/>␣␣<span class='lineComment' data-title='//␣BlackjackCard␣properties␣and␣methods' data-content='lineComment' data-type='Trivia'>//␣BlackjackCard␣properties␣and␣methods</span>↲<br/>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -11857,7 +11857,7 @@
     "text": "var",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.var)",
-      "leadingTrivia": "↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -12380,7 +12380,7 @@
     "text": "var",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.var)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -12778,7 +12778,7 @@
       "startRow": 37
     },
     "structure": [],
-    "text": "suit&nbsp;is&nbsp;",
+    "text": "suit␣is␣",
     "token": {
       "kind": "stringSegment(&quot;suit&nbsp;is&nbsp;&quot;)",
       "leadingTrivia": "",
@@ -13420,7 +13420,7 @@
     "text": "output",
     "token": {
       "kind": "identifier(&quot;output&quot;)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -13646,7 +13646,7 @@
       "startRow": 38
     },
     "structure": [],
-    "text": "&nbsp;value&nbsp;is&nbsp;",
+    "text": "␣value␣is␣",
     "token": {
       "kind": "stringSegment(&quot;&nbsp;value&nbsp;is&nbsp;&quot;)",
       "leadingTrivia": "",
@@ -14407,7 +14407,7 @@
     "text": "if",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.if)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -15229,7 +15229,7 @@
     "text": "output",
     "token": {
       "kind": "identifier(&quot;output&quot;)",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -15455,7 +15455,7 @@
       "startRow": 40
     },
     "structure": [],
-    "text": "&nbsp;or&nbsp;",
+    "text": "␣or␣",
     "token": {
       "kind": "stringSegment(&quot;&nbsp;or&nbsp;&quot;)",
       "leadingTrivia": "",
@@ -15841,7 +15841,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -15950,7 +15950,7 @@
     "text": "return",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.return)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -16031,7 +16031,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -16049,7 +16049,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>",
+      "leadingTrivia": "↲<br/>",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -16067,7 +16067,7 @@
     "text": "",
     "token": {
       "kind": "endOfFile",
-      "leadingTrivia": "↲<br>",
+      "leadingTrivia": "↲<br/>",
       "trailingTrivia": ""
     },
     "type": "other"

@@ -3,7 +3,7 @@ import Foundation
 final class TreeNode: Codable {
   var id: Int
   var parent: Int?
-  
+
   var text: String
   var range = Range(startRow: 0, startColumn: 0, endRow: 0, endColumn: 0)
   var structure = [StructureProperty]()
@@ -12,7 +12,7 @@ final class TreeNode: Codable {
 
   init(id: Int, text: String, range: Range, type: SyntaxType) {
     self.id = id
-    self.text = escapeHTML(text)
+    self.text = text.htmlEscaped()
     self.range = range
     self.type = type
   }
@@ -30,11 +30,40 @@ extension TreeNode: Equatable {
   }
 }
 
+extension TreeNode: CustomStringConvertible {
+  var description: String {
+    """
+    {
+      id: \(id)
+      parent: \(String(describing: parent))
+      text: \(text)
+      range: \(range)
+      structure: \(structure)
+      type: \(type)
+      token: \(String(describing: token))
+    }
+    """
+  }
+}
+
 struct Range: Codable, Equatable {
   var startRow: Int
   var startColumn: Int
   var endRow: Int
   var endColumn: Int
+}
+
+extension Range: CustomStringConvertible {
+  var description: String {
+    """
+    {
+      startRow: \(startRow)
+      startColumn: \(startColumn)
+      endRow: \(endRow)
+      endColumn: \(endColumn)
+    }
+    """
+  }
 }
 
 struct StructureProperty: Codable, Equatable {
@@ -43,13 +72,21 @@ struct StructureProperty: Codable, Equatable {
   let ref: String?
 
   init(name: String, value: StructureValue? = nil, ref: String? = nil) {
-    self.name = escapeHTML(name)
+    self.name = name.htmlEscaped()
     self.value = value
-    if let ref {
-      self.ref = escapeHTML(ref)
-    } else {
-      self.ref = nil
+    self.ref = ref?.htmlEscaped()
+  }
+}
+
+extension StructureProperty: CustomStringConvertible {
+  var description: String {
+    """
+    {
+      name: \(name)
+      value: \(String(describing: value))
+      ref: \(String(describing: ref))
     }
+    """
   }
 }
 
@@ -58,12 +95,19 @@ struct StructureValue: Codable, Equatable {
   let kind: String?
 
   init(text: String, kind: String? = nil) {
-    self.text = escapeHTML(text)
-    if let kind {
-      self.kind = escapeHTML(kind)
-    } else {
-      self.kind = nil
+    self.text = text.htmlEscaped()
+    self.kind = kind?.htmlEscaped()
+  }
+}
+
+extension StructureValue: CustomStringConvertible {
+  var description: String {
+    """
+    {
+      text: \(text)
+      kind: \(String(describing: kind))
     }
+    """
   }
 }
 
@@ -82,8 +126,39 @@ struct Token: Codable, Equatable {
   var trailingTrivia: String
 
   init(kind: String, leadingTrivia: String, trailingTrivia: String) {
-    self.kind = escapeHTML(kind)
+    self.kind = kind.htmlEscaped()
     self.leadingTrivia = leadingTrivia
     self.trailingTrivia = trailingTrivia
+  }
+}
+
+extension Token: CustomStringConvertible {
+  var description: String {
+    """
+    {
+      kind: \(kind)
+      leadingTrivia: \(leadingTrivia)
+      trailingTrivia: \(trailingTrivia)
+    }
+    """
+  }
+}
+
+private extension String {
+  func htmlEscaped() -> String {
+    var string = self
+    let specialCharacters = [
+      ("&", "&amp;"),
+      ("<", "&lt;"),
+      (">", "&gt;"),
+      ("\"", "&quot;"),
+      ("'", "&apos;"),
+    ];
+    for (unescaped, escaped) in specialCharacters {
+      string = string.replacingOccurrences(of: unescaped, with: escaped, options: .literal, range: nil)
+    }
+    return string
+      .replacingOccurrences(of: " ", with: "&nbsp;")
+      .replacingOccurrences(of: "\n", with: "<br>")
   }
 }
