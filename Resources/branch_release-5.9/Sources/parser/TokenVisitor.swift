@@ -107,7 +107,7 @@ final class TokenVisitor: SyntaxRewriter {
                 StructureProperty(
                   name: name,
                   value: StructureValue(
-                    text: "\(value)"
+                    text: "\(value.text)"
                       .replacingOccurrences(of: " ", with: "␣")
                       .replacingOccurrences(of: "\n", with: "↲"),
                     kind: "\(value.tokenKind)"
@@ -230,7 +230,7 @@ final class TokenVisitor: SyntaxRewriter {
   private func replaceSymbols(text: String) -> String {
     text
       .replacingOccurrences(of: "&nbsp;", with: "␣")
-      .replacingOccurrences(of: "<br>", with: "↲")
+      .replacingOccurrences(of: "<br>", with: "↲<br>")
   }
 }
 

@@ -160,7 +160,7 @@
         "name": "structKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.struct)",
-          "text": "struct␣"
+          "text": "struct"
         }
       },
       {
@@ -292,7 +292,7 @@
         "name": "leftAngle",
         "value": {
           "kind": "leftAngle",
-          "text": "&lt;␣"
+          "text": "&lt;"
         }
       },
       {
@@ -593,7 +593,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲}"
+          "text": "}"
         }
       },
       {
@@ -739,7 +739,7 @@
         "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
-          "text": "↲␣␣let␣"
+          "text": "let"
         }
       },
       {
@@ -778,7 +778,7 @@
     "text": "let",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.let)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -962,7 +962,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -1158,7 +1158,7 @@
         "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
-          "text": "↲␣␣let␣"
+          "text": "let"
         }
       },
       {
@@ -1197,7 +1197,7 @@
     "text": "let",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.let)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -1381,7 +1381,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -1501,7 +1501,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲",
+      "leadingTrivia": "↲<br>",
       "trailingTrivia": ""
     },
     "type": "other"

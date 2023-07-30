@@ -74,6 +74,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -110,6 +112,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -180,6 +184,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -209,6 +215,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -237,6 +245,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -265,6 +275,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -292,6 +304,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -329,6 +343,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -400,6 +416,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -430,6 +448,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -459,6 +479,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -488,6 +510,8 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
+    write(response.syntaxJSON, filename: "\(#function)-json")
+    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -504,5 +528,12 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+  }
+}
+
+func write(_ text: String, filename: String) {
+  let directory: String? = nil
+  if let directory {
+    try! text.write(toFile: "\(directory)/\(filename).txt", atomically: true, encoding: .utf8)
   }
 }

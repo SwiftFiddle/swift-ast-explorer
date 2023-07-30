@@ -31,7 +31,7 @@
         "name": "eofToken",
         "value": {
           "kind": "eof",
-          "text": "↲↲//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;"
+          "text": ""
         }
       },
       {
@@ -171,7 +171,7 @@
         "name": "letOrVarKeyword",
         "value": {
           "kind": "varKeyword",
-          "text": "var␣"
+          "text": "var"
         }
       },
       {
@@ -343,7 +343,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
-          "text": "temperatureInFahrenheit␣"
+          "text": "temperatureInFahrenheit"
         }
       },
       {
@@ -394,7 +394,7 @@
         "name": "equal",
         "value": {
           "kind": "equal",
-          "text": "=␣"
+          "text": "="
         }
       },
       {
@@ -566,7 +566,7 @@
         "name": "ifKeyword",
         "value": {
           "kind": "ifKeyword",
-          "text": "↲↲if␣"
+          "text": "if"
         }
       },
       {
@@ -605,7 +605,7 @@
         "name": "elseKeyword",
         "value": {
           "kind": "elseKeyword",
-          "text": "else␣"
+          "text": "else"
         }
       },
       {
@@ -644,7 +644,7 @@
     "text": "if",
     "token": {
       "kind": "ifKeyword",
-      "leadingTrivia": "↲↲",
+      "leadingTrivia": "↲<br>↲<br>",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -799,7 +799,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
-          "text": "temperatureInFahrenheit␣"
+          "text": "temperatureInFahrenheit"
         }
       },
       {
@@ -862,7 +862,7 @@
         "name": "operatorToken",
         "value": {
           "kind": "spacedBinaryOperator(&quot;&lt;=&quot;)",
-          "text": "&lt;=␣"
+          "text": "&lt;="
         }
       },
       {
@@ -913,7 +913,7 @@
         "name": "digits",
         "value": {
           "kind": "integerLiteral(&quot;32&quot;)",
-          "text": "32␣"
+          "text": "32"
         }
       },
       {
@@ -990,7 +990,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲}␣"
+          "text": "}"
         }
       },
       {
@@ -1220,7 +1220,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;print&quot;)",
-          "text": "↲␣␣print"
+          "text": "print"
         }
       },
       {
@@ -1258,7 +1258,7 @@
     "text": "print",
     "token": {
       "kind": "identifier(&quot;print&quot;)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -1603,7 +1603,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲",
+      "leadingTrivia": "↲<br>",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -1646,7 +1646,7 @@
         "name": "ifKeyword",
         "value": {
           "kind": "ifKeyword",
-          "text": "if␣"
+          "text": "if"
         }
       },
       {
@@ -1685,7 +1685,7 @@
         "name": "elseKeyword",
         "value": {
           "kind": "elseKeyword",
-          "text": "else␣"
+          "text": "else"
         }
       },
       {
@@ -1879,7 +1879,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
-          "text": "temperatureInFahrenheit␣"
+          "text": "temperatureInFahrenheit"
         }
       },
       {
@@ -1942,7 +1942,7 @@
         "name": "operatorToken",
         "value": {
           "kind": "spacedBinaryOperator(&quot;&gt;=&quot;)",
-          "text": "&gt;=␣"
+          "text": "&gt;="
         }
       },
       {
@@ -1993,7 +1993,7 @@
         "name": "digits",
         "value": {
           "kind": "integerLiteral(&quot;86&quot;)",
-          "text": "86␣"
+          "text": "86"
         }
       },
       {
@@ -2070,7 +2070,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲}␣"
+          "text": "}"
         }
       },
       {
@@ -2300,7 +2300,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;print&quot;)",
-          "text": "↲␣␣print"
+          "text": "print"
         }
       },
       {
@@ -2338,7 +2338,7 @@
     "text": "print",
     "token": {
       "kind": "identifier(&quot;print&quot;)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -2683,7 +2683,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲",
+      "leadingTrivia": "↲<br>",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -2752,7 +2752,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲}"
+          "text": "}"
         }
       },
       {
@@ -2982,7 +2982,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;print&quot;)",
-          "text": "↲␣␣print"
+          "text": "print"
         }
       },
       {
@@ -3020,7 +3020,7 @@
     "text": "print",
     "token": {
       "kind": "identifier(&quot;print&quot;)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -3365,7 +3365,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲",
+      "leadingTrivia": "↲<br>",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -3383,7 +3383,7 @@
     "text": "",
     "token": {
       "kind": "eof",
-      "leadingTrivia": "↲↲<span class='lineComment' data-title='//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;' data-content='lineComment' data-type='Trivia'>//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;</span>",
+      "leadingTrivia": "↲<br>↲<br><span class='lineComment' data-title='//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;' data-content='lineComment' data-type='Trivia'>//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;</span>",
       "trailingTrivia": ""
     },
     "type": "other"

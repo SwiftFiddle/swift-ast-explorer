@@ -168,7 +168,7 @@
         "name": "ifKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.if)",
-          "text": "if␣"
+          "text": "if"
         }
       },
       {
@@ -458,7 +458,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;a&quot;)",
-          "text": "a␣"
+          "text": "a"
         }
       },
       {
@@ -521,7 +521,7 @@
         "name": "operatorToken",
         "value": {
           "kind": "binaryOperator(&quot;+&quot;)",
-          "text": "+␣"
+          "text": "+"
         }
       },
       {
@@ -572,7 +572,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;b&quot;)",
-          "text": "b␣"
+          "text": "b"
         }
       },
       {
@@ -635,7 +635,7 @@
         "name": "operatorToken",
         "value": {
           "kind": "binaryOperator(&quot;×&quot;)",
-          "text": "×␣"
+          "text": "×"
         }
       },
       {
@@ -686,7 +686,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;c&quot;)",
-          "text": "c␣"
+          "text": "c"
         }
       },
       {
@@ -775,7 +775,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲}"
+          "text": "}"
         }
       },
       {
@@ -897,7 +897,7 @@
         "name": "returnKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.return)",
-          "text": "↲␣␣return"
+          "text": "return"
         }
       },
       {
@@ -935,7 +935,7 @@
     "text": "return",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.return)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -953,7 +953,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲",
+      "leadingTrivia": "↲<br>",
       "trailingTrivia": ""
     },
     "type": "other"

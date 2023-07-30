@@ -171,7 +171,7 @@
         "name": "letOrVarKeyword",
         "value": {
           "kind": "letKeyword",
-          "text": "let␣"
+          "text": "let"
         }
       },
       {
@@ -343,7 +343,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;number&quot;)",
-          "text": "number␣"
+          "text": "number"
         }
       },
       {
@@ -394,7 +394,7 @@
         "name": "equal",
         "value": {
           "kind": "equal",
-          "text": "=␣"
+          "text": "="
         }
       },
       {
