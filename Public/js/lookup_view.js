@@ -72,18 +72,21 @@ export class LookupView {
                 )
             )
             .map((item) => {
+              const title = escapeHTML(item.title);
+              const type = escapeHTML(item.type);
+              const content = escapeHTML(item.content);
               if (item.range) {
                 const range = JSON.parse(item.range);
                 const sourceRange = `${range.startRow}:${range.startColumn} - ${range.endRow}:${range.endColumn}`;
                 return `<dt class="text-truncate" style="max-width: calc(40vw - 20px);">
-  <span class="badge annotation" style="width: auto; text-align: start;">Text</span><span class="font-monospace">${item.title}</span>
+  <span class="badge annotation" style="width: auto; text-align: start;">Text</span><span class="font-monospace">${title}</span>
 </dt>
-<dd><div><span class="badge annotation">Range</span>${sourceRange}</div><div><span class="badge annotation">${item.type}</span>${item.content}</div></dd>`;
+<dd><div><span class="badge annotation">Range</span>${sourceRange}</div><div><span class="badge annotation">${type}</span>${content}</div></dd>`;
               } else {
                 return `<dt class="text-truncate" style="max-width: calc(40vw - 20px);">
-  <span class="badge annotation" style="width: auto; text-align: start;">Text</span><span class="font-monospace">${item.title}</span>
+  <span class="badge annotation" style="width: auto; text-align: start;">Text</span><span class="font-monospace">${title}</span>
 </dt>
-<dd><div><span class="badge annotation">${item.type}</span>${item.content}</div></dd>`;
+<dd><div><span class="badge annotation">${type}</span>${content}</div></dd>`;
               }
             })
             .join("");
@@ -133,4 +136,10 @@ function createDOMRectElement(domRect) {
   rectElement.style.border = "1px solid rgb(81, 101, 255)";
   rectElement.style.backgroundColor = "rgba(81, 101, 255, 0.25)";
   document.body.appendChild(rectElement);
+}
+
+function escapeHTML(text) {
+  const div = document.createElement("div");
+  div.appendChild(document.createTextNode(text));
+  return div.innerHTML;
 }
