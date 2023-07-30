@@ -1543,7 +1543,7 @@
       "startRow": 4
     },
     "structure": [],
-    "text": "It&apos;s&nbsp;very&nbsp;cold.&nbsp;Consider&nbsp;wearing&nbsp;a&nbsp;scarf.",
+    "text": "It&apos;s␣very␣cold.␣Consider␣wearing␣a␣scarf.",
     "token": {
       "kind": "stringSegment(&quot;It\\&apos;s&nbsp;very&nbsp;cold.&nbsp;Consider&nbsp;wearing&nbsp;a&nbsp;scarf.&quot;)",
       "leadingTrivia": "",
@@ -2611,7 +2611,7 @@
       "startRow": 6
     },
     "structure": [],
-    "text": "It&apos;s&nbsp;really&nbsp;warm.&nbsp;Don&apos;t&nbsp;forget&nbsp;to&nbsp;wear&nbsp;sunscreen.",
+    "text": "It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.",
     "token": {
       "kind": "stringSegment(&quot;It\\&apos;s&nbsp;really&nbsp;warm.&nbsp;Don\\&apos;t&nbsp;forget&nbsp;to&nbsp;wear&nbsp;sunscreen.&quot;)",
       "leadingTrivia": "",
@@ -3281,7 +3281,7 @@
       "startRow": 8
     },
     "structure": [],
-    "text": "It&apos;s&nbsp;not&nbsp;that&nbsp;cold.&nbsp;Wear&nbsp;a&nbsp;t-shirt.",
+    "text": "It&apos;s␣not␣that␣cold.␣Wear␣a␣t-shirt.",
     "token": {
       "kind": "stringSegment(&quot;It\\&apos;s&nbsp;not&nbsp;that&nbsp;cold.&nbsp;Wear&nbsp;a&nbsp;t-shirt.&quot;)",
       "leadingTrivia": "",

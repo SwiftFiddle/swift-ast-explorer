@@ -12,7 +12,7 @@ final class TreeNode: Codable {
 
   init(id: Int, text: String, range: Range, type: SyntaxType) {
     self.id = id
-    self.text = escapeHTML(text)
+    self.text = text.htmlEscaped()
     self.range = range
     self.type = type
   }
@@ -72,13 +72,9 @@ struct StructureProperty: Codable, Equatable {
   let ref: String?
 
   init(name: String, value: StructureValue? = nil, ref: String? = nil) {
-    self.name = escapeHTML(name)
+    self.name = name.htmlEscaped()
     self.value = value
-    if let ref {
-      self.ref = escapeHTML(ref)
-    } else {
-      self.ref = nil
-    }
+    self.ref = ref?.htmlEscaped()
   }
 }
 
@@ -99,12 +95,8 @@ struct StructureValue: Codable, Equatable {
   let kind: String?
 
   init(text: String, kind: String? = nil) {
-    self.text = escapeHTML(text)
-    if let kind {
-      self.kind = escapeHTML(kind)
-    } else {
-      self.kind = nil
-    }
+    self.text = text.htmlEscaped()
+    self.kind = kind?.htmlEscaped()
   }
 }
 
@@ -134,7 +126,7 @@ struct Token: Codable, Equatable {
   var trailingTrivia: String
 
   init(kind: String, leadingTrivia: String, trailingTrivia: String) {
-    self.kind = escapeHTML(kind)
+    self.kind = kind.htmlEscaped()
     self.leadingTrivia = leadingTrivia
     self.trailingTrivia = trailingTrivia
   }
@@ -149,5 +141,24 @@ extension Token: CustomStringConvertible {
       trailingTrivia: \(trailingTrivia)
     }
     """
+  }
+}
+
+private extension String {
+  func htmlEscaped() -> String {
+    var string = self
+    let specialCharacters = [
+      ("&", "&amp;"),
+      ("<", "&lt;"),
+      (">", "&gt;"),
+      ("\"", "&quot;"),
+      ("'", "&apos;"),
+    ];
+    for (unescaped, escaped) in specialCharacters {
+      string = string.replacingOccurrences(of: unescaped, with: escaped, options: .literal, range: nil)
+    }
+    return string
+      .replacingOccurrences(of: " ", with: "&nbsp;")
+      .replacingOccurrences(of: "\n", with: "<br>")
   }
 }

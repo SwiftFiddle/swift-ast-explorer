@@ -12829,7 +12829,7 @@
       "startRow": 37
     },
     "structure": [],
-    "text": "suit&nbsp;is&nbsp;",
+    "text": "suit␣is␣",
     "token": {
       "kind": "stringSegment(&quot;suit&nbsp;is&nbsp;&quot;)",
       "leadingTrivia": "",
@@ -13709,7 +13709,7 @@
       "startRow": 38
     },
     "structure": [],
-    "text": "&nbsp;value&nbsp;is&nbsp;",
+    "text": "␣value␣is␣",
     "token": {
       "kind": "stringSegment(&quot;&nbsp;value&nbsp;is&nbsp;&quot;)",
       "leadingTrivia": "",
@@ -15509,7 +15509,7 @@
       "startRow": 40
     },
     "structure": [],
-    "text": "&nbsp;or&nbsp;",
+    "text": "␣or␣",
     "token": {
       "kind": "stringSegment(&quot;&nbsp;or&nbsp;&quot;)",
       "leadingTrivia": "",
