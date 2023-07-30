@@ -159,7 +159,7 @@
         "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
-          "text": "let␣"
+          "text": "let"
         }
       },
       {
@@ -331,7 +331,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;number&quot;)",
-          "text": "number␣"
+          "text": "number"
         }
       },
       {
@@ -382,7 +382,7 @@
         "name": "equal",
         "value": {
           "kind": "equal",
-          "text": "=␣"
+          "text": "="
         }
       },
       {

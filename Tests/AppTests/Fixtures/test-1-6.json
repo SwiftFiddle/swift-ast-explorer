@@ -147,7 +147,7 @@
         "name": "ifKeyword",
         "value": {
           "kind": "ifKeyword",
-          "text": "if␣"
+          "text": "if"
         }
       },
       {
@@ -378,7 +378,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;a&quot;)",
-          "text": "a␣"
+          "text": "a"
         }
       },
       {
@@ -441,7 +441,7 @@
         "name": "operatorToken",
         "value": {
           "kind": "spacedBinaryOperator(&quot;+&quot;)",
-          "text": "+␣"
+          "text": "+"
         }
       },
       {
@@ -492,7 +492,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;b&quot;)",
-          "text": "b␣"
+          "text": "b"
         }
       },
       {
@@ -555,7 +555,7 @@
         "name": "operatorToken",
         "value": {
           "kind": "spacedBinaryOperator(&quot;×&quot;)",
-          "text": "×␣"
+          "text": "×"
         }
       },
       {
@@ -606,7 +606,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;c&quot;)",
-          "text": "c␣"
+          "text": "c"
         }
       },
       {
@@ -695,7 +695,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲}"
+          "text": "}"
         }
       },
       {
@@ -829,7 +829,7 @@
         "name": "returnKeyword",
         "value": {
           "kind": "returnKeyword",
-          "text": "↲␣␣return"
+          "text": "return"
         }
       },
       {
@@ -867,7 +867,7 @@
     "text": "return",
     "token": {
       "kind": "returnKeyword",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -885,7 +885,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲",
+      "leadingTrivia": "↲<br>",
       "trailingTrivia": ""
     },
     "type": "other"

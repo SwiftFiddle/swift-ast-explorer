@@ -31,7 +31,7 @@
         "name": "endOfFileToken",
         "value": {
           "kind": "endOfFile",
-          "text": "↲"
+          "text": ""
         }
       },
       {
@@ -159,7 +159,7 @@
         "name": "importKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.import)",
-          "text": "import␣"
+          "text": "import"
         }
       },
       {
@@ -393,7 +393,7 @@
         "name": "structKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.struct)",
-          "text": "↲↲struct␣"
+          "text": "struct"
         }
       },
       {
@@ -406,7 +406,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;BlackjackCard&quot;)",
-          "text": "BlackjackCard␣"
+          "text": "BlackjackCard"
         }
       },
       {
@@ -550,7 +550,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲}"
+          "text": "}"
         }
       },
       {
@@ -696,7 +696,7 @@
         "name": "enumKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.enum)",
-          "text": "↲␣␣//␣nested␣Suit␣enumeration↲␣␣enum␣"
+          "text": "enum"
         }
       },
       {
@@ -828,7 +828,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -963,7 +963,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;Character&quot;)",
-          "text": "Character␣"
+          "text": "Character"
         }
       },
       {
@@ -1052,7 +1052,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲␣␣}"
+          "text": "}"
         }
       },
       {
@@ -1198,7 +1198,7 @@
         "name": "caseKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.case)",
-          "text": "↲␣␣␣␣case␣"
+          "text": "case"
         }
       },
       {
@@ -1288,7 +1288,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;spades&quot;)",
-          "text": "spades␣"
+          "text": "spades"
         }
       },
       {
@@ -1376,7 +1376,7 @@
         "name": "equal",
         "value": {
           "kind": "equal",
-          "text": "=␣"
+          "text": "="
         }
       },
       {
@@ -1705,7 +1705,7 @@
         "name": "caseKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.case)",
-          "text": "↲␣␣␣␣case␣"
+          "text": "case"
         }
       },
       {
@@ -1795,7 +1795,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;hearts&quot;)",
-          "text": "hearts␣"
+          "text": "hearts"
         }
       },
       {
@@ -1883,7 +1883,7 @@
         "name": "equal",
         "value": {
           "kind": "equal",
-          "text": "=␣"
+          "text": "="
         }
       },
       {
@@ -2212,7 +2212,7 @@
         "name": "caseKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.case)",
-          "text": "↲␣␣␣␣case␣"
+          "text": "case"
         }
       },
       {
@@ -2302,7 +2302,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;diamonds&quot;)",
-          "text": "diamonds␣"
+          "text": "diamonds"
         }
       },
       {
@@ -2390,7 +2390,7 @@
         "name": "equal",
         "value": {
           "kind": "equal",
-          "text": "=␣"
+          "text": "="
         }
       },
       {
@@ -2719,7 +2719,7 @@
         "name": "caseKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.case)",
-          "text": "↲␣␣␣␣case␣"
+          "text": "case"
         }
       },
       {
@@ -2809,7 +2809,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;clubs&quot;)",
-          "text": "clubs␣"
+          "text": "clubs"
         }
       },
       {
@@ -2897,7 +2897,7 @@
         "name": "equal",
         "value": {
           "kind": "equal",
-          "text": "=␣"
+          "text": "="
         }
       },
       {
@@ -3244,7 +3244,7 @@
         "name": "enumKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.enum)",
-          "text": "↲↲␣␣//␣nested␣Rank␣enumeration↲␣␣enum␣"
+          "text": "enum"
         }
       },
       {
@@ -3376,7 +3376,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -3511,7 +3511,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;Int&quot;)",
-          "text": "Int␣"
+          "text": "Int"
         }
       },
       {
@@ -3600,7 +3600,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲␣␣}"
+          "text": "}"
         }
       },
       {
@@ -3746,7 +3746,7 @@
         "name": "caseKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.case)",
-          "text": "↲␣␣␣␣case␣"
+          "text": "case"
         }
       },
       {
@@ -3836,7 +3836,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;two&quot;)",
-          "text": "two␣"
+          "text": "two"
         }
       },
       {
@@ -3924,7 +3924,7 @@
         "name": "equal",
         "value": {
           "kind": "equal",
-          "text": "=␣"
+          "text": "="
         }
       },
       {
@@ -4108,7 +4108,7 @@
         "name": "caseKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.case)",
-          "text": "↲␣␣␣␣case␣"
+          "text": "case"
         }
       },
       {
@@ -4235,7 +4235,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -4341,7 +4341,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -4447,7 +4447,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -4553,7 +4553,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -4659,7 +4659,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -4765,7 +4765,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -4871,7 +4871,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -5096,7 +5096,7 @@
         "name": "caseKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.case)",
-          "text": "↲␣␣␣␣case␣"
+          "text": "case"
         }
       },
       {
@@ -5223,7 +5223,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -5329,7 +5329,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -5435,7 +5435,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -5660,7 +5660,7 @@
         "name": "structKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.struct)",
-          "text": "↲↲␣␣␣␣struct␣"
+          "text": "struct"
         }
       },
       {
@@ -5673,7 +5673,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;Values&quot;)",
-          "text": "Values␣"
+          "text": "Values"
         }
       },
       {
@@ -5817,7 +5817,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲␣␣␣␣}"
+          "text": "}"
         }
       },
       {
@@ -5963,7 +5963,7 @@
         "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
-          "text": "↲␣␣␣␣␣␣let␣"
+          "text": "let"
         }
       },
       {
@@ -6103,7 +6103,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -6187,7 +6187,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -6465,7 +6465,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -6743,7 +6743,7 @@
         "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.var)",
-          "text": "↲↲␣␣␣␣var␣"
+          "text": "var"
         }
       },
       {
@@ -6967,7 +6967,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -7031,7 +7031,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;Values&quot;)",
-          "text": "Values␣"
+          "text": "Values"
         }
       },
       {
@@ -7120,7 +7120,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲␣␣␣␣}"
+          "text": "}"
         }
       },
       {
@@ -7275,7 +7275,7 @@
         "name": "switchKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.switch)",
-          "text": "↲␣␣␣␣␣␣switch␣"
+          "text": "switch"
         }
       },
       {
@@ -7327,7 +7327,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲␣␣␣␣␣␣}"
+          "text": "}"
         }
       },
       {
@@ -7378,7 +7378,7 @@
         "name": "identifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.self)",
-          "text": "self␣"
+          "text": "self"
         }
       },
       {
@@ -7543,7 +7543,7 @@
         "name": "caseKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.case)",
-          "text": "↲␣␣␣␣␣␣case␣"
+          "text": "case"
         }
       },
       {
@@ -7931,7 +7931,7 @@
         "name": "returnKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.return)",
-          "text": "↲␣␣␣␣␣␣␣␣return␣"
+          "text": "return"
         }
       },
       {
@@ -8211,7 +8211,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -8237,7 +8237,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -8388,7 +8388,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -8609,7 +8609,7 @@
         "name": "caseKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.case)",
-          "text": "↲␣␣␣␣␣␣case␣"
+          "text": "case"
         }
       },
       {
@@ -8737,7 +8737,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -8952,7 +8952,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -9427,7 +9427,7 @@
         "name": "returnKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.return)",
-          "text": "↲␣␣␣␣␣␣␣␣return␣"
+          "text": "return"
         }
       },
       {
@@ -9707,7 +9707,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -9733,7 +9733,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -9884,7 +9884,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -10105,7 +10105,7 @@
         "name": "defaultKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.default)",
-          "text": "↲␣␣␣␣␣␣default"
+          "text": "default"
         }
       },
       {
@@ -10258,7 +10258,7 @@
         "name": "returnKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.return)",
-          "text": "↲␣␣␣␣␣␣␣␣return␣"
+          "text": "return"
         }
       },
       {
@@ -10538,7 +10538,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -10564,7 +10564,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -10834,7 +10834,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -11120,7 +11120,7 @@
         "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
-          "text": "↲↲␣␣//␣BlackjackCard␣properties␣and␣methods↲␣␣let␣"
+          "text": "let"
         }
       },
       {
@@ -11260,7 +11260,7 @@
         "name": "trailingComma",
         "value": {
           "kind": "comma",
-          "text": ",␣"
+          "text": ","
         }
       },
       {
@@ -11344,7 +11344,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -11622,7 +11622,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -11818,7 +11818,7 @@
         "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.var)",
-          "text": "↲␣␣var␣"
+          "text": "var"
         }
       },
       {
@@ -12042,7 +12042,7 @@
         "name": "colon",
         "value": {
           "kind": "colon",
-          "text": ":␣"
+          "text": ":"
         }
       },
       {
@@ -12106,7 +12106,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;String&quot;)",
-          "text": "String␣"
+          "text": "String"
         }
       },
       {
@@ -12195,7 +12195,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲␣␣}"
+          "text": "}"
         }
       },
       {
@@ -12341,7 +12341,7 @@
         "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.var)",
-          "text": "↲␣␣␣␣var␣"
+          "text": "var"
         }
       },
       {
@@ -12513,7 +12513,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;output&quot;)",
-          "text": "output␣"
+          "text": "output"
         }
       },
       {
@@ -12564,7 +12564,7 @@
         "name": "equal",
         "value": {
           "kind": "equal",
-          "text": "=␣"
+          "text": "="
         }
       },
       {
@@ -13382,7 +13382,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;output&quot;)",
-          "text": "↲␣␣␣␣output␣"
+          "text": "output"
         }
       },
       {
@@ -13445,7 +13445,7 @@
         "name": "operator",
         "value": {
           "kind": "binaryOperator(&quot;+=&quot;)",
-          "text": "+=␣"
+          "text": "+="
         }
       },
       {
@@ -14331,7 +14331,7 @@
         "name": "ifKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.if)",
-          "text": "↲␣␣␣␣if␣"
+          "text": "if"
         }
       },
       {
@@ -14503,7 +14503,7 @@
         "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
-          "text": "let␣"
+          "text": "let"
         }
       },
       {
@@ -14592,7 +14592,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;second&quot;)",
-          "text": "second␣"
+          "text": "second"
         }
       },
       {
@@ -14643,7 +14643,7 @@
         "name": "equal",
         "value": {
           "kind": "equal",
-          "text": "=␣"
+          "text": "="
         }
       },
       {
@@ -14733,7 +14733,7 @@
         "name": "name",
         "value": {
           "kind": "identifier(&quot;second&quot;)",
-          "text": "second␣"
+          "text": "second"
         }
       },
       {
@@ -15010,7 +15010,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "↲␣␣␣␣}"
+          "text": "}"
         }
       },
       {
@@ -15191,7 +15191,7 @@
         "name": "identifier",
         "value": {
           "kind": "identifier(&quot;output&quot;)",
-          "text": "↲␣␣␣␣␣␣output␣"
+          "text": "output"
         }
       },
       {
@@ -15254,7 +15254,7 @@
         "name": "operator",
         "value": {
           "kind": "binaryOperator(&quot;+=&quot;)",
-          "text": "+=␣"
+          "text": "+="
         }
       },
       {
@@ -15911,7 +15911,7 @@
         "name": "returnKeyword",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.return)",
-          "text": "↲␣␣␣␣return␣"
+          "text": "return"
         }
       },
       {
