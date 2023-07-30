@@ -778,7 +778,7 @@
     "text": "let",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.let)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -1197,7 +1197,7 @@
     "text": "let",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.let)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -1501,7 +1501,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲",
+      "leadingTrivia": "↲<br>",
       "trailingTrivia": ""
     },
     "type": "other"

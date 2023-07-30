@@ -876,7 +876,7 @@
     "text": "return",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.return)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -894,7 +894,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲",
+      "leadingTrivia": "↲<br>",
       "trailingTrivia": ""
     },
     "type": "other"

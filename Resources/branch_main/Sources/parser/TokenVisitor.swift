@@ -230,7 +230,8 @@ final class TokenVisitor: SyntaxRewriter {
   private func replaceSymbols(text: String) -> String {
     text
       .replacingOccurrences(of: "&nbsp;", with: "␣")
-      .replacingOccurrences(of: "<br>", with: "↲")
+      .replacingOccurrences(of: "<br>", with: "↲<br>")
+
   }
 }
 

@@ -653,7 +653,7 @@
     "text": "if",
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.if)",
-      "leadingTrivia": "↲↲",
+      "leadingTrivia": "↲<br>↲<br>",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -1255,7 +1255,7 @@
     "text": "print",
     "token": {
       "kind": "identifier(&quot;print&quot;)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -1600,7 +1600,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲",
+      "leadingTrivia": "↲<br>",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -2323,7 +2323,7 @@
     "text": "print",
     "token": {
       "kind": "identifier(&quot;print&quot;)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -2668,7 +2668,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲",
+      "leadingTrivia": "↲<br>",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -2993,7 +2993,7 @@
     "text": "print",
     "token": {
       "kind": "identifier(&quot;print&quot;)",
-      "leadingTrivia": "↲␣␣",
+      "leadingTrivia": "↲<br>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -3338,7 +3338,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲",
+      "leadingTrivia": "↲<br>",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -3356,7 +3356,7 @@
     "text": "",
     "token": {
       "kind": "endOfFile",
-      "leadingTrivia": "↲↲<span class='lineComment' data-title='//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;' data-content='lineComment' data-type='Trivia'>//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;</span>",
+      "leadingTrivia": "↲<br>↲<br><span class='lineComment' data-title='//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;' data-content='lineComment' data-type='Trivia'>//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;</span>",
       "trailingTrivia": ""
     },
     "type": "other"
