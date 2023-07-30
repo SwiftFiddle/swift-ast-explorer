@@ -505,7 +505,7 @@
     "text": "struct",
     "token": {
       "kind": "structKeyword",
-      "leadingTrivia": "↲<br>↲<br>",
+      "leadingTrivia": "↲<br/>↲<br/>",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -809,7 +809,7 @@
     "text": "enum",
     "token": {
       "kind": "enumKeyword",
-      "leadingTrivia": "↲<br>␣␣<span class='lineComment' data-title='//␣nested␣Suit␣enumeration' data-content='lineComment' data-type='Trivia'>//␣nested␣Suit␣enumeration</span>↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣<span class='lineComment' data-title='//␣nested␣Suit␣enumeration' data-content='lineComment' data-type='Trivia'>//␣nested␣Suit␣enumeration</span>↲<br/>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -1261,7 +1261,7 @@
     "text": "case",
     "token": {
       "kind": "caseKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -1768,7 +1768,7 @@
     "text": "case",
     "token": {
       "kind": "caseKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -2275,7 +2275,7 @@
     "text": "case",
     "token": {
       "kind": "caseKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -2782,7 +2782,7 @@
     "text": "case",
     "token": {
       "kind": "caseKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -3174,7 +3174,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -3357,7 +3357,7 @@
     "text": "enum",
     "token": {
       "kind": "enumKeyword",
-      "leadingTrivia": "↲<br>↲<br>␣␣<span class='lineComment' data-title='//␣nested␣Rank␣enumeration' data-content='lineComment' data-type='Trivia'>//␣nested␣Rank␣enumeration</span>↲<br>␣␣",
+      "leadingTrivia": "↲<br/>↲<br/>␣␣<span class='lineComment' data-title='//␣nested␣Rank␣enumeration' data-content='lineComment' data-type='Trivia'>//␣nested␣Rank␣enumeration</span>↲<br/>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -3809,7 +3809,7 @@
     "text": "case",
     "token": {
       "kind": "caseKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -4171,7 +4171,7 @@
     "text": "case",
     "token": {
       "kind": "caseKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -5159,7 +5159,7 @@
     "text": "case",
     "token": {
       "kind": "caseKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -5772,7 +5772,7 @@
     "text": "struct",
     "token": {
       "kind": "structKeyword",
-      "leadingTrivia": "↲<br>↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -6026,7 +6026,7 @@
     "text": "let",
     "token": {
       "kind": "letKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -6673,7 +6673,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -6806,7 +6806,7 @@
     "text": "var",
     "token": {
       "kind": "varKeyword",
-      "leadingTrivia": "↲<br>↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -7356,7 +7356,7 @@
     "text": "switch",
     "token": {
       "kind": "switchKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -7598,7 +7598,7 @@
     "text": "case",
     "token": {
       "kind": "caseKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -7985,7 +7985,7 @@
     "text": "return",
     "token": {
       "kind": "returnKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -8676,7 +8676,7 @@
     "text": "case",
     "token": {
       "kind": "caseKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -9493,7 +9493,7 @@
     "text": "return",
     "token": {
       "kind": "returnKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -10171,7 +10171,7 @@
     "text": "default",
     "token": {
       "kind": "defaultKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -10336,7 +10336,7 @@
     "text": "return",
     "token": {
       "kind": "returnKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -11029,7 +11029,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -11047,7 +11047,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -11065,7 +11065,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -11198,7 +11198,7 @@
     "text": "let",
     "token": {
       "kind": "letKeyword",
-      "leadingTrivia": "↲<br>↲<br>␣␣<span class='lineComment' data-title='//␣BlackjackCard␣properties␣and␣methods' data-content='lineComment' data-type='Trivia'>//␣BlackjackCard␣properties␣and␣methods</span>↲<br>␣␣",
+      "leadingTrivia": "↲<br/>↲<br/>␣␣<span class='lineComment' data-title='//␣BlackjackCard␣properties␣and␣methods' data-content='lineComment' data-type='Trivia'>//␣BlackjackCard␣properties␣and␣methods</span>↲<br/>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -11896,7 +11896,7 @@
     "text": "var",
     "token": {
       "kind": "varKeyword",
-      "leadingTrivia": "↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -12431,7 +12431,7 @@
     "text": "var",
     "token": {
       "kind": "varKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -13483,7 +13483,7 @@
     "text": "output",
     "token": {
       "kind": "identifier(&quot;output&quot;)",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -14449,7 +14449,7 @@
     "text": "if",
     "token": {
       "kind": "ifKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -15283,7 +15283,7 @@
     "text": "output",
     "token": {
       "kind": "identifier(&quot;output&quot;)",
-      "leadingTrivia": "↲<br>␣␣␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -15895,7 +15895,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -16016,7 +16016,7 @@
     "text": "return",
     "token": {
       "kind": "returnKeyword",
-      "leadingTrivia": "↲<br>␣␣␣␣",
+      "leadingTrivia": "↲<br/>␣␣␣␣",
       "trailingTrivia": "␣"
     },
     "type": "other"
@@ -16097,7 +16097,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -16115,7 +16115,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>",
+      "leadingTrivia": "↲<br/>",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -16133,7 +16133,7 @@
     "text": "",
     "token": {
       "kind": "eof",
-      "leadingTrivia": "↲<br>",
+      "leadingTrivia": "↲<br/>",
       "trailingTrivia": ""
     },
     "type": "other"

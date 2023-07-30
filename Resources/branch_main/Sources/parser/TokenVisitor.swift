@@ -188,13 +188,13 @@ final class TokenVisitor: SyntaxRewriter {
       "data-content='\(escapeHTML("\(token.tokenKind)"))' " +
       "data-type='Token' " +
       #"data-range='{"startRow":\#(start.line),"startColumn":\#(start.column),"endRow":\#(end.line),"endColumn":\#(end.column)}'>"# +
-      "\(escapeHTML(text))</span>"
+      "\(escapeHTML(text).replacingOccurrences(of: "<br>", with: "<br/>"))</span>"
     )
   }
 
   private func processTriviaPiece(_ piece: TriviaPiece) -> String {
     func wrapWithSpanTag(class c: String, text: String) -> String {
-      "<span class='\(escapeHTML(c))' data-title='\(escapeHTML("\(piece)"))' data-content='\(escapeHTML(c))' data-type='Trivia'>\(escapeHTML(text))</span>"
+      "<span class='\(escapeHTML(c))' data-title='\(escapeHTML("\(piece)"))' data-content='\(escapeHTML(c))' data-type='Trivia'>\(escapeHTML(text).replacingOccurrences(of: "<br>", with: "<br/>"))</span>"
     }
 
     var trivia = ""
@@ -206,7 +206,7 @@ final class TokenVisitor: SyntaxRewriter {
     case .verticalTabs, .formfeeds:
       break
     case .newlines(let count), .carriageReturns(let count), .carriageReturnLineFeeds(let count):
-      trivia += String(repeating: "<br>", count: count)
+      trivia += String(repeating: "<br/>", count: count)
     case .lineComment(let text):
       trivia += wrapWithSpanTag(class: "lineComment", text: text)
     case .blockComment(let text):
@@ -230,8 +230,7 @@ final class TokenVisitor: SyntaxRewriter {
   private func replaceSymbols(text: String) -> String {
     text
       .replacingOccurrences(of: "&nbsp;", with: "␣")
-      .replacingOccurrences(of: "<br>", with: "↲<br>")
-
+      .replacingOccurrences(of: "<br/>", with: "↲<br/>")
   }
 }
 

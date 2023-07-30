@@ -74,8 +74,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -92,6 +90,9 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-1-1.json")
+    write(response.syntaxHTML, filename: "test-1-1.html")
   }
 
   func testParser2() throws {
@@ -112,8 +113,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -130,6 +129,9 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-1-2.json")
+    write(response.syntaxHTML, filename: "test-1-2.html")
   }
 
   func testParser3() throws {
@@ -184,8 +186,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -202,6 +202,9 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-1-3.json")
+    write(response.syntaxHTML, filename: "test-1-3.html")
   }
 
   func testParser4() throws {
@@ -215,8 +218,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -233,6 +234,9 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-1-4.json")
+    write(response.syntaxHTML, filename: "test-1-4.html")
   }
 
   func testParser5() throws {
@@ -245,8 +249,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -263,6 +265,9 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-1-5.json")
+    write(response.syntaxHTML, filename: "test-1-5.html")
   }
 
   func testParser6() throws {
@@ -275,8 +280,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -293,6 +296,9 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-1-6.json")
+    write(response.syntaxHTML, filename: "test-1-6.html")
   }
 
   func testParserFolding1() throws {
@@ -304,8 +310,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -322,6 +326,9 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-2-1.json")
+    write(response.syntaxHTML, filename: "test-2-1.html")
   }
 
   func testParserFolding2() throws {
@@ -343,8 +350,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -361,6 +366,9 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-2-2.json")
+    write(response.syntaxHTML, filename: "test-2-2.html")
   }
 
   func testParserFolding3() throws {
@@ -416,8 +424,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -434,6 +440,9 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-2-3.json")
+    write(response.syntaxHTML, filename: "test-2-3.html")
   }
 
   func testParserFolding4() throws {
@@ -448,8 +457,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -466,6 +473,9 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-2-4.json")
+    write(response.syntaxHTML, filename: "test-2-4.html")
   }
 
   func testParserFolding5() throws {
@@ -479,8 +489,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -497,6 +505,9 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-2-5.json")
+    write(response.syntaxHTML, filename: "test-2-5.html")
   }
 
   func testParserFolding6() throws {
@@ -510,8 +521,6 @@ final class AppTests: XCTestCase {
     )
 
     let decoder = JSONDecoder()
-    write(response.syntaxJSON, filename: "\(#function)-json")
-    write(response.syntaxHTML, filename: "\(#function)-html")
 
     XCTAssertEqual(
       try decoder.decode([TreeNode].self, from: Data(response.syntaxJSON.utf8)),
@@ -528,12 +537,15 @@ final class AppTests: XCTestCase {
       )
       .replacingOccurrences(of: "\n", with: "")
     )
+
+    write(response.syntaxJSON, filename: "test-2-6.json")
+    write(response.syntaxHTML, filename: "test-2-6.html")
   }
 }
 
 func write(_ text: String, filename: String) {
   let directory: String? = nil
   if let directory {
-    try! text.write(toFile: "\(directory)/\(filename).txt", atomically: true, encoding: .utf8)
+    try! text.write(toFile: "\(directory)/\(filename)", atomically: true, encoding: .utf8)
   }
 }

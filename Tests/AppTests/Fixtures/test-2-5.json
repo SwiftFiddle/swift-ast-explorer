@@ -926,7 +926,7 @@
     "text": "return",
     "token": {
       "kind": "returnKeyword",
-      "leadingTrivia": "↲<br>␣␣",
+      "leadingTrivia": "↲<br/>␣␣",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -944,7 +944,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br>",
+      "leadingTrivia": "↲<br/>",
       "trailingTrivia": ""
     },
     "type": "other"
