@@ -133,20 +133,19 @@ final class TokenVisitor: SyntaxRewriter {
       .text
       .htmlEscaped()
       .substituteInvisibles()
-      .replacingOccurrences(of: "&nbsp;", with: "␣")
-      .replacingOccurrences(of: "<br/>", with: "↲<br/>")
+      .transformWhitespaces()
     current.token = Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
 
     token.leadingTrivia.forEach { (piece) in
       let trivia = processTriviaPiece(piece)
       list.append(trivia)
-      current.token?.leadingTrivia += replaceSymbols(text: trivia)
+      current.token?.leadingTrivia += trivia.transformWhitespaces()
     }
     processToken(token)
     token.trailingTrivia.forEach { (piece) in
       let trivia = processTriviaPiece(piece)
       list.append(trivia)
-      current.token?.trailingTrivia += replaceSymbols(text: trivia)
+      current.token?.trailingTrivia += trivia.transformWhitespaces()
     }
 
     return token
@@ -221,12 +220,6 @@ final class TokenVisitor: SyntaxRewriter {
     }
     return trivia
   }
-
-  private func replaceSymbols(text: String) -> String {
-    text
-      .replacingOccurrences(of: "&nbsp;", with: "␣")
-      .replacingOccurrences(of: "<br/>", with: "↲<br/>")
-  }
 }
 
 private extension String {
@@ -255,5 +248,11 @@ private extension String {
     self
       .replacingOccurrences(of: " ", with: "␣")
       .replacingOccurrences(of: "\n", with: "↲")
+  }
+
+  func transformWhitespaces() -> String {
+    self
+      .replacingOccurrences(of: "&nbsp;", with: "␣")
+      .replacingOccurrences(of: "<br/>", with: "↲<br/>")
   }
 }
