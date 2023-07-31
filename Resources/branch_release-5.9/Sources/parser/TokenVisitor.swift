@@ -43,9 +43,9 @@ final class TokenVisitor: SyntaxRewriter {
 
     list.append(
       "<span class='\(className)' " +
-      "data-title='\("\(node.trimmed)".htmlEscaped().displayInvisibles())' " +
-      "data-content='\(content.htmlEscaped().substituteInvisibles())' " +
-      "data-type='\(type.htmlEscaped())' " +
+      "data-title='\("\(node.trimmed)".escapeHTML().replaceInvisiblesWithSymbols())' " +
+      "data-content='\(content.escapeHTML().replaceInvisiblesWithHTML())' " +
+      "data-type='\(type.escapeHTML())' " +
       #"data-range='{"startRow":\#(start.line),"startColumn":\#(start.column),"endRow":\#(end.line),"endColumn":\#(end.column)}'>"#
     )
 
@@ -146,9 +146,9 @@ final class TokenVisitor: SyntaxRewriter {
   override func visit(_ token: TokenSyntax) -> TokenSyntax {
     current.text = token
       .text
-      .htmlEscaped()
-      .substituteInvisibles()
-      .transformWhitespaces()
+      .escapeHTML()
+      .replaceInvisiblesWithHTML()
+      .replaceHTMLWhitespacesToSymbols()
     if token.presence == .missing {
       current.class = "\(token.presence)"
     }
@@ -157,13 +157,13 @@ final class TokenVisitor: SyntaxRewriter {
     token.leadingTrivia.forEach { (piece) in
       let trivia = processTriviaPiece(piece)
       list.append(trivia)
-      current.token?.leadingTrivia += trivia.transformWhitespaces()
+      current.token?.leadingTrivia += trivia.replaceHTMLWhitespacesToSymbols()
     }
     processToken(token)
     token.trailingTrivia.forEach { (piece) in
       let trivia = processTriviaPiece(piece)
       list.append(trivia)
-      current.token?.trailingTrivia += trivia.transformWhitespaces()
+      current.token?.trailingTrivia += trivia.replaceHTMLWhitespacesToSymbols()
     }
 
     return token
@@ -192,21 +192,21 @@ final class TokenVisitor: SyntaxRewriter {
     let end = sourceRange.end
     let text = token.presence == .present || showMissingTokens ? token.text : ""
     list.append(
-      "<span class='token \(kind.htmlEscaped()) \(token.presence)' " +
-      "data-title='\("\(token.trimmed)".htmlEscaped().displayInvisibles())' " +
-      "data-content='\("\(token.tokenKind)".htmlEscaped().substituteInvisibles())' " +
+      "<span class='token \(kind.escapeHTML()) \(token.presence)' " +
+      "data-title='\("\(token.trimmed)".escapeHTML().replaceInvisiblesWithSymbols())' " +
+      "data-content='\("\(token.tokenKind)".escapeHTML().replaceInvisiblesWithHTML())' " +
       "data-type='Token' " +
       #"data-range='{"startRow":\#(start.line),"startColumn":\#(start.column),"endRow":\#(end.line),"endColumn":\#(end.column)}'>"# +
-      "\(text.htmlEscaped().substituteInvisibles())</span>"
+      "\(text.escapeHTML().replaceInvisiblesWithHTML())</span>"
     )
   }
 
   private func processTriviaPiece(_ piece: TriviaPiece) -> String {
     func wrapWithSpanTag(class c: String, text: String) -> String {
-      "<span class='\(c.htmlEscaped())' " +
-      "data-title='\("\(piece)".htmlEscaped().displayInvisibles())' " +
-      "data-content='\(c.htmlEscaped().substituteInvisibles())' " +
-      "data-type='Trivia'>\(text.htmlEscaped().substituteInvisibles())</span>"
+      "<span class='\(c.escapeHTML())' " +
+      "data-title='\("\(piece)".escapeHTML().replaceInvisiblesWithSymbols())' " +
+      "data-content='\(c.escapeHTML().replaceInvisiblesWithHTML())' " +
+      "data-type='Trivia'>\(text.escapeHTML().replaceInvisiblesWithHTML())</span>"
     }
 
     var trivia = ""
@@ -241,7 +241,7 @@ final class TokenVisitor: SyntaxRewriter {
 }
 
 private extension String {
-  func htmlEscaped() -> String {
+  func escapeHTML() -> String {
     var string = self
     let specialCharacters = [
       ("&", "&amp;"),
@@ -256,19 +256,19 @@ private extension String {
     return string
   }
 
-  func substituteInvisibles() -> String {
+  func replaceInvisiblesWithHTML() -> String {
     self
       .replacingOccurrences(of: " ", with: "&nbsp;")
       .replacingOccurrences(of: "\n", with: "<br/>")
   }
 
-  func displayInvisibles() -> String {
+  func replaceInvisiblesWithSymbols() -> String {
     self
       .replacingOccurrences(of: " ", with: "␣")
       .replacingOccurrences(of: "\n", with: "↲")
   }
 
-  func transformWhitespaces() -> String {
+  func replaceHTMLWhitespacesToSymbols() -> String {
     self
       .replacingOccurrences(of: "&nbsp;", with: "␣")
       .replacingOccurrences(of: "<br/>", with: "↲<br/>")
