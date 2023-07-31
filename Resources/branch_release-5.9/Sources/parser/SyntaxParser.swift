@@ -14,7 +14,10 @@ struct SyntaxParser {
       syntax = Syntax(sourceFile)
     }
 
-    let visitor = TokenVisitor(converter: SourceLocationConverter(file: "", tree: sourceFile))
+    let visitor = TokenVisitor(
+      locationConverter: SourceLocationConverter(file: "", tree: sourceFile),
+      showMissingTokens: options.contains("showmissing")
+    )
     _ = visitor.rewrite(syntax)
 
     let html = "\(visitor.list.joined())"
@@ -23,6 +26,6 @@ struct SyntaxParser {
     let encoder = JSONEncoder()
     let json = String(decoding: try encoder.encode(tree), as: UTF8.self)
 
-    return SyntaxResponse(syntaxHTML: html, syntaxJSON: json, swiftVersion: "main")
+    return SyntaxResponse(syntaxHTML: html, syntaxJSON: json, swiftVersion: "5.9")
   }
 }

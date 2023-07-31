@@ -400,6 +400,7 @@
     "type": "collection"
   },
   {
+    "class": "missing",
     "id": 9,
     "parent": 6,
     "range": {
@@ -521,6 +522,7 @@
     "type": "collection"
   },
   {
+    "class": "missing",
     "id": 13,
     "parent": 10,
     "range": {
@@ -539,6 +541,7 @@
     "type": "other"
   },
   {
+    "class": "missing",
     "id": 14,
     "parent": 2,
     "range": {

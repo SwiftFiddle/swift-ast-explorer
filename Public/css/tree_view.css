@@ -87,3 +87,25 @@
   color: #696969;
   background-color: #dcdcdc;
 }
+
+.tree-view .token.missing {
+  color: #a3a3a3;
+}
+
+.tree-view .token.missing::after {
+  content: "Missing";
+  color: #696969;
+  background-color: #dcdcdc;
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  margin: 0 8px;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--bs-badge-color);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.375rem;
+  vertical-align: middle;
+}

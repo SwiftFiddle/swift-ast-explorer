@@ -214,7 +214,8 @@ final class AppTests: XCTestCase {
           let text: String
           let someOtherThing: String
         }
-        """
+        """,
+      options: ["showmissing"]
     )
 
     let decoder = JSONDecoder()
@@ -453,7 +454,7 @@ final class AppTests: XCTestCase {
           let someOtherThing: String
         }
         """,
-      options: ["fold"]
+      options: ["fold", "showmissing"]
     )
 
     let decoder = JSONDecoder()

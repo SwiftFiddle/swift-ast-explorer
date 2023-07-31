@@ -3,19 +3,24 @@ import SwiftSyntax
 
 final class TokenVisitor: SyntaxRewriter {
   var list = [String]()
-
   var tree = [TreeNode]()
-  var current: TreeNode!
 
-  var index = 0
+  private var current: TreeNode!
+  private var index = 0
 
-  let converter: SourceLocationConverter
+  private let locationConverter: SourceLocationConverter
+  private let showMissingTokens: Bool
 
-  init(converter: SourceLocationConverter) {
-    self.converter = converter
+  init(locationConverter: SourceLocationConverter, showMissingTokens: Bool) {
+    self.locationConverter = locationConverter
+    self.showMissingTokens = showMissingTokens
   }
 
   override func visitPre(_ node: Syntax) {
+    if let token = node.as(TokenSyntax.self), token.presence == .missing, !showMissingTokens {
+      return
+    }
+
     let syntaxNodeType = node.syntaxNodeType
 
     let className: String
@@ -35,7 +40,7 @@ final class TokenVisitor: SyntaxRewriter {
       type = "Syntax"
     }
 
-    let sourceRange = node.sourceRange(converter: converter)
+    let sourceRange = node.sourceRange(converter: locationConverter)
     let start = sourceRange.start
     let end = sourceRange.end
     let startRow = start.line ?? 1
@@ -129,11 +134,18 @@ final class TokenVisitor: SyntaxRewriter {
   }
 
   override func visit(_ token: TokenSyntax) -> TokenSyntax {
+    if token.presence == .missing && !showMissingTokens {
+      return token
+    }
+
     current.text = token
       .text
       .htmlEscaped()
       .substituteInvisibles()
       .transformWhitespaces()
+    if token.presence == .missing {
+      current.class = token.presence.rawValue.lowercased()
+    }
     current.token = Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
 
     token.leadingTrivia.forEach { (piece) in
@@ -152,6 +164,10 @@ final class TokenVisitor: SyntaxRewriter {
   }
 
   override func visitPost(_ node: Syntax) {
+    if let token = node.as(TokenSyntax.self), token.presence == .missing, !showMissingTokens {
+      return
+    }
+
     list.append("</span>")
     if let parent = current.parent {
       current = tree[parent]
@@ -169,16 +185,16 @@ final class TokenVisitor: SyntaxRewriter {
       kind = "keyword"
     }
 
-    let sourceRange = token.sourceRange(converter: converter)
+    let sourceRange = token.sourceRange(converter: locationConverter)
     let start = sourceRange.start
     let end = sourceRange.end
     let startRow = start.line ?? 1
     let startColumn = start.column ?? 1
     let endRow = end.line ?? 1
     let endColumn = end.column ?? 1
-    let text = token.presence == .present ? token.text : ""
+    let text = token.presence == .present || showMissingTokens ? token.text : ""
     list.append(
-      "<span class='token \(kind.htmlEscaped())' " +
+      "<span class='token \(kind.htmlEscaped()) \(token.presence.rawValue.lowercased())' " +
       "data-title='\("\(token.withoutTrivia())".htmlEscaped().displayInvisibles())' " +
       "data-content='\("\(token.tokenKind)".htmlEscaped().substituteInvisibles())' " +
       "data-type='Token' " +
