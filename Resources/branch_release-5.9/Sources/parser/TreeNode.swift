@@ -13,7 +13,7 @@ final class TreeNode: Codable {
 
   init(id: Int, text: String, range: Range, type: SyntaxType) {
     self.id = id
-    self.text = text.htmlEscaped()
+    self.text = text.escapeHTML()
     self.range = range
     self.type = type
   }
@@ -73,9 +73,9 @@ struct StructureProperty: Codable, Equatable {
   let ref: String?
 
   init(name: String, value: StructureValue? = nil, ref: String? = nil) {
-    self.name = name.htmlEscaped()
+    self.name = name.escapeHTML()
     self.value = value
-    self.ref = ref?.htmlEscaped()
+    self.ref = ref?.escapeHTML()
   }
 }
 
@@ -96,8 +96,8 @@ struct StructureValue: Codable, Equatable {
   let kind: String?
 
   init(text: String, kind: String? = nil) {
-    self.text = text.htmlEscaped()
-    self.kind = kind?.htmlEscaped()
+    self.text = text.escapeHTML()
+    self.kind = kind?.escapeHTML()
   }
 }
 
@@ -127,7 +127,7 @@ struct Token: Codable, Equatable {
   var trailingTrivia: String
 
   init(kind: String, leadingTrivia: String, trailingTrivia: String) {
-    self.kind = kind.htmlEscaped()
+    self.kind = kind.escapeHTML()
     self.leadingTrivia = leadingTrivia
     self.trailingTrivia = trailingTrivia
   }
@@ -146,7 +146,7 @@ extension Token: CustomStringConvertible {
 }
 
 private extension String {
-  func htmlEscaped() -> String {
+  func escapeHTML() -> String {
     var string = self
     let specialCharacters = [
       ("&", "&amp;"),
