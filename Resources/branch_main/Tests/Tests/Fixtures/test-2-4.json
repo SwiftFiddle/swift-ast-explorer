@@ -388,7 +388,26 @@
     "type": "collection"
   },
   {
+    "class": "missing",
     "id": 9,
+    "parent": 6,
+    "range": {
+      "endColumn": 16,
+      "endRow": 1,
+      "startColumn": 16,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "&gt;",
+    "token": {
+      "kind": "rightAngle",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 10,
     "parent": 3,
     "range": {
       "endColumn": 17,
@@ -447,8 +466,8 @@
     "type": "other"
   },
   {
-    "id": 10,
-    "parent": 9,
+    "id": 11,
+    "parent": 10,
     "range": {
       "endColumn": 17,
       "endRow": 1,
@@ -465,8 +484,8 @@
     "type": "other"
   },
   {
-    "id": 11,
-    "parent": 9,
+    "id": 12,
+    "parent": 10,
     "range": {
       "endColumn": 17,
       "endRow": 1,
@@ -491,7 +510,45 @@
     "type": "collection"
   },
   {
-    "id": 12,
+    "class": "missing",
+    "id": 13,
+    "parent": 10,
+    "range": {
+      "endColumn": 17,
+      "endRow": 1,
+      "startColumn": 17,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "}",
+    "token": {
+      "kind": "rightBrace",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "class": "missing",
+    "id": 14,
+    "parent": 2,
+    "range": {
+      "endColumn": 17,
+      "endRow": 1,
+      "startColumn": 17,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": ";",
+    "token": {
+      "kind": "semicolon",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 15,
     "parent": 1,
     "range": {
       "endColumn": 2,
@@ -536,8 +593,8 @@
     "type": "other"
   },
   {
-    "id": 13,
-    "parent": 12,
+    "id": 16,
+    "parent": 15,
     "range": {
       "endColumn": 2,
       "endRow": 4,
@@ -607,8 +664,8 @@
     "type": "expr"
   },
   {
-    "id": 14,
-    "parent": 13,
+    "id": 17,
+    "parent": 16,
     "range": {
       "endColumn": 18,
       "endRow": 1,
@@ -625,8 +682,8 @@
     "type": "other"
   },
   {
-    "id": 15,
-    "parent": 13,
+    "id": 18,
+    "parent": 16,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -651,8 +708,8 @@
     "type": "collection"
   },
   {
-    "id": 16,
-    "parent": 15,
+    "id": 19,
+    "parent": 18,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -696,8 +753,8 @@
     "type": "other"
   },
   {
-    "id": 17,
-    "parent": 16,
+    "id": 20,
+    "parent": 19,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -766,8 +823,8 @@
     "type": "decl"
   },
   {
-    "id": 18,
-    "parent": 17,
+    "id": 21,
+    "parent": 20,
     "range": {
       "endColumn": 6,
       "endRow": 2,
@@ -784,8 +841,8 @@
     "type": "other"
   },
   {
-    "id": 19,
-    "parent": 17,
+    "id": 22,
+    "parent": 20,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -810,8 +867,8 @@
     "type": "collection"
   },
   {
-    "id": 20,
-    "parent": 19,
+    "id": 23,
+    "parent": 22,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -892,8 +949,8 @@
     "type": "other"
   },
   {
-    "id": 21,
-    "parent": 20,
+    "id": 24,
+    "parent": 23,
     "range": {
       "endColumn": 11,
       "endRow": 2,
@@ -925,8 +982,8 @@
     "type": "pattern"
   },
   {
-    "id": 22,
-    "parent": 21,
+    "id": 25,
+    "parent": 24,
     "range": {
       "endColumn": 11,
       "endRow": 2,
@@ -943,8 +1000,8 @@
     "type": "other"
   },
   {
-    "id": 23,
-    "parent": 20,
+    "id": 26,
+    "parent": 23,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -989,8 +1046,8 @@
     "type": "other"
   },
   {
-    "id": 24,
-    "parent": 23,
+    "id": 27,
+    "parent": 26,
     "range": {
       "endColumn": 12,
       "endRow": 2,
@@ -1007,8 +1064,8 @@
     "type": "other"
   },
   {
-    "id": 25,
-    "parent": 23,
+    "id": 28,
+    "parent": 26,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -1052,8 +1109,8 @@
     "type": "type"
   },
   {
-    "id": 26,
-    "parent": 25,
+    "id": 29,
+    "parent": 28,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -1070,8 +1127,8 @@
     "type": "other"
   },
   {
-    "id": 27,
-    "parent": 15,
+    "id": 30,
+    "parent": 18,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1115,8 +1172,8 @@
     "type": "other"
   },
   {
-    "id": 28,
-    "parent": 27,
+    "id": 31,
+    "parent": 30,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1185,8 +1242,8 @@
     "type": "decl"
   },
   {
-    "id": 29,
-    "parent": 28,
+    "id": 32,
+    "parent": 31,
     "range": {
       "endColumn": 6,
       "endRow": 3,
@@ -1203,8 +1260,8 @@
     "type": "other"
   },
   {
-    "id": 30,
-    "parent": 28,
+    "id": 33,
+    "parent": 31,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1229,8 +1286,8 @@
     "type": "collection"
   },
   {
-    "id": 31,
-    "parent": 30,
+    "id": 34,
+    "parent": 33,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1311,8 +1368,8 @@
     "type": "other"
   },
   {
-    "id": 32,
-    "parent": 31,
+    "id": 35,
+    "parent": 34,
     "range": {
       "endColumn": 21,
       "endRow": 3,
@@ -1344,8 +1401,8 @@
     "type": "pattern"
   },
   {
-    "id": 33,
-    "parent": 32,
+    "id": 36,
+    "parent": 35,
     "range": {
       "endColumn": 21,
       "endRow": 3,
@@ -1362,8 +1419,8 @@
     "type": "other"
   },
   {
-    "id": 34,
-    "parent": 31,
+    "id": 37,
+    "parent": 34,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1408,8 +1465,8 @@
     "type": "other"
   },
   {
-    "id": 35,
-    "parent": 34,
+    "id": 38,
+    "parent": 37,
     "range": {
       "endColumn": 22,
       "endRow": 3,
@@ -1426,8 +1483,8 @@
     "type": "other"
   },
   {
-    "id": 36,
-    "parent": 34,
+    "id": 39,
+    "parent": 37,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1471,8 +1528,8 @@
     "type": "type"
   },
   {
-    "id": 37,
-    "parent": 36,
+    "id": 40,
+    "parent": 39,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1489,8 +1546,8 @@
     "type": "other"
   },
   {
-    "id": 38,
-    "parent": 13,
+    "id": 41,
+    "parent": 16,
     "range": {
       "endColumn": 2,
       "endRow": 4,
@@ -1507,7 +1564,7 @@
     "type": "other"
   },
   {
-    "id": 39,
+    "id": 42,
     "parent": 0,
     "range": {
       "endColumn": 2,
