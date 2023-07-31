@@ -14,7 +14,10 @@ struct SyntaxParser {
       syntax = Syntax(sourceFile)
     }
 
-    let visitor = TokenVisitor(converter: SourceLocationConverter(file: "", tree: sourceFile))
+    let visitor = TokenVisitor(
+      locationConverter: SourceLocationConverter(file: "", tree: sourceFile),
+      showMissingTokens: options.contains("showmissing")
+    )
     _ = visitor.visit(syntax)
 
     let html = "\(visitor.list.joined())"

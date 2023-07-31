@@ -3,16 +3,18 @@ import Foundation
 
 final class TokenVisitor: SyntaxRewriter {
   var list = [String]()
-
   var tree = [TreeNode]()
-  var current: TreeNode!
 
-  var index = 0
+  private var current: TreeNode!
+  private var index = 0
 
-  let converter: SourceLocationConverter
+  private let locationConverter: SourceLocationConverter
+  private let showMissingTokens: Bool
 
-  init(converter: SourceLocationConverter) {
-    self.converter = converter
+  init(locationConverter: SourceLocationConverter, showMissingTokens: Bool) {
+    self.locationConverter = locationConverter
+    self.showMissingTokens = showMissingTokens
+    super.init(viewMode: showMissingTokens ? .all : .sourceAccurate)
   }
 
   override func visitPre(_ node: Syntax) {
@@ -35,7 +37,7 @@ final class TokenVisitor: SyntaxRewriter {
       type = "Syntax"
     }
 
-    let sourceRange = node.sourceRange(converter: converter)
+    let sourceRange = node.sourceRange(converter: locationConverter)
     let start = sourceRange.start
     let end = sourceRange.end
 
@@ -147,6 +149,9 @@ final class TokenVisitor: SyntaxRewriter {
       .htmlEscaped()
       .substituteInvisibles()
       .transformWhitespaces()
+    if token.presence == .missing {
+      current.class = "\(token.presence)"
+    }
     current.token = Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
 
     token.leadingTrivia.forEach { (piece) in
@@ -182,12 +187,12 @@ final class TokenVisitor: SyntaxRewriter {
       kind = "keyword"
     }
 
-    let sourceRange = token.sourceRange(converter: converter)
+    let sourceRange = token.sourceRange(converter: locationConverter)
     let start = sourceRange.start
     let end = sourceRange.end
-    let text = token.presence == .present ? token.text : ""
+    let text = token.presence == .present || showMissingTokens ? token.text : ""
     list.append(
-      "<span class='token \(kind.htmlEscaped())' " +
+      "<span class='token \(kind.htmlEscaped()) \(token.presence)' " +
       "data-title='\("\(token.trimmed)".htmlEscaped().displayInvisibles())' " +
       "data-content='\("\(token.tokenKind)".htmlEscaped().substituteInvisibles())' " +
       "data-type='Token' " +

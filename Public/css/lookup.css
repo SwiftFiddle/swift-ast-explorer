@@ -36,3 +36,7 @@
 .shebang {
   color: #5d6c79;
 }
+
+.token.missing {
+  color: #a3a3a3;
+}

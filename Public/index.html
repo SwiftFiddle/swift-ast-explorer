@@ -95,12 +95,14 @@
               <span class="fa-solid fa-cog fa-fw"></span>
             </button>
             <ul class="dropdown-menu">
-              <li>
-                <h6 class="dropdown-header">Options</h6>
-              </li>
-              <li class="options-item checkbox" data-value="fold">
+              <li class="options-item checkbox parser-options active-tick" data-value="fold">
                 <a class="dropdown-item" data-target="#">
                   Fold Sequence Expressions
+                </a>
+              </li>
+              <li class="options-item checkbox parser-options" data-value="showmissing">
+                <a class="dropdown-item" data-target="#">
+                  Show Missing Tokens
                 </a>
               </li>
             </ul>
@@ -127,17 +129,17 @@
               <li>
                 <h6 class="dropdown-header">Swift Syntax Version</h6>
               </li>
-              <li class="options-item radio active-tick" data-value="branch_stable" data-text="508.0.1">
+              <li class="options-item radio parser-version active-tick" data-value="branch_stable" data-text="508.0.1">
                 <a class="dropdown-item" data-target="#">
                   508.0.1 (Swift 5.8)
                 </a>
               </li>
-              <li class="options-item radio" data-value="branch_release-5.9" data-text="release/5.9">
+              <li class="options-item radio parser-version" data-value="branch_release-5.9" data-text="release/5.9">
                 <a class="dropdown-item" data-target="#">
                   release/5.9 branch
                 </a>
               </li>
-              <li class="options-item radio" data-value="branch_main" data-text="main">
+              <li class="options-item radio parser-version" data-value="branch_main" data-text="main">
                 <a class="dropdown-item" data-target="#">
                   main branch
                 </a>

@@ -62,6 +62,9 @@ export class TreeView {
       }
     } else {
       content.classList.add("token");
+      if (node.class) {
+        content.classList.add(node.class);
+      }
       content.innerHTML =
         node.text.length === 0 ? `<span class="badge">Empty</span>` : node.text;
       li.appendChild(content);

@@ -8,7 +8,7 @@ struct Main {
       let code = CommandLine.arguments[1]
       let options: [String]
       if arguments.count > 2 {
-        options = [CommandLine.arguments[2]]
+        options = Array(CommandLine.arguments.dropFirst(2))
       } else {
         options = []
       }

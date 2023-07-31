@@ -1,7 +1,7 @@
 import Foundation
 
 final class TreeNode: Codable {
-  var id: Int
+  let id: Int
   var parent: Int?
 
   var text: String
@@ -9,6 +9,7 @@ final class TreeNode: Codable {
   var structure = [StructureProperty]()
   var type: SyntaxType
   var token: Token?
+  var `class`: String?
 
   init(id: Int, text: String, range: Range, type: SyntaxType) {
     self.id = id
@@ -47,10 +48,10 @@ extension TreeNode: CustomStringConvertible {
 }
 
 struct Range: Codable, Equatable {
-  var startRow: Int
-  var startColumn: Int
-  var endRow: Int
-  var endColumn: Int
+  let startRow: Int
+  let startColumn: Int
+  let endRow: Int
+  let endColumn: Int
 }
 
 extension Range: CustomStringConvertible {
@@ -121,7 +122,7 @@ enum SyntaxType: String, Codable {
 }
 
 struct Token: Codable, Equatable {
-  var kind: String
+  let kind: String
   var leadingTrivia: String
   var trailingTrivia: String
 

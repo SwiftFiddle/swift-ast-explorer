@@ -108,8 +108,8 @@ export class App {
   update() {
     showLoading();
 
-    const branch = branchOption();
-    const options = configurations();
+    const branch = branchOptions();
+    const options = parserOptions();
 
     const code = this.editor.getValue();
     const json = {
@@ -267,23 +267,27 @@ export class App {
   }
 }
 
-function branchOption() {
+function branchOptions() {
   let branch = "branch_stable";
-  document.querySelectorAll(".options-item.radio").forEach((listItem) => {
-    if (listItem.classList.contains("active-tick")) {
-      branch = listItem.dataset.value;
-    }
-  });
+  document
+    .querySelectorAll(".options-item.radio.parser-version")
+    .forEach((listItem) => {
+      if (listItem.classList.contains("active-tick")) {
+        branch = listItem.dataset.value;
+      }
+    });
   return branch;
 }
 
-function configurations() {
+function parserOptions() {
   const options = [];
-  document.querySelectorAll(".options-item.checkbox").forEach((listItem) => {
-    if (listItem.classList.contains("active-tick")) {
-      options.push(listItem.dataset.value);
-    }
-  });
+  document
+    .querySelectorAll(".options-item.checkbox.checkbox")
+    .forEach((listItem) => {
+      if (listItem.classList.contains("active-tick")) {
+        options.push(listItem.dataset.value);
+      }
+    });
   return options;
 }
 
