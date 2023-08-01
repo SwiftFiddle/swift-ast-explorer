@@ -109,9 +109,7 @@ final class TokenVisitor: SyntaxRewriter {
                 StructureProperty(
                   name: name,
                   value: StructureValue(
-                    text: "\(value.text)"
-                      .replacingOccurrences(of: " ", with: "␣")
-                      .replacingOccurrences(of: "\n", with: "↲"),
+                    text: value.text,
                     kind: "\(value.tokenKind)"
                   )
                 )
