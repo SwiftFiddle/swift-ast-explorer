@@ -235,12 +235,36 @@
         </div>
         <div class="modal-body">
           <dl>
-            <dt class="bg-light rounded"><span class="fa-solid fa-code-branch fa-fw"></span><span class="mx-2">Swift
+            <dt class="bg-light rounded"><span class="fa-solid fa-code-branch fa-fw"></span><span class="mx-2">Default
+                Swift
                 Version</span></dt>
           </dl>
           <dd>
             <pre><code>#(swiftVersion)</code></pre>
           </dd>
+
+          <dl>
+            <dt class="bg-light rounded"><span class="fa-solid fa-cog fa-fw"></span><span class="mx-2">Parser
+                Options</span></dt>
+            <dd>
+              <dl>
+                <dt>Fold Sequence Expressions</dt>
+                <dd>Use <a
+                    href="https://github.com/apple/swift-syntax/blob/main/Sources/SwiftOperators/SwiftOperators.docc/SwiftOperators.md"
+                    target="_blank" rel="nofollow noopener noreferrer">SwiftOperators</a>
+                  to 'fold' the syntax tree and rebuild the tree structure according to operator
+                  precedence. This option is enabled by default.</dd>
+              </dl>
+            </dd>
+            <dd>
+              <dl>
+                <dt>Show Missing Tokens</dt>
+                <dd>The Swift parser often automatically inserts tokens that are not present in the source code to
+                  recover from syntax errors. This option makes the missing tokens automatically inserted by the parser
+                  visible.</dd>
+              </dl>
+            </dd>
+          </dl>
 
           <dl>
             <dt class="bg-light rounded"><span class="fa-regular fa-file-import fa-fw"></span><span
