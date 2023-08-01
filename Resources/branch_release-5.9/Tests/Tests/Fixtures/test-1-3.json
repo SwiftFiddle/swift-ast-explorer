@@ -12755,7 +12755,7 @@
         "name": "content",
         "value": {
           "kind": "stringSegment(&quot;suit&nbsp;is&nbsp;&quot;)",
-          "text": "suit␣is␣"
+          "text": "suit<span class='whitespace'>␣</span>is<span class='whitespace'>␣</span>"
         }
       },
       {
@@ -13623,7 +13623,7 @@
         "name": "content",
         "value": {
           "kind": "stringSegment(&quot;&nbsp;value&nbsp;is&nbsp;&quot;)",
-          "text": "␣value␣is␣"
+          "text": "<span class='whitespace'>␣</span>value<span class='whitespace'>␣</span>is<span class='whitespace'>␣</span>"
         }
       },
       {
@@ -15432,7 +15432,7 @@
         "name": "content",
         "value": {
           "kind": "stringSegment(&quot;&nbsp;or&nbsp;&quot;)",
-          "text": "␣or␣"
+          "text": "<span class='whitespace'>␣</span>or<span class='whitespace'>␣</span>"
         }
       },
       {

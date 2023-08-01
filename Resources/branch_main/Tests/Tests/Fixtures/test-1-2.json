@@ -1520,7 +1520,7 @@
         "name": "content",
         "value": {
           "kind": "stringSegment(&quot;It\\&apos;s&nbsp;very&nbsp;cold.&nbsp;Consider&nbsp;wearing&nbsp;a&nbsp;scarf.&quot;)",
-          "text": "It&apos;s␣very␣cold.␣Consider␣wearing␣a␣scarf."
+          "text": "It&apos;s<span class='whitespace'>␣</span>very<span class='whitespace'>␣</span>cold.<span class='whitespace'>␣</span>Consider<span class='whitespace'>␣</span>wearing<span class='whitespace'>␣</span>a<span class='whitespace'>␣</span>scarf."
         }
       },
       {
@@ -2588,7 +2588,7 @@
         "name": "content",
         "value": {
           "kind": "stringSegment(&quot;It\\&apos;s&nbsp;really&nbsp;warm.&nbsp;Don\\&apos;t&nbsp;forget&nbsp;to&nbsp;wear&nbsp;sunscreen.&quot;)",
-          "text": "It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen."
+          "text": "It&apos;s<span class='whitespace'>␣</span>really<span class='whitespace'>␣</span>warm.<span class='whitespace'>␣</span>Don&apos;t<span class='whitespace'>␣</span>forget<span class='whitespace'>␣</span>to<span class='whitespace'>␣</span>wear<span class='whitespace'>␣</span>sunscreen."
         }
       },
       {
@@ -3258,7 +3258,7 @@
         "name": "content",
         "value": {
           "kind": "stringSegment(&quot;It\\&apos;s&nbsp;not&nbsp;that&nbsp;cold.&nbsp;Wear&nbsp;a&nbsp;t-shirt.&quot;)",
-          "text": "It&apos;s␣not␣that␣cold.␣Wear␣a␣t-shirt."
+          "text": "It&apos;s<span class='whitespace'>␣</span>not<span class='whitespace'>␣</span>that<span class='whitespace'>␣</span>cold.<span class='whitespace'>␣</span>Wear<span class='whitespace'>␣</span>a<span class='whitespace'>␣</span>t-shirt."
         }
       },
       {

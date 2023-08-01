@@ -481,7 +481,7 @@ final class Tests: XCTestCase {
 }
 
 func write(_ text: String, filename: String) {
-  let directory: String? = "/Users/katsumi/Downloads/temp"
+  let directory: String? = nil
   if let directory {
     try! text.write(toFile: "\(directory)/\(filename)", atomically: true, encoding: .utf8)
   }
