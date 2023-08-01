@@ -94,12 +94,12 @@ final class TokenVisitor: SyntaxRewriter {
 
           switch syntaxNode[keyPath: keyPath] {
           case let value as TokenSyntax:
-            if let tokenView = value.raw.tokenView, tokenView.presence == .missing {
+            if value.presence == .missing {
               treeNode.structure.append(
                 StructureProperty(
                   name: name,
                   value: StructureValue(
-                    text: "MISSING",
+                    text: value.text,
                     kind: "\(value.tokenKind)"
                   )
                 )
