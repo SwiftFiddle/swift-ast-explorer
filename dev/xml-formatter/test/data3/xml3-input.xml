@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Some comments --><document version="1"><meta-data template="500764"><edition><property name="section" value="email"/></edition></meta-data><content><frag><p>Hi <data name="firstname"/></p><p><data name="firstname"/> welcome!</p></frag><frag><p>Greetings to:</p><p><data name="surname"/></p></frag></content></document>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mocha Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../node_modules/mocha/mocha.css" />
+</head>
+<body>
+<div id="mocha"></div>
+
+<script src="../../node_modules/chai/chai.js"></script>
+<script src="../../node_modules/mocha/mocha.js"></script>
+<script src="../../dist/browser/xml-formatter.js"></script>
+<script src="../../dist/browser/xml-formatter-singleton.js"></script>
+
+<script class="mocha-init">
+    mocha.setup('bdd');
+    mocha.checkLeaks();
+
+    describe('xml-formatter on browser', () => {
+
+        it('is available using require', () => {
+            const xmlFormat = require('xml-formatter');
+            chai.assert.strictEqual(xmlFormat('<p><b>content</b></p>', {lineSeparator: '\n', collapseContent: true}), '<p>\n    <b>content</b>\n</p>');
+        });
+
+        it('is available as a standalone function', () => {
+            chai.assert.strictEqual(xmlFormatter('<p><b>content</b></p>', {lineSeparator: '\n', collapseContent: true}), '<p>\n    <b>content</b>\n</p>');
+        });
+
+        it('has minify function available', () => {
+            chai.assert.strictEqual(xmlFormatter.minify('<p>\n    <b>content</b>\n</p>', {}), '<p><b>content</b></p>');
+        });
+
+    });
+
+    mocha.run();
+</script>
+</body>
+</html>
