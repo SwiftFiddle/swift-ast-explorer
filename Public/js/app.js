@@ -83,7 +83,6 @@ export class App {
       }
       if (response.output) {
         this.editor.setValue(response.output);
-        this.editor.clearSelection();
       }
     };
     const formatButton = document.getElementById("format-button");
@@ -170,7 +169,6 @@ export class App {
     };
     this.structureView.onmouseout = (event, target, data) => {
       this.balloon.hide();
-      this.editor.clearSelection();
     };
   }
 
