@@ -1,0 +1,17 @@
+<root>
+    <!-- test -->
+    <script language="JavaScript">
+        function log(msg) {
+            console.log(msg);
+        }
+    </script>
+    <head>
+        <param name="title" value="Test" />
+    </head>
+    <body>
+        <p xml:space="preserve">This is <b>some</b> <b>some2</b> <image>
+            /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKC
+            wsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFB
+            QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCACzAVsDASIAAhE</image></p>
+    </body>
+</root>

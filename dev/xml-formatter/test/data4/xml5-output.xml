@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Load the stylesheet -->
+<?xml-stylesheet href="foo.xsl" type="text/xsl"?>
+<!DOCTYPE name PUBLIC "-//Beginning XML//DTD Address Example//EN">
+<foo>
+    <![CDATA[some text]]>
+    content
+</foo>

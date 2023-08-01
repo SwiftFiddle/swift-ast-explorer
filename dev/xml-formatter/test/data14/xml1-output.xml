@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Page Title</title>
+        <script language="JavaScript">
+    function log(msg) {
+        console.log(msg);
+    }
+        </script>
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Vivamus <b>ullamcorper</b> cursus <i>ullamcorper</i>.</p>
+        <pre>
+echo Vivamus
+        </pre>
+    </body>
+</html>

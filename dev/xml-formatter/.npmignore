@@ -1,0 +1,7 @@
+*
+.github
+!package.json
+!LICENSE
+!README.md
+!dist/**/*
+!src/**/*

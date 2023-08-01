@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Load the stylesheet -->
+<?xml-stylesheet href="foo.xsl" type="text/xsl"?>
+<!DOCTYPE foo SYSTEM "foo.dtd">
+<foo>
+    <![CDATA[<b>some bold text</b>]]>
+    and
+    <bar>
+        some more
+    </bar>
+</foo>

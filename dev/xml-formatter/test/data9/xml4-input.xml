@@ -1,0 +1,10 @@
+<!-- test -->
+<root>
+    <frag>
+        <p xml:space="preserve">This is <b>some</b> <b>some2</b> content</p>
+        <p>
+            more content
+            <data/>
+        </p>
+    </frag>
+</root>
