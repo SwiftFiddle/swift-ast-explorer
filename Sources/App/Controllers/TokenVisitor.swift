@@ -98,9 +98,7 @@ final class TokenVisitor: SyntaxRewriter {
                 StructureProperty(
                   name: key,
                   value: StructureValue(
-                    text: "\(value.text)"
-                      .replacingOccurrences(of: " ", with: "␣")
-                      .replacingOccurrences(of: "\n", with: "↲"),
+                    text: value.text,
                     kind: "\(value.tokenKind)"
                   )
                 )
@@ -142,7 +140,7 @@ final class TokenVisitor: SyntaxRewriter {
       .text
       .escapeHTML()
       .replaceInvisiblesWithHTML()
-      .replaceHTMLWhitespacesToSymbols()
+      .replaceHTMLWhitespacesWithSymbols()
     if token.presence == .missing {
       current.class = token.presence.rawValue.lowercased()
     }
@@ -151,13 +149,13 @@ final class TokenVisitor: SyntaxRewriter {
     token.leadingTrivia.forEach { (piece) in
       let trivia = processTriviaPiece(piece)
       list.append(trivia)
-      current.token?.leadingTrivia += trivia.replaceHTMLWhitespacesToSymbols()
+      current.token?.leadingTrivia += trivia.replaceHTMLWhitespacesWithSymbols()
     }
     processToken(token)
     token.trailingTrivia.forEach { (piece) in
       let trivia = processTriviaPiece(piece)
       list.append(trivia)
-      current.token?.trailingTrivia += trivia.replaceHTMLWhitespacesToSymbols()
+      current.token?.trailingTrivia += trivia.replaceHTMLWhitespacesWithSymbols()
     }
 
     return token
@@ -266,9 +264,9 @@ private extension String {
       .replacingOccurrences(of: "\n", with: "↲")
   }
 
-  func replaceHTMLWhitespacesToSymbols() -> String {
+  func replaceHTMLWhitespacesWithSymbols() -> String {
     self
-      .replacingOccurrences(of: "&nbsp;", with: "␣")
-      .replacingOccurrences(of: "<br/>", with: "↲<br/>")
+      .replacingOccurrences(of: "&nbsp;", with: "<span class='whitespace'>␣</span>")
+      .replacingOccurrences(of: "<br/>", with: "<span class='newline'>↲</span><br/>")
   }
 }

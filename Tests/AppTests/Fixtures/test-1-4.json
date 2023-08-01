@@ -262,7 +262,7 @@
     "token": {
       "kind": "structKeyword",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -369,7 +369,7 @@
     "token": {
       "kind": "leftAngle",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -871,8 +871,8 @@
     "text": "let",
     "token": {
       "kind": "letKeyword",
-      "leadingTrivia": "↲<br/>␣␣",
-      "trailingTrivia": "␣"
+      "leadingTrivia": "<span class='newline'>↲</span><br/><span class='whitespace'>␣</span><span class='whitespace'>␣</span>",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -1095,7 +1095,7 @@
     "token": {
       "kind": "colon",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -1302,8 +1302,8 @@
     "text": "let",
     "token": {
       "kind": "letKeyword",
-      "leadingTrivia": "↲<br/>␣␣",
-      "trailingTrivia": "␣"
+      "leadingTrivia": "<span class='newline'>↲</span><br/><span class='whitespace'>␣</span><span class='whitespace'>␣</span>",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -1526,7 +1526,7 @@
     "token": {
       "kind": "colon",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -1606,7 +1606,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br/>",
+      "leadingTrivia": "<span class='newline'>↲</span><br/>",
       "trailingTrivia": ""
     },
     "type": "other"

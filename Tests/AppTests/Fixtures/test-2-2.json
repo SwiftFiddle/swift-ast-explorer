@@ -211,7 +211,7 @@
     "token": {
       "kind": "varKeyword",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -370,7 +370,7 @@
     "token": {
       "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -434,7 +434,7 @@
     "token": {
       "kind": "equal",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -644,8 +644,8 @@
     "text": "if",
     "token": {
       "kind": "ifKeyword",
-      "leadingTrivia": "↲<br/>↲<br/>",
-      "trailingTrivia": "␣"
+      "leadingTrivia": "<span class='newline'>↲</span><br/><span class='newline'>↲</span><br/>",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -838,7 +838,7 @@
     "token": {
       "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -889,7 +889,7 @@
     "token": {
       "kind": "spacedBinaryOperator(&quot;&lt;=&quot;)",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -940,7 +940,7 @@
     "token": {
       "kind": "integerLiteral(&quot;32&quot;)",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -1258,7 +1258,7 @@
     "text": "print",
     "token": {
       "kind": "identifier(&quot;print&quot;)",
-      "leadingTrivia": "↲<br/>␣␣",
+      "leadingTrivia": "<span class='newline'>↲</span><br/><span class='whitespace'>␣</span><span class='whitespace'>␣</span>",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -1523,7 +1523,7 @@
         "name": "content",
         "value": {
           "kind": "stringSegment(&quot;It\\&apos;s&nbsp;very&nbsp;cold.&nbsp;Consider&nbsp;wearing&nbsp;a&nbsp;scarf.&quot;)",
-          "text": "It&apos;s␣very␣cold.␣Consider␣wearing␣a␣scarf."
+          "text": "It&apos;s<span class='whitespace'>␣</span>very<span class='whitespace'>␣</span>cold.<span class='whitespace'>␣</span>Consider<span class='whitespace'>␣</span>wearing<span class='whitespace'>␣</span>a<span class='whitespace'>␣</span>scarf."
         }
       },
       {
@@ -1546,7 +1546,7 @@
       "startRow": 4
     },
     "structure": [],
-    "text": "It&apos;s␣very␣cold.␣Consider␣wearing␣a␣scarf.",
+    "text": "It&apos;s<span class='whitespace'>␣</span>very<span class='whitespace'>␣</span>cold.<span class='whitespace'>␣</span>Consider<span class='whitespace'>␣</span>wearing<span class='whitespace'>␣</span>a<span class='whitespace'>␣</span>scarf.",
     "token": {
       "kind": "stringSegment(&quot;It\\&apos;s&nbsp;very&nbsp;cold.&nbsp;Consider&nbsp;wearing&nbsp;a&nbsp;scarf.&quot;)",
       "leadingTrivia": "",
@@ -1603,8 +1603,8 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br/>",
-      "trailingTrivia": "␣"
+      "leadingTrivia": "<span class='newline'>↲</span><br/>",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -1622,7 +1622,7 @@
     "token": {
       "kind": "elseKeyword",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -1725,7 +1725,7 @@
     "token": {
       "kind": "ifKeyword",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -1918,7 +1918,7 @@
     "token": {
       "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -1969,7 +1969,7 @@
     "token": {
       "kind": "spacedBinaryOperator(&quot;&gt;=&quot;)",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -2020,7 +2020,7 @@
     "token": {
       "kind": "integerLiteral(&quot;86&quot;)",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -2338,7 +2338,7 @@
     "text": "print",
     "token": {
       "kind": "identifier(&quot;print&quot;)",
-      "leadingTrivia": "↲<br/>␣␣",
+      "leadingTrivia": "<span class='newline'>↲</span><br/><span class='whitespace'>␣</span><span class='whitespace'>␣</span>",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -2603,7 +2603,7 @@
         "name": "content",
         "value": {
           "kind": "stringSegment(&quot;It\\&apos;s&nbsp;really&nbsp;warm.&nbsp;Don\\&apos;t&nbsp;forget&nbsp;to&nbsp;wear&nbsp;sunscreen.&quot;)",
-          "text": "It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen."
+          "text": "It&apos;s<span class='whitespace'>␣</span>really<span class='whitespace'>␣</span>warm.<span class='whitespace'>␣</span>Don&apos;t<span class='whitespace'>␣</span>forget<span class='whitespace'>␣</span>to<span class='whitespace'>␣</span>wear<span class='whitespace'>␣</span>sunscreen."
         }
       },
       {
@@ -2626,7 +2626,7 @@
       "startRow": 6
     },
     "structure": [],
-    "text": "It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.",
+    "text": "It&apos;s<span class='whitespace'>␣</span>really<span class='whitespace'>␣</span>warm.<span class='whitespace'>␣</span>Don&apos;t<span class='whitespace'>␣</span>forget<span class='whitespace'>␣</span>to<span class='whitespace'>␣</span>wear<span class='whitespace'>␣</span>sunscreen.",
     "token": {
       "kind": "stringSegment(&quot;It\\&apos;s&nbsp;really&nbsp;warm.&nbsp;Don\\&apos;t&nbsp;forget&nbsp;to&nbsp;wear&nbsp;sunscreen.&quot;)",
       "leadingTrivia": "",
@@ -2683,8 +2683,8 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br/>",
-      "trailingTrivia": "␣"
+      "leadingTrivia": "<span class='newline'>↲</span><br/>",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -2702,7 +2702,7 @@
     "token": {
       "kind": "elseKeyword",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -3020,7 +3020,7 @@
     "text": "print",
     "token": {
       "kind": "identifier(&quot;print&quot;)",
-      "leadingTrivia": "↲<br/>␣␣",
+      "leadingTrivia": "<span class='newline'>↲</span><br/><span class='whitespace'>␣</span><span class='whitespace'>␣</span>",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -3285,7 +3285,7 @@
         "name": "content",
         "value": {
           "kind": "stringSegment(&quot;It\\&apos;s&nbsp;not&nbsp;that&nbsp;cold.&nbsp;Wear&nbsp;a&nbsp;t-shirt.&quot;)",
-          "text": "It&apos;s␣not␣that␣cold.␣Wear␣a␣t-shirt."
+          "text": "It&apos;s<span class='whitespace'>␣</span>not<span class='whitespace'>␣</span>that<span class='whitespace'>␣</span>cold.<span class='whitespace'>␣</span>Wear<span class='whitespace'>␣</span>a<span class='whitespace'>␣</span>t-shirt."
         }
       },
       {
@@ -3308,7 +3308,7 @@
       "startRow": 8
     },
     "structure": [],
-    "text": "It&apos;s␣not␣that␣cold.␣Wear␣a␣t-shirt.",
+    "text": "It&apos;s<span class='whitespace'>␣</span>not<span class='whitespace'>␣</span>that<span class='whitespace'>␣</span>cold.<span class='whitespace'>␣</span>Wear<span class='whitespace'>␣</span>a<span class='whitespace'>␣</span>t-shirt.",
     "token": {
       "kind": "stringSegment(&quot;It\\&apos;s&nbsp;not&nbsp;that&nbsp;cold.&nbsp;Wear&nbsp;a&nbsp;t-shirt.&quot;)",
       "leadingTrivia": "",
@@ -3365,7 +3365,7 @@
     "text": "}",
     "token": {
       "kind": "rightBrace",
-      "leadingTrivia": "↲<br/>",
+      "leadingTrivia": "<span class='newline'>↲</span><br/>",
       "trailingTrivia": ""
     },
     "type": "other"
@@ -3383,7 +3383,7 @@
     "text": "",
     "token": {
       "kind": "eof",
-      "leadingTrivia": "↲<br/>↲<br/><span class='lineComment' data-title='//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;' data-content='lineComment' data-type='Trivia'>//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;</span>",
+      "leadingTrivia": "<span class='newline'>↲</span><br/><span class='newline'>↲</span><br/><span class='lineComment' data-title='//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;' data-content='lineComment' data-type='Trivia'>//<span class='whitespace'>␣</span>Prints<span class='whitespace'>␣</span>&quot;It&apos;s<span class='whitespace'>␣</span>really<span class='whitespace'>␣</span>warm.<span class='whitespace'>␣</span>Don&apos;t<span class='whitespace'>␣</span>forget<span class='whitespace'>␣</span>to<span class='whitespace'>␣</span>wear<span class='whitespace'>␣</span>sunscreen.&quot;</span>",
       "trailingTrivia": ""
     },
     "type": "other"

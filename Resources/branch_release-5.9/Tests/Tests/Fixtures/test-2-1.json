@@ -199,7 +199,7 @@
     "token": {
       "kind": "keyword(SwiftSyntax.Keyword.let)",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -358,7 +358,7 @@
     "token": {
       "kind": "identifier(&quot;number&quot;)",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
@@ -422,7 +422,7 @@
     "token": {
       "kind": "equal",
       "leadingTrivia": "",
-      "trailingTrivia": "␣"
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
     },
     "type": "other"
   },
