@@ -103,7 +103,7 @@
         "name": "semicolon",
         "value": {
           "kind": "semicolon",
-          "text": "MISSING"
+          "text": ";"
         }
       },
       {
@@ -330,7 +330,7 @@
         "name": "rightAngleBracket",
         "value": {
           "kind": "rightAngle",
-          "text": "MISSING"
+          "text": "&gt;"
         }
       },
       {
@@ -452,7 +452,7 @@
         "name": "rightBrace",
         "value": {
           "kind": "rightBrace",
-          "text": "MISSING"
+          "text": "}"
         }
       },
       {
