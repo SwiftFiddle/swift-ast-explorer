@@ -27,12 +27,15 @@ final class TokenVisitor: SyntaxRewriter {
       className = "\(syntaxNodeType)"
     }
 
+    let title: String
     let content: String
     let type: String
     if let tokenSyntax = node.as(TokenSyntax.self) {
+      title = tokenSyntax.text
       content = "\(tokenSyntax.tokenKind)"
       type = "Token"
     } else {
+      title = "\(node.trimmed)"
       content = "\(syntaxNodeType)"
       type = "Syntax"
     }
@@ -43,7 +46,7 @@ final class TokenVisitor: SyntaxRewriter {
 
     list.append(
       "<span class='\(className)' " +
-      "data-title='\("\(node.trimmed)".escapeHTML().replaceInvisiblesWithSymbols())' " +
+      "data-title='\(title.escapeHTML().replaceInvisiblesWithSymbols())' " +
       "data-content='\(content.escapeHTML().replaceInvisiblesWithHTML())' " +
       "data-type='\(type.escapeHTML())' " +
       #"data-range='{"startRow":\#(start.line),"startColumn":\#(start.column),"endRow":\#(end.line),"endColumn":\#(end.column)}'>"#
@@ -191,7 +194,7 @@ final class TokenVisitor: SyntaxRewriter {
     let text = token.presence == .present || showMissingTokens ? token.text : ""
     list.append(
       "<span class='token \(kind.escapeHTML()) \(token.presence)' " +
-      "data-title='\("\(token.trimmed)".escapeHTML().replaceInvisiblesWithSymbols())' " +
+      "data-title='\(token.text.escapeHTML().replaceInvisiblesWithSymbols())' " +
       "data-content='\("\(token.tokenKind)".escapeHTML().replaceInvisiblesWithHTML())' " +
       "data-type='Token' " +
       #"data-range='{"startRow":\#(start.line),"startColumn":\#(start.column),"endRow":\#(end.line),"endColumn":\#(end.column)}'>"# +
