@@ -76,11 +76,19 @@
 }
 
 .popover-content .badge.annotation {
-  width: 48px;
+  width: 56px;
   text-align: end;
   font-size: 0.8rem;
   margin: 0 8px 0 0;
   padding: 0;
   color: #696969;
   background-color: transparent;
+}
+
+.popover-content .whitespace {
+  color: #cccccc;
+}
+
+.popover-content .newline {
+  color: #cccccc;
 }

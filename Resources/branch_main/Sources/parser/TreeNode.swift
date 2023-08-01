@@ -96,7 +96,7 @@ struct StructureValue: Codable, Equatable {
   let kind: String?
 
   init(text: String, kind: String? = nil) {
-    self.text = text.escapeHTML()
+    self.text = text.escapeHTML().replaceHTMLWhitespacesToSymbols()
     self.kind = kind?.escapeHTML()
   }
 }
@@ -161,5 +161,11 @@ private extension String {
     return string
       .replacingOccurrences(of: " ", with: "&nbsp;")
       .replacingOccurrences(of: "\n", with: "<br>")
+  }
+
+  func replaceHTMLWhitespacesToSymbols() -> String {
+    self
+      .replacingOccurrences(of: "&nbsp;", with: "<span class='whitespace'>␣</span>")
+      .replacingOccurrences(of: "<br>", with: "<span class='newline'>↲</span>")
   }
 }

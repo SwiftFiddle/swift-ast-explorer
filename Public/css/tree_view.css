@@ -83,6 +83,14 @@
   cursor: auto;
 }
 
+.tree-view .token .whitespace {
+  color: #cccccc;
+}
+
+.tree-view .token .newline {
+  color: #cccccc;
+}
+
 .tree-view .token .badge {
   color: #696969;
   background-color: #dcdcdc;
