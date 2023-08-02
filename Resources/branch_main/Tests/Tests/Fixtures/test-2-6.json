@@ -364,9 +364,9 @@
       },
       {
         "name": "rightOperand",
-        "ref": "IdentifierExprSyntax",
+        "ref": "DeclReferenceExprSyntax",
         "value": {
-          "text": "IdentifierExprSyntax"
+          "text": "DeclReferenceExprSyntax"
         }
       },
       {
@@ -397,9 +397,9 @@
       },
       {
         "name": "leftOperand",
-        "ref": "IdentifierExprSyntax",
+        "ref": "DeclReferenceExprSyntax",
         "value": {
-          "text": "IdentifierExprSyntax"
+          "text": "DeclReferenceExprSyntax"
         }
       },
       {
@@ -423,9 +423,9 @@
       },
       {
         "name": "rightOperand",
-        "ref": "IdentifierExprSyntax",
+        "ref": "DeclReferenceExprSyntax",
         "value": {
-          "text": "IdentifierExprSyntax"
+          "text": "DeclReferenceExprSyntax"
         }
       },
       {
@@ -449,38 +449,38 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeBaseName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "baseName",
         "value": {
           "kind": "identifier(&quot;a&quot;)",
           "text": "a"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndDeclNameArguments",
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "declNameArguments",
+        "name": "argumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterDeclNameArguments",
+        "name": "unexpectedAfterArgumentNames",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "IdentifierExpr",
+    "text": "DeclReferenceExpr",
     "type": "expr"
   },
   {
@@ -563,38 +563,38 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeBaseName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "baseName",
         "value": {
           "kind": "identifier(&quot;b&quot;)",
           "text": "b"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndDeclNameArguments",
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "declNameArguments",
+        "name": "argumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterDeclNameArguments",
+        "name": "unexpectedAfterArgumentNames",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "IdentifierExpr",
+    "text": "DeclReferenceExpr",
     "type": "expr"
   },
   {
@@ -677,38 +677,38 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeBaseName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "baseName",
         "value": {
           "kind": "identifier(&quot;c&quot;)",
           "text": "c"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndDeclNameArguments",
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "declNameArguments",
+        "name": "argumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterDeclNameArguments",
+        "name": "unexpectedAfterArgumentNames",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "IdentifierExpr",
+    "text": "DeclReferenceExpr",
     "type": "expr"
   },
   {
