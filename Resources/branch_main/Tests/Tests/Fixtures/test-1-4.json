@@ -915,19 +915,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessors",
+        "name": "unexpectedBetweenInitializerAndAccessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessors",
+        "name": "accessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorsAndTrailingComma",
+        "name": "unexpectedBetweenAccessorBlockAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -1334,19 +1334,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessors",
+        "name": "unexpectedBetweenInitializerAndAccessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessors",
+        "name": "accessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorsAndTrailingComma",
+        "name": "unexpectedBetweenAccessorBlockAndTrailingComma",
         "value": {
           "text": "nil"
         }
