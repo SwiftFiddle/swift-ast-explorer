@@ -21,6 +21,16 @@ jobs:
           (cd Resources/parsers/50800 && swift test)
           (cd Resources/parsers/50900 && swift test)
           (cd Resources/parsers/trunk && swift test)
+
+          (cd Resources/parsers/50800 && swift build -c release -Xswiftc -static-executable)
+          (cd Resources/parsers/50900 && swift build -c release -Xswiftc -static-executable)
+          (cd Resources/parsers/trunk && swift build -c release -Xswiftc -static-executable)
+
+          git add Resources/parsers/50800/.build/release/parser
+          git add Resources/parsers/50900/.build/release/parser
+          git add Resources/parsers/trunk/.build/release/parser
+          git commit -m "Update parsers"
+          git push -u origin HEAD
       - name: Build
         run: |
           set -ex
