@@ -21,6 +21,9 @@ jobs:
           (cd Resources/parsers/50800 && swift test)
           (cd Resources/parsers/50900 && swift test)
           (cd Resources/parsers/trunk && swift test)
+      - name: Build
+        run: |
+          set -ex
 
           (cd Resources/parsers/50800 && swift build -c release -Xswiftc -static-executable)
           (cd Resources/parsers/50900 && swift build -c release -Xswiftc -static-executable)
@@ -35,7 +38,4 @@ jobs:
             git push origin HEAD:${GITHUB_REF}; \
           fi
 
-      - name: Build
-        run: |
-          set -ex
           docker build --rm --no-cache --build-arg FONTAWESOME_TOKEN=${{ env.FONTAWESOME_TOKEN }} .
