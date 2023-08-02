@@ -302,5 +302,5 @@ function hideLoading() {
 }
 
 function formatRange(range) {
-  return `${range.startRow}:${range.startColumn} - ${range.endRow}:${range.endColumn}`;
+  return `${range.startRow}:${range.startColumn} ... ${range.endRow}:${range.endColumn}`;
 }

@@ -110,8 +110,7 @@ function makeTokenPopoverContent(data) {
 
 function makeSourceRangePopoverContent(data, list) {
   const range = data.range;
-  // prettier-ignore
-  const details = `Ln ${range.startRow}, Col ${range.startColumn} - Ln ${range.endRow}, Col ${range.endColumn}`;
+  const details = `${range.startRow}:${range.startColumn} ... ${range.endRow}:${range.endColumn}`;
   makeDescriptionList("Source Range", details, list);
 }
 

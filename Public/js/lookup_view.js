@@ -77,7 +77,7 @@ export class LookupView {
               const content = escapeHTML(item.content);
               if (item.range) {
                 const range = JSON.parse(item.range);
-                const sourceRange = `${range.startRow}:${range.startColumn} - ${range.endRow}:${range.endColumn}`;
+                const sourceRange = `${range.startRow}:${range.startColumn} ... ${range.endRow}:${range.endColumn}`;
                 return `<dt class="text-truncate" style="max-width: calc(40vw - 20px);">
   <span class="badge annotation" style="width: auto; text-align: start;">Text</span><span class="font-monospace">${title}</span>
 </dt>
