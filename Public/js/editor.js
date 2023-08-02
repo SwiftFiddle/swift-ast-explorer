@@ -54,7 +54,7 @@ export class Editor {
     this.editor.setSelection(
       { ch: range.startColumn - 1, line: range.startRow - 1 },
       { ch: range.endColumn - 1, line: range.endRow - 1 },
-      { scroll: true }
+      { scroll: false }
     );
   }
 
