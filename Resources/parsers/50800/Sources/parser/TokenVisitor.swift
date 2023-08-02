@@ -1,5 +1,5 @@
 import Foundation
-@_spi(RawSyntax) import SwiftSyntax
+import SwiftSyntax
 
 final class TokenVisitor: SyntaxRewriter {
   var list = [String]()
@@ -14,10 +14,13 @@ final class TokenVisitor: SyntaxRewriter {
   init(locationConverter: SourceLocationConverter, showMissingTokens: Bool) {
     self.locationConverter = locationConverter
     self.showMissingTokens = showMissingTokens
-    super.init(viewMode: showMissingTokens ? .all : .sourceAccurate)
   }
 
   override func visitPre(_ node: Syntax) {
+    if let token = node.as(TokenSyntax.self), token.presence == .missing, !showMissingTokens {
+      return
+    }
+
     let syntaxNodeType = node.syntaxNodeType
 
     let className: String
@@ -30,12 +33,12 @@ final class TokenVisitor: SyntaxRewriter {
     let title: String
     let content: String
     let type: String
-    if let tokenSyntax = node.as(TokenSyntax.self) {
-      title = tokenSyntax.text
-      content = "\(tokenSyntax.tokenKind)"
+    if let token = node.as(TokenSyntax.self) {
+      title = sourceAccurateText(token)
+      content = "\(token.tokenKind)"
       type = "Token"
     } else {
-      title = "\(node.trimmed)"
+      title = sourceAccurateText(node)
       content = "\(syntaxNodeType)"
       type = "Syntax"
     }
@@ -43,13 +46,17 @@ final class TokenVisitor: SyntaxRewriter {
     let sourceRange = node.sourceRange(converter: locationConverter)
     let start = sourceRange.start
     let end = sourceRange.end
+    let startRow = start.line ?? 1
+    let startColumn = start.column ?? 1
+    let endRow = end.line ?? 1
+    let endColumn = end.column ?? 1
 
     list.append(
       "<span class='\(className)' " +
       "data-title='\(title.escapeHTML().replaceInvisiblesWithSymbols())' " +
       "data-content='\(content.escapeHTML().replaceInvisiblesWithHTML())' " +
       "data-type='\(type.escapeHTML())' " +
-      #"data-range='{"startRow":\#(start.line),"startColumn":\#(start.column),"endRow":\#(end.line),"endColumn":\#(end.column)}'>"#
+      #"data-range='{"startRow":\#(startRow),"startColumn":\#(startColumn),"endRow":\#(endRow),"endColumn":\#(endColumn)}'>"#
     )
 
     let syntaxType: SyntaxType
@@ -70,10 +77,10 @@ final class TokenVisitor: SyntaxRewriter {
       id: index,
       text: className,
       range: Range(
-        startRow: start.line,
-        startColumn: start.column,
-        endRow: end.line,
-        endColumn: end.column
+        startRow: startRow,
+        startColumn: startColumn,
+        endRow: endRow,
+        endColumn: endColumn
       ),
       type: syntaxType
     )
@@ -81,51 +88,34 @@ final class TokenVisitor: SyntaxRewriter {
     tree.append(treeNode)
     index += 1
 
-    let allChildren = node.children(viewMode: .all)
-
     switch node.syntaxNodeType.structure {
     case .layout(let keyPaths):
       if let syntaxNode = node.as(node.syntaxNodeType) {
-        for keyPath in keyPaths {
-          guard let name = childName(keyPath) else {
-            continue
-          }
-          guard allChildren.contains(where: { (child) in child.keyPathInParent == keyPath }) else {
-            treeNode.structure.append(StructureProperty(name: name, value: StructureValue(text: "nil")))
-            continue
-          }
-
-          switch syntaxNode[keyPath: keyPath] {
-          case let value as TokenSyntax:
-            if value.presence == .missing {
+        for (index, keyPath) in keyPaths.enumerated() {
+          let mirror = Mirror(reflecting: syntaxNode)
+          if let label = mirror.children.map({ $0 })[index].label {
+            let key = label
+            switch syntaxNode[keyPath: keyPath] {
+            case let value as TokenSyntax:
               treeNode.structure.append(
                 StructureProperty(
-                  name: name,
+                  name: key,
                   value: StructureValue(
                     text: value.text,
                     kind: "\(value.tokenKind)"
                   )
                 )
               )
-            } else {
-              treeNode.structure.append(
-                StructureProperty(
-                  name: name,
-                  value: StructureValue(
-                    text: value.text,
-                    kind: "\(value.tokenKind)"
-                  )
-                )
-              )            }
-          case let value?:
-            if let value = value as? SyntaxProtocol {
-              let type = "\(value.syntaxNodeType)"
-              treeNode.structure.append(StructureProperty(name: name, value: StructureValue(text: "\(type)"), ref: "\(type)"))
-            } else {
-              treeNode.structure.append(StructureProperty(name: name, value: StructureValue(text: "\(value)")))
+            case let value?:
+              if let value = value as? SyntaxProtocol {
+                let type = "\(value.syntaxNodeType)"
+                treeNode.structure.append(StructureProperty(name: key, value: StructureValue(text: "\(type)"), ref: "\(type)"))
+              } else {
+                treeNode.structure.append(StructureProperty(name: key, value: StructureValue(text: "\(value)")))
+              }
+            case .none:
+              treeNode.structure.append(StructureProperty(name: key))
             }
-          case .none:
-            treeNode.structure.append(StructureProperty(name: name))
           }
         }
       }
@@ -145,13 +135,17 @@ final class TokenVisitor: SyntaxRewriter {
   }
 
   override func visit(_ token: TokenSyntax) -> TokenSyntax {
-    current.text = token
-      .text
+    if token.presence == .missing && !showMissingTokens {
+      return token
+    }
+
+    let text = sourceAccurateText(token)
+    current.text = text
       .escapeHTML()
       .replaceInvisiblesWithHTML()
       .replaceHTMLWhitespacesWithSymbols()
     if token.presence == .missing {
-      current.class = "\(token.presence)"
+      current.class = token.presence.rawValue.lowercased()
     }
     current.token = Token(kind: "\(token.tokenKind)", leadingTrivia: "", trailingTrivia: "")
 
@@ -171,6 +165,10 @@ final class TokenVisitor: SyntaxRewriter {
   }
 
   override func visitPost(_ node: Syntax) {
+    if let token = node.as(TokenSyntax.self), token.presence == .missing, !showMissingTokens {
+      return
+    }
+
     list.append("</span>")
     if let parent = current.parent {
       current = tree[parent]
@@ -191,13 +189,28 @@ final class TokenVisitor: SyntaxRewriter {
     let sourceRange = token.sourceRange(converter: locationConverter)
     let start = sourceRange.start
     let end = sourceRange.end
-    let text = token.presence == .present || showMissingTokens ? token.text : ""
+    let startRow = start.line ?? 1
+    let startColumn = start.column ?? 1
+    let endRow = end.line ?? 1
+    let endColumn = end.column ?? 1
+    let text: String
+    switch token.presence {
+    case .present:
+      text = sourceAccurateText(token)
+    case .missing:
+      if showMissingTokens {
+        text = sourceAccurateText(token)
+      } else {
+        text = ""
+      }
+    }
+
     list.append(
-      "<span class='token \(kind.escapeHTML()) \(token.presence)' " +
+      "<span class='token \(kind.escapeHTML()) \(token.presence.rawValue.lowercased())' " +
       "data-title='\(token.text.escapeHTML().replaceInvisiblesWithSymbols())' " +
       "data-content='\("\(token.tokenKind)".escapeHTML().replaceInvisiblesWithHTML())' " +
       "data-type='Token' " +
-      #"data-range='{"startRow":\#(start.line),"startColumn":\#(start.column),"endRow":\#(end.line),"endColumn":\#(end.column)}'>"# +
+      #"data-range='{"startRow":\#(startRow),"startColumn":\#(startColumn),"endRow":\#(endRow),"endColumn":\#(endColumn)}'>"# +
       "\(text.escapeHTML().replaceInvisiblesWithHTML())</span>"
     )
   }
@@ -232,12 +245,28 @@ final class TokenVisitor: SyntaxRewriter {
       trivia += wrapWithSpanTag(class: "unexpectedText", text: text)
     case .shebang(let text):
       trivia += wrapWithSpanTag(class: "shebang", text: text)
-    case .backslashes(let count):
-      trivia += String(repeating: #"\"#, count: count)
-    case .pounds(let count):
-      trivia += String(repeating: "#", count: count)
     }
     return trivia
+  }
+}
+
+private func sourceAccurateText(_ syntax: Syntax) -> String {
+  let text = "\(syntax.withoutTrivia())"
+  let utf8Length = syntax.contentLength.utf8Length
+  if text.utf8.count == utf8Length {
+    return text
+  } else {
+    return String(decoding: syntax.syntaxTextBytes.prefix(utf8Length), as: UTF8.self)
+  }
+}
+
+private func sourceAccurateText(_ token: TokenSyntax) -> String {
+  let text = token.text
+  let utf8Length = token.contentLength.utf8Length
+  if text.utf8.count == utf8Length {
+    return text
+  } else {
+    return String(decoding: token.syntaxTextBytes.prefix(utf8Length), as: UTF8.self)
   }
 }
 
