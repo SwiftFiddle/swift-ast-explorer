@@ -21,8 +21,8 @@ jobs:
           set -ex
           export TOOLCHAINS=swift
           swift package update --package-path ./
-          swift package update --package-path Resources/50900
-          swift package update --package-path Resources/trunk
+          swift package update --package-path Resources/parsers/50900
+          swift package update --package-path Resources/parsers/trunk
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v5

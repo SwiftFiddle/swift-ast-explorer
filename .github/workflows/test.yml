@@ -16,8 +16,8 @@ jobs:
         run: |
           set -ex
           swift test
-          (cd Resources/50900 && swift test)
-          (cd Resources/trunk && swift test)
+          (cd Resources/parsers/50900 && swift test)
+          (cd Resources/parsers/trunk && swift test)
       - name: Build
         run: |
           set -ex
