@@ -32,8 +32,6 @@ jobs:
         run: |
           set -ex
 
-          cd ./Playground
-
           IMAGE_TAG=kishikawakatsumi/swift-ast-explorer.com:latest
 
           docker build --rm --no-cache --build-arg FONTAWESOME_TOKEN=${{ env.FONTAWESOME_TOKEN }} --tag ${IMAGE_TAG} .
