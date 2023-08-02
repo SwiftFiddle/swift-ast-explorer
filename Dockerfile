@@ -27,8 +27,9 @@ RUN swift package resolve
 COPY . .
 RUN swift build -c release --static-swift-stdlib
 
-RUN cd Resources/branch_release-5.9 && swift build -c debug --static-swift-stdlib
-RUN cd Resources/branch_main && swift build -c debug --static-swift-stdlib
+RUN cd Resources/parsers/50800 && swift build -c release --static-swift-stdlib
+RUN cd Resources/parsers/50900 && swift build -c release --static-swift-stdlib
+RUN cd Resources/parsers/trunk && swift build -c release --static-swift-stdlib
 
 WORKDIR /staging
 
