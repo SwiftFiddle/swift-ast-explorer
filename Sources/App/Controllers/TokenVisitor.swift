@@ -33,12 +33,12 @@ final class TokenVisitor: SyntaxRewriter {
     let title: String
     let content: String
     let type: String
-    if let tokenSyntax = node.as(TokenSyntax.self) {
-      title = tokenSyntax.text
-      content = "\(tokenSyntax.tokenKind)"
+    if let token = node.as(TokenSyntax.self) {
+      title = sourceAccurateText(token)
+      content = "\(token.tokenKind)"
       type = "Token"
     } else {
-      title = "\(node.withoutTrivia())"
+      title = sourceAccurateText(node)
       content = "\(syntaxNodeType)"
       type = "Syntax"
     }
@@ -139,8 +139,8 @@ final class TokenVisitor: SyntaxRewriter {
       return token
     }
 
-    current.text = token
-      .text
+    let text = sourceAccurateText(token)
+    current.text = text
       .escapeHTML()
       .replaceInvisiblesWithHTML()
       .replaceHTMLWhitespacesWithSymbols()
@@ -193,7 +193,18 @@ final class TokenVisitor: SyntaxRewriter {
     let startColumn = start.column ?? 1
     let endRow = end.line ?? 1
     let endColumn = end.column ?? 1
-    let text = token.presence == .present || showMissingTokens ? token.text : ""
+    let text: String
+    switch token.presence {
+    case .present:
+      text = sourceAccurateText(token)
+    case .missing:
+      if showMissingTokens {
+        text = sourceAccurateText(token)
+      } else {
+        text = ""
+      }
+    }
+
     list.append(
       "<span class='token \(kind.escapeHTML()) \(token.presence.rawValue.lowercased())' " +
       "data-title='\(token.text.escapeHTML().replaceInvisiblesWithSymbols())' " +
@@ -236,6 +247,26 @@ final class TokenVisitor: SyntaxRewriter {
       trivia += wrapWithSpanTag(class: "shebang", text: text)
     }
     return trivia
+  }
+}
+
+private func sourceAccurateText(_ syntax: Syntax) -> String {
+  let text = "\(syntax.withoutTrivia())"
+  let utf8Length = syntax.contentLength.utf8Length
+  if text.utf8.count == utf8Length {
+    return text
+  } else {
+    return String(decoding: syntax.syntaxTextBytes.prefix(utf8Length), as: UTF8.self)
+  }
+}
+
+private func sourceAccurateText(_ token: TokenSyntax) -> String {
+  let text = token.text
+  let utf8Length = token.contentLength.utf8Length
+  if text.utf8.count == utf8Length {
+    return text
+  } else {
+    return String(decoding: token.syntaxTextBytes.prefix(utf8Length), as: UTF8.self)
   }
 }
 
