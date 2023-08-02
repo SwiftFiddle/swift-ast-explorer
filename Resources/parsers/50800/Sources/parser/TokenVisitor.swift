@@ -84,7 +84,7 @@ final class TokenVisitor: SyntaxRewriter {
       ),
       type: syntaxType
     )
-    
+
     tree.append(treeNode)
     index += 1
 
