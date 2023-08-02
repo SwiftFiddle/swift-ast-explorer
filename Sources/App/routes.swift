@@ -10,7 +10,7 @@ func routes(_ app: Application) throws {
     try await req.view.render(
       "index", [
         "title": "Swift AST Explorer",
-        "defaultSampleCode": defaultSampleCode,
+        "code": sampleCode,
         "swiftVersion": swiftVersion,
       ]
     )
@@ -41,7 +41,7 @@ func routes(_ app: Application) throws {
     return try await req.view.render(
       "index", [
         "title": "Swift AST Explorer",
-        "defaultSampleCode": content,
+        "code": content,
         "swiftVersion": swiftVersion,
       ]
     )
@@ -49,25 +49,27 @@ func routes(_ app: Application) throws {
 
   app.on(.POST, "update", body: .collect(maxSize: "10mb")) { (req) -> SyntaxResponse in
     let parameter = try req.content.decode(RequestParameter.self)
-    let options = parameter.options ?? []
-    if let branch = parameter.branch, branch != "branch_stable" {
-      let response = try await experimentalParser(branch: branch, arguments: [parameter.code] + options)
-      return try JSONDecoder().decode(SyntaxResponse.self, from: Data(response.stdout.utf8))
-    } else {
-      return try SyntaxParser.parse(code: parameter.code, options: options)
-    }
+    let response = try await parserCommand(
+      branch: parameter.branch ?? "50800",
+      code: parameter.code,
+      arguments: parameter.options ?? []
+    )
+    return try JSONDecoder().decode(SyntaxResponse.self, from: Data(response.stdout.utf8))
   }
 
-  func experimentalParser(branch: String, arguments: [String]) async throws -> (stdout: String, stderr: String) {
+  func parserCommand(branch: String, code: String, arguments: [String]) async throws -> (stdout: String, stderr: String) {
     let process = TSCBasic.Process(
       arguments: ["parser"] + arguments,
       environment: [
         "NSUnbufferedIO": "YES",
       ],
-      workingDirectory: try! AbsolutePath.init(validating: "\(app.directory.resourcesDirectory)\(branch)/.build/debug/")
+      workingDirectory: try! AbsolutePath.init(validating: "\(app.directory.resourcesDirectory)parsers/\(branch)/.build/release/")
     )
 
-    try process.launch()
+    let stdin = try process.launch()
+    stdin.write(code)
+    stdin.flush()
+
     let processResult = try await process.waitUntilExit()
 
     let stdout = try processResult.utf8Output()
@@ -85,7 +87,7 @@ private struct RequestParameter: Decodable {
   let branch: String?
 }
 
-private let defaultSampleCode = #"""
+private let sampleCode = #"""
 import Foundation
 
 struct BlackjackCard {
