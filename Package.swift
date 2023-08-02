@@ -7,21 +7,17 @@ let package = Package(
     .macOS(.v13)
   ],
   dependencies: [
-    .package(url: "https://github.com/apple/swift-syntax", from: "508.0.1"),
-    .package(url: "https://github.com/apple/swift-tools-support-core", from: "0.5.2"),
     .package(url: "https://github.com/vapor/vapor.git", from: "4.78.0"),
     .package(url: "https://github.com/vapor/leaf.git", from: "4.2.4"),
+    .package(url: "https://github.com/apple/swift-tools-support-core", from: "0.5.2"),
   ],
   targets: [
     .executableTarget(
       name: "App",
       dependencies: [
-        .product(name: "SwiftSyntax", package: "swift-syntax"),
-        .product(name: "SwiftOperators", package: "swift-syntax"),
-        .product(name: "SwiftParser", package: "swift-syntax"),
-        .product(name: "TSCBasic", package: "swift-tools-support-core"),
         .product(name: "Vapor", package: "vapor"),
         .product(name: "Leaf", package: "leaf"),
+        .product(name: "TSCBasic", package: "swift-tools-support-core"),
       ],
       swiftSettings: [
         .unsafeFlags(["-cross-module-optimization"], .when(configuration: .release))
@@ -32,8 +28,7 @@ let package = Package(
       dependencies: [
         .target(name: "App"),
         .product(name: "XCTVapor", package: "vapor"),
-      ],
-      resources: [.process("Fixtures")]
+      ]
     )
   ]
 )

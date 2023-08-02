@@ -13,7 +13,7 @@ COPY Public ./Public/
 RUN npx webpack --config webpack.prod.js
 
 
-FROM swift:5.8-focal as swift
+FROM swift:5.8-jammy as swift
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update \
     && apt-get -q dist-upgrade -y\
@@ -27,8 +27,9 @@ RUN swift package resolve
 COPY . .
 RUN swift build -c release --static-swift-stdlib
 
-RUN cd Resources/branch_release-5.9 && swift build -c debug --static-swift-stdlib
-RUN cd Resources/branch_main && swift build -c debug --static-swift-stdlib
+RUN cd Resources/parsers/50800 && swift build -c release --static-swift-stdlib
+RUN cd Resources/parsers/50900 && swift build -c release --static-swift-stdlib
+RUN cd Resources/parsers/trunk && swift build -c release --static-swift-stdlib
 
 WORKDIR /staging
 
@@ -40,7 +41,7 @@ RUN [ -d /build/Public ] && { mv /build/Public ./Public && chmod -R a-w ./Public
 RUN [ -d /build/Resources ] && { mv /build/Resources ./Resources && chmod -R a-w ./Resources; } || true
 
 
-FROM swift:5.8-focal
+FROM ubuntu:jammy
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update \
     && apt-get -q dist-upgrade -y \
