@@ -26,11 +26,15 @@ jobs:
           (cd Resources/parsers/50900 && swift build -c release -Xswiftc -static-executable)
           (cd Resources/parsers/trunk && swift build -c release -Xswiftc -static-executable)
 
-          git add Resources/parsers/50800/.build/release/parser
-          git add Resources/parsers/50900/.build/release/parser
-          git add Resources/parsers/trunk/.build/release/parser
-          git commit -m "Update parsers"
-          git push -u origin HEAD
+          git remote set-url origin https://github-actions:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          if (git diff --shortstat | grep '[0-9]'); then \
+            git add .; \
+            git commit -m "Update parsers"; \
+            git push origin HEAD:${GITHUB_REF}; \
+          fi
+
       - name: Build
         run: |
           set -ex
