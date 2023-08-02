@@ -4,8 +4,8 @@
     "dev": "webpack --progress --config webpack.dev.js"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "6.4.0",
-    "@fortawesome/free-brands-svg-icons": "6.4.0",
+    "@fortawesome/fontawesome-svg-core": "6.4.2",
+    "@fortawesome/free-brands-svg-icons": "6.4.2",
     "@fortawesome/pro-duotone-svg-icons": "6.4.0",
     "@fortawesome/pro-light-svg-icons": "6.4.0",
     "@fortawesome/pro-regular-svg-icons": "6.4.0",
