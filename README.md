@@ -1,5 +1,4 @@
 <p>
-<img src="https://github.com/SwiftFiddle/swift-ast-explorer/actions/workflows/test.yml/badge.svg">
 <img src="https://img.shields.io/badge/os-macOS/Linux-green.svg?style=flat" alt="macOS/Linux">
 <a href="http://swift.org">
 <img src="https://img.shields.io/badge/swift-5.8-orange.svg?style=flat" alt="Swift 5.8 Compatible">
