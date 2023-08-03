@@ -79,12 +79,18 @@ func routes(_ app: Application) throws {
   }
 }
 
-let swiftVersion = Environment.get("SWIFT_VERSION") ?? ""
+let swiftVersion = "Swift 5.8.1"
 
 private struct RequestParameter: Decodable {
   let code: String
   let options: [String]?
   let branch: String?
+}
+
+struct SyntaxResponse: Content {
+  let syntaxHTML: String
+  let syntaxJSON: String
+  let swiftVersion: String
 }
 
 private let sampleCode = #"""
