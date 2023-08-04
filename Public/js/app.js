@@ -153,7 +153,9 @@ export class App {
     this.structureView.update(data);
 
     this.structureView.onmouseover = (event, target, data) => {
-      const title = data.token ? "Token" : `${data.text}`;
+      const title = data.token
+        ? `Token <span class="token-kind text-truncate"  style="max-width: 300px;">${data.token.kind}</span>`
+        : `${data.text}`;
       const range = data.range;
 
       const formatted = formatRange(range);
