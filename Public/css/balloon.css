@@ -57,6 +57,16 @@
 .balloon .title {
   color: #fff;
   font-weight: bolder;
+  display: inline-block;
+}
+
+.balloon .token-kind {
+  color: #fff;
+  font-weight: normal;
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
+  max-width: 200px;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
 .balloon .range {
