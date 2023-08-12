@@ -4,6 +4,8 @@
     "range": {
       "endColumn": 62,
       "endRow": 11,
+      "graphemeEndColumn": 62,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 1
     },
@@ -50,6 +52,8 @@
     "range": {
       "endColumn": 2,
       "endRow": 9,
+      "graphemeEndColumn": 2,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 1
     },
@@ -76,6 +80,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 1,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 1
     },
@@ -121,6 +127,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 1,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 1
     },
@@ -193,6 +201,8 @@
     "range": {
       "endColumn": 1,
       "endRow": 1,
+      "graphemeEndColumn": 1,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 1
     },
@@ -219,6 +229,8 @@
     "range": {
       "endColumn": 1,
       "endRow": 1,
+      "graphemeEndColumn": 1,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 1
     },
@@ -245,6 +257,8 @@
     "range": {
       "endColumn": 4,
       "endRow": 1,
+      "graphemeEndColumn": 4,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 1
     },
@@ -263,6 +277,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 1,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 5,
       "startColumn": 5,
       "startRow": 1
     },
@@ -289,6 +305,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 1,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 5,
       "startColumn": 5,
       "startRow": 1
     },
@@ -371,6 +389,8 @@
     "range": {
       "endColumn": 28,
       "endRow": 1,
+      "graphemeEndColumn": 28,
+      "graphemeStartColumn": 5,
       "startColumn": 5,
       "startRow": 1
     },
@@ -404,6 +424,8 @@
     "range": {
       "endColumn": 28,
       "endRow": 1,
+      "graphemeEndColumn": 28,
+      "graphemeStartColumn": 5,
       "startColumn": 5,
       "startRow": 1
     },
@@ -422,6 +444,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 1,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 29,
       "startColumn": 29,
       "startRow": 1
     },
@@ -468,6 +492,8 @@
     "range": {
       "endColumn": 30,
       "endRow": 1,
+      "graphemeEndColumn": 30,
+      "graphemeStartColumn": 29,
       "startColumn": 29,
       "startRow": 1
     },
@@ -486,6 +512,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 1,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 31,
       "startColumn": 31,
       "startRow": 1
     },
@@ -519,6 +547,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 1,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 31,
       "startColumn": 31,
       "startRow": 1
     },
@@ -537,6 +567,8 @@
     "range": {
       "endColumn": 2,
       "endRow": 9,
+      "graphemeEndColumn": 2,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 3
     },
@@ -582,6 +614,8 @@
     "range": {
       "endColumn": 2,
       "endRow": 9,
+      "graphemeEndColumn": 2,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 3
     },
@@ -615,6 +649,8 @@
     "range": {
       "endColumn": 2,
       "endRow": 9,
+      "graphemeEndColumn": 2,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 3
     },
@@ -700,6 +736,8 @@
     "range": {
       "endColumn": 3,
       "endRow": 3,
+      "graphemeEndColumn": 3,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 3
     },
@@ -718,6 +756,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 3,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 4,
       "startColumn": 4,
       "startRow": 3
     },
@@ -744,6 +784,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 3,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 4,
       "startColumn": 4,
       "startRow": 3
     },
@@ -789,6 +831,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 3,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 4,
       "startColumn": 4,
       "startRow": 3
     },
@@ -848,6 +892,8 @@
     "range": {
       "endColumn": 27,
       "endRow": 3,
+      "graphemeEndColumn": 27,
+      "graphemeStartColumn": 4,
       "startColumn": 4,
       "startRow": 3
     },
@@ -893,6 +939,8 @@
     "range": {
       "endColumn": 27,
       "endRow": 3,
+      "graphemeEndColumn": 27,
+      "graphemeStartColumn": 4,
       "startColumn": 4,
       "startRow": 3
     },
@@ -911,6 +959,8 @@
     "range": {
       "endColumn": 30,
       "endRow": 3,
+      "graphemeEndColumn": 30,
+      "graphemeStartColumn": 28,
       "startColumn": 28,
       "startRow": 3
     },
@@ -944,6 +994,8 @@
     "range": {
       "endColumn": 30,
       "endRow": 3,
+      "graphemeEndColumn": 30,
+      "graphemeStartColumn": 28,
       "startColumn": 28,
       "startRow": 3
     },
@@ -962,6 +1014,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 3,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 31,
       "startColumn": 31,
       "startRow": 3
     },
@@ -995,6 +1049,8 @@
     "range": {
       "endColumn": 33,
       "endRow": 3,
+      "graphemeEndColumn": 33,
+      "graphemeStartColumn": 31,
       "startColumn": 31,
       "startRow": 3
     },
@@ -1013,6 +1069,8 @@
     "range": {
       "endColumn": 2,
       "endRow": 5,
+      "graphemeEndColumn": 2,
+      "graphemeStartColumn": 34,
       "startColumn": 34,
       "startRow": 3
     },
@@ -1072,6 +1130,8 @@
     "range": {
       "endColumn": 35,
       "endRow": 3,
+      "graphemeEndColumn": 35,
+      "graphemeStartColumn": 34,
       "startColumn": 34,
       "startRow": 3
     },
@@ -1090,6 +1150,8 @@
     "range": {
       "endColumn": 53,
       "endRow": 4,
+      "graphemeEndColumn": 53,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 4
     },
@@ -1116,6 +1178,8 @@
     "range": {
       "endColumn": 53,
       "endRow": 4,
+      "graphemeEndColumn": 53,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 4
     },
@@ -1161,6 +1225,8 @@
     "range": {
       "endColumn": 53,
       "endRow": 4,
+      "graphemeEndColumn": 53,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 4
     },
@@ -1258,6 +1324,8 @@
     "range": {
       "endColumn": 8,
       "endRow": 4,
+      "graphemeEndColumn": 8,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 4
     },
@@ -1303,6 +1371,8 @@
     "range": {
       "endColumn": 8,
       "endRow": 4,
+      "graphemeEndColumn": 8,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 4
     },
@@ -1321,6 +1391,8 @@
     "range": {
       "endColumn": 9,
       "endRow": 4,
+      "graphemeEndColumn": 9,
+      "graphemeStartColumn": 8,
       "startColumn": 8,
       "startRow": 4
     },
@@ -1339,6 +1411,8 @@
     "range": {
       "endColumn": 52,
       "endRow": 4,
+      "graphemeEndColumn": 52,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 4
     },
@@ -1365,6 +1439,8 @@
     "range": {
       "endColumn": 52,
       "endRow": 4,
+      "graphemeEndColumn": 52,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 4
     },
@@ -1434,6 +1510,8 @@
     "range": {
       "endColumn": 52,
       "endRow": 4,
+      "graphemeEndColumn": 52,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 4
     },
@@ -1517,6 +1595,8 @@
     "range": {
       "endColumn": 10,
       "endRow": 4,
+      "graphemeEndColumn": 10,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 4
     },
@@ -1535,6 +1615,8 @@
     "range": {
       "endColumn": 51,
       "endRow": 4,
+      "graphemeEndColumn": 51,
+      "graphemeStartColumn": 10,
       "startColumn": 10,
       "startRow": 4
     },
@@ -1561,6 +1643,8 @@
     "range": {
       "endColumn": 51,
       "endRow": 4,
+      "graphemeEndColumn": 51,
+      "graphemeStartColumn": 10,
       "startColumn": 10,
       "startRow": 4
     },
@@ -1594,6 +1678,8 @@
     "range": {
       "endColumn": 51,
       "endRow": 4,
+      "graphemeEndColumn": 51,
+      "graphemeStartColumn": 10,
       "startColumn": 10,
       "startRow": 4
     },
@@ -1612,6 +1698,8 @@
     "range": {
       "endColumn": 52,
       "endRow": 4,
+      "graphemeEndColumn": 52,
+      "graphemeStartColumn": 51,
       "startColumn": 51,
       "startRow": 4
     },
@@ -1630,6 +1718,8 @@
     "range": {
       "endColumn": 53,
       "endRow": 4,
+      "graphemeEndColumn": 53,
+      "graphemeStartColumn": 52,
       "startColumn": 52,
       "startRow": 4
     },
@@ -1648,6 +1738,8 @@
     "range": {
       "endColumn": 53,
       "endRow": 4,
+      "graphemeEndColumn": 53,
+      "graphemeStartColumn": 53,
       "startColumn": 53,
       "startRow": 4
     },
@@ -1674,6 +1766,8 @@
     "range": {
       "endColumn": 2,
       "endRow": 5,
+      "graphemeEndColumn": 2,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 5
     },
@@ -1692,6 +1786,8 @@
     "range": {
       "endColumn": 7,
       "endRow": 5,
+      "graphemeEndColumn": 7,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 5
     },
@@ -1710,6 +1806,8 @@
     "range": {
       "endColumn": 2,
       "endRow": 9,
+      "graphemeEndColumn": 2,
+      "graphemeStartColumn": 8,
       "startColumn": 8,
       "startRow": 5
     },
@@ -1795,6 +1893,8 @@
     "range": {
       "endColumn": 10,
       "endRow": 5,
+      "graphemeEndColumn": 10,
+      "graphemeStartColumn": 8,
       "startColumn": 8,
       "startRow": 5
     },
@@ -1813,6 +1913,8 @@
     "range": {
       "endColumn": 40,
       "endRow": 5,
+      "graphemeEndColumn": 40,
+      "graphemeStartColumn": 11,
       "startColumn": 11,
       "startRow": 5
     },
@@ -1839,6 +1941,8 @@
     "range": {
       "endColumn": 40,
       "endRow": 5,
+      "graphemeEndColumn": 40,
+      "graphemeStartColumn": 11,
       "startColumn": 11,
       "startRow": 5
     },
@@ -1884,6 +1988,8 @@
     "range": {
       "endColumn": 40,
       "endRow": 5,
+      "graphemeEndColumn": 40,
+      "graphemeStartColumn": 11,
       "startColumn": 11,
       "startRow": 5
     },
@@ -1943,6 +2049,8 @@
     "range": {
       "endColumn": 34,
       "endRow": 5,
+      "graphemeEndColumn": 34,
+      "graphemeStartColumn": 11,
       "startColumn": 11,
       "startRow": 5
     },
@@ -1988,6 +2096,8 @@
     "range": {
       "endColumn": 34,
       "endRow": 5,
+      "graphemeEndColumn": 34,
+      "graphemeStartColumn": 11,
       "startColumn": 11,
       "startRow": 5
     },
@@ -2006,6 +2116,8 @@
     "range": {
       "endColumn": 37,
       "endRow": 5,
+      "graphemeEndColumn": 37,
+      "graphemeStartColumn": 35,
       "startColumn": 35,
       "startRow": 5
     },
@@ -2039,6 +2151,8 @@
     "range": {
       "endColumn": 37,
       "endRow": 5,
+      "graphemeEndColumn": 37,
+      "graphemeStartColumn": 35,
       "startColumn": 35,
       "startRow": 5
     },
@@ -2057,6 +2171,8 @@
     "range": {
       "endColumn": 40,
       "endRow": 5,
+      "graphemeEndColumn": 40,
+      "graphemeStartColumn": 38,
       "startColumn": 38,
       "startRow": 5
     },
@@ -2090,6 +2206,8 @@
     "range": {
       "endColumn": 40,
       "endRow": 5,
+      "graphemeEndColumn": 40,
+      "graphemeStartColumn": 38,
       "startColumn": 38,
       "startRow": 5
     },
@@ -2108,6 +2226,8 @@
     "range": {
       "endColumn": 2,
       "endRow": 7,
+      "graphemeEndColumn": 2,
+      "graphemeStartColumn": 41,
       "startColumn": 41,
       "startRow": 5
     },
@@ -2167,6 +2287,8 @@
     "range": {
       "endColumn": 42,
       "endRow": 5,
+      "graphemeEndColumn": 42,
+      "graphemeStartColumn": 41,
       "startColumn": 41,
       "startRow": 5
     },
@@ -2185,6 +2307,8 @@
     "range": {
       "endColumn": 61,
       "endRow": 6,
+      "graphemeEndColumn": 61,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 6
     },
@@ -2211,6 +2335,8 @@
     "range": {
       "endColumn": 61,
       "endRow": 6,
+      "graphemeEndColumn": 61,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 6
     },
@@ -2256,6 +2382,8 @@
     "range": {
       "endColumn": 61,
       "endRow": 6,
+      "graphemeEndColumn": 61,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 6
     },
@@ -2353,6 +2481,8 @@
     "range": {
       "endColumn": 8,
       "endRow": 6,
+      "graphemeEndColumn": 8,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 6
     },
@@ -2398,6 +2528,8 @@
     "range": {
       "endColumn": 8,
       "endRow": 6,
+      "graphemeEndColumn": 8,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 6
     },
@@ -2416,6 +2548,8 @@
     "range": {
       "endColumn": 9,
       "endRow": 6,
+      "graphemeEndColumn": 9,
+      "graphemeStartColumn": 8,
       "startColumn": 8,
       "startRow": 6
     },
@@ -2434,6 +2568,8 @@
     "range": {
       "endColumn": 60,
       "endRow": 6,
+      "graphemeEndColumn": 60,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 6
     },
@@ -2460,6 +2596,8 @@
     "range": {
       "endColumn": 60,
       "endRow": 6,
+      "graphemeEndColumn": 60,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 6
     },
@@ -2529,6 +2667,8 @@
     "range": {
       "endColumn": 60,
       "endRow": 6,
+      "graphemeEndColumn": 60,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 6
     },
@@ -2612,6 +2752,8 @@
     "range": {
       "endColumn": 10,
       "endRow": 6,
+      "graphemeEndColumn": 10,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 6
     },
@@ -2630,6 +2772,8 @@
     "range": {
       "endColumn": 59,
       "endRow": 6,
+      "graphemeEndColumn": 59,
+      "graphemeStartColumn": 10,
       "startColumn": 10,
       "startRow": 6
     },
@@ -2656,6 +2800,8 @@
     "range": {
       "endColumn": 59,
       "endRow": 6,
+      "graphemeEndColumn": 59,
+      "graphemeStartColumn": 10,
       "startColumn": 10,
       "startRow": 6
     },
@@ -2689,6 +2835,8 @@
     "range": {
       "endColumn": 59,
       "endRow": 6,
+      "graphemeEndColumn": 59,
+      "graphemeStartColumn": 10,
       "startColumn": 10,
       "startRow": 6
     },
@@ -2707,6 +2855,8 @@
     "range": {
       "endColumn": 60,
       "endRow": 6,
+      "graphemeEndColumn": 60,
+      "graphemeStartColumn": 59,
       "startColumn": 59,
       "startRow": 6
     },
@@ -2725,6 +2875,8 @@
     "range": {
       "endColumn": 61,
       "endRow": 6,
+      "graphemeEndColumn": 61,
+      "graphemeStartColumn": 60,
       "startColumn": 60,
       "startRow": 6
     },
@@ -2743,6 +2895,8 @@
     "range": {
       "endColumn": 61,
       "endRow": 6,
+      "graphemeEndColumn": 61,
+      "graphemeStartColumn": 61,
       "startColumn": 61,
       "startRow": 6
     },
@@ -2769,6 +2923,8 @@
     "range": {
       "endColumn": 2,
       "endRow": 7,
+      "graphemeEndColumn": 2,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 7
     },
@@ -2787,6 +2943,8 @@
     "range": {
       "endColumn": 7,
       "endRow": 7,
+      "graphemeEndColumn": 7,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 7
     },
@@ -2805,6 +2963,8 @@
     "range": {
       "endColumn": 2,
       "endRow": 9,
+      "graphemeEndColumn": 2,
+      "graphemeStartColumn": 8,
       "startColumn": 8,
       "startRow": 7
     },
@@ -2864,6 +3024,8 @@
     "range": {
       "endColumn": 9,
       "endRow": 7,
+      "graphemeEndColumn": 9,
+      "graphemeStartColumn": 8,
       "startColumn": 8,
       "startRow": 7
     },
@@ -2882,6 +3044,8 @@
     "range": {
       "endColumn": 47,
       "endRow": 8,
+      "graphemeEndColumn": 47,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 8
     },
@@ -2908,6 +3072,8 @@
     "range": {
       "endColumn": 47,
       "endRow": 8,
+      "graphemeEndColumn": 47,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 8
     },
@@ -2953,6 +3119,8 @@
     "range": {
       "endColumn": 47,
       "endRow": 8,
+      "graphemeEndColumn": 47,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 8
     },
@@ -3050,6 +3218,8 @@
     "range": {
       "endColumn": 8,
       "endRow": 8,
+      "graphemeEndColumn": 8,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 8
     },
@@ -3095,6 +3265,8 @@
     "range": {
       "endColumn": 8,
       "endRow": 8,
+      "graphemeEndColumn": 8,
+      "graphemeStartColumn": 3,
       "startColumn": 3,
       "startRow": 8
     },
@@ -3113,6 +3285,8 @@
     "range": {
       "endColumn": 9,
       "endRow": 8,
+      "graphemeEndColumn": 9,
+      "graphemeStartColumn": 8,
       "startColumn": 8,
       "startRow": 8
     },
@@ -3131,6 +3305,8 @@
     "range": {
       "endColumn": 46,
       "endRow": 8,
+      "graphemeEndColumn": 46,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 8
     },
@@ -3157,6 +3333,8 @@
     "range": {
       "endColumn": 46,
       "endRow": 8,
+      "graphemeEndColumn": 46,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 8
     },
@@ -3226,6 +3404,8 @@
     "range": {
       "endColumn": 46,
       "endRow": 8,
+      "graphemeEndColumn": 46,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 8
     },
@@ -3309,6 +3489,8 @@
     "range": {
       "endColumn": 10,
       "endRow": 8,
+      "graphemeEndColumn": 10,
+      "graphemeStartColumn": 9,
       "startColumn": 9,
       "startRow": 8
     },
@@ -3327,6 +3509,8 @@
     "range": {
       "endColumn": 45,
       "endRow": 8,
+      "graphemeEndColumn": 45,
+      "graphemeStartColumn": 10,
       "startColumn": 10,
       "startRow": 8
     },
@@ -3353,6 +3537,8 @@
     "range": {
       "endColumn": 45,
       "endRow": 8,
+      "graphemeEndColumn": 45,
+      "graphemeStartColumn": 10,
       "startColumn": 10,
       "startRow": 8
     },
@@ -3386,6 +3572,8 @@
     "range": {
       "endColumn": 45,
       "endRow": 8,
+      "graphemeEndColumn": 45,
+      "graphemeStartColumn": 10,
       "startColumn": 10,
       "startRow": 8
     },
@@ -3404,6 +3592,8 @@
     "range": {
       "endColumn": 46,
       "endRow": 8,
+      "graphemeEndColumn": 46,
+      "graphemeStartColumn": 45,
       "startColumn": 45,
       "startRow": 8
     },
@@ -3422,6 +3612,8 @@
     "range": {
       "endColumn": 47,
       "endRow": 8,
+      "graphemeEndColumn": 47,
+      "graphemeStartColumn": 46,
       "startColumn": 46,
       "startRow": 8
     },
@@ -3440,6 +3632,8 @@
     "range": {
       "endColumn": 47,
       "endRow": 8,
+      "graphemeEndColumn": 47,
+      "graphemeStartColumn": 47,
       "startColumn": 47,
       "startRow": 8
     },
@@ -3466,6 +3660,8 @@
     "range": {
       "endColumn": 2,
       "endRow": 9,
+      "graphemeEndColumn": 2,
+      "graphemeStartColumn": 1,
       "startColumn": 1,
       "startRow": 9
     },
@@ -3484,6 +3680,8 @@
     "range": {
       "endColumn": 62,
       "endRow": 11,
+      "graphemeEndColumn": 62,
+      "graphemeStartColumn": 62,
       "startColumn": 62,
       "startRow": 11
     },

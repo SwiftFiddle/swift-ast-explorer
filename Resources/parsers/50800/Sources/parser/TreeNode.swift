@@ -5,7 +5,7 @@ final class TreeNode: Codable {
   var parent: Int?
 
   var text: String
-  var range = Range(startRow: 0, startColumn: 0, endRow: 0, endColumn: 0)
+  var range = Range(startRow: 0, startColumn: 0, graphemeStartColumn: 0, endRow: 0, endColumn: 0, graphemeEndColumn: 0)
   var structure = [StructureProperty]()
   var type: SyntaxType
   var token: Token?
@@ -50,8 +50,10 @@ extension TreeNode: CustomStringConvertible {
 struct Range: Codable, Equatable {
   let startRow: Int
   let startColumn: Int
+  let graphemeStartColumn: Int
   let endRow: Int
   let endColumn: Int
+  let graphemeEndColumn: Int
 }
 
 extension Range: CustomStringConvertible {
