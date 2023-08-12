@@ -133,8 +133,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -145,8 +146,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -201,6 +203,58 @@
     "id": 4,
     "parent": 3,
     "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 5,
+    "parent": 3,
+    "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 6,
+    "parent": 3,
+    "range": {
       "endColumn": 7,
       "endRow": 1,
       "startColumn": 1,
@@ -216,7 +270,7 @@
     "type": "other"
   },
   {
-    "id": 5,
+    "id": 7,
     "parent": 3,
     "range": {
       "endColumn": 18,
@@ -242,8 +296,8 @@
     "type": "collection"
   },
   {
-    "id": 6,
-    "parent": 5,
+    "id": 8,
+    "parent": 7,
     "range": {
       "endColumn": 18,
       "endRow": 1,
@@ -287,8 +341,8 @@
     "type": "other"
   },
   {
-    "id": 7,
-    "parent": 6,
+    "id": 9,
+    "parent": 8,
     "range": {
       "endColumn": 18,
       "endRow": 1,
@@ -305,7 +359,7 @@
     "type": "other"
   },
   {
-    "id": 8,
+    "id": 10,
     "parent": 1,
     "range": {
       "endColumn": 2,
@@ -350,8 +404,8 @@
     "type": "other"
   },
   {
-    "id": 9,
-    "parent": 8,
+    "id": 11,
+    "parent": 10,
     "range": {
       "endColumn": 2,
       "endRow": 44,
@@ -367,8 +421,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -379,8 +434,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -469,8 +525,60 @@
     "type": "decl"
   },
   {
-    "id": 10,
-    "parent": 9,
+    "id": 12,
+    "parent": 11,
+    "range": {
+      "endColumn": 18,
+      "endRow": 1,
+      "startColumn": 18,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 13,
+    "parent": 11,
+    "range": {
+      "endColumn": 18,
+      "endRow": 1,
+      "startColumn": 18,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 14,
+    "parent": 11,
     "range": {
       "endColumn": 7,
       "endRow": 3,
@@ -487,8 +595,8 @@
     "type": "other"
   },
   {
-    "id": 11,
-    "parent": 9,
+    "id": 15,
+    "parent": 11,
     "range": {
       "endColumn": 21,
       "endRow": 3,
@@ -505,8 +613,8 @@
     "type": "other"
   },
   {
-    "id": 12,
-    "parent": 9,
+    "id": 16,
+    "parent": 11,
     "range": {
       "endColumn": 2,
       "endRow": 44,
@@ -564,8 +672,8 @@
     "type": "other"
   },
   {
-    "id": 13,
-    "parent": 12,
+    "id": 17,
+    "parent": 16,
     "range": {
       "endColumn": 23,
       "endRow": 3,
@@ -582,8 +690,8 @@
     "type": "other"
   },
   {
-    "id": 14,
-    "parent": 12,
+    "id": 18,
+    "parent": 16,
     "range": {
       "endColumn": 4,
       "endRow": 43,
@@ -608,8 +716,8 @@
     "type": "collection"
   },
   {
-    "id": 15,
-    "parent": 14,
+    "id": 19,
+    "parent": 18,
     "range": {
       "endColumn": 4,
       "endRow": 10,
@@ -653,8 +761,8 @@
     "type": "other"
   },
   {
-    "id": 16,
-    "parent": 15,
+    "id": 20,
+    "parent": 19,
     "range": {
       "endColumn": 4,
       "endRow": 10,
@@ -670,8 +778,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -682,8 +791,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -773,8 +883,60 @@
     "type": "decl"
   },
   {
-    "id": 17,
-    "parent": 16,
+    "id": 21,
+    "parent": 20,
+    "range": {
+      "endColumn": 23,
+      "endRow": 3,
+      "startColumn": 23,
+      "startRow": 3
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 22,
+    "parent": 20,
+    "range": {
+      "endColumn": 23,
+      "endRow": 3,
+      "startColumn": 23,
+      "startRow": 3
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 23,
+    "parent": 20,
     "range": {
       "endColumn": 7,
       "endRow": 5,
@@ -791,8 +953,8 @@
     "type": "other"
   },
   {
-    "id": 18,
-    "parent": 16,
+    "id": 24,
+    "parent": 20,
     "range": {
       "endColumn": 12,
       "endRow": 5,
@@ -809,8 +971,8 @@
     "type": "other"
   },
   {
-    "id": 19,
-    "parent": 16,
+    "id": 25,
+    "parent": 20,
     "range": {
       "endColumn": 23,
       "endRow": 5,
@@ -855,8 +1017,8 @@
     "type": "other"
   },
   {
-    "id": 20,
-    "parent": 19,
+    "id": 26,
+    "parent": 25,
     "range": {
       "endColumn": 13,
       "endRow": 5,
@@ -873,8 +1035,8 @@
     "type": "other"
   },
   {
-    "id": 21,
-    "parent": 19,
+    "id": 27,
+    "parent": 25,
     "range": {
       "endColumn": 23,
       "endRow": 5,
@@ -899,8 +1061,8 @@
     "type": "collection"
   },
   {
-    "id": 22,
-    "parent": 21,
+    "id": 28,
+    "parent": 27,
     "range": {
       "endColumn": 23,
       "endRow": 5,
@@ -944,8 +1106,8 @@
     "type": "other"
   },
   {
-    "id": 23,
-    "parent": 22,
+    "id": 29,
+    "parent": 28,
     "range": {
       "endColumn": 23,
       "endRow": 5,
@@ -989,8 +1151,8 @@
     "type": "type"
   },
   {
-    "id": 24,
-    "parent": 23,
+    "id": 30,
+    "parent": 29,
     "range": {
       "endColumn": 23,
       "endRow": 5,
@@ -1007,8 +1169,8 @@
     "type": "other"
   },
   {
-    "id": 25,
-    "parent": 16,
+    "id": 31,
+    "parent": 20,
     "range": {
       "endColumn": 4,
       "endRow": 10,
@@ -1066,8 +1228,8 @@
     "type": "other"
   },
   {
-    "id": 26,
-    "parent": 25,
+    "id": 32,
+    "parent": 31,
     "range": {
       "endColumn": 25,
       "endRow": 5,
@@ -1084,8 +1246,8 @@
     "type": "other"
   },
   {
-    "id": 27,
-    "parent": 25,
+    "id": 33,
+    "parent": 31,
     "range": {
       "endColumn": 23,
       "endRow": 9,
@@ -1110,8 +1272,8 @@
     "type": "collection"
   },
   {
-    "id": 28,
-    "parent": 27,
+    "id": 34,
+    "parent": 33,
     "range": {
       "endColumn": 24,
       "endRow": 6,
@@ -1155,8 +1317,8 @@
     "type": "other"
   },
   {
-    "id": 29,
-    "parent": 28,
+    "id": 35,
+    "parent": 34,
     "range": {
       "endColumn": 24,
       "endRow": 6,
@@ -1172,8 +1334,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -1184,8 +1347,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -1225,8 +1389,60 @@
     "type": "decl"
   },
   {
-    "id": 30,
-    "parent": 29,
+    "id": 36,
+    "parent": 35,
+    "range": {
+      "endColumn": 25,
+      "endRow": 5,
+      "startColumn": 25,
+      "startRow": 5
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 37,
+    "parent": 35,
+    "range": {
+      "endColumn": 25,
+      "endRow": 5,
+      "startColumn": 25,
+      "startRow": 5
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 38,
+    "parent": 35,
     "range": {
       "endColumn": 9,
       "endRow": 6,
@@ -1243,8 +1459,8 @@
     "type": "other"
   },
   {
-    "id": 31,
-    "parent": 29,
+    "id": 39,
+    "parent": 35,
     "range": {
       "endColumn": 24,
       "endRow": 6,
@@ -1269,8 +1485,8 @@
     "type": "collection"
   },
   {
-    "id": 32,
-    "parent": 31,
+    "id": 40,
+    "parent": 39,
     "range": {
       "endColumn": 24,
       "endRow": 6,
@@ -1339,8 +1555,8 @@
     "type": "other"
   },
   {
-    "id": 33,
-    "parent": 32,
+    "id": 41,
+    "parent": 40,
     "range": {
       "endColumn": 16,
       "endRow": 6,
@@ -1357,8 +1573,8 @@
     "type": "other"
   },
   {
-    "id": 34,
-    "parent": 32,
+    "id": 42,
+    "parent": 40,
     "range": {
       "endColumn": 24,
       "endRow": 6,
@@ -1403,8 +1619,8 @@
     "type": "other"
   },
   {
-    "id": 35,
-    "parent": 34,
+    "id": 43,
+    "parent": 42,
     "range": {
       "endColumn": 18,
       "endRow": 6,
@@ -1421,8 +1637,8 @@
     "type": "other"
   },
   {
-    "id": 36,
-    "parent": 34,
+    "id": 44,
+    "parent": 42,
     "range": {
       "endColumn": 24,
       "endRow": 6,
@@ -1504,8 +1720,8 @@
     "type": "expr"
   },
   {
-    "id": 37,
-    "parent": 36,
+    "id": 45,
+    "parent": 44,
     "range": {
       "endColumn": 20,
       "endRow": 6,
@@ -1522,8 +1738,8 @@
     "type": "other"
   },
   {
-    "id": 38,
-    "parent": 36,
+    "id": 46,
+    "parent": 44,
     "range": {
       "endColumn": 23,
       "endRow": 6,
@@ -1548,8 +1764,8 @@
     "type": "collection"
   },
   {
-    "id": 39,
-    "parent": 38,
+    "id": 47,
+    "parent": 46,
     "range": {
       "endColumn": 23,
       "endRow": 6,
@@ -1581,8 +1797,8 @@
     "type": "other"
   },
   {
-    "id": 40,
-    "parent": 39,
+    "id": 48,
+    "parent": 47,
     "range": {
       "endColumn": 23,
       "endRow": 6,
@@ -1599,8 +1815,8 @@
     "type": "other"
   },
   {
-    "id": 41,
-    "parent": 36,
+    "id": 49,
+    "parent": 44,
     "range": {
       "endColumn": 24,
       "endRow": 6,
@@ -1617,8 +1833,8 @@
     "type": "other"
   },
   {
-    "id": 42,
-    "parent": 27,
+    "id": 50,
+    "parent": 33,
     "range": {
       "endColumn": 24,
       "endRow": 7,
@@ -1662,8 +1878,8 @@
     "type": "other"
   },
   {
-    "id": 43,
-    "parent": 42,
+    "id": 51,
+    "parent": 50,
     "range": {
       "endColumn": 24,
       "endRow": 7,
@@ -1679,8 +1895,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -1691,8 +1908,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -1732,8 +1950,60 @@
     "type": "decl"
   },
   {
-    "id": 44,
-    "parent": 43,
+    "id": 52,
+    "parent": 51,
+    "range": {
+      "endColumn": 24,
+      "endRow": 6,
+      "startColumn": 24,
+      "startRow": 6
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 53,
+    "parent": 51,
+    "range": {
+      "endColumn": 24,
+      "endRow": 6,
+      "startColumn": 24,
+      "startRow": 6
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 54,
+    "parent": 51,
     "range": {
       "endColumn": 9,
       "endRow": 7,
@@ -1750,8 +2020,8 @@
     "type": "other"
   },
   {
-    "id": 45,
-    "parent": 43,
+    "id": 55,
+    "parent": 51,
     "range": {
       "endColumn": 24,
       "endRow": 7,
@@ -1776,8 +2046,8 @@
     "type": "collection"
   },
   {
-    "id": 46,
-    "parent": 45,
+    "id": 56,
+    "parent": 55,
     "range": {
       "endColumn": 24,
       "endRow": 7,
@@ -1846,8 +2116,8 @@
     "type": "other"
   },
   {
-    "id": 47,
-    "parent": 46,
+    "id": 57,
+    "parent": 56,
     "range": {
       "endColumn": 16,
       "endRow": 7,
@@ -1864,8 +2134,8 @@
     "type": "other"
   },
   {
-    "id": 48,
-    "parent": 46,
+    "id": 58,
+    "parent": 56,
     "range": {
       "endColumn": 24,
       "endRow": 7,
@@ -1910,8 +2180,8 @@
     "type": "other"
   },
   {
-    "id": 49,
-    "parent": 48,
+    "id": 59,
+    "parent": 58,
     "range": {
       "endColumn": 18,
       "endRow": 7,
@@ -1928,8 +2198,8 @@
     "type": "other"
   },
   {
-    "id": 50,
-    "parent": 48,
+    "id": 60,
+    "parent": 58,
     "range": {
       "endColumn": 24,
       "endRow": 7,
@@ -2011,8 +2281,8 @@
     "type": "expr"
   },
   {
-    "id": 51,
-    "parent": 50,
+    "id": 61,
+    "parent": 60,
     "range": {
       "endColumn": 20,
       "endRow": 7,
@@ -2029,8 +2299,8 @@
     "type": "other"
   },
   {
-    "id": 52,
-    "parent": 50,
+    "id": 62,
+    "parent": 60,
     "range": {
       "endColumn": 23,
       "endRow": 7,
@@ -2055,8 +2325,8 @@
     "type": "collection"
   },
   {
-    "id": 53,
-    "parent": 52,
+    "id": 63,
+    "parent": 62,
     "range": {
       "endColumn": 23,
       "endRow": 7,
@@ -2088,8 +2358,8 @@
     "type": "other"
   },
   {
-    "id": 54,
-    "parent": 53,
+    "id": 64,
+    "parent": 63,
     "range": {
       "endColumn": 23,
       "endRow": 7,
@@ -2106,8 +2376,8 @@
     "type": "other"
   },
   {
-    "id": 55,
-    "parent": 50,
+    "id": 65,
+    "parent": 60,
     "range": {
       "endColumn": 24,
       "endRow": 7,
@@ -2124,8 +2394,8 @@
     "type": "other"
   },
   {
-    "id": 56,
-    "parent": 27,
+    "id": 66,
+    "parent": 33,
     "range": {
       "endColumn": 26,
       "endRow": 8,
@@ -2169,8 +2439,8 @@
     "type": "other"
   },
   {
-    "id": 57,
-    "parent": 56,
+    "id": 67,
+    "parent": 66,
     "range": {
       "endColumn": 26,
       "endRow": 8,
@@ -2186,8 +2456,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -2198,8 +2469,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -2239,8 +2511,60 @@
     "type": "decl"
   },
   {
-    "id": 58,
-    "parent": 57,
+    "id": 68,
+    "parent": 67,
+    "range": {
+      "endColumn": 24,
+      "endRow": 7,
+      "startColumn": 24,
+      "startRow": 7
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 69,
+    "parent": 67,
+    "range": {
+      "endColumn": 24,
+      "endRow": 7,
+      "startColumn": 24,
+      "startRow": 7
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 70,
+    "parent": 67,
     "range": {
       "endColumn": 9,
       "endRow": 8,
@@ -2257,8 +2581,8 @@
     "type": "other"
   },
   {
-    "id": 59,
-    "parent": 57,
+    "id": 71,
+    "parent": 67,
     "range": {
       "endColumn": 26,
       "endRow": 8,
@@ -2283,8 +2607,8 @@
     "type": "collection"
   },
   {
-    "id": 60,
-    "parent": 59,
+    "id": 72,
+    "parent": 71,
     "range": {
       "endColumn": 26,
       "endRow": 8,
@@ -2353,8 +2677,8 @@
     "type": "other"
   },
   {
-    "id": 61,
-    "parent": 60,
+    "id": 73,
+    "parent": 72,
     "range": {
       "endColumn": 18,
       "endRow": 8,
@@ -2371,8 +2695,8 @@
     "type": "other"
   },
   {
-    "id": 62,
-    "parent": 60,
+    "id": 74,
+    "parent": 72,
     "range": {
       "endColumn": 26,
       "endRow": 8,
@@ -2417,8 +2741,8 @@
     "type": "other"
   },
   {
-    "id": 63,
-    "parent": 62,
+    "id": 75,
+    "parent": 74,
     "range": {
       "endColumn": 20,
       "endRow": 8,
@@ -2435,8 +2759,8 @@
     "type": "other"
   },
   {
-    "id": 64,
-    "parent": 62,
+    "id": 76,
+    "parent": 74,
     "range": {
       "endColumn": 26,
       "endRow": 8,
@@ -2518,8 +2842,8 @@
     "type": "expr"
   },
   {
-    "id": 65,
-    "parent": 64,
+    "id": 77,
+    "parent": 76,
     "range": {
       "endColumn": 22,
       "endRow": 8,
@@ -2536,8 +2860,8 @@
     "type": "other"
   },
   {
-    "id": 66,
-    "parent": 64,
+    "id": 78,
+    "parent": 76,
     "range": {
       "endColumn": 25,
       "endRow": 8,
@@ -2562,8 +2886,8 @@
     "type": "collection"
   },
   {
-    "id": 67,
-    "parent": 66,
+    "id": 79,
+    "parent": 78,
     "range": {
       "endColumn": 25,
       "endRow": 8,
@@ -2595,8 +2919,8 @@
     "type": "other"
   },
   {
-    "id": 68,
-    "parent": 67,
+    "id": 80,
+    "parent": 79,
     "range": {
       "endColumn": 25,
       "endRow": 8,
@@ -2613,8 +2937,8 @@
     "type": "other"
   },
   {
-    "id": 69,
-    "parent": 64,
+    "id": 81,
+    "parent": 76,
     "range": {
       "endColumn": 26,
       "endRow": 8,
@@ -2631,8 +2955,8 @@
     "type": "other"
   },
   {
-    "id": 70,
-    "parent": 27,
+    "id": 82,
+    "parent": 33,
     "range": {
       "endColumn": 23,
       "endRow": 9,
@@ -2676,8 +3000,8 @@
     "type": "other"
   },
   {
-    "id": 71,
-    "parent": 70,
+    "id": 83,
+    "parent": 82,
     "range": {
       "endColumn": 23,
       "endRow": 9,
@@ -2693,8 +3017,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -2705,8 +3030,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -2746,8 +3072,60 @@
     "type": "decl"
   },
   {
-    "id": 72,
-    "parent": 71,
+    "id": 84,
+    "parent": 83,
+    "range": {
+      "endColumn": 26,
+      "endRow": 8,
+      "startColumn": 26,
+      "startRow": 8
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 85,
+    "parent": 83,
+    "range": {
+      "endColumn": 26,
+      "endRow": 8,
+      "startColumn": 26,
+      "startRow": 8
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 86,
+    "parent": 83,
     "range": {
       "endColumn": 9,
       "endRow": 9,
@@ -2764,8 +3142,8 @@
     "type": "other"
   },
   {
-    "id": 73,
-    "parent": 71,
+    "id": 87,
+    "parent": 83,
     "range": {
       "endColumn": 23,
       "endRow": 9,
@@ -2790,8 +3168,8 @@
     "type": "collection"
   },
   {
-    "id": 74,
-    "parent": 73,
+    "id": 88,
+    "parent": 87,
     "range": {
       "endColumn": 23,
       "endRow": 9,
@@ -2860,8 +3238,8 @@
     "type": "other"
   },
   {
-    "id": 75,
-    "parent": 74,
+    "id": 89,
+    "parent": 88,
     "range": {
       "endColumn": 15,
       "endRow": 9,
@@ -2878,8 +3256,8 @@
     "type": "other"
   },
   {
-    "id": 76,
-    "parent": 74,
+    "id": 90,
+    "parent": 88,
     "range": {
       "endColumn": 23,
       "endRow": 9,
@@ -2924,8 +3302,8 @@
     "type": "other"
   },
   {
-    "id": 77,
-    "parent": 76,
+    "id": 91,
+    "parent": 90,
     "range": {
       "endColumn": 17,
       "endRow": 9,
@@ -2942,8 +3320,8 @@
     "type": "other"
   },
   {
-    "id": 78,
-    "parent": 76,
+    "id": 92,
+    "parent": 90,
     "range": {
       "endColumn": 23,
       "endRow": 9,
@@ -3025,8 +3403,8 @@
     "type": "expr"
   },
   {
-    "id": 79,
-    "parent": 78,
+    "id": 93,
+    "parent": 92,
     "range": {
       "endColumn": 19,
       "endRow": 9,
@@ -3043,8 +3421,8 @@
     "type": "other"
   },
   {
-    "id": 80,
-    "parent": 78,
+    "id": 94,
+    "parent": 92,
     "range": {
       "endColumn": 22,
       "endRow": 9,
@@ -3069,8 +3447,8 @@
     "type": "collection"
   },
   {
-    "id": 81,
-    "parent": 80,
+    "id": 95,
+    "parent": 94,
     "range": {
       "endColumn": 22,
       "endRow": 9,
@@ -3102,8 +3480,8 @@
     "type": "other"
   },
   {
-    "id": 82,
-    "parent": 81,
+    "id": 96,
+    "parent": 95,
     "range": {
       "endColumn": 22,
       "endRow": 9,
@@ -3120,8 +3498,8 @@
     "type": "other"
   },
   {
-    "id": 83,
-    "parent": 78,
+    "id": 97,
+    "parent": 92,
     "range": {
       "endColumn": 23,
       "endRow": 9,
@@ -3138,8 +3516,8 @@
     "type": "other"
   },
   {
-    "id": 84,
-    "parent": 25,
+    "id": 98,
+    "parent": 31,
     "range": {
       "endColumn": 4,
       "endRow": 10,
@@ -3156,8 +3534,8 @@
     "type": "other"
   },
   {
-    "id": 85,
-    "parent": 14,
+    "id": 99,
+    "parent": 18,
     "range": {
       "endColumn": 4,
       "endRow": 32,
@@ -3201,8 +3579,8 @@
     "type": "other"
   },
   {
-    "id": 86,
-    "parent": 85,
+    "id": 100,
+    "parent": 99,
     "range": {
       "endColumn": 4,
       "endRow": 32,
@@ -3218,8 +3596,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -3230,8 +3609,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -3321,8 +3701,60 @@
     "type": "decl"
   },
   {
-    "id": 87,
-    "parent": 86,
+    "id": 101,
+    "parent": 100,
+    "range": {
+      "endColumn": 4,
+      "endRow": 10,
+      "startColumn": 4,
+      "startRow": 10
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 102,
+    "parent": 100,
+    "range": {
+      "endColumn": 4,
+      "endRow": 10,
+      "startColumn": 4,
+      "startRow": 10
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 103,
+    "parent": 100,
     "range": {
       "endColumn": 7,
       "endRow": 13,
@@ -3339,8 +3771,8 @@
     "type": "other"
   },
   {
-    "id": 88,
-    "parent": 86,
+    "id": 104,
+    "parent": 100,
     "range": {
       "endColumn": 12,
       "endRow": 13,
@@ -3357,8 +3789,8 @@
     "type": "other"
   },
   {
-    "id": 89,
-    "parent": 86,
+    "id": 105,
+    "parent": 100,
     "range": {
       "endColumn": 17,
       "endRow": 13,
@@ -3403,8 +3835,8 @@
     "type": "other"
   },
   {
-    "id": 90,
-    "parent": 89,
+    "id": 106,
+    "parent": 105,
     "range": {
       "endColumn": 13,
       "endRow": 13,
@@ -3421,8 +3853,8 @@
     "type": "other"
   },
   {
-    "id": 91,
-    "parent": 89,
+    "id": 107,
+    "parent": 105,
     "range": {
       "endColumn": 17,
       "endRow": 13,
@@ -3447,8 +3879,8 @@
     "type": "collection"
   },
   {
-    "id": 92,
-    "parent": 91,
+    "id": 108,
+    "parent": 107,
     "range": {
       "endColumn": 17,
       "endRow": 13,
@@ -3492,8 +3924,8 @@
     "type": "other"
   },
   {
-    "id": 93,
-    "parent": 92,
+    "id": 109,
+    "parent": 108,
     "range": {
       "endColumn": 17,
       "endRow": 13,
@@ -3537,8 +3969,8 @@
     "type": "type"
   },
   {
-    "id": 94,
-    "parent": 93,
+    "id": 110,
+    "parent": 109,
     "range": {
       "endColumn": 17,
       "endRow": 13,
@@ -3555,8 +3987,8 @@
     "type": "other"
   },
   {
-    "id": 95,
-    "parent": 86,
+    "id": 111,
+    "parent": 100,
     "range": {
       "endColumn": 4,
       "endRow": 32,
@@ -3614,8 +4046,8 @@
     "type": "other"
   },
   {
-    "id": 96,
-    "parent": 95,
+    "id": 112,
+    "parent": 111,
     "range": {
       "endColumn": 19,
       "endRow": 13,
@@ -3632,8 +4064,8 @@
     "type": "other"
   },
   {
-    "id": 97,
-    "parent": 95,
+    "id": 113,
+    "parent": 111,
     "range": {
       "endColumn": 6,
       "endRow": 31,
@@ -3658,8 +4090,8 @@
     "type": "collection"
   },
   {
-    "id": 98,
-    "parent": 97,
+    "id": 114,
+    "parent": 113,
     "range": {
       "endColumn": 17,
       "endRow": 14,
@@ -3703,8 +4135,8 @@
     "type": "other"
   },
   {
-    "id": 99,
-    "parent": 98,
+    "id": 115,
+    "parent": 114,
     "range": {
       "endColumn": 17,
       "endRow": 14,
@@ -3720,8 +4152,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -3732,8 +4165,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -3773,8 +4207,60 @@
     "type": "decl"
   },
   {
-    "id": 100,
-    "parent": 99,
+    "id": 116,
+    "parent": 115,
+    "range": {
+      "endColumn": 19,
+      "endRow": 13,
+      "startColumn": 19,
+      "startRow": 13
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 117,
+    "parent": 115,
+    "range": {
+      "endColumn": 19,
+      "endRow": 13,
+      "startColumn": 19,
+      "startRow": 13
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 118,
+    "parent": 115,
     "range": {
       "endColumn": 9,
       "endRow": 14,
@@ -3791,8 +4277,8 @@
     "type": "other"
   },
   {
-    "id": 101,
-    "parent": 99,
+    "id": 119,
+    "parent": 115,
     "range": {
       "endColumn": 17,
       "endRow": 14,
@@ -3817,8 +4303,8 @@
     "type": "collection"
   },
   {
-    "id": 102,
-    "parent": 101,
+    "id": 120,
+    "parent": 119,
     "range": {
       "endColumn": 17,
       "endRow": 14,
@@ -3887,8 +4373,8 @@
     "type": "other"
   },
   {
-    "id": 103,
-    "parent": 102,
+    "id": 121,
+    "parent": 120,
     "range": {
       "endColumn": 13,
       "endRow": 14,
@@ -3905,8 +4391,8 @@
     "type": "other"
   },
   {
-    "id": 104,
-    "parent": 102,
+    "id": 122,
+    "parent": 120,
     "range": {
       "endColumn": 17,
       "endRow": 14,
@@ -3951,8 +4437,8 @@
     "type": "other"
   },
   {
-    "id": 105,
-    "parent": 104,
+    "id": 123,
+    "parent": 122,
     "range": {
       "endColumn": 15,
       "endRow": 14,
@@ -3969,8 +4455,8 @@
     "type": "other"
   },
   {
-    "id": 106,
-    "parent": 104,
+    "id": 124,
+    "parent": 122,
     "range": {
       "endColumn": 17,
       "endRow": 14,
@@ -4002,8 +4488,8 @@
     "type": "expr"
   },
   {
-    "id": 107,
-    "parent": 106,
+    "id": 125,
+    "parent": 124,
     "range": {
       "endColumn": 17,
       "endRow": 14,
@@ -4020,8 +4506,8 @@
     "type": "other"
   },
   {
-    "id": 108,
-    "parent": 97,
+    "id": 126,
+    "parent": 113,
     "range": {
       "endColumn": 57,
       "endRow": 15,
@@ -4065,8 +4551,8 @@
     "type": "other"
   },
   {
-    "id": 109,
-    "parent": 108,
+    "id": 127,
+    "parent": 126,
     "range": {
       "endColumn": 57,
       "endRow": 15,
@@ -4082,8 +4568,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -4094,8 +4581,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -4135,8 +4623,60 @@
     "type": "decl"
   },
   {
-    "id": 110,
-    "parent": 109,
+    "id": 128,
+    "parent": 127,
+    "range": {
+      "endColumn": 17,
+      "endRow": 14,
+      "startColumn": 17,
+      "startRow": 14
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 129,
+    "parent": 127,
+    "range": {
+      "endColumn": 17,
+      "endRow": 14,
+      "startColumn": 17,
+      "startRow": 14
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 130,
+    "parent": 127,
     "range": {
       "endColumn": 9,
       "endRow": 15,
@@ -4153,8 +4693,8 @@
     "type": "other"
   },
   {
-    "id": 111,
-    "parent": 109,
+    "id": 131,
+    "parent": 127,
     "range": {
       "endColumn": 57,
       "endRow": 15,
@@ -4179,8 +4719,8 @@
     "type": "collection"
   },
   {
-    "id": 112,
-    "parent": 111,
+    "id": 132,
+    "parent": 131,
     "range": {
       "endColumn": 16,
       "endRow": 15,
@@ -4249,8 +4789,8 @@
     "type": "other"
   },
   {
-    "id": 113,
-    "parent": 112,
+    "id": 133,
+    "parent": 132,
     "range": {
       "endColumn": 15,
       "endRow": 15,
@@ -4267,8 +4807,8 @@
     "type": "other"
   },
   {
-    "id": 114,
-    "parent": 112,
+    "id": 134,
+    "parent": 132,
     "range": {
       "endColumn": 16,
       "endRow": 15,
@@ -4285,8 +4825,8 @@
     "type": "other"
   },
   {
-    "id": 115,
-    "parent": 111,
+    "id": 135,
+    "parent": 131,
     "range": {
       "endColumn": 22,
       "endRow": 15,
@@ -4355,8 +4895,8 @@
     "type": "other"
   },
   {
-    "id": 116,
-    "parent": 115,
+    "id": 136,
+    "parent": 135,
     "range": {
       "endColumn": 21,
       "endRow": 15,
@@ -4373,8 +4913,8 @@
     "type": "other"
   },
   {
-    "id": 117,
-    "parent": 115,
+    "id": 137,
+    "parent": 135,
     "range": {
       "endColumn": 22,
       "endRow": 15,
@@ -4391,8 +4931,8 @@
     "type": "other"
   },
   {
-    "id": 118,
-    "parent": 111,
+    "id": 138,
+    "parent": 131,
     "range": {
       "endColumn": 28,
       "endRow": 15,
@@ -4461,8 +5001,8 @@
     "type": "other"
   },
   {
-    "id": 119,
-    "parent": 118,
+    "id": 139,
+    "parent": 138,
     "range": {
       "endColumn": 27,
       "endRow": 15,
@@ -4479,8 +5019,8 @@
     "type": "other"
   },
   {
-    "id": 120,
-    "parent": 118,
+    "id": 140,
+    "parent": 138,
     "range": {
       "endColumn": 28,
       "endRow": 15,
@@ -4497,8 +5037,8 @@
     "type": "other"
   },
   {
-    "id": 121,
-    "parent": 111,
+    "id": 141,
+    "parent": 131,
     "range": {
       "endColumn": 33,
       "endRow": 15,
@@ -4567,8 +5107,8 @@
     "type": "other"
   },
   {
-    "id": 122,
-    "parent": 121,
+    "id": 142,
+    "parent": 141,
     "range": {
       "endColumn": 32,
       "endRow": 15,
@@ -4585,8 +5125,8 @@
     "type": "other"
   },
   {
-    "id": 123,
-    "parent": 121,
+    "id": 143,
+    "parent": 141,
     "range": {
       "endColumn": 33,
       "endRow": 15,
@@ -4603,8 +5143,8 @@
     "type": "other"
   },
   {
-    "id": 124,
-    "parent": 111,
+    "id": 144,
+    "parent": 131,
     "range": {
       "endColumn": 40,
       "endRow": 15,
@@ -4673,8 +5213,8 @@
     "type": "other"
   },
   {
-    "id": 125,
-    "parent": 124,
+    "id": 145,
+    "parent": 144,
     "range": {
       "endColumn": 39,
       "endRow": 15,
@@ -4691,8 +5231,8 @@
     "type": "other"
   },
   {
-    "id": 126,
-    "parent": 124,
+    "id": 146,
+    "parent": 144,
     "range": {
       "endColumn": 40,
       "endRow": 15,
@@ -4709,8 +5249,8 @@
     "type": "other"
   },
   {
-    "id": 127,
-    "parent": 111,
+    "id": 147,
+    "parent": 131,
     "range": {
       "endColumn": 47,
       "endRow": 15,
@@ -4779,8 +5319,8 @@
     "type": "other"
   },
   {
-    "id": 128,
-    "parent": 127,
+    "id": 148,
+    "parent": 147,
     "range": {
       "endColumn": 46,
       "endRow": 15,
@@ -4797,8 +5337,8 @@
     "type": "other"
   },
   {
-    "id": 129,
-    "parent": 127,
+    "id": 149,
+    "parent": 147,
     "range": {
       "endColumn": 47,
       "endRow": 15,
@@ -4815,8 +5355,8 @@
     "type": "other"
   },
   {
-    "id": 130,
-    "parent": 111,
+    "id": 150,
+    "parent": 131,
     "range": {
       "endColumn": 53,
       "endRow": 15,
@@ -4885,8 +5425,8 @@
     "type": "other"
   },
   {
-    "id": 131,
-    "parent": 130,
+    "id": 151,
+    "parent": 150,
     "range": {
       "endColumn": 52,
       "endRow": 15,
@@ -4903,8 +5443,8 @@
     "type": "other"
   },
   {
-    "id": 132,
-    "parent": 130,
+    "id": 152,
+    "parent": 150,
     "range": {
       "endColumn": 53,
       "endRow": 15,
@@ -4921,8 +5461,8 @@
     "type": "other"
   },
   {
-    "id": 133,
-    "parent": 111,
+    "id": 153,
+    "parent": 131,
     "range": {
       "endColumn": 57,
       "endRow": 15,
@@ -4990,8 +5530,8 @@
     "type": "other"
   },
   {
-    "id": 134,
-    "parent": 133,
+    "id": 154,
+    "parent": 153,
     "range": {
       "endColumn": 57,
       "endRow": 15,
@@ -5008,8 +5548,8 @@
     "type": "other"
   },
   {
-    "id": 135,
-    "parent": 97,
+    "id": 155,
+    "parent": 113,
     "range": {
       "endColumn": 32,
       "endRow": 16,
@@ -5053,8 +5593,8 @@
     "type": "other"
   },
   {
-    "id": 136,
-    "parent": 135,
+    "id": 156,
+    "parent": 155,
     "range": {
       "endColumn": 32,
       "endRow": 16,
@@ -5070,8 +5610,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -5082,8 +5623,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -5123,8 +5665,60 @@
     "type": "decl"
   },
   {
-    "id": 137,
-    "parent": 136,
+    "id": 157,
+    "parent": 156,
+    "range": {
+      "endColumn": 57,
+      "endRow": 15,
+      "startColumn": 57,
+      "startRow": 15
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 158,
+    "parent": 156,
+    "range": {
+      "endColumn": 57,
+      "endRow": 15,
+      "startColumn": 57,
+      "startRow": 15
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 159,
+    "parent": 156,
     "range": {
       "endColumn": 9,
       "endRow": 16,
@@ -5141,8 +5735,8 @@
     "type": "other"
   },
   {
-    "id": 138,
-    "parent": 136,
+    "id": 160,
+    "parent": 156,
     "range": {
       "endColumn": 32,
       "endRow": 16,
@@ -5167,8 +5761,8 @@
     "type": "collection"
   },
   {
-    "id": 139,
-    "parent": 138,
+    "id": 161,
+    "parent": 160,
     "range": {
       "endColumn": 15,
       "endRow": 16,
@@ -5237,8 +5831,8 @@
     "type": "other"
   },
   {
-    "id": 140,
-    "parent": 139,
+    "id": 162,
+    "parent": 161,
     "range": {
       "endColumn": 14,
       "endRow": 16,
@@ -5255,8 +5849,8 @@
     "type": "other"
   },
   {
-    "id": 141,
-    "parent": 139,
+    "id": 163,
+    "parent": 161,
     "range": {
       "endColumn": 15,
       "endRow": 16,
@@ -5273,8 +5867,8 @@
     "type": "other"
   },
   {
-    "id": 142,
-    "parent": 138,
+    "id": 164,
+    "parent": 160,
     "range": {
       "endColumn": 22,
       "endRow": 16,
@@ -5343,8 +5937,8 @@
     "type": "other"
   },
   {
-    "id": 143,
-    "parent": 142,
+    "id": 165,
+    "parent": 164,
     "range": {
       "endColumn": 21,
       "endRow": 16,
@@ -5361,8 +5955,8 @@
     "type": "other"
   },
   {
-    "id": 144,
-    "parent": 142,
+    "id": 166,
+    "parent": 164,
     "range": {
       "endColumn": 22,
       "endRow": 16,
@@ -5379,8 +5973,8 @@
     "type": "other"
   },
   {
-    "id": 145,
-    "parent": 138,
+    "id": 167,
+    "parent": 160,
     "range": {
       "endColumn": 28,
       "endRow": 16,
@@ -5449,8 +6043,8 @@
     "type": "other"
   },
   {
-    "id": 146,
-    "parent": 145,
+    "id": 168,
+    "parent": 167,
     "range": {
       "endColumn": 27,
       "endRow": 16,
@@ -5467,8 +6061,8 @@
     "type": "other"
   },
   {
-    "id": 147,
-    "parent": 145,
+    "id": 169,
+    "parent": 167,
     "range": {
       "endColumn": 28,
       "endRow": 16,
@@ -5485,8 +6079,8 @@
     "type": "other"
   },
   {
-    "id": 148,
-    "parent": 138,
+    "id": 170,
+    "parent": 160,
     "range": {
       "endColumn": 32,
       "endRow": 16,
@@ -5554,8 +6148,8 @@
     "type": "other"
   },
   {
-    "id": 149,
-    "parent": 148,
+    "id": 171,
+    "parent": 170,
     "range": {
       "endColumn": 32,
       "endRow": 16,
@@ -5572,8 +6166,8 @@
     "type": "other"
   },
   {
-    "id": 150,
-    "parent": 97,
+    "id": 172,
+    "parent": 113,
     "range": {
       "endColumn": 6,
       "endRow": 20,
@@ -5617,8 +6211,8 @@
     "type": "other"
   },
   {
-    "id": 151,
-    "parent": 150,
+    "id": 173,
+    "parent": 172,
     "range": {
       "endColumn": 6,
       "endRow": 20,
@@ -5634,8 +6228,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -5646,8 +6241,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -5736,8 +6332,60 @@
     "type": "decl"
   },
   {
-    "id": 152,
-    "parent": 151,
+    "id": 174,
+    "parent": 173,
+    "range": {
+      "endColumn": 32,
+      "endRow": 16,
+      "startColumn": 32,
+      "startRow": 16
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 175,
+    "parent": 173,
+    "range": {
+      "endColumn": 32,
+      "endRow": 16,
+      "startColumn": 32,
+      "startRow": 16
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 176,
+    "parent": 173,
     "range": {
       "endColumn": 11,
       "endRow": 18,
@@ -5754,8 +6402,8 @@
     "type": "other"
   },
   {
-    "id": 153,
-    "parent": 151,
+    "id": 177,
+    "parent": 173,
     "range": {
       "endColumn": 18,
       "endRow": 18,
@@ -5772,8 +6420,8 @@
     "type": "other"
   },
   {
-    "id": 154,
-    "parent": 151,
+    "id": 178,
+    "parent": 173,
     "range": {
       "endColumn": 6,
       "endRow": 20,
@@ -5831,8 +6479,8 @@
     "type": "other"
   },
   {
-    "id": 155,
-    "parent": 154,
+    "id": 179,
+    "parent": 178,
     "range": {
       "endColumn": 20,
       "endRow": 18,
@@ -5849,8 +6497,8 @@
     "type": "other"
   },
   {
-    "id": 156,
-    "parent": 154,
+    "id": 180,
+    "parent": 178,
     "range": {
       "endColumn": 35,
       "endRow": 19,
@@ -5875,8 +6523,8 @@
     "type": "collection"
   },
   {
-    "id": 157,
-    "parent": 156,
+    "id": 181,
+    "parent": 180,
     "range": {
       "endColumn": 35,
       "endRow": 19,
@@ -5920,8 +6568,8 @@
     "type": "other"
   },
   {
-    "id": 158,
-    "parent": 157,
+    "id": 182,
+    "parent": 181,
     "range": {
       "endColumn": 35,
       "endRow": 19,
@@ -5937,8 +6585,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -5949,8 +6598,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -5990,8 +6640,60 @@
     "type": "decl"
   },
   {
-    "id": 159,
-    "parent": 158,
+    "id": 183,
+    "parent": 182,
+    "range": {
+      "endColumn": 20,
+      "endRow": 18,
+      "startColumn": 20,
+      "startRow": 18
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 184,
+    "parent": 182,
+    "range": {
+      "endColumn": 20,
+      "endRow": 18,
+      "startColumn": 20,
+      "startRow": 18
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 185,
+    "parent": 182,
     "range": {
       "endColumn": 10,
       "endRow": 19,
@@ -6008,8 +6710,8 @@
     "type": "other"
   },
   {
-    "id": 160,
-    "parent": 158,
+    "id": 186,
+    "parent": 182,
     "range": {
       "endColumn": 35,
       "endRow": 19,
@@ -6034,8 +6736,8 @@
     "type": "collection"
   },
   {
-    "id": 161,
-    "parent": 160,
+    "id": 187,
+    "parent": 186,
     "range": {
       "endColumn": 22,
       "endRow": 19,
@@ -6117,8 +6819,8 @@
     "type": "other"
   },
   {
-    "id": 162,
-    "parent": 161,
+    "id": 188,
+    "parent": 187,
     "range": {
       "endColumn": 16,
       "endRow": 19,
@@ -6150,8 +6852,8 @@
     "type": "pattern"
   },
   {
-    "id": 163,
-    "parent": 162,
+    "id": 189,
+    "parent": 188,
     "range": {
       "endColumn": 16,
       "endRow": 19,
@@ -6168,8 +6870,8 @@
     "type": "other"
   },
   {
-    "id": 164,
-    "parent": 161,
+    "id": 190,
+    "parent": 187,
     "range": {
       "endColumn": 21,
       "endRow": 19,
@@ -6214,8 +6916,8 @@
     "type": "other"
   },
   {
-    "id": 165,
-    "parent": 164,
+    "id": 191,
+    "parent": 190,
     "range": {
       "endColumn": 17,
       "endRow": 19,
@@ -6232,8 +6934,8 @@
     "type": "other"
   },
   {
-    "id": 166,
-    "parent": 164,
+    "id": 192,
+    "parent": 190,
     "range": {
       "endColumn": 21,
       "endRow": 19,
@@ -6277,8 +6979,8 @@
     "type": "type"
   },
   {
-    "id": 167,
-    "parent": 166,
+    "id": 193,
+    "parent": 192,
     "range": {
       "endColumn": 21,
       "endRow": 19,
@@ -6295,8 +6997,8 @@
     "type": "other"
   },
   {
-    "id": 168,
-    "parent": 161,
+    "id": 194,
+    "parent": 187,
     "range": {
       "endColumn": 22,
       "endRow": 19,
@@ -6313,8 +7015,8 @@
     "type": "other"
   },
   {
-    "id": 169,
-    "parent": 160,
+    "id": 195,
+    "parent": 186,
     "range": {
       "endColumn": 35,
       "endRow": 19,
@@ -6395,8 +7097,8 @@
     "type": "other"
   },
   {
-    "id": 170,
-    "parent": 169,
+    "id": 196,
+    "parent": 195,
     "range": {
       "endColumn": 29,
       "endRow": 19,
@@ -6428,8 +7130,8 @@
     "type": "pattern"
   },
   {
-    "id": 171,
-    "parent": 170,
+    "id": 197,
+    "parent": 196,
     "range": {
       "endColumn": 29,
       "endRow": 19,
@@ -6446,8 +7148,8 @@
     "type": "other"
   },
   {
-    "id": 172,
-    "parent": 169,
+    "id": 198,
+    "parent": 195,
     "range": {
       "endColumn": 35,
       "endRow": 19,
@@ -6492,8 +7194,8 @@
     "type": "other"
   },
   {
-    "id": 173,
-    "parent": 172,
+    "id": 199,
+    "parent": 198,
     "range": {
       "endColumn": 30,
       "endRow": 19,
@@ -6510,8 +7212,8 @@
     "type": "other"
   },
   {
-    "id": 174,
-    "parent": 172,
+    "id": 200,
+    "parent": 198,
     "range": {
       "endColumn": 35,
       "endRow": 19,
@@ -6556,8 +7258,8 @@
     "type": "type"
   },
   {
-    "id": 175,
-    "parent": 174,
+    "id": 201,
+    "parent": 200,
     "range": {
       "endColumn": 34,
       "endRow": 19,
@@ -6601,8 +7303,8 @@
     "type": "type"
   },
   {
-    "id": 176,
-    "parent": 175,
+    "id": 202,
+    "parent": 201,
     "range": {
       "endColumn": 34,
       "endRow": 19,
@@ -6619,8 +7321,8 @@
     "type": "other"
   },
   {
-    "id": 177,
-    "parent": 174,
+    "id": 203,
+    "parent": 200,
     "range": {
       "endColumn": 35,
       "endRow": 19,
@@ -6637,8 +7339,8 @@
     "type": "other"
   },
   {
-    "id": 178,
-    "parent": 154,
+    "id": 204,
+    "parent": 178,
     "range": {
       "endColumn": 6,
       "endRow": 20,
@@ -6655,8 +7357,8 @@
     "type": "other"
   },
   {
-    "id": 179,
-    "parent": 97,
+    "id": 205,
+    "parent": 113,
     "range": {
       "endColumn": 6,
       "endRow": 31,
@@ -6700,8 +7402,8 @@
     "type": "other"
   },
   {
-    "id": 180,
-    "parent": 179,
+    "id": 206,
+    "parent": 205,
     "range": {
       "endColumn": 6,
       "endRow": 31,
@@ -6717,8 +7419,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -6729,8 +7432,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -6770,8 +7474,60 @@
     "type": "decl"
   },
   {
-    "id": 181,
-    "parent": 180,
+    "id": 207,
+    "parent": 206,
+    "range": {
+      "endColumn": 6,
+      "endRow": 20,
+      "startColumn": 6,
+      "startRow": 20
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 208,
+    "parent": 206,
+    "range": {
+      "endColumn": 6,
+      "endRow": 20,
+      "startColumn": 6,
+      "startRow": 20
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 209,
+    "parent": 206,
     "range": {
       "endColumn": 8,
       "endRow": 22,
@@ -6788,8 +7544,8 @@
     "type": "other"
   },
   {
-    "id": 182,
-    "parent": 180,
+    "id": 210,
+    "parent": 206,
     "range": {
       "endColumn": 6,
       "endRow": 31,
@@ -6814,8 +7570,8 @@
     "type": "collection"
   },
   {
-    "id": 183,
-    "parent": 182,
+    "id": 211,
+    "parent": 210,
     "range": {
       "endColumn": 6,
       "endRow": 31,
@@ -6897,8 +7653,8 @@
     "type": "other"
   },
   {
-    "id": 184,
-    "parent": 183,
+    "id": 212,
+    "parent": 211,
     "range": {
       "endColumn": 15,
       "endRow": 22,
@@ -6930,8 +7686,8 @@
     "type": "pattern"
   },
   {
-    "id": 185,
-    "parent": 184,
+    "id": 213,
+    "parent": 212,
     "range": {
       "endColumn": 15,
       "endRow": 22,
@@ -6948,8 +7704,8 @@
     "type": "other"
   },
   {
-    "id": 186,
-    "parent": 183,
+    "id": 214,
+    "parent": 211,
     "range": {
       "endColumn": 23,
       "endRow": 22,
@@ -6994,8 +7750,8 @@
     "type": "other"
   },
   {
-    "id": 187,
-    "parent": 186,
+    "id": 215,
+    "parent": 214,
     "range": {
       "endColumn": 16,
       "endRow": 22,
@@ -7012,8 +7768,8 @@
     "type": "other"
   },
   {
-    "id": 188,
-    "parent": 186,
+    "id": 216,
+    "parent": 214,
     "range": {
       "endColumn": 23,
       "endRow": 22,
@@ -7057,8 +7813,8 @@
     "type": "type"
   },
   {
-    "id": 189,
-    "parent": 188,
+    "id": 217,
+    "parent": 216,
     "range": {
       "endColumn": 23,
       "endRow": 22,
@@ -7075,8 +7831,8 @@
     "type": "other"
   },
   {
-    "id": 190,
-    "parent": 183,
+    "id": 218,
+    "parent": 211,
     "range": {
       "endColumn": 6,
       "endRow": 31,
@@ -7134,8 +7890,8 @@
     "type": "other"
   },
   {
-    "id": 191,
-    "parent": 190,
+    "id": 219,
+    "parent": 218,
     "range": {
       "endColumn": 25,
       "endRow": 22,
@@ -7152,8 +7908,8 @@
     "type": "other"
   },
   {
-    "id": 192,
-    "parent": 190,
+    "id": 220,
+    "parent": 218,
     "range": {
       "endColumn": 8,
       "endRow": 30,
@@ -7178,8 +7934,8 @@
     "type": "collection"
   },
   {
-    "id": 193,
-    "parent": 192,
+    "id": 221,
+    "parent": 220,
     "range": {
       "endColumn": 8,
       "endRow": 30,
@@ -7223,8 +7979,8 @@
     "type": "other"
   },
   {
-    "id": 194,
-    "parent": 193,
+    "id": 222,
+    "parent": 221,
     "range": {
       "endColumn": 8,
       "endRow": 30,
@@ -7256,8 +8012,8 @@
     "type": "other"
   },
   {
-    "id": 195,
-    "parent": 194,
+    "id": 223,
+    "parent": 222,
     "range": {
       "endColumn": 8,
       "endRow": 30,
@@ -7341,8 +8097,8 @@
     "type": "expr"
   },
   {
-    "id": 196,
-    "parent": 195,
+    "id": 224,
+    "parent": 223,
     "range": {
       "endColumn": 13,
       "endRow": 23,
@@ -7359,8 +8115,8 @@
     "type": "other"
   },
   {
-    "id": 197,
-    "parent": 195,
+    "id": 225,
+    "parent": 223,
     "range": {
       "endColumn": 18,
       "endRow": 23,
@@ -7404,8 +8160,8 @@
     "type": "expr"
   },
   {
-    "id": 198,
-    "parent": 197,
+    "id": 226,
+    "parent": 225,
     "range": {
       "endColumn": 18,
       "endRow": 23,
@@ -7422,8 +8178,8 @@
     "type": "other"
   },
   {
-    "id": 199,
-    "parent": 195,
+    "id": 227,
+    "parent": 223,
     "range": {
       "endColumn": 20,
       "endRow": 23,
@@ -7440,8 +8196,8 @@
     "type": "other"
   },
   {
-    "id": 200,
-    "parent": 195,
+    "id": 228,
+    "parent": 223,
     "range": {
       "endColumn": 57,
       "endRow": 29,
@@ -7466,8 +8222,8 @@
     "type": "collection"
   },
   {
-    "id": 201,
-    "parent": 200,
+    "id": 229,
+    "parent": 228,
     "range": {
       "endColumn": 44,
       "endRow": 25,
@@ -7524,8 +8280,8 @@
     "type": "other"
   },
   {
-    "id": 202,
-    "parent": 201,
+    "id": 230,
+    "parent": 229,
     "range": {
       "endColumn": 17,
       "endRow": 24,
@@ -7583,8 +8339,8 @@
     "type": "other"
   },
   {
-    "id": 203,
-    "parent": 202,
+    "id": 231,
+    "parent": 230,
     "range": {
       "endColumn": 11,
       "endRow": 24,
@@ -7601,8 +8357,8 @@
     "type": "other"
   },
   {
-    "id": 204,
-    "parent": 202,
+    "id": 232,
+    "parent": 230,
     "range": {
       "endColumn": 16,
       "endRow": 24,
@@ -7627,8 +8383,8 @@
     "type": "collection"
   },
   {
-    "id": 205,
-    "parent": 204,
+    "id": 233,
+    "parent": 232,
     "range": {
       "endColumn": 16,
       "endRow": 24,
@@ -7684,8 +8440,8 @@
     "type": "other"
   },
   {
-    "id": 206,
-    "parent": 205,
+    "id": 234,
+    "parent": 233,
     "range": {
       "endColumn": 16,
       "endRow": 24,
@@ -7717,8 +8473,8 @@
     "type": "pattern"
   },
   {
-    "id": 207,
-    "parent": 206,
+    "id": 235,
+    "parent": 234,
     "range": {
       "endColumn": 16,
       "endRow": 24,
@@ -7775,8 +8531,8 @@
     "type": "expr"
   },
   {
-    "id": 208,
-    "parent": 207,
+    "id": 236,
+    "parent": 235,
     "range": {
       "endColumn": 13,
       "endRow": 24,
@@ -7793,8 +8549,8 @@
     "type": "other"
   },
   {
-    "id": 209,
-    "parent": 207,
+    "id": 237,
+    "parent": 235,
     "range": {
       "endColumn": 16,
       "endRow": 24,
@@ -7838,8 +8594,8 @@
     "type": "expr"
   },
   {
-    "id": 210,
-    "parent": 209,
+    "id": 238,
+    "parent": 237,
     "range": {
       "endColumn": 16,
       "endRow": 24,
@@ -7856,8 +8612,8 @@
     "type": "other"
   },
   {
-    "id": 211,
-    "parent": 202,
+    "id": 239,
+    "parent": 230,
     "range": {
       "endColumn": 17,
       "endRow": 24,
@@ -7874,8 +8630,8 @@
     "type": "other"
   },
   {
-    "id": 212,
-    "parent": 201,
+    "id": 240,
+    "parent": 229,
     "range": {
       "endColumn": 44,
       "endRow": 25,
@@ -7900,8 +8656,8 @@
     "type": "collection"
   },
   {
-    "id": 213,
-    "parent": 212,
+    "id": 241,
+    "parent": 240,
     "range": {
       "endColumn": 44,
       "endRow": 25,
@@ -7945,8 +8701,8 @@
     "type": "other"
   },
   {
-    "id": 214,
-    "parent": 213,
+    "id": 242,
+    "parent": 241,
     "range": {
       "endColumn": 44,
       "endRow": 25,
@@ -7991,8 +8747,8 @@
     "type": "other"
   },
   {
-    "id": 215,
-    "parent": 214,
+    "id": 243,
+    "parent": 242,
     "range": {
       "endColumn": 15,
       "endRow": 25,
@@ -8009,8 +8765,8 @@
     "type": "other"
   },
   {
-    "id": 216,
-    "parent": 214,
+    "id": 244,
+    "parent": 242,
     "range": {
       "endColumn": 44,
       "endRow": 25,
@@ -8090,8 +8846,9 @@
       },
       {
         "name": "additionalTrailingClosures",
+        "ref": "MultipleTrailingClosureElementListSyntax",
         "value": {
-          "text": "nil"
+          "text": "MultipleTrailingClosureElementListSyntax"
         }
       },
       {
@@ -8105,8 +8862,8 @@
     "type": "expr"
   },
   {
-    "id": 217,
-    "parent": 216,
+    "id": 245,
+    "parent": 244,
     "range": {
       "endColumn": 22,
       "endRow": 25,
@@ -8150,8 +8907,8 @@
     "type": "expr"
   },
   {
-    "id": 218,
-    "parent": 217,
+    "id": 246,
+    "parent": 245,
     "range": {
       "endColumn": 22,
       "endRow": 25,
@@ -8168,8 +8925,8 @@
     "type": "other"
   },
   {
-    "id": 219,
-    "parent": 216,
+    "id": 247,
+    "parent": 244,
     "range": {
       "endColumn": 23,
       "endRow": 25,
@@ -8186,8 +8943,8 @@
     "type": "other"
   },
   {
-    "id": 220,
-    "parent": 216,
+    "id": 248,
+    "parent": 244,
     "range": {
       "endColumn": 43,
       "endRow": 25,
@@ -8212,8 +8969,8 @@
     "type": "collection"
   },
   {
-    "id": 221,
-    "parent": 220,
+    "id": 249,
+    "parent": 248,
     "range": {
       "endColumn": 32,
       "endRow": 25,
@@ -8284,8 +9041,8 @@
     "type": "other"
   },
   {
-    "id": 222,
-    "parent": 221,
+    "id": 250,
+    "parent": 249,
     "range": {
       "endColumn": 28,
       "endRow": 25,
@@ -8302,8 +9059,8 @@
     "type": "other"
   },
   {
-    "id": 223,
-    "parent": 221,
+    "id": 251,
+    "parent": 249,
     "range": {
       "endColumn": 29,
       "endRow": 25,
@@ -8320,8 +9077,8 @@
     "type": "other"
   },
   {
-    "id": 224,
-    "parent": 221,
+    "id": 252,
+    "parent": 249,
     "range": {
       "endColumn": 31,
       "endRow": 25,
@@ -8353,8 +9110,8 @@
     "type": "expr"
   },
   {
-    "id": 225,
-    "parent": 224,
+    "id": 253,
+    "parent": 252,
     "range": {
       "endColumn": 31,
       "endRow": 25,
@@ -8371,8 +9128,8 @@
     "type": "other"
   },
   {
-    "id": 226,
-    "parent": 221,
+    "id": 254,
+    "parent": 249,
     "range": {
       "endColumn": 32,
       "endRow": 25,
@@ -8389,8 +9146,8 @@
     "type": "other"
   },
   {
-    "id": 227,
-    "parent": 220,
+    "id": 255,
+    "parent": 248,
     "range": {
       "endColumn": 43,
       "endRow": 25,
@@ -8460,8 +9217,8 @@
     "type": "other"
   },
   {
-    "id": 228,
-    "parent": 227,
+    "id": 256,
+    "parent": 255,
     "range": {
       "endColumn": 39,
       "endRow": 25,
@@ -8478,8 +9235,8 @@
     "type": "other"
   },
   {
-    "id": 229,
-    "parent": 227,
+    "id": 257,
+    "parent": 255,
     "range": {
       "endColumn": 40,
       "endRow": 25,
@@ -8496,8 +9253,8 @@
     "type": "other"
   },
   {
-    "id": 230,
-    "parent": 227,
+    "id": 258,
+    "parent": 255,
     "range": {
       "endColumn": 43,
       "endRow": 25,
@@ -8529,8 +9286,8 @@
     "type": "expr"
   },
   {
-    "id": 231,
-    "parent": 230,
+    "id": 259,
+    "parent": 258,
     "range": {
       "endColumn": 43,
       "endRow": 25,
@@ -8547,8 +9304,8 @@
     "type": "other"
   },
   {
-    "id": 232,
-    "parent": 216,
+    "id": 260,
+    "parent": 244,
     "range": {
       "endColumn": 44,
       "endRow": 25,
@@ -8565,8 +9322,34 @@
     "type": "other"
   },
   {
-    "id": 233,
-    "parent": 200,
+    "id": 261,
+    "parent": 244,
+    "range": {
+      "endColumn": 44,
+      "endRow": 25,
+      "startColumn": 44,
+      "startRow": 25
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "MultipleTrailingClosureElementSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "MultipleTrailingClosureElementList",
+    "type": "collection"
+  },
+  {
+    "id": 262,
+    "parent": 228,
     "range": {
       "endColumn": 46,
       "endRow": 27,
@@ -8623,8 +9406,8 @@
     "type": "other"
   },
   {
-    "id": 234,
-    "parent": 233,
+    "id": 263,
+    "parent": 262,
     "range": {
       "endColumn": 33,
       "endRow": 26,
@@ -8682,8 +9465,8 @@
     "type": "other"
   },
   {
-    "id": 235,
-    "parent": 234,
+    "id": 264,
+    "parent": 263,
     "range": {
       "endColumn": 11,
       "endRow": 26,
@@ -8700,8 +9483,8 @@
     "type": "other"
   },
   {
-    "id": 236,
-    "parent": 234,
+    "id": 265,
+    "parent": 263,
     "range": {
       "endColumn": 32,
       "endRow": 26,
@@ -8726,8 +9509,8 @@
     "type": "collection"
   },
   {
-    "id": 237,
-    "parent": 236,
+    "id": 266,
+    "parent": 265,
     "range": {
       "endColumn": 18,
       "endRow": 26,
@@ -8784,8 +9567,8 @@
     "type": "other"
   },
   {
-    "id": 238,
-    "parent": 237,
+    "id": 267,
+    "parent": 266,
     "range": {
       "endColumn": 17,
       "endRow": 26,
@@ -8817,8 +9600,8 @@
     "type": "pattern"
   },
   {
-    "id": 239,
-    "parent": 238,
+    "id": 268,
+    "parent": 267,
     "range": {
       "endColumn": 17,
       "endRow": 26,
@@ -8875,8 +9658,8 @@
     "type": "expr"
   },
   {
-    "id": 240,
-    "parent": 239,
+    "id": 269,
+    "parent": 268,
     "range": {
       "endColumn": 13,
       "endRow": 26,
@@ -8893,8 +9676,8 @@
     "type": "other"
   },
   {
-    "id": 241,
-    "parent": 239,
+    "id": 270,
+    "parent": 268,
     "range": {
       "endColumn": 17,
       "endRow": 26,
@@ -8938,8 +9721,8 @@
     "type": "expr"
   },
   {
-    "id": 242,
-    "parent": 241,
+    "id": 271,
+    "parent": 270,
     "range": {
       "endColumn": 17,
       "endRow": 26,
@@ -8956,8 +9739,8 @@
     "type": "other"
   },
   {
-    "id": 243,
-    "parent": 237,
+    "id": 272,
+    "parent": 266,
     "range": {
       "endColumn": 18,
       "endRow": 26,
@@ -8974,8 +9757,8 @@
     "type": "other"
   },
   {
-    "id": 244,
-    "parent": 236,
+    "id": 273,
+    "parent": 265,
     "range": {
       "endColumn": 26,
       "endRow": 26,
@@ -9032,8 +9815,8 @@
     "type": "other"
   },
   {
-    "id": 245,
-    "parent": 244,
+    "id": 274,
+    "parent": 273,
     "range": {
       "endColumn": 25,
       "endRow": 26,
@@ -9065,8 +9848,8 @@
     "type": "pattern"
   },
   {
-    "id": 246,
-    "parent": 245,
+    "id": 275,
+    "parent": 274,
     "range": {
       "endColumn": 25,
       "endRow": 26,
@@ -9123,8 +9906,8 @@
     "type": "expr"
   },
   {
-    "id": 247,
-    "parent": 246,
+    "id": 276,
+    "parent": 275,
     "range": {
       "endColumn": 20,
       "endRow": 26,
@@ -9141,8 +9924,8 @@
     "type": "other"
   },
   {
-    "id": 248,
-    "parent": 246,
+    "id": 277,
+    "parent": 275,
     "range": {
       "endColumn": 25,
       "endRow": 26,
@@ -9186,8 +9969,8 @@
     "type": "expr"
   },
   {
-    "id": 249,
-    "parent": 248,
+    "id": 278,
+    "parent": 277,
     "range": {
       "endColumn": 25,
       "endRow": 26,
@@ -9204,8 +9987,8 @@
     "type": "other"
   },
   {
-    "id": 250,
-    "parent": 244,
+    "id": 279,
+    "parent": 273,
     "range": {
       "endColumn": 26,
       "endRow": 26,
@@ -9222,8 +10005,8 @@
     "type": "other"
   },
   {
-    "id": 251,
-    "parent": 236,
+    "id": 280,
+    "parent": 265,
     "range": {
       "endColumn": 32,
       "endRow": 26,
@@ -9279,8 +10062,8 @@
     "type": "other"
   },
   {
-    "id": 252,
-    "parent": 251,
+    "id": 281,
+    "parent": 280,
     "range": {
       "endColumn": 32,
       "endRow": 26,
@@ -9312,8 +10095,8 @@
     "type": "pattern"
   },
   {
-    "id": 253,
-    "parent": 252,
+    "id": 282,
+    "parent": 281,
     "range": {
       "endColumn": 32,
       "endRow": 26,
@@ -9370,8 +10153,8 @@
     "type": "expr"
   },
   {
-    "id": 254,
-    "parent": 253,
+    "id": 283,
+    "parent": 282,
     "range": {
       "endColumn": 28,
       "endRow": 26,
@@ -9388,8 +10171,8 @@
     "type": "other"
   },
   {
-    "id": 255,
-    "parent": 253,
+    "id": 284,
+    "parent": 282,
     "range": {
       "endColumn": 32,
       "endRow": 26,
@@ -9433,8 +10216,8 @@
     "type": "expr"
   },
   {
-    "id": 256,
-    "parent": 255,
+    "id": 285,
+    "parent": 284,
     "range": {
       "endColumn": 32,
       "endRow": 26,
@@ -9451,8 +10234,8 @@
     "type": "other"
   },
   {
-    "id": 257,
-    "parent": 234,
+    "id": 286,
+    "parent": 263,
     "range": {
       "endColumn": 33,
       "endRow": 26,
@@ -9469,8 +10252,8 @@
     "type": "other"
   },
   {
-    "id": 258,
-    "parent": 233,
+    "id": 287,
+    "parent": 262,
     "range": {
       "endColumn": 46,
       "endRow": 27,
@@ -9495,8 +10278,8 @@
     "type": "collection"
   },
   {
-    "id": 259,
-    "parent": 258,
+    "id": 288,
+    "parent": 287,
     "range": {
       "endColumn": 46,
       "endRow": 27,
@@ -9540,8 +10323,8 @@
     "type": "other"
   },
   {
-    "id": 260,
-    "parent": 259,
+    "id": 289,
+    "parent": 288,
     "range": {
       "endColumn": 46,
       "endRow": 27,
@@ -9586,8 +10369,8 @@
     "type": "other"
   },
   {
-    "id": 261,
-    "parent": 260,
+    "id": 290,
+    "parent": 289,
     "range": {
       "endColumn": 15,
       "endRow": 27,
@@ -9604,8 +10387,8 @@
     "type": "other"
   },
   {
-    "id": 262,
-    "parent": 260,
+    "id": 291,
+    "parent": 289,
     "range": {
       "endColumn": 46,
       "endRow": 27,
@@ -9685,8 +10468,9 @@
       },
       {
         "name": "additionalTrailingClosures",
+        "ref": "MultipleTrailingClosureElementListSyntax",
         "value": {
-          "text": "nil"
+          "text": "MultipleTrailingClosureElementListSyntax"
         }
       },
       {
@@ -9700,8 +10484,8 @@
     "type": "expr"
   },
   {
-    "id": 263,
-    "parent": 262,
+    "id": 292,
+    "parent": 291,
     "range": {
       "endColumn": 22,
       "endRow": 27,
@@ -9745,8 +10529,8 @@
     "type": "expr"
   },
   {
-    "id": 264,
-    "parent": 263,
+    "id": 293,
+    "parent": 292,
     "range": {
       "endColumn": 22,
       "endRow": 27,
@@ -9763,8 +10547,8 @@
     "type": "other"
   },
   {
-    "id": 265,
-    "parent": 262,
+    "id": 294,
+    "parent": 291,
     "range": {
       "endColumn": 23,
       "endRow": 27,
@@ -9781,8 +10565,8 @@
     "type": "other"
   },
   {
-    "id": 266,
-    "parent": 262,
+    "id": 295,
+    "parent": 291,
     "range": {
       "endColumn": 45,
       "endRow": 27,
@@ -9807,8 +10591,8 @@
     "type": "collection"
   },
   {
-    "id": 267,
-    "parent": 266,
+    "id": 296,
+    "parent": 295,
     "range": {
       "endColumn": 33,
       "endRow": 27,
@@ -9879,8 +10663,8 @@
     "type": "other"
   },
   {
-    "id": 268,
-    "parent": 267,
+    "id": 297,
+    "parent": 296,
     "range": {
       "endColumn": 28,
       "endRow": 27,
@@ -9897,8 +10681,8 @@
     "type": "other"
   },
   {
-    "id": 269,
-    "parent": 267,
+    "id": 298,
+    "parent": 296,
     "range": {
       "endColumn": 29,
       "endRow": 27,
@@ -9915,8 +10699,8 @@
     "type": "other"
   },
   {
-    "id": 270,
-    "parent": 267,
+    "id": 299,
+    "parent": 296,
     "range": {
       "endColumn": 32,
       "endRow": 27,
@@ -9948,8 +10732,8 @@
     "type": "expr"
   },
   {
-    "id": 271,
-    "parent": 270,
+    "id": 300,
+    "parent": 299,
     "range": {
       "endColumn": 32,
       "endRow": 27,
@@ -9966,8 +10750,8 @@
     "type": "other"
   },
   {
-    "id": 272,
-    "parent": 267,
+    "id": 301,
+    "parent": 296,
     "range": {
       "endColumn": 33,
       "endRow": 27,
@@ -9984,996 +10768,13 @@
     "type": "other"
   },
   {
-    "id": 273,
-    "parent": 266,
-    "range": {
-      "endColumn": 45,
-      "endRow": 27,
-      "startColumn": 34,
-      "startRow": 27
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeLabel",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "label",
-        "value": {
-          "kind": "identifier(&quot;second&quot;)",
-          "text": "second"
-        }
-      },
-      {
-        "name": "unexpectedBetweenLabelAndColon",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "colon",
-        "value": {
-          "kind": "colon",
-          "text": ":"
-        }
-      },
-      {
-        "name": "unexpectedBetweenColonAndExpression",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "expression",
-        "ref": "NilLiteralExprSyntax",
-        "value": {
-          "text": "NilLiteralExprSyntax"
-        }
-      },
-      {
-        "name": "unexpectedBetweenExpressionAndTrailingComma",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "trailingComma",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterTrailingComma",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "LabeledExpr",
-    "type": "other"
-  },
-  {
-    "id": 274,
-    "parent": 273,
-    "range": {
-      "endColumn": 40,
-      "endRow": 27,
-      "startColumn": 34,
-      "startRow": 27
-    },
-    "structure": [],
-    "text": "second",
-    "token": {
-      "kind": "identifier(&quot;second&quot;)",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 275,
-    "parent": 273,
-    "range": {
-      "endColumn": 41,
-      "endRow": 27,
-      "startColumn": 40,
-      "startRow": 27
-    },
-    "structure": [],
-    "text": ":",
-    "token": {
-      "kind": "colon",
-      "leadingTrivia": "",
-      "trailingTrivia": "<span class='whitespace'>␣</span>"
-    },
-    "type": "other"
-  },
-  {
-    "id": 276,
-    "parent": 273,
-    "range": {
-      "endColumn": 45,
-      "endRow": 27,
-      "startColumn": 42,
-      "startRow": 27
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeNilKeyword",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "nilKeyword",
-        "value": {
-          "kind": "keyword(SwiftSyntax.Keyword.nil)",
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterNilKeyword",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "NilLiteralExpr",
-    "type": "expr"
-  },
-  {
-    "id": 277,
-    "parent": 276,
-    "range": {
-      "endColumn": 45,
-      "endRow": 27,
-      "startColumn": 42,
-      "startRow": 27
-    },
-    "structure": [],
-    "text": "nil",
-    "token": {
-      "kind": "keyword(SwiftSyntax.Keyword.nil)",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 278,
-    "parent": 262,
-    "range": {
-      "endColumn": 46,
-      "endRow": 27,
-      "startColumn": 45,
-      "startRow": 27
-    },
-    "structure": [],
-    "text": ")",
-    "token": {
-      "kind": "rightParen",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 279,
-    "parent": 200,
-    "range": {
-      "endColumn": 57,
-      "endRow": 29,
-      "startColumn": 7,
-      "startRow": 28
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeAttribute",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "attribute",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedBetweenAttributeAndLabel",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "label",
-        "ref": "SwitchDefaultLabelSyntax",
-        "value": {
-          "text": "SwitchDefaultLabelSyntax"
-        }
-      },
-      {
-        "name": "unexpectedBetweenLabelAndStatements",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "statements",
-        "ref": "CodeBlockItemListSyntax",
-        "value": {
-          "text": "CodeBlockItemListSyntax"
-        }
-      },
-      {
-        "name": "unexpectedAfterStatements",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "SwitchCase",
-    "type": "other"
-  },
-  {
-    "id": 280,
-    "parent": 279,
-    "range": {
-      "endColumn": 15,
-      "endRow": 28,
-      "startColumn": 7,
-      "startRow": 28
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeDefaultKeyword",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "defaultKeyword",
-        "value": {
-          "kind": "keyword(SwiftSyntax.Keyword.default)",
-          "text": "default"
-        }
-      },
-      {
-        "name": "unexpectedBetweenDefaultKeywordAndColon",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "colon",
-        "value": {
-          "kind": "colon",
-          "text": ":"
-        }
-      },
-      {
-        "name": "unexpectedAfterColon",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "SwitchDefaultLabel",
-    "type": "other"
-  },
-  {
-    "id": 281,
-    "parent": 280,
-    "range": {
-      "endColumn": 14,
-      "endRow": 28,
-      "startColumn": 7,
-      "startRow": 28
-    },
-    "structure": [],
-    "text": "default",
-    "token": {
-      "kind": "keyword(SwiftSyntax.Keyword.default)",
-      "leadingTrivia": "<span class='newline'>↲</span><br/><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span>",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 282,
-    "parent": 280,
-    "range": {
-      "endColumn": 15,
-      "endRow": 28,
-      "startColumn": 14,
-      "startRow": 28
-    },
-    "structure": [],
-    "text": ":",
-    "token": {
-      "kind": "colon",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 283,
-    "parent": 279,
-    "range": {
-      "endColumn": 57,
-      "endRow": 29,
-      "startColumn": 9,
-      "startRow": 29
-    },
-    "structure": [
-      {
-        "name": "Element",
-        "value": {
-          "text": "CodeBlockItemSyntax"
-        }
-      },
-      {
-        "name": "Count",
-        "value": {
-          "text": "1"
-        }
-      }
-    ],
-    "text": "CodeBlockItemList",
-    "type": "collection"
-  },
-  {
-    "id": 284,
-    "parent": 283,
-    "range": {
-      "endColumn": 57,
-      "endRow": 29,
-      "startColumn": 9,
-      "startRow": 29
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeItem",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "item",
-        "ref": "ReturnStmtSyntax",
-        "value": {
-          "text": "ReturnStmtSyntax"
-        }
-      },
-      {
-        "name": "unexpectedBetweenItemAndSemicolon",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "semicolon",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterSemicolon",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "CodeBlockItem",
-    "type": "other"
-  },
-  {
-    "id": 285,
-    "parent": 284,
-    "range": {
-      "endColumn": 57,
-      "endRow": 29,
-      "startColumn": 9,
-      "startRow": 29
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeReturnKeyword",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "returnKeyword",
-        "value": {
-          "kind": "keyword(SwiftSyntax.Keyword.return)",
-          "text": "return"
-        }
-      },
-      {
-        "name": "unexpectedBetweenReturnKeywordAndExpression",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "expression",
-        "ref": "FunctionCallExprSyntax",
-        "value": {
-          "text": "FunctionCallExprSyntax"
-        }
-      },
-      {
-        "name": "unexpectedAfterExpression",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "ReturnStmt",
-    "type": "other"
-  },
-  {
-    "id": 286,
-    "parent": 285,
-    "range": {
-      "endColumn": 15,
-      "endRow": 29,
-      "startColumn": 9,
-      "startRow": 29
-    },
-    "structure": [],
-    "text": "return",
-    "token": {
-      "kind": "keyword(SwiftSyntax.Keyword.return)",
-      "leadingTrivia": "<span class='newline'>↲</span><br/><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span>",
-      "trailingTrivia": "<span class='whitespace'>␣</span>"
-    },
-    "type": "other"
-  },
-  {
-    "id": 287,
-    "parent": 285,
-    "range": {
-      "endColumn": 57,
-      "endRow": 29,
-      "startColumn": 16,
-      "startRow": 29
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeCalledExpression",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "calledExpression",
-        "ref": "DeclReferenceExprSyntax",
-        "value": {
-          "text": "DeclReferenceExprSyntax"
-        }
-      },
-      {
-        "name": "unexpectedBetweenCalledExpressionAndLeftParen",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "leftParen",
-        "value": {
-          "kind": "leftParen",
-          "text": "("
-        }
-      },
-      {
-        "name": "unexpectedBetweenLeftParenAndArguments",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "arguments",
-        "ref": "LabeledExprListSyntax",
-        "value": {
-          "text": "LabeledExprListSyntax"
-        }
-      },
-      {
-        "name": "unexpectedBetweenArgumentsAndRightParen",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "rightParen",
-        "value": {
-          "kind": "rightParen",
-          "text": ")"
-        }
-      },
-      {
-        "name": "unexpectedBetweenRightParenAndTrailingClosure",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "trailingClosure",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "additionalTrailingClosures",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterAdditionalTrailingClosures",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "FunctionCallExpr",
-    "type": "expr"
-  },
-  {
-    "id": 288,
-    "parent": 287,
-    "range": {
-      "endColumn": 22,
-      "endRow": 29,
-      "startColumn": 16,
-      "startRow": 29
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeBaseName",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "baseName",
-        "value": {
-          "kind": "identifier(&quot;Values&quot;)",
-          "text": "Values"
-        }
-      },
-      {
-        "name": "unexpectedBetweenBaseNameAndArgumentNames",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "argumentNames",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterArgumentNames",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "DeclReferenceExpr",
-    "type": "expr"
-  },
-  {
-    "id": 289,
-    "parent": 288,
-    "range": {
-      "endColumn": 22,
-      "endRow": 29,
-      "startColumn": 16,
-      "startRow": 29
-    },
-    "structure": [],
-    "text": "Values",
-    "token": {
-      "kind": "identifier(&quot;Values&quot;)",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 290,
-    "parent": 287,
-    "range": {
-      "endColumn": 23,
-      "endRow": 29,
-      "startColumn": 22,
-      "startRow": 29
-    },
-    "structure": [],
-    "text": "(",
-    "token": {
-      "kind": "leftParen",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 291,
-    "parent": 287,
-    "range": {
-      "endColumn": 56,
-      "endRow": 29,
-      "startColumn": 23,
-      "startRow": 29
-    },
-    "structure": [
-      {
-        "name": "Element",
-        "value": {
-          "text": "LabeledExprSyntax"
-        }
-      },
-      {
-        "name": "Count",
-        "value": {
-          "text": "2"
-        }
-      }
-    ],
-    "text": "LabeledExprList",
-    "type": "collection"
-  },
-  {
-    "id": 292,
-    "parent": 291,
-    "range": {
-      "endColumn": 44,
-      "endRow": 29,
-      "startColumn": 23,
-      "startRow": 29
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeLabel",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "label",
-        "value": {
-          "kind": "identifier(&quot;first&quot;)",
-          "text": "first"
-        }
-      },
-      {
-        "name": "unexpectedBetweenLabelAndColon",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "colon",
-        "value": {
-          "kind": "colon",
-          "text": ":"
-        }
-      },
-      {
-        "name": "unexpectedBetweenColonAndExpression",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "expression",
-        "ref": "MemberAccessExprSyntax",
-        "value": {
-          "text": "MemberAccessExprSyntax"
-        }
-      },
-      {
-        "name": "unexpectedBetweenExpressionAndTrailingComma",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "trailingComma",
-        "value": {
-          "kind": "comma",
-          "text": ","
-        }
-      },
-      {
-        "name": "unexpectedAfterTrailingComma",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "LabeledExpr",
-    "type": "other"
-  },
-  {
-    "id": 293,
-    "parent": 292,
-    "range": {
-      "endColumn": 28,
-      "endRow": 29,
-      "startColumn": 23,
-      "startRow": 29
-    },
-    "structure": [],
-    "text": "first",
-    "token": {
-      "kind": "identifier(&quot;first&quot;)",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 294,
-    "parent": 292,
-    "range": {
-      "endColumn": 29,
-      "endRow": 29,
-      "startColumn": 28,
-      "startRow": 29
-    },
-    "structure": [],
-    "text": ":",
-    "token": {
-      "kind": "colon",
-      "leadingTrivia": "",
-      "trailingTrivia": "<span class='whitespace'>␣</span>"
-    },
-    "type": "other"
-  },
-  {
-    "id": 295,
-    "parent": 292,
-    "range": {
-      "endColumn": 43,
-      "endRow": 29,
-      "startColumn": 30,
-      "startRow": 29
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeBase",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "base",
-        "ref": "DeclReferenceExprSyntax",
-        "value": {
-          "text": "DeclReferenceExprSyntax"
-        }
-      },
-      {
-        "name": "unexpectedBetweenBaseAndPeriod",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "period",
-        "value": {
-          "kind": "period",
-          "text": "."
-        }
-      },
-      {
-        "name": "unexpectedBetweenPeriodAndDeclName",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "declName",
-        "ref": "DeclReferenceExprSyntax",
-        "value": {
-          "text": "DeclReferenceExprSyntax"
-        }
-      },
-      {
-        "name": "unexpectedAfterDeclName",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "MemberAccessExpr",
-    "type": "expr"
-  },
-  {
-    "id": 296,
-    "parent": 295,
-    "range": {
-      "endColumn": 34,
-      "endRow": 29,
-      "startColumn": 30,
-      "startRow": 29
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeBaseName",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "baseName",
-        "value": {
-          "kind": "keyword(SwiftSyntax.Keyword.self)",
-          "text": "self"
-        }
-      },
-      {
-        "name": "unexpectedBetweenBaseNameAndArgumentNames",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "argumentNames",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterArgumentNames",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "DeclReferenceExpr",
-    "type": "expr"
-  },
-  {
-    "id": 297,
-    "parent": 296,
-    "range": {
-      "endColumn": 34,
-      "endRow": 29,
-      "startColumn": 30,
-      "startRow": 29
-    },
-    "structure": [],
-    "text": "self",
-    "token": {
-      "kind": "keyword(SwiftSyntax.Keyword.self)",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 298,
-    "parent": 295,
-    "range": {
-      "endColumn": 35,
-      "endRow": 29,
-      "startColumn": 34,
-      "startRow": 29
-    },
-    "structure": [],
-    "text": ".",
-    "token": {
-      "kind": "period",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 299,
-    "parent": 295,
-    "range": {
-      "endColumn": 43,
-      "endRow": 29,
-      "startColumn": 35,
-      "startRow": 29
-    },
-    "structure": [
-      {
-        "name": "unexpectedBeforeBaseName",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "baseName",
-        "value": {
-          "kind": "identifier(&quot;rawValue&quot;)",
-          "text": "rawValue"
-        }
-      },
-      {
-        "name": "unexpectedBetweenBaseNameAndArgumentNames",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "argumentNames",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "unexpectedAfterArgumentNames",
-        "value": {
-          "text": "nil"
-        }
-      }
-    ],
-    "text": "DeclReferenceExpr",
-    "type": "expr"
-  },
-  {
-    "id": 300,
-    "parent": 299,
-    "range": {
-      "endColumn": 43,
-      "endRow": 29,
-      "startColumn": 35,
-      "startRow": 29
-    },
-    "structure": [],
-    "text": "rawValue",
-    "token": {
-      "kind": "identifier(&quot;rawValue&quot;)",
-      "leadingTrivia": "",
-      "trailingTrivia": ""
-    },
-    "type": "other"
-  },
-  {
-    "id": 301,
-    "parent": 292,
-    "range": {
-      "endColumn": 44,
-      "endRow": 29,
-      "startColumn": 43,
-      "startRow": 29
-    },
-    "structure": [],
-    "text": ",",
-    "token": {
-      "kind": "comma",
-      "leadingTrivia": "",
-      "trailingTrivia": "<span class='whitespace'>␣</span>"
-    },
-    "type": "other"
-  },
-  {
     "id": 302,
-    "parent": 291,
+    "parent": 295,
     "range": {
-      "endColumn": 56,
-      "endRow": 29,
-      "startColumn": 45,
-      "startRow": 29
+      "endColumn": 45,
+      "endRow": 27,
+      "startColumn": 34,
+      "startRow": 27
     },
     "structure": [
       {
@@ -11041,6 +10842,1016 @@
     "id": 303,
     "parent": 302,
     "range": {
+      "endColumn": 40,
+      "endRow": 27,
+      "startColumn": 34,
+      "startRow": 27
+    },
+    "structure": [],
+    "text": "second",
+    "token": {
+      "kind": "identifier(&quot;second&quot;)",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 304,
+    "parent": 302,
+    "range": {
+      "endColumn": 41,
+      "endRow": 27,
+      "startColumn": 40,
+      "startRow": 27
+    },
+    "structure": [],
+    "text": ":",
+    "token": {
+      "kind": "colon",
+      "leadingTrivia": "",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
+    },
+    "type": "other"
+  },
+  {
+    "id": 305,
+    "parent": 302,
+    "range": {
+      "endColumn": 45,
+      "endRow": 27,
+      "startColumn": 42,
+      "startRow": 27
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeNilKeyword",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "nilKeyword",
+        "value": {
+          "kind": "keyword(SwiftSyntax.Keyword.nil)",
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterNilKeyword",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "NilLiteralExpr",
+    "type": "expr"
+  },
+  {
+    "id": 306,
+    "parent": 305,
+    "range": {
+      "endColumn": 45,
+      "endRow": 27,
+      "startColumn": 42,
+      "startRow": 27
+    },
+    "structure": [],
+    "text": "nil",
+    "token": {
+      "kind": "keyword(SwiftSyntax.Keyword.nil)",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 307,
+    "parent": 291,
+    "range": {
+      "endColumn": 46,
+      "endRow": 27,
+      "startColumn": 45,
+      "startRow": 27
+    },
+    "structure": [],
+    "text": ")",
+    "token": {
+      "kind": "rightParen",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 308,
+    "parent": 291,
+    "range": {
+      "endColumn": 46,
+      "endRow": 27,
+      "startColumn": 46,
+      "startRow": 27
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "MultipleTrailingClosureElementSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "MultipleTrailingClosureElementList",
+    "type": "collection"
+  },
+  {
+    "id": 309,
+    "parent": 228,
+    "range": {
+      "endColumn": 57,
+      "endRow": 29,
+      "startColumn": 7,
+      "startRow": 28
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeAttribute",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "attribute",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenAttributeAndLabel",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "label",
+        "ref": "SwitchDefaultLabelSyntax",
+        "value": {
+          "text": "SwitchDefaultLabelSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenLabelAndStatements",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "statements",
+        "ref": "CodeBlockItemListSyntax",
+        "value": {
+          "text": "CodeBlockItemListSyntax"
+        }
+      },
+      {
+        "name": "unexpectedAfterStatements",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "SwitchCase",
+    "type": "other"
+  },
+  {
+    "id": 310,
+    "parent": 309,
+    "range": {
+      "endColumn": 15,
+      "endRow": 28,
+      "startColumn": 7,
+      "startRow": 28
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeDefaultKeyword",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "defaultKeyword",
+        "value": {
+          "kind": "keyword(SwiftSyntax.Keyword.default)",
+          "text": "default"
+        }
+      },
+      {
+        "name": "unexpectedBetweenDefaultKeywordAndColon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "colon",
+        "value": {
+          "kind": "colon",
+          "text": ":"
+        }
+      },
+      {
+        "name": "unexpectedAfterColon",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "SwitchDefaultLabel",
+    "type": "other"
+  },
+  {
+    "id": 311,
+    "parent": 310,
+    "range": {
+      "endColumn": 14,
+      "endRow": 28,
+      "startColumn": 7,
+      "startRow": 28
+    },
+    "structure": [],
+    "text": "default",
+    "token": {
+      "kind": "keyword(SwiftSyntax.Keyword.default)",
+      "leadingTrivia": "<span class='newline'>↲</span><br/><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span>",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 312,
+    "parent": 310,
+    "range": {
+      "endColumn": 15,
+      "endRow": 28,
+      "startColumn": 14,
+      "startRow": 28
+    },
+    "structure": [],
+    "text": ":",
+    "token": {
+      "kind": "colon",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 313,
+    "parent": 309,
+    "range": {
+      "endColumn": 57,
+      "endRow": 29,
+      "startColumn": 9,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "CodeBlockItemSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "1"
+        }
+      }
+    ],
+    "text": "CodeBlockItemList",
+    "type": "collection"
+  },
+  {
+    "id": 314,
+    "parent": 313,
+    "range": {
+      "endColumn": 57,
+      "endRow": 29,
+      "startColumn": 9,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeItem",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "item",
+        "ref": "ReturnStmtSyntax",
+        "value": {
+          "text": "ReturnStmtSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenItemAndSemicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "semicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterSemicolon",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "CodeBlockItem",
+    "type": "other"
+  },
+  {
+    "id": 315,
+    "parent": 314,
+    "range": {
+      "endColumn": 57,
+      "endRow": 29,
+      "startColumn": 9,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeReturnKeyword",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "returnKeyword",
+        "value": {
+          "kind": "keyword(SwiftSyntax.Keyword.return)",
+          "text": "return"
+        }
+      },
+      {
+        "name": "unexpectedBetweenReturnKeywordAndExpression",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "expression",
+        "ref": "FunctionCallExprSyntax",
+        "value": {
+          "text": "FunctionCallExprSyntax"
+        }
+      },
+      {
+        "name": "unexpectedAfterExpression",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "ReturnStmt",
+    "type": "other"
+  },
+  {
+    "id": 316,
+    "parent": 315,
+    "range": {
+      "endColumn": 15,
+      "endRow": 29,
+      "startColumn": 9,
+      "startRow": 29
+    },
+    "structure": [],
+    "text": "return",
+    "token": {
+      "kind": "keyword(SwiftSyntax.Keyword.return)",
+      "leadingTrivia": "<span class='newline'>↲</span><br/><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span><span class='whitespace'>␣</span>",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
+    },
+    "type": "other"
+  },
+  {
+    "id": 317,
+    "parent": 315,
+    "range": {
+      "endColumn": 57,
+      "endRow": 29,
+      "startColumn": 16,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeCalledExpression",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "calledExpression",
+        "ref": "DeclReferenceExprSyntax",
+        "value": {
+          "text": "DeclReferenceExprSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenCalledExpressionAndLeftParen",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "leftParen",
+        "value": {
+          "kind": "leftParen",
+          "text": "("
+        }
+      },
+      {
+        "name": "unexpectedBetweenLeftParenAndArguments",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "arguments",
+        "ref": "LabeledExprListSyntax",
+        "value": {
+          "text": "LabeledExprListSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenArgumentsAndRightParen",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "rightParen",
+        "value": {
+          "kind": "rightParen",
+          "text": ")"
+        }
+      },
+      {
+        "name": "unexpectedBetweenRightParenAndTrailingClosure",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "trailingClosure",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenTrailingClosureAndAdditionalTrailingClosures",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "additionalTrailingClosures",
+        "ref": "MultipleTrailingClosureElementListSyntax",
+        "value": {
+          "text": "MultipleTrailingClosureElementListSyntax"
+        }
+      },
+      {
+        "name": "unexpectedAfterAdditionalTrailingClosures",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "FunctionCallExpr",
+    "type": "expr"
+  },
+  {
+    "id": 318,
+    "parent": 317,
+    "range": {
+      "endColumn": 22,
+      "endRow": 29,
+      "startColumn": 16,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeBaseName",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "baseName",
+        "value": {
+          "kind": "identifier(&quot;Values&quot;)",
+          "text": "Values"
+        }
+      },
+      {
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "argumentNames",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterArgumentNames",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "DeclReferenceExpr",
+    "type": "expr"
+  },
+  {
+    "id": 319,
+    "parent": 318,
+    "range": {
+      "endColumn": 22,
+      "endRow": 29,
+      "startColumn": 16,
+      "startRow": 29
+    },
+    "structure": [],
+    "text": "Values",
+    "token": {
+      "kind": "identifier(&quot;Values&quot;)",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 320,
+    "parent": 317,
+    "range": {
+      "endColumn": 23,
+      "endRow": 29,
+      "startColumn": 22,
+      "startRow": 29
+    },
+    "structure": [],
+    "text": "(",
+    "token": {
+      "kind": "leftParen",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 321,
+    "parent": 317,
+    "range": {
+      "endColumn": 56,
+      "endRow": 29,
+      "startColumn": 23,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "LabeledExprSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "2"
+        }
+      }
+    ],
+    "text": "LabeledExprList",
+    "type": "collection"
+  },
+  {
+    "id": 322,
+    "parent": 321,
+    "range": {
+      "endColumn": 44,
+      "endRow": 29,
+      "startColumn": 23,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeLabel",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "label",
+        "value": {
+          "kind": "identifier(&quot;first&quot;)",
+          "text": "first"
+        }
+      },
+      {
+        "name": "unexpectedBetweenLabelAndColon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "colon",
+        "value": {
+          "kind": "colon",
+          "text": ":"
+        }
+      },
+      {
+        "name": "unexpectedBetweenColonAndExpression",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "expression",
+        "ref": "MemberAccessExprSyntax",
+        "value": {
+          "text": "MemberAccessExprSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenExpressionAndTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "trailingComma",
+        "value": {
+          "kind": "comma",
+          "text": ","
+        }
+      },
+      {
+        "name": "unexpectedAfterTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "LabeledExpr",
+    "type": "other"
+  },
+  {
+    "id": 323,
+    "parent": 322,
+    "range": {
+      "endColumn": 28,
+      "endRow": 29,
+      "startColumn": 23,
+      "startRow": 29
+    },
+    "structure": [],
+    "text": "first",
+    "token": {
+      "kind": "identifier(&quot;first&quot;)",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 324,
+    "parent": 322,
+    "range": {
+      "endColumn": 29,
+      "endRow": 29,
+      "startColumn": 28,
+      "startRow": 29
+    },
+    "structure": [],
+    "text": ":",
+    "token": {
+      "kind": "colon",
+      "leadingTrivia": "",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
+    },
+    "type": "other"
+  },
+  {
+    "id": 325,
+    "parent": 322,
+    "range": {
+      "endColumn": 43,
+      "endRow": 29,
+      "startColumn": 30,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeBase",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "base",
+        "ref": "DeclReferenceExprSyntax",
+        "value": {
+          "text": "DeclReferenceExprSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenBaseAndPeriod",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "period",
+        "value": {
+          "kind": "period",
+          "text": "."
+        }
+      },
+      {
+        "name": "unexpectedBetweenPeriodAndDeclName",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "declName",
+        "ref": "DeclReferenceExprSyntax",
+        "value": {
+          "text": "DeclReferenceExprSyntax"
+        }
+      },
+      {
+        "name": "unexpectedAfterDeclName",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "MemberAccessExpr",
+    "type": "expr"
+  },
+  {
+    "id": 326,
+    "parent": 325,
+    "range": {
+      "endColumn": 34,
+      "endRow": 29,
+      "startColumn": 30,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeBaseName",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "baseName",
+        "value": {
+          "kind": "keyword(SwiftSyntax.Keyword.self)",
+          "text": "self"
+        }
+      },
+      {
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "argumentNames",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterArgumentNames",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "DeclReferenceExpr",
+    "type": "expr"
+  },
+  {
+    "id": 327,
+    "parent": 326,
+    "range": {
+      "endColumn": 34,
+      "endRow": 29,
+      "startColumn": 30,
+      "startRow": 29
+    },
+    "structure": [],
+    "text": "self",
+    "token": {
+      "kind": "keyword(SwiftSyntax.Keyword.self)",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 328,
+    "parent": 325,
+    "range": {
+      "endColumn": 35,
+      "endRow": 29,
+      "startColumn": 34,
+      "startRow": 29
+    },
+    "structure": [],
+    "text": ".",
+    "token": {
+      "kind": "period",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 329,
+    "parent": 325,
+    "range": {
+      "endColumn": 43,
+      "endRow": 29,
+      "startColumn": 35,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeBaseName",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "baseName",
+        "value": {
+          "kind": "identifier(&quot;rawValue&quot;)",
+          "text": "rawValue"
+        }
+      },
+      {
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "argumentNames",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterArgumentNames",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "DeclReferenceExpr",
+    "type": "expr"
+  },
+  {
+    "id": 330,
+    "parent": 329,
+    "range": {
+      "endColumn": 43,
+      "endRow": 29,
+      "startColumn": 35,
+      "startRow": 29
+    },
+    "structure": [],
+    "text": "rawValue",
+    "token": {
+      "kind": "identifier(&quot;rawValue&quot;)",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 331,
+    "parent": 322,
+    "range": {
+      "endColumn": 44,
+      "endRow": 29,
+      "startColumn": 43,
+      "startRow": 29
+    },
+    "structure": [],
+    "text": ",",
+    "token": {
+      "kind": "comma",
+      "leadingTrivia": "",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
+    },
+    "type": "other"
+  },
+  {
+    "id": 332,
+    "parent": 321,
+    "range": {
+      "endColumn": 56,
+      "endRow": 29,
+      "startColumn": 45,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeLabel",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "label",
+        "value": {
+          "kind": "identifier(&quot;second&quot;)",
+          "text": "second"
+        }
+      },
+      {
+        "name": "unexpectedBetweenLabelAndColon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "colon",
+        "value": {
+          "kind": "colon",
+          "text": ":"
+        }
+      },
+      {
+        "name": "unexpectedBetweenColonAndExpression",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "expression",
+        "ref": "NilLiteralExprSyntax",
+        "value": {
+          "text": "NilLiteralExprSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenExpressionAndTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "trailingComma",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "LabeledExpr",
+    "type": "other"
+  },
+  {
+    "id": 333,
+    "parent": 332,
+    "range": {
       "endColumn": 51,
       "endRow": 29,
       "startColumn": 45,
@@ -11056,8 +11867,8 @@
     "type": "other"
   },
   {
-    "id": 304,
-    "parent": 302,
+    "id": 334,
+    "parent": 332,
     "range": {
       "endColumn": 52,
       "endRow": 29,
@@ -11074,8 +11885,8 @@
     "type": "other"
   },
   {
-    "id": 305,
-    "parent": 302,
+    "id": 335,
+    "parent": 332,
     "range": {
       "endColumn": 56,
       "endRow": 29,
@@ -11107,8 +11918,8 @@
     "type": "expr"
   },
   {
-    "id": 306,
-    "parent": 305,
+    "id": 336,
+    "parent": 335,
     "range": {
       "endColumn": 56,
       "endRow": 29,
@@ -11125,8 +11936,8 @@
     "type": "other"
   },
   {
-    "id": 307,
-    "parent": 287,
+    "id": 337,
+    "parent": 317,
     "range": {
       "endColumn": 57,
       "endRow": 29,
@@ -11143,8 +11954,34 @@
     "type": "other"
   },
   {
-    "id": 308,
-    "parent": 195,
+    "id": 338,
+    "parent": 317,
+    "range": {
+      "endColumn": 57,
+      "endRow": 29,
+      "startColumn": 57,
+      "startRow": 29
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "MultipleTrailingClosureElementSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "MultipleTrailingClosureElementList",
+    "type": "collection"
+  },
+  {
+    "id": 339,
+    "parent": 223,
     "range": {
       "endColumn": 8,
       "endRow": 30,
@@ -11161,8 +11998,8 @@
     "type": "other"
   },
   {
-    "id": 309,
-    "parent": 190,
+    "id": 340,
+    "parent": 218,
     "range": {
       "endColumn": 6,
       "endRow": 31,
@@ -11179,8 +12016,8 @@
     "type": "other"
   },
   {
-    "id": 310,
-    "parent": 95,
+    "id": 341,
+    "parent": 111,
     "range": {
       "endColumn": 4,
       "endRow": 32,
@@ -11197,8 +12034,8 @@
     "type": "other"
   },
   {
-    "id": 311,
-    "parent": 14,
+    "id": 342,
+    "parent": 18,
     "range": {
       "endColumn": 29,
       "endRow": 35,
@@ -11242,8 +12079,8 @@
     "type": "other"
   },
   {
-    "id": 312,
-    "parent": 311,
+    "id": 343,
+    "parent": 342,
     "range": {
       "endColumn": 29,
       "endRow": 35,
@@ -11259,8 +12096,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -11271,8 +12109,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -11312,8 +12151,60 @@
     "type": "decl"
   },
   {
-    "id": 313,
-    "parent": 312,
+    "id": 344,
+    "parent": 343,
+    "range": {
+      "endColumn": 4,
+      "endRow": 32,
+      "startColumn": 4,
+      "startRow": 32
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 345,
+    "parent": 343,
+    "range": {
+      "endColumn": 4,
+      "endRow": 32,
+      "startColumn": 4,
+      "startRow": 32
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 346,
+    "parent": 343,
     "range": {
       "endColumn": 6,
       "endRow": 35,
@@ -11330,8 +12221,8 @@
     "type": "other"
   },
   {
-    "id": 314,
-    "parent": 312,
+    "id": 347,
+    "parent": 343,
     "range": {
       "endColumn": 29,
       "endRow": 35,
@@ -11356,8 +12247,8 @@
     "type": "collection"
   },
   {
-    "id": 315,
-    "parent": 314,
+    "id": 348,
+    "parent": 347,
     "range": {
       "endColumn": 18,
       "endRow": 35,
@@ -11439,8 +12330,8 @@
     "type": "other"
   },
   {
-    "id": 316,
-    "parent": 315,
+    "id": 349,
+    "parent": 348,
     "range": {
       "endColumn": 11,
       "endRow": 35,
@@ -11472,8 +12363,8 @@
     "type": "pattern"
   },
   {
-    "id": 317,
-    "parent": 316,
+    "id": 350,
+    "parent": 349,
     "range": {
       "endColumn": 11,
       "endRow": 35,
@@ -11490,8 +12381,8 @@
     "type": "other"
   },
   {
-    "id": 318,
-    "parent": 315,
+    "id": 351,
+    "parent": 348,
     "range": {
       "endColumn": 17,
       "endRow": 35,
@@ -11536,8 +12427,8 @@
     "type": "other"
   },
   {
-    "id": 319,
-    "parent": 318,
+    "id": 352,
+    "parent": 351,
     "range": {
       "endColumn": 12,
       "endRow": 35,
@@ -11554,8 +12445,8 @@
     "type": "other"
   },
   {
-    "id": 320,
-    "parent": 318,
+    "id": 353,
+    "parent": 351,
     "range": {
       "endColumn": 17,
       "endRow": 35,
@@ -11599,8 +12490,8 @@
     "type": "type"
   },
   {
-    "id": 321,
-    "parent": 320,
+    "id": 354,
+    "parent": 353,
     "range": {
       "endColumn": 17,
       "endRow": 35,
@@ -11617,8 +12508,8 @@
     "type": "other"
   },
   {
-    "id": 322,
-    "parent": 315,
+    "id": 355,
+    "parent": 348,
     "range": {
       "endColumn": 18,
       "endRow": 35,
@@ -11635,8 +12526,8 @@
     "type": "other"
   },
   {
-    "id": 323,
-    "parent": 314,
+    "id": 356,
+    "parent": 347,
     "range": {
       "endColumn": 29,
       "endRow": 35,
@@ -11717,8 +12608,8 @@
     "type": "other"
   },
   {
-    "id": 324,
-    "parent": 323,
+    "id": 357,
+    "parent": 356,
     "range": {
       "endColumn": 23,
       "endRow": 35,
@@ -11750,8 +12641,8 @@
     "type": "pattern"
   },
   {
-    "id": 325,
-    "parent": 324,
+    "id": 358,
+    "parent": 357,
     "range": {
       "endColumn": 23,
       "endRow": 35,
@@ -11768,8 +12659,8 @@
     "type": "other"
   },
   {
-    "id": 326,
-    "parent": 323,
+    "id": 359,
+    "parent": 356,
     "range": {
       "endColumn": 29,
       "endRow": 35,
@@ -11814,8 +12705,8 @@
     "type": "other"
   },
   {
-    "id": 327,
-    "parent": 326,
+    "id": 360,
+    "parent": 359,
     "range": {
       "endColumn": 24,
       "endRow": 35,
@@ -11832,8 +12723,8 @@
     "type": "other"
   },
   {
-    "id": 328,
-    "parent": 326,
+    "id": 361,
+    "parent": 359,
     "range": {
       "endColumn": 29,
       "endRow": 35,
@@ -11877,8 +12768,8 @@
     "type": "type"
   },
   {
-    "id": 329,
-    "parent": 328,
+    "id": 362,
+    "parent": 361,
     "range": {
       "endColumn": 29,
       "endRow": 35,
@@ -11895,8 +12786,8 @@
     "type": "other"
   },
   {
-    "id": 330,
-    "parent": 14,
+    "id": 363,
+    "parent": 18,
     "range": {
       "endColumn": 4,
       "endRow": 43,
@@ -11940,8 +12831,8 @@
     "type": "other"
   },
   {
-    "id": 331,
-    "parent": 330,
+    "id": 364,
+    "parent": 363,
     "range": {
       "endColumn": 4,
       "endRow": 43,
@@ -11957,8 +12848,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -11969,8 +12861,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -12010,8 +12903,60 @@
     "type": "decl"
   },
   {
-    "id": 332,
-    "parent": 331,
+    "id": 365,
+    "parent": 364,
+    "range": {
+      "endColumn": 29,
+      "endRow": 35,
+      "startColumn": 29,
+      "startRow": 35
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 366,
+    "parent": 364,
+    "range": {
+      "endColumn": 29,
+      "endRow": 35,
+      "startColumn": 29,
+      "startRow": 35
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 367,
+    "parent": 364,
     "range": {
       "endColumn": 6,
       "endRow": 36,
@@ -12028,8 +12973,8 @@
     "type": "other"
   },
   {
-    "id": 333,
-    "parent": 331,
+    "id": 368,
+    "parent": 364,
     "range": {
       "endColumn": 4,
       "endRow": 43,
@@ -12054,8 +12999,8 @@
     "type": "collection"
   },
   {
-    "id": 334,
-    "parent": 333,
+    "id": 369,
+    "parent": 368,
     "range": {
       "endColumn": 4,
       "endRow": 43,
@@ -12137,8 +13082,8 @@
     "type": "other"
   },
   {
-    "id": 335,
-    "parent": 334,
+    "id": 370,
+    "parent": 369,
     "range": {
       "endColumn": 18,
       "endRow": 36,
@@ -12170,8 +13115,8 @@
     "type": "pattern"
   },
   {
-    "id": 336,
-    "parent": 335,
+    "id": 371,
+    "parent": 370,
     "range": {
       "endColumn": 18,
       "endRow": 36,
@@ -12188,8 +13133,8 @@
     "type": "other"
   },
   {
-    "id": 337,
-    "parent": 334,
+    "id": 372,
+    "parent": 369,
     "range": {
       "endColumn": 26,
       "endRow": 36,
@@ -12234,8 +13179,8 @@
     "type": "other"
   },
   {
-    "id": 338,
-    "parent": 337,
+    "id": 373,
+    "parent": 372,
     "range": {
       "endColumn": 19,
       "endRow": 36,
@@ -12252,8 +13197,8 @@
     "type": "other"
   },
   {
-    "id": 339,
-    "parent": 337,
+    "id": 374,
+    "parent": 372,
     "range": {
       "endColumn": 26,
       "endRow": 36,
@@ -12297,8 +13242,8 @@
     "type": "type"
   },
   {
-    "id": 340,
-    "parent": 339,
+    "id": 375,
+    "parent": 374,
     "range": {
       "endColumn": 26,
       "endRow": 36,
@@ -12315,8 +13260,8 @@
     "type": "other"
   },
   {
-    "id": 341,
-    "parent": 334,
+    "id": 376,
+    "parent": 369,
     "range": {
       "endColumn": 4,
       "endRow": 43,
@@ -12374,8 +13319,8 @@
     "type": "other"
   },
   {
-    "id": 342,
-    "parent": 341,
+    "id": 377,
+    "parent": 376,
     "range": {
       "endColumn": 28,
       "endRow": 36,
@@ -12392,8 +13337,8 @@
     "type": "other"
   },
   {
-    "id": 343,
-    "parent": 341,
+    "id": 378,
+    "parent": 376,
     "range": {
       "endColumn": 18,
       "endRow": 42,
@@ -12418,8 +13363,8 @@
     "type": "collection"
   },
   {
-    "id": 344,
-    "parent": 343,
+    "id": 379,
+    "parent": 378,
     "range": {
       "endColumn": 45,
       "endRow": 37,
@@ -12463,8 +13408,8 @@
     "type": "other"
   },
   {
-    "id": 345,
-    "parent": 344,
+    "id": 380,
+    "parent": 379,
     "range": {
       "endColumn": 45,
       "endRow": 37,
@@ -12480,8 +13425,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -12492,8 +13438,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -12533,8 +13480,60 @@
     "type": "decl"
   },
   {
-    "id": 346,
-    "parent": 345,
+    "id": 381,
+    "parent": 380,
+    "range": {
+      "endColumn": 28,
+      "endRow": 36,
+      "startColumn": 28,
+      "startRow": 36
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 382,
+    "parent": 380,
+    "range": {
+      "endColumn": 28,
+      "endRow": 36,
+      "startColumn": 28,
+      "startRow": 36
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 383,
+    "parent": 380,
     "range": {
       "endColumn": 8,
       "endRow": 37,
@@ -12551,8 +13550,8 @@
     "type": "other"
   },
   {
-    "id": 347,
-    "parent": 345,
+    "id": 384,
+    "parent": 380,
     "range": {
       "endColumn": 45,
       "endRow": 37,
@@ -12577,8 +13576,8 @@
     "type": "collection"
   },
   {
-    "id": 348,
-    "parent": 347,
+    "id": 385,
+    "parent": 384,
     "range": {
       "endColumn": 45,
       "endRow": 37,
@@ -12659,8 +13658,8 @@
     "type": "other"
   },
   {
-    "id": 349,
-    "parent": 348,
+    "id": 386,
+    "parent": 385,
     "range": {
       "endColumn": 15,
       "endRow": 37,
@@ -12692,8 +13691,8 @@
     "type": "pattern"
   },
   {
-    "id": 350,
-    "parent": 349,
+    "id": 387,
+    "parent": 386,
     "range": {
       "endColumn": 15,
       "endRow": 37,
@@ -12710,8 +13709,8 @@
     "type": "other"
   },
   {
-    "id": 351,
-    "parent": 348,
+    "id": 388,
+    "parent": 385,
     "range": {
       "endColumn": 45,
       "endRow": 37,
@@ -12756,8 +13755,8 @@
     "type": "other"
   },
   {
-    "id": 352,
-    "parent": 351,
+    "id": 389,
+    "parent": 388,
     "range": {
       "endColumn": 17,
       "endRow": 37,
@@ -12774,8 +13773,8 @@
     "type": "other"
   },
   {
-    "id": 353,
-    "parent": 351,
+    "id": 390,
+    "parent": 388,
     "range": {
       "endColumn": 45,
       "endRow": 37,
@@ -12857,8 +13856,8 @@
     "type": "expr"
   },
   {
-    "id": 354,
-    "parent": 353,
+    "id": 391,
+    "parent": 390,
     "range": {
       "endColumn": 19,
       "endRow": 37,
@@ -12875,8 +13874,8 @@
     "type": "other"
   },
   {
-    "id": 355,
-    "parent": 353,
+    "id": 392,
+    "parent": 390,
     "range": {
       "endColumn": 44,
       "endRow": 37,
@@ -12901,8 +13900,8 @@
     "type": "collection"
   },
   {
-    "id": 356,
-    "parent": 355,
+    "id": 393,
+    "parent": 392,
     "range": {
       "endColumn": 27,
       "endRow": 37,
@@ -12934,8 +13933,8 @@
     "type": "other"
   },
   {
-    "id": 357,
-    "parent": 356,
+    "id": 394,
+    "parent": 393,
     "range": {
       "endColumn": 27,
       "endRow": 37,
@@ -12952,8 +13951,8 @@
     "type": "other"
   },
   {
-    "id": 358,
-    "parent": 355,
+    "id": 395,
+    "parent": 392,
     "range": {
       "endColumn": 43,
       "endRow": 37,
@@ -13036,8 +14035,8 @@
     "type": "other"
   },
   {
-    "id": 359,
-    "parent": 358,
+    "id": 396,
+    "parent": 395,
     "range": {
       "endColumn": 28,
       "endRow": 37,
@@ -13054,8 +14053,8 @@
     "type": "other"
   },
   {
-    "id": 360,
-    "parent": 358,
+    "id": 397,
+    "parent": 395,
     "range": {
       "endColumn": 29,
       "endRow": 37,
@@ -13072,8 +14071,8 @@
     "type": "other"
   },
   {
-    "id": 361,
-    "parent": 358,
+    "id": 398,
+    "parent": 395,
     "range": {
       "endColumn": 42,
       "endRow": 37,
@@ -13098,8 +14097,8 @@
     "type": "collection"
   },
   {
-    "id": 362,
-    "parent": 361,
+    "id": 399,
+    "parent": 398,
     "range": {
       "endColumn": 42,
       "endRow": 37,
@@ -13167,8 +14166,8 @@
     "type": "other"
   },
   {
-    "id": 363,
-    "parent": 362,
+    "id": 400,
+    "parent": 399,
     "range": {
       "endColumn": 42,
       "endRow": 37,
@@ -13226,8 +14225,8 @@
     "type": "expr"
   },
   {
-    "id": 364,
-    "parent": 363,
+    "id": 401,
+    "parent": 400,
     "range": {
       "endColumn": 33,
       "endRow": 37,
@@ -13271,8 +14270,8 @@
     "type": "expr"
   },
   {
-    "id": 365,
-    "parent": 364,
+    "id": 402,
+    "parent": 401,
     "range": {
       "endColumn": 33,
       "endRow": 37,
@@ -13289,8 +14288,8 @@
     "type": "other"
   },
   {
-    "id": 366,
-    "parent": 363,
+    "id": 403,
+    "parent": 400,
     "range": {
       "endColumn": 34,
       "endRow": 37,
@@ -13307,8 +14306,8 @@
     "type": "other"
   },
   {
-    "id": 367,
-    "parent": 363,
+    "id": 404,
+    "parent": 400,
     "range": {
       "endColumn": 42,
       "endRow": 37,
@@ -13352,8 +14351,8 @@
     "type": "expr"
   },
   {
-    "id": 368,
-    "parent": 367,
+    "id": 405,
+    "parent": 404,
     "range": {
       "endColumn": 42,
       "endRow": 37,
@@ -13370,8 +14369,8 @@
     "type": "other"
   },
   {
-    "id": 369,
-    "parent": 358,
+    "id": 406,
+    "parent": 395,
     "range": {
       "endColumn": 43,
       "endRow": 37,
@@ -13388,8 +14387,8 @@
     "type": "other"
   },
   {
-    "id": 370,
-    "parent": 355,
+    "id": 407,
+    "parent": 392,
     "range": {
       "endColumn": 44,
       "endRow": 37,
@@ -13421,8 +14420,8 @@
     "type": "other"
   },
   {
-    "id": 371,
-    "parent": 370,
+    "id": 408,
+    "parent": 407,
     "range": {
       "endColumn": 44,
       "endRow": 37,
@@ -13439,8 +14438,8 @@
     "type": "other"
   },
   {
-    "id": 372,
-    "parent": 353,
+    "id": 409,
+    "parent": 390,
     "range": {
       "endColumn": 45,
       "endRow": 37,
@@ -13457,8 +14456,8 @@
     "type": "other"
   },
   {
-    "id": 373,
-    "parent": 343,
+    "id": 410,
+    "parent": 378,
     "range": {
       "endColumn": 47,
       "endRow": 38,
@@ -13502,8 +14501,8 @@
     "type": "other"
   },
   {
-    "id": 374,
-    "parent": 373,
+    "id": 411,
+    "parent": 410,
     "range": {
       "endColumn": 47,
       "endRow": 38,
@@ -13561,8 +14560,8 @@
     "type": "expr"
   },
   {
-    "id": 375,
-    "parent": 374,
+    "id": 412,
+    "parent": 411,
     "range": {
       "endColumn": 11,
       "endRow": 38,
@@ -13606,8 +14605,8 @@
     "type": "expr"
   },
   {
-    "id": 376,
-    "parent": 375,
+    "id": 413,
+    "parent": 412,
     "range": {
       "endColumn": 11,
       "endRow": 38,
@@ -13624,8 +14623,8 @@
     "type": "other"
   },
   {
-    "id": 377,
-    "parent": 374,
+    "id": 414,
+    "parent": 411,
     "range": {
       "endColumn": 14,
       "endRow": 38,
@@ -13657,8 +14656,8 @@
     "type": "expr"
   },
   {
-    "id": 378,
-    "parent": 377,
+    "id": 415,
+    "parent": 414,
     "range": {
       "endColumn": 14,
       "endRow": 38,
@@ -13675,8 +14674,8 @@
     "type": "other"
   },
   {
-    "id": 379,
-    "parent": 374,
+    "id": 416,
+    "parent": 411,
     "range": {
       "endColumn": 47,
       "endRow": 38,
@@ -13758,8 +14757,8 @@
     "type": "expr"
   },
   {
-    "id": 380,
-    "parent": 379,
+    "id": 417,
+    "parent": 416,
     "range": {
       "endColumn": 16,
       "endRow": 38,
@@ -13776,8 +14775,8 @@
     "type": "other"
   },
   {
-    "id": 381,
-    "parent": 379,
+    "id": 418,
+    "parent": 416,
     "range": {
       "endColumn": 46,
       "endRow": 38,
@@ -13802,8 +14801,8 @@
     "type": "collection"
   },
   {
-    "id": 382,
-    "parent": 381,
+    "id": 419,
+    "parent": 418,
     "range": {
       "endColumn": 26,
       "endRow": 38,
@@ -13835,8 +14834,8 @@
     "type": "other"
   },
   {
-    "id": 383,
-    "parent": 382,
+    "id": 420,
+    "parent": 419,
     "range": {
       "endColumn": 26,
       "endRow": 38,
@@ -13853,8 +14852,8 @@
     "type": "other"
   },
   {
-    "id": 384,
-    "parent": 381,
+    "id": 421,
+    "parent": 418,
     "range": {
       "endColumn": 46,
       "endRow": 38,
@@ -13937,8 +14936,8 @@
     "type": "other"
   },
   {
-    "id": 385,
-    "parent": 384,
+    "id": 422,
+    "parent": 421,
     "range": {
       "endColumn": 27,
       "endRow": 38,
@@ -13955,8 +14954,8 @@
     "type": "other"
   },
   {
-    "id": 386,
-    "parent": 384,
+    "id": 423,
+    "parent": 421,
     "range": {
       "endColumn": 28,
       "endRow": 38,
@@ -13973,8 +14972,8 @@
     "type": "other"
   },
   {
-    "id": 387,
-    "parent": 384,
+    "id": 424,
+    "parent": 421,
     "range": {
       "endColumn": 45,
       "endRow": 38,
@@ -13999,8 +14998,8 @@
     "type": "collection"
   },
   {
-    "id": 388,
-    "parent": 387,
+    "id": 425,
+    "parent": 424,
     "range": {
       "endColumn": 45,
       "endRow": 38,
@@ -14068,8 +15067,8 @@
     "type": "other"
   },
   {
-    "id": 389,
-    "parent": 388,
+    "id": 426,
+    "parent": 425,
     "range": {
       "endColumn": 45,
       "endRow": 38,
@@ -14127,8 +15126,8 @@
     "type": "expr"
   },
   {
-    "id": 390,
-    "parent": 389,
+    "id": 427,
+    "parent": 426,
     "range": {
       "endColumn": 39,
       "endRow": 38,
@@ -14186,8 +15185,8 @@
     "type": "expr"
   },
   {
-    "id": 391,
-    "parent": 390,
+    "id": 428,
+    "parent": 427,
     "range": {
       "endColumn": 32,
       "endRow": 38,
@@ -14231,8 +15230,8 @@
     "type": "expr"
   },
   {
-    "id": 392,
-    "parent": 391,
+    "id": 429,
+    "parent": 428,
     "range": {
       "endColumn": 32,
       "endRow": 38,
@@ -14249,8 +15248,8 @@
     "type": "other"
   },
   {
-    "id": 393,
-    "parent": 390,
+    "id": 430,
+    "parent": 427,
     "range": {
       "endColumn": 33,
       "endRow": 38,
@@ -14267,8 +15266,8 @@
     "type": "other"
   },
   {
-    "id": 394,
-    "parent": 390,
+    "id": 431,
+    "parent": 427,
     "range": {
       "endColumn": 39,
       "endRow": 38,
@@ -14312,8 +15311,8 @@
     "type": "expr"
   },
   {
-    "id": 395,
-    "parent": 394,
+    "id": 432,
+    "parent": 431,
     "range": {
       "endColumn": 39,
       "endRow": 38,
@@ -14330,8 +15329,8 @@
     "type": "other"
   },
   {
-    "id": 396,
-    "parent": 389,
+    "id": 433,
+    "parent": 426,
     "range": {
       "endColumn": 40,
       "endRow": 38,
@@ -14348,8 +15347,8 @@
     "type": "other"
   },
   {
-    "id": 397,
-    "parent": 389,
+    "id": 434,
+    "parent": 426,
     "range": {
       "endColumn": 45,
       "endRow": 38,
@@ -14393,8 +15392,8 @@
     "type": "expr"
   },
   {
-    "id": 398,
-    "parent": 397,
+    "id": 435,
+    "parent": 434,
     "range": {
       "endColumn": 45,
       "endRow": 38,
@@ -14411,8 +15410,8 @@
     "type": "other"
   },
   {
-    "id": 399,
-    "parent": 384,
+    "id": 436,
+    "parent": 421,
     "range": {
       "endColumn": 46,
       "endRow": 38,
@@ -14429,8 +15428,8 @@
     "type": "other"
   },
   {
-    "id": 400,
-    "parent": 381,
+    "id": 437,
+    "parent": 418,
     "range": {
       "endColumn": 46,
       "endRow": 38,
@@ -14462,8 +15461,8 @@
     "type": "other"
   },
   {
-    "id": 401,
-    "parent": 400,
+    "id": 438,
+    "parent": 437,
     "range": {
       "endColumn": 46,
       "endRow": 38,
@@ -14480,8 +15479,8 @@
     "type": "other"
   },
   {
-    "id": 402,
-    "parent": 379,
+    "id": 439,
+    "parent": 416,
     "range": {
       "endColumn": 47,
       "endRow": 38,
@@ -14498,8 +15497,8 @@
     "type": "other"
   },
   {
-    "id": 403,
-    "parent": 343,
+    "id": 440,
+    "parent": 378,
     "range": {
       "endColumn": 6,
       "endRow": 41,
@@ -14543,8 +15542,8 @@
     "type": "other"
   },
   {
-    "id": 404,
-    "parent": 403,
+    "id": 441,
+    "parent": 440,
     "range": {
       "endColumn": 6,
       "endRow": 41,
@@ -14576,8 +15575,8 @@
     "type": "other"
   },
   {
-    "id": 405,
-    "parent": 404,
+    "id": 442,
+    "parent": 441,
     "range": {
       "endColumn": 6,
       "endRow": 41,
@@ -14659,8 +15658,8 @@
     "type": "expr"
   },
   {
-    "id": 406,
-    "parent": 405,
+    "id": 443,
+    "parent": 442,
     "range": {
       "endColumn": 7,
       "endRow": 39,
@@ -14677,8 +15676,8 @@
     "type": "other"
   },
   {
-    "id": 407,
-    "parent": 405,
+    "id": 444,
+    "parent": 442,
     "range": {
       "endColumn": 39,
       "endRow": 39,
@@ -14703,8 +15702,8 @@
     "type": "collection"
   },
   {
-    "id": 408,
-    "parent": 407,
+    "id": 445,
+    "parent": 444,
     "range": {
       "endColumn": 39,
       "endRow": 39,
@@ -14748,8 +15747,8 @@
     "type": "other"
   },
   {
-    "id": 409,
-    "parent": 408,
+    "id": 446,
+    "parent": 445,
     "range": {
       "endColumn": 39,
       "endRow": 39,
@@ -14819,8 +15818,8 @@
     "type": "other"
   },
   {
-    "id": 410,
-    "parent": 409,
+    "id": 447,
+    "parent": 446,
     "range": {
       "endColumn": 11,
       "endRow": 39,
@@ -14837,8 +15836,8 @@
     "type": "other"
   },
   {
-    "id": 411,
-    "parent": 409,
+    "id": 448,
+    "parent": 446,
     "range": {
       "endColumn": 18,
       "endRow": 39,
@@ -14870,8 +15869,8 @@
     "type": "pattern"
   },
   {
-    "id": 412,
-    "parent": 411,
+    "id": 449,
+    "parent": 448,
     "range": {
       "endColumn": 18,
       "endRow": 39,
@@ -14888,8 +15887,8 @@
     "type": "other"
   },
   {
-    "id": 413,
-    "parent": 409,
+    "id": 450,
+    "parent": 446,
     "range": {
       "endColumn": 39,
       "endRow": 39,
@@ -14934,8 +15933,8 @@
     "type": "other"
   },
   {
-    "id": 414,
-    "parent": 413,
+    "id": 451,
+    "parent": 450,
     "range": {
       "endColumn": 20,
       "endRow": 39,
@@ -14952,8 +15951,8 @@
     "type": "other"
   },
   {
-    "id": 415,
-    "parent": 413,
+    "id": 452,
+    "parent": 450,
     "range": {
       "endColumn": 39,
       "endRow": 39,
@@ -15011,8 +16010,8 @@
     "type": "expr"
   },
   {
-    "id": 416,
-    "parent": 415,
+    "id": 453,
+    "parent": 452,
     "range": {
       "endColumn": 32,
       "endRow": 39,
@@ -15070,8 +16069,8 @@
     "type": "expr"
   },
   {
-    "id": 417,
-    "parent": 416,
+    "id": 454,
+    "parent": 453,
     "range": {
       "endColumn": 25,
       "endRow": 39,
@@ -15115,8 +16114,8 @@
     "type": "expr"
   },
   {
-    "id": 418,
-    "parent": 417,
+    "id": 455,
+    "parent": 454,
     "range": {
       "endColumn": 25,
       "endRow": 39,
@@ -15133,8 +16132,8 @@
     "type": "other"
   },
   {
-    "id": 419,
-    "parent": 416,
+    "id": 456,
+    "parent": 453,
     "range": {
       "endColumn": 26,
       "endRow": 39,
@@ -15151,8 +16150,8 @@
     "type": "other"
   },
   {
-    "id": 420,
-    "parent": 416,
+    "id": 457,
+    "parent": 453,
     "range": {
       "endColumn": 32,
       "endRow": 39,
@@ -15196,8 +16195,8 @@
     "type": "expr"
   },
   {
-    "id": 421,
-    "parent": 420,
+    "id": 458,
+    "parent": 457,
     "range": {
       "endColumn": 32,
       "endRow": 39,
@@ -15214,8 +16213,8 @@
     "type": "other"
   },
   {
-    "id": 422,
-    "parent": 415,
+    "id": 459,
+    "parent": 452,
     "range": {
       "endColumn": 33,
       "endRow": 39,
@@ -15232,8 +16231,8 @@
     "type": "other"
   },
   {
-    "id": 423,
-    "parent": 415,
+    "id": 460,
+    "parent": 452,
     "range": {
       "endColumn": 39,
       "endRow": 39,
@@ -15277,8 +16276,8 @@
     "type": "expr"
   },
   {
-    "id": 424,
-    "parent": 423,
+    "id": 461,
+    "parent": 460,
     "range": {
       "endColumn": 39,
       "endRow": 39,
@@ -15295,8 +16294,8 @@
     "type": "other"
   },
   {
-    "id": 425,
-    "parent": 405,
+    "id": 462,
+    "parent": 442,
     "range": {
       "endColumn": 6,
       "endRow": 41,
@@ -15354,8 +16353,8 @@
     "type": "other"
   },
   {
-    "id": 426,
-    "parent": 425,
+    "id": 463,
+    "parent": 462,
     "range": {
       "endColumn": 41,
       "endRow": 39,
@@ -15372,8 +16371,8 @@
     "type": "other"
   },
   {
-    "id": 427,
-    "parent": 425,
+    "id": 464,
+    "parent": 462,
     "range": {
       "endColumn": 32,
       "endRow": 40,
@@ -15398,8 +16397,8 @@
     "type": "collection"
   },
   {
-    "id": 428,
-    "parent": 427,
+    "id": 465,
+    "parent": 464,
     "range": {
       "endColumn": 32,
       "endRow": 40,
@@ -15443,8 +16442,8 @@
     "type": "other"
   },
   {
-    "id": 429,
-    "parent": 428,
+    "id": 466,
+    "parent": 465,
     "range": {
       "endColumn": 32,
       "endRow": 40,
@@ -15502,8 +16501,8 @@
     "type": "expr"
   },
   {
-    "id": 430,
-    "parent": 429,
+    "id": 467,
+    "parent": 466,
     "range": {
       "endColumn": 13,
       "endRow": 40,
@@ -15547,8 +16546,8 @@
     "type": "expr"
   },
   {
-    "id": 431,
-    "parent": 430,
+    "id": 468,
+    "parent": 467,
     "range": {
       "endColumn": 13,
       "endRow": 40,
@@ -15565,8 +16564,8 @@
     "type": "other"
   },
   {
-    "id": 432,
-    "parent": 429,
+    "id": 469,
+    "parent": 466,
     "range": {
       "endColumn": 16,
       "endRow": 40,
@@ -15598,8 +16597,8 @@
     "type": "expr"
   },
   {
-    "id": 433,
-    "parent": 432,
+    "id": 470,
+    "parent": 469,
     "range": {
       "endColumn": 16,
       "endRow": 40,
@@ -15616,8 +16615,8 @@
     "type": "other"
   },
   {
-    "id": 434,
-    "parent": 429,
+    "id": 471,
+    "parent": 466,
     "range": {
       "endColumn": 32,
       "endRow": 40,
@@ -15699,8 +16698,8 @@
     "type": "expr"
   },
   {
-    "id": 435,
-    "parent": 434,
+    "id": 472,
+    "parent": 471,
     "range": {
       "endColumn": 18,
       "endRow": 40,
@@ -15717,8 +16716,8 @@
     "type": "other"
   },
   {
-    "id": 436,
-    "parent": 434,
+    "id": 473,
+    "parent": 471,
     "range": {
       "endColumn": 31,
       "endRow": 40,
@@ -15743,8 +16742,8 @@
     "type": "collection"
   },
   {
-    "id": 437,
-    "parent": 436,
+    "id": 474,
+    "parent": 473,
     "range": {
       "endColumn": 22,
       "endRow": 40,
@@ -15776,8 +16775,8 @@
     "type": "other"
   },
   {
-    "id": 438,
-    "parent": 437,
+    "id": 475,
+    "parent": 474,
     "range": {
       "endColumn": 22,
       "endRow": 40,
@@ -15794,8 +16793,8 @@
     "type": "other"
   },
   {
-    "id": 439,
-    "parent": 436,
+    "id": 476,
+    "parent": 473,
     "range": {
       "endColumn": 31,
       "endRow": 40,
@@ -15878,8 +16877,8 @@
     "type": "other"
   },
   {
-    "id": 440,
-    "parent": 439,
+    "id": 477,
+    "parent": 476,
     "range": {
       "endColumn": 23,
       "endRow": 40,
@@ -15896,8 +16895,8 @@
     "type": "other"
   },
   {
-    "id": 441,
-    "parent": 439,
+    "id": 478,
+    "parent": 476,
     "range": {
       "endColumn": 24,
       "endRow": 40,
@@ -15914,8 +16913,8 @@
     "type": "other"
   },
   {
-    "id": 442,
-    "parent": 439,
+    "id": 479,
+    "parent": 476,
     "range": {
       "endColumn": 30,
       "endRow": 40,
@@ -15940,8 +16939,8 @@
     "type": "collection"
   },
   {
-    "id": 443,
-    "parent": 442,
+    "id": 480,
+    "parent": 479,
     "range": {
       "endColumn": 30,
       "endRow": 40,
@@ -16009,8 +17008,8 @@
     "type": "other"
   },
   {
-    "id": 444,
-    "parent": 443,
+    "id": 481,
+    "parent": 480,
     "range": {
       "endColumn": 30,
       "endRow": 40,
@@ -16054,8 +17053,8 @@
     "type": "expr"
   },
   {
-    "id": 445,
-    "parent": 444,
+    "id": 482,
+    "parent": 481,
     "range": {
       "endColumn": 30,
       "endRow": 40,
@@ -16072,8 +17071,8 @@
     "type": "other"
   },
   {
-    "id": 446,
-    "parent": 439,
+    "id": 483,
+    "parent": 476,
     "range": {
       "endColumn": 31,
       "endRow": 40,
@@ -16090,8 +17089,8 @@
     "type": "other"
   },
   {
-    "id": 447,
-    "parent": 436,
+    "id": 484,
+    "parent": 473,
     "range": {
       "endColumn": 31,
       "endRow": 40,
@@ -16123,8 +17122,8 @@
     "type": "other"
   },
   {
-    "id": 448,
-    "parent": 447,
+    "id": 485,
+    "parent": 484,
     "range": {
       "endColumn": 31,
       "endRow": 40,
@@ -16141,8 +17140,8 @@
     "type": "other"
   },
   {
-    "id": 449,
-    "parent": 434,
+    "id": 486,
+    "parent": 471,
     "range": {
       "endColumn": 32,
       "endRow": 40,
@@ -16159,8 +17158,8 @@
     "type": "other"
   },
   {
-    "id": 450,
-    "parent": 425,
+    "id": 487,
+    "parent": 462,
     "range": {
       "endColumn": 6,
       "endRow": 41,
@@ -16177,8 +17176,8 @@
     "type": "other"
   },
   {
-    "id": 451,
-    "parent": 343,
+    "id": 488,
+    "parent": 378,
     "range": {
       "endColumn": 18,
       "endRow": 42,
@@ -16222,8 +17221,8 @@
     "type": "other"
   },
   {
-    "id": 452,
-    "parent": 451,
+    "id": 489,
+    "parent": 488,
     "range": {
       "endColumn": 18,
       "endRow": 42,
@@ -16268,8 +17267,8 @@
     "type": "other"
   },
   {
-    "id": 453,
-    "parent": 452,
+    "id": 490,
+    "parent": 489,
     "range": {
       "endColumn": 11,
       "endRow": 42,
@@ -16286,8 +17285,8 @@
     "type": "other"
   },
   {
-    "id": 454,
-    "parent": 452,
+    "id": 491,
+    "parent": 489,
     "range": {
       "endColumn": 18,
       "endRow": 42,
@@ -16331,8 +17330,8 @@
     "type": "expr"
   },
   {
-    "id": 455,
-    "parent": 454,
+    "id": 492,
+    "parent": 491,
     "range": {
       "endColumn": 18,
       "endRow": 42,
@@ -16349,8 +17348,8 @@
     "type": "other"
   },
   {
-    "id": 456,
-    "parent": 341,
+    "id": 493,
+    "parent": 376,
     "range": {
       "endColumn": 4,
       "endRow": 43,
@@ -16367,8 +17366,8 @@
     "type": "other"
   },
   {
-    "id": 457,
-    "parent": 12,
+    "id": 494,
+    "parent": 16,
     "range": {
       "endColumn": 2,
       "endRow": 44,
@@ -16385,7 +17384,7 @@
     "type": "other"
   },
   {
-    "id": 458,
+    "id": 495,
     "parent": 0,
     "range": {
       "endColumn": 1,
