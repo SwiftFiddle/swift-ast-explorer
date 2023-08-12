@@ -52,16 +52,16 @@ export class Editor {
 
   setSelection(range) {
     this.editor.setSelection(
-      { ch: range.graphemeStartColumn - 1, line: range.startRow - 1 },
-      { ch: range.graphemeEndColumn - 1, line: range.endRow - 1 },
+      { ch: range.startColumn - 1, line: range.startRow - 1 },
+      { ch: range.endColumn - 1, line: range.endRow - 1 },
       { scroll: false }
     );
   }
 
   markText(range) {
     return this.editor.markText(
-      { ch: range.graphemeStartColumn - 1, line: range.startRow - 1 },
-      { ch: range.graphemeEndColumn - 1, line: range.endRow - 1 },
+      { ch: range.startColumn - 1, line: range.startRow - 1 },
+      { ch: range.endColumn - 1, line: range.endRow - 1 },
       {
         className: "editor-marker",
         startStyle: "editor-marker-start",

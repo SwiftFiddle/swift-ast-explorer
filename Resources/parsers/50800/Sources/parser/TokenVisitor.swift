@@ -1,6 +1,5 @@
 import Foundation
 import SwiftSyntax
-import StringWidth
 
 final class TokenVisitor: SyntaxRewriter {
   var list = [String]()
@@ -52,19 +51,6 @@ final class TokenVisitor: SyntaxRewriter {
     let endRow = end.line ?? 1
     let endColumn = end.column ?? 1
 
-    let graphemeStartColumn: Int
-    if let prefix = String(locationConverter.sourceLines[startRow - 1].utf8.prefix(startColumn - 1)) {
-      graphemeStartColumn = stringWidth(prefix) + 1
-    } else {
-      graphemeStartColumn = startColumn
-    }
-    let graphemeEndColumn: Int
-    if let prefix = String(locationConverter.sourceLines[endRow - 1].utf8.prefix(endColumn - 1)) {
-      graphemeEndColumn = stringWidth(prefix) + 1
-    } else {
-      graphemeEndColumn = endColumn
-    }
-
     list.append(
       "<span class='\(className)' " +
       "data-title='\(title.escapeHTML().replaceInvisiblesWithSymbols())' " +
@@ -93,10 +79,8 @@ final class TokenVisitor: SyntaxRewriter {
       range: Range(
         startRow: startRow,
         startColumn: startColumn,
-        graphemeStartColumn: graphemeStartColumn,
         endRow: endRow,
-        endColumn: endColumn,
-        graphemeEndColumn: graphemeEndColumn
+        endColumn: endColumn
       ),
       type: syntaxType
     )
