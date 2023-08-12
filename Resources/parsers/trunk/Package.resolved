@@ -1,15 +1,6 @@
 {
   "pins" : [
     {
-      "identity" : "stringwidth",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kishikawakatsumi/StringWidth.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "5cdd9a3f11758364ea920635992c9d54aa14c9bd"
-      }
-    },
-    {
       "identity" : "swift-syntax",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-syntax",
