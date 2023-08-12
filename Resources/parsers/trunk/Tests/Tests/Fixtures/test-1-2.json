@@ -133,8 +133,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -145,8 +146,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -189,6 +191,58 @@
     "id": 4,
     "parent": 3,
     "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 5,
+    "parent": 3,
+    "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 6,
+    "parent": 3,
+    "range": {
       "endColumn": 4,
       "endRow": 1,
       "startColumn": 1,
@@ -204,7 +258,7 @@
     "type": "other"
   },
   {
-    "id": 5,
+    "id": 7,
     "parent": 3,
     "range": {
       "endColumn": 33,
@@ -230,8 +284,8 @@
     "type": "collection"
   },
   {
-    "id": 6,
-    "parent": 5,
+    "id": 8,
+    "parent": 7,
     "range": {
       "endColumn": 33,
       "endRow": 1,
@@ -312,8 +366,8 @@
     "type": "other"
   },
   {
-    "id": 7,
-    "parent": 6,
+    "id": 9,
+    "parent": 8,
     "range": {
       "endColumn": 28,
       "endRow": 1,
@@ -345,8 +399,8 @@
     "type": "pattern"
   },
   {
-    "id": 8,
-    "parent": 7,
+    "id": 10,
+    "parent": 9,
     "range": {
       "endColumn": 28,
       "endRow": 1,
@@ -363,8 +417,8 @@
     "type": "other"
   },
   {
-    "id": 9,
-    "parent": 6,
+    "id": 11,
+    "parent": 8,
     "range": {
       "endColumn": 33,
       "endRow": 1,
@@ -409,8 +463,8 @@
     "type": "other"
   },
   {
-    "id": 10,
-    "parent": 9,
+    "id": 12,
+    "parent": 11,
     "range": {
       "endColumn": 30,
       "endRow": 1,
@@ -427,8 +481,8 @@
     "type": "other"
   },
   {
-    "id": 11,
-    "parent": 9,
+    "id": 13,
+    "parent": 11,
     "range": {
       "endColumn": 33,
       "endRow": 1,
@@ -460,8 +514,8 @@
     "type": "expr"
   },
   {
-    "id": 12,
-    "parent": 11,
+    "id": 14,
+    "parent": 13,
     "range": {
       "endColumn": 33,
       "endRow": 1,
@@ -478,7 +532,7 @@
     "type": "other"
   },
   {
-    "id": 13,
+    "id": 15,
     "parent": 1,
     "range": {
       "endColumn": 2,
@@ -523,8 +577,8 @@
     "type": "other"
   },
   {
-    "id": 14,
-    "parent": 13,
+    "id": 16,
+    "parent": 15,
     "range": {
       "endColumn": 2,
       "endRow": 9,
@@ -556,8 +610,8 @@
     "type": "other"
   },
   {
-    "id": 15,
-    "parent": 14,
+    "id": 17,
+    "parent": 16,
     "range": {
       "endColumn": 2,
       "endRow": 9,
@@ -641,8 +695,8 @@
     "type": "expr"
   },
   {
-    "id": 16,
-    "parent": 15,
+    "id": 18,
+    "parent": 17,
     "range": {
       "endColumn": 3,
       "endRow": 3,
@@ -659,8 +713,8 @@
     "type": "other"
   },
   {
-    "id": 17,
-    "parent": 15,
+    "id": 19,
+    "parent": 17,
     "range": {
       "endColumn": 33,
       "endRow": 3,
@@ -685,8 +739,8 @@
     "type": "collection"
   },
   {
-    "id": 18,
-    "parent": 17,
+    "id": 20,
+    "parent": 19,
     "range": {
       "endColumn": 33,
       "endRow": 3,
@@ -730,8 +784,8 @@
     "type": "other"
   },
   {
-    "id": 19,
-    "parent": 18,
+    "id": 21,
+    "parent": 20,
     "range": {
       "endColumn": 33,
       "endRow": 3,
@@ -763,8 +817,8 @@
     "type": "expr"
   },
   {
-    "id": 20,
-    "parent": 19,
+    "id": 22,
+    "parent": 21,
     "range": {
       "endColumn": 33,
       "endRow": 3,
@@ -789,8 +843,8 @@
     "type": "collection"
   },
   {
-    "id": 21,
-    "parent": 20,
+    "id": 23,
+    "parent": 22,
     "range": {
       "endColumn": 27,
       "endRow": 3,
@@ -834,8 +888,8 @@
     "type": "expr"
   },
   {
-    "id": 22,
-    "parent": 21,
+    "id": 24,
+    "parent": 23,
     "range": {
       "endColumn": 27,
       "endRow": 3,
@@ -852,8 +906,8 @@
     "type": "other"
   },
   {
-    "id": 23,
-    "parent": 20,
+    "id": 25,
+    "parent": 22,
     "range": {
       "endColumn": 30,
       "endRow": 3,
@@ -885,8 +939,8 @@
     "type": "expr"
   },
   {
-    "id": 24,
-    "parent": 23,
+    "id": 26,
+    "parent": 25,
     "range": {
       "endColumn": 30,
       "endRow": 3,
@@ -903,8 +957,8 @@
     "type": "other"
   },
   {
-    "id": 25,
-    "parent": 20,
+    "id": 27,
+    "parent": 22,
     "range": {
       "endColumn": 33,
       "endRow": 3,
@@ -936,8 +990,8 @@
     "type": "expr"
   },
   {
-    "id": 26,
-    "parent": 25,
+    "id": 28,
+    "parent": 27,
     "range": {
       "endColumn": 33,
       "endRow": 3,
@@ -954,8 +1008,8 @@
     "type": "other"
   },
   {
-    "id": 27,
-    "parent": 15,
+    "id": 29,
+    "parent": 17,
     "range": {
       "endColumn": 2,
       "endRow": 5,
@@ -1013,8 +1067,8 @@
     "type": "other"
   },
   {
-    "id": 28,
-    "parent": 27,
+    "id": 30,
+    "parent": 29,
     "range": {
       "endColumn": 35,
       "endRow": 3,
@@ -1031,8 +1085,8 @@
     "type": "other"
   },
   {
-    "id": 29,
-    "parent": 27,
+    "id": 31,
+    "parent": 29,
     "range": {
       "endColumn": 53,
       "endRow": 4,
@@ -1057,8 +1111,8 @@
     "type": "collection"
   },
   {
-    "id": 30,
-    "parent": 29,
+    "id": 32,
+    "parent": 31,
     "range": {
       "endColumn": 53,
       "endRow": 4,
@@ -1102,8 +1156,8 @@
     "type": "other"
   },
   {
-    "id": 31,
-    "parent": 30,
+    "id": 33,
+    "parent": 32,
     "range": {
       "endColumn": 53,
       "endRow": 4,
@@ -1183,8 +1237,9 @@
       },
       {
         "name": "additionalTrailingClosures",
+        "ref": "MultipleTrailingClosureElementListSyntax",
         "value": {
-          "text": "nil"
+          "text": "MultipleTrailingClosureElementListSyntax"
         }
       },
       {
@@ -1198,8 +1253,8 @@
     "type": "expr"
   },
   {
-    "id": 32,
-    "parent": 31,
+    "id": 34,
+    "parent": 33,
     "range": {
       "endColumn": 8,
       "endRow": 4,
@@ -1243,8 +1298,8 @@
     "type": "expr"
   },
   {
-    "id": 33,
-    "parent": 32,
+    "id": 35,
+    "parent": 34,
     "range": {
       "endColumn": 8,
       "endRow": 4,
@@ -1261,8 +1316,8 @@
     "type": "other"
   },
   {
-    "id": 34,
-    "parent": 31,
+    "id": 36,
+    "parent": 33,
     "range": {
       "endColumn": 9,
       "endRow": 4,
@@ -1279,8 +1334,8 @@
     "type": "other"
   },
   {
-    "id": 35,
-    "parent": 31,
+    "id": 37,
+    "parent": 33,
     "range": {
       "endColumn": 52,
       "endRow": 4,
@@ -1305,8 +1360,8 @@
     "type": "collection"
   },
   {
-    "id": 36,
-    "parent": 35,
+    "id": 38,
+    "parent": 37,
     "range": {
       "endColumn": 52,
       "endRow": 4,
@@ -1374,8 +1429,8 @@
     "type": "other"
   },
   {
-    "id": 37,
-    "parent": 36,
+    "id": 39,
+    "parent": 38,
     "range": {
       "endColumn": 52,
       "endRow": 4,
@@ -1457,8 +1512,8 @@
     "type": "expr"
   },
   {
-    "id": 38,
-    "parent": 37,
+    "id": 40,
+    "parent": 39,
     "range": {
       "endColumn": 10,
       "endRow": 4,
@@ -1475,8 +1530,8 @@
     "type": "other"
   },
   {
-    "id": 39,
-    "parent": 37,
+    "id": 41,
+    "parent": 39,
     "range": {
       "endColumn": 51,
       "endRow": 4,
@@ -1501,8 +1556,8 @@
     "type": "collection"
   },
   {
-    "id": 40,
-    "parent": 39,
+    "id": 42,
+    "parent": 41,
     "range": {
       "endColumn": 51,
       "endRow": 4,
@@ -1534,8 +1589,8 @@
     "type": "other"
   },
   {
-    "id": 41,
-    "parent": 40,
+    "id": 43,
+    "parent": 42,
     "range": {
       "endColumn": 51,
       "endRow": 4,
@@ -1552,8 +1607,8 @@
     "type": "other"
   },
   {
-    "id": 42,
-    "parent": 37,
+    "id": 44,
+    "parent": 39,
     "range": {
       "endColumn": 52,
       "endRow": 4,
@@ -1570,8 +1625,8 @@
     "type": "other"
   },
   {
-    "id": 43,
-    "parent": 31,
+    "id": 45,
+    "parent": 33,
     "range": {
       "endColumn": 53,
       "endRow": 4,
@@ -1588,8 +1643,34 @@
     "type": "other"
   },
   {
-    "id": 44,
-    "parent": 27,
+    "id": 46,
+    "parent": 33,
+    "range": {
+      "endColumn": 53,
+      "endRow": 4,
+      "startColumn": 53,
+      "startRow": 4
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "MultipleTrailingClosureElementSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "MultipleTrailingClosureElementList",
+    "type": "collection"
+  },
+  {
+    "id": 47,
+    "parent": 29,
     "range": {
       "endColumn": 2,
       "endRow": 5,
@@ -1606,8 +1687,8 @@
     "type": "other"
   },
   {
-    "id": 45,
-    "parent": 15,
+    "id": 48,
+    "parent": 17,
     "range": {
       "endColumn": 7,
       "endRow": 5,
@@ -1624,8 +1705,8 @@
     "type": "other"
   },
   {
-    "id": 46,
-    "parent": 15,
+    "id": 49,
+    "parent": 17,
     "range": {
       "endColumn": 2,
       "endRow": 9,
@@ -1709,8 +1790,8 @@
     "type": "expr"
   },
   {
-    "id": 47,
-    "parent": 46,
+    "id": 50,
+    "parent": 49,
     "range": {
       "endColumn": 10,
       "endRow": 5,
@@ -1727,8 +1808,8 @@
     "type": "other"
   },
   {
-    "id": 48,
-    "parent": 46,
+    "id": 51,
+    "parent": 49,
     "range": {
       "endColumn": 40,
       "endRow": 5,
@@ -1753,8 +1834,8 @@
     "type": "collection"
   },
   {
-    "id": 49,
-    "parent": 48,
+    "id": 52,
+    "parent": 51,
     "range": {
       "endColumn": 40,
       "endRow": 5,
@@ -1798,8 +1879,8 @@
     "type": "other"
   },
   {
-    "id": 50,
-    "parent": 49,
+    "id": 53,
+    "parent": 52,
     "range": {
       "endColumn": 40,
       "endRow": 5,
@@ -1831,8 +1912,8 @@
     "type": "expr"
   },
   {
-    "id": 51,
-    "parent": 50,
+    "id": 54,
+    "parent": 53,
     "range": {
       "endColumn": 40,
       "endRow": 5,
@@ -1857,8 +1938,8 @@
     "type": "collection"
   },
   {
-    "id": 52,
-    "parent": 51,
+    "id": 55,
+    "parent": 54,
     "range": {
       "endColumn": 34,
       "endRow": 5,
@@ -1902,8 +1983,8 @@
     "type": "expr"
   },
   {
-    "id": 53,
-    "parent": 52,
+    "id": 56,
+    "parent": 55,
     "range": {
       "endColumn": 34,
       "endRow": 5,
@@ -1920,8 +2001,8 @@
     "type": "other"
   },
   {
-    "id": 54,
-    "parent": 51,
+    "id": 57,
+    "parent": 54,
     "range": {
       "endColumn": 37,
       "endRow": 5,
@@ -1953,8 +2034,8 @@
     "type": "expr"
   },
   {
-    "id": 55,
-    "parent": 54,
+    "id": 58,
+    "parent": 57,
     "range": {
       "endColumn": 37,
       "endRow": 5,
@@ -1971,8 +2052,8 @@
     "type": "other"
   },
   {
-    "id": 56,
-    "parent": 51,
+    "id": 59,
+    "parent": 54,
     "range": {
       "endColumn": 40,
       "endRow": 5,
@@ -2004,8 +2085,8 @@
     "type": "expr"
   },
   {
-    "id": 57,
-    "parent": 56,
+    "id": 60,
+    "parent": 59,
     "range": {
       "endColumn": 40,
       "endRow": 5,
@@ -2022,8 +2103,8 @@
     "type": "other"
   },
   {
-    "id": 58,
-    "parent": 46,
+    "id": 61,
+    "parent": 49,
     "range": {
       "endColumn": 2,
       "endRow": 7,
@@ -2081,8 +2162,8 @@
     "type": "other"
   },
   {
-    "id": 59,
-    "parent": 58,
+    "id": 62,
+    "parent": 61,
     "range": {
       "endColumn": 42,
       "endRow": 5,
@@ -2099,8 +2180,8 @@
     "type": "other"
   },
   {
-    "id": 60,
-    "parent": 58,
+    "id": 63,
+    "parent": 61,
     "range": {
       "endColumn": 61,
       "endRow": 6,
@@ -2125,8 +2206,8 @@
     "type": "collection"
   },
   {
-    "id": 61,
-    "parent": 60,
+    "id": 64,
+    "parent": 63,
     "range": {
       "endColumn": 61,
       "endRow": 6,
@@ -2170,8 +2251,8 @@
     "type": "other"
   },
   {
-    "id": 62,
-    "parent": 61,
+    "id": 65,
+    "parent": 64,
     "range": {
       "endColumn": 61,
       "endRow": 6,
@@ -2251,8 +2332,9 @@
       },
       {
         "name": "additionalTrailingClosures",
+        "ref": "MultipleTrailingClosureElementListSyntax",
         "value": {
-          "text": "nil"
+          "text": "MultipleTrailingClosureElementListSyntax"
         }
       },
       {
@@ -2266,8 +2348,8 @@
     "type": "expr"
   },
   {
-    "id": 63,
-    "parent": 62,
+    "id": 66,
+    "parent": 65,
     "range": {
       "endColumn": 8,
       "endRow": 6,
@@ -2311,8 +2393,8 @@
     "type": "expr"
   },
   {
-    "id": 64,
-    "parent": 63,
+    "id": 67,
+    "parent": 66,
     "range": {
       "endColumn": 8,
       "endRow": 6,
@@ -2329,8 +2411,8 @@
     "type": "other"
   },
   {
-    "id": 65,
-    "parent": 62,
+    "id": 68,
+    "parent": 65,
     "range": {
       "endColumn": 9,
       "endRow": 6,
@@ -2347,8 +2429,8 @@
     "type": "other"
   },
   {
-    "id": 66,
-    "parent": 62,
+    "id": 69,
+    "parent": 65,
     "range": {
       "endColumn": 60,
       "endRow": 6,
@@ -2373,8 +2455,8 @@
     "type": "collection"
   },
   {
-    "id": 67,
-    "parent": 66,
+    "id": 70,
+    "parent": 69,
     "range": {
       "endColumn": 60,
       "endRow": 6,
@@ -2442,8 +2524,8 @@
     "type": "other"
   },
   {
-    "id": 68,
-    "parent": 67,
+    "id": 71,
+    "parent": 70,
     "range": {
       "endColumn": 60,
       "endRow": 6,
@@ -2525,8 +2607,8 @@
     "type": "expr"
   },
   {
-    "id": 69,
-    "parent": 68,
+    "id": 72,
+    "parent": 71,
     "range": {
       "endColumn": 10,
       "endRow": 6,
@@ -2543,8 +2625,8 @@
     "type": "other"
   },
   {
-    "id": 70,
-    "parent": 68,
+    "id": 73,
+    "parent": 71,
     "range": {
       "endColumn": 59,
       "endRow": 6,
@@ -2569,8 +2651,8 @@
     "type": "collection"
   },
   {
-    "id": 71,
-    "parent": 70,
+    "id": 74,
+    "parent": 73,
     "range": {
       "endColumn": 59,
       "endRow": 6,
@@ -2602,8 +2684,8 @@
     "type": "other"
   },
   {
-    "id": 72,
-    "parent": 71,
+    "id": 75,
+    "parent": 74,
     "range": {
       "endColumn": 59,
       "endRow": 6,
@@ -2620,8 +2702,8 @@
     "type": "other"
   },
   {
-    "id": 73,
-    "parent": 68,
+    "id": 76,
+    "parent": 71,
     "range": {
       "endColumn": 60,
       "endRow": 6,
@@ -2638,8 +2720,8 @@
     "type": "other"
   },
   {
-    "id": 74,
-    "parent": 62,
+    "id": 77,
+    "parent": 65,
     "range": {
       "endColumn": 61,
       "endRow": 6,
@@ -2656,8 +2738,34 @@
     "type": "other"
   },
   {
-    "id": 75,
-    "parent": 58,
+    "id": 78,
+    "parent": 65,
+    "range": {
+      "endColumn": 61,
+      "endRow": 6,
+      "startColumn": 61,
+      "startRow": 6
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "MultipleTrailingClosureElementSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "MultipleTrailingClosureElementList",
+    "type": "collection"
+  },
+  {
+    "id": 79,
+    "parent": 61,
     "range": {
       "endColumn": 2,
       "endRow": 7,
@@ -2674,8 +2782,8 @@
     "type": "other"
   },
   {
-    "id": 76,
-    "parent": 46,
+    "id": 80,
+    "parent": 49,
     "range": {
       "endColumn": 7,
       "endRow": 7,
@@ -2692,8 +2800,8 @@
     "type": "other"
   },
   {
-    "id": 77,
-    "parent": 46,
+    "id": 81,
+    "parent": 49,
     "range": {
       "endColumn": 2,
       "endRow": 9,
@@ -2751,8 +2859,8 @@
     "type": "other"
   },
   {
-    "id": 78,
-    "parent": 77,
+    "id": 82,
+    "parent": 81,
     "range": {
       "endColumn": 9,
       "endRow": 7,
@@ -2769,8 +2877,8 @@
     "type": "other"
   },
   {
-    "id": 79,
-    "parent": 77,
+    "id": 83,
+    "parent": 81,
     "range": {
       "endColumn": 47,
       "endRow": 8,
@@ -2795,8 +2903,8 @@
     "type": "collection"
   },
   {
-    "id": 80,
-    "parent": 79,
+    "id": 84,
+    "parent": 83,
     "range": {
       "endColumn": 47,
       "endRow": 8,
@@ -2840,8 +2948,8 @@
     "type": "other"
   },
   {
-    "id": 81,
-    "parent": 80,
+    "id": 85,
+    "parent": 84,
     "range": {
       "endColumn": 47,
       "endRow": 8,
@@ -2921,8 +3029,9 @@
       },
       {
         "name": "additionalTrailingClosures",
+        "ref": "MultipleTrailingClosureElementListSyntax",
         "value": {
-          "text": "nil"
+          "text": "MultipleTrailingClosureElementListSyntax"
         }
       },
       {
@@ -2936,8 +3045,8 @@
     "type": "expr"
   },
   {
-    "id": 82,
-    "parent": 81,
+    "id": 86,
+    "parent": 85,
     "range": {
       "endColumn": 8,
       "endRow": 8,
@@ -2981,8 +3090,8 @@
     "type": "expr"
   },
   {
-    "id": 83,
-    "parent": 82,
+    "id": 87,
+    "parent": 86,
     "range": {
       "endColumn": 8,
       "endRow": 8,
@@ -2999,8 +3108,8 @@
     "type": "other"
   },
   {
-    "id": 84,
-    "parent": 81,
+    "id": 88,
+    "parent": 85,
     "range": {
       "endColumn": 9,
       "endRow": 8,
@@ -3017,8 +3126,8 @@
     "type": "other"
   },
   {
-    "id": 85,
-    "parent": 81,
+    "id": 89,
+    "parent": 85,
     "range": {
       "endColumn": 46,
       "endRow": 8,
@@ -3043,8 +3152,8 @@
     "type": "collection"
   },
   {
-    "id": 86,
-    "parent": 85,
+    "id": 90,
+    "parent": 89,
     "range": {
       "endColumn": 46,
       "endRow": 8,
@@ -3112,8 +3221,8 @@
     "type": "other"
   },
   {
-    "id": 87,
-    "parent": 86,
+    "id": 91,
+    "parent": 90,
     "range": {
       "endColumn": 46,
       "endRow": 8,
@@ -3195,8 +3304,8 @@
     "type": "expr"
   },
   {
-    "id": 88,
-    "parent": 87,
+    "id": 92,
+    "parent": 91,
     "range": {
       "endColumn": 10,
       "endRow": 8,
@@ -3213,8 +3322,8 @@
     "type": "other"
   },
   {
-    "id": 89,
-    "parent": 87,
+    "id": 93,
+    "parent": 91,
     "range": {
       "endColumn": 45,
       "endRow": 8,
@@ -3239,8 +3348,8 @@
     "type": "collection"
   },
   {
-    "id": 90,
-    "parent": 89,
+    "id": 94,
+    "parent": 93,
     "range": {
       "endColumn": 45,
       "endRow": 8,
@@ -3272,8 +3381,8 @@
     "type": "other"
   },
   {
-    "id": 91,
-    "parent": 90,
+    "id": 95,
+    "parent": 94,
     "range": {
       "endColumn": 45,
       "endRow": 8,
@@ -3290,8 +3399,8 @@
     "type": "other"
   },
   {
-    "id": 92,
-    "parent": 87,
+    "id": 96,
+    "parent": 91,
     "range": {
       "endColumn": 46,
       "endRow": 8,
@@ -3308,8 +3417,8 @@
     "type": "other"
   },
   {
-    "id": 93,
-    "parent": 81,
+    "id": 97,
+    "parent": 85,
     "range": {
       "endColumn": 47,
       "endRow": 8,
@@ -3326,8 +3435,34 @@
     "type": "other"
   },
   {
-    "id": 94,
-    "parent": 77,
+    "id": 98,
+    "parent": 85,
+    "range": {
+      "endColumn": 47,
+      "endRow": 8,
+      "startColumn": 47,
+      "startRow": 8
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "MultipleTrailingClosureElementSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "MultipleTrailingClosureElementList",
+    "type": "collection"
+  },
+  {
+    "id": 99,
+    "parent": 81,
     "range": {
       "endColumn": 2,
       "endRow": 9,
@@ -3344,7 +3479,7 @@
     "type": "other"
   },
   {
-    "id": 95,
+    "id": 100,
     "parent": 0,
     "range": {
       "endColumn": 62,

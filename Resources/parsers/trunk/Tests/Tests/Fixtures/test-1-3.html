@@ -2,6 +2,8 @@
 <span class='CodeBlockItemList' data-title='import␣Foundation↲↲struct␣BlackjackCard␣{↲␣␣//␣nested␣Suit␣enumeration↲␣␣enum␣Suit:␣Character␣{↲␣␣␣␣case␣spades␣=␣&quot;♠&quot;↲␣␣␣␣case␣hearts␣=␣&quot;♡&quot;↲␣␣␣␣case␣diamonds␣=␣&quot;♢&quot;↲␣␣␣␣case␣clubs␣=␣&quot;♣&quot;↲␣␣}↲↲␣␣//␣nested␣Rank␣enumeration↲␣␣enum␣Rank:␣Int␣{↲␣␣␣␣case␣two␣=␣2↲␣␣␣␣case␣three,␣four,␣five,␣six,␣seven,␣eight,␣nine,␣ten↲␣␣␣␣case␣jack,␣queen,␣king,␣ace↲↲␣␣␣␣struct␣Values␣{↲␣␣␣␣␣␣let␣first:␣Int,␣second:␣Int?↲␣␣␣␣}↲↲␣␣␣␣var␣values:␣Values␣{↲␣␣␣␣␣␣switch␣self␣{↲␣␣␣␣␣␣case␣.ace:↲␣␣␣␣␣␣␣␣return␣Values(first:␣1,␣second:␣11)↲␣␣␣␣␣␣case␣.jack,␣.queen,␣.king:↲␣␣␣␣␣␣␣␣return␣Values(first:␣10,␣second:␣nil)↲␣␣␣␣␣␣default:↲␣␣␣␣␣␣␣␣return␣Values(first:␣self.rawValue,␣second:␣nil)↲␣␣␣␣␣␣}↲␣␣␣␣}↲␣␣}↲↲␣␣//␣BlackjackCard␣properties␣and␣methods↲␣␣let␣rank:␣Rank,␣suit:␣Suit↲␣␣var␣description:␣String␣{↲␣␣␣␣var␣output␣=␣&quot;suit␣is␣\(suit.rawValue),&quot;↲␣␣␣␣output␣+=␣&quot;␣value␣is␣\(rank.values.first)&quot;↲␣␣␣␣if␣let␣second␣=␣rank.values.second␣{↲␣␣␣␣␣␣output␣+=␣&quot;␣or␣\(second)&quot;↲␣␣␣␣}↲␣␣␣␣return␣output↲␣␣}↲}' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":44,"endColumn":2}'>
 <span class='CodeBlockItem' data-title='import␣Foundation' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":18}'>
 <span class='ImportDecl' data-title='import␣Foundation' data-content='ImportDeclSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":18}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":1}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":1}'></span>
 <span class='Token' data-title='import' data-content='keyword(SwiftSyntax.Keyword.import)' data-type='Token' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":7}'>
 <span class='token keyword present' data-title='import' data-content='keyword(SwiftSyntax.Keyword.import)' data-type='Token' data-range='{"startRow":1,"startColumn":1,"endRow":1,"endColumn":7}'>
 import
@@ -21,6 +23,8 @@ Foundation
 </span>
 <span class='CodeBlockItem' data-title='struct␣BlackjackCard␣{↲␣␣//␣nested␣Suit␣enumeration↲␣␣enum␣Suit:␣Character␣{↲␣␣␣␣case␣spades␣=␣&quot;♠&quot;↲␣␣␣␣case␣hearts␣=␣&quot;♡&quot;↲␣␣␣␣case␣diamonds␣=␣&quot;♢&quot;↲␣␣␣␣case␣clubs␣=␣&quot;♣&quot;↲␣␣}↲↲␣␣//␣nested␣Rank␣enumeration↲␣␣enum␣Rank:␣Int␣{↲␣␣␣␣case␣two␣=␣2↲␣␣␣␣case␣three,␣four,␣five,␣six,␣seven,␣eight,␣nine,␣ten↲␣␣␣␣case␣jack,␣queen,␣king,␣ace↲↲␣␣␣␣struct␣Values␣{↲␣␣␣␣␣␣let␣first:␣Int,␣second:␣Int?↲␣␣␣␣}↲↲␣␣␣␣var␣values:␣Values␣{↲␣␣␣␣␣␣switch␣self␣{↲␣␣␣␣␣␣case␣.ace:↲␣␣␣␣␣␣␣␣return␣Values(first:␣1,␣second:␣11)↲␣␣␣␣␣␣case␣.jack,␣.queen,␣.king:↲␣␣␣␣␣␣␣␣return␣Values(first:␣10,␣second:␣nil)↲␣␣␣␣␣␣default:↲␣␣␣␣␣␣␣␣return␣Values(first:␣self.rawValue,␣second:␣nil)↲␣␣␣␣␣␣}↲␣␣␣␣}↲␣␣}↲↲␣␣//␣BlackjackCard␣properties␣and␣methods↲␣␣let␣rank:␣Rank,␣suit:␣Suit↲␣␣var␣description:␣String␣{↲␣␣␣␣var␣output␣=␣&quot;suit␣is␣\(suit.rawValue),&quot;↲␣␣␣␣output␣+=␣&quot;␣value␣is␣\(rank.values.first)&quot;↲␣␣␣␣if␣let␣second␣=␣rank.values.second␣{↲␣␣␣␣␣␣output␣+=␣&quot;␣or␣\(second)&quot;↲␣␣␣␣}↲␣␣␣␣return␣output↲␣␣}↲}' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":1,"endRow":44,"endColumn":2}'>
 <span class='StructDecl' data-title='struct␣BlackjackCard␣{↲␣␣//␣nested␣Suit␣enumeration↲␣␣enum␣Suit:␣Character␣{↲␣␣␣␣case␣spades␣=␣&quot;♠&quot;↲␣␣␣␣case␣hearts␣=␣&quot;♡&quot;↲␣␣␣␣case␣diamonds␣=␣&quot;♢&quot;↲␣␣␣␣case␣clubs␣=␣&quot;♣&quot;↲␣␣}↲↲␣␣//␣nested␣Rank␣enumeration↲␣␣enum␣Rank:␣Int␣{↲␣␣␣␣case␣two␣=␣2↲␣␣␣␣case␣three,␣four,␣five,␣six,␣seven,␣eight,␣nine,␣ten↲␣␣␣␣case␣jack,␣queen,␣king,␣ace↲↲␣␣␣␣struct␣Values␣{↲␣␣␣␣␣␣let␣first:␣Int,␣second:␣Int?↲␣␣␣␣}↲↲␣␣␣␣var␣values:␣Values␣{↲␣␣␣␣␣␣switch␣self␣{↲␣␣␣␣␣␣case␣.ace:↲␣␣␣␣␣␣␣␣return␣Values(first:␣1,␣second:␣11)↲␣␣␣␣␣␣case␣.jack,␣.queen,␣.king:↲␣␣␣␣␣␣␣␣return␣Values(first:␣10,␣second:␣nil)↲␣␣␣␣␣␣default:↲␣␣␣␣␣␣␣␣return␣Values(first:␣self.rawValue,␣second:␣nil)↲␣␣␣␣␣␣}↲␣␣␣␣}↲␣␣}↲↲␣␣//␣BlackjackCard␣properties␣and␣methods↲␣␣let␣rank:␣Rank,␣suit:␣Suit↲␣␣var␣description:␣String␣{↲␣␣␣␣var␣output␣=␣&quot;suit␣is␣\(suit.rawValue),&quot;↲␣␣␣␣output␣+=␣&quot;␣value␣is␣\(rank.values.first)&quot;↲␣␣␣␣if␣let␣second␣=␣rank.values.second␣{↲␣␣␣␣␣␣output␣+=␣&quot;␣or␣\(second)&quot;↲␣␣␣␣}↲␣␣␣␣return␣output↲␣␣}↲}' data-content='StructDeclSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":1,"endRow":44,"endColumn":2}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":18,"endRow":1,"endColumn":18}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":1,"startColumn":18,"endRow":1,"endColumn":18}'></span>
 <span class='Token' data-title='struct' data-content='keyword(SwiftSyntax.Keyword.struct)' data-type='Token' data-range='{"startRow":3,"startColumn":1,"endRow":3,"endColumn":7}'>
 <br/>
 <br/>
@@ -44,6 +48,8 @@ BlackjackCard
 <span class='MemberBlockItemList' data-title='enum␣Suit:␣Character␣{↲␣␣␣␣case␣spades␣=␣&quot;♠&quot;↲␣␣␣␣case␣hearts␣=␣&quot;♡&quot;↲␣␣␣␣case␣diamonds␣=␣&quot;♢&quot;↲␣␣␣␣case␣clubs␣=␣&quot;♣&quot;↲␣␣}↲↲␣␣//␣nested␣Rank␣enumeration↲␣␣enum␣Rank:␣Int␣{↲␣␣␣␣case␣two␣=␣2↲␣␣␣␣case␣three,␣four,␣five,␣six,␣seven,␣eight,␣nine,␣ten↲␣␣␣␣case␣jack,␣queen,␣king,␣ace↲↲␣␣␣␣struct␣Values␣{↲␣␣␣␣␣␣let␣first:␣Int,␣second:␣Int?↲␣␣␣␣}↲↲␣␣␣␣var␣values:␣Values␣{↲␣␣␣␣␣␣switch␣self␣{↲␣␣␣␣␣␣case␣.ace:↲␣␣␣␣␣␣␣␣return␣Values(first:␣1,␣second:␣11)↲␣␣␣␣␣␣case␣.jack,␣.queen,␣.king:↲␣␣␣␣␣␣␣␣return␣Values(first:␣10,␣second:␣nil)↲␣␣␣␣␣␣default:↲␣␣␣␣␣␣␣␣return␣Values(first:␣self.rawValue,␣second:␣nil)↲␣␣␣␣␣␣}↲␣␣␣␣}↲␣␣}↲↲␣␣//␣BlackjackCard␣properties␣and␣methods↲␣␣let␣rank:␣Rank,␣suit:␣Suit↲␣␣var␣description:␣String␣{↲␣␣␣␣var␣output␣=␣&quot;suit␣is␣\(suit.rawValue),&quot;↲␣␣␣␣output␣+=␣&quot;␣value␣is␣\(rank.values.first)&quot;↲␣␣␣␣if␣let␣second␣=␣rank.values.second␣{↲␣␣␣␣␣␣output␣+=␣&quot;␣or␣\(second)&quot;↲␣␣␣␣}↲␣␣␣␣return␣output↲␣␣}' data-content='MemberBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":43,"endColumn":4}'>
 <span class='MemberBlockItem' data-title='enum␣Suit:␣Character␣{↲␣␣␣␣case␣spades␣=␣&quot;♠&quot;↲␣␣␣␣case␣hearts␣=␣&quot;♡&quot;↲␣␣␣␣case␣diamonds␣=␣&quot;♢&quot;↲␣␣␣␣case␣clubs␣=␣&quot;♣&quot;↲␣␣}' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":10,"endColumn":4}'>
 <span class='EnumDecl' data-title='enum␣Suit:␣Character␣{↲␣␣␣␣case␣spades␣=␣&quot;♠&quot;↲␣␣␣␣case␣hearts␣=␣&quot;♡&quot;↲␣␣␣␣case␣diamonds␣=␣&quot;♢&quot;↲␣␣␣␣case␣clubs␣=␣&quot;♣&quot;↲␣␣}' data-content='EnumDeclSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":3,"endRow":10,"endColumn":4}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":23,"endRow":3,"endColumn":23}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":3,"startColumn":23,"endRow":3,"endColumn":23}'></span>
 <span class='Token' data-title='enum' data-content='keyword(SwiftSyntax.Keyword.enum)' data-type='Token' data-range='{"startRow":5,"startColumn":3,"endRow":5,"endColumn":7}'>
 <br/>
 &nbsp;&nbsp;
@@ -91,6 +97,8 @@ Character
 <span class='MemberBlockItemList' data-title='case␣spades␣=␣&quot;♠&quot;↲␣␣␣␣case␣hearts␣=␣&quot;♡&quot;↲␣␣␣␣case␣diamonds␣=␣&quot;♢&quot;↲␣␣␣␣case␣clubs␣=␣&quot;♣&quot;' data-content='MemberBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":9,"endColumn":23}'>
 <span class='MemberBlockItem' data-title='case␣spades␣=␣&quot;♠&quot;' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":24}'>
 <span class='EnumCaseDecl' data-title='case␣spades␣=␣&quot;♠&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":24}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":25,"endRow":5,"endColumn":25}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":5,"startColumn":25,"endRow":5,"endColumn":25}'></span>
 <span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":6,"startColumn":5,"endRow":6,"endColumn":9}'>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -142,6 +150,8 @@ spades
 </span>
 <span class='MemberBlockItem' data-title='case␣hearts␣=␣&quot;♡&quot;' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":24}'>
 <span class='EnumCaseDecl' data-title='case␣hearts␣=␣&quot;♡&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":24}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":24,"endRow":6,"endColumn":24}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":6,"startColumn":24,"endRow":6,"endColumn":24}'></span>
 <span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":7,"startColumn":5,"endRow":7,"endColumn":9}'>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -193,6 +203,8 @@ hearts
 </span>
 <span class='MemberBlockItem' data-title='case␣diamonds␣=␣&quot;♢&quot;' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":26}'>
 <span class='EnumCaseDecl' data-title='case␣diamonds␣=␣&quot;♢&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":26}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":24,"endRow":7,"endColumn":24}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":7,"startColumn":24,"endRow":7,"endColumn":24}'></span>
 <span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":8,"startColumn":5,"endRow":8,"endColumn":9}'>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -244,6 +256,8 @@ diamonds
 </span>
 <span class='MemberBlockItem' data-title='case␣clubs␣=␣&quot;♣&quot;' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":23}'>
 <span class='EnumCaseDecl' data-title='case␣clubs␣=␣&quot;♣&quot;' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":23}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":26,"endRow":8,"endColumn":26}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":8,"startColumn":26,"endRow":8,"endColumn":26}'></span>
 <span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":9,"startColumn":5,"endRow":9,"endColumn":9}'>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -306,6 +320,8 @@ clubs
 </span>
 <span class='MemberBlockItem' data-title='enum␣Rank:␣Int␣{↲␣␣␣␣case␣two␣=␣2↲␣␣␣␣case␣three,␣four,␣five,␣six,␣seven,␣eight,␣nine,␣ten↲␣␣␣␣case␣jack,␣queen,␣king,␣ace↲↲␣␣␣␣struct␣Values␣{↲␣␣␣␣␣␣let␣first:␣Int,␣second:␣Int?↲␣␣␣␣}↲↲␣␣␣␣var␣values:␣Values␣{↲␣␣␣␣␣␣switch␣self␣{↲␣␣␣␣␣␣case␣.ace:↲␣␣␣␣␣␣␣␣return␣Values(first:␣1,␣second:␣11)↲␣␣␣␣␣␣case␣.jack,␣.queen,␣.king:↲␣␣␣␣␣␣␣␣return␣Values(first:␣10,␣second:␣nil)↲␣␣␣␣␣␣default:↲␣␣␣␣␣␣␣␣return␣Values(first:␣self.rawValue,␣second:␣nil)↲␣␣␣␣␣␣}↲␣␣␣␣}↲␣␣}' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":13,"startColumn":3,"endRow":32,"endColumn":4}'>
 <span class='EnumDecl' data-title='enum␣Rank:␣Int␣{↲␣␣␣␣case␣two␣=␣2↲␣␣␣␣case␣three,␣four,␣five,␣six,␣seven,␣eight,␣nine,␣ten↲␣␣␣␣case␣jack,␣queen,␣king,␣ace↲↲␣␣␣␣struct␣Values␣{↲␣␣␣␣␣␣let␣first:␣Int,␣second:␣Int?↲␣␣␣␣}↲↲␣␣␣␣var␣values:␣Values␣{↲␣␣␣␣␣␣switch␣self␣{↲␣␣␣␣␣␣case␣.ace:↲␣␣␣␣␣␣␣␣return␣Values(first:␣1,␣second:␣11)↲␣␣␣␣␣␣case␣.jack,␣.queen,␣.king:↲␣␣␣␣␣␣␣␣return␣Values(first:␣10,␣second:␣nil)↲␣␣␣␣␣␣default:↲␣␣␣␣␣␣␣␣return␣Values(first:␣self.rawValue,␣second:␣nil)↲␣␣␣␣␣␣}↲␣␣␣␣}↲␣␣}' data-content='EnumDeclSyntax' data-type='Syntax' data-range='{"startRow":13,"startColumn":3,"endRow":32,"endColumn":4}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":10,"startColumn":4,"endRow":10,"endColumn":4}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":10,"startColumn":4,"endRow":10,"endColumn":4}'></span>
 <span class='Token' data-title='enum' data-content='keyword(SwiftSyntax.Keyword.enum)' data-type='Token' data-range='{"startRow":13,"startColumn":3,"endRow":13,"endColumn":7}'>
 <br/>
 <br/>
@@ -354,6 +370,8 @@ Int
 <span class='MemberBlockItemList' data-title='case␣two␣=␣2↲␣␣␣␣case␣three,␣four,␣five,␣six,␣seven,␣eight,␣nine,␣ten↲␣␣␣␣case␣jack,␣queen,␣king,␣ace↲↲␣␣␣␣struct␣Values␣{↲␣␣␣␣␣␣let␣first:␣Int,␣second:␣Int?↲␣␣␣␣}↲↲␣␣␣␣var␣values:␣Values␣{↲␣␣␣␣␣␣switch␣self␣{↲␣␣␣␣␣␣case␣.ace:↲␣␣␣␣␣␣␣␣return␣Values(first:␣1,␣second:␣11)↲␣␣␣␣␣␣case␣.jack,␣.queen,␣.king:↲␣␣␣␣␣␣␣␣return␣Values(first:␣10,␣second:␣nil)↲␣␣␣␣␣␣default:↲␣␣␣␣␣␣␣␣return␣Values(first:␣self.rawValue,␣second:␣nil)↲␣␣␣␣␣␣}↲␣␣␣␣}' data-content='MemberBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":5,"endRow":31,"endColumn":6}'>
 <span class='MemberBlockItem' data-title='case␣two␣=␣2' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":5,"endRow":14,"endColumn":17}'>
 <span class='EnumCaseDecl' data-title='case␣two␣=␣2' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":5,"endRow":14,"endColumn":17}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":13,"startColumn":19,"endRow":13,"endColumn":19}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":13,"startColumn":19,"endRow":13,"endColumn":19}'></span>
 <span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":14,"startColumn":5,"endRow":14,"endColumn":9}'>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -391,6 +409,8 @@ two
 </span>
 <span class='MemberBlockItem' data-title='case␣three,␣four,␣five,␣six,␣seven,␣eight,␣nine,␣ten' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":5,"endRow":15,"endColumn":57}'>
 <span class='EnumCaseDecl' data-title='case␣three,␣four,␣five,␣six,␣seven,␣eight,␣nine,␣ten' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":5,"endRow":15,"endColumn":57}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":17,"endRow":14,"endColumn":17}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":14,"startColumn":17,"endRow":14,"endColumn":17}'></span>
 <span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":15,"startColumn":5,"endRow":15,"endColumn":9}'>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -503,6 +523,8 @@ ten
 </span>
 <span class='MemberBlockItem' data-title='case␣jack,␣queen,␣king,␣ace' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":5,"endRow":16,"endColumn":32}'>
 <span class='EnumCaseDecl' data-title='case␣jack,␣queen,␣king,␣ace' data-content='EnumCaseDeclSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":5,"endRow":16,"endColumn":32}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":57,"endRow":15,"endColumn":57}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":15,"startColumn":57,"endRow":15,"endColumn":57}'></span>
 <span class='Token' data-title='case' data-content='keyword(SwiftSyntax.Keyword.case)' data-type='Token' data-range='{"startRow":16,"startColumn":5,"endRow":16,"endColumn":9}'>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -563,6 +585,8 @@ ace
 </span>
 <span class='MemberBlockItem' data-title='struct␣Values␣{↲␣␣␣␣␣␣let␣first:␣Int,␣second:␣Int?↲␣␣␣␣}' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":18,"startColumn":5,"endRow":20,"endColumn":6}'>
 <span class='StructDecl' data-title='struct␣Values␣{↲␣␣␣␣␣␣let␣first:␣Int,␣second:␣Int?↲␣␣␣␣}' data-content='StructDeclSyntax' data-type='Syntax' data-range='{"startRow":18,"startColumn":5,"endRow":20,"endColumn":6}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":32,"endRow":16,"endColumn":32}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":16,"startColumn":32,"endRow":16,"endColumn":32}'></span>
 <span class='Token' data-title='struct' data-content='keyword(SwiftSyntax.Keyword.struct)' data-type='Token' data-range='{"startRow":18,"startColumn":5,"endRow":18,"endColumn":11}'>
 <br/>
 <br/>
@@ -587,6 +611,8 @@ Values
 <span class='MemberBlockItemList' data-title='let␣first:␣Int,␣second:␣Int?' data-content='MemberBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":7,"endRow":19,"endColumn":35}'>
 <span class='MemberBlockItem' data-title='let␣first:␣Int,␣second:␣Int?' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":7,"endRow":19,"endColumn":35}'>
 <span class='VariableDecl' data-title='let␣first:␣Int,␣second:␣Int?' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":19,"startColumn":7,"endRow":19,"endColumn":35}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":18,"startColumn":20,"endRow":18,"endColumn":20}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":18,"startColumn":20,"endRow":18,"endColumn":20}'></span>
 <span class='Token' data-title='let' data-content='keyword(SwiftSyntax.Keyword.let)' data-type='Token' data-range='{"startRow":19,"startColumn":7,"endRow":19,"endColumn":10}'>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -673,6 +699,8 @@ Int
 </span>
 <span class='MemberBlockItem' data-title='var␣values:␣Values␣{↲␣␣␣␣␣␣switch␣self␣{↲␣␣␣␣␣␣case␣.ace:↲␣␣␣␣␣␣␣␣return␣Values(first:␣1,␣second:␣11)↲␣␣␣␣␣␣case␣.jack,␣.queen,␣.king:↲␣␣␣␣␣␣␣␣return␣Values(first:␣10,␣second:␣nil)↲␣␣␣␣␣␣default:↲␣␣␣␣␣␣␣␣return␣Values(first:␣self.rawValue,␣second:␣nil)↲␣␣␣␣␣␣}↲␣␣␣␣}' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":22,"startColumn":5,"endRow":31,"endColumn":6}'>
 <span class='VariableDecl' data-title='var␣values:␣Values␣{↲␣␣␣␣␣␣switch␣self␣{↲␣␣␣␣␣␣case␣.ace:↲␣␣␣␣␣␣␣␣return␣Values(first:␣1,␣second:␣11)↲␣␣␣␣␣␣case␣.jack,␣.queen,␣.king:↲␣␣␣␣␣␣␣␣return␣Values(first:␣10,␣second:␣nil)↲␣␣␣␣␣␣default:↲␣␣␣␣␣␣␣␣return␣Values(first:␣self.rawValue,␣second:␣nil)↲␣␣␣␣␣␣}↲␣␣␣␣}' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":22,"startColumn":5,"endRow":31,"endColumn":6}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":20,"startColumn":6,"endRow":20,"endColumn":6}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":20,"startColumn":6,"endRow":20,"endColumn":6}'></span>
 <span class='Token' data-title='var' data-content='keyword(SwiftSyntax.Keyword.var)' data-type='Token' data-range='{"startRow":22,"startColumn":5,"endRow":22,"endColumn":8}'>
 <br/>
 <br/>
@@ -852,6 +880,7 @@ second
 )
 </span>
 </span>
+<span class='MultipleTrailingClosureElementList' data-title='' data-content='MultipleTrailingClosureElementListSyntax' data-type='Syntax' data-range='{"startRow":25,"startColumn":44,"endRow":25,"endColumn":44}'></span>
 </span>
 </span>
 </span>
@@ -1018,6 +1047,7 @@ nil
 )
 </span>
 </span>
+<span class='MultipleTrailingClosureElementList' data-title='' data-content='MultipleTrailingClosureElementListSyntax' data-type='Syntax' data-range='{"startRow":27,"startColumn":46,"endRow":27,"endColumn":46}'></span>
 </span>
 </span>
 </span>
@@ -1129,6 +1159,7 @@ nil
 )
 </span>
 </span>
+<span class='MultipleTrailingClosureElementList' data-title='' data-content='MultipleTrailingClosureElementListSyntax' data-type='Syntax' data-range='{"startRow":29,"startColumn":57,"endRow":29,"endColumn":57}'></span>
 </span>
 </span>
 </span>
@@ -1171,6 +1202,8 @@ nil
 </span>
 <span class='MemberBlockItem' data-title='let␣rank:␣Rank,␣suit:␣Suit' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":3,"endRow":35,"endColumn":29}'>
 <span class='VariableDecl' data-title='let␣rank:␣Rank,␣suit:␣Suit' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":3,"endRow":35,"endColumn":29}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":32,"startColumn":4,"endRow":32,"endColumn":4}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":32,"startColumn":4,"endRow":32,"endColumn":4}'></span>
 <span class='Token' data-title='let' data-content='keyword(SwiftSyntax.Keyword.let)' data-type='Token' data-range='{"startRow":35,"startColumn":3,"endRow":35,"endColumn":6}'>
 <br/>
 <br/>
@@ -1245,6 +1278,8 @@ Suit
 </span>
 <span class='MemberBlockItem' data-title='var␣description:␣String␣{↲␣␣␣␣var␣output␣=␣&quot;suit␣is␣\(suit.rawValue),&quot;↲␣␣␣␣output␣+=␣&quot;␣value␣is␣\(rank.values.first)&quot;↲␣␣␣␣if␣let␣second␣=␣rank.values.second␣{↲␣␣␣␣␣␣output␣+=␣&quot;␣or␣\(second)&quot;↲␣␣␣␣}↲␣␣␣␣return␣output↲␣␣}' data-content='MemberBlockItemSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":3,"endRow":43,"endColumn":4}'>
 <span class='VariableDecl' data-title='var␣description:␣String␣{↲␣␣␣␣var␣output␣=␣&quot;suit␣is␣\(suit.rawValue),&quot;↲␣␣␣␣output␣+=␣&quot;␣value␣is␣\(rank.values.first)&quot;↲␣␣␣␣if␣let␣second␣=␣rank.values.second␣{↲␣␣␣␣␣␣output␣+=␣&quot;␣or␣\(second)&quot;↲␣␣␣␣}↲␣␣␣␣return␣output↲␣␣}' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":3,"endRow":43,"endColumn":4}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":29,"endRow":35,"endColumn":29}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":35,"startColumn":29,"endRow":35,"endColumn":29}'></span>
 <span class='Token' data-title='var' data-content='keyword(SwiftSyntax.Keyword.var)' data-type='Token' data-range='{"startRow":36,"startColumn":3,"endRow":36,"endColumn":6}'>
 <br/>
 &nbsp;&nbsp;
@@ -1287,6 +1322,8 @@ String
 <span class='CodeBlockItemList' data-title='var␣output␣=␣&quot;suit␣is␣\(suit.rawValue),&quot;↲␣␣␣␣output␣+=␣&quot;␣value␣is␣\(rank.values.first)&quot;↲␣␣␣␣if␣let␣second␣=␣rank.values.second␣{↲␣␣␣␣␣␣output␣+=␣&quot;␣or␣\(second)&quot;↲␣␣␣␣}↲␣␣␣␣return␣output' data-content='CodeBlockItemListSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":42,"endColumn":18}'>
 <span class='CodeBlockItem' data-title='var␣output␣=␣&quot;suit␣is␣\(suit.rawValue),&quot;' data-content='CodeBlockItemSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":45}'>
 <span class='VariableDecl' data-title='var␣output␣=␣&quot;suit␣is␣\(suit.rawValue),&quot;' data-content='VariableDeclSyntax' data-type='Syntax' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":45}'>
+<span class='AttributeList' data-title='' data-content='AttributeListSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":28,"endRow":36,"endColumn":28}'></span>
+<span class='DeclModifierList' data-title='' data-content='DeclModifierListSyntax' data-type='Syntax' data-range='{"startRow":36,"startColumn":28,"endRow":36,"endColumn":28}'></span>
 <span class='Token' data-title='var' data-content='keyword(SwiftSyntax.Keyword.var)' data-type='Token' data-range='{"startRow":37,"startColumn":5,"endRow":37,"endColumn":8}'>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;
