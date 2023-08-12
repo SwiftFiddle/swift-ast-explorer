@@ -6,7 +6,7 @@
       "location" : "https://github.com/kishikawakatsumi/StringWidth.git",
       "state" : {
         "branch" : "main",
-        "revision" : "5cdd9a3f11758364ea920635992c9d54aa14c9bd"
+        "revision" : "e4c8035546a046d3461a1621c5643a963f97bc20"
       }
     },
     {
@@ -15,7 +15,7 @@
       "location" : "https://github.com/apple/swift-syntax",
       "state" : {
         "branch" : "main",
-        "revision" : "91b448188395d6c100d69afb0aaa3d00c46555ff"
+        "revision" : "f6953015ba2d8c97df61760b614c59c084b72c7d"
       }
     }
   ],
