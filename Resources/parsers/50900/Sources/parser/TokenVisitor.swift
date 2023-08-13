@@ -1,6 +1,5 @@
 import Foundation
 @_spi(RawSyntax) import SwiftSyntax
-import StringWidth
 
 final class TokenVisitor: SyntaxRewriter {
   var list = [String]()
@@ -47,13 +46,13 @@ final class TokenVisitor: SyntaxRewriter {
 
     let graphemeStartColumn: Int
     if let prefix = String(locationConverter.sourceLines[start.line - 1].utf8.prefix(start.column - 1)) {
-      graphemeStartColumn = stringWidth(prefix) + 1
+      graphemeStartColumn = prefix.utf16.count + 1
     } else {
       graphemeStartColumn = start.column
     }
     let graphemeEndColumn: Int
     if let prefix = String(locationConverter.sourceLines[end.line - 1].utf8.prefix(end.column - 1)) {
-      graphemeEndColumn = stringWidth(prefix) + 1
+      graphemeEndColumn = prefix.utf16.count + 1
     } else {
       graphemeEndColumn = end.column
     }

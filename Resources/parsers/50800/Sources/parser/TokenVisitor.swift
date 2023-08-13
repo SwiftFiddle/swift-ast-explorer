@@ -1,6 +1,5 @@
 import Foundation
 import SwiftSyntax
-import StringWidth
 
 final class TokenVisitor: SyntaxRewriter {
   var list = [String]()
@@ -15,6 +14,10 @@ final class TokenVisitor: SyntaxRewriter {
   init(locationConverter: SourceLocationConverter, showMissingTokens: Bool) {
     self.locationConverter = locationConverter
     self.showMissingTokens = showMissingTokens
+  }
+
+  func rewrite(_ node: Syntax) -> Syntax {
+    visit(node)
   }
 
   override func visitPre(_ node: Syntax) {
@@ -54,13 +57,13 @@ final class TokenVisitor: SyntaxRewriter {
 
     let graphemeStartColumn: Int
     if let prefix = String(locationConverter.sourceLines[startRow - 1].utf8.prefix(startColumn - 1)) {
-      graphemeStartColumn = stringWidth(prefix) + 1
+      graphemeStartColumn = prefix.utf16.count + 1
     } else {
       graphemeStartColumn = startColumn
     }
     let graphemeEndColumn: Int
     if let prefix = String(locationConverter.sourceLines[endRow - 1].utf8.prefix(endColumn - 1)) {
-      graphemeEndColumn = stringWidth(prefix) + 1
+      graphemeEndColumn = prefix.utf16.count + 1
     } else {
       graphemeEndColumn = endColumn
     }

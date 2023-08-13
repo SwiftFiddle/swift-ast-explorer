@@ -18,7 +18,7 @@ struct SyntaxParser {
       locationConverter: SourceLocationConverter(file: "", tree: sourceFile),
       showMissingTokens: options.contains("showmissing")
     )
-    _ = visitor.visit(syntax)
+    _ = visitor.rewrite(syntax)
 
     let html = "\(visitor.list.joined())"
 
