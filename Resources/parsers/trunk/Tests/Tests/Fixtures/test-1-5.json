@@ -11,7 +11,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeStatements",
+        "name": "unexpectedBeforeShebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "shebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenShebangAndStatements",
         "value": {
           "text": "nil"
         }
