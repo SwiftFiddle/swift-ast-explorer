@@ -59,8 +59,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/routing-kit.git",
       "state" : {
-        "revision" : "611bc45c5dfb1f54b84d99b89d1f72191fb6b71b",
-        "version" : "4.7.2"
+        "revision" : "e0539da5b60a60d7381f44cdcf04036f456cee2f",
+        "version" : "4.8.0"
       }
     },
     {
@@ -158,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-ssl.git",
       "state" : {
-        "revision" : "e866a626e105042a6a72a870c88b4c531ba05f83",
-        "version" : "2.24.0"
+        "revision" : "320bd978cceb8e88c125dcbb774943a92f6286e9",
+        "version" : "2.25.0"
       }
     },
     {
@@ -203,8 +203,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "474d91b67db9515b5bf3f3558635955c3fe18a44",
-        "version" : "4.78.1"
+        "revision" : "fe973db5f48f7bb2bcf394b5932afa9884b6e589",
+        "version" : "4.78.2"
       }
     },
     {
