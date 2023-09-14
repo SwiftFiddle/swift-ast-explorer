@@ -27,9 +27,9 @@ RUN swift package resolve
 COPY . .
 RUN swift build -c release --static-swift-stdlib
 
-RUN cd Resources/parsers/50800 && swift build -c release --static-swift-stdlib
-RUN cd Resources/parsers/50900 && swift build -c release --static-swift-stdlib
-RUN cd Resources/parsers/trunk && swift build -c release --static-swift-stdlib
+RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/50800
+RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/50900
+RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/trunk
 
 WORKDIR /staging
 
