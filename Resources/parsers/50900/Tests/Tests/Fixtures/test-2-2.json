@@ -11,7 +11,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeStatements",
+        "name": "unexpectedBeforeShebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "shebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenShebangAndStatements",
         "value": {
           "text": "nil"
         }
@@ -24,20 +36,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenStatementsAndEOFToken",
+        "name": "unexpectedBetweenStatementsAndEndOfFileToken",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "eofToken",
+        "name": "endOfFileToken",
         "value": {
-          "kind": "eof",
+          "kind": "endOfFile",
           "text": ""
         }
       },
       {
-        "name": "unexpectedAfterEOFToken",
+        "name": "unexpectedAfterEndOfFileToken",
         "value": {
           "text": "nil"
         }
@@ -141,8 +153,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -153,25 +166,26 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
+        "value": {
+          "text": "DeclModifierListSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.var)",
           "text": "var"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }
@@ -197,6 +211,62 @@
     "id": 4,
     "parent": 3,
     "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "graphemeEndColumn": 1,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 5,
+    "parent": 3,
+    "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "graphemeEndColumn": 1,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 6,
+    "parent": 3,
+    "range": {
       "endColumn": 4,
       "endRow": 1,
       "graphemeEndColumn": 4,
@@ -214,7 +284,7 @@
     "type": "other"
   },
   {
-    "id": 5,
+    "id": 7,
     "parent": 3,
     "range": {
       "endColumn": 33,
@@ -242,8 +312,8 @@
     "type": "collection"
   },
   {
-    "id": 6,
-    "parent": 5,
+    "id": 8,
+    "parent": 7,
     "range": {
       "endColumn": 33,
       "endRow": 1,
@@ -292,19 +362,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorBlockAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -326,8 +396,8 @@
     "type": "other"
   },
   {
-    "id": 7,
-    "parent": 6,
+    "id": 9,
+    "parent": 8,
     "range": {
       "endColumn": 28,
       "endRow": 1,
@@ -361,8 +431,8 @@
     "type": "pattern"
   },
   {
-    "id": 8,
-    "parent": 7,
+    "id": 10,
+    "parent": 9,
     "range": {
       "endColumn": 28,
       "endRow": 1,
@@ -381,8 +451,8 @@
     "type": "other"
   },
   {
-    "id": 9,
-    "parent": 6,
+    "id": 11,
+    "parent": 8,
     "range": {
       "endColumn": 33,
       "endRow": 1,
@@ -429,8 +499,8 @@
     "type": "other"
   },
   {
-    "id": 10,
-    "parent": 9,
+    "id": 12,
+    "parent": 11,
     "range": {
       "endColumn": 30,
       "endRow": 1,
@@ -449,8 +519,8 @@
     "type": "other"
   },
   {
-    "id": 11,
-    "parent": 9,
+    "id": 13,
+    "parent": 11,
     "range": {
       "endColumn": 33,
       "endRow": 1,
@@ -461,20 +531,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(&quot;90&quot;)",
           "text": "90"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }
@@ -484,8 +554,8 @@
     "type": "expr"
   },
   {
-    "id": 12,
-    "parent": 11,
+    "id": 14,
+    "parent": 13,
     "range": {
       "endColumn": 33,
       "endRow": 1,
@@ -504,7 +574,7 @@
     "type": "other"
   },
   {
-    "id": 13,
+    "id": 15,
     "parent": 1,
     "range": {
       "endColumn": 2,
@@ -551,8 +621,8 @@
     "type": "other"
   },
   {
-    "id": 14,
-    "parent": 13,
+    "id": 16,
+    "parent": 15,
     "range": {
       "endColumn": 2,
       "endRow": 9,
@@ -586,8 +656,8 @@
     "type": "other"
   },
   {
-    "id": 15,
-    "parent": 14,
+    "id": 17,
+    "parent": 16,
     "range": {
       "endColumn": 2,
       "endRow": 9,
@@ -673,8 +743,8 @@
     "type": "expr"
   },
   {
-    "id": 16,
-    "parent": 15,
+    "id": 18,
+    "parent": 17,
     "range": {
       "endColumn": 3,
       "endRow": 3,
@@ -693,8 +763,8 @@
     "type": "other"
   },
   {
-    "id": 17,
-    "parent": 15,
+    "id": 19,
+    "parent": 17,
     "range": {
       "endColumn": 33,
       "endRow": 3,
@@ -721,8 +791,8 @@
     "type": "collection"
   },
   {
-    "id": 18,
-    "parent": 17,
+    "id": 20,
+    "parent": 19,
     "range": {
       "endColumn": 33,
       "endRow": 3,
@@ -768,8 +838,8 @@
     "type": "other"
   },
   {
-    "id": 19,
-    "parent": 18,
+    "id": 21,
+    "parent": 20,
     "range": {
       "endColumn": 33,
       "endRow": 3,
@@ -787,26 +857,26 @@
       },
       {
         "name": "leftOperand",
-        "ref": "IdentifierExprSyntax",
+        "ref": "DeclReferenceExprSyntax",
         "value": {
-          "text": "IdentifierExprSyntax"
+          "text": "DeclReferenceExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenLeftOperandAndOperatorOperand",
+        "name": "unexpectedBetweenLeftOperandAndOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorOperand",
+        "name": "operator",
         "ref": "BinaryOperatorExprSyntax",
         "value": {
           "text": "BinaryOperatorExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenOperatorOperandAndRightOperand",
+        "name": "unexpectedBetweenOperatorAndRightOperand",
         "value": {
           "text": "nil"
         }
@@ -829,8 +899,8 @@
     "type": "expr"
   },
   {
-    "id": 20,
-    "parent": 19,
+    "id": 22,
+    "parent": 21,
     "range": {
       "endColumn": 27,
       "endRow": 3,
@@ -841,43 +911,43 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeBaseName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "baseName",
         "value": {
           "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
           "text": "temperatureInFahrenheit"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndDeclNameArguments",
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "declNameArguments",
+        "name": "argumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterDeclNameArguments",
+        "name": "unexpectedAfterArgumentNames",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "IdentifierExpr",
+    "text": "DeclReferenceExpr",
     "type": "expr"
   },
   {
-    "id": 21,
-    "parent": 20,
+    "id": 23,
+    "parent": 22,
     "range": {
       "endColumn": 27,
       "endRow": 3,
@@ -896,8 +966,8 @@
     "type": "other"
   },
   {
-    "id": 22,
-    "parent": 19,
+    "id": 24,
+    "parent": 21,
     "range": {
       "endColumn": 30,
       "endRow": 3,
@@ -908,20 +978,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOperatorToken",
+        "name": "unexpectedBeforeOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorToken",
+        "name": "operator",
         "value": {
           "kind": "binaryOperator(&quot;&lt;=&quot;)",
           "text": "&lt;="
         }
       },
       {
-        "name": "unexpectedAfterOperatorToken",
+        "name": "unexpectedAfterOperator",
         "value": {
           "text": "nil"
         }
@@ -931,8 +1001,8 @@
     "type": "expr"
   },
   {
-    "id": 23,
-    "parent": 22,
+    "id": 25,
+    "parent": 24,
     "range": {
       "endColumn": 30,
       "endRow": 3,
@@ -951,8 +1021,8 @@
     "type": "other"
   },
   {
-    "id": 24,
-    "parent": 19,
+    "id": 26,
+    "parent": 21,
     "range": {
       "endColumn": 33,
       "endRow": 3,
@@ -963,20 +1033,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(&quot;32&quot;)",
           "text": "32"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }
@@ -986,8 +1056,8 @@
     "type": "expr"
   },
   {
-    "id": 25,
-    "parent": 24,
+    "id": 27,
+    "parent": 26,
     "range": {
       "endColumn": 33,
       "endRow": 3,
@@ -1006,8 +1076,8 @@
     "type": "other"
   },
   {
-    "id": 26,
-    "parent": 15,
+    "id": 28,
+    "parent": 17,
     "range": {
       "endColumn": 2,
       "endRow": 5,
@@ -1067,8 +1137,8 @@
     "type": "other"
   },
   {
-    "id": 27,
-    "parent": 26,
+    "id": 29,
+    "parent": 28,
     "range": {
       "endColumn": 35,
       "endRow": 3,
@@ -1087,8 +1157,8 @@
     "type": "other"
   },
   {
-    "id": 28,
-    "parent": 26,
+    "id": 30,
+    "parent": 28,
     "range": {
       "endColumn": 53,
       "endRow": 4,
@@ -1115,8 +1185,8 @@
     "type": "collection"
   },
   {
-    "id": 29,
-    "parent": 28,
+    "id": 31,
+    "parent": 30,
     "range": {
       "endColumn": 53,
       "endRow": 4,
@@ -1162,8 +1232,8 @@
     "type": "other"
   },
   {
-    "id": 30,
-    "parent": 29,
+    "id": 32,
+    "parent": 31,
     "range": {
       "endColumn": 53,
       "endRow": 4,
@@ -1181,9 +1251,9 @@
       },
       {
         "name": "calledExpression",
-        "ref": "IdentifierExprSyntax",
+        "ref": "DeclReferenceExprSyntax",
         "value": {
-          "text": "IdentifierExprSyntax"
+          "text": "DeclReferenceExprSyntax"
         }
       },
       {
@@ -1200,20 +1270,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftParenAndArgumentList",
+        "name": "unexpectedBetweenLeftParenAndArguments",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "argumentList",
-        "ref": "TupleExprElementListSyntax",
+        "name": "arguments",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenArgumentListAndRightParen",
+        "name": "unexpectedBetweenArgumentsAndRightParen",
         "value": {
           "text": "nil"
         }
@@ -1245,8 +1315,9 @@
       },
       {
         "name": "additionalTrailingClosures",
+        "ref": "MultipleTrailingClosureElementListSyntax",
         "value": {
-          "text": "nil"
+          "text": "MultipleTrailingClosureElementListSyntax"
         }
       },
       {
@@ -1260,8 +1331,8 @@
     "type": "expr"
   },
   {
-    "id": 31,
-    "parent": 30,
+    "id": 33,
+    "parent": 32,
     "range": {
       "endColumn": 8,
       "endRow": 4,
@@ -1272,43 +1343,43 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeBaseName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "baseName",
         "value": {
           "kind": "identifier(&quot;print&quot;)",
           "text": "print"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndDeclNameArguments",
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "declNameArguments",
+        "name": "argumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterDeclNameArguments",
+        "name": "unexpectedAfterArgumentNames",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "IdentifierExpr",
+    "text": "DeclReferenceExpr",
     "type": "expr"
   },
   {
-    "id": 32,
-    "parent": 31,
+    "id": 34,
+    "parent": 33,
     "range": {
       "endColumn": 8,
       "endRow": 4,
@@ -1327,8 +1398,8 @@
     "type": "other"
   },
   {
-    "id": 33,
-    "parent": 30,
+    "id": 35,
+    "parent": 32,
     "range": {
       "endColumn": 9,
       "endRow": 4,
@@ -1347,8 +1418,8 @@
     "type": "other"
   },
   {
-    "id": 34,
-    "parent": 30,
+    "id": 36,
+    "parent": 32,
     "range": {
       "endColumn": 52,
       "endRow": 4,
@@ -1361,7 +1432,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -1371,12 +1442,12 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
-    "id": 35,
-    "parent": 34,
+    "id": 37,
+    "parent": 36,
     "range": {
       "endColumn": 52,
       "endRow": 4,
@@ -1442,12 +1513,12 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
-    "id": 36,
-    "parent": 35,
+    "id": 38,
+    "parent": 37,
     "range": {
       "endColumn": 52,
       "endRow": 4,
@@ -1458,70 +1529,70 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "&quot;"
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "&quot;"
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -1531,8 +1602,8 @@
     "type": "expr"
   },
   {
-    "id": 37,
-    "parent": 36,
+    "id": 39,
+    "parent": 38,
     "range": {
       "endColumn": 10,
       "endRow": 4,
@@ -1551,8 +1622,8 @@
     "type": "other"
   },
   {
-    "id": 38,
-    "parent": 36,
+    "id": 40,
+    "parent": 38,
     "range": {
       "endColumn": 51,
       "endRow": 4,
@@ -1575,12 +1646,12 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
-    "id": 39,
-    "parent": 38,
+    "id": 41,
+    "parent": 40,
     "range": {
       "endColumn": 51,
       "endRow": 4,
@@ -1614,8 +1685,8 @@
     "type": "other"
   },
   {
-    "id": 40,
-    "parent": 39,
+    "id": 42,
+    "parent": 41,
     "range": {
       "endColumn": 51,
       "endRow": 4,
@@ -1634,8 +1705,8 @@
     "type": "other"
   },
   {
-    "id": 41,
-    "parent": 36,
+    "id": 43,
+    "parent": 38,
     "range": {
       "endColumn": 52,
       "endRow": 4,
@@ -1654,8 +1725,8 @@
     "type": "other"
   },
   {
-    "id": 42,
-    "parent": 30,
+    "id": 44,
+    "parent": 32,
     "range": {
       "endColumn": 53,
       "endRow": 4,
@@ -1674,8 +1745,36 @@
     "type": "other"
   },
   {
-    "id": 43,
-    "parent": 26,
+    "id": 45,
+    "parent": 32,
+    "range": {
+      "endColumn": 53,
+      "endRow": 4,
+      "graphemeEndColumn": 53,
+      "graphemeStartColumn": 53,
+      "startColumn": 53,
+      "startRow": 4
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "MultipleTrailingClosureElementSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "MultipleTrailingClosureElementList",
+    "type": "collection"
+  },
+  {
+    "id": 46,
+    "parent": 28,
     "range": {
       "endColumn": 2,
       "endRow": 5,
@@ -1694,8 +1793,8 @@
     "type": "other"
   },
   {
-    "id": 44,
-    "parent": 15,
+    "id": 47,
+    "parent": 17,
     "range": {
       "endColumn": 7,
       "endRow": 5,
@@ -1714,8 +1813,8 @@
     "type": "other"
   },
   {
-    "id": 45,
-    "parent": 15,
+    "id": 48,
+    "parent": 17,
     "range": {
       "endColumn": 2,
       "endRow": 9,
@@ -1801,8 +1900,8 @@
     "type": "expr"
   },
   {
-    "id": 46,
-    "parent": 45,
+    "id": 49,
+    "parent": 48,
     "range": {
       "endColumn": 10,
       "endRow": 5,
@@ -1821,8 +1920,8 @@
     "type": "other"
   },
   {
-    "id": 47,
-    "parent": 45,
+    "id": 50,
+    "parent": 48,
     "range": {
       "endColumn": 40,
       "endRow": 5,
@@ -1849,8 +1948,8 @@
     "type": "collection"
   },
   {
-    "id": 48,
-    "parent": 47,
+    "id": 51,
+    "parent": 50,
     "range": {
       "endColumn": 40,
       "endRow": 5,
@@ -1896,8 +1995,8 @@
     "type": "other"
   },
   {
-    "id": 49,
-    "parent": 48,
+    "id": 52,
+    "parent": 51,
     "range": {
       "endColumn": 40,
       "endRow": 5,
@@ -1915,26 +2014,26 @@
       },
       {
         "name": "leftOperand",
-        "ref": "IdentifierExprSyntax",
+        "ref": "DeclReferenceExprSyntax",
         "value": {
-          "text": "IdentifierExprSyntax"
+          "text": "DeclReferenceExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenLeftOperandAndOperatorOperand",
+        "name": "unexpectedBetweenLeftOperandAndOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorOperand",
+        "name": "operator",
         "ref": "BinaryOperatorExprSyntax",
         "value": {
           "text": "BinaryOperatorExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenOperatorOperandAndRightOperand",
+        "name": "unexpectedBetweenOperatorAndRightOperand",
         "value": {
           "text": "nil"
         }
@@ -1957,8 +2056,8 @@
     "type": "expr"
   },
   {
-    "id": 50,
-    "parent": 49,
+    "id": 53,
+    "parent": 52,
     "range": {
       "endColumn": 34,
       "endRow": 5,
@@ -1969,43 +2068,43 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeBaseName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "baseName",
         "value": {
           "kind": "identifier(&quot;temperatureInFahrenheit&quot;)",
           "text": "temperatureInFahrenheit"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndDeclNameArguments",
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "declNameArguments",
+        "name": "argumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterDeclNameArguments",
+        "name": "unexpectedAfterArgumentNames",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "IdentifierExpr",
+    "text": "DeclReferenceExpr",
     "type": "expr"
   },
   {
-    "id": 51,
-    "parent": 50,
+    "id": 54,
+    "parent": 53,
     "range": {
       "endColumn": 34,
       "endRow": 5,
@@ -2024,8 +2123,8 @@
     "type": "other"
   },
   {
-    "id": 52,
-    "parent": 49,
+    "id": 55,
+    "parent": 52,
     "range": {
       "endColumn": 37,
       "endRow": 5,
@@ -2036,20 +2135,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOperatorToken",
+        "name": "unexpectedBeforeOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorToken",
+        "name": "operator",
         "value": {
           "kind": "binaryOperator(&quot;&gt;=&quot;)",
           "text": "&gt;="
         }
       },
       {
-        "name": "unexpectedAfterOperatorToken",
+        "name": "unexpectedAfterOperator",
         "value": {
           "text": "nil"
         }
@@ -2059,8 +2158,8 @@
     "type": "expr"
   },
   {
-    "id": 53,
-    "parent": 52,
+    "id": 56,
+    "parent": 55,
     "range": {
       "endColumn": 37,
       "endRow": 5,
@@ -2079,8 +2178,8 @@
     "type": "other"
   },
   {
-    "id": 54,
-    "parent": 49,
+    "id": 57,
+    "parent": 52,
     "range": {
       "endColumn": 40,
       "endRow": 5,
@@ -2091,20 +2190,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(&quot;86&quot;)",
           "text": "86"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }
@@ -2114,8 +2213,8 @@
     "type": "expr"
   },
   {
-    "id": 55,
-    "parent": 54,
+    "id": 58,
+    "parent": 57,
     "range": {
       "endColumn": 40,
       "endRow": 5,
@@ -2134,8 +2233,8 @@
     "type": "other"
   },
   {
-    "id": 56,
-    "parent": 45,
+    "id": 59,
+    "parent": 48,
     "range": {
       "endColumn": 2,
       "endRow": 7,
@@ -2195,8 +2294,8 @@
     "type": "other"
   },
   {
-    "id": 57,
-    "parent": 56,
+    "id": 60,
+    "parent": 59,
     "range": {
       "endColumn": 42,
       "endRow": 5,
@@ -2215,8 +2314,8 @@
     "type": "other"
   },
   {
-    "id": 58,
-    "parent": 56,
+    "id": 61,
+    "parent": 59,
     "range": {
       "endColumn": 61,
       "endRow": 6,
@@ -2243,8 +2342,8 @@
     "type": "collection"
   },
   {
-    "id": 59,
-    "parent": 58,
+    "id": 62,
+    "parent": 61,
     "range": {
       "endColumn": 61,
       "endRow": 6,
@@ -2290,8 +2389,8 @@
     "type": "other"
   },
   {
-    "id": 60,
-    "parent": 59,
+    "id": 63,
+    "parent": 62,
     "range": {
       "endColumn": 61,
       "endRow": 6,
@@ -2309,9 +2408,9 @@
       },
       {
         "name": "calledExpression",
-        "ref": "IdentifierExprSyntax",
+        "ref": "DeclReferenceExprSyntax",
         "value": {
-          "text": "IdentifierExprSyntax"
+          "text": "DeclReferenceExprSyntax"
         }
       },
       {
@@ -2328,20 +2427,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftParenAndArgumentList",
+        "name": "unexpectedBetweenLeftParenAndArguments",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "argumentList",
-        "ref": "TupleExprElementListSyntax",
+        "name": "arguments",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenArgumentListAndRightParen",
+        "name": "unexpectedBetweenArgumentsAndRightParen",
         "value": {
           "text": "nil"
         }
@@ -2373,8 +2472,9 @@
       },
       {
         "name": "additionalTrailingClosures",
+        "ref": "MultipleTrailingClosureElementListSyntax",
         "value": {
-          "text": "nil"
+          "text": "MultipleTrailingClosureElementListSyntax"
         }
       },
       {
@@ -2388,8 +2488,8 @@
     "type": "expr"
   },
   {
-    "id": 61,
-    "parent": 60,
+    "id": 64,
+    "parent": 63,
     "range": {
       "endColumn": 8,
       "endRow": 6,
@@ -2400,43 +2500,43 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeBaseName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "baseName",
         "value": {
           "kind": "identifier(&quot;print&quot;)",
           "text": "print"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndDeclNameArguments",
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "declNameArguments",
+        "name": "argumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterDeclNameArguments",
+        "name": "unexpectedAfterArgumentNames",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "IdentifierExpr",
+    "text": "DeclReferenceExpr",
     "type": "expr"
   },
   {
-    "id": 62,
-    "parent": 61,
+    "id": 65,
+    "parent": 64,
     "range": {
       "endColumn": 8,
       "endRow": 6,
@@ -2455,8 +2555,8 @@
     "type": "other"
   },
   {
-    "id": 63,
-    "parent": 60,
+    "id": 66,
+    "parent": 63,
     "range": {
       "endColumn": 9,
       "endRow": 6,
@@ -2475,8 +2575,8 @@
     "type": "other"
   },
   {
-    "id": 64,
-    "parent": 60,
+    "id": 67,
+    "parent": 63,
     "range": {
       "endColumn": 60,
       "endRow": 6,
@@ -2489,7 +2589,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -2499,12 +2599,12 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
-    "id": 65,
-    "parent": 64,
+    "id": 68,
+    "parent": 67,
     "range": {
       "endColumn": 60,
       "endRow": 6,
@@ -2570,12 +2670,12 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
-    "id": 66,
-    "parent": 65,
+    "id": 69,
+    "parent": 68,
     "range": {
       "endColumn": 60,
       "endRow": 6,
@@ -2586,70 +2686,70 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "&quot;"
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "&quot;"
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -2659,8 +2759,8 @@
     "type": "expr"
   },
   {
-    "id": 67,
-    "parent": 66,
+    "id": 70,
+    "parent": 69,
     "range": {
       "endColumn": 10,
       "endRow": 6,
@@ -2679,8 +2779,8 @@
     "type": "other"
   },
   {
-    "id": 68,
-    "parent": 66,
+    "id": 71,
+    "parent": 69,
     "range": {
       "endColumn": 59,
       "endRow": 6,
@@ -2703,12 +2803,12 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
-    "id": 69,
-    "parent": 68,
+    "id": 72,
+    "parent": 71,
     "range": {
       "endColumn": 59,
       "endRow": 6,
@@ -2742,8 +2842,8 @@
     "type": "other"
   },
   {
-    "id": 70,
-    "parent": 69,
+    "id": 73,
+    "parent": 72,
     "range": {
       "endColumn": 59,
       "endRow": 6,
@@ -2762,8 +2862,8 @@
     "type": "other"
   },
   {
-    "id": 71,
-    "parent": 66,
+    "id": 74,
+    "parent": 69,
     "range": {
       "endColumn": 60,
       "endRow": 6,
@@ -2782,8 +2882,8 @@
     "type": "other"
   },
   {
-    "id": 72,
-    "parent": 60,
+    "id": 75,
+    "parent": 63,
     "range": {
       "endColumn": 61,
       "endRow": 6,
@@ -2802,8 +2902,36 @@
     "type": "other"
   },
   {
-    "id": 73,
-    "parent": 56,
+    "id": 76,
+    "parent": 63,
+    "range": {
+      "endColumn": 61,
+      "endRow": 6,
+      "graphemeEndColumn": 61,
+      "graphemeStartColumn": 61,
+      "startColumn": 61,
+      "startRow": 6
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "MultipleTrailingClosureElementSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "MultipleTrailingClosureElementList",
+    "type": "collection"
+  },
+  {
+    "id": 77,
+    "parent": 59,
     "range": {
       "endColumn": 2,
       "endRow": 7,
@@ -2822,8 +2950,8 @@
     "type": "other"
   },
   {
-    "id": 74,
-    "parent": 45,
+    "id": 78,
+    "parent": 48,
     "range": {
       "endColumn": 7,
       "endRow": 7,
@@ -2842,8 +2970,8 @@
     "type": "other"
   },
   {
-    "id": 75,
-    "parent": 45,
+    "id": 79,
+    "parent": 48,
     "range": {
       "endColumn": 2,
       "endRow": 9,
@@ -2903,8 +3031,8 @@
     "type": "other"
   },
   {
-    "id": 76,
-    "parent": 75,
+    "id": 80,
+    "parent": 79,
     "range": {
       "endColumn": 9,
       "endRow": 7,
@@ -2923,8 +3051,8 @@
     "type": "other"
   },
   {
-    "id": 77,
-    "parent": 75,
+    "id": 81,
+    "parent": 79,
     "range": {
       "endColumn": 47,
       "endRow": 8,
@@ -2951,8 +3079,8 @@
     "type": "collection"
   },
   {
-    "id": 78,
-    "parent": 77,
+    "id": 82,
+    "parent": 81,
     "range": {
       "endColumn": 47,
       "endRow": 8,
@@ -2998,8 +3126,8 @@
     "type": "other"
   },
   {
-    "id": 79,
-    "parent": 78,
+    "id": 83,
+    "parent": 82,
     "range": {
       "endColumn": 47,
       "endRow": 8,
@@ -3017,9 +3145,9 @@
       },
       {
         "name": "calledExpression",
-        "ref": "IdentifierExprSyntax",
+        "ref": "DeclReferenceExprSyntax",
         "value": {
-          "text": "IdentifierExprSyntax"
+          "text": "DeclReferenceExprSyntax"
         }
       },
       {
@@ -3036,20 +3164,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenLeftParenAndArgumentList",
+        "name": "unexpectedBetweenLeftParenAndArguments",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "argumentList",
-        "ref": "TupleExprElementListSyntax",
+        "name": "arguments",
+        "ref": "LabeledExprListSyntax",
         "value": {
-          "text": "TupleExprElementListSyntax"
+          "text": "LabeledExprListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenArgumentListAndRightParen",
+        "name": "unexpectedBetweenArgumentsAndRightParen",
         "value": {
           "text": "nil"
         }
@@ -3081,8 +3209,9 @@
       },
       {
         "name": "additionalTrailingClosures",
+        "ref": "MultipleTrailingClosureElementListSyntax",
         "value": {
-          "text": "nil"
+          "text": "MultipleTrailingClosureElementListSyntax"
         }
       },
       {
@@ -3096,8 +3225,8 @@
     "type": "expr"
   },
   {
-    "id": 80,
-    "parent": 79,
+    "id": 84,
+    "parent": 83,
     "range": {
       "endColumn": 8,
       "endRow": 8,
@@ -3108,43 +3237,43 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeBaseName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "baseName",
         "value": {
           "kind": "identifier(&quot;print&quot;)",
           "text": "print"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndDeclNameArguments",
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "declNameArguments",
+        "name": "argumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterDeclNameArguments",
+        "name": "unexpectedAfterArgumentNames",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "IdentifierExpr",
+    "text": "DeclReferenceExpr",
     "type": "expr"
   },
   {
-    "id": 81,
-    "parent": 80,
+    "id": 85,
+    "parent": 84,
     "range": {
       "endColumn": 8,
       "endRow": 8,
@@ -3163,8 +3292,8 @@
     "type": "other"
   },
   {
-    "id": 82,
-    "parent": 79,
+    "id": 86,
+    "parent": 83,
     "range": {
       "endColumn": 9,
       "endRow": 8,
@@ -3183,8 +3312,8 @@
     "type": "other"
   },
   {
-    "id": 83,
-    "parent": 79,
+    "id": 87,
+    "parent": 83,
     "range": {
       "endColumn": 46,
       "endRow": 8,
@@ -3197,7 +3326,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "TupleExprElementSyntax"
+          "text": "LabeledExprSyntax"
         }
       },
       {
@@ -3207,12 +3336,12 @@
         }
       }
     ],
-    "text": "TupleExprElementList",
+    "text": "LabeledExprList",
     "type": "collection"
   },
   {
-    "id": 84,
-    "parent": 83,
+    "id": 88,
+    "parent": 87,
     "range": {
       "endColumn": 46,
       "endRow": 8,
@@ -3278,12 +3407,12 @@
         }
       }
     ],
-    "text": "TupleExprElement",
+    "text": "LabeledExpr",
     "type": "other"
   },
   {
-    "id": 85,
-    "parent": 84,
+    "id": 89,
+    "parent": 88,
     "range": {
       "endColumn": 46,
       "endRow": 8,
@@ -3294,70 +3423,70 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOpenDelimiter",
+        "name": "unexpectedBeforeOpeningPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openDelimiter",
+        "name": "openingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenOpenDelimiterAndOpenQuote",
+        "name": "unexpectedBetweenOpeningPoundsAndOpeningQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "openQuote",
+        "name": "openingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "&quot;"
         }
       },
       {
-        "name": "unexpectedBetweenOpenQuoteAndSegments",
+        "name": "unexpectedBetweenOpeningQuoteAndSegments",
         "value": {
           "text": "nil"
         }
       },
       {
         "name": "segments",
-        "ref": "StringLiteralSegmentsSyntax",
+        "ref": "StringLiteralSegmentListSyntax",
         "value": {
-          "text": "StringLiteralSegmentsSyntax"
+          "text": "StringLiteralSegmentListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenSegmentsAndCloseQuote",
+        "name": "unexpectedBetweenSegmentsAndClosingQuote",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeQuote",
+        "name": "closingQuote",
         "value": {
           "kind": "stringQuote",
           "text": "&quot;"
         }
       },
       {
-        "name": "unexpectedBetweenCloseQuoteAndCloseDelimiter",
+        "name": "unexpectedBetweenClosingQuoteAndClosingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "closeDelimiter",
+        "name": "closingPounds",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterCloseDelimiter",
+        "name": "unexpectedAfterClosingPounds",
         "value": {
           "text": "nil"
         }
@@ -3367,8 +3496,8 @@
     "type": "expr"
   },
   {
-    "id": 86,
-    "parent": 85,
+    "id": 90,
+    "parent": 89,
     "range": {
       "endColumn": 10,
       "endRow": 8,
@@ -3387,8 +3516,8 @@
     "type": "other"
   },
   {
-    "id": 87,
-    "parent": 85,
+    "id": 91,
+    "parent": 89,
     "range": {
       "endColumn": 45,
       "endRow": 8,
@@ -3411,12 +3540,12 @@
         }
       }
     ],
-    "text": "StringLiteralSegments",
+    "text": "StringLiteralSegmentList",
     "type": "collection"
   },
   {
-    "id": 88,
-    "parent": 87,
+    "id": 92,
+    "parent": 91,
     "range": {
       "endColumn": 45,
       "endRow": 8,
@@ -3450,8 +3579,8 @@
     "type": "other"
   },
   {
-    "id": 89,
-    "parent": 88,
+    "id": 93,
+    "parent": 92,
     "range": {
       "endColumn": 45,
       "endRow": 8,
@@ -3470,8 +3599,8 @@
     "type": "other"
   },
   {
-    "id": 90,
-    "parent": 85,
+    "id": 94,
+    "parent": 89,
     "range": {
       "endColumn": 46,
       "endRow": 8,
@@ -3490,8 +3619,8 @@
     "type": "other"
   },
   {
-    "id": 91,
-    "parent": 79,
+    "id": 95,
+    "parent": 83,
     "range": {
       "endColumn": 47,
       "endRow": 8,
@@ -3510,8 +3639,36 @@
     "type": "other"
   },
   {
-    "id": 92,
-    "parent": 75,
+    "id": 96,
+    "parent": 83,
+    "range": {
+      "endColumn": 47,
+      "endRow": 8,
+      "graphemeEndColumn": 47,
+      "graphemeStartColumn": 47,
+      "startColumn": 47,
+      "startRow": 8
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "MultipleTrailingClosureElementSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "MultipleTrailingClosureElementList",
+    "type": "collection"
+  },
+  {
+    "id": 97,
+    "parent": 79,
     "range": {
       "endColumn": 2,
       "endRow": 9,
@@ -3530,7 +3687,7 @@
     "type": "other"
   },
   {
-    "id": 93,
+    "id": 98,
     "parent": 0,
     "range": {
       "endColumn": 62,
@@ -3543,7 +3700,7 @@
     "structure": [],
     "text": "",
     "token": {
-      "kind": "eof",
+      "kind": "endOfFile",
       "leadingTrivia": "<span class='newline'>↲</span><br/><span class='newline'>↲</span><br/><span class='lineComment' data-title='//␣Prints␣&quot;It&apos;s␣really␣warm.␣Don&apos;t␣forget␣to␣wear␣sunscreen.&quot;' data-content='lineComment' data-type='Trivia'>//<span class='whitespace'>␣</span>Prints<span class='whitespace'>␣</span>&quot;It&apos;s<span class='whitespace'>␣</span>really<span class='whitespace'>␣</span>warm.<span class='whitespace'>␣</span>Don&apos;t<span class='whitespace'>␣</span>forget<span class='whitespace'>␣</span>to<span class='whitespace'>␣</span>wear<span class='whitespace'>␣</span>sunscreen.&quot;</span>",
       "trailingTrivia": ""
     },

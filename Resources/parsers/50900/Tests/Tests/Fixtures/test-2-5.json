@@ -11,7 +11,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeStatements",
+        "name": "unexpectedBeforeShebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "shebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenShebangAndStatements",
         "value": {
           "text": "nil"
         }
@@ -24,20 +36,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenStatementsAndEOFToken",
+        "name": "unexpectedBetweenStatementsAndEndOfFileToken",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "eofToken",
+        "name": "endOfFileToken",
         "value": {
-          "kind": "eof",
+          "kind": "endOfFile",
           "text": ""
         }
       },
       {
-        "name": "unexpectedAfterEOFToken",
+        "name": "unexpectedAfterEndOfFileToken",
         "value": {
           "text": "nil"
         }
@@ -356,26 +368,26 @@
       },
       {
         "name": "leftOperand",
-        "ref": "IdentifierExprSyntax",
+        "ref": "DeclReferenceExprSyntax",
         "value": {
-          "text": "IdentifierExprSyntax"
+          "text": "DeclReferenceExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenLeftOperandAndOperatorOperand",
+        "name": "unexpectedBetweenLeftOperandAndOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorOperand",
+        "name": "operator",
         "ref": "BinaryOperatorExprSyntax",
         "value": {
           "text": "BinaryOperatorExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenOperatorOperandAndRightOperand",
+        "name": "unexpectedBetweenOperatorAndRightOperand",
         "value": {
           "text": "nil"
         }
@@ -410,38 +422,38 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeBaseName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "baseName",
         "value": {
           "kind": "identifier(&quot;a&quot;)",
           "text": "a"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndDeclNameArguments",
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "declNameArguments",
+        "name": "argumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterDeclNameArguments",
+        "name": "unexpectedAfterArgumentNames",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "IdentifierExpr",
+    "text": "DeclReferenceExpr",
     "type": "expr"
   },
   {
@@ -477,20 +489,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOperatorToken",
+        "name": "unexpectedBeforeOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorToken",
+        "name": "operator",
         "value": {
           "kind": "binaryOperator(&quot;+&quot;)",
           "text": "+"
         }
       },
       {
-        "name": "unexpectedAfterOperatorToken",
+        "name": "unexpectedAfterOperator",
         "value": {
           "text": "nil"
         }
@@ -539,35 +551,35 @@
       },
       {
         "name": "leftOperand",
-        "ref": "IdentifierExprSyntax",
+        "ref": "DeclReferenceExprSyntax",
         "value": {
-          "text": "IdentifierExprSyntax"
+          "text": "DeclReferenceExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenLeftOperandAndOperatorOperand",
+        "name": "unexpectedBetweenLeftOperandAndOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorOperand",
+        "name": "operator",
         "ref": "BinaryOperatorExprSyntax",
         "value": {
           "text": "BinaryOperatorExprSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenOperatorOperandAndRightOperand",
+        "name": "unexpectedBetweenOperatorAndRightOperand",
         "value": {
           "text": "nil"
         }
       },
       {
         "name": "rightOperand",
-        "ref": "IdentifierExprSyntax",
+        "ref": "DeclReferenceExprSyntax",
         "value": {
-          "text": "IdentifierExprSyntax"
+          "text": "DeclReferenceExprSyntax"
         }
       },
       {
@@ -593,38 +605,38 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeBaseName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "baseName",
         "value": {
           "kind": "identifier(&quot;b&quot;)",
           "text": "b"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndDeclNameArguments",
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "declNameArguments",
+        "name": "argumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterDeclNameArguments",
+        "name": "unexpectedAfterArgumentNames",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "IdentifierExpr",
+    "text": "DeclReferenceExpr",
     "type": "expr"
   },
   {
@@ -660,20 +672,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeOperatorToken",
+        "name": "unexpectedBeforeOperator",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "operatorToken",
+        "name": "operator",
         "value": {
           "kind": "binaryOperator(&quot;*&quot;)",
           "text": "*"
         }
       },
       {
-        "name": "unexpectedAfterOperatorToken",
+        "name": "unexpectedAfterOperator",
         "value": {
           "text": "nil"
         }
@@ -715,38 +727,38 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeIdentifier",
+        "name": "unexpectedBeforeBaseName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "baseName",
         "value": {
           "kind": "identifier(&quot;c&quot;)",
           "text": "c"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndDeclNameArguments",
+        "name": "unexpectedBetweenBaseNameAndArgumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "declNameArguments",
+        "name": "argumentNames",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedAfterDeclNameArguments",
+        "name": "unexpectedAfterArgumentNames",
         "value": {
           "text": "nil"
         }
       }
     ],
-    "text": "IdentifierExpr",
+    "text": "DeclReferenceExpr",
     "type": "expr"
   },
   {
@@ -1026,7 +1038,7 @@
     "structure": [],
     "text": "",
     "token": {
-      "kind": "eof",
+      "kind": "endOfFile",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },

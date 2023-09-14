@@ -11,7 +11,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeStatements",
+        "name": "unexpectedBeforeShebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "shebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenShebangAndStatements",
         "value": {
           "text": "nil"
         }
@@ -24,20 +36,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenStatementsAndEOFToken",
+        "name": "unexpectedBetweenStatementsAndEndOfFileToken",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "eofToken",
+        "name": "endOfFileToken",
         "value": {
-          "kind": "eof",
+          "kind": "endOfFile",
           "text": ""
         }
       },
       {
-        "name": "unexpectedAfterEOFToken",
+        "name": "unexpectedAfterEndOfFileToken",
         "value": {
           "text": "nil"
         }
@@ -141,8 +153,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -153,25 +166,26 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
+        "value": {
+          "text": "DeclModifierListSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
           "text": "let"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }
@@ -197,6 +211,62 @@
     "id": 4,
     "parent": 3,
     "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "graphemeEndColumn": 1,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 5,
+    "parent": 3,
+    "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "graphemeEndColumn": 1,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 6,
+    "parent": 3,
+    "range": {
       "endColumn": 4,
       "endRow": 1,
       "graphemeEndColumn": 4,
@@ -214,7 +284,7 @@
     "type": "other"
   },
   {
-    "id": 5,
+    "id": 7,
     "parent": 3,
     "range": {
       "endColumn": 15,
@@ -242,8 +312,8 @@
     "type": "collection"
   },
   {
-    "id": 6,
-    "parent": 5,
+    "id": 8,
+    "parent": 7,
     "range": {
       "endColumn": 15,
       "endRow": 1,
@@ -292,19 +362,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorBlockAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -326,8 +396,8 @@
     "type": "other"
   },
   {
-    "id": 7,
-    "parent": 6,
+    "id": 9,
+    "parent": 8,
     "range": {
       "endColumn": 11,
       "endRow": 1,
@@ -361,8 +431,8 @@
     "type": "pattern"
   },
   {
-    "id": 8,
-    "parent": 7,
+    "id": 10,
+    "parent": 9,
     "range": {
       "endColumn": 11,
       "endRow": 1,
@@ -381,8 +451,8 @@
     "type": "other"
   },
   {
-    "id": 9,
-    "parent": 6,
+    "id": 11,
+    "parent": 8,
     "range": {
       "endColumn": 15,
       "endRow": 1,
@@ -429,8 +499,8 @@
     "type": "other"
   },
   {
-    "id": 10,
-    "parent": 9,
+    "id": 12,
+    "parent": 11,
     "range": {
       "endColumn": 13,
       "endRow": 1,
@@ -449,8 +519,8 @@
     "type": "other"
   },
   {
-    "id": 11,
-    "parent": 9,
+    "id": 13,
+    "parent": 11,
     "range": {
       "endColumn": 15,
       "endRow": 1,
@@ -461,20 +531,20 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeDigits",
+        "name": "unexpectedBeforeLiteral",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "digits",
+        "name": "literal",
         "value": {
           "kind": "integerLiteral(&quot;0&quot;)",
           "text": "0"
         }
       },
       {
-        "name": "unexpectedAfterDigits",
+        "name": "unexpectedAfterLiteral",
         "value": {
           "text": "nil"
         }
@@ -484,8 +554,8 @@
     "type": "expr"
   },
   {
-    "id": 12,
-    "parent": 11,
+    "id": 14,
+    "parent": 13,
     "range": {
       "endColumn": 15,
       "endRow": 1,
@@ -504,7 +574,7 @@
     "type": "other"
   },
   {
-    "id": 13,
+    "id": 15,
     "parent": 0,
     "range": {
       "endColumn": 15,
@@ -517,7 +587,7 @@
     "structure": [],
     "text": "",
     "token": {
-      "kind": "eof",
+      "kind": "endOfFile",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },
