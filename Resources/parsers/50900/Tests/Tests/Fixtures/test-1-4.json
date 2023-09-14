@@ -11,7 +11,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeStatements",
+        "name": "unexpectedBeforeShebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "shebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenShebangAndStatements",
         "value": {
           "text": "nil"
         }
@@ -24,20 +36,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenStatementsAndEOFToken",
+        "name": "unexpectedBetweenStatementsAndEndOfFileToken",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "eofToken",
+        "name": "endOfFileToken",
         "value": {
-          "kind": "eof",
+          "kind": "endOfFile",
           "text": ""
         }
       },
       {
-        "name": "unexpectedAfterEOFToken",
+        "name": "unexpectedAfterEndOfFileToken",
         "value": {
           "text": "nil"
         }
@@ -142,8 +154,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -154,8 +167,9 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
         "value": {
-          "text": "nil"
+          "text": "DeclModifierListSyntax"
         }
       },
       {
@@ -172,20 +186,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenStructKeywordAndIdentifier",
+        "name": "unexpectedBetweenStructKeywordAndName",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "identifier",
+        "name": "name",
         "value": {
           "kind": "identifier(&quot;Result&quot;)",
           "text": "Result"
         }
       },
       {
-        "name": "unexpectedBetweenIdentifierAndGenericParameterClause",
+        "name": "unexpectedBetweenNameAndGenericParameterClause",
         "value": {
           "text": "nil"
         }
@@ -229,9 +243,9 @@
       },
       {
         "name": "memberBlock",
-        "ref": "MemberDeclBlockSyntax",
+        "ref": "MemberBlockSyntax",
         "value": {
-          "text": "MemberDeclBlockSyntax"
+          "text": "MemberBlockSyntax"
         }
       },
       {
@@ -246,6 +260,62 @@
   },
   {
     "id": 4,
+    "parent": 3,
+    "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "graphemeEndColumn": 1,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 5,
+    "parent": 3,
+    "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "graphemeEndColumn": 1,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 6,
     "parent": 3,
     "range": {
       "endColumn": 7,
@@ -265,7 +335,7 @@
     "type": "other"
   },
   {
-    "id": 5,
+    "id": 7,
     "parent": 3,
     "range": {
       "endColumn": 14,
@@ -285,7 +355,7 @@
     "type": "other"
   },
   {
-    "id": 6,
+    "id": 8,
     "parent": 3,
     "range": {
       "endColumn": 15,
@@ -297,33 +367,33 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeLeftAngleBracket",
+        "name": "unexpectedBeforeLeftAngle",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "leftAngleBracket",
+        "name": "leftAngle",
         "value": {
           "kind": "leftAngle",
           "text": "&lt;"
         }
       },
       {
-        "name": "unexpectedBetweenLeftAngleBracketAndGenericParameterList",
+        "name": "unexpectedBetweenLeftAngleAndParameters",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "genericParameterList",
+        "name": "parameters",
         "ref": "GenericParameterListSyntax",
         "value": {
           "text": "GenericParameterListSyntax"
         }
       },
       {
-        "name": "unexpectedBetweenGenericParameterListAndGenericWhereClause",
+        "name": "unexpectedBetweenParametersAndGenericWhereClause",
         "value": {
           "text": "nil"
         }
@@ -335,20 +405,20 @@
         }
       },
       {
-        "name": "unexpectedBetweenGenericWhereClauseAndRightAngleBracket",
+        "name": "unexpectedBetweenGenericWhereClauseAndRightAngle",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "rightAngleBracket",
+        "name": "rightAngle",
         "value": {
           "kind": "rightAngle",
           "text": "&gt;"
         }
       },
       {
-        "name": "unexpectedAfterRightAngleBracket",
+        "name": "unexpectedAfterRightAngle",
         "value": {
           "text": "nil"
         }
@@ -358,8 +428,8 @@
     "type": "other"
   },
   {
-    "id": 7,
-    "parent": 6,
+    "id": 9,
+    "parent": 8,
     "range": {
       "endColumn": 15,
       "endRow": 1,
@@ -378,8 +448,8 @@
     "type": "other"
   },
   {
-    "id": 8,
-    "parent": 6,
+    "id": 10,
+    "parent": 8,
     "range": {
       "endColumn": 16,
       "endRow": 1,
@@ -407,8 +477,8 @@
   },
   {
     "class": "missing",
-    "id": 9,
-    "parent": 6,
+    "id": 11,
+    "parent": 8,
     "range": {
       "endColumn": 16,
       "endRow": 1,
@@ -427,7 +497,7 @@
     "type": "other"
   },
   {
-    "id": 10,
+    "id": 12,
     "parent": 3,
     "range": {
       "endColumn": 17,
@@ -459,9 +529,9 @@
       },
       {
         "name": "members",
-        "ref": "MemberDeclListSyntax",
+        "ref": "MemberBlockItemListSyntax",
         "value": {
-          "text": "MemberDeclListSyntax"
+          "text": "MemberBlockItemListSyntax"
         }
       },
       {
@@ -484,12 +554,12 @@
         }
       }
     ],
-    "text": "MemberDeclBlock",
+    "text": "MemberBlock",
     "type": "other"
   },
   {
-    "id": 11,
-    "parent": 10,
+    "id": 13,
+    "parent": 12,
     "range": {
       "endColumn": 17,
       "endRow": 1,
@@ -508,8 +578,8 @@
     "type": "other"
   },
   {
-    "id": 12,
-    "parent": 10,
+    "id": 14,
+    "parent": 12,
     "range": {
       "endColumn": 17,
       "endRow": 1,
@@ -522,7 +592,7 @@
       {
         "name": "Element",
         "value": {
-          "text": "MemberDeclListItemSyntax"
+          "text": "MemberBlockItemSyntax"
         }
       },
       {
@@ -532,13 +602,13 @@
         }
       }
     ],
-    "text": "MemberDeclList",
+    "text": "MemberBlockItemList",
     "type": "collection"
   },
   {
     "class": "missing",
-    "id": 13,
-    "parent": 10,
+    "id": 15,
+    "parent": 12,
     "range": {
       "endColumn": 17,
       "endRow": 1,
@@ -558,7 +628,7 @@
   },
   {
     "class": "missing",
-    "id": 14,
+    "id": 16,
     "parent": 2,
     "range": {
       "endColumn": 17,
@@ -578,7 +648,7 @@
     "type": "other"
   },
   {
-    "id": 15,
+    "id": 17,
     "parent": 1,
     "range": {
       "endColumn": 2,
@@ -625,8 +695,8 @@
     "type": "other"
   },
   {
-    "id": 16,
-    "parent": 15,
+    "id": 18,
+    "parent": 17,
     "range": {
       "endColumn": 2,
       "endRow": 4,
@@ -698,8 +768,8 @@
     "type": "expr"
   },
   {
-    "id": 17,
-    "parent": 16,
+    "id": 19,
+    "parent": 18,
     "range": {
       "endColumn": 18,
       "endRow": 1,
@@ -718,8 +788,8 @@
     "type": "other"
   },
   {
-    "id": 18,
-    "parent": 16,
+    "id": 20,
+    "parent": 18,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -746,8 +816,8 @@
     "type": "collection"
   },
   {
-    "id": 19,
-    "parent": 18,
+    "id": 21,
+    "parent": 20,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -793,8 +863,8 @@
     "type": "other"
   },
   {
-    "id": 20,
-    "parent": 19,
+    "id": 22,
+    "parent": 21,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -812,8 +882,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -824,25 +895,26 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
+        "value": {
+          "text": "DeclModifierListSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
           "text": "let"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }
@@ -865,8 +937,64 @@
     "type": "decl"
   },
   {
-    "id": 21,
-    "parent": 20,
+    "id": 23,
+    "parent": 22,
+    "range": {
+      "endColumn": 18,
+      "endRow": 1,
+      "graphemeEndColumn": 18,
+      "graphemeStartColumn": 18,
+      "startColumn": 18,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 24,
+    "parent": 22,
+    "range": {
+      "endColumn": 18,
+      "endRow": 1,
+      "graphemeEndColumn": 18,
+      "graphemeStartColumn": 18,
+      "startColumn": 18,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 25,
+    "parent": 22,
     "range": {
       "endColumn": 6,
       "endRow": 2,
@@ -885,8 +1013,8 @@
     "type": "other"
   },
   {
-    "id": 22,
-    "parent": 20,
+    "id": 26,
+    "parent": 22,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -913,8 +1041,8 @@
     "type": "collection"
   },
   {
-    "id": 23,
-    "parent": 22,
+    "id": 27,
+    "parent": 26,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -963,19 +1091,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorBlockAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -997,8 +1125,8 @@
     "type": "other"
   },
   {
-    "id": 24,
-    "parent": 23,
+    "id": 28,
+    "parent": 27,
     "range": {
       "endColumn": 11,
       "endRow": 2,
@@ -1032,8 +1160,8 @@
     "type": "pattern"
   },
   {
-    "id": 25,
-    "parent": 24,
+    "id": 29,
+    "parent": 28,
     "range": {
       "endColumn": 11,
       "endRow": 2,
@@ -1052,8 +1180,8 @@
     "type": "other"
   },
   {
-    "id": 26,
-    "parent": 23,
+    "id": 30,
+    "parent": 27,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -1084,9 +1212,9 @@
       },
       {
         "name": "type",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -1100,8 +1228,8 @@
     "type": "other"
   },
   {
-    "id": 27,
-    "parent": 26,
+    "id": 31,
+    "parent": 30,
     "range": {
       "endColumn": 12,
       "endRow": 2,
@@ -1120,8 +1248,8 @@
     "type": "other"
   },
   {
-    "id": 28,
-    "parent": 26,
+    "id": 32,
+    "parent": 30,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -1163,12 +1291,12 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
-    "id": 29,
-    "parent": 28,
+    "id": 33,
+    "parent": 32,
     "range": {
       "endColumn": 19,
       "endRow": 2,
@@ -1187,8 +1315,8 @@
     "type": "other"
   },
   {
-    "id": 30,
-    "parent": 18,
+    "id": 34,
+    "parent": 20,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1234,8 +1362,8 @@
     "type": "other"
   },
   {
-    "id": 31,
-    "parent": 30,
+    "id": 35,
+    "parent": 34,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1253,8 +1381,9 @@
       },
       {
         "name": "attributes",
+        "ref": "AttributeListSyntax",
         "value": {
-          "text": "nil"
+          "text": "AttributeListSyntax"
         }
       },
       {
@@ -1265,25 +1394,26 @@
       },
       {
         "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
+        "value": {
+          "text": "DeclModifierListSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenModifiersAndBindingKeyword",
-        "value": {
-          "text": "nil"
-        }
-      },
-      {
-        "name": "bindingKeyword",
+        "name": "bindingSpecifier",
         "value": {
           "kind": "keyword(SwiftSyntax.Keyword.let)",
           "text": "let"
         }
       },
       {
-        "name": "unexpectedBetweenBindingKeywordAndBindings",
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
         "value": {
           "text": "nil"
         }
@@ -1306,8 +1436,64 @@
     "type": "decl"
   },
   {
-    "id": 32,
-    "parent": 31,
+    "id": 36,
+    "parent": 35,
+    "range": {
+      "endColumn": 19,
+      "endRow": 2,
+      "graphemeEndColumn": 19,
+      "graphemeStartColumn": 19,
+      "startColumn": 19,
+      "startRow": 2
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 37,
+    "parent": 35,
+    "range": {
+      "endColumn": 19,
+      "endRow": 2,
+      "graphemeEndColumn": 19,
+      "graphemeStartColumn": 19,
+      "startColumn": 19,
+      "startRow": 2
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 38,
+    "parent": 35,
     "range": {
       "endColumn": 6,
       "endRow": 3,
@@ -1326,8 +1512,8 @@
     "type": "other"
   },
   {
-    "id": 33,
-    "parent": 31,
+    "id": 39,
+    "parent": 35,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1354,8 +1540,8 @@
     "type": "collection"
   },
   {
-    "id": 34,
-    "parent": 33,
+    "id": 40,
+    "parent": 39,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1404,19 +1590,19 @@
         }
       },
       {
-        "name": "unexpectedBetweenInitializerAndAccessor",
+        "name": "unexpectedBetweenInitializerAndAccessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "accessor",
+        "name": "accessorBlock",
         "value": {
           "text": "nil"
         }
       },
       {
-        "name": "unexpectedBetweenAccessorAndTrailingComma",
+        "name": "unexpectedBetweenAccessorBlockAndTrailingComma",
         "value": {
           "text": "nil"
         }
@@ -1438,8 +1624,8 @@
     "type": "other"
   },
   {
-    "id": 35,
-    "parent": 34,
+    "id": 41,
+    "parent": 40,
     "range": {
       "endColumn": 21,
       "endRow": 3,
@@ -1473,8 +1659,8 @@
     "type": "pattern"
   },
   {
-    "id": 36,
-    "parent": 35,
+    "id": 42,
+    "parent": 41,
     "range": {
       "endColumn": 21,
       "endRow": 3,
@@ -1493,8 +1679,8 @@
     "type": "other"
   },
   {
-    "id": 37,
-    "parent": 34,
+    "id": 43,
+    "parent": 40,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1525,9 +1711,9 @@
       },
       {
         "name": "type",
-        "ref": "SimpleTypeIdentifierSyntax",
+        "ref": "IdentifierTypeSyntax",
         "value": {
-          "text": "SimpleTypeIdentifierSyntax"
+          "text": "IdentifierTypeSyntax"
         }
       },
       {
@@ -1541,8 +1727,8 @@
     "type": "other"
   },
   {
-    "id": 38,
-    "parent": 37,
+    "id": 44,
+    "parent": 43,
     "range": {
       "endColumn": 22,
       "endRow": 3,
@@ -1561,8 +1747,8 @@
     "type": "other"
   },
   {
-    "id": 39,
-    "parent": 37,
+    "id": 45,
+    "parent": 43,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1604,12 +1790,12 @@
         }
       }
     ],
-    "text": "SimpleTypeIdentifier",
+    "text": "IdentifierType",
     "type": "type"
   },
   {
-    "id": 40,
-    "parent": 39,
+    "id": 46,
+    "parent": 45,
     "range": {
       "endColumn": 29,
       "endRow": 3,
@@ -1628,8 +1814,8 @@
     "type": "other"
   },
   {
-    "id": 41,
-    "parent": 16,
+    "id": 47,
+    "parent": 18,
     "range": {
       "endColumn": 2,
       "endRow": 4,
@@ -1648,7 +1834,7 @@
     "type": "other"
   },
   {
-    "id": 42,
+    "id": 48,
     "parent": 0,
     "range": {
       "endColumn": 2,
@@ -1661,7 +1847,7 @@
     "structure": [],
     "text": "",
     "token": {
-      "kind": "eof",
+      "kind": "endOfFile",
       "leadingTrivia": "",
       "trailingTrivia": ""
     },

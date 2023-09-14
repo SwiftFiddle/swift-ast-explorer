@@ -245,8 +245,6 @@ final class TokenVisitor: SyntaxRewriter {
       trivia += wrapWithSpanTag(class: "docBlockComment", text: text)
     case .unexpectedText(let text):
       trivia += wrapWithSpanTag(class: "unexpectedText", text: text)
-    case .shebang(let text):
-      trivia += wrapWithSpanTag(class: "shebang", text: text)
     case .backslashes(let count):
       trivia += String(repeating: #"\"#, count: count)
     case .pounds(let count):
