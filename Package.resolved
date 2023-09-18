@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/console-kit.git",
       "state" : {
-        "revision" : "9a12000f4064a2bdc49068d7258292ec1bdc88fc",
-        "version" : "4.7.0"
+        "revision" : "dcaea6c7f6e29d3ffb80975b24319af85c0afef0",
+        "version" : "4.8.0"
       }
     },
     {
@@ -185,8 +185,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-system.git",
       "state" : {
-        "revision" : "836bc4557b74fe6d2660218d56e3ce96aff76574",
-        "version" : "1.1.1"
+        "revision" : "025bcb1165deab2e20d4eaba79967ce73013f496",
+        "version" : "1.2.1"
       }
     },
     {
@@ -194,8 +194,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-tools-support-core",
       "state" : {
-        "revision" : "93784c59434dbca8e8a9e4b700d0d6d94551da6a",
-        "version" : "0.5.2"
+        "revision" : "3b13e439a341bbbfe0f710c7d1be37221745ef1a",
+        "version" : "0.6.1"
       }
     },
     {
