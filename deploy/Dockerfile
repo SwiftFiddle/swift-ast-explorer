@@ -1,4 +1,4 @@
-FROM kishikawakatsumi/swift-ast-explorer.com:latest
+FROM swiftfiddle/swift-ast-explorer.com:latest
 
 EXPOSE $PORT
 
