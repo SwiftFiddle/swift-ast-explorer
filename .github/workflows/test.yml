@@ -32,7 +32,7 @@ jobs:
         run: |
           set -ex
 
-          IMAGE_TAG=kishikawakatsumi/swift-ast-explorer.com:latest
+          IMAGE_TAG=swiftfiddle/swift-ast-explorer.com:latest
 
           docker build --rm --no-cache --build-arg FONTAWESOME_TOKEN=${{ env.FONTAWESOME_TOKEN }} --tag ${IMAGE_TAG} .
           docker push ${IMAGE_TAG}
