@@ -18,7 +18,7 @@ import {
   faTable,
   faQuestionCircle,
   faFileImport,
-  faCommentAltSmile,
+  faMessageSmile,
   faAt,
 } from "@fortawesome/pro-regular-svg-icons";
 import {
@@ -44,7 +44,7 @@ library.add(
   faTable,
   faQuestionCircle,
   faFileImport,
-  faCommentAltSmile,
+  faMessageSmile,
   faAt,
 
   faFileCode,
