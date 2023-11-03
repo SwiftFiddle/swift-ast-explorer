@@ -13,7 +13,7 @@
     "@popperjs/core": "2.11.8",
     "bootstrap": "5.3.2",
     "codemirror": "5.65.15",
-    "datatables.net-bs5": "1.13.6",
+    "datatables.net-bs5": "1.13.7",
     "plausible-tracker": "0.3.8",
     "reconnecting-websocket": "4.4.0"
   },
