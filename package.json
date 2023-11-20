@@ -12,7 +12,7 @@
     "@fortawesome/pro-solid-svg-icons": "6.4.0",
     "@popperjs/core": "2.11.8",
     "bootstrap": "5.3.2",
-    "codemirror": "5.65.15",
+    "codemirror": "5.65.16",
     "datatables.net-bs5": "1.13.8",
     "plausible-tracker": "0.3.8",
     "reconnecting-websocket": "4.4.0"
