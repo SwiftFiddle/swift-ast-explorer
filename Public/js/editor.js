@@ -76,10 +76,10 @@ export class Editor {
     });
   }
 
-  charCoords(range) {
+  charCoords(range, mode = "page") {
     return this.editor.charCoords(
       { ch: range.startColumn - 1, line: range.startRow - 1 },
-      "page"
+      mode
     );
   }
 
