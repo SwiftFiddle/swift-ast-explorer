@@ -152,24 +152,33 @@ export class App {
     const data = this.structureData;
     this.structureView.update(data);
 
-    this.structureView.onmouseover = (event, target, data) => {
+    this.structureView.onmouseover = (_event, _target, data) => {
       const title = data.token
         ? `Token <span class="token-kind text-truncate"  style="max-width: 300px;">${data.token.kind}</span>`
         : `${data.text}`;
+
       const range = data.range;
+      this.editor.setSelection(range);
 
       const formatted = formatRange(range);
       this.balloon.setContent(
         `<div class="title">${title}</div><div class="range">${formatted}</div>`
       );
-      this.balloon.show(this.editor.charCoords(range), {
-        placement: "top",
-        offset: { x: 10, y: -6 },
-      });
 
-      this.editor.setSelection(range);
+      const pageCoords = this.editor.charCoords(range, "page");
+      const localCoords = this.editor.charCoords(range, "local");
+      const rect = {
+        left: localCoords.left,
+        top: pageCoords.top,
+        width: pageCoords.right - pageCoords.left,
+        height: pageCoords.bottom - pageCoords.top,
+      };
+      this.balloon.show(rect, {
+        placement: "top",
+        offset: { x: 0, y: -6 },
+      });
     };
-    this.structureView.onmouseout = (event, target, data) => {
+    this.structureView.onmouseout = (_event, _target, _data) => {
       this.balloon.hide();
     };
   }
@@ -202,7 +211,7 @@ export class App {
 
     this.statisticsView.update(statistics);
 
-    this.statisticsView.onmouseover = (event, target, ranges) => {
+    this.statisticsView.onmouseover = (_event, target, ranges) => {
       const content = ranges
         .map((range) => {
           return {
@@ -248,7 +257,7 @@ export class App {
         this.editor.markText(range);
       }
     };
-    this.statisticsView.onmouseout = (event, target) => {
+    this.statisticsView.onmouseout = (_event, _target) => {
       this.balloon.hide();
       this.editor.clearMarks();
     };
