@@ -110,6 +110,7 @@ final class TokenVisitor: SyntaxRewriter {
             continue
           }
 
+          let keyPath = keyPath as AnyKeyPath
           switch syntaxNode[keyPath: keyPath] {
           case let value as TokenSyntax:
             if value.presence == .missing {
