@@ -64,6 +64,7 @@ export class StatisticsView {
         info: false,
         paging: false,
         searching: false,
+        columnDefs: [{ className: "statistics_count", targets: [1] }],
       }
     );
   }
