@@ -1,3 +1,7 @@
 table.dataTable {
   margin-top: 0 !important;
 }
+
+th.statistics_count {
+  text-align: initial !important;
+}
