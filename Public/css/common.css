@@ -24,8 +24,7 @@
 }
 
 .tab-pane {
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 #lookup-container {
