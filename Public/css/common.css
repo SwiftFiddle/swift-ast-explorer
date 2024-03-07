@@ -9,6 +9,7 @@
 .dropdown-menu {
   min-width: 260px;
   line-height: 1.2;
+  font-feature-settings: "tnum";
 }
 
 .active-tick a::after {
