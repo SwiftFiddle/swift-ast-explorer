@@ -5,6 +5,7 @@ import { Editor } from "./editor.js";
 import { Balloon } from "./balloon.js";
 import { StructureView } from "./structure_view.js";
 import { LookupView } from "./lookup_view.js";
+import { TriviaView } from "./trivia_view.js";
 import { StatisticsView } from "./statistics_view.js";
 import { WebSocketClient } from "./websocket.js";
 import { debounce } from "./debounce.js";
@@ -26,6 +27,9 @@ export class App {
     );
     this.lookupView = new LookupView(
       document.getElementById("lookup-container")
+    );
+    this.triviaView = new TriviaView(
+      document.getElementById("trivia-container")
     );
     this.statisticsView = new StatisticsView(
       document.getElementById("statistics-container")
@@ -130,6 +134,7 @@ export class App {
 
         this.updateStructure();
         this.updateLookup();
+        this.updateTrivia();
         this.updateStatistics();
 
         this.onresize();
@@ -189,6 +194,14 @@ export class App {
     }
     const data = this.response.syntaxHTML;
     this.lookupView.update(data);
+  }
+
+  updateTrivia() {
+    if (this.response === undefined || this.response.syntaxHTML === undefined) {
+      return;
+    }
+    const data = this.response.syntaxHTML;
+    this.triviaView.update(data);
   }
 
   updateStatistics() {

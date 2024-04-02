@@ -34,6 +34,12 @@
   line-height: 1.4;
 }
 
+#trivia-container {
+  font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
+  font-size: 11pt;
+  line-height: 1.4;
+}
+
 .alert {
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
   font-size: 11pt;
