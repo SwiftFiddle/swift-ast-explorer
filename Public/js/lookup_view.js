@@ -11,9 +11,6 @@ export class LookupView {
   constructor(container) {
     this.container = container;
     this.popover = new Popover();
-
-    this.onmouseover = () => {};
-    this.onmouseout = () => {};
   }
 
   update(syntaxHTML) {
@@ -26,6 +23,8 @@ export class LookupView {
 
     const popover = this.popover;
 
+    const self = this;
+
     $(this.container)
       .find("span")
       .each(function () {
@@ -37,7 +36,7 @@ export class LookupView {
           $(this)
             .parents("span")
             .each(function (index, element) {
-              createDOMRectElement(element.getBoundingClientRect());
+              self.createDOMRectElement(element.getBoundingClientRect());
               contents.push({
                 title: element.dataset.title,
                 content: element.dataset.content,
@@ -108,34 +107,39 @@ export class LookupView {
           let element = event.target;
           element.style.backgroundColor = "";
 
-          let rectElements = document.getElementsByClassName("dom-rect");
-          for (let i = 0, l = rectElements.length; l > i; i++) {
-            rectElements[0].parentNode.removeChild(rectElements[0]);
-          }
+          self.removeDOMRectElement();
 
           popover.hide();
         });
       });
   }
-}
 
-function createDOMRectElement(domRect) {
-  let rectElements = document.getElementsByClassName("dom-rect");
-  for (let i = 0, l = rectElements.length; l > i; i++) {
-    rectElements[0].parentNode.removeChild(rectElements[0]);
+  createDOMRectElement(domRect) {
+    const className = "dom-rect";
+    let rectElements = this.container.getElementsByClassName(className);
+    for (let i = 0, l = rectElements.length; l > i; i++) {
+      rectElements[0].parentNode.removeChild(rectElements[0]);
+    }
+
+    let rectElement = document.createElement("div");
+    rectElement.className = className;
+    rectElement.style.left = domRect.x - 1 + "px";
+    rectElement.style.top = domRect.y - 1 + "px";
+    rectElement.style.width = domRect.width + 1 + "px";
+    rectElement.style.height = domRect.height + 1 + "px";
+    rectElement.style.pointerEvents = "none";
+    rectElement.style.position = "absolute";
+    rectElement.style.border = "1px solid rgb(81, 101, 255)";
+    rectElement.style.backgroundColor = "rgba(81, 101, 255, 0.25)";
+    this.container.appendChild(rectElement);
   }
 
-  let rectElement = document.createElement("div");
-  rectElement.className = "dom-rect";
-  rectElement.style.left = domRect.x - 1 + "px";
-  rectElement.style.top = domRect.y - 1 + "px";
-  rectElement.style.width = domRect.width + "px";
-  rectElement.style.height = domRect.height + "px";
-  rectElement.style.pointerEvents = "none";
-  rectElement.style.position = "absolute";
-  rectElement.style.border = "1px solid rgb(81, 101, 255)";
-  rectElement.style.backgroundColor = "rgba(81, 101, 255, 0.25)";
-  document.body.appendChild(rectElement);
+  removeDOMRectElement() {
+    let rectElements = this.container.getElementsByClassName("dom-rect");
+    for (let i = 0, l = rectElements.length; l > i; i++) {
+      rectElements[0].parentNode.removeChild(rectElements[0]);
+    }
+  }
 }
 
 function escapeHTML(text) {

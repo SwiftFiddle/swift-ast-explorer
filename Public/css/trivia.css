@@ -1,0 +1,11 @@
+#trivia-container span.leading-trivia {
+  background-color: #c8e1c8;
+}
+
+#trivia-container span.trailing-trivia {
+  background-color: #ffd8a8;
+}
+
+#trivia-container .br {
+  color: #a3a3a3;
+}
