@@ -6,20 +6,6 @@
   background-color: #ffd8a8;
 }
 
-#trivia-container br {
-  content: "&nbsp;" !important;
-}
-
-#trivia-container br::after {
-  content: "↲\000A";
-  white-space: pre;
+#trivia-container .br {
   color: #a3a3a3;
-}
-
-#trivia-container br.leading-trivia::after {
-  background-color: #c8e1c8;
-}
-
-#trivia-container br.trailing-trivia::after {
-  background-color: #ffd8a8;
 }

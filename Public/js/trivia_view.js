@@ -19,6 +19,16 @@ export class TriviaView {
     const contentView = document.createElement("div");
     contentView.innerHTML = syntaxHTML;
 
+    const newlines = contentView.querySelectorAll("br");
+    for (const newline of newlines) {
+      const span = document.createElement("span");
+      span.classList.add("br");
+      span.textContent = "↲";
+      span.appendChild(newline.cloneNode(true));
+      const parent = newline.parentElement;
+      parent.replaceChild(span, newline);
+    }
+
     this.container.appendChild(contentView);
 
     this.container.querySelectorAll(".token").forEach((token) => {
@@ -62,7 +72,7 @@ export class TriviaView {
           } else if (child.nodeType === Node.ELEMENT_NODE) {
             if (isLeadingTrivia) {
               child.classList.add("leading-trivia");
-              if (child.tagName === "BR") {
+              if (child.classList.contains("br")) {
                 leadingTrivias.push(`<span style="color: #a3a3a3;">↲</span>`);
               } else {
                 leadingTrivias.push(
@@ -73,7 +83,7 @@ export class TriviaView {
               }
             } else {
               child.classList.add("trailing-trivia");
-              if (child.tagName === "BR") {
+              if (child.classList.contains("br")) {
                 trailingTrivias.push(`<span style="color: #a3a3a3;">↲</span>`);
               } else {
                 trailingTrivias.push(
