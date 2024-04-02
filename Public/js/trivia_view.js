@@ -58,15 +58,15 @@ export class TriviaView {
               span.classList.add("leading-trivia");
               leadingTrivias.push(
                 span.textContent
-                  .replace(/\s/g, `<span style="color: #a3a3a3;">␣`)
-                  .replace(/\n/g, `<span style="color: #a3a3a3;">↲`)
+                  .replace(/\s/g, `<span style="color: #a3a3a3;">␣</span>`)
+                  .replace(/\n/g, `<span style="color: #a3a3a3;">↲</span>`)
               );
             } else {
               span.classList.add("trailing-trivia");
               trailingTrivias.push(
                 span.textContent
-                  .replace(/\s/g, `<span style="color: #a3a3a3;">␣`)
-                  .replace(/\n/g, `<span style="color: #a3a3a3;">↲`)
+                  .replace(/\s/g, `<span style="color: #a3a3a3;">␣</span>`)
+                  .replace(/\n/g, `<span style="color: #a3a3a3;">↲</span>`)
               );
             }
           } else if (child.nodeType === Node.ELEMENT_NODE) {
