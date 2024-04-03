@@ -10,6 +10,7 @@ import {
   faCodeBranch,
   faCaretRight,
   faCaretDown,
+  faSlashForward,
   faHeart,
 } from "@fortawesome/pro-solid-svg-icons";
 import {
@@ -38,6 +39,7 @@ library.add(
   faCodeBranch,
   faCaretRight,
   faCaretDown,
+  faSlashForward,
   faHeart,
 
   faCheck,
