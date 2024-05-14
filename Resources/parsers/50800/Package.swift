@@ -7,7 +7,7 @@ let package = Package(
     .macOS(.v13)
   ],
   dependencies: [
-    .package(url: "https://github.com/apple/swift-syntax", from: "508.0.1"),
+    .package(url: "https://github.com/apple/swift-syntax", from: "510.0.2"),
   ],
   targets: [
     .executableTarget(
