@@ -31,6 +31,6 @@
     "webpack": "5.92.1",
     "webpack-bundle-analyzer": "4.10.2",
     "webpack-cli": "5.1.4",
-    "webpack-merge": "5.10.0"
+    "webpack-merge": "6.0.1"
   }
 }
