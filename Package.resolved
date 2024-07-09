@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/leaf-kit.git",
       "state" : {
-        "revision" : "547e48cc5f8d98380dd8a7226ce630d3aa3b2245",
-        "version" : "1.10.6"
+        "revision" : "c04e54753fb30a985b42c3be8530bb94442da9c6",
+        "version" : "1.11.0"
       }
     },
     {
