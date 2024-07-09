@@ -1,6 +1,6 @@
 import Vapor
 
-final class CustomHeaderMiddleware: AsyncMiddleware {
+struct CustomHeaderMiddleware: AsyncMiddleware {
   func respond(to request: Vapor.Request, chainingTo next: any Vapor.AsyncResponder) async throws -> Vapor.Response {
     let response = try await next.respond(to: request)
     response.headers.add(name: "X-Frame-Options", value: "DENY")
