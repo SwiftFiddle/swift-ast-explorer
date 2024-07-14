@@ -43,19 +43,20 @@ struct CommonErrorMiddleware: AsyncMiddleware {
           body: .init(data: data)
         )
       } else {
-         let data = try JSONEncoder().encode([
-          "error": [
+        let view = try await request.view.render(
+          "error",
+          [
             "title": "We've got some trouble",
             "error": errotTitles[status.code],
             "reason": errotReasons[status.code],
             "status": "\(status.code)",
           ]
-        ])
+        ).get()
 
-        return .init(
+        return try await view.encodeResponse(
           status: status,
           headers: headers,
-          body: .init(data: data)
+          for: request
         )
       }
     }
