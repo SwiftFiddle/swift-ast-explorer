@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/async-kit.git",
       "state" : {
-        "revision" : "7ece208cd401687641c88367a00e3ea2b04311f1",
-        "version" : "1.19.0"
+        "revision" : "15b3fb7b2437f9db11f6ddcf365c5b5db8c3a346",
+        "version" : "1.19.1"
       }
     },
     {
@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/leaf.git",
       "state" : {
-        "revision" : "0be8765af9991823c854d97faa4a97db1cfa2643",
-        "version" : "4.3.0"
+        "revision" : "dd799be2a92e7207ad86c567e4fc7dd37413ff60",
+        "version" : "4.4.0"
       }
     },
     {
