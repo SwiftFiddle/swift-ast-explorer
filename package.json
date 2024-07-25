@@ -13,7 +13,7 @@
     "@popperjs/core": "2.11.8",
     "bootstrap": "5.3.3",
     "codemirror": "5.65.17",
-    "datatables.net-bs5": "2.1.0",
+    "datatables.net-bs5": "2.1.2",
     "plausible-tracker": "0.3.9",
     "reconnecting-websocket": "4.4.0"
   },
@@ -23,7 +23,7 @@
     "css-loader": "7.1.2",
     "html-webpack-plugin": "5.6.0",
     "mini-css-extract-plugin": "2.9.0",
-    "postcss": "8.4.39",
+    "postcss": "8.4.40",
     "postcss-loader": "8.1.1",
     "sass": "1.77.8",
     "sass-loader": "14.2.1",
