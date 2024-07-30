@@ -1,8 +1,10 @@
 import Vapor
 
-final class CommonErrorMiddleware: Middleware {
-  func respond(to request: Request, chainingTo next: Responder) -> EventLoopFuture<Response> {
-    return next.respond(to: request).flatMapError { (error) in
+struct CommonErrorMiddleware: AsyncMiddleware {
+  func respond(to request: Vapor.Request, chainingTo next: any Vapor.AsyncResponder) async throws -> Vapor.Response {
+    do {
+      return try await next.respond(to: request)
+    } catch let error {
       let headers: HTTPHeaders
       let status: HTTPResponseStatus
       switch error {
@@ -33,16 +35,29 @@ final class CommonErrorMiddleware: Middleware {
       ]
 
       if request.headers[.accept].map({ $0.lowercased() }).contains("application/json") {
-        return request.eventLoop.makeSucceededFuture(["error": status.code])
-          .encodeResponse(status: status, headers: headers, for: request)
+        let data = try JSONEncoder().encode(["error": status.code])
+        
+        return .init(
+          status: status,
+          headers: headers,
+          body: .init(data: data)
+        )
       } else {
-        return request.view.render("error", [
-          "title": "We've got some trouble",
-          "error": errotTitles[status.code],
-          "reason": errotReasons[status.code],
-          "status": "\(status.code)",
-        ])
-        .encodeResponse(status: status, headers: headers, for: request)
+        let view = try await request.view.render(
+          "error",
+          [
+            "title": "We've got some trouble",
+            "error": errotTitles[status.code],
+            "reason": errotReasons[status.code],
+            "status": "\(status.code)",
+          ]
+        ).get()
+
+        return try await view.encodeResponse(
+          status: status,
+          headers: headers,
+          for: request
+        )
       }
     }
   }

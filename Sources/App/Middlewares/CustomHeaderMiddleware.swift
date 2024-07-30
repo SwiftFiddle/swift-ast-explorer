@@ -1,11 +1,10 @@
 import Vapor
 
-final class CustomHeaderMiddleware: Middleware {
-  func respond(to request: Request, chainingTo next: Responder) -> EventLoopFuture<Response> {
-    return next.respond(to: request).map { (response) in
-      response.headers.add(name: "X-Frame-Options", value: "DENY")
-      response.headers.add(name: "Permissions-Policy", value: "interest-cohort=()")
-      return response
-    }
+struct CustomHeaderMiddleware: AsyncMiddleware {
+  func respond(to request: Vapor.Request, chainingTo next: any Vapor.AsyncResponder) async throws -> Vapor.Response {
+    let response = try await next.respond(to: request)
+    response.headers.add(name: "X-Frame-Options", value: "DENY")
+    response.headers.add(name: "Permissions-Policy", value: "interest-cohort=()")
+    return response
   }
 }
