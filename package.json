@@ -25,7 +25,7 @@
     "mini-css-extract-plugin": "2.9.1",
     "postcss": "8.4.47",
     "postcss-loader": "8.1.1",
-    "sass": "1.78.0",
+    "sass": "1.79.0",
     "sass-loader": "16.0.1",
     "style-loader": "4.0.0",
     "webpack": "5.94.0",
