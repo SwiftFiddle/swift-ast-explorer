@@ -1,4 +1,4 @@
-// swift-tools-version:5.9
+// swift-tools-version:5.10
 import PackageDescription
 
 let package = Package(
@@ -7,7 +7,7 @@ let package = Package(
     .macOS(.v13)
   ],
   dependencies: [
-    .package(url: "https://github.com/apple/swift-syntax", from: "509.1.1"),
+    .package(url: "https://github.com/apple/swift-syntax", from: "600.0.0"),
   ],
   targets: [
     .executableTarget(

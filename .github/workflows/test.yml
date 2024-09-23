@@ -21,6 +21,7 @@ jobs:
           (cd Resources/parsers/50800 && swift test)
           (cd Resources/parsers/50900 && swift test)
           (cd Resources/parsers/51000 && swift test)
+          (cd Resources/parsers/60000 && swift test)
           (cd Resources/parsers/trunk && swift test)
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
