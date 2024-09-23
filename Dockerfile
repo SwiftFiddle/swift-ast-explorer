@@ -13,7 +13,7 @@ COPY Public ./Public/
 RUN npx webpack --config webpack.prod.js
 
 
-FROM swift:5.10-jammy as swift
+FROM swift:6.0-jammy as swift
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
     && apt-get -q update \
     && apt-get -q dist-upgrade -y\
@@ -30,6 +30,7 @@ RUN swift build -c release --static-swift-stdlib
 RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/50800
 RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/50900
 RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/51000
+RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/60000
 RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/trunk
 
 WORKDIR /staging
