@@ -212,8 +212,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "3aeeb6fab5112fb10ce699b5a80207e5cf571c32",
-        "version" : "4.106.7"
+        "revision" : "ec23f07eb2eda35f6f179a8c4607769287073f8d",
+        "version" : "4.107.0"
       }
     },
     {
