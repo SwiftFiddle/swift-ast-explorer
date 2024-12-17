@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/multipart-kit.git",
       "state" : {
-        "revision" : "a31236f24bfd2ea2f520a74575881f6731d7ae68",
-        "version" : "4.7.0"
+        "revision" : "3498e60218e6003894ff95192d756e238c01f44e",
+        "version" : "4.7.1"
       }
     },
     {
@@ -158,8 +158,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio-http2.git",
       "state" : {
-        "revision" : "eaa71bb6ae082eee5a07407b1ad0cbd8f48f9dca",
-        "version" : "1.34.1"
+        "revision" : "170f4ca06b6a9c57b811293cebcb96e81b661310",
+        "version" : "1.35.0"
       }
     },
     {
@@ -212,8 +212,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "ec23f07eb2eda35f6f179a8c4607769287073f8d",
-        "version" : "4.107.0"
+        "revision" : "e1002f35edf92e2a579580f2d1df92e01287c6c7",
+        "version" : "4.108.0"
       }
     },
     {
