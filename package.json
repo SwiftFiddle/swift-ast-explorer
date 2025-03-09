@@ -18,7 +18,7 @@
     "reconnecting-websocket": "4.4.0"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.20",
+    "autoprefixer": "10.4.21",
     "copy-webpack-plugin": "13.0.0",
     "css-loader": "7.1.2",
     "html-webpack-plugin": "5.6.3",
