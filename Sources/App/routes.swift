@@ -58,9 +58,9 @@ func routes(_ app: Application) throws {
   }
 
   func parserCommand(branch: String, code: String, arguments: [String]) async throws -> (stdout: String, stderr: String) {
-    let process = TSCBasic.Process(
+    let process = TSCBasic.Process.init(
       arguments: ["parser"] + arguments,
-      environment: [
+      environmentBlock: [
         "NSUnbufferedIO": "YES",
       ],
       workingDirectory: try! AbsolutePath.init(validating: "\(app.directory.resourcesDirectory)parsers/\(branch)/.build/release/")
