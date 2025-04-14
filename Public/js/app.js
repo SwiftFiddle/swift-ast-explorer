@@ -284,6 +284,8 @@ export class App {
       this.contentViewHeight;
     document.getElementById("lookup-container").style.height =
       this.contentViewHeight;
+    document.getElementById("trivia-container").style.height =
+      this.contentViewHeight;
     document.getElementById("statistics-container").style.height =
       this.contentViewHeight;
   }
