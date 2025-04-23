@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "type": "lldb",
+      "type": "swift",
       "request": "launch",
       "sourceLanguages": ["swift"],
       "name": "Debug App",
@@ -11,7 +11,7 @@
       "preLaunchTask": "swift: Build Debug App"
     },
     {
-      "type": "lldb",
+      "type": "swift",
       "request": "launch",
       "sourceLanguages": ["swift"],
       "name": "Release App",

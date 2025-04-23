@@ -7,6 +7,7 @@ enum Entrypoint {
     try LoggingSystem.bootstrap(from: &env)
 
     let app = try await Application.make(env)
+
     do {
       try await configure(app)
       try await app.execute()
