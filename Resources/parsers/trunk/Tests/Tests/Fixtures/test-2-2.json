@@ -911,7 +911,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeBaseName",
+        "name": "unexpectedBeforeModuleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "moduleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModuleSelectorAndBaseName",
         "value": {
           "text": "nil"
         }
@@ -1343,7 +1355,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeBaseName",
+        "name": "unexpectedBeforeModuleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "moduleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModuleSelectorAndBaseName",
         "value": {
           "text": "nil"
         }
@@ -2068,7 +2092,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeBaseName",
+        "name": "unexpectedBeforeModuleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "moduleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModuleSelectorAndBaseName",
         "value": {
           "text": "nil"
         }
@@ -2500,7 +2536,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeBaseName",
+        "name": "unexpectedBeforeModuleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "moduleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModuleSelectorAndBaseName",
         "value": {
           "text": "nil"
         }
@@ -3237,7 +3285,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeBaseName",
+        "name": "unexpectedBeforeModuleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "moduleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModuleSelectorAndBaseName",
         "value": {
           "text": "nil"
         }
