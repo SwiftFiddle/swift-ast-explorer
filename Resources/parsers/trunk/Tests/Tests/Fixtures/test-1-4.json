@@ -1260,7 +1260,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeName",
+        "name": "unexpectedBeforeModuleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "moduleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModuleSelectorAndName",
         "value": {
           "text": "nil"
         }
@@ -1759,7 +1771,19 @@
     },
     "structure": [
       {
-        "name": "unexpectedBeforeName",
+        "name": "unexpectedBeforeModuleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "moduleSelector",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModuleSelectorAndName",
         "value": {
           "text": "nil"
         }
