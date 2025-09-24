@@ -2,6 +2,10 @@
   "extends": [
     "config:recommended"
   ],
+  "enabledManagers": [
+    "npm",
+    "github-actions"
+  ],
   "packageRules": [
     {
       "matchUpdateTypes": [
