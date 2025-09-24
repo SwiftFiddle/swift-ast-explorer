@@ -23,6 +23,34 @@ jobs:
           (cd Resources/parsers/51000 && swift test)
           (cd Resources/parsers/60000 && swift test)
           (cd Resources/parsers/trunk && swift test)
+      - name: Verify Gist
+        run: |
+          set -ex
+
+          expected=$(cat <<'EOF'
+          struct Player {
+              var name: String
+              var highScore: Int = 0
+              var history: [Int] = []
+
+              init(_ name: String) {
+                  self.name = name
+              }
+          }
+
+          var player = Player("Tomas")
+
+          EOF
+          )
+
+          actual=$(gh gist view b4f866efb1c1dc63b0a9cce000cf5688 --raw)
+
+          if diff <(echo "$expected") <(echo "$actual") > /dev/null; then
+            echo "✅ Gist content matches expected"
+          else
+            echo "❌ Gist content mismatch"
+            exit 1
+          fi
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Login to Docker Hub
