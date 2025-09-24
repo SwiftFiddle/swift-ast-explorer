@@ -6,13 +6,13 @@ import FoundationNetworking
 
 final class AppTests: XCTestCase {
   func testRootPath() async throws {
-    let app = Application(.testing)
-    defer { app.shutdown() }
+    let app = try await Application.make(.testing)
     try await configure(app)
 
-    try app.test(.GET, "/healthz", afterResponse: { res in
+    try await app.test(.GET, "/healthz") { res async -> () in
       XCTAssertEqual(res.status, .ok)
-    })
+    }
+    try await app.asyncShutdown()
   }
 
   func testGistPath() throws {
