@@ -3,8 +3,9 @@
     "config:recommended"
   ],
   "enabledManagers": [
-    "npm",
-    "github-actions"
+    "dockerfile",
+    "github-actions",
+    "npm"
   ],
   "packageRules": [
     {
