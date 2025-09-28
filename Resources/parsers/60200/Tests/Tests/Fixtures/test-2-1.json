@@ -1,0 +1,596 @@
+[
+  {
+    "id": 0,
+    "range": {
+      "endColumn": 15,
+      "endRow": 1,
+      "graphemeEndColumn": 15,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeShebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "shebang",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenShebangAndStatements",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "statements",
+        "ref": "CodeBlockItemListSyntax",
+        "value": {
+          "text": "CodeBlockItemListSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenStatementsAndEndOfFileToken",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "endOfFileToken",
+        "value": {
+          "kind": "endOfFile",
+          "text": ""
+        }
+      },
+      {
+        "name": "unexpectedAfterEndOfFileToken",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "SourceFile",
+    "type": "other"
+  },
+  {
+    "id": 1,
+    "parent": 0,
+    "range": {
+      "endColumn": 15,
+      "endRow": 1,
+      "graphemeEndColumn": 15,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "CodeBlockItemSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "1"
+        }
+      }
+    ],
+    "text": "CodeBlockItemList",
+    "type": "collection"
+  },
+  {
+    "id": 2,
+    "parent": 1,
+    "range": {
+      "endColumn": 15,
+      "endRow": 1,
+      "graphemeEndColumn": 15,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeItem",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "item",
+        "ref": "VariableDeclSyntax",
+        "value": {
+          "text": "VariableDeclSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenItemAndSemicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "semicolon",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterSemicolon",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "CodeBlockItem",
+    "type": "other"
+  },
+  {
+    "id": 3,
+    "parent": 2,
+    "range": {
+      "endColumn": 15,
+      "endRow": 1,
+      "graphemeEndColumn": 15,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeAttributes",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "attributes",
+        "ref": "AttributeListSyntax",
+        "value": {
+          "text": "AttributeListSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenAttributesAndModifiers",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "modifiers",
+        "ref": "DeclModifierListSyntax",
+        "value": {
+          "text": "DeclModifierListSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenModifiersAndBindingSpecifier",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "bindingSpecifier",
+        "value": {
+          "kind": "keyword(SwiftSyntax.Keyword.let)",
+          "text": "let"
+        }
+      },
+      {
+        "name": "unexpectedBetweenBindingSpecifierAndBindings",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "bindings",
+        "ref": "PatternBindingListSyntax",
+        "value": {
+          "text": "PatternBindingListSyntax"
+        }
+      },
+      {
+        "name": "unexpectedAfterBindings",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "VariableDecl",
+    "type": "decl"
+  },
+  {
+    "id": 4,
+    "parent": 3,
+    "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "graphemeEndColumn": 1,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "Element"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "AttributeList",
+    "type": "collection"
+  },
+  {
+    "id": 5,
+    "parent": 3,
+    "range": {
+      "endColumn": 1,
+      "endRow": 1,
+      "graphemeEndColumn": 1,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "DeclModifierSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "0"
+        }
+      }
+    ],
+    "text": "DeclModifierList",
+    "type": "collection"
+  },
+  {
+    "id": 6,
+    "parent": 3,
+    "range": {
+      "endColumn": 4,
+      "endRow": 1,
+      "graphemeEndColumn": 4,
+      "graphemeStartColumn": 1,
+      "startColumn": 1,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "let",
+    "token": {
+      "kind": "keyword(SwiftSyntax.Keyword.let)",
+      "leadingTrivia": "",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
+    },
+    "type": "other"
+  },
+  {
+    "id": 7,
+    "parent": 3,
+    "range": {
+      "endColumn": 15,
+      "endRow": 1,
+      "graphemeEndColumn": 15,
+      "graphemeStartColumn": 5,
+      "startColumn": 5,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "Element",
+        "value": {
+          "text": "PatternBindingSyntax"
+        }
+      },
+      {
+        "name": "Count",
+        "value": {
+          "text": "1"
+        }
+      }
+    ],
+    "text": "PatternBindingList",
+    "type": "collection"
+  },
+  {
+    "id": 8,
+    "parent": 7,
+    "range": {
+      "endColumn": 15,
+      "endRow": 1,
+      "graphemeEndColumn": 15,
+      "graphemeStartColumn": 5,
+      "startColumn": 5,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforePattern",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "pattern",
+        "ref": "IdentifierPatternSyntax",
+        "value": {
+          "text": "IdentifierPatternSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenPatternAndTypeAnnotation",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "typeAnnotation",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenTypeAnnotationAndInitializer",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "initializer",
+        "ref": "InitializerClauseSyntax",
+        "value": {
+          "text": "InitializerClauseSyntax"
+        }
+      },
+      {
+        "name": "unexpectedBetweenInitializerAndAccessorBlock",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "accessorBlock",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedBetweenAccessorBlockAndTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "trailingComma",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "unexpectedAfterTrailingComma",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "PatternBinding",
+    "type": "other"
+  },
+  {
+    "id": 9,
+    "parent": 8,
+    "range": {
+      "endColumn": 11,
+      "endRow": 1,
+      "graphemeEndColumn": 11,
+      "graphemeStartColumn": 5,
+      "startColumn": 5,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeIdentifier",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "identifier",
+        "value": {
+          "kind": "identifier(&quot;number&quot;)",
+          "text": "number"
+        }
+      },
+      {
+        "name": "unexpectedAfterIdentifier",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "IdentifierPattern",
+    "type": "pattern"
+  },
+  {
+    "id": 10,
+    "parent": 9,
+    "range": {
+      "endColumn": 11,
+      "endRow": 1,
+      "graphemeEndColumn": 11,
+      "graphemeStartColumn": 5,
+      "startColumn": 5,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "number",
+    "token": {
+      "kind": "identifier(&quot;number&quot;)",
+      "leadingTrivia": "",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
+    },
+    "type": "other"
+  },
+  {
+    "id": 11,
+    "parent": 8,
+    "range": {
+      "endColumn": 15,
+      "endRow": 1,
+      "graphemeEndColumn": 15,
+      "graphemeStartColumn": 12,
+      "startColumn": 12,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeEqual",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "equal",
+        "value": {
+          "kind": "equal",
+          "text": "="
+        }
+      },
+      {
+        "name": "unexpectedBetweenEqualAndValue",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "value",
+        "ref": "IntegerLiteralExprSyntax",
+        "value": {
+          "text": "IntegerLiteralExprSyntax"
+        }
+      },
+      {
+        "name": "unexpectedAfterValue",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "InitializerClause",
+    "type": "other"
+  },
+  {
+    "id": 12,
+    "parent": 11,
+    "range": {
+      "endColumn": 13,
+      "endRow": 1,
+      "graphemeEndColumn": 13,
+      "graphemeStartColumn": 12,
+      "startColumn": 12,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "=",
+    "token": {
+      "kind": "equal",
+      "leadingTrivia": "",
+      "trailingTrivia": "<span class='whitespace'>␣</span>"
+    },
+    "type": "other"
+  },
+  {
+    "id": 13,
+    "parent": 11,
+    "range": {
+      "endColumn": 15,
+      "endRow": 1,
+      "graphemeEndColumn": 15,
+      "graphemeStartColumn": 14,
+      "startColumn": 14,
+      "startRow": 1
+    },
+    "structure": [
+      {
+        "name": "unexpectedBeforeLiteral",
+        "value": {
+          "text": "nil"
+        }
+      },
+      {
+        "name": "literal",
+        "value": {
+          "kind": "integerLiteral(&quot;0&quot;)",
+          "text": "0"
+        }
+      },
+      {
+        "name": "unexpectedAfterLiteral",
+        "value": {
+          "text": "nil"
+        }
+      }
+    ],
+    "text": "IntegerLiteralExpr",
+    "type": "expr"
+  },
+  {
+    "id": 14,
+    "parent": 13,
+    "range": {
+      "endColumn": 15,
+      "endRow": 1,
+      "graphemeEndColumn": 15,
+      "graphemeStartColumn": 14,
+      "startColumn": 14,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "0",
+    "token": {
+      "kind": "integerLiteral(&quot;0&quot;)",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  },
+  {
+    "id": 15,
+    "parent": 0,
+    "range": {
+      "endColumn": 15,
+      "endRow": 1,
+      "graphemeEndColumn": 15,
+      "graphemeStartColumn": 15,
+      "startColumn": 15,
+      "startRow": 1
+    },
+    "structure": [],
+    "text": "",
+    "token": {
+      "kind": "endOfFile",
+      "leadingTrivia": "",
+      "trailingTrivia": ""
+    },
+    "type": "other"
+  }
+]
