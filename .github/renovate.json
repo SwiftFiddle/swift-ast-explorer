@@ -2,6 +2,11 @@
   "extends": [
     "config:recommended"
   ],
+  "enabledManagers": [
+    "dockerfile",
+    "github-actions",
+    "npm"
+  ],
   "packageRules": [
     {
       "matchUpdateTypes": [
