@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout to the branch
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Update Swift Package
         run: |
           set -ex
