@@ -248,8 +248,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-server/swift-service-lifecycle.git",
       "state" : {
-        "revision" : "1de37290c0ab3c5a96028e0f02911b672fd42348",
-        "version" : "2.9.1"
+        "revision" : "89888196dd79c61c50bca9a103d8114f32e1e598",
+        "version" : "2.10.1"
       }
     },
     {
