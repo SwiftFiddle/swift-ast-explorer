@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/console-kit.git",
       "state" : {
-        "revision" : "742f624a998cba2a9e653d9b1e91ad3f3a5dff6b",
-        "version" : "4.15.2"
+        "revision" : "32ad16dfc7677b927b225595ed18f3debb32f577",
+        "version" : "4.16.0"
       }
     },
     {
@@ -131,8 +131,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-crypto.git",
       "state" : {
-        "revision" : "fa308c07a6fa04a727212d793e761460e41049c3",
-        "version" : "4.3.0"
+        "revision" : "bb4ba815dab96d4edc1e0b86d7b9acf9ff973a84",
+        "version" : "4.3.1"
       }
     },
     {
