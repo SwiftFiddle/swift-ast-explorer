@@ -33,6 +33,7 @@ RUN swift build -c release --static-swift-stdlib --package-path Resources/parser
 RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/60000
 RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/60100
 RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/60200
+RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/60300
 RUN swift build -c release --static-swift-stdlib --package-path Resources/parsers/trunk
 
 WORKDIR /staging
