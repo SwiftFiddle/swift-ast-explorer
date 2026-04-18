@@ -79,7 +79,7 @@ func routes(_ app: Application) throws {
   }
 }
 
-let swiftVersion = "Swift 5.9"
+let swiftVersion = "Swift 6.3"
 
 private struct RequestParameter: Decodable {
   let code: String
