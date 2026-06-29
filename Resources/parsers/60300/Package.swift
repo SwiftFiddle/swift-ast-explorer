@@ -7,7 +7,7 @@ let package = Package(
     .macOS(.v13)
   ],
   dependencies: [
-    .package(url: "https://github.com/apple/swift-syntax", from: "603.0.0"),
+    .package(url: "https://github.com/apple/swift-syntax", from: "603.0.2")
   ],
   targets: [
     .executableTarget(
@@ -24,9 +24,9 @@ let package = Package(
     .testTarget(
       name: "Tests",
       dependencies: [
-        .target(name: "parser"),
+        .target(name: "parser")
       ],
       resources: [.process("Fixtures")]
-    )
+    ),
   ]
 )
