@@ -277,7 +277,7 @@ export class App {
   }
 
   onresize() {
-    document.querySelector(".CodeMirror").style.height = this.contentViewHeight;
+    document.querySelector(".cm-editor").style.height = this.contentViewHeight;
     this.editor.refresh();
 
     document.getElementById("structure-container").style.height =
