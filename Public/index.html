@@ -40,6 +40,10 @@
     .button-circle {
       width: 2rem;
       height: 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
     }
 
     .nav-tabs {
@@ -78,21 +82,24 @@
       <div class="col">
         <div class="d-inline-block mx-1">
           <a class="text-decoration-none" href="/">
-            <span class="fa-brands fa-swift fa-2x text-primary d-inline-block align-middle p-1 swift-logo"></span><span
+            <svg class="text-primary d-inline-block align-middle p-1 swift-logo" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512" fill="currentColor" role="img" aria-label="Swift"
+              style="height: 2.25em; width: auto;"><path d="M448 156.1c0-4.5-.1-9-.2-13.5-.1-9.9-1-19.7-2.6-29.4-1.7-9.7-4.8-19.2-9.2-28-9-17.7-23.4-32.1-41.2-41.1-8.8-4.5-18.3-7.6-28-9.2-9.7-1.6-19.6-2.5-29.4-2.6-4.5-.1-9-.2-13.5-.2L124.1 32c-4.5 0-9 .1-13.5 .2-2.4 .1-4.9 .2-7.4 .3-7.4 .3-14.8 1.1-22.1 2.3-7.3 1.3-14.4 3.3-21.2 6.1-2.3 1-4.6 2-6.8 3.1-6.6 3.4-12.8 7.5-18.4 12.3-1.9 1.6-3.7 3.3-5.4 5-7 7-12.9 15-17.4 23.8-4.4 8.8-7.6 18.3-9.2 28-1.6 9.7-2.4 19.6-2.5 29.4-.1 4.5-.2 9-.2 13.5L0 355.9c0 4.5 .1 9 .2 13.5 .1 9.9 1 19.7 2.6 29.4 1.7 9.7 4.8 19.2 9.2 28 9 17.7 23.4 32.1 41.1 41.1 8.8 4.4 18.3 7.5 28 9.2 9.7 1.6 19.6 2.5 29.4 2.6 4.5 .1 9 .2 13.5 .2l199.8 0c4.5 0 9-.1 13.5-.2 9.9-.1 19.7-1 29.4-2.6 9.7-1.7 19.2-4.8 28-9.2 17.7-9 32.1-23.4 41.1-41.2 4.4-8.8 7.6-18.3 9.2-28 1.6-9.7 2.5-19.6 2.6-29.4 .1-4.5 .2-9 .2-13.5l0-183.8c0-5.4 0-10.7 0-16zm-69.9 241c-20-38.9-57.2-29.3-76.3-19.5-1.7 1-3.5 2-5.2 3l-.4 .2c-39.5 21-92.5 22.5-145.8-.4-43.4-18.8-80.1-50.3-105.3-90.4 12.3 9.1 25.4 16.9 39.2 23.4 56.4 26.4 113 24.5 153 0-57-43.8-104.6-101-141.1-147.2-7-8.1-13.2-16.8-18.8-25.9 43.7 40 112.7 90.2 137.5 104.1-52.6-55.5-98.9-123.9-96.7-121.7 82.8 83.4 159.2 130.6 159.2 130.6 2.9 1.6 5 2.8 6.7 4 1.6-4.1 3-8.2 4.2-12.5 13.2-48.3-1.7-103.6-35.3-149.2 76.8 46.1 122.2 133.7 103.6 207.8-.4 1.7-1 3.4-1.4 5.1 38.5 47.4 28 98.2 23.1 88.6l0 0z"/></svg><span
               class="h4 text-dark d-inline-block align-middle m-0">Swift AST Explorer</span>
           </a>
           <button id="run-button" type="button"
             class="btn btn-primary btn-sm rounded-pill button-pill px-3 m-1 disabled" aria-label="Update">
-            <span id="run-button-icon" class="fa-solid fa-play fa-fw"></span>
+            <span id="run-button-icon" class="bi bi-play-fill bi-fw"></span>
             <div id="run-button-spinner" class="d-inline-block d-none">
-              <span class="fa-duotone fa-spinner-third fa-spin fa-fw"></span>
+              <span class="spinner-border" role="status" aria-hidden="true"
+                style="width: 1em; height: 1em; border-width: 0.15em; vertical-align: -0.125em;"></span>
             </div>
           </button>
           <div class="dropdown d-inline-block">
             <button id="config-button" type="button"
               class="btn btn-outline-primary btn-sm rounded-circle button-circle m-1 disabled" data-bs-toggle="dropdown"
               data-bs-auto-close="outside" data-bs-offset="0,10" aria-label="Options" aria-expanded="false">
-              <span class="fa-solid fa-cog fa-fw"></span>
+              <span class="bi bi-gear-fill bi-fw"></span>
             </button>
             <ul class="dropdown-menu">
               <li class="options-item checkbox parser-options active-tick" data-value="fold">
@@ -110,20 +117,20 @@
           <button id="format-button" type="button"
             class="btn btn-outline-primary btn-sm rounded-circle button-circle m-1 disabled" data-bs-toggle="tooltip"
             data-bs-placement="bottom" data-bs-container="#format-button" title="Format" aria-label="Format">
-            <span class="fa-solid fa-align-left fa-fw"></span>
+            <span class="bi bi-text-left bi-fw"></span>
           </button>
           <span data-bs-toggle="modal" data-bs-target="#help-modal">
             <button id="help-button" type="button" class="btn btn-outline-primary btn-sm rounded-circle button-circle"
               data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-container="#help-button" title="Help"
               aria-label="Help">
-              <span class="fa-solid fa-question fa-fw"></span>
+              <span class="bi bi-question bi-fw"></span>
             </button>
           </span>
           <div class="dropdown d-inline-block">
             <button id="version-button" type="button"
               class="btn btn-link btn-sm text-decoration-none dropdown-toggle m-1 disabled" data-bs-toggle="dropdown"
               data-bs-auto-close="outside" aria-label="Options" aria-expanded="false">
-              <span class="fa-solid fa-code-branch"></span><span id="version-text" class="mx-1">603.0.2</span>
+              <span class="bi bi-tags-fill"></span><span id="version-text" class="mx-1">603.0.2</span>
             </button>
             <ul class="dropdown-menu">
               <li>
@@ -179,25 +186,25 @@
             <li class="nav-item lined" role="presentation">
               <button type="button" class="nav-link active" data-bs-toggle="tab" data-bs-target="#structure-tab-pane"
                 role="tab" aria-controls="structure-tab-pane" aria-selected="true"><span
-                  class="fa-regular fa-list-tree"></span><span class="px-3">Structure</span>
+                  class="bi bi-list-nested"></span><span class="px-3">Structure</span>
               </button>
             </li>
             <li class="nav-item lined" role="presentation">
               <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#lookup-tab-pane" role="tab"
-                aria-controls="lookup-tab-pane" aria-selected="false"><span class="fa-light fa-file-code"></span><span
+                aria-controls="lookup-tab-pane" aria-selected="false"><span class="bi bi-file-earmark-code"></span><span
                   class="px-3">Lookup</span>
               </button>
             </li>
             <li class="nav-item lined" role="presentation">
               <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#trivia-tab-pane" role="tab"
                 aria-controls="trivia-tab-pane" aria-selected="false"><span
-                  class="fa-solid fa-slash-forward"></span><span class="px-3">Trivia</span>
+                  class="bi bi-paragraph"></span><span class="px-3">Trivia</span>
               </button>
             </li>
             <li class="nav-item lined" role="presentation">
               <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#statistics-tab-pane"
                 role="tab" aria-controls="statistics-tab-pane" aria-selected="false"><span
-                  class="fa-regular fa-table"></span><span class="px-3">Statistics</span>
+                  class="bi bi-table"></span><span class="px-3">Statistics</span>
               </button>
             </li>
           </ul>
@@ -229,30 +236,30 @@
       <div class="col p-1 text-center">
         <div class="d-inline-block mx-2">
           <a class="text-reset text-decoration-none small" href="https://status.swift-ast-explorer.com/" target="_blank"
-            rel="nofollow noopener noreferrer"><span class="fa-light fa-monitor-heart-rate"></span><span
+            rel="nofollow noopener noreferrer"><span class="bi bi-activity"></span><span
               class="mx-2">System
               Status</span></a>
         </div>
         <div class="d-inline-block mx-2">
           <a class="text-reset text-decoration-none small"
             href="https://github.com/swiftfiddle/swift-ast-explorer/issues/new" target="_blank"
-            rel="nofollow noopener noreferrer"><span class="fa-regular fa-message-smile"></span><span
+            rel="nofollow noopener noreferrer"><span class="bi bi-chat-dots"></span><span
               class="mx-2">Feedback</span></a>
         </div>
         <div class="d-inline-block mx-2">
           <a class="text-reset text-decoration-none small" href="https://github.com/swiftfiddle/swift-ast-explorer"
-            target="_blank" rel="nofollow noopener noreferrer"><span class="fa-brands fa-github"></span><span
+            target="_blank" rel="nofollow noopener noreferrer"><span class="bi bi-github"></span><span
               class="mx-2">Source Code</span></a>
         </div>
         <div class="d-inline-block mx-2">
           <a class="text-reset text-decoration-none small" href="https://hachyderm.io/@kishikawakatsumi" target="_blank"
-            rel="nofollow noopener noreferrer"><span class="fa-regular fa-at"></span><span
+            rel="nofollow noopener noreferrer"><span class="bi bi-at"></span><span
               class="mx-2">Creator</span></a>
         </div>
         <div class="d-inline-block mx-2">
           <a class="text-reset text-decoration-none small" href="https://github.com/sponsors/kishikawakatsumi"
             target="_blank" rel="nofollow noopener noreferrer">
-            <span class="fa-solid fa-heart" style="color: #bf3989;"></span></span><span class="mx-2">Donate</span></a>
+            <span class="bi bi-heart-fill" style="color: #bf3989;"></span></span><span class="mx-2">Donate</span></a>
         </div>
       </div>
     </footer>
@@ -262,14 +269,14 @@
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="help-modal-label"><span class="fa-regular fa-question-circle"></span><span
+          <h5 class="modal-title" id="help-modal-label"><span class="bi bi-question-circle"></span><span
               class="mx-2">Help</span>
           </h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <dl>
-            <dt class="bg-light rounded"><span class="fa-solid fa-code-branch fa-fw"></span><span class="mx-2">Default
+            <dt class="bg-light rounded"><span class="bi bi-tags-fill bi-fw"></span><span class="mx-2">Default
                 Swift
                 Version</span></dt>
           </dl>
@@ -278,7 +285,7 @@
           </dd>
 
           <dl>
-            <dt class="bg-light rounded"><span class="fa-solid fa-cog fa-fw"></span><span class="mx-2">Parser
+            <dt class="bg-light rounded"><span class="bi bi-gear-fill bi-fw"></span><span class="mx-2">Parser
                 Options</span></dt>
             <dd class="my-2">
               <dl>
@@ -301,7 +308,7 @@
           </dl>
 
           <dl>
-            <dt class="bg-light rounded"><span class="fa-regular fa-file-import fa-fw"></span><span
+            <dt class="bg-light rounded"><span class="bi bi-file-earmark-arrow-up bi-fw"></span><span
                 class="mx-2">Import</span></dt>
             <dd>There are a few different ways to import code into the code editor:</dd>
           </dl>
@@ -313,7 +320,7 @@
           </ul>
 
           <dl>
-            <dt class="bg-light rounded pt-2"><span class="fa-regular fa-message-smile fa-fw"></span><span
+            <dt class="bg-light rounded pt-2"><span class="bi bi-chat-dots bi-fw"></span><span
                 class="mx-2">Feedback / Bug Report</span>
             </dt>
             <dd>
