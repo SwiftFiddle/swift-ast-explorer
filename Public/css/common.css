@@ -1,5 +1,7 @@
-.svg-inline--fa.fa-fw {
+.bi-fw {
+  display: inline-block;
   width: 1em;
+  text-align: center;
 }
 
 .nav-tabs {
