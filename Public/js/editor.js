@@ -1,97 +1,200 @@
 "use strict";
 
-import "codemirror/lib/codemirror.css";
 import "../css/editor.css";
 
-import CodeMirror from "codemirror";
-import "codemirror/mode/swift/swift";
-import "codemirror/addon/edit/matchbrackets";
-import "codemirror/addon/edit/closebrackets";
+import {
+  EditorView,
+  keymap,
+  lineNumbers,
+  drawSelection,
+  Decoration,
+} from "@codemirror/view";
+import {
+  EditorState,
+  StateField,
+  StateEffect,
+  EditorSelection,
+} from "@codemirror/state";
+import {
+  defaultKeymap,
+  history,
+  historyKeymap,
+  indentWithTab,
+} from "@codemirror/commands";
+import {
+  StreamLanguage,
+  bracketMatching,
+  indentUnit,
+  syntaxHighlighting,
+  defaultHighlightStyle,
+} from "@codemirror/language";
+import { closeBrackets, closeBracketsKeymap } from "@codemirror/autocomplete";
+import { swift } from "@codemirror/legacy-modes/mode/swift";
+
+const addMarksEffect = StateEffect.define();
+const clearMarksEffect = StateEffect.define();
+
+const markDecoration = Decoration.mark({ class: "editor-marker" });
+
+const markField = StateField.define({
+  create() {
+    return Decoration.none;
+  },
+  update(marks, transaction) {
+    marks = marks.map(transaction.changes);
+    for (const effect of transaction.effects) {
+      if (effect.is(addMarksEffect)) {
+        marks = marks.update({ add: effect.value, sort: true });
+      } else if (effect.is(clearMarksEffect)) {
+        marks = Decoration.none;
+      }
+    }
+    return marks;
+  },
+  provide: (field) => EditorView.decorations.from(field),
+});
 
 export class Editor {
   constructor(container) {
     this.container = container;
+    this.changeListeners = [];
     this.init();
   }
 
   init() {
-    this.editor = CodeMirror.fromTextArea(this.container, {
-      autoCloseBrackets: true,
-      lineNumbers: true,
-      lineWrapping: true,
-      matchBrackets: true,
-      mode: "swift",
-      screenReaderLabel: "Source code editor",
-      tabSize: 2,
+    const dropHandler = EditorView.domEventHandlers({
+      drop: (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const files = event.dataTransfer.files;
+        if (files.length === 0) {
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          this.setValue(event.target.result);
+        };
+        reader.readAsText(files[0], "UTF-8");
+      },
     });
-    this.editor.setSize("100%", "100%");
 
-    this.editor.on("drop", (editor, event) => {
-      event.preventDefault();
-      event.stopPropagation();
-
-      const files = event.dataTransfer.files;
-      if (files.length === 0) {
-        return;
+    const changeNotifier = EditorView.updateListener.of((update) => {
+      if (update.docChanged) {
+        for (const listener of this.changeListeners) {
+          listener();
+        }
       }
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        this.editor.setValue(event.target.result);
-      };
-      reader.readAsText(files[0], "UTF-8");
     });
+
+    this.view = new EditorView({
+      doc: this.container.value,
+      parent: this.container.parentElement,
+      extensions: [
+        lineNumbers(),
+        history(),
+        drawSelection(),
+        EditorView.lineWrapping,
+        bracketMatching(),
+        closeBrackets(),
+        indentUnit.of("  "),
+        EditorState.tabSize.of(2),
+        syntaxHighlighting(defaultHighlightStyle, { fallback: true }),
+        StreamLanguage.define(swift),
+        keymap.of([
+          ...closeBracketsKeymap,
+          ...defaultKeymap,
+          ...historyKeymap,
+          indentWithTab,
+        ]),
+        markField,
+        changeNotifier,
+        dropHandler,
+        EditorView.contentAttributes.of({
+          "aria-label": "Source code editor",
+        }),
+      ],
+    });
+  }
+
+  position(row, column) {
+    const lineCount = this.view.state.doc.lines;
+    const lineNumber = Math.min(Math.max(row, 1), lineCount);
+    const line = this.view.state.doc.line(lineNumber);
+    return Math.min(line.from + Math.max(column, 0), line.to);
   }
 
   getValue() {
-    return this.editor.getValue();
+    return this.view.state.doc.toString();
   }
 
   setValue(value) {
-    this.editor.setValue(value);
-  }
-
-  setSelection(range) {
-    this.editor.setSelection(
-      { ch: range.graphemeStartColumn - 1, line: range.startRow - 1 },
-      { ch: range.graphemeEndColumn - 1, line: range.endRow - 1 },
-      { scroll: false }
-    );
-  }
-
-  markText(range) {
-    return this.editor.markText(
-      { ch: range.graphemeStartColumn - 1, line: range.startRow - 1 },
-      { ch: range.graphemeEndColumn - 1, line: range.endRow - 1 },
-      {
-        className: "editor-marker",
-        startStyle: "editor-marker-start",
-        endStyle: "editor-marker-end",
-      }
-    );
-  }
-
-  clearMarks() {
-    this.editor.getAllMarks().forEach((mark) => {
-      mark.clear();
+    this.view.dispatch({
+      changes: { from: 0, to: this.view.state.doc.length, insert: value },
     });
   }
 
+  setSelection(range) {
+    const anchor = this.position(range.startRow, range.graphemeStartColumn - 1);
+    const head = this.position(range.endRow, range.graphemeEndColumn - 1);
+    this.view.dispatch({
+      selection: EditorSelection.range(anchor, head),
+      scrollIntoView: false,
+    });
+  }
+
+  markText(range) {
+    const from = this.position(range.startRow, range.graphemeStartColumn - 1);
+    const to = this.position(range.endRow, range.graphemeEndColumn - 1);
+    if (from >= to) {
+      return;
+    }
+    this.view.dispatch({
+      effects: addMarksEffect.of([markDecoration.range(from, to)]),
+    });
+  }
+
+  clearMarks() {
+    this.view.dispatch({ effects: clearMarksEffect.of(null) });
+  }
+
   charCoords(range, mode = "page") {
-    return this.editor.charCoords(
-      { ch: range.startColumn - 1, line: range.startRow - 1 },
-      mode
-    );
+    const pos = this.position(range.startRow, range.startColumn - 1);
+    const coords = this.view.coordsAtPos(pos);
+    if (!coords) {
+      return { left: 0, top: 0, right: 0, bottom: 0 };
+    }
+    if (mode === "local") {
+      // CodeMirror 5's "local" origin is the content area (gutter excluded),
+      // so measure relative to .cm-content rather than the scroller. The scroll
+      // offset is present in both rects and cancels out in the subtraction.
+      const contentRect = this.view.contentDOM.getBoundingClientRect();
+      return {
+        left: coords.left - contentRect.left,
+        top: coords.top - contentRect.top,
+        right: coords.right - contentRect.left,
+        bottom: coords.bottom - contentRect.top,
+      };
+    }
+    return {
+      left: coords.left + window.scrollX,
+      top: coords.top + window.scrollY,
+      right: coords.right + window.scrollX,
+      bottom: coords.bottom + window.scrollY,
+    };
   }
 
   focus() {
-    this.editor.focus();
+    this.view.focus();
   }
 
   refresh() {
-    this.editor.refresh();
+    this.view.requestMeasure();
   }
 
   on(event, callback) {
-    this.editor.on(event, callback);
+    if (event === "change") {
+      this.changeListeners.push(callback);
+    }
   }
 }

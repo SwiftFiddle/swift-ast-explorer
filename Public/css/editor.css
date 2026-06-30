@@ -1,25 +1,21 @@
-.CodeMirror {
+.cm-editor {
+  height: 100%;
   font-family: Menlo, Consolas, "DejaVu Sans Mono", "Ubuntu Mono", monospace;
   font-size: 11pt;
   line-height: 1.4;
 }
 
-.CodeMirror-selected {
-  background: #b4d5fe;
+.cm-editor.cm-focused {
+  outline: none;
 }
 
-.editor-marker-start {
-  border-left: 1px solid rgb(81, 101, 255);
-  background-color: rgba(81, 101, 255, 0.25);
+.cm-editor .cm-scroller {
+  font-family: inherit;
+  line-height: inherit;
 }
 
 .editor-marker {
   border-top: 1px solid rgb(81, 101, 255);
   border-bottom: 1px solid rgb(81, 101, 255);
-  background-color: rgba(81, 101, 255, 0.25);
-}
-
-.editor-marker-end {
-  border-right: 1px solid rgb(81, 101, 255);
   background-color: rgba(81, 101, 255, 0.25);
 }
