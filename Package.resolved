@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/console-kit.git",
       "state" : {
-        "revision" : "32ad16dfc7677b927b225595ed18f3debb32f577",
-        "version" : "4.16.0"
+        "revision" : "15121e1ec44a0a2064e43545d1390f02cc19b07d",
+        "version" : "4.16.1"
       }
     },
     {
