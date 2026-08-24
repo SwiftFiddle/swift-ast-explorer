@@ -266,8 +266,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftlang/swift-tools-support-core",
       "state" : {
-        "revision" : "e8fbc8b05a155f311b862178d92d043afb216fe3",
-        "version" : "0.7.3"
+        "revision" : "c574915fe88e942e4c4c93376f022daa2ecf05f9",
+        "version" : "0.8.0"
       }
     },
     {
