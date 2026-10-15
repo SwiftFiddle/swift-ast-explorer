@@ -140,8 +140,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-distributed-tracing.git",
       "state" : {
-        "revision" : "c64975080075bff170b728704a7e151f15f541c0",
-        "version" : "1.7.0"
+        "revision" : "3d6a296e8fc61f5c3a22ba23b6c786cefdb2ebb9",
+        "version" : "1.7.1"
       }
     },
     {
@@ -248,8 +248,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swift-server/swift-service-lifecycle.git",
       "state" : {
-        "revision" : "c55297914e26ce3085b73ca88c521ef99136f6ad",
-        "version" : "2.12.1"
+        "revision" : "a18ee16b8039866fd919bdb4e8e906882d4ecc75",
+        "version" : "2.13.0"
       }
     },
     {
