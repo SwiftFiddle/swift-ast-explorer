@@ -3,6 +3,9 @@
   z-index: 1070;
   font-size: 10pt;
   box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
+  /* The popover overlaps the tree/editor. Without this it would intercept
+     mouse events for the nodes beneath it, breaking their hover. */
+  pointer-events: none;
 }
 
 .popover-content {
