@@ -9,7 +9,10 @@ env:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # Pinned to 24.04: the ubuntu-latest image moved to Ubuntu 26.04, where the
+    # Swift test runner crashes at runtime (SIGILL/SIGABRT, "failed to suspend
+    # thread"). This is unrelated to the project code; revisit once 26.04 works.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
       - name: Free Disk Space (Ubuntu)
