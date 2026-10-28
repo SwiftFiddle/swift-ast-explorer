@@ -49,12 +49,14 @@ export class StructureView {
     treeView.onmouseout = (event, target, data) => {
       this.onmouseout(event, target, data);
 
-      if (!event.relatedTarget) {
+      const related = event.relatedTarget;
+      if (related && related.closest && related.closest(".popover")) {
+        // Keep the popover shown only while moving into it; hide in every
+        // other case, including moving to nothing (relatedTarget === null),
+        // which happens when the hovered node is removed on collapse.
         return;
       }
-      if (!event.relatedTarget.classList.contains("popover-content")) {
-        this.popover.hide();
-      }
+      this.popover.hide();
     };
 
     this.popover.onmouseout = (event) => {
