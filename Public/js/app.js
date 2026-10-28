@@ -292,7 +292,7 @@ export class App {
 }
 
 function branchOptions() {
-  let branch = "60300";
+  let branch = "60400";
   document
     .querySelectorAll(".options-item.radio.parser-version")
     .forEach((listItem) => {
