@@ -11,7 +11,7 @@
     "@codemirror/state": "6.7.6",
     "@codemirror/view": "6.43.15",
     "@popperjs/core": "2.11.8",
-    "bootstrap": "5.3.8",
+    "bootstrap": "5.3.9",
     "bootstrap-icons": "1.13.2",
     "datatables.net-bs5": "2.3.8",
     "reconnecting-websocket": "4.4.0"
