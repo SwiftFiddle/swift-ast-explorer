@@ -23,7 +23,7 @@
     "html-webpack-plugin": "5.6.8",
     "mini-css-extract-plugin": "2.10.2",
     "postcss": "8.5.33",
-    "postcss-loader": "8.2.1",
+    "postcss-loader": "8.2.2",
     "sass": "1.108.2",
     "sass-loader": "17.1.1",
     "style-loader": "4.0.0",
